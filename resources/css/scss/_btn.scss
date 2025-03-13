@@ -1,6 +1,75 @@
 @charset "UTF-8";
 
 // btn
+[class^="btn_"] {
+    &[class*="_sm"],
+    &[class*="_md"],
+    &[class*="_slg"],
+    &[class*="_lg"],
+    &[class*="_xlg"] {
+        @include btn-default; // primary
+    }
+    &[class*="_sm"] {
+        height: 3rem;
+        line-height: 3rem;
+        border-radius: 5rem;
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-semibold);
+    }
+    &[class*="_md"] {
+        height: 3.2rem;
+        line-height: 3.2rem;
+    }
+    &[class*="_slg"] {
+        height: 4rem;
+        line-height: 4rem;
+    }
+    &[class*="_xlg"] {
+        height: 5.2rem;
+    }
+    &[class*="_secondary"] {
+        color: var(--color-darkblue);
+        background-color: var(--color-skyblue);
+        border: $border var(--color-blue);
+    }
+    &[class*="_tertiary"] {
+        color: var(--color-darkblue);
+        border: $border var(--color-blue);
+        background-color: #b1cefb;
+    }
+    &[class*="_outline"] {
+        color: var(--color-darkblack);
+        background-color: var(--color-white);
+        border: $border var(--color-black);
+        &[class*="_lg"] {
+            line-height: 4.6rem;
+        }
+    }
+    &[class*="_txt"] {
+        color: var(--color-gray);
+    }
+    &[class*="_underline"] {
+        color: var(--color-gray);
+        text-decoration: underline;
+    }
+    // &[class*="_border"] {
+    //     color: var(--color-base);
+    //     border: $border #58616a;
+    // }
+    // &[class*="_link"] {
+    // }
+    .ico_outlink {
+        margin-left: var(--gap-4);
+    }
+    .ico_arrow {
+        margin-left: var(--gap-7);
+    }
+    &.auto {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
 .page_btn_area {
     @include flex-between;
     width: 100%;
@@ -38,60 +107,31 @@
     }
 }
 
-[class^="btn_"] {
-    &[class*="_sm"],
-    &[class*="_md"],
-    &[class*="_lg"],
-    &[class*="_xlg"] {
-        @include btn-default; // primary
+.btn_area {
+    @include flex-center;
+    width: 100%;
+    margin-top: 9rem;
+    [class^="btn_"] {
+        min-width: 25rem;
+        margin: 0 0.75rem;
     }
-    &[class*="_sm"] {
-        height: 3rem;
-        line-height: 3rem;
-        border-radius: 5rem;
-        font-size: var(--font-size-sm);
-        font-weight: var(--font-weight-semibold);
-    }
-    &[class*="_md"] {
-        height: 3.2rem;
-        line-height: 3.2rem;
-    }
-    &[class*="_xlg"] {
-        height: 5.2rem;
-    }
-    &[class*="_secondary"] {
-        color: var(--color-darkblue);
-        background-color: var(--color-skyblue);
-        border: $border var(--color-blue);
-    }
-    &[class*="_tertiary"] {
-        color: var(--color-darkblue);
-        border: $border var(--color-blue);
-        background-color: #b1cefb;
-    }
-    &[class*="_outline"] {
-        color: var(--color-darkblack);
-        background-color: var(--color-white);
-        border: $border var(--color-black);
-    }
-    &[class*="_txt"] {
-        color: var(--color-gray);
-    }
-    &[class*="_underline"] {
-        color: var(--color-gray);
-        text-decoration: underline;
-    }
-    // &[class*="_link"] {
-    // }
-    .ico_outlink {
-        margin-left: var(--gap-4);
-    }
-    .ico_arrow {
-        margin-left: var(--gap-7);
-    }
-    &.auto {
-        min-width: auto;
-        width: 100%;
+    @include mobile {
+        [class^="btn_"] {
+            width: 100%;
+            min-width: auto;
+            margin: 0;
+        }
+        .lside [class^="btn_"] {
+            border-radius: 0.6rem 0 0 0.6rem;
+        }
+        .rside [class^="btn_"] {
+            border-radius: 0 0.6rem 0.6rem 0;
+        }
+        &:not(:has(.lside)) {
+            [class^="btn_"] {
+                border-radius: 0.6rem;
+            }
+        }
     }
 }
 

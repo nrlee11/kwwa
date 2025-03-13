@@ -53,14 +53,47 @@ $(function () {
         });
     };
 
+    // Layer
+    const layerFix = function () {
+        // LayerFix
+        $(".layerFix").each(function () {
+            var left = ($(window).width() - $(this).width()) / 2;
+            var top = ($(window).height() - $(this).height()) / 2;
+
+            if (top < 0) top = 0;
+            if (left < 0) left = 0;
+
+            $(this).css({ left: left, top: top });
+        });
+
+        $(window).resize(function () {
+            $(".layerFix").each(function () {
+                var left = ($(window).width() - $(this).width()) / 2;
+                var top = ($(window).height() - $(this).height()) / 2;
+
+                if (top < 0) top = 0;
+                if (left < 0) left = 0;
+
+                $(this).css({ left: left, top: top });
+            });
+        });
+    };
+
+    // LayerClose
+    const layerClose = function () {
+        $(".layer_wrap .layer_close").click(function (e) {
+            $(this).parents(".layerFix, .layerDim").hide();
+            $(".layerDim").hide();
+        });
+    };
+
     // 퍼블확인용! (삭제예정)
-    function includeHtml() {
+    const includeHtml = function () {
         const includeTarget = document.querySelectorAll(".includeJs");
         includeTarget.forEach(function (el, idx) {
             const targetFile = el.dataset.includeFile;
             if (targetFile) {
                 let xhttp = new XMLHttpRequest();
-
                 xhttp.onreadystatechange = function () {
                     selectLayer();
                     if (this.readyState === XMLHttpRequest.DONE) {
@@ -73,9 +106,11 @@ $(function () {
                 return;
             }
         });
-    }
+    };
 
     //gnbMenu();
+    layerFix();
+    layerClose();
     selectLayer();
     includeHtml();
 });

@@ -2,11 +2,16 @@
 
 // 회원가입
 .join-wrap {
-    margin-top: 6.7rem;
     .page_title {
+        margin-top: 6.7rem;
         text-align: center;
         .tit {
             font-size: 3.5rem;
+        }
+    }
+    @include mobile {
+        .page_title {
+            margin-top: 0;
         }
     }
 }
