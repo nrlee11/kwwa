@@ -74,11 +74,6 @@
     @include flex-between;
     width: 100%;
     margin-top: var(--gap-24);
-    // &:not(:has(.lside)) {
-    //     .rside {
-    //         background-color: red;
-    //     }
-    // }
     > div {
         flex: 1;
         &:not(.lside) {
@@ -107,28 +102,38 @@
     }
 }
 
-.btn_area {
-    @include flex-center;
+.bottom_btn_area {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: 9rem;
-    [class^="btn_"] {
-        min-width: 25rem;
+    > div {
         margin: 0 0.75rem;
-    }
-    @include mobile {
         [class^="btn_"] {
-            width: 100%;
-            min-width: auto;
-            margin: 0;
+            min-width: 25.1rem;
         }
-        .lside [class^="btn_"] {
+    }
+
+    @include mobile {
+        > div {
+            flex: 1;
+            margin: 0;
+            [class^="btn_"] {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+        .lside > button,
+        .lside > a {
             border-radius: 0.6rem 0 0 0.6rem;
         }
-        .rside [class^="btn_"] {
+        .rside > button,
+        .rside > a {
             border-radius: 0 0.6rem 0.6rem 0;
         }
         &:not(:has(.lside)) {
-            [class^="btn_"] {
+            button,
+            a {
                 border-radius: 0.6rem;
             }
         }

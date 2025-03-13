@@ -1475,29 +1475,37 @@ select.round {
   }
 }
 
-.btn_area {
+.bottom_btn_area {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 9rem;
 }
-.btn_area [class^=btn_] {
-  min-width: 25rem;
+.bottom_btn_area > div {
   margin: 0 0.75rem;
 }
+.bottom_btn_area > div [class^=btn_] {
+  min-width: 25.1rem;
+}
 @media screen and (max-width: 1024px) {
-  .btn_area [class^=btn_] {
-    width: 100%;
-    min-width: auto;
+  .bottom_btn_area > div {
+    flex: 1;
     margin: 0;
   }
-  .btn_area .lside [class^=btn_] {
+  .bottom_btn_area > div [class^=btn_] {
+    width: 100%;
+    min-width: auto;
+  }
+  .bottom_btn_area .lside > button,
+  .bottom_btn_area .lside > a {
     border-radius: 0.6rem 0 0 0.6rem;
   }
-  .btn_area .rside [class^=btn_] {
+  .bottom_btn_area .rside > button,
+  .bottom_btn_area .rside > a {
     border-radius: 0 0.6rem 0.6rem 0;
   }
-  .btn_area:not(:has(.lside)) [class^=btn_] {
+  .bottom_btn_area:not(:has(.lside)) button,
+  .bottom_btn_area:not(:has(.lside)) a {
     border-radius: 0.6rem;
   }
 }
