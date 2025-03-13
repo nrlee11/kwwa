@@ -26,6 +26,10 @@
     display: flex;
     justify-content: center;
 }
+@mixin flex-aligncenter {
+    display: flex;
+    align-items: center;
+}
 
 // before & after
 @mixin pseudo-selector {
@@ -69,8 +73,9 @@
 // board
 @mixin tbl-heading {
     height: 5.4rem;
-    color: #131416;
     padding: 0 var(--gap-16);
+    font-size: var(--font-size-sm);
+    color: var(--color-warblack);
     font-weight: var(--font-weight-bold);
     border-bottom: $border #d6e0eb;
     border-left: $border #d6e0eb;

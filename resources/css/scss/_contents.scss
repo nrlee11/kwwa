@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+// 회원가입
+.join-wrap {
+    margin-top: 6.7rem;
+    .page_title {
+        text-align: center;
+        .tit {
+            font-size: 3.5rem;
+        }
+    }
+}
+
 // 자격증 발급
 // 자격증 발급절차
 .license_process {

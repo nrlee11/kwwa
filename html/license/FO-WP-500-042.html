@@ -98,77 +98,51 @@
 
                                 <div class="ly_half">
                                     <div class="lside">
-                                        <!-- board_write -->
+                                        <!-- board -->
                                         <div class="form_section">
                                             <div class="form_list">
-                                                <div class="form_item">
-                                                    <div class="tit"></div>
-                                                    <div class="item"></div>
+                                                <div class="form-group">
+                                                    <div class="tit"><label for="lagelfor1">이름</label></div>
+                                                    <div class="item">
+                                                        <div class="form_item">
+                                                            <div class="inp">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <input type="tel" value="홍길동" id="lagelfor1" placeholder="" readonly />
+                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="tit"><label for="lagelfor2">주민등록번호</label></div>
+                                                    <div class="item">
+                                                        <div class="form_item">
+                                                            <div class="inp">
+                                                                <input type="tel" value="901020" id="lagelfor2" title="주민번호 앞자리" placeholder="" readonly />
+                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                            </div>
+                                                            <span class="txt_between">-</span>
+                                                            <div class="inp">
+                                                                <input type="password" value="1111111" id="" title="주민번호 뒷자리" placeholder="" readonly />
+                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="tit"><label for="lagelfor3">휴대전화</label></div>
+                                                    <div class="item">
+                                                        <div class="form_item">
+                                                            <div class="inp">
+                                                                <input type="tel" value="010-1234-5678" id="lagelfor3" placeholder="휴대전화" />
+                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <table class="tbl row react">
-                                            <caption class="hidden">
-                                                <strong>신청자 정보</strong>
-                                                이름, 주민등록번호, 주소, 휴대전화, 전화번호 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 14.3rem" />
-                                                <col />
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row" data-cell-header="이름">이름</th>
-                                                    <td><div>홍길동</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row" data-cell-header="주민등록번호">주민등록번호</th>
-                                                    <td><div>900105-*******</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row" data-cell-header="주소">주소</th>
-                                                    <td>
-                                                        <div>
-                                                            07379<br />
-                                                            서울특별시 영등포구 대림로-244(대림동) 2F 210호
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row" data-cell-header="휴대전화">
-                                                        <label for="lagelfor1">휴대전화</label>
-                                                    </th>
-                                                    <td>
-                                                        <div>
-                                                            <div class="form_item">
-                                                                <div class="inp">
-                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                    <input type="tel" value="010-1234-5678" id="lagelfor1" placeholder="휴대전화" readonly />
-                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row" data-cell-header="전화번호">
-                                                        <label for="lagelfor2">전화번호</label>
-                                                    </th>
-                                                    <td>
-                                                        <div>
-                                                            <div class="form_item">
-                                                                <div class="inp">
-                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                    <input type="tel" value="" id="lagelfor2" placeholder="전화번호" readonly />
-                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_write -->
+                                        <!--// board -->
                                     </div>
                                     <div class="rside">
                                         <div>
