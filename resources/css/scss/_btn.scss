@@ -4,7 +4,7 @@
 [class^="btn_"] {
     &[class*="_sm"],
     &[class*="_md"],
-    &[class*="_slg"],
+    &[class*="_xmd"],
     &[class*="_lg"],
     &[class*="_xlg"] {
         @include btn-default; // primary
@@ -17,33 +17,18 @@
         font-weight: var(--font-weight-semibold);
     }
     &[class*="_md"] {
-        height: 3.2rem;
-        line-height: 3.2rem;
+        height: 3.3rem;
+        line-height: 3.3rem;
     }
-    &[class*="_slg"] {
+    &[class*="_xmd"] {
         height: 4rem;
         line-height: 4rem;
+        border-radius: 0;
+        font-size: var(--font-size-sm);
     }
     &[class*="_xlg"] {
         height: 5.2rem;
-    }
-    &[class*="_secondary"] {
-        color: var(--color-darkblue);
-        background-color: var(--color-skyblue);
-        border: $border var(--color-blue);
-    }
-    &[class*="_tertiary"] {
-        color: var(--color-darkblue);
-        border: $border var(--color-blue);
-        background-color: #b1cefb;
-    }
-    &[class*="_outline"] {
-        color: var(--color-darkblack);
-        background-color: var(--color-white);
-        border: $border var(--color-black);
-        &[class*="_lg"] {
-            line-height: 4.6rem;
-        }
+        line-height: 5.2rem;
     }
     &[class*="_txt"] {
         color: var(--color-gray);
@@ -52,10 +37,45 @@
         color: var(--color-gray);
         text-decoration: underline;
     }
-    // &[class*="_border"] {
-    //     color: var(--color-base);
-    //     border: $border #58616a;
+    &[class*="_secondary"] {
+        color: var(--color-darkblue);
+        background-color: var(--color-skyblue);
+        border: $border var(--color-blue);
+    }
+    // &[class*="_tertiary"] {
+    //     color: var(--color-darkblue);
+    //     border: $border var(--color-blue);
+    //     background-color: #b1cefb;
     // }
+    &[class*="_outline"] {
+        color: var(--color-darkblack);
+        background-color: var(--color-white);
+        border: $border var(--color-black);
+    }
+    &[class*="_border"] {
+        color: var(--color-warblue);
+        border: $border var(--color-warblue);
+        border-radius: 0;
+        background-color: var(--color-white);
+    }
+    &[class*="_outline"],
+    &[class*="_border"] {
+        &[class*="_sm"] {
+            line-height: 2.8rem;
+        }
+        &[class*="_md"] {
+            line-height: 3rem;
+        }
+        &[class*="_xmd"] {
+            line-height: 3.8rem;
+        }
+        &[class*="_lg"] {
+            line-height: 4.6rem;
+        }
+        &[class*="_xlg"] {
+            line-height: 5rem;
+        }
+    }
     // &[class*="_link"] {
     // }
     .ico_outlink {
@@ -103,10 +123,9 @@
 }
 
 .bottom_btn_area {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     width: 100%;
-    margin-top: 9rem;
+    margin-top: 8rem;
     > div {
         margin: 0 0.75rem;
         [class^="btn_"] {
@@ -115,6 +134,8 @@
     }
 
     @include mobile {
+        margin-top: var(--gap-30);
+        gap: 0 1.5rem;
         > div {
             flex: 1;
             margin: 0;
@@ -123,20 +144,20 @@
                 min-width: auto;
             }
         }
-        .lside > button,
-        .lside > a {
-            border-radius: 0.6rem 0 0 0.6rem;
-        }
-        .rside > button,
-        .rside > a {
-            border-radius: 0 0.6rem 0.6rem 0;
-        }
-        &:not(:has(.lside)) {
-            button,
-            a {
-                border-radius: 0.6rem;
-            }
-        }
+        // .lside > button,
+        // .lside > a {
+        //     border-radius: 0.6rem 0 0 0.6rem;
+        // }
+        // .rside > button,
+        // .rside > a {
+        //     border-radius: 0 0.6rem 0.6rem 0;
+        // }
+        // &:not(:has(.lside)) {
+        //     button,
+        //     a {
+        //         border-radius: 0.6rem;
+        //     }
+        // }
     }
 }
 

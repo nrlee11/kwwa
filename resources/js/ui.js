@@ -45,10 +45,10 @@ $(function () {
         $this.click(function (e) {
             if ($(this).parent().hasClass("on")) {
                 $(this).attr("title", "열기").parent().removeClass("on").children(".select_box").hide();
-                console.log(1);
+                console.log("열기");
             } else {
                 $(this).attr("title", "닫기").parent().addClass("on").children(".select_box").show();
-                console.log(2);
+                console.log("닫기");
             }
         });
     };
@@ -99,6 +99,7 @@ $(function () {
                     if (this.readyState === XMLHttpRequest.DONE) {
                         this.status === 200 ? (el.innerHTML = this.responseText) : null;
                         this.status === 404 ? (el.innerHTML = "include not found.") : null;
+                        selectLayer();
                     }
                 };
                 xhttp.open("GET", targetFile, true);

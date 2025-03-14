@@ -2,6 +2,7 @@
 
 // breakpoints
 $breakpoint-mobile: 320px;
+$breakpoint-sm-mobile: 370px;
 // $breakpoint-tablet: 758px;
 $breakpoint-desktop: 1024px;
 
@@ -23,6 +24,7 @@ $border: 0.1rem solid;
     --font-size-md: 1.7rem;
     --font-size-lg: 2.4rem;
     --font-size-xlg: 4rem;
+    // font (weight 삭제할것)
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -60,6 +62,7 @@ $border: 0.1rem solid;
     --gap-24: 2.4rem;
     --gap-25: 2.5rem;
     --gap-26: 2.6rem;
+    --gap-28: 2.8rem;
     --gap-30: 3rem;
     --gap-35: 3.5rem;
     --gap-40: 4rem;

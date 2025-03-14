@@ -6,6 +6,11 @@
         @content;
     }
 }
+@mixin sm-mobile {
+    @media screen and (max-width: #{$breakpoint-sm-mobile}) {
+        @content;
+    }
+}
 // @mixin tablet {
 //     @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
 //         @content;

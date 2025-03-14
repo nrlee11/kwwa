@@ -1,17 +1,92 @@
 @charset "UTF-8";
 
 // 회원가입
-.join-wrap {
+.join_wrap {
     .page_title {
-        margin-top: 6.7rem;
+        margin: 6.5rem 0 4.3rem;
         text-align: center;
         .tit {
             font-size: 3.5rem;
         }
-    }
-    @include mobile {
-        .page_title {
+        @include mobile {
             margin-top: 0;
+            .tit {
+                font-size: 2.8rem;
+            }
+        }
+    }
+    .progress-bar {
+        margin: 0 0 var(--gap-30) var(--gap-10);
+    }
+    .join_section {
+        width: 51.8rem;
+        margin: 7.5rem auto 0;
+        .bottom_btn_area {
+            margin-top: var(--gap-20);
+            > [class^="btn_"] {
+                width: 100%;
+            }
+        }
+        @include mobile {
+            width: auto;
+            .blue_box,
+            .bottom_btn_area {
+                margin-top: var(--gap-50);
+            }
+        }
+    }
+    .request_area {
+        @include flex-center;
+        gap: 0 1.2rem;
+        padding: 3.8rem 0 9.2rem;
+        > button {
+            width: 13rem;
+            height: 12.2rem;
+            padding: var(--gap-18) var(--gap-7);
+            color: var(--color-warblue);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-bold);
+            border-radius: 1rem;
+            border: $border var(--color-warblue);
+            [class^="ico_"] {
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                margin: var(--gap-20) auto 0;
+            }
+            @for $i from 1 through 2 {
+                .ico_request#{$i} {
+                    background: url($url-img-icon + "ico_request0#{$i}.svg") no-repeat 0 0;
+                }
+            }
+        }
+        @include mobile {
+            padding: 0;
+        }
+    }
+    .completion_area {
+        position: relative;
+        margin-bottom: 6.8rem;
+        padding-top: 12.4rem;
+        text-align: center;
+        .msg {
+            font-size: var(--font-size-xlg);
+            font-weight: var(--font-weight-semibold);
+            + .desc {
+                margin-top: 3.8rem;
+            }
+        }
+        .desc {
+            font-size: 2rem;
+        }
+        @include mobile {
+            margin-bottom: 0;
+            padding-top: 11.4rem;
+            .msg {
+                + .desc {
+                    margin-top: var(--gap-50);
+                }
+            }
         }
     }
 }

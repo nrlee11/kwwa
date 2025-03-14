@@ -7,8 +7,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 1px;
-    height: 1px;
+    width: 0.1rem;
+    height: 0.1rem;
     background-color: var(--color-black);
     text-align: center;
 }
@@ -21,10 +21,10 @@
 }
 .hidden {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0.1rem;
+    height: 0.1rem;
     padding: 0;
-    margin: -1px;
+    margin: -0.1rem;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
@@ -46,23 +46,26 @@
 }
 
 // gap
-.gap_mt5 {
-    margin-top: var(--gap-5);
+.gap_mt0 {
+    margin-top: 0 !important;
 }
-.gap_mt14 {
-    margin-top: var(--gap-14);
-}
-.gap_mt26 {
-    margin-top: var(--gap-26);
-}
-.gap_pt14 {
-    padding-top: var(--gap-14);
-}
+// .gap_mt14 {
+//     margin-top: var(--gap-14);
+// }
+// .gap_mt26 {
+//     margin-top: var(--gap-26);
+// }
+// .gap_pt14 {
+//     padding-top: var(--gap-14);
+// }
 .size_190 {
     width: 19rem !important;
 }
 .size_200 {
     width: 20rem !important;
+}
+.size_289 {
+    width: 28.9rem !important;
 }
 .size_300 {
     width: 30rem !important;
@@ -123,7 +126,7 @@
 // progress-bar
 .progress-bar {
     @include flex-center;
-    margin: var(--gap-48) 0 var(--gap-48) var(--gap-10);
+    margin: var(--gap-24) 0 7rem var(--gap-10);
     > div {
         position: relative;
         width: 11rem;
@@ -202,7 +205,7 @@
     @include mobile {
         @include flex-between;
         width: 23.8rem;
-        margin: var(--gap-48) auto;
+        margin: var(--gap-48) auto !important;
         > div {
             flex: 1;
             width: auto;
@@ -226,23 +229,56 @@
 }
 
 // ico
-.ico_outlink {
-    position: relative;
-    top: -0.1rem;
-    display: inline-block;
-    width: 2.4rem;
-    height: 2.4rem;
-    background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 50%;
-    vertical-align: var(--align-m);
-}
-.ico_arrow {
-    position: relative;
-    top: -0.1rem;
-    display: inline-block;
-    width: 1.6rem;
-    height: 0.9rem;
-    background: url($url-img-icon + "ico_arrow.svg") no-repeat 0 50%;
-    vertical-align: var(--align-m);
+[class^="ico_"] {
+    &[class*="_outlink"],
+    &[class*="_arrow"],
+    &[class*="_mark"],
+    &[class*="_completion"] {
+        position: relative;
+        top: -0.1rem;
+        display: inline-block;
+        vertical-align: var(--align-m);
+    }
+    // 변수처리할것 (mixin btn-bgtype 참고)
+    &[class*="_outlink"] {
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 50%;
+    }
+    &[class*="_arrow"] {
+        width: 1.6rem;
+        height: 0.9rem;
+        background: url($url-img-icon + "ico_arrow.svg") no-repeat 0 50%;
+    }
+    &[class*="_mark"] {
+        width: 2rem;
+        height: 2rem;
+        background: url($url-img-icon + "ico_mark.svg") no-repeat 0 50%;
+    }
+    &[class*="_completion"] {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-left: -3.2rem;
+        background: url($url-img-icon + "ico_completion.svg") no-repeat 0 50%;
+    }
+
+    &[class*="_txt"] {
+        position: relative;
+        [class^="ico_"] {
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+        &:has([class*="_mark"]) {
+            padding-left: 3rem;
+            [class^="ico_"] {
+                margin-top: -1rem;
+            }
+        }
+    }
 }
 
 // form
@@ -264,7 +300,6 @@ input[type="tel"] {
         color: #8a949e !important;
     }
 }
-
 select {
     width: 100%;
     height: 4.8rem;
@@ -283,7 +318,6 @@ select {
         background: var(--color-white) url($url-img-common + "bg_select_16.svg") no-repeat right var(--gap-16) center;
     }
 }
-
 .select_layer {
     position: relative;
     width: 100%;
@@ -334,7 +368,105 @@ select {
         }
     }
 }
-
+.inp_radio {
+    position: relative;
+    display: inline-block;
+    margin-right: var(--gap-24);
+    &:last-child {
+        margin-right: 0;
+    }
+    input[type="radio"] {
+        position: absolute;
+        top: 50%;
+        left: 0.1rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: -0.5rem;
+        + label {
+            position: relative;
+            padding-left: var(--gap-28);
+            color: var(--color-darkgray);
+            vertical-align: var(--align-t);
+            cursor: pointer;
+            &::before,
+            &::after {
+                @include pseudo-selector;
+                border-radius: 50%;
+            }
+            &::before {
+                width: 2rem;
+                height: 2rem;
+                margin-top: -1rem;
+                border: $border var(--color-darkgray);
+                background-color: #cdd1d5;
+            }
+        }
+        &:checked {
+            + label {
+                &::before {
+                    border: 0.2rem solid var(--color-blue);
+                    background-color: var(--color-white);
+                }
+                &::after {
+                    width: 1rem;
+                    height: 1rem;
+                    margin: -0.5rem 0 0 0.5rem;
+                    border: 0;
+                    background-color: var(--color-blue);
+                }
+            }
+        }
+    }
+}
+.inp_check {
+    position: relative;
+    display: inline-block;
+    margin-right: var(--gap-55);
+    &:last-child {
+        margin-right: 0;
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        + label {
+            position: relative;
+            display: inline-block;
+            padding-left: var(--gap-28);
+            vertical-align: var(--align-t);
+            cursor: pointer;
+            &::before,
+            &::after {
+                @include pseudo-selector;
+                border-radius: 0.4rem;
+            }
+            &::before {
+                width: 2rem;
+                height: 2rem;
+                margin-top: -1rem;
+                border: $border #b1b8be;
+                background-color: #cdd1d5;
+            }
+        }
+        &:checked {
+            + label {
+                &::before {
+                    border: 0;
+                    background-color: var(--color-blue);
+                }
+                &::after {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    margin: -0.6rem 0 0 0.4rem;
+                    border: 0;
+                    background: url($url-img-common + "bg_checkbox.svg") no-repeat 0 0;
+                }
+            }
+        }
+    }
+}
 .form_item {
     @include flex-aligncenter;
     .inp {
@@ -399,6 +531,7 @@ select {
         + .txt_between {
             margin: 0 var(--gap-7);
         }
+        + .inp_set,
         + .inp_select {
             margin-left: var(--gap-15);
         }
@@ -418,97 +551,53 @@ select {
     }
     .inp_set {
         @include flex-aligncenter;
+        + .inp_set {
+            margin-left: var(--gap-15);
+        }
+        &.full {
+            gap: 0 1.5rem;
+            .inp_select,
+            [class^="btn_"] {
+                margin-left: 0;
+            }
+            @include sm-mobile {
+                flex-direction: column;
+                .inp,
+                .inp_select,
+                [class^="btn_"] {
+                    width: 100% !important;
+                }
+                [class^="btn_"] {
+                    margin: var(--gap-20) 0 0 0;
+                }
+            }
+        }
+        &.half {
+            gap: 0 1.5rem;
+            .inp_select,
+            [class^="btn_"] {
+                width: 50% !important;
+                margin-left: 0;
+            }
+            @include sm-mobile {
+                flex-direction: column;
+                .inp,
+                .inp_select,
+                [class^="btn_"] {
+                    width: 100% !important;
+                }
+                [class^="btn_"] {
+                    margin: var(--gap-20) 0 0 0;
+                }
+            }
+        }
     }
-
     .inp_select {
         width: 100%;
         + button {
             margin-left: var(--gap-15);
             + button {
                 margin-left: var(--gap-15);
-            }
-        }
-    }
-
-    .inp_radio {
-        position: relative;
-        display: inline-block;
-        min-width: 6.5rem;
-        margin-left: var(--gap-13);
-        &:last-child {
-            margin-left: 0;
-        }
-        input[type="radio"] {
-            position: absolute;
-            top: 50%;
-            left: 0.1rem;
-            width: 0.5rem;
-            height: 0.5rem;
-            margin-top: -0.5rem;
-            + label {
-                position: relative;
-                padding-left: var(--gap-17);
-                color: var(--color-darkgray);
-                vertical-align: var(--align-t);
-                cursor: pointer;
-                &:after {
-                    @include pseudo-selector;
-                    width: 1rem;
-                    height: 1rem;
-                    margin-top: -0.5rem;
-                    border: $border var(--color-darkgray);
-                    background-color: #cdd1d5;
-                    border-radius: 50%;
-                }
-            }
-            &:checked + label:before {
-                @include pseudo-selector;
-                z-index: 1;
-                width: 1rem;
-                height: 1rem;
-                margin-top: -0.5rem;
-                background-color: var(--color-darkblack);
-                border-radius: 50%;
-            }
-        }
-    }
-    .inp_check {
-        position: relative;
-        display: inline-block;
-        min-width: 6.5rem;
-        margin-right: var(--gap-60);
-        &:last-child {
-            margin-left: 0;
-        }
-        input[type="checkbox"] {
-            position: absolute;
-            top: 50%;
-            left: 0.1rem;
-            width: 0.5rem;
-            height: 0.5rem;
-            margin-top: -0.5rem;
-            + label {
-                position: relative;
-                padding-left: var(--gap-24);
-                vertical-align: var(--align-t);
-                cursor: pointer;
-                &:after {
-                    @include pseudo-selector;
-                    width: 1.4rem;
-                    height: 1.2rem;
-                    margin-top: -0.6rem;
-                    border: $border var(--color-black);
-                    background-color: var(--color-white);
-                }
-            }
-            &:checked + label:before {
-                @include pseudo-selector;
-                z-index: 1;
-                width: 1.4rem;
-                height: 1.2rem;
-                margin-top: -0.6rem;
-                border: 0;
-                background-color: var(--color-black);
             }
         }
     }
@@ -614,16 +703,16 @@ select {
         }
     }
 }
-
 .form_section {
     .form_tit {
+        margin-bottom: var(--gap-10);
         .tit {
             font-size: var(--font-size-md);
             font-weight: var(--font-weight-regular);
         }
     }
     .form_list {
-        padding: var(--gap-12) 0;
+        padding: var(--gap-20) 0;
         border-top: $border var(--color-black);
         .form-group {
             display: flex;
@@ -634,7 +723,6 @@ select {
             .tit,
             .item {
                 min-height: 4.8rem;
-                // padding-top: var(--gap-13);
             }
             .tit {
                 width: 20.4rem;
@@ -652,27 +740,26 @@ select {
                     }
                 }
             }
-            &.line {
-                padding-top: var(--gap-13);
-                border-top: $border #c2c2c2;
-            }
-            .radio_set {
-                &.fix {
-                    height: 4.8rem;
-                    padding-top: var(--gap-13);
+            &.gap0 {
+                .tit,
+                .item {
+                    min-height: auto;
                 }
-            }
-            .form_msg_set {
-                padding: var(--gap-14) 0;
-                .form_item {
-                    + .form_item {
-                        margin-top: var(--gap-10);
+                .tit {
+                    > label,
+                    > span {
+                        padding-top: 0;
                     }
                 }
+            }
+            &.line {
+                padding-top: var(--gap-20);
+                border-top: $border #c2c2c2;
             }
             .email_set,
             .request_set {
                 @include flex-aligncenter;
+                // gap: 0 1.5rem;
             }
         }
         .txt_require:after {
@@ -682,28 +769,25 @@ select {
         }
     }
     [class^="msg_"] {
+        position: relative;
         margin-top: var(--gap-8);
+        padding-left: var(--gap-10);
         font-size: var(--font-size-xsm);
         &::before {
-            display: inline-block;
-            margin-right: var(--gap-5);
+            position: absolute;
+            top: 0;
+            left: 0;
             content: "*";
         }
         &[class*="_txt"] {
             color: #096ab3;
-            &::before {
-                color: #096ab3;
-            }
         }
         &[class*="_error"] {
             color: #bd2c0f;
-            &::before {
-                color: #bd2c0f;
-            }
         }
     }
     + .form_section {
-        margin-top: var(--gap-50);
+        margin-top: 2.8rem;
     }
     @include mobile {
         .form_list {
@@ -713,24 +797,42 @@ select {
                 .item {
                     min-height: auto;
                 }
+                .tit {
+                    > label,
+                    > span {
+                        padding-top: 0;
+                    }
+                }
                 .item {
-                    margin-top: var(--gap-5);
+                    margin-top: var(--gap-10);
+                }
+                .radio_set {
+                    width: 100%;
+                    text-align: center;
                 }
                 .email_set {
                     flex: 1;
                     flex-direction: column;
-                    .inp,
-                    .inp_select {
-                        margin: var(--gap-10) 0 0 0;
+                    margin-top: -2rem;
+                    .inp_set,
+                    .inp {
+                        margin: var(--gap-20) 0 0 0;
                     }
-                    [class^="btn_"] {
-                        &.full {
-                            margin-top: var(--gap-10);
+                    .inp_set {
+                        .inp {
+                            margin-top: 0;
                         }
                     }
                 }
                 .request_set {
                     flex: 1;
+                    @include sm-mobile {
+                        flex-direction: column;
+                        [class^="btn_"] {
+                            width: 100%;
+                            margin: var(--gap-20) 0 0 0;
+                        }
+                    }
                 }
                 [class^="btn_"] {
                     &.full {
@@ -749,7 +851,43 @@ select {
         }
     }
 }
-
+.terms_section {
+    .terms_check_all {
+        color: var(--color-base);
+        font-weight: var(--font-weight-medium);
+        + .terms_list {
+            margin-top: var(--gap-28);
+            @include mobile {
+                margin-top: var(--gap-10);
+            }
+        }
+    }
+    .terms_list {
+        padding-top: var(--gap-13);
+        color: #b3b3b3;
+        border-top: $border #b1b8be;
+        > li {
+            + li {
+                margin-top: var(--gap-10);
+            }
+        }
+        @include mobile {
+            padding-top: var(--gap-10);
+        }
+    }
+    .terms_item {
+        @include flex-between;
+        align-items: center;
+    }
+    input[type="checkbox"] {
+        + label {
+            padding-left: 3.4rem;
+        }
+    }
+    .txt_red {
+        color: #d63d4a;
+    }
+}
 // .form_list {
 //     .form-group {
 //         display: flex;
@@ -794,6 +932,18 @@ select {
             height: 0.1rem;
             background-color: var(--color-base);
         }
+    }
+}
+
+// box
+.blue_box {
+    margin-top: var(--gap-20);
+    padding: var(--gap-18) var(--gap-16);
+    background-color: #e7f4fe;
+    border: $border #d3ebfd;
+    border-radius: 0.8rem;
+    @include mobile {
+        padding: var(--gap-4) var(--gap-16);
     }
 }
 

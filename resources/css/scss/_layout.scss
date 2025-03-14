@@ -78,7 +78,7 @@
 
     #contents {
         flex: 1;
-        padding: 2.3rem 0;
+        padding: 2.3rem 0 var(--gap-60);
         .section + .section {
             margin-top: var(--gap-50);
         }
@@ -204,7 +204,7 @@
             display: none;
         }
         #contents {
-            padding: var(--gap-50) var(--gap-24);
+            padding: var(--gap-50) var(--gap-16);
         }
     }
     #footer {
