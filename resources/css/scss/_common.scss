@@ -233,27 +233,30 @@
     &[class*="_outlink"],
     &[class*="_arrow"],
     &[class*="_mark"],
+    &[class*="_warning"],
     &[class*="_completion"] {
         position: relative;
         top: -0.1rem;
         display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: var(--gap-10); // 아이콘과 텍스트 사이 공백 x
         vertical-align: var(--align-m);
     }
     // 변수처리할것 (mixin btn-bgtype 참고)
     &[class*="_outlink"] {
-        width: 2.4rem;
-        height: 2.4rem;
-        background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 50%;
+        background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
     }
     &[class*="_arrow"] {
         width: 1.6rem;
         height: 0.9rem;
-        background: url($url-img-icon + "ico_arrow.svg") no-repeat 0 50%;
+        background: url($url-img-icon + "ico_arrow.svg") no-repeat 0 0;
     }
     &[class*="_mark"] {
-        width: 2rem;
-        height: 2rem;
-        background: url($url-img-icon + "ico_mark.svg") no-repeat 0 50%;
+        background: url($url-img-icon + "ico_mark.svg") no-repeat 0 0;
+    }
+    &[class*="_warning"] {
+        background: url($url-img-icon + "ico_warning.svg") no-repeat 0 0;
     }
     &[class*="_completion"] {
         position: absolute;
@@ -262,7 +265,7 @@
         width: 6.4rem;
         height: 6.4rem;
         margin-left: -3.2rem;
-        background: url($url-img-icon + "ico_completion.svg") no-repeat 0 50%;
+        background: url($url-img-icon + "ico_completion.svg") no-repeat 0 0;
     }
 
     &[class*="_txt"] {
@@ -272,10 +275,11 @@
             top: 50%;
             left: 0;
         }
-        &:has([class*="_mark"]) {
+        &:has([class*="_mark"]),
+        &:has([class*="_warning"]) {
             padding-left: 3rem;
             [class^="ico_"] {
-                margin-top: -1rem;
+                margin-top: -1.2rem;
             }
         }
     }
@@ -618,6 +622,9 @@ select {
             &:first-child {
                 border-left: 0;
             }
+            > div {
+                word-break: break-all;
+            }
         }
         &.col thead th,
         &.col tbody th,
@@ -637,7 +644,15 @@ select {
     }
     [class^="board_desc"] {
         &[class*="_top"] {
+            @include flex-between;
+            width: 100%;
             margin-bottom: var(--gap-13);
+            > div {
+                flex: 1;
+                &:not(.lside) {
+                    text-align: right;
+                }
+            }
         }
         &[class*="_bottom"] {
             margin-top: var(--gap-24);
@@ -856,7 +871,7 @@ select {
         color: var(--color-base);
         font-weight: var(--font-weight-medium);
         + .terms_list {
-            margin-top: var(--gap-28);
+            margin: var(--gap-28) 0 var(--gap-20);
             @include mobile {
                 margin-top: var(--gap-10);
             }
@@ -936,14 +951,25 @@ select {
 }
 
 // box
-.blue_box {
-    margin-top: var(--gap-20);
+.notice_box {
+    // margin-top: var(--gap-20);
     padding: var(--gap-18) var(--gap-16);
     background-color: #e7f4fe;
     border: $border #d3ebfd;
     border-radius: 0.8rem;
     @include mobile {
         padding: var(--gap-4) var(--gap-16);
+    }
+    .tit {
+        color: #096ab3;
+        font-weight: var(--font-weight-bold);
+        + .txt {
+            margin: var(--gap-8) 0 0 3.4rem;
+        }
+    }
+    &.warning {
+        background-color: #fff3db;
+        border-color: #ffe0a3;
     }
 }
 
@@ -1004,6 +1030,11 @@ select {
                 color: var(--color-darkgray);
             }
         }
+        .article {
+            + .article {
+                margin-top: var(--gap-20);
+            }
+        }
     }
     .foot {
         width: 100%;
@@ -1011,10 +1042,8 @@ select {
         .btn_area {
             @include flex-center;
             gap: 0 1.5rem;
-            > div {
-                [class^="btn_"] {
-                    min-width: 12rem;
-                }
+            [class^="btn_"] {
+                min-width: 12rem;
             }
         }
     }
@@ -1045,6 +1074,34 @@ select {
             -wetkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+        }
+    }
+    .layer_scroll {
+        overflow: hidden;
+        overflow-y: auto;
+        height: 384px;
+    }
+    .board_area {
+        .tbl {
+            thead th,
+            tbody th,
+            tbody td {
+                height: 3.2rem;
+                padding: 0 var(--gap-16);
+                @include mobile {
+                    height: auto;
+                    padding: 0.3rem var(--gap-8) 0;
+                }
+            }
+        }
+        [class^="board_desc"] {
+            &[class*="_top"] {
+                margin-bottom: var(--gap-10);
+                font-size: 1.2rem;
+            }
+            &[class*="_bottom"] {
+                margin-top: var(--gap-20);
+            }
         }
     }
 }
@@ -1096,14 +1153,14 @@ select {
                         > div {
                             flex: 1;
                             margin: 0;
-                            [class^="btn_"] {
-                                min-width: 100%;
-                            }
+                        }
+                        [class^="btn_"] {
+                            min-width: 100%;
                         }
                     }
                 }
             }
-            .terms_scroll {
+            .layer_scroll {
                 overflow: auto;
                 overflow-y: auto;
                 height: auto;

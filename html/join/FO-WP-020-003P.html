@@ -34,7 +34,7 @@
                             <strong class="tit">사이트 이용약관 (필수)</strong>
                         </div>
                         <!-- 약관 -->
-                        <div class="terms_scroll">
+                        <div class="layer_scroll">
                             <div class="terms_wrap">
                                 <strong class="tit">제1조(목적)</strong>
                                 <p>한국상하수도협회 사이트 이용약관(이하 "본 약관" 이라 한다.)은 회원이 한국상하수도협회(이하 "협회"라 한다.) 회원전용 라운지에서 제공하는 정보 서비스를 이용함에 있어 이용자와 협회의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
@@ -149,6 +149,9 @@
                     $("html").addClass("layerOpen");
                     $(".layerDim").show();
                     $("#policyServicePop").show().focus();
+                });
+                $("#policyServicePop .layer_close").click(function (e) {
+                    $("#policyService").focus(); // 접근성
                 });
             });
         </script>

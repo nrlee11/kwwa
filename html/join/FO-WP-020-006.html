@@ -421,11 +421,17 @@
                     $(".layerDim").show();
                     $("#userValidationPop").show().focus();
                 });
+                $("#userValidationPop .layer_close").click(function (e) {
+                    $("#userValidation2").focus(); // 접근성
+                });
 
                 // Layer : 이메일 인증하기
                 $("#emailValidation").click(function (e) {
                     $(".layerDim").show();
                     $("#emailValidationPop").show().focus();
+                });
+                $("#emailValidationPop .layer_close").click(function (e) {
+                    $("#emailValidation").focus(); // 접근성
                 });
             });
         </script>

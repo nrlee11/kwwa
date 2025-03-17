@@ -60,6 +60,9 @@
                     $(".layerDim").show();
                     $("#emailValidationPop").show().focus();
                 });
+                $("#emailValidationPop .layer_close").click(function (e) {
+                    $("#emailValidation").focus(); // 접근성
+                });
             });
         </script>
     </body>

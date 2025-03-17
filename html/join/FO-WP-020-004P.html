@@ -34,7 +34,7 @@
                             <strong class="tit">개인정보의 수집 및 이용목적 (필수)</strong>
                         </div>
                         <!-- 약관 -->
-                        <div class="terms_scroll">
+                        <div class="layer_scroll">
                             <div class="terms_wrap">
                                 <strong class="tit">가. 개인정보의 수집․이용목적</strong>
                                 <p>회원 전용 콘텐츠 제공, 이메일 발송, 유선 안내, 회원계정 분실 시 계정찾기 기능 제공 등 회원 서비스 제공</p>
@@ -97,6 +97,9 @@
                     $("html").addClass("layerOpen");
                     $(".layerDim").show();
                     $("#policyPrivacyPop").show().focus();
+                });
+                $("#policyPrivacyPop .layer_close").click(function (e) {
+                    $("#policyPrivacy").focus(); // 접근성
                 });
             });
         </script>

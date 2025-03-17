@@ -102,8 +102,8 @@
                                     </div>
                                     <!--// form(e) -->
 
-                                    <div class="blue_box">
-                                        <p class="ico_txt"><span class="ico_mark"></span> 주의사항 : 회원가입 시 본인 인증은 본인명의 핸드폰만 가능 합니다.</p>
+                                    <div class="notice_box">
+                                        <div class="ico_txt"><span class="ico_mark"></span>주의사항 : 회원가입 시 본인 인증은 본인명의 핸드폰만 가능 합니다.</div>
                                     </div>
 
                                     <!-- btn(s) -->
@@ -138,7 +138,7 @@
                             <strong class="tit">사이트 이용약관 (필수)</strong>
                         </div>
                         <!-- 약관 -->
-                        <div class="terms_scroll">
+                        <div class="layer_scroll">
                             <div class="terms_wrap">
                                 <strong class="tit">제1조(목적)</strong>
                                 <p>한국상하수도협회 사이트 이용약관(이하 "본 약관" 이라 한다.)은 회원이 한국상하수도협회(이하 "협회"라 한다.) 회원전용 라운지에서 제공하는 정보 서비스를 이용함에 있어 이용자와 협회의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
@@ -254,7 +254,7 @@
                             <strong class="tit">개인정보의 수집 및 이용목적 (필수)</strong>
                         </div>
                         <!-- 약관 -->
-                        <div class="terms_scroll">
+                        <div class="layer_scroll">
                             <div class="terms_wrap">
                                 <strong class="tit">가. 개인정보의 수집․이용목적</strong>
                                 <p>회원 전용 콘텐츠 제공, 이메일 발송, 유선 안내, 회원계정 분실 시 계정찾기 기능 제공 등 회원 서비스 제공</p>
@@ -318,11 +318,18 @@
                     $(".layerDim").show();
                     $("#policyServicePop").show().focus();
                 });
+                $("#policyServicePop .layer_close").click(function (e) {
+                    $("#policyService").focus(); // 접근성
+                });
+
                 // Layer : 개인정보처리방침
                 $("#policyPrivacy").click(function (e) {
                     $("html").addClass("layerOpen");
                     $(".layerDim").show();
                     $("#policyPrivacyPop").show().focus();
+                });
+                $("#policyPrivacyPop .layer_close").click(function (e) {
+                    $("#policyPrivacy").focus(); // 접근성
                 });
             });
         </script>
