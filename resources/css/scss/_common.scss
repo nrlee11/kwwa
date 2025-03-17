@@ -49,6 +49,9 @@
 .gap_mt0 {
     margin-top: 0 !important;
 }
+.gap_mt33 {
+    margin-top: 3.3rem !important;
+}
 // .gap_mt14 {
 //     margin-top: var(--gap-14);
 // }
@@ -233,6 +236,7 @@
     &[class*="_outlink"],
     &[class*="_arrow"],
     &[class*="_mark"],
+    &[class*="_marknavy"],
     &[class*="_warning"],
     &[class*="_completion"] {
         position: relative;
@@ -254,6 +258,12 @@
     }
     &[class*="_mark"] {
         background: url($url-img-icon + "ico_mark.svg") no-repeat 0 0;
+    }
+    &[class*="_marknavy"] {
+        width: 2rem;
+        height: 2rem;
+        margin: -0.1rem var(--gap-8) 0 0;
+        background: url($url-img-icon + "ico_mark_navy.svg") no-repeat 0 0;
     }
     &[class*="_warning"] {
         background: url($url-img-icon + "ico_warning.svg") no-repeat 0 0;
@@ -719,6 +729,9 @@ select {
     }
 }
 .form_section {
+    + .form_section {
+        margin-top: 2.8rem;
+    }
     .form_tit {
         margin-bottom: var(--gap-10);
         .tit {
@@ -777,10 +790,32 @@ select {
                 // gap: 0 1.5rem;
             }
         }
+        &.col {
+            padding: 0;
+            border-top: 0;
+            .form-group {
+                flex-direction: column;
+                .tit {
+                    min-height: auto;
+                    margin-bottom: var(--gap-8);
+                    font-size: var(--font-size-sm);
+                    > label,
+                    > span {
+                        padding-top: 0;
+                    }
+                }
+                + .form-group {
+                    margin-top: var(--gap-24);
+                }
+            }
+        }
         .txt_require:after {
             display: inline-block;
             color: #d63d4a;
             content: "*";
+        }
+        + .form_choice {
+            margin-top: var(--gap-24);
         }
     }
     [class^="msg_"] {
@@ -800,9 +835,6 @@ select {
         &[class*="_error"] {
             color: #bd2c0f;
         }
-    }
-    + .form_section {
-        margin-top: 2.8rem;
     }
     @include mobile {
         .form_list {
@@ -853,6 +885,16 @@ select {
                     &.full {
                         width: 100%;
                         margin-left: 0;
+                    }
+                }
+            }
+            &.col {
+                .form-group {
+                    .tit {
+                        margin-bottom: 0;
+                    }
+                    .item {
+                        margin-top: var(--gap-8);
                     }
                 }
             }

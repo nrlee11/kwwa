@@ -56,6 +56,9 @@
         border: $border var(--color-warblue);
         border-radius: 0;
         background-color: var(--color-white);
+        &.radius {
+            border-radius: 0.6rem;
+        }
     }
     &[class*="_outline"],
     &[class*="_border"] {

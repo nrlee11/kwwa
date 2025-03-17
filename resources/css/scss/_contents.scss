@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-// 회원가입
+.login_wrap,
 .join_wrap {
     .page_title {
         margin: 6.5rem 0 4.3rem;
@@ -18,6 +18,7 @@
     .progress-bar {
         margin: 0 0 var(--gap-30) var(--gap-10);
     }
+    .login_section,
     .join_section {
         width: 51.8rem;
         margin: 7.5rem auto 0;
@@ -35,6 +36,82 @@
             }
         }
     }
+}
+
+// 로그인
+.login_wrap {
+    .page_title {
+        margin-bottom: var(--gap-48);
+        @include mobile {
+            margin-bottom: 3.2rem;
+        }
+    }
+    .login_section {
+        margin-top: 0;
+        .bottom_btn_area {
+            margin-top: var(--gap-24);
+        }
+    }
+    .login_notice {
+        padding: 2.2rem var(--gap-24) var(--gap-25);
+        border: $border #d6e0eb;
+        border-radius: 1.2rem;
+        background-color: var(--color-lightblue);
+        text-align: center;
+        .tit {
+            color: #052b57;
+            font-weight: var(--font-weight-bold);
+            + .txt {
+                margin-top: var(--gap-20);
+            }
+        }
+        .txt {
+            color: var(--color-gray);
+            text-align: left;
+        }
+        [class^="btn_"] {
+            margin-top: var(--gap-20);
+            color: var(--color-base);
+            border: $border #58616a;
+            background: 0;
+        }
+        + .form_section {
+            margin-top: 7rem;
+            @include mobile {
+                margin-top: var(--gap-50);
+            }
+        }
+    }
+    .login_btn {
+        @include flex-center;
+        gap: 0 2.4rem;
+        margin-top: 2.7rem;
+        > a {
+            + a {
+                position: relative;
+                &::after {
+                    @include pseudo-selector;
+                    left: -1.2rem;
+                    width: 0.1rem;
+                    height: 1.6rem;
+                    margin-top: -0.8rem;
+                    background-color: #cdd1d5;
+                }
+            }
+        }
+    }
+    .txt_notify {
+        margin-top: 6.5rem;
+        font-weight: var(--font-weight-semibold);
+        text-align: center;
+        @include mobile {
+            margin-top: var(--gap-40);
+        }
+    }
+}
+
+// 회원가입
+.join_wrap {
     .request_area {
         @include flex-center;
         gap: 0 1.2rem;
