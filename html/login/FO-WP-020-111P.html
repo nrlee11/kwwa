@@ -10,7 +10,7 @@
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
-        <title>정보입력 | 통합회원 가입 | 한국상하수도협회</title>
+        <title>로그인 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -19,49 +19,50 @@
 
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
-                    <button type="button" class="btn_primary_lg" id="emailValidation">이메일 인증하기 팝업</button>
+                    <button type="button" class="btn_primary_lg" id="idValidation">계정확인</button>
                 </div>
             </div>
 
-            <!-- Layer : 이메일 인증하기 -->
-            <div class="layerFix alertPopup" id="emailValidationPop" style="display: none" tabindex="0">
+            <!-- Layer : 계정확인 -->
+            <div class="layerFix alertPopup" id="idValidationPop" style="display: none" tabindex="0">
                 <div class="layer_wrap">
                     <div class="head">
                         <strong class="tit">상하수도 국가전문자격시스템</strong>
                     </div>
                     <div class="cont">
                         <div class="alert_msg">
-                            <div class="notice">
-                                abc@abc.com 으로 이메일을 전송합니다.<br />
-                                이메일에 포함된 인증번호(6자리 숫자)를 입력해 주세요.
+                            <div class="notice">계정을 확인해 주세요.</div>
+                            <div class="txt">
+                                가입하지 않은 아이디이거나,<br class="mo_only" />
+                                잘못된 비밀번호 입니다.<br />
+                                다시 입력해 주세요.
                             </div>
-                            <div class="txt">통신 또는 메일시스템 사정으로 인해 전송 시간이 걸릴 수 있습니다.</div>
                         </div>
                     </div>
                     <div class="foot">
                         <div class="btn_area">
                             <div>
-                                <button type="button" class="btn_primary_xmd">확인</button>
+                                <button type="button" class="btn_primary_xmd layer_close">확인</button>
                             </div>
                         </div>
                     </div>
-                    <button class="btn_close layer_close"><span class="hidden">이메일 인증하기 닫기</span></button>
+                    <button class="btn_close layer_close"><span class="hidden">계정확인 닫기</span></button>
                 </div>
             </div>
-            <!--// Layer : 이메일 인증하기 -->
+            <!--// Layer : 계정확인 -->
         </div>
         <!--// wrap(e) -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
             $(function () {
-                // Layer : 이메일 인증하기
-                $("#emailValidation").click(function (e) {
+                // Layer : 계정확인
+                $("#idValidation").click(function (e) {
                     $(".layerDim").show();
-                    $("#emailValidationPop").show().focus();
+                    $("#idValidationPop").show().focus();
                 });
-                $("#emailValidationPop .layer_close").click(function (e) {
-                    $("#emailValidation").focus(); // 접근성
+                $("#idValidationPop .layer_close").click(function (e) {
+                    $("#idValidation").focus(); // 접근성
                 });
             });
         </script>

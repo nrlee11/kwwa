@@ -58,20 +58,27 @@
                                                                 <input type="text" value="" id="userId" placeholder="아이디를 입력하세요" />
                                                             </div>
                                                         </div>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">가입하지 않은 아이디이거나, 잘못된 아이디입니다.</p>
+                                                        <p class="msg_error">사용이 중지된 계정입니다. 비밀번호 찾기 후 이용해 주세요.</p>
+                                                        <!--// 에러 : error -->
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="tit">
-                                                    <label for="userPw">비밀번호</label>
+                                                    <label for="userPw error">비밀번호</label>
                                                 </div>
                                                 <div class="item">
                                                     <div class="cell">
                                                         <div class="form_item">
-                                                            <div class="inp">
-                                                                <input type="text" value="" id="userPw" placeholder="비밀번호를 입력하세요" />
+                                                            <!-- 에러 : error class추가 -->
+                                                            <div class="inp error">
+                                                                <input type="password" value="" id="userPw" placeholder="비밀번호를 입력하세요" />
                                                             </div>
+                                                            <!--// 에러 : error class추가 -->
                                                         </div>
+                                                        <p class="msg_error">잘못된 비밀번호입니다.</p>
                                                     </div>
                                                 </div>
                                             </div>
