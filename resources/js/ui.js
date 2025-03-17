@@ -79,9 +79,18 @@ $(function () {
         });
     };
 
-    // LayerClose
-    const layerClose = function () {
-        $(".layer_wrap .layer_close").click(function (e) {
+    // fullLayerClose
+    const fullLayerClose = function () {
+        $(".fullPopup .layer_close").click(function (e) {
+            $(this).parents(".layerFix, .layerDim").hide();
+            $(".layerDim").hide();
+            $("html").removeClass("layerOpen");
+        });
+    };
+
+    // alertLayerClose
+    const alertLayerClose = function () {
+        $(".alertPopup .layer_close").click(function (e) {
             $(this).parents(".layerFix, .layerDim").hide();
             $(".layerDim").hide();
         });
@@ -111,7 +120,8 @@ $(function () {
 
     //gnbMenu();
     layerFix();
-    layerClose();
+    fullLayerClose();
+    alertLayerClose();
     selectLayer();
     includeHtml();
 });

@@ -10,122 +10,18 @@
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
-        <title>이용약관 동의 | 회원 가입 | 한국상하수도협회</title>
+        <title>이용약관 동의 | 통합회원 가입 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
-        <div id="wrap" class="wrap">
-            <!-- [include] header(s) : 확인용 -->
-            <div data-include-file="../include/header.html" class="includeJs"></div>
-            <!--// [include] header(e) : 확인용 -->
+        <div id="wrap" class="wrap" style="height: 100%">
+            <div class="layerDim" style="display: none"></div>
 
-            <!-- container(s) -->
-            <div id="container" class="container">
-                <div class="lyinner">
-                    <!-- contents(s) -->
-                    <div id="contents" class="contents">
-                        <!-- join_wrap(s) -->
-                        <div class="join_wrap">
-                            <!-- page_title(s) -->
-                            <div class="page_title">
-                                <h2 class="tit">회원 가입</h2>
-                            </div>
-                            <!--// page_title(e) -->
-
-                            <!-- section(s) -->
-                            <div class="section">
-                                <!-- progress(s) -->
-                                <div class="progress-bar">
-                                    <strong class="hidden">회원가입 진행순서</strong>
-                                    <div class="on">
-                                        <span class="step">
-                                            <span>1단계</span>
-                                        </span>
-                                        <strong>이용약관 동의</strong>
-                                        <span class="hidden">현재 진행 단계</span>
-                                    </div>
-                                    <div>
-                                        <span class="step">
-                                            <span>2단계</span>
-                                        </span>
-                                        <strong>본인인증</strong>
-                                    </div>
-                                    <div>
-                                        <span class="step">
-                                            <span>3단계</span>
-                                        </span>
-                                        <strong>정보 입력</strong>
-                                    </div>
-                                    <div>
-                                        <span class="step">
-                                            <span>4단계</span>
-                                        </span>
-                                        <strong>가입완료</strong>
-                                    </div>
-                                </div>
-                                <!--// progress(e) -->
-
-                                <!-- join_section(s) -->
-                                <div class="join_section">
-                                    <!-- form(s)-->
-                                    <div class="terms_section">
-                                        <!-- terms -->
-                                        <div class="terms_check_all">
-                                            <span class="inp_check">
-                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                <input type="checkbox" id="agreeAll" />
-                                                <label for="agreeAll">한국상하수도협회 국가전문자격시스템 전체 약관에 동의합니다.</label>
-                                            </span>
-                                        </div>
-                                        <ul class="terms_list">
-                                            <li>
-                                                <div class="terms_item">
-                                                    <span class="inp_check">
-                                                        <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                        <input type="checkbox" id="agree1" />
-                                                        <label for="agree1">서비스 이용약관 <span class="txt_red">(필수)</span></label>
-                                                    </span>
-                                                    <button type="button" class="btn_border_xmd" id="policyService">전문보기</button>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="terms_item">
-                                                    <span class="inp_check">
-                                                        <input type="checkbox" id="agree2" />
-                                                        <label for="agree2">개인정보처리방침 <span class="txt_red">(필수)</span></label>
-                                                    </span>
-                                                    <button type="button" class="btn_border_xmd" id="policyPrivacy">전문보기</button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <!--// terms -->
-                                    </div>
-                                    <!--// form(e) -->
-
-                                    <div class="blue_box">
-                                        <p class="ico_txt"><span class="ico_mark"></span> 주의사항 : 회원가입 시 본인 인증은 본인명의 핸드폰만 가능 합니다.</p>
-                                    </div>
-
-                                    <!-- btn(s) -->
-                                    <div class="bottom_btn_area">
-                                        <button type="button" class="btn_primary_lg">다음</button>
-                                    </div>
-                                    <!--// btn(e) -->
-                                </div>
-                                <!--// join_section(e) -->
-                            </div>
-                            <!--// section(e) -->
-                        </div>
-                        <!--// join_wrap(e) -->
-                    </div>
-                    <!--// contents(e) -->
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="policyService">서비스 이용약관</button>
                 </div>
             </div>
-            <!--// container(e) -->
-
-            <!-- [include] footer(s) : 확인용 -->
-            <div data-include-file="../include/footer.html" class="includeJs"></div>
-            <!--// [include] footer(e) : 확인용 -->
 
             <!-- Layer : 서비스 이용약관 -->
             <div class="layerFix fullPopup" id="policyServicePop" style="display: none" tabindex="0">
@@ -242,70 +138,6 @@
                 </div>
             </div>
             <!--// Layer : 서비스 이용약관 -->
-
-            <!-- Layer : 개인정보처리방침 -->
-            <div class="layerFix fullPopup" id="policyPrivacyPop" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="tit_area">
-                            <strong class="tit">개인정보의 수집 및 이용목적 (필수)</strong>
-                        </div>
-                        <!-- 약관 -->
-                        <div class="terms_scroll">
-                            <div class="terms_wrap">
-                                <strong class="tit">가. 개인정보의 수집․이용목적</strong>
-                                <p>회원 전용 콘텐츠 제공, 이메일 발송, 유선 안내, 회원계정 분실 시 계정찾기 기능 제공 등 회원 서비스 제공</p>
-                                <strong class="tit">나. 개인정보 수집항목</strong>
-                                <ul>
-                                    <li>
-                                        ① 기업 및 단체회원
-                                        <ul>
-                                            <li>
-                                                (필수) 기업/단체명, 사업자등록번호, 지역, 업종, 사업자등록증 증빙서류, 등급설정 증빙서류, 대표자, 대표 전화번호, 대표 휴대전화번호, 대표 팩스번호, 대표 주소, 담당자명, 담당자 부서, 담당자 직위, 담당자 전화번호, 담당자 팩스번호, 담당자 주소, 담당자
-                                                이메일
-                                            </li>
-                                            <li>(선택) 담당자 휴대전화 번호, 추가 담당자명, 추가 담당자 부서, 추가 담당자 전화번호, 추가 담당자 팩스번호, 추가 담당자 주소, 추가 담당자 이메일, 기업부가정보(대표홈페이지, 기관CI, 기관소개, 주요제품, 제품정보, 인증현황, 연혁, 실적)</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        ② 개인회원
-                                        <ul>
-                                            <li>(필수) 이름, 직업, 소속/직위, 휴대전화 번호, 주소, 이메일</li>
-                                            <li>(선택) 전화번호, 팩스번호</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <strong class="tit">다. 개인정보의 보유 및 이용 기간</strong>
-                                <p>보유 및 이용기간 : 회원 탈퇴 후 2년까지</p>
-                                <strong class="tit">라. 동의 거부 및 불이익</strong>
-                                <ul>
-                                    <li>① 귀하는 한국상하수도협회 회원관리시스템의 개인정보 수집, 이용 동의를 거부할 권리가 있으나, 본 필수항목 수집 및 이용을 거부할 경우에는 웹사이트에서 제공하는 정보 서비스를 제공받을 수 없습니다.</li>
-                                    <li>② 개인정보 제공자가 동의한 내용외의 다른 목적으로 활용하지 않으며, 제공된 개인정보의 이용을 거부하고자 할 때에는 개인정보 관리책임자를 통해 열람, 정정, 삭제를 요구할 수 있습니다.</li>
-                                </ul>
-                                <div class="terms_info">
-                                    <p>※ 동의 없이 수집하는 항목 : 사용자 접속로그</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //약관 -->
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <div class="lside">
-                                <button type="button" class="btn_outline_xmd layer_close">취소</button>
-                            </div>
-                            <div class="rside">
-                                <button type="button" class="btn_primary_xmd">동의</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">개인정보의 수집 및 이용목적 닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 개인정보처리방침 -->
         </div>
         <!--// wrap(e) -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -317,12 +149,6 @@
                     $("html").addClass("layerOpen");
                     $(".layerDim").show();
                     $("#policyServicePop").show().focus();
-                });
-                // Layer : 개인정보처리방침
-                $("#policyPrivacy").click(function (e) {
-                    $("html").addClass("layerOpen");
-                    $(".layerDim").show();
-                    $("#policyPrivacyPop").show().focus();
                 });
             });
         </script>
