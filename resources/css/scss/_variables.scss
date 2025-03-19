@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
 // breakpoints
+$breakpoint-xs-mobile: 319px;
 $breakpoint-mobile: 320px;
 $breakpoint-sm-mobile: 370px;
-// $breakpoint-tablet: 758px;
+$breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
 // url
@@ -11,9 +12,6 @@ $url-img: "../../resources/images/";
 $url-img-common: "../../resources/images/common/";
 $url-img-icon: "../../resources/images/icon/";
 
-// common
-$block: block;
-$none: none;
 $border: 0.1rem solid;
 
 :root {
@@ -73,4 +71,6 @@ $border: 0.1rem solid;
     --align-t: top;
     --align-m: middle;
     --align-b: bottom;
+    --show: block;
+    --hide: none;
 }

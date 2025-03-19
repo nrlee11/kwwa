@@ -2,6 +2,7 @@
 
 // btn
 [class^="btn_"] {
+    // xs, sm, md, lg, xl, xxl
     &[class*="_sm"],
     &[class*="_md"],
     &[class*="_xmd"],
@@ -131,7 +132,13 @@
     > div {
         margin: 0 0.75rem;
         [class^="btn_"] {
-            min-width: 25.1rem;
+            min-width: 25.1rem; // size 확정
+        }
+    }
+    &.full {
+        width: 51.8rem; // size 확정
+        [class^="btn_"] {
+            width: 100%;
         }
     }
 
@@ -141,6 +148,13 @@
         > div {
             flex: 1;
             margin: 0;
+            [class^="btn_"] {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+        &.full {
+            width: 100%;
             [class^="btn_"] {
                 width: 100%;
                 min-width: auto;

@@ -24,9 +24,9 @@
         margin: 7.5rem auto 0;
         .bottom_btn_area {
             margin-top: var(--gap-20);
-            > [class^="btn_"] {
-                width: 100%;
-            }
+            // > [class^="btn_"] {
+            //     width: 100%;
+            // }
         }
         @include mobile {
             width: auto;
@@ -111,6 +111,8 @@
     }
 }
 
+// 아이디찾기
+
 // 회원가입
 .join_wrap {
     .auth_area {
@@ -150,11 +152,11 @@
         .msg {
             font-size: var(--font-size-xlg);
             font-weight: var(--font-semibold);
-            + .desc {
+            + .txt {
                 margin-top: 3.8rem;
             }
         }
-        .desc {
+        .txt {
             font-size: 2rem;
         }
         @include mobile {
@@ -199,7 +201,7 @@
                 background-size: contain;
             }
             &:last-child:after {
-                display: $none;
+                display: var(--hide);
             }
         }
     }
@@ -232,7 +234,7 @@
             text-align: center;
             border-bottom: $border #cdd1d5;
             > strong {
-                display: $block;
+                display: var(--show);
                 padding: var(--gap-5) var(--gap-16);
                 margin-bottom: 0.6rem;
                 font-size: var(--font-size-sm);
@@ -249,7 +251,7 @@
                 background-size: contain;
             }
             &:last-child:after {
-                display: $none;
+                display: var(--hide);
             }
         }
     }
@@ -300,12 +302,47 @@
 
 // 에러페이지
 .error_wrap {
+    padding: 0 var(--gap-16);
     @include flex-aligncenter;
-    width: 100%;
-    height: 100%;
     .error_area {
-        width: 51.8rem;
+        // width: 51.8rem;
         margin: 0 auto;
         text-align: center;
+        .msg {
+            position: relative;
+            padding-top: 12.4rem;
+            font-size: var(--font-size-xlg);
+            font-weight: var(--font-semibold);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 6.4rem;
+                height: 6.4rem;
+                margin-left: -3.2rem;
+                background: url($url-img-common + "bg_system_error.svg") no-repeat 0 0;
+            }
+            + .txt {
+                margin-top: 3.8rem;
+            }
+        }
+        .txt {
+            font-size: 2rem;
+        }
+        @include mobile {
+            width: 100%;
+            margin: 0;
+            .msg {
+                padding-top: 11.4rem;
+                font-size: 2.8rem;
+                + .txt {
+                    margin-top: var(--gap-50);
+                }
+            }
+            .bottom_btn_area {
+                margin-top: var(--gap-50);
+            }
+        }
     }
 }

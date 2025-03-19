@@ -31,17 +31,17 @@
     border: 0;
 }
 .pc_only {
-    display: $block;
+    display: var(--show);
 }
 .mo_only {
-    display: $none;
+    display: var(--hide);
 }
 @include mobile {
     .pc_only {
-        display: $none;
+        display: var(--hide);
     }
     .mo_only {
-        display: $block;
+        display: var(--show);
     }
 }
 
@@ -137,7 +137,8 @@
         // flex: 1;
         // padding: 0.9rem 0;
         &:last-child {
-            flex: 0;
+            // flex: 0;
+            width: auto;
             .step {
                 border: 0;
                 &::before {
@@ -223,11 +224,11 @@
             padding: 0;
             margin: 0;
             > span {
-                display: $none;
+                display: var(--hide);
             }
         }
         strong {
-            display: $none;
+            display: var(--hide);
         }
     }
 }
@@ -505,7 +506,7 @@ select {
             }
             &:read-only {
                 + .btn_reset {
-                    display: $none;
+                    display: var(--hide);
                     filter: invert(100%);
                 }
             }
@@ -685,7 +686,7 @@ select {
             colgroup,
             thead th,
             tbody th {
-                display: $none;
+                display: var(--hide);
             }
             tbody td {
                 @include mo-tbl-body;
@@ -774,6 +775,11 @@ select {
                 .cell {
                     + .cell {
                         margin-top: var(--gap-20);
+                    }
+                    &.full {
+                        [class^="btn_"] {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -1041,8 +1047,8 @@ select {
     padding: var(--gap-24) 0;
     background-color: var(--color-white);
     .head {
-        height: 4.8rem;
-        padding: 0 var(--gap-24) var(--gap-20);
+        min-height: 4.8rem;
+        padding: 0 5.8rem var(--gap-20) var(--gap-24);
         .tit {
             color: var(--color-darkblack);
             font-weight: var(--font-regular);
@@ -1062,7 +1068,7 @@ select {
         }
         .alert_msg {
             text-align: center;
-            .notice {
+            .msg {
                 position: relative;
                 padding-top: 10rem;
                 &::before {
@@ -1097,7 +1103,7 @@ select {
             @include flex-center;
             gap: 0 1.5rem;
             [class^="btn_"] {
-                min-width: 12rem;
+                min-width: 12rem; // size 확정
             }
         }
     }
@@ -1160,7 +1166,7 @@ select {
     }
 }
 .layerDim {
-    display: $none;
+    display: var(--hide);
     position: fixed;
     left: 0;
     top: 0;
@@ -1176,7 +1182,7 @@ select {
     }
     .layerFix {
         width: calc(100% - 4rem) !important;
-        min-width: 28rem;
+        min-width: 24.8rem;
         .layer_wrap {
             width: 100%;
             .foot {
@@ -1247,5 +1253,40 @@ select {
         //         }
         //     }
         // }
+    }
+}
+
+// loading
+.loading {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 33, 36, 0.6);
+    > span {
+        margin: calc(0.5rem * 2);
+        border: 0.5rem solid var(--color-blue);
+        border-radius: 50%;
+        &:nth-child(1) {
+            animation: preloader 0.6s ease-in-out alternate infinite;
+        }
+        &:nth-child(2) {
+            animation: preloader 0.6s ease-in-out alternate 0.2s infinite;
+        }
+        &:nth-child(3) {
+            animation: preloader 0.6s ease-in-out alternate 0.4s infinite;
+        }
+        @keyframes preloader {
+            100% {
+                transform: scale(2);
+            }
+        }
     }
 }
