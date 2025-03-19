@@ -52,6 +52,9 @@
 .gap_mt33 {
     margin-top: 3.3rem !important;
 }
+.gap_mt50 {
+    margin-top: var(--gap-50) !important;
+}
 // .gap_mt14 {
 //     margin-top: var(--gap-14);
 // }
@@ -115,6 +118,19 @@
         font-size: var(--font-size-xlg);
         font-weight: var(--font-semibold);
     }
+    &.center {
+        margin-top: 6.5rem;
+        text-align: center;
+        .tit {
+            font-size: 3.5rem;
+        }
+        @include mobile {
+            margin: 0 0 var(--gap-50);
+            .tit {
+                font-size: 2.8rem;
+            }
+        }
+    }
 }
 
 .tit_area {
@@ -130,7 +146,8 @@
 // progress-bar
 .progress-bar {
     @include flex-center;
-    margin: var(--gap-24) 0 7rem var(--gap-10);
+    // margin: var(--gap-24) 0 7rem var(--gap-10);
+    margin-left: var(--gap-10);
     > div {
         position: relative;
         width: 11rem;
@@ -210,7 +227,8 @@
     @include mobile {
         @include flex-between;
         width: 23.8rem;
-        margin: var(--gap-48) auto !important;
+        padding: var(--gap-24) 0;
+        margin: 0 auto;
         > div {
             flex: 1;
             width: auto;

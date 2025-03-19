@@ -128,20 +128,13 @@
 .bottom_btn_area {
     @include flex-center;
     width: 100%;
-    margin-top: 8rem;
+    margin-top: 8rem; // 회원가입 > 정보입력 기준
     > div {
         margin: 0 0.75rem;
         [class^="btn_"] {
             min-width: 25.1rem; // size 확정
         }
     }
-    &.full {
-        width: 51.8rem; // size 확정
-        [class^="btn_"] {
-            width: 100%;
-        }
-    }
-
     @include mobile {
         margin-top: var(--gap-30);
         gap: 0 1.5rem;
