@@ -1337,6 +1337,7 @@ select.round {
 .form_section .form_list .form-group .request_set {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .form_section .form_list.col {
   padding: 0;
@@ -1827,6 +1828,10 @@ select.round {
 [class^=btn_][class*=_outline][class*=_xlg], [class^=btn_][class*=_border][class*=_xlg] {
   line-height: 5rem;
 }
+[class^=btn_]:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
 [class^=btn_] .ico_outlink {
   margin-left: var(--gap-4);
 }
@@ -2034,21 +2039,17 @@ select.round {
   margin-top: var(--gap-24);
 }
 
-.join_section {
-  margin-top: 7.5rem;
+.find_account_wrap {
+  width: 75.2rem;
+  margin: 0 auto;
 }
-@media screen and (max-width: 1024px) {
-  .join_section {
-    margin-top: 0;
-  }
-}
-.join_section .auth_area {
+
+.identity_area {
   display: flex;
   justify-content: center;
   gap: 0 1.2rem;
-  padding: 3.5rem 0 11rem;
 }
-.join_section .auth_area > button {
+.identity_area > button {
   width: 13rem;
   height: 12.2rem;
   padding: var(--gap-18) var(--gap-7);
@@ -2058,20 +2059,32 @@ select.round {
   border-radius: 1rem;
   border: 0.1rem solid var(--color-warblue);
 }
-.join_section .auth_area > button [class^=ico_] {
+.identity_area > button [class^=ico_] {
   display: block;
   width: 4rem;
   height: 4rem;
   margin: var(--gap-20) auto 0;
 }
-.join_section .auth_area > button .ico_auth1 {
-  background: url("../../resources/images/icon/ico_auth1.svg") no-repeat 0 0;
+.identity_area > button .ico_identity1 {
+  background: url("../../resources/images/icon/ico_identity1.svg") no-repeat 0 0;
 }
-.join_section .auth_area > button .ico_auth2 {
-  background: url("../../resources/images/icon/ico_auth2.svg") no-repeat 0 0;
+.identity_area > button .ico_identity2 {
+  background: url("../../resources/images/icon/ico_identity2.svg") no-repeat 0 0;
+}
+
+.join_section {
+  margin-top: 7.5rem;
 }
 @media screen and (max-width: 1024px) {
-  .join_section .auth_area {
+  .join_section {
+    margin-top: 0;
+  }
+}
+.join_section .identity_area {
+  padding: 3.5rem 0 11rem;
+}
+@media screen and (max-width: 1024px) {
+  .join_section .identity_area {
     padding: 0 0 var(--gap-50);
   }
 }

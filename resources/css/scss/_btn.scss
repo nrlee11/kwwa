@@ -79,6 +79,10 @@
             line-height: 5rem;
         }
     }
+    &:disabled {
+        opacity: 0.3;
+        cursor: default;
+    }
     // &[class*="_link"] {
     // }
     .ico_outlink {

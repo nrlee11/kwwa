@@ -83,37 +83,47 @@
     }
 }
 
+// 아이디 찾기
+.find_account_wrap {
+    width: 75.2rem;
+    margin: 0 auto;
+}
+
+// 간편인증
+.identity_area {
+    @include flex-center;
+    gap: 0 1.2rem;
+    > button {
+        width: 13rem;
+        height: 12.2rem;
+        padding: var(--gap-18) var(--gap-7);
+        color: var(--color-warblue);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-bold);
+        border-radius: 1rem;
+        border: $border var(--color-warblue);
+        [class^="ico_"] {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            margin: var(--gap-20) auto 0;
+        }
+        @for $i from 1 through 2 {
+            .ico_identity#{$i} {
+                background: url($url-img-icon + "ico_identity#{$i}.svg") no-repeat 0 0;
+            }
+        }
+    }
+}
+
 // 회원가입
 .join_section {
     margin-top: 7.5rem;
     @include mobile {
         margin-top: 0;
     }
-    .auth_area {
-        @include flex-center;
-        gap: 0 1.2rem;
+    .identity_area {
         padding: 3.5rem 0 11rem;
-        > button {
-            width: 13rem;
-            height: 12.2rem;
-            padding: var(--gap-18) var(--gap-7);
-            color: var(--color-warblue);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-bold);
-            border-radius: 1rem;
-            border: $border var(--color-warblue);
-            [class^="ico_"] {
-                display: block;
-                width: 4rem;
-                height: 4rem;
-                margin: var(--gap-20) auto 0;
-            }
-            @for $i from 1 through 2 {
-                .ico_auth#{$i} {
-                    background: url($url-img-icon + "ico_auth#{$i}.svg") no-repeat 0 0;
-                }
-            }
-        }
         @include mobile {
             padding: 0 0 var(--gap-50);
         }

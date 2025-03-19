@@ -820,6 +820,7 @@ select {
             .email_set,
             .request_set {
                 @include flex-aligncenter;
+                width: 100%;
                 // gap: 0 1.5rem;
             }
         }

@@ -24,27 +24,47 @@
                 <div class="lyinner">
                     <!-- contents(s) -->
                     <div id="contents" class="contents">
-                        <!-- login_wrap(s) -->
-                        <div class="_wrap">
-                            <!-- page_title(s) -->
-                            <div class="page_title">
-                                <h2 class="tit">아이디 찾기</h2>
-                            </div>
-                            <!--// page_title(e) -->
+                        <!-- page_title(s) -->
+                        <div class="page_title center">
+                            <h2 class="tit">아이디 찾기</h2>
+                        </div>
+                        <!--// page_title(e) -->
 
+                        <!-- find_account_wrap(s) -->
+                        <div class="find_account_wrap">
                             <!-- section(s) -->
                             <div class="section">
                                 <div class="tit_area">
                                     <h3 class="tit">본인 인증으로 찾기</h3>
+                                </div>
+
+                                <!-- 본인확인 -->
+                                <div class="identity_area">
+                                    <button type="button">
+                                        휴대폰 본인 인증
+                                        <span class="ico_identity1"></span>
+                                    </button>
+                                    <button type="button">
+                                        통합인증(간편인증)
+                                        <span class="ico_identity2"></span>
+                                    </button>
+                                </div>
+                                <!--// 본인확인 -->
+                            </div>
+                            <!--// section(e) -->
+
+                            <!-- section(s) -->
+                            <div class="section">
+                                <div class="tit_area">
+                                    <h3 class="tit">등록된 회원정보로 찾기</h3>
                                     <div class="desc">
-                                        양성과정을 이수한 경우 자격증 발급신청이 가능합니다.<br />
-                                        자격증 발급을 위해서는 요건 및 결격확인 등의 절차가 필요하며 이를 위해서는 필요 서류를 사전에 제출하여야 합니다.<br />
-                                        자격증 발급 절차는 다음과 같습니다.
+                                        요청한 웹페이지의 이름이 바뀌었거나 변경되어 현재 사용할 수 없습니다.<br />
+                                        입력하신 주소가 정확한지 다시 한번 확인해 보시기 바랍니다.
                                     </div>
                                 </div>
 
                                 <!-- login_section(s) -->
-                                <div class="login_section">
+                                <div class="fix_cont_area">
                                     <!-- form(s)-->
                                     <div class="form_section">
                                         <!-- write -->
@@ -61,44 +81,47 @@
                                                                 <input type="text" value="" id="userName" placeholder="이름을 입력하세요" />
                                                             </div>
                                                         </div>
-                                                        <!-- 에러 : error -->
-                                                        <p class="msg_error">가입하지 않은 아이디이거나, 잘못된 아이디입니다.</p>
-                                                        <p class="msg_error">사용이 중지된 계정입니다. 비밀번호 찾기 후 이용해 주세요.</p>
-                                                        <!--// 에러 : error -->
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="tit">
-                                                    <label for="userPw error">휴대폰번호</label>
+                                                    <label for="cellPhone">휴대폰번호</label>
                                                 </div>
                                                 <div class="item">
                                                     <div class="cell">
                                                         <div class="form_item">
-                                                            <!-- 에러 : error class추가 -->
-                                                            <div class="inp error">
-                                                                <input type="password" value="" id="userPw" placeholder="휴대폰번호 (숫자만 입력)" />
+                                                            <div class="inp">
+                                                                <input type="tel" value="" id="cellPhone" placeholder="휴대폰번호 (숫자만 입력)" />
                                                             </div>
-                                                            <!--// 에러 : error class추가 -->
                                                         </div>
-                                                        <p class="msg_txt">‘-’생략, 11자리 숫자만 입력해 주세요</p>
+                                                        <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요</p>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">등록된 회원정보가 아닙니다.</p>
+                                                        <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
+                                                        <!--// 에러 : error -->
                                                     </div>
                                                     <div class="cell full">
-                                                        <button type="button" class="btn_secondary_lg" id="emailValidation">인증번호 받기</button>
+                                                        <button type="button" class="btn_secondary_lg">인증번호 받기</button>
                                                     </div>
                                                     <div class="cell">
                                                         <div class="form_item">
                                                             <div class="request_set">
-                                                                <div class="inp size_289">
+                                                                <!-- 에러 : error class추가 -->
+                                                                <div class="inp error">
                                                                     <input type="tel" value="" maxlength="6" placeholder="인증번호 6자리" />
                                                                     <div class="request">
                                                                         <span class="time">03:00</span>
                                                                     </div>
                                                                 </div>
+                                                                <!--// 에러 : error class추가 -->
                                                                 <button type="button" class="btn_primary_lg">확인</button>
                                                             </div>
                                                         </div>
-                                                        <p class="msg_txt">이메일을 확인 후 전송된 인증번호를 입력해 주세요.</p>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">인증번호를 확인 후 다시 입력해 주세요.</p>
+                                                        <p class="msg_error">인증 시간이 초과되었습니다.</p>
+                                                        <!--// 에러 : error -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,7 +132,7 @@
 
                                     <!-- btn(s) -->
                                     <div class="bottom_btn_area full">
-                                        <button type="button" class="btn_primary_lg">조회하기</button>
+                                        <button type="button" class="btn_primary_lg" disabled>조회하기</button>
                                     </div>
                                     <!--// btn(e) -->
                                 </div>
@@ -117,7 +140,7 @@
                             </div>
                             <!--// section(e) -->
                         </div>
-                        <!--// login_wrap(e) -->
+                        <!--// find_account_wrap(e) -->
                     </div>
                     <!--// contents(e) -->
                 </div>
