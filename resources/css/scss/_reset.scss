@@ -18,7 +18,7 @@ body {
     padding: 0;
     font-family: var(--font-family-base);
     color: var(--font-color-base);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-regular);
     line-height: 1.5;
     background-color: #fff;
 }
@@ -79,7 +79,7 @@ em,
 th,
 var {
     font-style: normal;
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-regular);
 }
 ol,
 ul,
@@ -122,7 +122,7 @@ label {
     vertical-align: middle;
 }
 strong {
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-bold);
 }
 a {
     &:link,

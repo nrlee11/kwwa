@@ -14,7 +14,7 @@
         line-height: 3rem;
         border-radius: 5rem;
         font-size: var(--font-size-sm);
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-semibold);
     }
     &[class*="_md"] {
         height: 3.3rem;
@@ -182,7 +182,7 @@
     position: relative;
     padding-left: 2.8rem;
     color: var(--color-lightblack);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-bold);
     &::before {
         @include pseudo-selector;
         width: 2rem;

@@ -39,7 +39,7 @@
                                     <div class="login_notice">
                                         <div class="tit"><span class="ico_marknavy"></span>이전 시스템 가입자 회원 전환 가입 안내</div>
                                         <div class="txt">2025.08. 이전 시스템 가입자는 시스템 변경에 따라 신규시스템 회원으로 전환 가입하셔야 서비스 이용이 가능합니다</div>
-                                        <button type="button" class="btn_lg">신규시스템 회원 전환 가입하기</button>
+                                        <button type="button" class="btn_lg" id="memberSystemChange">신규시스템 회원 전환 가입하기</button>
                                     </div>
 
                                     <!-- form(s)-->
@@ -130,9 +130,46 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
+
+            <!-- Layer : 신규시스템 회원 가입 안내 -->
+            <div class="layerFix fullPopup" id="memberSystemChangePop" style="display: none" tabindex="0">
+                <div class="layer_wrap">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont">
+                        <div class="tit_area">
+                            <strong class="tit">신규시스템 회원 가입 안내</strong>
+                        </div>
+                        <div class="layer_scroll">
+                            <div class="article">안내 문구 영역</div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_xmd">동의하고 시작하기</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">신규시스템 회원 가입 안내 닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 신규시스템 회원 가입 안내 -->
         </div>
         <!--// wrap(e) -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 신규시스템 회원 가입 안내
+                $("#memberSystemChange").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $(".layerDim").show();
+                    $("#memberSystemChangePop").show().focus();
+                });
+                $("#memberSystemChangePop .layer_close").click(function (e) {
+                    $("#memberSystemChange").focus(); // 접근성
+                });
+            });
+        </script>
     </body>
 </html>
