@@ -49,6 +49,9 @@
 .gap_mt0 {
     margin-top: 0 !important;
 }
+.gap_mt24 {
+    margin-top: 2.4rem !important;
+}
 .gap_mt33 {
     margin-top: 3.3rem !important;
 }
@@ -115,28 +118,35 @@
 .page_title {
     margin-bottom: var(--gap-50);
     .tit {
-        font-size: var(--font-size-xlg);
-        font-weight: var(--font-semibold);
+        font-size: var(--font-size-xxl);
+        @include mobile {
+            font-size: var(--font-size-xl);
+        }
     }
     &.center {
         margin-top: 6.5rem;
         text-align: center;
-        .tit {
-            font-size: 3.5rem;
-        }
         @include mobile {
-            margin: 0 0 var(--gap-50);
-            .tit {
-                font-size: 2.8rem;
-            }
+            margin-top: 0;
         }
     }
 }
-
 .tit_area {
     margin-bottom: var(--gap-24);
     .tit {
         font-size: var(--font-size-lg);
+        font-weight: var(--font-semibold);
+        &.ico {
+            position: relative;
+            padding-left: var(--gap-18);
+            &::before {
+                @include pseudo-selector;
+                width: 0.8rem;
+                height: 2rem;
+                margin-top: -1rem;
+                background-color: var(--color-warblue);
+            }
+        }
     }
     .desc {
         margin-top: var(--gap-24);
@@ -257,8 +267,7 @@
     &[class*="_arrow"],
     &[class*="_mark"],
     &[class*="_marknavy"],
-    &[class*="_warning"],
-    &[class*="_completion"] {
+    &[class*="_warning"] {
         position: relative;
         top: -0.1rem;
         display: inline-block;
@@ -288,15 +297,6 @@
     &[class*="_warning"] {
         background: url($url-img-icon + "ico_warning.svg") no-repeat 0 0;
     }
-    &[class*="_completion"] {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 6.4rem;
-        height: 6.4rem;
-        margin-left: -3.2rem;
-        background: url($url-img-icon + "ico_completion.svg") no-repeat 0 0;
-    }
 
     &[class*="_txt"] {
         position: relative;
@@ -309,7 +309,7 @@
         &:has([class*="_warning"]) {
             padding-left: 3rem;
             [class^="ico_"] {
-                margin-top: -1.2rem;
+                margin-top: -1.3rem;
             }
         }
     }
@@ -758,7 +758,7 @@ select {
 }
 .form_section {
     + .form_section {
-        margin-top: 2.8rem;
+        margin-top: var(--gap-50);
     }
     .form_tit {
         margin-bottom: var(--gap-10);
@@ -768,7 +768,7 @@ select {
         }
     }
     .form_list {
-        padding: var(--gap-20) 0;
+        padding-top: var(--gap-20);
         border-top: $border var(--color-black);
         .form-group {
             display: flex;
@@ -839,7 +839,7 @@ select {
                     }
                 }
                 + .form-group {
-                    margin-top: var(--gap-24);
+                    // margin-top: var(--gap-24);
                 }
             }
         }
@@ -925,10 +925,10 @@ select {
             &.col {
                 .form-group {
                     .tit {
-                        margin-bottom: 0;
+                        margin-bottom: var(--gap-8);
                     }
                     .item {
-                        margin-top: var(--gap-8);
+                        margin-top: 0;
                     }
                 }
             }
@@ -942,24 +942,39 @@ select {
         }
     }
 }
-.terms_section {
+.terms_area {
     .terms_check_all {
-        color: var(--color-base);
-        font-weight: var(--font-medium);
         + .terms_list {
-            margin: var(--gap-28) 0 var(--gap-20);
+            margin: var(--gap-20) 0 var(--gap-20);
+            padding-top: var(--gap-20);
+            border-top: $border #b1b8be;
             @include mobile {
                 margin-top: var(--gap-10);
             }
         }
     }
     .terms_list {
-        padding-top: var(--gap-13);
-        color: #b3b3b3;
-        border-top: $border #b1b8be;
         > li {
             + li {
-                margin-top: var(--gap-10);
+                margin-top: var(--gap-20);
+            }
+            .terms_item {
+                position: relative;
+                padding-right: var(--gap-40);
+                .inp_check {
+                    display: block;
+                    width: 100%;
+                    margin-right: 0;
+                }
+                .btn_more {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url($url-img-common + "bg_arrow.svg") no-repeat 0 0;
+                    transform: rotate(270deg);
+                }
             }
         }
         @include mobile {
@@ -973,9 +988,11 @@ select {
     input[type="checkbox"] {
         + label {
             padding-left: 3.4rem;
+            font-weight: var(--font-medium);
         }
     }
     .txt_red {
+        font-weight: var(--font-regular);
         color: #d63d4a;
     }
 }
@@ -1033,19 +1050,45 @@ select {
     background-color: #e7f4fe;
     border: $border #d3ebfd;
     border-radius: 0.8rem;
-    @include mobile {
-        padding: var(--gap-4) var(--gap-16);
-    }
+    // @include mobile {
+    //     padding: var(--gap-4) var(--gap-16);
+    // }
     .tit {
         color: #096ab3;
         font-weight: var(--font-bold);
         + .txt {
-            margin: var(--gap-8) 0 0 3.4rem;
+            margin-top: var(--gap-20);
+            color: var(--color-gray);
+        }
+        & {
+            &:has([class*="_marknavy"]) {
+                color: #052b57;
+            }
         }
     }
     &.warning {
         background-color: #fff3db;
         border-color: #ffe0a3;
+    }
+    &.lightblue {
+        padding: 2.2rem var(--gap-24);
+        border: $border #d6e0eb;
+        border-radius: 1.2rem;
+        background-color: var(--color-lightblue);
+        text-align: center;
+        .tit {
+            color: #052b57;
+            + .txt {
+                margin: var(--gap-20) 0 0 0;
+            }
+        }
+        .txt {
+            color: var(--color-gray);
+            text-align: left;
+        }
+    }
+    &.center {
+        text-align: center;
     }
 }
 

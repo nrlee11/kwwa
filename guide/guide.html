@@ -4,114 +4,114 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <title>Document</title>
-        <!--highlight Start  -->
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css" />
-        <!-- 구문 강조 CSS링크 -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-        <!-- 구문 강조 js 링크 -->
         <script>
             hljs.highlightAll();
         </script>
-        <!-- 코드 구문 강조 호출 -->
-        <!--highlight End  -->
+        <style>
+            #guide_wrap {
+                padding: 20px;
+            }
+            pre code.hljs {
+                font-size: 13px;
+                letter-spacing: -0.06rem;
+            }
+        </style>
     </head>
     <body>
-        <!-- HTML코드를 강조하여 보여줄때.. -->
-        <pre>
-            <code class="html">
-                &#x3C;!-- progress(s) --&#x3E;
-                &#x3C;div class=&#x22;progress-bar&#x22;&#x3E;
-                    &#x3C;strong class=&#x22;hidden&#x22;&#x3E;&#xAC00;&#xC785;&#xD558;&#xAE30; &#xC9C4;&#xD589;&#xC21C;&#xC11C;&#x3C;/strong&#x3E;
-                    &#x3C;div&#x3E;
-                        &#x3C;span class=&#x22;step completion&#x22;&#x3E;1&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
-                        &#x3C;strong&#x3E;&#xC774;&#xC6A9;&#xC57D;&#xAD00; &#xB3D9;&#xC758;&#x3C;/strong&#x3E;
-                        &#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xC644;&#xB8CC;&#x3C;/span&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;div class=&#x22;on&#x22;&#x3E;
-                        &#x3C;span class=&#x22;step&#x22;&#x3E;2&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
-                        &#x3C;strong&#x3E;&#xBCF8;&#xC778;&#xC778;&#xC99D;&#x3C;/strong&#x3E;
-                        &#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD604;&#xC7AC; &#xC9C4;&#xD589; &#xB2E8;&#xACC4;&#x3C;/span&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;div&#x3E;
-                        &#x3C;span class=&#x22;step&#x22;&#x3E;3&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
-                        &#x3C;strong&#x3E;&#xC815;&#xBCF4;&#xC785;&#xB825;&#x3C;/strong&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;div&#x3E;
-                        &#x3C;span class=&#x22;step&#x22;&#x3E;4&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
-                        &#x3C;strong&#x3E;&#xAC00;&#xC785;&#xC644;&#xB8CC;&#x3C;/strong&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;!--// progress(e) --&#x3E;
-        </code>
-    </pre>
-        <!-- css코드를 강조하여 보여줄때.. -->
-        <pre>
-            <code class="language-css">
-                /* progress-bar */
-            .progress-bar {
-                display: flex;
-                justify-content: center;
-            }
-            .progress-bar > div {
-                min-width: 12rem;
-            }
-            .progress-bar .step {
-                position: relative;
-                display: block;
-                padding-top: 1.8rem;
-                font-size: 1.3rem;
-                border-top: 0.16rem solid #cdd1d5;
-            }
-            .progress-bar .step::before {
-                content: "";
-                position: absolute;
-                top: -1.1rem;
-                left: 0;
-                width: 2rem;
-                height: 2rem;
-                background-color: #e6e8ea;
-                border: 1px solid #cdd1d5;
-                border-radius: 50%;
-            }
-            .progress-bar .step.completion {
-                border-color: #6d7882;
-            }
-            .progress-bar .step.completion::before {
-                background-color: #6d7882;
-                border: 0;
-                border-color: #6d7882;
-            }
-            .progress-bar .step.completion::after {
-                content: "";
-                position: absolute;
-                top: -0.6rem;
-                left: 0.5rem;
-                width: 1rem;
-                height: 0.618rem;
-                border-left: 0.16rem solid #fff;
-                border-bottom: 0.16rem solid #fff;
-                transform: rotate(315deg);
-            }
-            .progress-bar > div:last-child .step {
-                border: 0;
-            }
-            .progress-bar > div:last-child .step::before {
-                left: -0.1rem;
-            }
-            .progress-bar strong {
-                display: block;
-                margin-top: 0.2rem;
-                font-size: 1.5rem;
-            }
+        <div id="guide_wrap">
+            <h1>Publishing Coding Guide</h1>
+            <div id="btn">
+                <h2>Button</h2>
+                <div>
+                    <h3>기본</h3>
+                    <br />
+                    <button type="button" class="btn_primary_md">primary</button>
+                    <button type="button" class="btn_secondary_md">secondary</button>
+                    <button type="button" class="btn_secondary_md">secondary<span class="ico_outlink"></span></button>
+                    <button type="button" class="btn_outline_md">outline</button>
+                    <button type="button" class="btn_border_md radius">border + radius</button>
+                    <button type="button" class="btn_border_md">border</button>
+                    <br />
+                    <br />
+                    <button type="button" class="btn_primary_lg">primary</button>
+                    <button type="button" class="btn_secondary_lg">secondary</button>
+                    <button type="button" class="btn_secondary_lg">secondary<span class="ico_outlink"></span></button>
+                    <button type="button" class="btn_outline_lg">outline</button>
+                    <button type="button" class="btn_border_lg radius">border + radius</button>
+                    <button type="button" class="btn_border_lg">border</button>
+                    <br />
+                    <br />
+                    <button type="button" class="btn_underline">이수증신청</button>
+                    <button type="button" class="btn_txt">출력하기</button>
+                </div>
+                <pre>
+                    <code class="html">
+// 기본 min-width 90px
 
-            /* table */
-            #mwork table {
-                width: 100%;
-                border-spacing: 0;
-                border-collapse: collapse;
-                border: 1px solid #999;
-            }
-        </code>
-    </pre>
+// height 40px
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_md&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_md&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_md&#x22;&#x3E;outline&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_md radius&#x22;&#x3E;border + radius&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_md&#x22;&#x3E;border&#x3C;/button&#x3E;
+
+// height 48px
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;outline&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg radius&#x22;&#x3E;border + radius&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg&#x22;&#x3E;border&#x3C;/button&#x3E;
+                    </code>
+                </pre>
+                <div>
+                    <h3>페이지 하단</h3>
+                    <div class="bottom_btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_lg">이전으로</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_lg">가입신청</button>
+                        </div>
+                    </div>
+
+                    <div class="bottom_btn_area">
+                        <button type="button" class="btn_primary_lg">가입신청</button>
+                    </div>
+
+                    <div class="bottom_btn_area full">
+                        <button type="button" class="btn_primary_lg">메인</button>
+                    </div>
+                    <pre>
+                        <code class="html">
+* 기본 (PC : min-width 251px / MO : 100%)<br>
+버튼과 컨텐츠 사이의 간격 50px
+&#x3C;div class=&#x22;bottom_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC774;&#xC804;&#xC73C;&#xB85C;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;rside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xAC00;&#xC785;&#xC2E0;&#xCCAD;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                        </code>
+                    </pre>
+                </div>
+
+                <div>
+                    <h3>페이지 중간</h3>
+                    <div class="page_btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_lg">확인</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_secondary_lg">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

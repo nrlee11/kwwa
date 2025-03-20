@@ -24,24 +24,24 @@
                 <div class="lyinner">
                     <!-- contents(s) -->
                     <div id="contents" class="contents">
-                        <!-- page_title(s) -->
+                        <!-- page_title -->
                         <div class="page_title center">
                             <h2 class="tit">아이디 찾기</h2>
                         </div>
-                        <!--// page_title(e) -->
+                        <!--// page_title -->
 
                         <!-- find_account_wrap(s) -->
                         <div class="find_account_wrap">
                             <!-- section(s) -->
                             <div class="section">
                                 <div class="tit_area">
-                                    <h3 class="tit">본인 인증으로 찾기</h3>
+                                    <h3 class="tit ico">본인인증으로 찾기</h3>
                                 </div>
 
                                 <!-- 본인확인 -->
                                 <div class="identity_area">
                                     <button type="button">
-                                        휴대폰 본인 인증
+                                        휴대폰 본인인증
                                         <span class="ico_identity1"></span>
                                     </button>
                                     <button type="button">
@@ -56,16 +56,12 @@
                             <!-- section(s) -->
                             <div class="section">
                                 <div class="tit_area">
-                                    <h3 class="tit">등록된 회원정보로 찾기</h3>
-                                    <div class="desc">
-                                        요청한 웹페이지의 이름이 바뀌었거나 변경되어 현재 사용할 수 없습니다.<br />
-                                        입력하신 주소가 정확한지 다시 한번 확인해 보시기 바랍니다.
-                                    </div>
+                                    <h3 class="tit ico">등록된 회원정보로 찾기</h3>
+                                    <p class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</p>
                                 </div>
 
-                                <!-- login_section(s) -->
-                                <div class="fix_cont_area">
-                                    <!-- form(s)-->
+                                <!-- form-->
+                                <div class="fix_cont">
                                     <div class="form_section">
                                         <!-- write -->
                                         <div class="form_list col">
@@ -95,7 +91,7 @@
                                                                 <input type="tel" value="" id="cellPhone" placeholder="휴대폰번호 (숫자만 입력)" />
                                                             </div>
                                                         </div>
-                                                        <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요</p>
+                                                        <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요.</p>
                                                         <!-- 에러 : error -->
                                                         <p class="msg_error">등록된 회원정보가 아닙니다.</p>
                                                         <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
@@ -104,6 +100,11 @@
                                                     <div class="cell full">
                                                         <button type="button" class="btn_secondary_lg">인증번호 받기</button>
                                                     </div>
+                                                    <!-- 인증요청 후 재전송으로 버튼 명 변경 -->
+                                                    <div class="cell full">
+                                                        <button type="button" class="btn_secondary_lg">재전송</button>
+                                                    </div>
+                                                    <!--// 인증요청 후 재전송으로 버튼 명 변경 -->
                                                     <div class="cell">
                                                         <div class="form_item">
                                                             <div class="request_set">
@@ -111,10 +112,9 @@
                                                                 <div class="inp error">
                                                                     <input type="tel" value="" maxlength="6" placeholder="인증번호 6자리" />
                                                                     <div class="request">
-                                                                        <span class="time">03:00</span>
+                                                                        <time class="time" datetime="03:00">03:00</time>
                                                                     </div>
                                                                 </div>
-                                                                <!--// 에러 : error class추가 -->
                                                                 <button type="button" class="btn_primary_lg">확인</button>
                                                             </div>
                                                         </div>
@@ -128,15 +128,14 @@
                                         </div>
                                         <!--// write -->
                                     </div>
-                                    <!--// form(e) -->
 
-                                    <!-- btn(s) -->
-                                    <div class="bottom_btn_area full">
+                                    <!-- btn -->
+                                    <div class="bottom_btn_area">
                                         <button type="button" class="btn_primary_lg" disabled>조회하기</button>
                                     </div>
-                                    <!--// btn(e) -->
+                                    <!--// btn -->
                                 </div>
-                                <!--// login_section(e) -->
+                                <!--// form -->
                             </div>
                             <!--// section(e) -->
                         </div>
@@ -150,46 +149,9 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
-
-            <!-- Layer : 신규시스템 회원 가입 안내 -->
-            <div class="layerFix fullPopup" id="memberSystemChangePop" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="tit_area">
-                            <strong class="tit">신규시스템 회원 가입 안내</strong>
-                        </div>
-                        <div class="layer_scroll">
-                            <div class="article">안내 문구 영역</div>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_xmd">동의하고 시작하기</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">신규시스템 회원 가입 안내 닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 신규시스템 회원 가입 안내 -->
         </div>
         <!--// wrap(e) -->
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                // Layer : 신규시스템 회원 가입 안내
-                $("#memberSystemChange").click(function (e) {
-                    $("html").addClass("layerOpen");
-                    $(".layerDim").show();
-                    $("#memberSystemChangePop").show().focus();
-                });
-                $("#memberSystemChangePop .layer_close").click(function (e) {
-                    $("#memberSystemChange").focus(); // 접근성
-                });
-            });
-        </script>
     </body>
 </html>

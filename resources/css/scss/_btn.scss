@@ -3,50 +3,20 @@
 // btn
 [class^="btn_"] {
     // xs, sm, md, lg, xl, xxl
-    &[class*="_sm"],
     &[class*="_md"],
-    &[class*="_xmd"],
-    &[class*="_lg"],
-    &[class*="_xlg"] {
+    &[class*="_lg"] {
         @include btn-default; // primary
     }
-    &[class*="_sm"] {
-        height: 3rem;
-        line-height: 3rem;
-        border-radius: 5rem;
-        font-size: var(--font-size-sm);
-        font-weight: var(--font-semibold);
-    }
     &[class*="_md"] {
-        height: 3.3rem;
-        line-height: 3.3rem;
-    }
-    &[class*="_xmd"] {
         height: 4rem;
         line-height: 4rem;
         font-size: var(--font-size-sm);
-    }
-    &[class*="_xlg"] {
-        height: 5.2rem;
-        line-height: 5.2rem;
-    }
-    &[class*="_txt"] {
-        color: var(--color-gray);
-    }
-    &[class*="_underline"] {
-        color: var(--color-gray);
-        text-decoration: underline;
     }
     &[class*="_secondary"] {
         color: var(--color-darkblue);
         background-color: var(--color-skyblue);
         border: $border var(--color-blue);
     }
-    // &[class*="_tertiary"] {
-    //     color: var(--color-darkblue);
-    //     border: $border var(--color-blue);
-    //     background-color: #b1cefb;
-    // }
     &[class*="_outline"] {
         color: var(--color-darkblack);
         background-color: var(--color-white);
@@ -63,26 +33,43 @@
     }
     &[class*="_outline"],
     &[class*="_border"] {
-        &[class*="_sm"] {
-            line-height: 2.8rem;
-        }
         &[class*="_md"] {
-            line-height: 3rem;
-        }
-        &[class*="_xmd"] {
             line-height: 3.8rem;
         }
+
         &[class*="_lg"] {
             line-height: 4.6rem;
-        }
-        &[class*="_xlg"] {
-            line-height: 5rem;
         }
     }
     &:disabled {
         opacity: 0.3;
         cursor: default;
     }
+
+    &[class*="_txt"] {
+        color: var(--color-gray);
+    }
+    &[class*="_underline"] {
+        color: var(--color-gray);
+        text-decoration: underline;
+    }
+
+    // &[class*="_sm"] {
+    //     height: 3rem;
+    //     line-height: 3rem;
+    //     border-radius: 5rem;
+    //     font-size: var(--font-size-sm);
+    //     font-weight: var(--font-semibold);
+    // }
+    // &[class*="_xlg"] {
+    //     height: 5.2rem;
+    //     line-height: 5.2rem;
+    // }
+    // &[class*="_tertiary"] {
+    //     color: var(--color-darkblue);
+    //     border: $border var(--color-blue);
+    //     background-color: #b1cefb;
+    // }
     // &[class*="_link"] {
     // }
     .ico_outlink {
@@ -132,31 +119,39 @@
 .bottom_btn_area {
     @include flex-center;
     width: 100%;
-    margin-top: 8rem; // 회원가입 > 정보입력 기준
+    // margin-top: 8rem; 회원가입 > 정보입력 기준 (확인필요)
+    margin-top: var(--gap-50);
+    [class^="btn_"] {
+        min-width: 25.1rem; // size 확정
+    }
     > div {
         margin: 0 0.75rem;
+    }
+    &.full {
+        width: 100%;
         [class^="btn_"] {
-            min-width: 25.1rem; // size 확정
+            width: 100%;
+            min-width: auto;
         }
     }
     @include mobile {
-        margin-top: var(--gap-30);
+        // margin-top: var(--gap-30);
         gap: 0 1.5rem;
+        [class^="btn_"] {
+            width: 100%;
+            min-width: auto;
+        }
         > div {
             flex: 1;
             margin: 0;
-            [class^="btn_"] {
-                width: 100%;
-                min-width: auto;
-            }
         }
-        &.full {
-            width: 100%;
-            [class^="btn_"] {
-                width: 100%;
-                min-width: auto;
-            }
-        }
+        // &.full {
+        //     width: 100%;
+        //     [class^="btn_"] {
+        //         width: 100%;
+        //         min-width: auto;
+        //     }
+        // }
         // .lside > button,
         // .lside > a {
         //     border-radius: 0.6rem 0 0 0.6rem;

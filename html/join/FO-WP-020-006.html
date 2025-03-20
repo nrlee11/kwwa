@@ -24,50 +24,52 @@
                 <div class="lyinner">
                     <!-- contents(s) -->
                     <div id="contents" class="contents">
-                        <!-- page_title(s) -->
+                        <!-- page_title -->
                         <div class="page_title center">
                             <h2 class="tit">회원가입</h2>
                         </div>
-                        <!--// page_title(e) -->
+                        <!--// page_title -->
+
+                        <!-- progress -->
+                        <div class="progress-bar">
+                            <strong class="hidden">회원가입 진행순서</strong>
+                            <div class="completion">
+                                <span class="step">
+                                    <span>1단계</span>
+                                </span>
+                                <strong>이용약관 동의</strong>
+                                <span class="hidden">완료</span>
+                            </div>
+                            <div class="completion">
+                                <span class="step">
+                                    <span>2단계</span>
+                                </span>
+                                <strong>본인인증</strong>
+                                <span class="hidden">완료</span>
+                            </div>
+                            <div class="on">
+                                <span class="step">
+                                    <span>3단계</span>
+                                </span>
+                                <strong>정보 입력</strong>
+                                <span class="hidden">현재 진행 단계</span>
+                            </div>
+                            <div>
+                                <span class="step">
+                                    <span>4단계</span>
+                                </span>
+                                <strong>가입완료</strong>
+                            </div>
+                        </div>
+                        <!--// progress -->
 
                         <!-- section(s) -->
-                        <div class="section">
-                            <!-- progress(s) -->
-                            <div class="progress-bar">
-                                <strong class="hidden">회원가입 진행순서</strong>
-                                <div class="completion">
-                                    <span class="step">
-                                        <span>1단계</span>
-                                    </span>
-                                    <strong>이용약관 동의</strong>
-                                    <span class="hidden">완료</span>
-                                </div>
-                                <div class="completion">
-                                    <span class="step">
-                                        <span>2단계</span>
-                                    </span>
-                                    <strong>본인인증</strong>
-                                    <span class="hidden">완료</span>
-                                </div>
-                                <div class="on">
-                                    <span class="step">
-                                        <span>3단계</span>
-                                    </span>
-                                    <strong>정보 입력</strong>
-                                    <span class="hidden">현재 진행 단계</span>
-                                </div>
-                                <div>
-                                    <span class="step">
-                                        <span>4단계</span>
-                                    </span>
-                                    <strong>가입완료</strong>
-                                </div>
-                            </div>
-                            <!--// progress(e) -->
 
-                            <!-- join_section(s) -->
-                            <div class="join_section gap_mt0">
-                                <!-- form(s)-->
+                        <!-- join_wrap(s) -->
+                        <div class="join_wrap wide">
+                            <!-- section(s) -->
+                            <div class="section">
+                                <!-- form-->
                                 <div class="join_form">
                                     <div class="form_section">
                                         <!-- titt -->
@@ -175,6 +177,9 @@
                                                                 </span>
                                                             </div>
                                                         </div>
+                                                        <!-- 에러 : error (아니오 선택 시 노출) -->
+                                                        <p class="msg_error">본인 명의의 휴대폰이 아닌 경우 회원가입이 불가 합니다.</p>
+                                                        <!-- 에러 : error (아니오 선택 시 노출) -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -195,7 +200,6 @@
                                                                         <input type="text" value="" id="email" placeholder="아이디" />
                                                                     </div>
                                                                     <span class="txt_between">@</span>
-                                                                    <!-- 에러 : error class추가 -->
                                                                 </div>
                                                                 <div class="inp size_190">
                                                                     <input type="text" value="dreamwiz.com" title="도메인 입력" id="" />
@@ -224,7 +228,7 @@
                                                         </div>
                                                         <p class="msg_txt">이메일 주소를 아이디로 사용합니다.</p>
                                                         <!-- 에러 : error -->
-                                                        <p class="msg_error">이메일 형식이 다릅니다. 다시 확인해 주세요</p>
+                                                        <p class="msg_error">이메일 형식이 다릅니다. 다시 확인해 주세요.</p>
                                                         <p class="msg_error">이미 사용중인 아이디입니다.</p>
                                                         <!-- 에러 : error -->
                                                     </div>
@@ -238,7 +242,7 @@
                                                                 <div class="inp size_289">
                                                                     <input type="tel" value="" maxlength="6" placeholder="인증번호 6자리" />
                                                                     <div class="request">
-                                                                        <span class="time">03:00</span>
+                                                                        <time class="time" datetime="03:00">03:00</time>
                                                                     </div>
                                                                 </div>
                                                                 <button type="button" class="btn_primary_lg">확인</button>
@@ -328,9 +332,9 @@
                                         <!--// write -->
                                     </div>
                                 </div>
-                                <!--// form(e) -->
+                                <!--// form -->
 
-                                <!-- btn(s) -->
+                                <!-- btn -->
                                 <div class="bottom_btn_area">
                                     <div class="lside">
                                         <button type="button" class="btn_outline_lg">이전으로</button>
@@ -339,11 +343,11 @@
                                         <button type="button" class="btn_primary_lg">가입신청</button>
                                     </div>
                                 </div>
-                                <!--// btn(e) -->
+                                <!--// btn -->
                             </div>
-                            <!--// join_section(e) -->
+                            <!--// section(e) -->
                         </div>
-                        <!--// section(e) -->
+                        <!--// join_wrap(e) -->
                     </div>
                     <!--// contents(e) -->
                 </div>
@@ -353,36 +357,6 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
-
-            <!-- Layer : 본인정보확인 -->
-            <div class="layerFix alertPopup" id="userValidationPop" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="alert_msg">
-                            <div class="msg">본인 명의의 휴대폰이 아닌 경우 회원가입이 불가 합니다.</div>
-                            <div class="txt">
-                                회원가입시 궁금한 점은 비회원 문의하기로 남겨주시면<br />
-                                자세히 답변드리겠습니다.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <div class="lside">
-                                <button type="button" class="btn_outline_xmd layer_close">닫기</button>
-                            </div>
-                            <div class="rside">
-                                <button type="button" class="btn_primary_xmd">다시 가입하기</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">본인정보확인 닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 본인정보확인 -->
 
             <!-- Layer : 이메일 인증하기 -->
             <div class="layerFix alertPopup" id="emailValidationPop" style="display: none" tabindex="0">
@@ -402,7 +376,7 @@
                     <div class="foot">
                         <div class="btn_area">
                             <div>
-                                <button type="button" class="btn_primary_xmd">확인</button>
+                                <button type="button" class="btn_primary_md">확인</button>
                             </div>
                         </div>
                     </div>
@@ -416,15 +390,6 @@
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
             $(function () {
-                // Layer : 본인정보확인
-                $("#userValidation2").click(function (e) {
-                    $(".layerDim").show();
-                    $("#userValidationPop").show().focus();
-                });
-                $("#userValidationPop .layer_close").click(function (e) {
-                    $("#userValidation2").focus(); // 접근성
-                });
-
                 // Layer : 이메일 인증하기
                 $("#emailValidation").click(function (e) {
                     $(".layerDim").show();

@@ -24,101 +24,109 @@
                 <div class="lyinner">
                     <!-- contents(s) -->
                     <div id="contents" class="contents">
-                        <!-- page_title(s) -->
+                        <!-- page_title -->
                         <div class="page_title center">
                             <h2 class="tit">로그인</h2>
                         </div>
-                        <!--// page_title(e) -->
+                        <!--// page_title -->
 
-                        <!-- section(s) -->
-                        <div class="section">
-                            <!-- login_section(s) -->
-                            <div class="fix_cont_area">
-                                <div class="login_section">
-                                    <div class="login_notice">
-                                        <div class="tit"><span class="ico_marknavy"></span>이전 시스템 가입자 회원 전환 가입 안내</div>
-                                        <div class="txt">2025.08. 이전 시스템 가입자는 시스템 변경에 따라 신규시스템 회원으로 전환 가입하셔야 서비스 이용이 가능합니다</div>
-                                        <button type="button" class="btn_lg" id="memberSystemChange">신규시스템 회원 전환 가입하기</button>
-                                    </div>
-
-                                    <!-- form(s)-->
-                                    <div class="form_section">
-                                        <!-- write -->
-                                        <div class="form_list col">
-                                            <div class="form-group">
-                                                <div class="tit">
-                                                    <label for="userId">아이디</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp">
-                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                <input type="text" value="" id="userId" placeholder="아이디를 입력하세요" />
-                                                            </div>
-                                                        </div>
-                                                        <!-- 에러 : error -->
-                                                        <p class="msg_error">가입하지 않은 아이디이거나, 잘못된 아이디입니다.</p>
-                                                        <p class="msg_error">사용이 중지된 계정입니다. 비밀번호 찾기 후 이용해 주세요.</p>
-                                                        <!--// 에러 : error -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="tit">
-                                                    <label for="userPw">비밀번호</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <!-- 에러 : error class추가 -->
-                                                            <div class="inp error">
-                                                                <input type="password" value="" id="userPw" placeholder="비밀번호를 입력하세요" />
-                                                            </div>
-                                                            <!--// 에러 : error class추가 -->
-                                                        </div>
-                                                        <p class="msg_error">잘못된 비밀번호입니다.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--// write -->
-
-                                        <div class="form_choice">
-                                            <div class="check_set">
-                                                <span class="inp_check">
-                                                    <input type="checkbox" id="idSave" />
-                                                    <label for="idSave">아이디 저장</label>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--// form(e) -->
-
-                                    <!-- btn(s) -->
-                                    <div class="bottom_btn_area">
-                                        <button type="button" class="btn_primary_lg">로그인</button>
-                                    </div>
-                                    <!--// btn(e) -->
-
-                                    <div class="login_btn">
-                                        <a href="#javascript:;">아이디 찾기</a>
-                                        <a href="#javascript:;">비밀번호 찾기</a>
-                                        <a href="#javascript:;">회원가입</a>
-                                    </div>
-
-                                    <div class="txt_notify">※ 상수도관망시설 운영관리사 1급 25기 / 2급 26기 교육생은 이전 시스템에서 교육을 수료 하셔야 합니다.</div>
-
-                                    <!-- btn(s) -->
-                                    <div class="bottom_btn_area gap_mt33">
-                                        <a href="#javascript:;" class="btn_border_lg radius" target="_blank">이전 시스템 바로가기</a>
-                                    </div>
-                                    <!--// btn(e) -->
+                        <!-- login_wrap(s) -->
+                        <div class="login_wrap fix_cont">
+                            <!-- section(s) -->
+                            <div class="section">
+                                <div class="notice_box lightblue">
+                                    <p class="tit"><span class="ico_marknavy" aria-hidden="true"></span>이전 시스템 가입자 회원 전환 가입 안내</p>
+                                    <p class="txt">2025.08. 이전 시스템 가입자는 시스템 변경에 따라 신규시스템 회원으로 전환 가입하셔야 서비스 이용이 가능합니다</p>
+                                    <button type="button" class="btn_lg" id="memberSystemChange">신규시스템 회원 전환 가입하기</button>
                                 </div>
                             </div>
-                            <!--// login_section(e) -->
+                            <!--// section(e) -->
+
+                            <!-- section(s) -->
+                            <div class="section">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- write -->
+                                    <div class="form_list col">
+                                        <div class="form-group">
+                                            <div class="tit">
+                                                <label for="userId">아이디</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp">
+                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                            <input type="text" value="" id="userId" placeholder="아이디를 입력하세요" />
+                                                        </div>
+                                                    </div>
+                                                    <!-- 에러 : error -->
+                                                    <p class="msg_error">가입하지 않은 아이디이거나, 잘못된 아이디입니다.</p>
+                                                    <p class="msg_error">사용이 중지된 계정입니다. 비밀번호 찾기 후 이용해 주세요.</p>
+                                                    <!--// 에러 : error -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="tit">
+                                                <label for="userPw">비밀번호</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <!-- 에러 : error class추가 -->
+                                                        <div class="inp error">
+                                                            <input type="password" value="" id="userPw" placeholder="비밀번호를 입력하세요" />
+                                                        </div>
+                                                        <!--// 에러 : error class추가 -->
+                                                    </div>
+                                                    <p class="msg_error">잘못된 비밀번호입니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_choice">
+                                        <div class="check_set">
+                                            <span class="inp_check">
+                                                <input type="checkbox" id="idSave" />
+                                                <label for="idSave">아이디 저장</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// write -->
+                                </div>
+                                <!--// form -->
+
+                                <!-- btn -->
+                                <div class="bottom_btn_area">
+                                    <button type="button" class="btn_primary_lg">로그인</button>
+                                </div>
+                                <!--// btn -->
+
+                                <!-- login_btn -->
+                                <div class="login_btn">
+                                    <a href="#javascript:;">아이디 찾기</a>
+                                    <a href="#javascript:;">비밀번호 찾기</a>
+                                    <a href="#javascript:;">회원가입</a>
+                                </div>
+                                <!--// login_btn -->
+                            </div>
+                            <!--// section(e) -->
+
+                            <!-- section(s) -->
+                            <div class="section">
+                                <p class="txt_notify">※ 상수도관망시설 운영관리사 1급 25기 / 2급 26기 교육생은 이전 시스템에서 교육을 수료 하셔야 합니다.</p>
+
+                                <!-- btn -->
+                                <div class="bottom_btn_area">
+                                    <a href="#javascript:;" class="btn_border_lg radius" target="_blank">이전 시스템 바로가기</a>
+                                </div>
+                                <!--// btn -->
+                            </div>
+                            <!--// section(e) -->
                         </div>
-                        <!--// section(e) -->
+                        <!--// login_wrap(e) -->
                     </div>
                     <!--// contents(e) -->
                 </div>
@@ -145,7 +153,7 @@
                     </div>
                     <div class="foot">
                         <div class="btn_area">
-                            <button type="button" class="btn_primary_xmd">동의하고 시작하기</button>
+                            <button type="button" class="btn_primary_md">동의하고 시작하기</button>
                         </div>
                     </div>
                     <button class="btn_close layer_close"><span class="hidden">신규시스템 회원 가입 안내 닫기</span></button>

@@ -1,43 +1,58 @@
 @charset "UTF-8";
-// width 518
-.fix_cont_area {
-    width: 51.8rem;
+// width 518 (로그인,회원가입)
+.fix_cont {
+    width: 51.8rem !important;
     // margin: 7.5rem auto 0;
-    margin: var(--gap-50) auto 0;
+    margin: var(--gap-50) auto 0 !important;
     .bottom_btn_area {
-        margin-top: var(--gap-20);
+        // margin-top: var(--gap-20);
         > [class^="btn_"] {
             width: 100%;
         }
     }
     @include mobile {
-        width: auto;
-        .blue_box,
-        .bottom_btn_area {
+        width: auto !important;
+        // .blue_box,
+        // .bottom_btn_area {
+        //     margin-top: var(--gap-50);
+        // }
+        .blue_box {
             margin-top: var(--gap-50);
         }
     }
 }
 
+// 완료
+.completion_area {
+    position: relative;
+    margin-bottom: var(--gap-50);
+    padding-top: 11.4rem;
+    text-align: center;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-left: -3.2rem;
+        background: url($url-img-icon + "ico_completion.svg") no-repeat 0 0;
+    }
+    .msg {
+        font-size: var(--font-size-xxl);
+        font-weight: var(--font-semibold);
+        + .txt {
+            margin-top: var(--gap-50);
+        }
+    }
+    .txt {
+        font-size: 2rem;
+    }
+}
+
 // 로그인
-.login_section {
-    .login_notice {
-        padding: 2.2rem var(--gap-24) var(--gap-25);
-        border: $border #d6e0eb;
-        border-radius: 1.2rem;
-        background-color: var(--color-lightblue);
-        text-align: center;
-        .tit {
-            color: #052b57;
-            font-weight: var(--font-bold);
-            + .txt {
-                margin-top: var(--gap-20);
-            }
-        }
-        .txt {
-            color: var(--color-gray);
-            text-align: left;
-        }
+.login_wrap {
+    .notice_box {
         [class^="btn_"] {
             margin-top: var(--gap-20);
             color: var(--color-base);
@@ -45,17 +60,11 @@
             background: 0;
             line-height: 4.6rem;
         }
-        + .form_section {
-            margin-top: 7rem;
-            @include mobile {
-                margin-top: var(--gap-50);
-            }
-        }
     }
     .login_btn {
         @include flex-center;
         gap: 0 2.4rem;
-        margin-top: 2.7rem;
+        margin-top: var(--gap-24);
         > a {
             + a {
                 position: relative;
@@ -71,12 +80,8 @@
         }
     }
     .txt_notify {
-        margin-top: 6.5rem;
         font-weight: var(--font-semibold);
         text-align: center;
-        @include mobile {
-            margin-top: var(--gap-40);
-        }
     }
     .bottom_btn_area {
         margin-top: var(--gap-24);
@@ -87,12 +92,20 @@
 .find_account_wrap {
     width: 75.2rem;
     margin: 0 auto;
+    @include mobile {
+        width: 100%;
+    }
+    .find_msg {
+        margin-bottom: var(--gap-50);
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 // 간편인증
 .identity_area {
     @include flex-center;
-    gap: 0 1.2rem;
+    gap: 0 1.5rem;
     > button {
         width: 13rem;
         height: 12.2rem;
@@ -117,46 +130,36 @@
 }
 
 // 회원가입
-.join_section {
-    margin-top: 7.5rem;
-    @include mobile {
-        margin-top: 0;
-    }
-    .identity_area {
-        padding: 3.5rem 0 11rem;
-        @include mobile {
-            padding: 0 0 var(--gap-50);
-        }
-    }
-    .join_form {
-        margin-top: var(--gap-30);
+.join_wrap {
+    // margin-top: 7.5rem;
+    // @include mobile {
+    //     margin-top: var(--gap-50) !important;
+    // }
+    // .identity_area {
+    //     padding: 3.5rem 0 11rem;
+    //     @include mobile {
+    //         padding: 0 0 var(--gap-50);
+    //     }
+    // }
+    // .join_form {
+    //     margin-top: var(--gap-30);
+    //     @include mobile {
+    //         margin-top: var(--gap-50);
+    //     }
+    // }
+    &.wide {
+        margin-top: var(--gap-24);
         @include mobile {
             margin-top: var(--gap-50);
         }
+        .bottom_btn_area {
+            margin-top: var(--gap-50);
+        }
     }
-    .completion_area {
-        position: relative;
-        margin-bottom: 8.8rem;
-        padding-top: 12.5rem;
-        text-align: center;
-        .msg {
-            font-size: var(--font-size-xlg);
-            font-weight: var(--font-semibold);
-            + .txt {
-                margin-top: 3.8rem;
-            }
-        }
-        .txt {
-            font-size: 2rem;
-        }
+    .bottom_btn_area {
+        margin-top: var(--gap-24);
         @include mobile {
-            margin-bottom: 0;
-            padding-top: 11.4rem;
-            .msg {
-                + .desc {
-                    margin-top: var(--gap-50);
-                }
-            }
+            margin-top: var(--gap-50);
         }
     }
 }
@@ -301,7 +304,7 @@
         .msg {
             position: relative;
             padding-top: 12.4rem;
-            font-size: var(--font-size-xlg);
+            font-size: var(--font-size-xxl);
             font-weight: var(--font-semibold);
             &::before {
                 content: "";
