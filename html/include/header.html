@@ -9,26 +9,30 @@
                     <span class="hidden">검색창 열기</span>
                 </button>
                 <a href="javascript:;" class="btn_login">로그인</a>
-                <a href="javascript:;" class="btn_logout">로그아웃</a>
                 <a href="javascript:;" class="btn_join">회원가입</a>
+                <a href="javascript:;" class="btn_logout">로그아웃</a>
+                <a href="javascript:;" class="btn_user">김상하님</a>
             </div>
             <div class="box">
                 <button type="button" class="btn_outline_sm">알림서비스 신청</button>
-                <a href="javascript:;" class="btn_primary_sm">정수시설 운영관리사<span class="ico_arrow"></span></a>
+                <a href="javascript:;" class="btn_warmblue_sm switch"><strong>정수시설</strong> 운영관리사 3급<span class="ico_arrow" aria-hidden="true"></span></a>
+                <!-- <a href="javascript:;" class="btn_warmblue_sm switch"><strong>정수시설</strong> 운영관리사 1급/2급<span class="ico_arrow" aria-hidden="true"></span></a>
+                <a href="javascript:;" class="btn_warmblue_sm switch"><strong>상수도관망시설</strong> 운영관리사<span class="ico_arrow" aria-hidden="true"></span></a> -->
             </div>
         </div>
         <h1 class="logo">
             <a href="./index.html">
-                <span class="hidden">상하수도 국가전문자격 상수도관망시설 운영관리사</span>
+                <em>상하수도 국가전문자격</em>
+                <span><strong>정수시설</strong> 운영관리사 1급/2급</span>
             </a>
         </h1>
-        <button type="button" class="btn_hamburger"><span class="hidden">주요 서비스 메뉴 펼치기</span></button>
+        <button type="button" class="btn_hamburger sideOpen"><span class="hidden">주요 서비스 메뉴 펼치기</span></button>
     </div>
-    <!-- nav(s) -->
+
+    <!-- gnb(s) -->
     <div class="nav_area">
         <div class="inner">
             <nav id="gnb" class="gnb">
-                <strong class="hidden">메인메뉴, 주요 서비스 바로 가기</strong>
                 <ul class="depth1">
                     <li>
                         <a href="javascript:;">자격&middot;과정안내</a>
@@ -37,39 +41,121 @@
                                 <li><a href="javascript:;">자격개요</a></li>
                                 <li><a href="javascript:;">취득방법 및 절차</a></li>
                                 <li><a href="javascript:;">요건 및 결격사유</a></li>
-                                <li><a href="javascript:;">취득가능여부 자가진단</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="javascript:;">교육</a>
-                        <div class="sub">
-                            <ul class="depth2">
-                                <li><a href="javascript:;">교육내용 및 이수기준</a></li>
-                                <li><a href="javascript:;">교육비 안내</a></li>
                                 <li>
-                                    <a href="javascript:;">교육신청</a>
-                                    <ul class="depth3">
-                                        <li><a href="javascript:;">자격증선택</a></li>
-                                        <li><a href="javascript:;">자격요건확인</a></li>
-                                        <li><a href="javascript:;">신청서 작성</a></li>
-                                        <li><a href="javascript:;">신청정보확인</a></li>
-                                        <li><a href="javascript:;">수수료결제</a></li>
-                                        <li><a href="javascript:;">수수료결제</a></li>
-                                    </ul>
+                                    <a href="javascript:;">취득가능여부<br />자가진단</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="javascript:;">평가시험</a></li>
-                    <li><a href="javascript:;">자격증발급</a></li>
-                    <li><a href="javascript:;">마이페이지</a></li>
-                    <li><a href="javascript:;">고객지원</a></li>
+                    <li>
+                        <a href="javascript:;">양성교육</a>
+                        <div class="sub">
+                            <ul class="depth2">
+                                <li><a href="javascript:;">교육내용</a></li>
+                                <li><a href="javascript:;">수료기준</a></li>
+                                <li><a href="javascript:;">교육비</a></li>
+                                <li><a href="javascript:;">교육신청</a></li>
+                                <li><a href="javascript:;">신청현황 조회</a></li>
+                                <li><a href="javascript:;">강의실 입장</a></li>
+                                <li><a href="javascript:;">수료증 발급</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">평가시험</a>
+                        <div class="sub">
+                            <ul class="depth2">
+                                <li><a href="javascript:;">평가내용</a></li>
+                                <li><a href="javascript:;">이수기준 및 주의사항</a></li>
+                                <li><a href="javascript:;">응시료</a></li>
+                                <li><a href="javascript:;">이수평가 신청</a></li>
+                                <li><a href="javascript:;">응시현황 조회</a></li>
+                                <li><a href="javascript:;">합격조회</a></li>
+                                <li><a href="javascript:;">의견제출</a></li>
+                                <li><a href="javascript:;">이수증 발급</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">실무교육 </a>
+                        <div class="sub">
+                            <ul class="depth2">
+                                <li><a href="javascript:;">서류제출</a></li>
+                                <li><a href="javascript:;">실무교육 확인조회</a></li>
+                                <li><a href="javascript:;">이수증 발급</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">자격증발급</a>
+                        <div class="sub">
+                            <ul class="depth2">
+                                <li><a href="javascript:;">자격증 발급절차</a></li>
+                                <li><a href="javascript:;">제출서류 안내</a></li>
+                                <li><a href="javascript:;">발급비</a></li>
+                                <li><a href="javascript:;">수첩형 자격증 발급신청</a></li>
+                                <li><a href="javascript:;">발급현황 조회</a></li>
+                                <li><a href="javascript:;">자격취득 확인서 발급</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 활성화 : on -->
+                    <li class="on">
+                        <a href="javascript:;">마이페이지</a>
+                        <div class="sub">
+                            <ul class="depth2">
+                                <!-- 활성화 : on -->
+                                <li class="on">
+                                    <a href="javascript:;">나의 교육과정</a>
+                                    <ul class="depth3">
+                                        <li><a href="javascript:;">교육/평가시험</a></li>
+                                        <!-- 활성화 : on -->
+                                        <li class="on"><a href="javascript:;">만족도 조사</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">자격현황</a>
+                                    <ul class="depth3">
+                                        <li><a href="javascript:;">현황</a></li>
+                                        <li><a href="javascript:;">보완요청(미정)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:;">문의현황</a></li>
+                                <li>
+                                    <a href="javascript:;">확인서 발급</a>
+                                    <ul class="depth3">
+                                        <li><a href="javascript:;">납부확인서</a></li>
+                                        <li><a href="javascript:;">교육 수료증</a></li>
+                                        <li><a href="javascript:;">응시확인서</a></li>
+                                        <li><a href="javascript:;">양성과정 이수증</a></li>
+                                        <li><a href="javascript:;">자격취득 확인서</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:;">영수증/계산서 발급</a></li>
+                                <li><a href="javascript:;">회원정보 수정</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">고객지원</a>
+                        <div class="sub">
+                            <ul class="depth2">
+                                <li><a href="javascript:;">공지사항</a></li>
+                                <li><a href="javascript:;">자료실</a></li>
+                                <li>
+                                    <a href="javascript:;">자주묻는 질문과<br />답변</a>
+                                </li>
+                                <li><a href="javascript:;">영수증/계산서 발급</a></li>
+                                <li><a href="javascript:;">채용공고</a></li>
+                                <li><a href="javascript:;">문의 및 연락처</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                <div class="bg"></div>
             </nav>
         </div>
+        <div class="bg"></div>
     </div>
-    <!--// nav(e) -->
+    <!--// gnb(e) -->
 </header>
 <!--// header(e) -->

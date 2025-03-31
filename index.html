@@ -10,6 +10,7 @@
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/swiper-bundle.min.css" />
         <title>한국상하수도협회</title>
     </head>
     <body>
@@ -19,440 +20,597 @@
             <div data-include-file="/html/include/header.html" class="includeJs"></div>
             <!--// [include] header(e) -->
 
-            <!-- container(s) -->
-            <div id="container" class="container">
-                <div class="lyinner">
-                    <!-- [include] aside(s) : 확인용 -->
-                    <div data-include-file="/html/include/aside.html" class="includeJs"></div>
-                    <!--// [include] aside(e) : 확인용 -->
-
-                    <!-- contents(s) -->
-                    <div id="contents" class="contents">
-                        <!-- breadcrumb(s) -->
-                        <nav class="breadcrumb_wrap" aria-label="현재 경로">
-                            <ol class="breadcrumb">
-                                <li><a href="javascript:;">홈</a></li>
-                                <li><a href="javascript:;">자격&middot;과정안내</a></li>
-                                <li><span>자격개요</span></li>
-                            </ol>
-                        </nav>
-                        <!--// breadcrumb(e) -->
-
-                        <!-- page_title(s) -->
-                        <div class="page_title">
-                            <h1 class="tit">자격증 발급신청</h1>
-                        </div>
-                        <!--// page_title(e) -->
-
-                        <!-- section(s) -->
-                        <div class="section">
-                            <div class="tit_area">
-                                <h2 class="tit">발급수수료 결제완료</h2>
-                                <p class="desc">자격증 발급을 위한 수수료(1만원)를 아래 방법을 통해 납부해 주시기 바랍니다.<br />- 카드결제, 간편결제, 가상계좌 이체</p>
-                            </div>
-
-                            <!-- progress(s) -->
-                            <div class="progress-bar" aria-label="가입하기 진행순서">
-                                <div class="completion">
-                                    <span class="step">
-                                        <span>1단계</span>
-                                    </span>
-                                    <strong>이용약관 동의</strong>
-                                    <span class="hidden">완료</span>
+            <!-- main(s) -->
+            <main id="main" class="main">
+                <!-- container(s) -->
+                <div id="container">
+                    <!-- section(s) : 상단 서비스 -->
+                    <div class="visual_area">
+                        <div class="inner">
+                            <div class="primary_service">
+                                <div class="banner_area">
+                                    <div class="visual_slide">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;">
+                                                        <span class="thum">
+                                                            <!-- img size (590*280 // 1180*560) -->
+                                                            <!-- 접근성 : 관리자에서 배너 등록 시 alt값도 img 문구와 동일하게 기입해야함. (관리자 alt입력란 필수) -->
+                                                            <img src="/resources/images/temp/visual_temp01.png" alt="자격증 안내, 상수도관망시설 운영관리사 1급/2급/3급" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;">
+                                                        <span class="thum">
+                                                            <img src="/resources/images/temp/visual_temp01.png" alt="자격증 안내, 상수도관망시설 운영관리사 1급/2급/3급" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:;">
+                                                        <span class="thum">
+                                                            <img src="/resources/images/temp/visual_temp01.png" alt="자격증 안내, 상수도관망시설 운영관리사 1급/2급/3급" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-controls">
+                                                <div class="swiper-pagination"></div>
+                                                <button type="button" class="swiperPause" aria-label="자동 재생 정지"><span class="hidden">정지</span></button>
+                                                <button type="button" class="swiperPlay" aria-label="자동 재생" style="display: none"><span class="hidden">재생</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// 배너 -->
                                 </div>
-                                <div class="on">
-                                    <span class="step">
-                                        <span>2단계</span>
-                                    </span>
-                                    <strong>본인인증</strong>
-                                    <span class="hidden">현재 진행 단계</span>
-                                </div>
-                                <div>
-                                    <span class="step">
-                                        <span>3단계</span>
-                                    </span>
-                                    <strong>정보입력</strong>
-                                </div>
-                                <div>
-                                    <span class="step">
-                                        <span>4단계</span>
-                                    </span>
-                                    <strong>가입완료</strong>
-                                </div>
-                            </div>
-                            <!--// progress(e) -->
-                        </div>
-                        <!--// section(e) -->
 
-                        <!-- section(s) -->
-                        <div class="section">
-                            <!-- board(s) -->
-                            <div class="board_area">
-                                <!-- board_view -->
-                                <table class="tbl row">
-                                    <caption class="hidden">
-                                        <strong>신청자 정보</strong>
-                                        이름, 주민등록번호, 주소, 휴대전화, 전화번호 정보 제공
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 25%" />
-                                        <col />
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">이름</th>
-                                            <td><div>홍길동</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">주민등록번호</th>
-                                            <td><div>900105-*******</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">주소</th>
-                                            <td>
-                                                <div>
-                                                    07379<br />
-                                                    서울특별시 영등포구 대림로-244(대림동) 2F 210호
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor1">전화번호</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp">
-                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                            <input type="tel" value="" id="lagelfor1" placeholder="전화번호" />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor2">휴대전화</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp">
-                                                            <input type="tel" value="010-1234-5678" id="lagelfor2" placeholder="휴대전화" readonly />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor3">학력사항</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp">
-                                                            <input type="text" value="" id="lagelfor3" placeholder="학교를 검색해 주세요" readonly />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                        <button type="button" class="btn_search">
-                                                            <span class="hidden">검색</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor4">선택</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp_select">
-                                                            <select title="선택" id="lagelfor4">
-                                                                <option value="">선택1</option>
-                                                                <option value="">선택2</option>
-                                                            </select>
-                                                        </div>
-                                                        <button type="button" class="btn_primary_lg">검색</button>
-                                                        <button type="button" class="btn_secondary_lg auto">서식 다운로드<span class="ico_outlink"></span></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor5">우편번호</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp">
-                                                            <input type="text" value="010-1234-5678" id="lagelfor5" placeholder="휴대전화" readonly />
-                                                        </div>
-                                                        <button type="button" class="btn_primary_lg">검색</button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">재학여부</th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="radio_set">
-                                                            <span class="inp_radio">
-                                                                <input type="radio" id="label_01_01" name="label_01" checked />
-                                                                <label for="label_01_01">졸업</label>
-                                                            </span>
-                                                            <span class="inp_radio">
-                                                                <input type="radio" id="label_01_02" name="label_01" />
-                                                                <label for="label_01_02">재학중</label>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor6">교육시간</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp">
-                                                            <input type="tel" value="" id="lagelfor6" placeholder="교육시간입력" />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                        <span class="txt">시간</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <label for="lagelfor7">교육기간</label>
-                                            </th>
-                                            <td>
-                                                <div>
-                                                    <div class="form_item">
-                                                        <div class="inp">
-                                                            <input type="tel" value="" id="lagelfor7" placeholder="시작일" />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                        <span class="txt_between">~</span>
-                                                        <div class="inp">
-                                                            <input type="tel" value="" id="" placeholder="종료일" />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_view -->
-                            </div>
-                            <!--// board(e) -->
-                        </div>
-                        <!--// section(e) -->
+                                <div class="service_area">
+                                    <div class="cs_info">
+                                        <a href="javascript:;" class="link">
+                                            <strong>통합회원 전환안내</strong>
+                                            <span>바로가기</span>
+                                        </a>
+                                        <a href="javascript:;" class="link">
+                                            <strong>자격요건 자가진단</strong>
+                                            <span>바로가기</span>
+                                        </a>
+                                    </div>
 
-                        <!-- section(s) -->
-                        <div class="section">
-                            <!-- board(s) -->
-                            <div class="board_area">
-                                <!-- board_info -->
-                                <div class="board_info">
-                                    <div>조회된 내역(00건) 조회일시:</div>
-                                    <div>2025.02.30 00:00:00</div>
-                                </div>
-                                <!--// board_info -->
-                                <!-- board_view -->
-                                <table class="tbl react">
-                                    <caption class="hidden">
-                                        자격증 신청 번호, 상태, 영수증 정보 제공
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 33.33%" span="2" />
-                                        <col />
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">자격증 신청 번호</th>
-                                            <th scope="col">상태</th>
-                                            <th scope="col">영수증</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-cell-header="자격증 신청 번호"><div>예시 A-24210000</div></td>
-                                            <td data-cell-header="상태"><div>카드결제(일시불)카드결제(일시불)카드결제(일시불)카드결제(일시불)카드결제(일시불)카드결제(일시불)</div></td>
-                                            <td data-cell-header="영수증"><div>영수증 출력</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-cell-header="자격증 신청 번호"><div>예시 A-24210000</div></td>
-                                            <td data-cell-header="상태"><div>카드결제(일시불)</div></td>
-                                            <td data-cell-header="영수증"><div>영수증 출력</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-cell-header="자격증 신청 번호"><div>예시 A-24210000</div></td>
-                                            <td data-cell-header="상태"><div>카드결제(일시불)</div></td>
-                                            <td data-cell-header="영수증"><div>영수증 출력</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="nodata" colspan="3">최근 발급 신청된 내용이 없습니다.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_view -->
-                                <!-- board_desc -->
-                                <div class="board_desc_bottom">※ 반려로 인해 보내주신 원본서류는 전부 파쇄함을 알려드립니다.</div>
-                                <!--// board_desc -->
-                            </div>
-                            <!--// board(e) -->
-                            <!-- page btn(s) -->
-                            <div class="page_btn_area">
-                                <div class="lside">
-                                    <button type="button" class="btn_primary_lg">확인</button>
-                                </div>
-                                <div class="rside">
-                                    <button type="button" class="btn_secondary_lg">확인</button>
+                                    <div class="mb_info">
+                                        <!-- <div class="member_join">
+                                        <a href="javascript:;" class="btn_navyborder_xlg radius">회원가입</a>
+                                        <a href="javascript:;" class="btn_navy_xlg">로그인</a>
+                                    </div> -->
+                                        <div class="member_benefits">
+                                            <div class="link">
+                                                <a href="javascript:;" class="education">
+                                                    <strong>교육 신청</strong>
+                                                    <span>2025년 22회차 교육(진행중)<br />(1급/2급/3급)</span>
+                                                </a>
+                                            </div>
+                                            <div class="link">
+                                                <a href="javascript:;" class="classroom">
+                                                    <strong>강의실 입장</strong>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!--// page(e) -->
-                        </div>
-                        <!--// section(e) -->
 
-                        <!-- section(s) -->
-                        <div class="section">
-                            <!-- board(s) -->
-                            <div class="board_area">
-                                <!-- board_view -->
-                                <table class="tbl react row">
-                                    <caption class="hidden">
-                                        신청 번호, 상태, 자격종목, 신청일, 반려구분, 반려일, 사유 정보 제공
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 25%" span="3" />
-                                        <col />
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">신청 번호</th>
-                                            <td data-cell-header="신청 번호"><div>A00000000</div></td>
-                                            <th scope="row">상태</th>
-                                            <td data-cell-header="상태"><div>발급보류</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">자격종목</th>
-                                            <td data-cell-header="자격종목"><div>상수도관망시설운영관리사 1급</div></td>
-                                            <th scope="row">신청일</th>
-                                            <td data-cell-header="신청일"><div>2025.02.02</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">반려구분</th>
-                                            <td data-cell-header="반려구분"><div>자격요건 미충족</div></td>
-                                            <th scope="row">반려일</th>
-                                            <td data-cell-header="반려일"><div>2025.02.02</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">사유</th>
-                                            <td data-cell-header="사유" colspan="3"><div>관리자 메모 출력</div></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_view -->
+                            <div class="quick_service">
+                                <a href="javascript:;" class="btn_border_xxl radius">
+                                    <span class="ico_quick1" aria-hidden="true"></span>
+                                    합격조회
+                                    <span class="ico_bluearrow" aria-hidden="true"></span>
+                                </a>
+                                <a href="javascript:;" class="btn_border_xxl radius">
+                                    <span class="ico_quick2" aria-hidden="true"></span>
+                                    발급 현황 조회
+                                    <span class="ico_bluearrow" aria-hidden="true"></span>
+                                </a>
+                                <a href="javascript:;" class="btn_border_xxl radius">
+                                    <span class="ico_quick3" aria-hidden="true"></span>
+                                    자격증 발급 신청
+                                    <span class="ico_bluearrow" aria-hidden="true"></span>
+                                </a>
+                                <a href="javascript:;" class="btn_border_xxl radius">
+                                    <span class="ico_quick4" aria-hidden="true"></span>
+                                    평가시험 원서접수
+                                    <span class="ico_bluearrow" aria-hidden="true"></span>
+                                </a>
                             </div>
-                            <!--// board(e) -->
-                            <!-- page btn(s) -->
-                            <div class="page_btn_area">
-                                <div class="rside">
-                                    <button type="button" class="btn_primary_lg">확인</button>
-                                </div>
-                            </div>
-                            <!--// page(e) -->
-                        </div>
-                        <!--// section(e) -->
-
-                        <!-- section(s) -->
-                        <div class="section">
-                            <!-- board(s) -->
-                            <div class="board_area">
-                                <!-- board_write -->
-                                <table class="tbl row">
-                                    <caption class="hidden">
-                                        <strong>답변하기</strong>
-                                        답변내용, 자료등록으로 구성
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 25%" />
-                                        <col />
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">답변내용</th>
-                                            <td><div>관리자 메모 출력</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">자료등록</th>
-                                            <td>
-                                                <div>
-                                                    <div class="file_area">
-                                                        <button type="button" class="btn_primary_lg">파일찾기</button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_write -->
-                            </div>
-                            <!--// board(e) -->
-                        </div>
-                        <!--// section(e) -->
-
-                        <div class="section">
-                            <!-- btn(s) -->
-                            <div class="btn_areas">
-                                <button type="button" class="btn_primary_xlg">확인52</button>
-                                <button type="button" class="btn_primary_lg">확인확인확인확인확인확인48</button>
-                                <button type="button" class="btn_primary_md">확인33</button>
-                                <button type="button" class="btn_primary_sm">확인30</button>
-                                <br />
-                                <button type="button" class="btn_secondary_xlg">확인52<span class="ico_outlink"></span></button>
-                                <button type="button" class="btn_secondary_lg">확인48<span class="ico_outlink"></span></button>
-                                <button type="button" class="btn_secondary_md">확인33<span class="ico_outlink"></span></button>
-                                <button type="button" class="btn_secondary_sm">확인30<span class="ico_outlink"></span></button>
-                                <br />
-                                <button type="button" class="btn_secondary_xlg">확인52</button>
-                                <button type="button" class="btn_secondary_lg">확인48</button>
-                                <button type="button" class="btn_secondary_md">확인33</button>
-                                <button type="button" class="btn_secondary_sm">확인30</button>
-                                <br />
-                                <button type="button" class="btn_outline_xlg">확인52</button>
-                                <button type="button" class="btn_outline_lg">확인48</button>
-                                <button type="button" class="btn_outline_md">확인33</button>
-                                <button type="button" class="btn_outline_sm">확인30</button>
-                                <br />
-                                <button type="button" class="btn_tertiary_xlg">확인52</button>
-                                <button type="button" class="btn_tertiary_lg">확인48</button>
-                                <button type="button" class="btn_tertiary_md">확인33</button>
-                                <button type="button" class="btn_tertiary_sm">확인30</button>
-                                <br />
-                                <button type="button" class="btn_txt">출력하기</button>
-                            </div>
-                            <!--// btn(e) -->
                         </div>
                     </div>
-                    <!--// contents(e) -->
+                    <!--// section(e) : 상단 서비스 -->
+
+                    <!-- section(s) : 교육일정 -->
+                    <div class="section">
+                        <div class="inner">
+                            <!-- title -->
+                            <div class="main_title">
+                                <h2 class="tit">교육일정(2025년)</h2>
+                                <!-- <div class="rside">
+                                    <a href="javascript:;" class="btn_link">전체일정<span class="ico_link" aria-hidden="true"></span></a>
+                                </div> -->
+                            </div>
+                            <!--// title -->
+
+                            <!-- list -->
+                            <div class="schedule_list">
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">999회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급 / 2급 / 3급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">교육기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">수료일</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <button type="button" class="btn_border_md radius">신청하기<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">88회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">교육기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">수료일</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <button type="button" class="btn_border_md radius">알림받기<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">10회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">교육기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">수료일</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <button type="button" class="btn_border_md radius">수료확인<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">1회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">교육기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">수료일</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <span class="badge">교육중</span>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">4회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">교육기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">수료일</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side"></div>
+                                </div>
+                            </div>
+                            <!--// list -->
+                        </div>
+                    </div>
+                    <!--// section(e) : 교육일정 -->
+
+                    <!-- section(s) : 평가시험일정 -->
+                    <div class="section">
+                        <div class="inner">
+                            <!-- title -->
+                            <div class="main_title">
+                                <h2 class="tit">평가시험 일정(2025년)</h2>
+                                <!-- <div class="rside">
+                                    <a href="javascript:;" class="btn_link">전체일정<span class="ico_link" aria-hidden="true"></span></a>
+                                </div> -->
+                            </div>
+                            <!--// title -->
+
+                            <!-- list -->
+                            <div class="schedule_list">
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">999회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급 / 2급 / 3급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">시험일</div>
+                                            <div class="item">2025-01-10 (금)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">장소</div>
+                                            <div class="item">서울/대전/부산 /광주/대구</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">결과발표</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <button type="button" class="btn_border_md radius">신청하기<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">1회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급 / 2급 / 3급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">시험일</div>
+                                            <div class="item">2025-01-10 (금)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">장소</div>
+                                            <div class="item">서울/대전/부산 /광주/대구</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">결과발표</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <button type="button" class="btn_border_md radius">알림받기<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">1회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급 / 2급 / 3급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">시험일</div>
+                                            <div class="item">2025-01-10 (금)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">장소</div>
+                                            <div class="item">서울/대전/부산 /광주/대구</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">결과발표</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <button type="button" class="btn_border_md radius">합격조회<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                                    </div>
+                                </div>
+                                <div class="schedule_group">
+                                    <div class="time">
+                                        <strong class="tit">1회</strong>
+                                    </div>
+                                    <div class="timetable">
+                                        <div class="cell">
+                                            <div class="tit">급수</div>
+                                            <div class="item">1급 / 2급 / 3급</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">신청기간</div>
+                                            <div class="item">2025-01-10 (금) ~ 2025-01-16 (목)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">시험일</div>
+                                            <div class="item">2025-01-10 (금)</div>
+                                        </div>
+                                        <div class="cell size">
+                                            <div class="tit">장소</div>
+                                            <div class="item">서울/대전/부산 /광주/대구</div>
+                                        </div>
+                                        <div class="cell">
+                                            <div class="tit">결과발표</div>
+                                            <div class="item">2025-01-17 (금)</div>
+                                        </div>
+                                    </div>
+                                    <div class="side">
+                                        <span class="badge">종료</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// list -->
+                        </div>
+                    </div>
+                    <!--// section(e) : 평가시험일정 -->
+
+                    <!-- section(s) : 공지사항 -->
+                    <div class="section">
+                        <div class="inner">
+                            <!-- title -->
+                            <div class="main_title">
+                                <h2 class="tit">공지사항</h2>
+                                <div class="rside">
+                                    <a href="javascript:;" class="btn_more_plus">더보기</a>
+                                </div>
+                            </div>
+                            <!--// title -->
+
+                            <!-- list -->
+                            <div class="post_list">
+                                <div class="data_group">
+                                    <div class="post_date">
+                                        <div class="date">01-09</div>
+                                        <div class="year">2025</div>
+                                    </div>
+                                    <div class="post_item">
+                                        <div class="type">교육안내</div>
+                                        <div class="item">
+                                            <a href="javascript:;">[응시번호 및 유의사항 안내] 제1회 상수도관망시설 운영관리사 전체일정 제1회 상수도관망시설 운영관리사 전체일정 제1회 상수도관망시설 운영관리사 전체일정</a>
+                                            <span class="txt_new"><span class="hidden">new</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data_group">
+                                    <div class="post_date">
+                                        <div class="date">12-31</div>
+                                        <div class="year">2025</div>
+                                    </div>
+                                    <div class="post_item">
+                                        <div class="type">교육안내</div>
+                                        <div class="item">
+                                            <a href="javascript:;"><span>[응시번호 및 유의사항 안내] 제1회 상수도관망시설</span></a>
+                                            <span class="txt_new"><span class="hidden">new</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// list -->
+                        </div>
+                    </div>
+                    <!--// section(e) : 공지사항 -->
+
+                    <!-- section(s) : 채용공고 -->
+                    <div class="section">
+                        <div class="inner">
+                            <!-- title -->
+                            <div class="main_title">
+                                <h2 class="tit">채용공고</h2>
+                                <div class="rside">
+                                    <a href="javascript:;" class="btn_more_plus">더보기</a>
+                                </div>
+                            </div>
+                            <!--// title -->
+
+                            <!-- list -->
+                            <div class="post_list">
+                                <div class="data_group">
+                                    <div class="post_date">
+                                        <div class="date">01-09</div>
+                                        <div class="year">2025</div>
+                                    </div>
+                                    <div class="post_item">
+                                        <div class="type">서울/1급/2급</div>
+                                        <div class="item">
+                                            <a href="javascript:;">[기업명] 상수도관망관리사 1급/2급 채용</a>
+                                            <span class="txt_new"><span class="hidden">new</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data_group">
+                                    <div class="post_date">
+                                        <div class="date">12-31</div>
+                                        <div class="year">2025</div>
+                                    </div>
+                                    <div class="post_item">
+                                        <div class="type">인천/2급</div>
+                                        <div class="item">
+                                            <a href="javascript:;"><span>[기업명] 상수도관망관리사 3급 정규직 채용</span></a>
+                                            <span class="txt_new"><span class="hidden">new</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// list -->
+                        </div>
+                    </div>
+                    <!--// section(e) : 채용공고 -->
+
+                    <!-- section(s) : 교육 미리보기 -->
+                    <div class="section">
+                        <div class="inner">
+                            <!-- title -->
+                            <div class="main_title">
+                                <h2 class="tit">교육 미리보기</h2>
+                                <div class="rside">
+                                    <a href="javascript:;" class="btn_more_plus">더보기</a>
+                                </div>
+                            </div>
+                            <!--// title -->
+
+                            <!-- list -->
+                            <div class="program_wrap">
+                                <div class="program_slide">
+                                    <div class="arrow swiper-button-prev"></div>
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <span class="thum">
+                                                        <!-- img size (287*239 //574*478) -->
+                                                        <!-- 접근성 : 관리자에서 배너 등록 시 alt값도 img 문구와 동일하게 기입해야함. (관리자 alt입력란 필수) -->
+                                                        <img src="/resources/images/temp/temp01.png" alt="상수도관망시설 운영관리사 1급, 한국상하수도협회" />
+                                                    </span>
+                                                    <span class="item">
+                                                        <span class="tit">1상수도 공정관리 개요 상수도 공정관리 개요 상수도 공정관리 개요 상수도 공정관리 개요</span>
+                                                        <span class="txt">상수도관망시설(3급)상수도관망시설(3급)상수도관망시설(3급)</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <span class="thum">
+                                                        <img src="/resources/images/temp/temp02.png" alt="상수도관망시설운영관리사 2급" />
+                                                    </span>
+                                                    <span class="item">
+                                                        <span class="tit">2상수도 공정관리 개요1</span>
+                                                        <span class="txt">상수도관망시설(3급)</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <span class="thum">
+                                                        <img src="/resources/images/temp/temp03.png" alt="상수도 공정관리 개요" />
+                                                    </span>
+                                                    <span class="item">
+                                                        <span class="tit">3상수도 공정관리 개요13상수도 공정관리 개요13상수도 공정관리 개요13상수도 공정관리 개요13상수도 공정관리 개요1</span>
+                                                        <span class="txt">상수도관망시설(3급)상수도관망시설(3급)상수도관망시설(3급)상수도관망시설(3급)상수도관망시설(3급)</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <span class="thum">
+                                                        <img src="/resources/images/temp/temp04.png" alt="상수도 공정의 이해" />
+                                                    </span>
+                                                    <span class="item">
+                                                        <span class="tit">4상수도 공정관리 개요1</span>
+                                                        <span class="txt">상수도관망시설(3급)</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <span class="thum">
+                                                        <img src="/resources/images/temp/temp01.png" alt="상수도관망시설 운영관리사 1급, 한국상하수도협회" />
+                                                    </span>
+                                                    <span class="item">
+                                                        <span class="tit">1상수도 공정관리 개요 상수도 공정관리 개요 상수도 공정관리 개요 상수도 공정관리 개요</span>
+                                                        <span class="txt">상수도관망시설(3급)상수도관망시설(3급)상수도관망시설(3급)</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;">
+                                                    <span class="thum">
+                                                        <img src="/resources/images/temp/temp01.png" alt="상수도관망시설 운영관리사 1급, 한국상하수도협회" />
+                                                    </span>
+                                                    <span class="item">
+                                                        <span class="tit">1상수도 공정관리 개요 상수도 공정관리 개요 상수도 공정관리 개요 상수도 공정관리 개요</span>
+                                                        <span class="txt">상수도관망시설(3급)상수도관망시설(3급)상수도관망시설(3급)</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-controls">
+                                            <div class="swiper-pagination"></div>
+                                            <button type="button" class="swiperPause" aria-label="자동 재생 정지"><span class="hidden">정지</span></button>
+                                            <button type="button" class="swiperPlay" aria-label="자동 재생" style="display: none"><span class="hidden">재생</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="arrow swiper-button-next"></div>
+                                </div>
+                                <!--// 배너 -->
+                            </div>
+                            <!--// list -->
+                        </div>
+                    </div>
+                    <!--// section(e) : 교육 미리보기 -->
                 </div>
-            </div>
-            <!--// container(e) -->
+                <!--// container(e) -->
+            </main>
+            <!--// main(e) -->
 
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="/html/include/footer.html" class="includeJs"></div>
@@ -461,5 +619,86 @@
         <!--// wrap(e) -->
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript" src="/resources/js/swiper-bundle.min.js"></script>
+        <script>
+            // 상단 배너
+            const visualSlide = new Swiper(".visual_slide .swiper", {
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                a11y: {
+                    slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+                },
+            });
+            $(".visual_slide .swiperPause").on("click", function () {
+                $(this).hide();
+                $(".visual_slide .swiperPlay").show();
+                visualSlide.autoplay.stop();
+            });
+            $(".visual_slide .swiperPlay").on("click", function () {
+                $(this).hide();
+                $(".visual_slide .swiperPause").show();
+                visualSlide.autoplay.start();
+            });
+            var kvLen = $(".visual_slide").find(".swiper-slide").length;
+            if (kvLen <= 1) {
+                $(".visual_slide").find(".swiper-controls").hide();
+            }
+
+            // 교육 미리보기
+            const programSlide = new Swiper(".program_slide .swiper", {
+                slidesPerView: "auto",
+                spaceBetween: 24,
+                centeredSlides: true,
+                autoplay: {
+                    enabled: false,
+                },
+                navigation: {
+                    nextEl: ".program_slide .swiper-button-next",
+                    prevEl: ".program_slide .swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                a11y: {
+                    prevSlideMessage: "이전 슬라이드",
+                    nextSlideMessage: "다음 슬라이드",
+                    slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 17,
+                        centeredSlides: false,
+                        autoplay: {
+                            enabled: true,
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        },
+                    },
+                },
+            });
+            $(".program_slide .swiperPause").on("click", function () {
+                $(this).hide();
+                $(".program_slide .swiperPlay").show();
+                programSlide.autoplay.stop();
+            });
+            $(".program_slide .swiperPlay").on("click", function () {
+                $(this).hide();
+                $(".program_slide .swiperPause").show();
+                programSlide.autoplay.start();
+            });
+            var kvLen = $(".program_slide").find(".swiper-slide").length;
+            if (kvLen <= 2) {
+                $(".program_slide").find(".swiper-controls").hide();
+            }
+        </script>
     </body>
 </html>

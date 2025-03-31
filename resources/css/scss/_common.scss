@@ -11,13 +11,16 @@
     height: 0.1rem;
     background-color: var(--color-black);
     text-align: center;
-}
-.skipTo:focus {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: var(--gap-10);
-    color: var(--color-white);
+    &:focus {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: var(--gap-10);
+        color: var(--color-white);
+    }
+    @include mobile {
+        display: var(--hide);
+    }
 }
 .hidden {
     position: absolute;
@@ -144,7 +147,7 @@
                 width: 0.8rem;
                 height: 2rem;
                 margin-top: -1rem;
-                background-color: var(--color-warblue);
+                background-color: var(--color-warmblue);
             }
         }
     }
@@ -263,8 +266,10 @@
 
 // ico
 [class^="ico_"] {
+    &[class*="_link"],
     &[class*="_outlink"],
     &[class*="_arrow"],
+    &[class*="_bluearrow"],
     &[class*="_mark"],
     &[class*="_marknavy"],
     &[class*="_warning"] {
@@ -273,10 +278,16 @@
         display: inline-block;
         width: 2.4rem;
         height: 2.4rem;
-        margin-right: var(--gap-10); // 아이콘과 텍스트 사이 공백 x
+        margin-left: var(--gap-7); // 아이콘과 텍스트 사이 공백 x
         vertical-align: var(--align-m);
     }
+    &.right {
+        margin: 0 var(--gap-7) 0 0;
+    }
     // 변수처리할것 (mixin btn-bgtype 참고)
+    &[class*="_link"] {
+        background: url($url-img-icon + "ico_link.svg") no-repeat 0 0;
+    }
     &[class*="_outlink"] {
         background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
     }
@@ -284,6 +295,9 @@
         width: 1.6rem;
         height: 0.9rem;
         background: url($url-img-icon + "ico_arrow.svg") no-repeat 0 0;
+    }
+    &[class*="_bluearrow"] {
+        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat 0 0;
     }
     &[class*="_mark"] {
         background: url($url-img-icon + "ico_mark.svg") no-repeat 0 0;
@@ -297,7 +311,6 @@
     &[class*="_warning"] {
         background: url($url-img-icon + "ico_warning.svg") no-repeat 0 0;
     }
-
     &[class*="_txt"] {
         position: relative;
         [class^="ico_"] {
@@ -602,7 +615,7 @@ select {
             [class^="btn_"] {
                 margin-left: 0;
             }
-            @include sm-mobile {
+            @include xs-mobile {
                 flex-direction: column;
                 .inp,
                 .inp_select,
@@ -621,7 +634,7 @@ select {
                 width: 50% !important;
                 margin-left: 0;
             }
-            @include sm-mobile {
+            @include xs-mobile {
                 flex-direction: column;
                 .inp,
                 .inp_select,
@@ -770,10 +783,10 @@ select {
     .form_list {
         padding-top: var(--gap-20);
         border-top: $border var(--color-black);
-        .form-group {
+        .form_group {
             display: flex;
             width: 100%;
-            + .form-group {
+            + .form_group {
                 margin-top: var(--gap-20);
             }
             .tit,
@@ -827,7 +840,7 @@ select {
         &.col {
             padding: 0;
             border-top: 0;
-            .form-group {
+            .form_group {
                 flex-direction: column;
                 .tit {
                     min-height: auto;
@@ -838,7 +851,7 @@ select {
                         padding-top: 0;
                     }
                 }
-                + .form-group {
+                + .form_group {
                     // margin-top: var(--gap-24);
                 }
             }
@@ -872,7 +885,7 @@ select {
     }
     @include mobile {
         .form_list {
-            .form-group {
+            .form_group {
                 flex-direction: column;
                 .tit,
                 .item {
@@ -907,7 +920,7 @@ select {
                 }
                 .request_set {
                     flex: 1;
-                    @include sm-mobile {
+                    @include xs-mobile {
                         flex-direction: column;
                         [class^="btn_"] {
                             width: 100%;
@@ -923,7 +936,7 @@ select {
                 }
             }
             &.col {
-                .form-group {
+                .form_group {
                     .tit {
                         margin-bottom: var(--gap-8);
                     }
@@ -997,7 +1010,7 @@ select {
     }
 }
 // .form_list {
-//     .form-group {
+//     .form_group {
 //         display: flex;
 //         .tit {
 //             @include tbl-heading;
@@ -1315,6 +1328,113 @@ select {
         //         }
         //     }
         // }
+    }
+}
+
+// slider controls
+// .slider-controls {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     width: 100%;
+//     text-align: center;
+//     .dots {
+//         position: relative;
+//         display: inline-block;
+//         vertical-align: middle;
+//     }
+//     .slick-dots {
+//         line-height: 0.8rem;
+//         > li {
+//             display: inline-block;
+//             margin: 0 0.4rem;
+//         }
+//         button {
+//             position: relative;
+//             width: 0.8rem;
+//             height: 0.8rem;
+//             text-indent: -999em;
+//             vertical-align: top;
+//             background: 0;
+//             &::before {
+//                 content: "";
+//                 display: block;
+//                 position: absolute;
+//                 left: 0;
+//                 right: 0;
+//                 top: 0;
+//                 bottom: 0;
+//                 background-color: #6d7882;
+//                 border-radius: 50%;
+//             }
+//         }
+//         .slick-active {
+//             button {
+//                 width: 2rem;
+//                 &::before {
+//                     background-color: #256ef4;
+//                     border-radius: 0.8rem;
+//                 }
+//             }
+//         }
+//     }
+//     .slickPause,
+//     .slickPlay {
+//         width: 1rem;
+//         height: 1.3rem;
+//         padding: 1rem;
+//         text-indent: -999em;
+//         background: url($url-img-common + "bg_pause.png") no-repeat 50% 50%;
+//         vertical-align: middle;
+//     }
+//     .slickPlay {
+//         width: 0.9rem;
+//         background: url($url-img-common + "bg_play.png") no-repeat 50% 50%;
+//     }
+// }
+
+// slider controls
+.swiper-pagination {
+    line-height: 0;
+    top: 0 !important;
+    bottom: 0 !important;
+    .swiper-pagination-bullet {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin: 0 0.2rem !important;
+        background-color: #6d7882;
+        opacity: 1;
+        line-height: 0;
+    }
+    .swiper-pagination-bullet-active {
+        width: 2rem;
+        background-color: #256ef4;
+        border-radius: 0.8rem;
+    }
+}
+.swiper-controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @include flex-center;
+    z-index: 1;
+    .swiper-pagination {
+        position: relative;
+        width: auto !important;
+    }
+    .swiperPause,
+    .swiperPlay {
+        width: 1rem;
+        height: 1.3rem;
+        padding: 1rem;
+        margin: -0.6rem 0 0 0.5rem;
+        background: url($url-img-common + "bg_pause.png") no-repeat 50% 50%;
+        vertical-align: middle;
+    }
+    .swiperPlay {
+        width: 0.9rem;
+        background: url($url-img-common + "bg_play.png") no-repeat 50% 50%;
     }
 }
 

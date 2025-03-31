@@ -1,11 +1,17 @@
 @charset "UTF-8";
 
 // breakpoints
-$breakpoint-xs-mobile: 319px;
-$breakpoint-mobile: 320px;
-$breakpoint-sm-mobile: 370px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+// $breakpoint-xs-mobile: 319px;
+// $breakpoint-mobile: 320px;
+// $breakpoint-xs-mobile: 374px;
+$breakpoint-xs-mobile: 320px;
+$breakpoint-sm-mobile: 767px;
+$breakpoint-mobile: 1024px;
+$breakpoint-desktop: 1200px;
+// xs, sm, md, lg, xl, xxl
+// 테블릿 768
+// 노트북 1024
+// 데스크탑 1280
 
 // url
 $url-img: "../../resources/images/";
@@ -42,7 +48,7 @@ $border: 0.1rem solid;
     --color-darkblue: #0b50d0;
     --color-lightblue: #eef2f7;
     --color-skyblue: #ecf2fe;
-    --color-warblue: #4c87f6;
+    --color-warmblue: #4c87f6;
     --gap-4: 0.4rem;
     --gap-5: 0.5rem;
     --gap-6: 0.6rem;
@@ -69,6 +75,7 @@ $border: 0.1rem solid;
     --gap-50: 5rem;
     --gap-55: 5.5rem;
     --gap-60: 6rem;
+    --gap-70: 7rem;
     --align-t: top;
     --align-m: middle;
     --align-b: bottom;
