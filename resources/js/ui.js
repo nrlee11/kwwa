@@ -102,17 +102,23 @@ $(function () {
     const sideNave = function () {
         $mgnb = $("#sideGnb");
         $dim = $(".side_dim");
+        $fousin = $("#sideGnb .utility a:first-child");
+        $fousout = $(".sideOpen");
 
         $(".sideOpen").click(function (e) {
-            $mgnb.stop().animate({ right: "0" }, 300);
+            $mgnb.show().stop().animate({ right: "0" }, 300).attr("aria-hidden", false);
             $body.addClass("sideOn");
             $dim.show();
+            $fousin.focus();
         });
 
         $(".sideClose").click(function (e) {
-            $mgnb.stop().animate({ right: "-100%" }, 300);
+            $mgnb.stop().animate({ right: "-100%" }, 300, function () {
+                $(this).hide().attr("aria-hidden", true).focus(".sideOpen");
+                $dim.hide();
+            });
             $body.removeClass("sideOn");
-            $dim.hide();
+            $fousout.focus();
         });
     };
 

@@ -70,6 +70,9 @@
 // .gap_pt14 {
 //     padding-top: var(--gap-14);
 // }
+.size_100 {
+    width: 10rem !important;
+}
 .size_190 {
     width: 19rem !important;
 }
@@ -138,7 +141,6 @@
     margin-bottom: var(--gap-24);
     .tit {
         font-size: var(--font-size-lg);
-        font-weight: var(--font-semibold);
         &.ico {
             position: relative;
             padding-left: var(--gap-18);
@@ -159,15 +161,11 @@
 // progress-bar
 .progress-bar {
     @include flex-center;
-    // margin: var(--gap-24) 0 7rem var(--gap-10);
-    margin-left: var(--gap-10);
+    margin-left: var(--gap-12);
     > div {
         position: relative;
-        width: 11rem;
-        // flex: 1;
-        // padding: 0.9rem 0;
+        width: 13.8rem;
         &:last-child {
-            // flex: 0;
             width: auto;
             .step {
                 border: 0;
@@ -180,9 +178,9 @@
             content: "";
             position: absolute;
             top: 0;
-            left: -1rem;
-            width: 2rem;
-            height: 2rem;
+            left: -1.2rem;
+            width: 2.4rem;
+            height: 2.4rem;
             background-color: var(--color-lightgray);
             border: $border #cdd1d5;
             border-radius: 50%;
@@ -198,7 +196,7 @@
             &::after {
                 content: "";
                 position: absolute;
-                top: 0.5rem;
+                top: 0.8rem;
                 left: -0.5rem;
                 width: 1rem;
                 height: 0.618rem;
@@ -216,9 +214,9 @@
                 content: "";
                 position: absolute;
                 top: 0.3rem;
-                left: -0.7rem;
-                width: 1.4rem;
-                height: 1.4rem;
+                left: -0.9rem;
+                width: 1.8rem;
+                height: 1.8rem;
                 border: 0.2rem solid var(--color-white);
                 border-radius: 50%;
             }
@@ -226,16 +224,16 @@
     }
     .step {
         display: block;
-        margin: 0.9rem 0 0 -1rem;
-        padding-top: var(--gap-17);
+        margin: 1.1rem 0 0 -1.2rem;
+        padding-top: var(--gap-20);
         color: var(--color-gray);
-        font-size: var(--font-size-xsm);
+        font-size: var(--font-size-sm);
         border-top: 0.2rem solid #cdd1d5;
     }
     strong {
         display: block;
         margin: 0.2rem 0 0 -1rem;
-        font-size: var(--font-size-sm);
+        font-size: 2rem;
     }
     @include mobile {
         @include flex-between;
@@ -529,67 +527,47 @@ select {
         align-items: center;
         position: relative;
         input {
-            + .btn_reset {
-                position: absolute;
-                top: 50%;
-                right: 1.9rem;
-                margin: -1rem 0 0 0;
-            }
-            &:read-only {
-                + .btn_reset {
-                    display: var(--hide);
-                    filter: invert(100%);
-                }
-            }
+            // + .btn_reset {
+            //     position: absolute;
+            //     top: 50%;
+            //     right: 1.9rem;
+            //     margin: -1rem 0 0 0;
+            // }
+            // &:read-only {
+            //     + .btn_reset {
+            //         display: var(--hide);
+            //         filter: invert(100%);
+            //     }
+            // }
             &:focus {
                 outline-color: var(--color-blue);
             }
-            + .request {
-                position: absolute;
-                top: 50%;
-                right: 1.9rem;
-                margin: -1rem 0 0 0;
-                .time {
-                    position: relative;
-                    top: -0.2rem;
-                    color: #8a949e;
-                }
-                .btn_reset {
-                    margin-left: var(--gap-4);
-                    vertical-align: top;
-                }
-            }
         }
-        &:has(.btn_reset) {
-            > input {
-                padding-right: var(--gap-60);
-                &:read-only {
-                    padding-right: var(--gap-16);
-                }
-            }
-        }
-        &:has(.request) {
-            > input {
-                padding-right: 8rem;
-            }
-        }
+        // &:has(.btn_reset) {
+        //     > input {
+        //         padding-right: var(--gap-60);
+        //         &:read-only {
+        //             padding-right: var(--gap-16);
+        //         }
+        //     }
+        // }
         + button {
             margin-left: var(--gap-15);
-            + button {
-                margin-left: var(--gap-15);
-            }
+            // + button {
+            //     margin-left: var(--gap-15);
+            // }
         }
-        + .txt,
-        + .btn_search {
-            margin-left: var(--gap-14);
-        }
+        // + .txt,
+        // + .btn_search {
+        //     margin-left: var(--gap-14);
+        // }
         + .txt_between {
             margin: 0 var(--gap-7);
         }
-        + .inp_set,
-        + .inp_select {
-            margin-left: var(--gap-15);
-        }
+        // + .inp_set,
+        // + .inp_select {
+        //     margin-left: var(--gap-15);
+        // }
         &.error {
             input[type="text"],
             input[type="password"],
@@ -604,55 +582,133 @@ select {
             }
         }
     }
-    .inp_set {
-        @include flex-aligncenter;
-        + .inp_set {
-            margin-left: var(--gap-15);
-        }
-        &.full {
-            gap: 0 1.5rem;
-            .inp_select,
-            [class^="btn_"] {
-                margin-left: 0;
-            }
-            @include xs-mobile {
-                flex-direction: column;
-                .inp,
-                .inp_select,
-                [class^="btn_"] {
-                    width: 100% !important;
-                }
-                [class^="btn_"] {
-                    margin: var(--gap-20) 0 0 0;
-                }
-            }
-        }
-        &.half {
-            gap: 0 1.5rem;
-            .inp_select,
-            [class^="btn_"] {
-                width: 50% !important;
-                margin-left: 0;
-            }
-            @include xs-mobile {
-                flex-direction: column;
-                .inp,
-                .inp_select,
-                [class^="btn_"] {
-                    width: 100% !important;
-                }
-                [class^="btn_"] {
-                    margin: var(--gap-20) 0 0 0;
-                }
-            }
-        }
-    }
     .inp_select {
         width: 100%;
         + button {
             margin-left: var(--gap-15);
-            + button {
-                margin-left: var(--gap-15);
+            // + button {
+            //     margin-left: var(--gap-15);
+            // }
+        }
+    }
+    .txt_dash {
+        width: 1rem;
+        margin: 0 var(--gap-10);
+    }
+    @include mobile {
+        .inp,
+        .inp_set,
+        .inp_select {
+            width: 100% !important;
+        }
+    }
+    // 이메일 입력
+    .email_set {
+        @include flex-aligncenter;
+        width: 100%;
+        @include mobile {
+            flex: 1;
+            flex-direction: column;
+            margin-top: -2rem;
+        }
+        .inp_set {
+            @include flex-aligncenter;
+            margin-left: var(--gap-15);
+            &:first-child {
+                margin-left: 0;
+            }
+            &.full {
+                gap: 0 1.5rem;
+                .inp_select,
+                [class^="btn_"] {
+                    margin-left: 0;
+                }
+                @include xs-mobile {
+                    flex-direction: column;
+                    .inp,
+                    .inp_select,
+                    [class^="btn_"] {
+                        width: 100% !important;
+                    }
+                    [class^="btn_"] {
+                        margin: var(--gap-20) 0 0 0;
+                    }
+                }
+            }
+        }
+        @include mobile {
+            .inp_set,
+            .inp,
+            .inp_select {
+                width: 100% !important;
+            }
+            .inp_set,
+            .inp {
+                margin: var(--gap-20) 0 0 0;
+            }
+            .inp_set {
+                .inp {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    // 인증번호 입력
+    .request_set {
+        @include flex-aligncenter;
+        width: 100%;
+        input {
+            padding-right: 8rem;
+            + .request {
+                position: absolute;
+                top: 50%;
+                right: 1.9rem;
+                margin: -1rem 0 0 0;
+                .time {
+                    position: relative;
+                    top: -0.2rem;
+                    color: #8a949e;
+                }
+            }
+        }
+        @include mobile {
+            flex: 1;
+            .inp {
+                width: 100% !important;
+            }
+        }
+        @include xs-mobile {
+            flex-direction: column;
+            [class^="btn_"] {
+                width: 100%;
+                margin: var(--gap-20) 0 0 0;
+            }
+        }
+    }
+    // 전화번호
+    .phone_set {
+        @include flex-aligncenter;
+        width: 100%;
+        .inp_select {
+            width: 20rem;
+        }
+        .inp_set {
+            @include flex-aligncenter;
+            .inp {
+                width: 9rem;
+            }
+        }
+        @include mobile {
+            flex: 1;
+            flex-direction: column;
+            .inp_set {
+                margin-top: var(--gap-20);
+                .inp {
+                    width: 100% !important;
+                }
+                .txt_dash {
+                    margin: 0 var(--gap-20) 0 0;
+                }
             }
         }
     }
@@ -668,6 +724,9 @@ select {
                 border-left: 0;
             }
         }
+        thead th {
+            height: 3.2rem;
+        }
         tbody td {
             @include tbl-body;
             &:first-child {
@@ -675,6 +734,9 @@ select {
             }
             > div {
                 word-break: break-all;
+            }
+            &.left {
+                text-align: left;
             }
         }
         &.col thead th,
@@ -706,7 +768,7 @@ select {
             }
         }
         &[class*="_bottom"] {
-            margin-top: var(--gap-24);
+            margin-top: var(--gap-25);
         }
     }
     @include mobile {
@@ -774,11 +836,23 @@ select {
         margin-top: var(--gap-50);
     }
     .form_tit {
-        margin-bottom: var(--gap-10);
+        margin-bottom: var(--gap-24);
         .tit {
             font-size: var(--font-size-md);
             font-weight: var(--font-regular);
         }
+    }
+    .form_desc_top {
+        @include flex-between;
+        align-items: flex-end;
+        width: 100%;
+        margin-bottom: var(--gap-24);
+        // > div {
+        //     flex: 1;
+        //     &:not(.lside) {
+        //         text-align: right;
+        //     }
+        // }
     }
     .form_list {
         padding-top: var(--gap-20);
@@ -786,12 +860,18 @@ select {
         .form_group {
             display: flex;
             width: 100%;
+            @include mobile {
+                flex-direction: column;
+            }
             + .form_group {
                 margin-top: var(--gap-20);
             }
             .tit,
             .item {
                 min-height: 4.8rem;
+                @include mobile {
+                    min-height: auto;
+                }
             }
             .tit {
                 width: 20.4rem;
@@ -799,10 +879,16 @@ select {
                 > span {
                     display: inline-block;
                     padding-top: var(--gap-13);
+                    @include mobile {
+                        padding-top: 0;
+                    }
                 }
             }
             .item {
                 flex: 1;
+                @include mobile {
+                    margin-top: var(--gap-10);
+                }
                 .cell {
                     + .cell {
                         margin-top: var(--gap-20);
@@ -830,11 +916,11 @@ select {
                 padding-top: var(--gap-20);
                 border-top: $border #c2c2c2;
             }
-            .email_set,
-            .request_set {
-                @include flex-aligncenter;
-                width: 100%;
-                // gap: 0 1.5rem;
+            .radio_set {
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
         &.col {
@@ -846,13 +932,58 @@ select {
                     min-height: auto;
                     margin-bottom: var(--gap-8);
                     font-size: var(--font-size-sm);
+                    @include mobile {
+                        margin-bottom: var(--gap-8);
+                    }
                     > label,
                     > span {
                         padding-top: 0;
                     }
                 }
-                + .form_group {
-                    // margin-top: var(--gap-24);
+                .item {
+                    @include mobile {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        &.table {
+            padding-bottom: var(--gap-20);
+            border-bottom: $border var(--color-black);
+            @include pc {
+                padding: 0;
+                border: 0;
+                .form_group {
+                    + .form_group {
+                        margin-top: 0;
+                    }
+                    .tit,
+                    .item {
+                        min-height: 7rem;
+                        padding: var(--gap-10) var(--gap-16);
+                    }
+                    .tit {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 15.3rem;
+                        font-size: var(--font-size-sm);
+                        font-weight: var(--font-bold);
+                        text-align: center;
+                        border-bottom: $border #d6e0eb;
+                        border-right: $border #d6e0eb;
+                        background-color: #eef2f7;
+                        > label,
+                        > span {
+                            padding-top: 0;
+                        }
+                    }
+                    .item {
+                        border-bottom: $border #cdd1d5;
+                        .cell {
+                            flex: 1;
+                        }
+                    }
                 }
             }
         }
@@ -881,77 +1012,6 @@ select {
         }
         &[class*="_error"] {
             color: #bd2c0f;
-        }
-    }
-    @include mobile {
-        .form_list {
-            .form_group {
-                flex-direction: column;
-                .tit,
-                .item {
-                    min-height: auto;
-                }
-                .tit {
-                    > label,
-                    > span {
-                        padding-top: 0;
-                    }
-                }
-                .item {
-                    margin-top: var(--gap-10);
-                }
-                .radio_set {
-                    width: 100%;
-                    text-align: center;
-                }
-                .email_set {
-                    flex: 1;
-                    flex-direction: column;
-                    margin-top: -2rem;
-                    .inp_set,
-                    .inp {
-                        margin: var(--gap-20) 0 0 0;
-                    }
-                    .inp_set {
-                        .inp {
-                            margin-top: 0;
-                        }
-                    }
-                }
-                .request_set {
-                    flex: 1;
-                    @include xs-mobile {
-                        flex-direction: column;
-                        [class^="btn_"] {
-                            width: 100%;
-                            margin: var(--gap-20) 0 0 0;
-                        }
-                    }
-                }
-                [class^="btn_"] {
-                    &.full {
-                        width: 100%;
-                        margin-left: 0;
-                    }
-                }
-            }
-            &.col {
-                .form_group {
-                    .tit {
-                        margin-bottom: var(--gap-8);
-                    }
-                    .item {
-                        margin-top: 0;
-                    }
-                }
-            }
-        }
-        .form_item {
-            .inp,
-            .inp_set,
-            .inp_select {
-                width: 100% !important;
-            }
         }
     }
 }

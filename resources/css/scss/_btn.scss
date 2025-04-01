@@ -97,7 +97,6 @@
         opacity: 0.3;
         cursor: default;
     }
-
     &[class*="_txt"] {
         color: var(--color-gray);
     }
@@ -112,6 +111,10 @@
         [class^="ico_"] {
             margin: 0 0 0 0.6rem;
         }
+    }
+    &[class*="_download"] {
+        color: #4c87f6;
+        text-decoration: underline;
     }
 
     // &[class*="_sm"] {
