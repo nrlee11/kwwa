@@ -10,6 +10,7 @@
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
         <title>서류제출 | 실무교육 | 한국상하수도협회</title>
     </head>
     <body>
@@ -29,7 +30,7 @@
                     <!-- contents(s) -->
                     <div id="contents" class="contents">
                         <!-- breadcrumb(s) -->
-                        <nav class="breadcrumb_wrap" aria-label="현재 경로">
+                        <nav class="breadcrumb_wrap">
                             <ol class="breadcrumb">
                                 <li><a href="javascript:;">홈</a></li>
                                 <li><a href="javascript:;">실무교육</a></li>
@@ -59,20 +60,26 @@
                                 <h3 class="tit">조회내역</h3>
                             </div>
 
-                            <!-- board(s) -->
+                            <!-- board -->
                             <div class="board_area">
+                                <div class="board_tit">
+                                    <strong class="tit">1급</strong>
+                                </div>
+
+                                <div class="nodata">조회할 내역이 없습니다.</div>
+
                                 <!-- board_view -->
-                                <table class="tbl react">
+                                <table class="tbl">
                                     <caption class="hidden">
-                                        급수, 구분, 상태, 세부내용, 비고 정보 제공
+                                        구분, 상태, 세부내용, 비고 정보 제공
                                     </caption>
                                     <colgroup>
-                                        <col style="width: 20%" span="4" />
-                                        <col />
+                                        <col style="width: 23%" span="2" />
+                                        <col style="width: 31%" />
+                                        <col style="width: 23%" />
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col">급수</th>
                                             <th scope="col">구분</th>
                                             <th scope="col">상태</th>
                                             <th scope="col">세부내용</th>
@@ -81,43 +88,65 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td data-cell-header="급수"><div>1급</div></td>
                                             <td data-cell-header="구분"><div>양성교육</div></td>
                                             <td data-cell-header="상태">
-                                                <div><span class="ed_value">미수료</span></div>
+                                                <div>
+                                                    <span class="badge_negative">미수료</span>
+                                                    <span class="badge_positive">수료</span>
+                                                </div>
                                             </td>
                                             <td data-cell-header="세부내용">
                                                 <div>
-                                                    교육기간<br />
-                                                    <span class="txt_blue">2025-00-00 ~ 2025-00-00</span>
-                                                    수료일<br />
-                                                    <span class="txt_blue">2025-01-02</span>
+                                                    교육기간
+                                                    <p class="txt_blue">2025-00-00~2025-00-00</p>
+                                                    수료일
+                                                    <p class="txt_blue">2025-01-02</p>
                                                 </div>
                                             </td>
                                             <td data-cell-header="비고"><div></div></td>
                                         </tr>
                                         <tr>
-                                            <td data-cell-header="급수"><div>1급</div></td>
                                             <td data-cell-header="구분"><div>이수평가시험</div></td>
-                                            <td data-cell-header="상태"><div>-</div></td>
-                                            <td data-cell-header="세부내용"><div></div></td>
-                                            <td data-cell-header="비고"><div></div></td>
+                                            <td data-cell-header="상태">
+                                                <div>
+                                                    -
+                                                    <span class="badge_negative">불합격</span>
+                                                    <span class="badge_positive">합격</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="세부내용">
+                                                <div>
+                                                    시험일
+                                                    <p class="txt_blue">2025-00-00~2025-00-00</p>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="비고">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">시험일정<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td data-cell-header="급수"><div>1급</div></td>
                                             <td data-cell-header="구분"><div>실무교육</div></td>
-                                            <td data-cell-header="상태"><div>미확인</div></td>
-                                            <td data-cell-header="세부내용"><div></div></td>
-                                            <td data-cell-header="비고"><div></div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="nodata" colspan="5">조회할 내역이 없습니다.</td>
+                                            <td data-cell-header="상태"><div>- 미확인 심사중</div></td>
+                                            <td data-cell-header="세부내용">
+                                                <div>
+                                                    신청일
+                                                    <p class="txt_blue">2025-00-00~2025-00-00</p>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="비고">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">서류제출<span class="ico_bluearrow2"></span></button>
+                                                    <button type="button" class="btn_border_md radius">확인조회<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <!--// board_view -->
                             </div>
-                            <!--// board(e) -->
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
 
@@ -131,10 +160,10 @@
                                 </div>
                             </div>
 
-                            <!-- board(s) -->
+                            <!-- board -->
                             <div class="board_area">
                                 <!-- board_view -->
-                                <table class="tbl react">
+                                <table class="tbl">
                                     <caption class="hidden">
                                         구분, 설명, 비고 정보 제공
                                     </caption>
@@ -157,14 +186,33 @@
                                                 <div>전체 400시간 이상 교육이 확인되어야 함 <button type="button" class="btn_download">양식 다운로드</button></div>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td data-cell-header="구분"><div>경력증명서</div></td>
+                                            <td data-cell-header="설명" class="left"><div>상수도 분야 전·현 근무지에서 발행한 증명서</div></td>
+                                            <td data-cell-header="비고" class="left">
+                                                <div>상수도 분야만 해당되며, 이외 분야는 해당 안됨 2건 이상의 근무경력은 합산하여 인정함</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="구분"><div>교육 수료증</div></td>
+                                            <td data-cell-header="설명" class="left"><div>상수도 분야 고용노동부 직업능력개발훈련 수료증</div></td>
+                                            <td data-cell-header="비고" class="left">
+                                                <div>상수도 분야, 전체 400시간 이상 교육이어야 함</div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                                 <!--// board_view -->
-                                <!-- board_desc -->
-                                <div class="board_desc_bottom">※ 상수도분야 1년 이상 실무 종사(수도시설의 설치〮유지〮관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</div>
-                                <!--// board_desc -->
+
+                                <div class="board_desc_bottom">
+                                    <ul class="list_mark">
+                                        <li>상수도분야 1년 이상 실무 종사(수도시설의 설치〮유지〮관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
+                                        <li>상수도 분야 고용노동부 직업능력개발훈련을 400시간 이상 수료는 실무교육을 면제함.(교육훈련 수료증 제출 필수)</li>
+                                        <li>실무교육은 수도시설의 설치나 운영, 유지·관리 분야의 기관·기업체의 업무 실무교육으로 '실무교육확인서'를 제출하여야 함.</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <!--// board(e) -->
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
                     </div>

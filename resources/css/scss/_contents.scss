@@ -36,7 +36,8 @@
         width: 6.4rem;
         height: 6.4rem;
         margin-left: -3.2rem;
-        background: url($url-img-icon + "ico_completion.svg") no-repeat 0 0;
+        background: url($url-img-common + "bg_completion.svg") no-repeat 0 0;
+        background-size: contain;
     }
     .msg {
         font-size: var(--font-size-xxl);
@@ -141,12 +142,12 @@
     //         padding: 0 0 var(--gap-50);
     //     }
     // }
-    // .join_form {
-    //     margin-top: var(--gap-30);
-    //     @include mobile {
-    //         margin-top: var(--gap-50);
-    //     }
-    // }
+    .join_form {
+        .form_list {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
     &.wide {
         margin-top: var(--gap-24);
         @include mobile {

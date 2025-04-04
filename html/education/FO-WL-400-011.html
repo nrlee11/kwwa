@@ -10,6 +10,8 @@
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
         <title>서류제출 | 실무교육 | 한국상하수도협회</title>
     </head>
     <body>
@@ -29,7 +31,7 @@
                     <!-- contents(s) -->
                     <div id="contents" class="contents">
                         <!-- breadcrumb(s) -->
-                        <nav class="breadcrumb_wrap" aria-label="현재 경로">
+                        <nav class="breadcrumb_wrap">
                             <ol class="breadcrumb">
                                 <li><a href="javascript:;">홈</a></li>
                                 <li><a href="javascript:;">실무교육</a></li>
@@ -48,13 +50,12 @@
                         <div class="section">
                             <!-- progress -->
                             <div class="progress-bar">
-                                <strong class="hidden">서류제출 진행순서</strong>
                                 <div class="on">
                                     <span class="step">
                                         <span>1단계</span>
                                     </span>
                                     <strong>신청서 작성</strong>
-                                    <span class="hidden">현재 진행 단계</span>
+                                    <span class="hidden">총 3단계 중 1단계 신청서 작성</span>
                                 </div>
                                 <div>
                                     <span class="step">
@@ -81,13 +82,6 @@
 
                             <!-- form-->
                             <div class="form_section">
-                                <div class="form_desc_top">
-                                    <div class="lside">※ 회원가입시 인증받은 정보입니다. 개인정보는 마이페이지&gt;회원정보에서 변경 가능합니다.</div>
-                                    <div class="rside">
-                                        <button type="button" class="btn_secondary_lg">마이페이지<span class="ico_outlink" aria-hidden="true"></span></button>
-                                    </div>
-                                </div>
-
                                 <!-- write -->
                                 <div class="form_list table">
                                     <div class="form_group">
@@ -164,15 +158,15 @@
                                                                 <option value="070">인터넷전화 (070)</option>
                                                                 <option value="050">평생전화 (050)</option>
                                                             </select>
+                                                            <span class="txt_dash">-</span>
                                                         </div>
                                                         <div class="inp_set">
-                                                            <span class="txt_dash">-</span>
                                                             <div class="inp">
                                                                 <input type="tel" value="1234" title="전화번호 앞자리 입력" />
                                                             </div>
+                                                            <span class="txt_dash">-</span>
                                                         </div>
                                                         <div class="inp_set">
-                                                            <span class="txt_dash">-</span>
                                                             <div class="inp">
                                                                 <input type="tel" value="1234" title="전화번호 뒷자리 입력" />
                                                             </div>
@@ -192,21 +186,21 @@
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
-                                <h3 class="tit">양성교육과정 정보</h3>
+                                <h3 class="tit">양성교육 정보</h3>
                             </div>
 
-                            <!-- board(s) -->
+                            <!-- board -->
                             <div class="board_area">
                                 <!-- board_view -->
-                                <table class="tbl react row">
+                                <table class="tbl row">
                                     <caption class="hidden">
-                                        신청 번호, 상태, 자격종목, 신청일, 반려구분, 반려일, 사유 정보 제공
+                                        과정명, 기수, 기간, 수료일, 확인, 평가시험, 기수, 시험일 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 15.3rem" />
-                                        <col />
+                                        <col style="width: 29.1rem" />
                                         <col style="width: 15.3rem" />
-                                        <col />
+                                        <col style="width: 29.1rem" />
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -223,15 +217,461 @@
                                             <th scope="row">수료일</th>
                                             <td data-cell-header="수료일"><div>2025-01-02</div></td>
                                             <th scope="row">확인</th>
-                                            <td data-cell-header="확인"><div></div></td>
+                                            <td data-cell-header="확인">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">교육 수료증<span class="ico_bluearrow2"></span></button>
+                                                    <!-- 페이지 이동일 경우 a사용 -->
+                                                    <!-- <a href="javascript:;" class="btn_border_md radius">교육 수료증<span class="ico_bluearrow2"></span></a> -->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">평가시험</th>
+                                            <td data-cell-header="평가시험" colspan="3"><div>상수도관망시설운영관리사 2급</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">기수</th>
+                                            <td data-cell-header="기수"><div>21기</div></td>
+                                            <th scope="row">시험일</th>
+                                            <td data-cell-header="시험일"><div>2025-03-18</div></td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <!--// board_view -->
                             </div>
-                            <!--// board(e) -->
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">제출서류 선택</h3>
+                            </div>
+
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- write -->
+                                <div class="form_list base">
+                                    <div class="form_group">
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="inp_select">
+                                                                <select title="경력 선택">
+                                                                    <option value="">경력 선택</option>
+                                                                    <option value="">1년이상</option>
+                                                                    <option value="">1년이하</option>
+                                                                    <option value="">없음</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="inp_select">
+                                                                <select title="교육 선택">
+                                                                    <option value="">교육 선택</option>
+                                                                    <option value="">실무교육확인서</option>
+                                                                    <option value="">고용노동부 직업능력개발훈련 수료증</option>
+                                                                    <option value="">해당없음</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <button type="button" class="btn_primary_lg full">선택적용</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// write -->
+
+                                <div class="form_desc_bottom">
+                                    <ul class="list_mark">
+                                        <li>상수도분야 1년 이상 실무 종사(수도시설의 설치〮유지〮관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
+                                        <li>상수도 분야 고용노동부 직업능력개발훈련을 400시간 이상 수료는 실무교육을 면제함.(교육훈련 수료증 제출 필수)</li>
+                                        <li>실무교육은 수도시설의 설치나 운영, 유지·관리 분야의 기관·기업체의 업무 실무교육으로 '실무교육확인서'를 제출하여야 함.</li>
+                                    </ul>
+                                    <p class="txt_note">실무교육 필수에 해당합니다.<br />경력 1년 이하, 실무교육 확인서 또는 교육 훈련 수료증 해당 없음</p>
+                                </div>
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">경력 정보</h3>
+                                <div class="desc">
+                                    자격획득을 위해서는 상수도 운영, 유지관리 분야 근무(1년 이상) 경력증명서 또는 실무교육확인서가 필요합니다.<br />
+                                    근무처가 여러 곳인 경우 합산 산정하므로 근무경력추가 버튼을 눌러 추가 입력할 수 있습니다.
+                                </div>
+                            </div>
+
+                            <!-- form-->
+                            <div class="form_section">
+                                <div class="form_desc_top">
+                                    <div class="rside">
+                                        <button type="button" class="btn_primary_lg">근무경력 추가</button>
+                                    </div>
+                                </div>
+                                <!-- write -->
+                                <div class="form_list table">
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="work1_1">전체 경력</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="career_set">
+                                                                <div class="inp_set">
+                                                                    <div class="inp size_100">
+                                                                        <input type="tel" value="50" id="work1_1" readonly />
+                                                                    </div>
+                                                                    <span class="txt">년</span>
+                                                                </div>
+                                                                <div class="inp_set">
+                                                                    <div class="inp size_100">
+                                                                        <input type="tel" value="50" readonly />
+                                                                    </div>
+                                                                    <span class="txt">개월</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <p class="txt_note">아래 기간 선택 시 자동계산</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="work1_2">근무지</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                            <div class="inp size_219">
+                                                                <input type="text" value="" placeholder="근무지 입력" id="work1_2" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="calendar_set">
+                                                                <div class="inp_set">
+                                                                    <input type="text" value="" placeholder="시작일" id="startDate" />
+                                                                    <span class="txt_dash">~</span>
+                                                                </div>
+                                                                <div class="inp">
+                                                                    <input type="text" value="" placeholder="종료일" id="endDate" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <span class="inp_check">
+                                                                <input type="checkbox" id="work1_3" />
+                                                                <label for="work1_3">재직중</label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>근무지 경력증명</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="file_set">
+                                                        <div class="inp">
+                                                            <input type="text" placeholder="파일을 선택하세요" />
+                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                        </div>
+                                                        <label for="file1">파일찾기</label>
+                                                        <input type="file" id="file1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// write -->
+
+                                <!-- 근무경력 추가 -->
+                                <div class="form_desc_top">
+                                    <div class="rside">
+                                        <button type="button" class="btn_primary_lg">삭제</button>
+                                    </div>
+                                </div>
+                                <!-- write -->
+                                <div class="form_list table">
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="work2_2">근무지</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                            <div class="inp size_219">
+                                                                <input type="text" value="" placeholder="근무지 입력" id="work2_2" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="calendar_set">
+                                                                <div class="inp_set">
+                                                                    <input type="text" value="" placeholder="시작일" id="startDate1" />
+                                                                    <span class="txt_dash">~</span>
+                                                                </div>
+                                                                <div class="inp">
+                                                                    <input type="text" value="" placeholder="종료일" id="endDate1" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <span class="inp_check">
+                                                                <input type="checkbox" id="work2_3" />
+                                                                <label for="work2_3">재직중</label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>근무지 경력증명</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="file_set">
+                                                        <div class="inp">
+                                                            <input type="text" placeholder="파일을 선택하세요" />
+                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                        </div>
+                                                        <label for="file2">파일찾기</label>
+                                                        <input type="file" id="file2" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// write -->
+                                <!--// 근무경력 추가 -->
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">실무 교육 확인서</h3>
+                                <div class="desc">실무교육은 수도시설의 설치나 운영, 유지·관리 분야의 기관·기업체의 업무 실무교육으로 '실무교육확인서'를 제출</div>
+                            </div>
+
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- write -->
+                                <div class="form_list table">
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="time">교육시간</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="inp_set">
+                                                                <div class="inp size_219">
+                                                                    <input type="tel" value="" placeholder="총 교육시간 입력" id="time" />
+                                                                </div>
+                                                                <span class="txt">시간</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="calendar_set">
+                                                                <div class="inp_set">
+                                                                    <input type="text" value="" placeholder="시작일" id="startDate2" />
+                                                                    <span class="txt_dash">~</span>
+                                                                </div>
+                                                                <div class="inp">
+                                                                    <input type="text" value="" placeholder="종료일" id="endDate2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="edu">교육기관</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="inp size_219">
+                                                        <input type="text" placeholder="교육기관 입력" id="edu" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>실무교육확인서</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="file_set">
+                                                                <div class="inp">
+                                                                    <input type="text" placeholder="파일을 선택하세요" />
+                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                </div>
+                                                                <label for="file3">파일찾기</label>
+                                                                <input type="file" id="file3" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <button type="button" class="btn_red_lg full">지정서식 다운로드<span class="ico_download"></span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <p class="txt_note">
+                                                    서류가 여러 장인 경우 PDF파일 또는 이미지(JPG, PNG) 파일을 올려 주시기 바랍니다.<br />
+                                                    그 외 포맷은 업로드가 불가능합니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// write -->
+
+                                <div class="form_desc_bottom">
+                                    <button type="button" class="btn_txtlink line" id="alert1">실무교육 증빙 주의사항</button>
+                                </div>
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">고용노동부 직업능력개발훈련 수료증</h3>
+                                <div class="desc">상수도분야 고용노동부 직업능력개발훈련 수료증</div>
+                            </div>
+
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- write -->
+                                <div class="form_list table">
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="time1">교육시간</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="inp_set">
+                                                                <div class="inp size_219">
+                                                                    <input type="tel" value="" placeholder="총 교육시간 입력" id="time1" />
+                                                                </div>
+                                                                <span class="txt">시간</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="calendar_set">
+                                                                <div class="inp_set">
+                                                                    <input type="text" value="" placeholder="시작일" id="startDate3" />
+                                                                    <span class="txt_dash">~</span>
+                                                                </div>
+                                                                <div class="inp">
+                                                                    <input type="text" value="" placeholder="종료일" id="endDate3" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="edu1">교육기관</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="inp size_219">
+                                                        <input type="text" placeholder="교육기관 입력" id="edu1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>수료증</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="file_set">
+                                                        <div class="inp">
+                                                            <input type="text" placeholder="파일을 선택하세요" />
+                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                        </div>
+                                                        <label for="file4">파일찾기</label>
+                                                        <input type="file" id="file4" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// write -->
+
+                                <div class="form_desc_bottom">
+                                    <button type="button" class="btn_txtlink line" id="alert2">교육 수료 증빙 주의사항</button>
+                                </div>
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// section(e) -->
+
+                        <div class="bottom_btn_area">
+                            <button type="button" class="btn_primary_lg">다음</button>
+                        </div>
                     </div>
                     <!--// contents(e) -->
                 </div>
@@ -241,9 +681,117 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
+
+            <!-- Layer : 실무교육 증빙 주의사항 -->
+            <div class="layerFix alertPopup" id="alertPop1" style="display: none" tabindex="0">
+                <div class="layer_wrap" style="width: 56rem">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont base">
+                        <div class="tit_area">
+                            <strong class="tit">실무교육 증빙 주의사항</strong>
+                        </div>
+                        <div class="article center">
+                            <ul class="list_dot">
+                                <li>지정양식으로 작성하여 제출, 타양식 인정 안됨</li>
+                                <li>교육기관의 인감, 직인이 없는 경우 인정 안됨</li>
+                                <li>교육내역서는 필요시 2장 이상 작성하며 전체를 제출함</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">실무교육 증빙 주의사항 닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 실무교육 증빙 주의사항 -->
+
+            <!-- Layer : 교육 수료 증빙 주의사항 -->
+            <div class="layerFix alertPopup" id="alertPop2" style="display: none" tabindex="0">
+                <div class="layer_wrap">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont base">
+                        <div class="tit_area">
+                            <strong class="tit">고용노동부 직업능력개발훈련 수료증 증빙 주의사항</strong>
+                        </div>
+                        <div class="article center">
+                            <ul class="list_dot">
+                                <li>교육기관의 인감, 직인이 없는 경우 인정 안됨</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">실무교육 증빙 주의사항 닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 교육 수료 증빙 주의사항 -->
         </div>
         <!--// wrap(e) -->
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script src="/resources/js/jquery-ui.js"></script>
+        <script>
+            // 달력 샘플
+            $.datepicker.setDefaults($.datepicker.regional["ko"]);
+            $("#startDate, #endDate, #startDate1, #endDate1, #startDate2, #endDate2, #startDate3, #endDate3").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOtherMonths: true,
+                showMonthAfterYear: true,
+                nextText: "다음 달",
+                prevText: "이전 달",
+                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                ignoreReadonly: true,
+                buttonImageOnly: false,
+                beforeShow: function (input, inst) {
+                    $(".calendar_wrap").show().append($("#ui-datepicker-div"));
+                },
+                onSelect: function (dateText, inst) {
+                    $(".calendar_wrap").hide();
+                },
+            });
+            $(".calendar_wrap .dim").click(function () {
+                $(".calendar_wrap").hide();
+                console.log("aaaa");
+            });
+
+            // 첨부파일 샘플
+            $("#file1, #file2, #file3, #file4").on("change", function () {
+                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
+                $(this).parent().children().children("input").val(fileName);
+            });
+            $(".file_set .btn_reset").click(function () {
+                $(this).parent().children("input").val(""); // 파일명 삭제
+            });
+
+            // Layer : 실무교육 증빙 주의사항
+            $("#alert1").click(function (e) {
+                $(".layerDim").show();
+                $("#alertPop1").show().focus();
+            });
+            $("#alertPop1 .layer_close").click(function (e) {
+                $("#alert1").focus(); // 접근성
+            });
+
+            // Layer : 교육 수료 증빙 주의사항
+            $("#alert2").click(function (e) {
+                $(".layerDim").show();
+                $("#alertPop2").show().focus();
+            });
+            $("#alertPop2 .layer_close").click(function (e) {
+                $("#alert2").focus(); // 접근성
+            });
+        </script>
     </body>
 </html>

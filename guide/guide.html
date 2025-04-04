@@ -5,63 +5,82 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="guide.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css" />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
         <script>
             hljs.highlightAll();
         </script>
-        <style>
-            #guide_wrap {
-                padding: 20px;
-            }
-            .h1 {
-                font-size: 30px;
-                margin-bottom: 20px;
-            }
-            .h2 {
-                font-size: 18px;
-                margin-bottom: 10px;
-            }
-            pre code.hljs {
-                font-size: 13px;
-                letter-spacing: -0.06rem;
-            }
-        </style>
     </head>
     <body>
         <div id="guide_wrap">
             <h1 class="h1">Publishing Guide</h1>
-            <div class="section" id="title">
-                <h2 class="h2">- 타이틀</h2>
+            <div class="guide_container">
+                <div class="guide_gnb">
+                    <ul>
+                        <li><a href="guide.html">Home</a></li>
+                        <li><a href="Form.html">Form</a></li>
+                        <li><a href="board.html">Board</a></li>
+                    </ul>
+                </div>
+                <div class="guide_cont">
+                    <!-- CSS -->
+                    <div class="section" id="title">
+                        <h2 class="h2">- CSS</h2>
 
-                <div class="article">
-                    <!-- <h3>기본</h3> -->
-                    <style>
-                        .code_html {
-                            position: relative;
-                        }
-                        .code_html .bg {
-                            position: absolute;
-                            left: 0;
-                            bottom: -50px;
-                            background-color: red;
-                            opacity: 0.2;
-                            width: 100%;
-                            height: 50px;
-                            text-align: center;
-                            color: #fff;
-                            line-height: 50px;
-                        }
-                    </style>
-                    <div class="code_html">
-                        <!-- page_title -->
-                        <div class="page_title">
-                            <h2 class="tit">메인 타이틀</h2>
+                        <div class="article">
+                            <pre><code class="html">
+// SCSS
+/resources/css/scss/_variables.scss
+/resources/css/scss/_reset.scss
+/resources/css/scss/_mixin.scss
+/resources/css/scss/_layout.scss
+/resources/css/scss/_common.scss
+/resources/css/scss/_btn.scss
+/resources/css/scss/_main.scss
+/resources/css/scss/_contents.scss
+
+// CSS
+/resources/css/common.css (scss 컴파일)
+/resources/css/jquery-ui.css (datepicker)
+/resources/css/swiper-bundle.min.css (swiper)
+                            </code></pre>
                         </div>
-                        <!--// page_title -->
-                        <span class="bg">간격 50px</span>
                     </div>
-                    <pre><code class="html">
+                    <!--// CSS -->
+
+                    <!-- 타이틀 -->
+                    <div class="section" id="title">
+                        <h2 class="h2">- 타이틀</h2>
+
+                        <div class="article">
+                            <!-- <h3>기본</h3> -->
+                            <style>
+                                .code_html {
+                                    position: relative;
+                                }
+                                .code_html .bg {
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -50px;
+                                    background-color: red;
+                                    opacity: 0.2;
+                                    width: 100%;
+                                    height: 50px;
+                                    text-align: center;
+                                    color: #fff;
+                                    line-height: 50px;
+                                }
+                            </style>
+                            <div class="code_html">
+                                <!-- page_title -->
+                                <div class="page_title">
+                                    <h2 class="tit">메인 타이틀</h2>
+                                </div>
+                                <!--// page_title -->
+                                <span class="bg">간격 50px</span>
+                            </div>
+                            <pre><code class="html">
 // PC : font size 40px 
 // MO : font size 28px 
 // 타이틀 컨텐츠 간격 margin-bottom: 50px
@@ -72,15 +91,15 @@
 &#x3C;/div&#x3E;
 &#x3C;!--// page_title --&#x3E;
 </code></pre>
-                    <div class="code_html">
-                        <!-- page_title -->
-                        <div class="page_title center">
-                            <h2 class="tit">메인 타이틀</h2>
-                        </div>
-                        <!--// page_title -->
-                        <span class="bg">간격 50px</span>
-                    </div>
-                    <pre>
+                            <div class="code_html">
+                                <!-- page_title -->
+                                <div class="page_title center">
+                                    <h2 class="tit">메인 타이틀</h2>
+                                </div>
+                                <!--// page_title -->
+                                <span class="bg">간격 50px</span>
+                            </div>
+                            <pre>
                         <code class="html">
 // 사이드 메뉴(LNB)가 없는 경우 사용 (예: 회원가입,로그인 등...)
 &#x3C;!-- page_title --&#x3E;
@@ -90,144 +109,179 @@
 &#x3C;!--// page_title --&#x3E;
                         </code>
                     </pre>
-                </div>
+                        </div>
 
-                <div class="article">
-                    <h3>서브 타이틀</h3>
-                    <br />
-                    <div class="tit_area">
-                        <h3 class="tit">본인인증으로 찾기</h3>
-                        <p class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</p>
+                        <div class="article">
+                            <h3>서브 타이틀</h3>
+                            <br />
+                            <div class="tit_area">
+                                <h3 class="tit">본인인증으로 찾기</h3>
+                                <p class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</p>
+                            </div>
+                            <br />
+                            <div class="tit_area">
+                                <h3 class="tit ico">본인인증으로 찾기</h3>
+                                <p class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</p>
+                            </div>
+                        </div>
                     </div>
-                    <br />
-                    <div class="tit_area">
-                        <h3 class="tit ico">본인인증으로 찾기</h3>
-                        <p class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</p>
+                    <!--// 타이틀 -->
+
+                    <!-- 아이콘 -->
+                    <div class="section" id="icon">
+                        <h2>아이콘</h2>
+                        <div>
+                            <span class="ico_mark"></span>
+                            <span class="ico_marknavy"></span>
+                            <br />
+                            <br />
+                            <span class="ico_link"></span>
+                            <span class="ico_outlink"><span class="hidden">새창열림</span></span>
+                            <span class="ico_arrow" style="background-color: black"></span>
+                            <span class="ico_bluearrow"></span>
+                            <span class="ico_bluearrow2"></span>
+                            <span class="ico_download"></span>
+                        </div>
                     </div>
-                </div>
-            </div>
+                    <!--// 아이콘 -->
 
-            <div class="section" id="icon">
-                <h2>아이콘</h2>
-                <div>
-                    <span class="ico_outlink"><span class="hidden">새창열림</span></span>
-                    <span class="ico_arrow" style="background-color: black"></span>
-                </div>
-            </div>
+                    <!-- 이미지 -->
+                    <div class="section" id="images">
+                        <h2>이미지</h2>
+                        <div>
+                            <img src="/resources/images/icon/ico_home.svg" alt="" />
+                            <img src="/resources/images/icon/ico_user.svg" alt="" />
+                            <img src="/resources/images/icon/ico_join.svg" alt="" />
+                            <img src="/resources/images/icon/ico_login.svg" alt="" />
+                            <img src="/resources/images/icon/ico_logout.svg" alt="" />
+                            <img src="/resources/images/icon/ico_allsearch.svg" alt="" />
+                            <img src="/resources/images/icon/ico_new.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/icon/ico_quick1.svg" alt="" />
+                            <img src="/resources/images/icon/ico_quick2.svg" alt="" />
+                            <img src="/resources/images/icon/ico_quick3.svg" alt="" />
+                            <img src="/resources/images/icon/ico_quick4.svg" alt="" />
+                            <img src="/resources/images/icon/ico_identity1.svg" alt="" />
+                            <img src="/resources/images/icon/ico_identity2.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/icon/ico_reset.png" alt="" />
+                            <img src="/resources/images/icon/ico_search.svg" alt="" />
+                            <img src="/resources/images/common/bg_checkbox_off.svg" alt="" />
+                            <img src="/resources/images/common/bg_calendar.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/common/bg_positive.svg" alt="" />
+                            <img src="/resources/images/common/bg_negative.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/icon/ico_warning.svg" alt="" />
+                            <img src="/resources/images/icon/ico_mark.svg" alt="" />
+                            <img src="/resources/images/icon/ico_mark_navy.svg" alt="" />
+                            <img src="/resources/images/icon/ico_mark_blue.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/icon/ico_link.svg" alt="" />
+                            <img src="/resources/images/icon/ico_outlink.svg" alt="" />
+                            <img src="/resources/images/icon/ico_download.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/common/bg_arrow_right.png" alt="" />
+                            <img src="/resources/images/icon/ico_arrow.svg" alt="" style="background: black" />
+                            <img src="/resources/images/icon/ico_arrow_blue.svg" alt="" />
+                            <img src="/resources/images/icon/ico_arrow_blue2.svg" alt="" />
+                            <img src="/resources/images/common/bg_arrow.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/common/bg_close.svg" alt="" />
+                            <img src="/resources/images/common/bg_layer_close.svg" alt="" />
+                            <br />
+                            <br />
+                            <img src="/resources/images/common/bg_system_error.svg" alt="" />
+                            <img src="/resources/images/common/bg_completion.svg" alt="" />
+                            <img src="/resources/images/common/bg_notice.svg" alt="" />
+                        </div>
+                    </div>
+                    <!--// 이미지 -->
 
-            <br />
-            <br />
-
-            <div class="section" id="images">
-                <h2>이미지</h2>
-                <div>
-                    <img src="/resources/images/icon/ico_allsearch.svg" alt="" />
-                    <img src="/resources/images/icon/ico_arrow.svg" alt="" style="background-color: black" />
-                    <img src="/resources/images/icon/ico_completion.svg" alt="" />
-                    <img src="/resources/images/icon/ico_home.svg" alt="" />
-                    <img src="/resources/images/icon/ico_identity1.svg" alt="" />
-                    <img src="/resources/images/icon/ico_identity2.svg" alt="" />
-                    <img src="/resources/images/icon/ico_join.svg" alt="" />
-                    <img src="/resources/images/icon/ico_login.svg" alt="" />
-                    <img src="/resources/images/icon/ico_mark.svg" alt="" />
-                    <img src="/resources/images/icon/ico_mark_navy.svg" alt="" />
-                    <img src="/resources/images/icon/ico_outlink.svg" alt="" />
-                    <img src="/resources/images/icon/ico_link.svg" alt="" />
-                    <img src="/resources/images/icon/ico_reset.png" alt="" />
-                    <img src="/resources/images/icon/ico_reset.svg" alt="" />
-                    <img src="/resources/images/icon/ico_search.svg" alt="" />
-                    <img src="/resources/images/icon/ico_warning.svg" alt="" />
-                    <br />
-                    <br />
-                    <img src="/resources/images/common/bg_arrow_right.png" alt="" />
-                    <img src="/resources/images/common/bg_checkbox.svg" alt="" style="background-color: black" />
-                    <img src="/resources/images/common/bg_hamburger.svg" alt="" />
-                    <img src="/resources/images/common/bg_layer_close.svg" alt="" />
-                    <img src="/resources/images/common/bg_arrow.svg" alt="" />
-                    <img src="/resources/images/common/bg_nav.svg" alt="" />
-                    <img src="/resources/images/common/bg_select.svg" alt="" />
-                    <img src="/resources/images/common/bg_select_16.svg" alt="" />
-                    <img src="/resources/images/common/bg_system_error.svg" alt="" />
-                    <img src="/resources/images/common/bg_completion.svg" alt="" />
-                    <img src="/resources/images/common/bg_notice.svg" alt="" />
-                </div>
-            </div>
-
-            <br />
-            <br />
-
-            <div class="section" id="btn">
-                <h2>Button</h2>
-                <div>
-                    <h3>기본</h3>
-                    <br />
-                    <button type="button" class="btn_primary_sm">primary</button>
-                    <button type="button" class="btn_secondary_sm">secondary</button>
-                    <button type="button" class="btn_secondary_sm">secondary<span class="ico_outlink"></span></button>
-                    <button type="button" class="btn_outline_sm">outline</button>
-                    <button type="button" class="btn_border_sm">border</button>
-                    <button type="button" class="btn_border_sm radius">border + radius</button>
-                    <button type="button" class="btn_border_sm radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
-                    <button type="button" class="btn_navyborder_sm">border</button>
-                    <button type="button" class="btn_navyborder_sm radius">border + radius</button>
-                    <button type="button" class="btn_navy_sm">border</button>
-                    <br />
-                    <br />
-                    <button type="button" class="btn_primary_md">primary</button>
-                    <button type="button" class="btn_secondary_md">secondary</button>
-                    <button type="button" class="btn_secondary_md">secondary<span class="ico_outlink"></span></button>
-                    <button type="button" class="btn_outline_md">outline</button>
-                    <button type="button" class="btn_border_md">border</button>
-                    <button type="button" class="btn_border_md radius">border + radius</button>
-                    <button type="button" class="btn_border_md radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
-                    <button type="button" class="btn_navyborder_md">border</button>
-                    <button type="button" class="btn_navyborder_md radius">border + radius</button>
-                    <button type="button" class="btn_navy_md">border</button>
-                    <br />
-                    <br />
-                    <button type="button" class="btn_primary_lg">primary</button>
-                    <button type="button" class="btn_secondary_lg">secondary</button>
-                    <button type="button" class="btn_secondary_lg">secondary<span class="ico_outlink"></span></button>
-                    <button type="button" class="btn_outline_lg">outline</button>
-                    <button type="button" class="btn_border_lg">border</button>
-                    <button type="button" class="btn_border_lg radius">border + radius</button>
-                    <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
-                    <button type="button" class="btn_navyborder_lg">border</button>
-                    <button type="button" class="btn_navyborder_lg radius">border + radius</button>
-                    <button type="button" class="btn_navy_lg">border</button>
-                    <br />
-                    <br />
-                    <button type="button" class="btn_primary_xlg">primary</button>
-                    <button type="button" class="btn_secondary_xlg">secondary</button>
-                    <button type="button" class="btn_secondary_xlg">secondary<span class="ico_outlink"></span></button>
-                    <button type="button" class="btn_outline_xlg">outline</button>
-                    <button type="button" class="btn_border_xlg">border</button>
-                    <button type="button" class="btn_border_xlg radius">border + radius</button>
-                    <button type="button" class="btn_border_xlg radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
-                    <button type="button" class="btn_navyborder_xlg">border</button>
-                    <button type="button" class="btn_navyborder_xlg radius">border + radius</button>
-                    <button type="button" class="btn_navy_xlg">border</button>
-                    <br />
-                    <br />
-                    <button type="button" class="btn_primary_xxl">primary</button>
-                    <button type="button" class="btn_secondary_xxl">secondary</button>
-                    <button type="button" class="btn_secondary_xxl">secondary<span class="ico_outlink"></span></button>
-                    <button type="button" class="btn_outline_xxl">outline</button>
-                    <button type="button" class="btn_border_xxl">border</button>
-                    <button type="button" class="btn_border_xxl radius">border + radius</button>
-                    <button type="button" class="btn_border_xxl radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
-                    <button type="button" class="btn_navyborder_xxl">border</button>
-                    <button type="button" class="btn_navyborder_xxl radius">border + radius</button>
-                    <button type="button" class="btn_navy_xxl">border</button>
-                    <br />
-                    <br />
-                    <button type="button" class="btn_underline">이수증신청</button>
-                    <button type="button" class="btn_txt">출력하기</button>
-                    <a href="javascript:;" class="btn_link">전체일정<span class="ico_link" aria-hidden="true"></span></a>
-                    <a href="javascript:;" class="btn_more_plus">더보기</a>
-                    <button type="button" class="btn_download">양식 다운로드</button>
-                </div>
-                <pre>
+                    <!-- 버튼 -->
+                    <div class="section" id="btn">
+                        <h2>Button</h2>
+                        <div>
+                            <h3>기본</h3>
+                            <br />
+                            <button type="button" class="btn_primary_sm">primary</button>
+                            <button type="button" class="btn_secondary_sm">secondary</button>
+                            <button type="button" class="btn_secondary_sm">secondary<span class="ico_outlink"></span></button>
+                            <button type="button" class="btn_outline_sm">outline</button>
+                            <button type="button" class="btn_border_sm">border</button>
+                            <button type="button" class="btn_border_sm radius">border + radius</button>
+                            <button type="button" class="btn_border_sm radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                            <button type="button" class="btn_navyborder_sm">border</button>
+                            <button type="button" class="btn_navyborder_sm radius">border + radius</button>
+                            <button type="button" class="btn_navy_sm">border</button>
+                            <br />
+                            <br />
+                            <button type="button" class="btn_primary_md">primary</button>
+                            <button type="button" class="btn_secondary_md">secondary</button>
+                            <button type="button" class="btn_secondary_md">secondary<span class="ico_outlink"></span></button>
+                            <button type="button" class="btn_outline_md">outline</button>
+                            <button type="button" class="btn_border_md">border</button>
+                            <button type="button" class="btn_border_md radius">border + radius</button>
+                            <button type="button" class="btn_border_md radius">border + radius<span class="ico_bluearrow"></span></button>
+                            <button type="button" class="btn_navyborder_md">border</button>
+                            <button type="button" class="btn_navyborder_md radius">border + radius</button>
+                            <button type="button" class="btn_navy_md">border</button>
+                            <br />
+                            <br />
+                            <button type="button" class="btn_primary_lg">primary</button>
+                            <button type="button" class="btn_secondary_lg">secondary</button>
+                            <button type="button" class="btn_secondary_lg">secondary<span class="ico_outlink"></span></button>
+                            <button type="button" class="btn_outline_lg">outline</button>
+                            <button type="button" class="btn_border_lg">border</button>
+                            <button type="button" class="btn_border_lg radius">border + radius</button>
+                            <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow"></span></button>
+                            <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow2"></span></button>
+                            <button type="button" class="btn_navyborder_lg">border</button>
+                            <button type="button" class="btn_navyborder_lg radius">border + radius</button>
+                            <button type="button" class="btn_navy_lg">border</button>
+                            <button type="button" class="btn_red_lg">red</button>
+                            <br />
+                            <br />
+                            <button type="button" class="btn_primary_xlg">primary</button>
+                            <button type="button" class="btn_secondary_xlg">secondary</button>
+                            <button type="button" class="btn_secondary_xlg">secondary<span class="ico_outlink"></span></button>
+                            <button type="button" class="btn_outline_xlg">outline</button>
+                            <button type="button" class="btn_border_xlg">border</button>
+                            <button type="button" class="btn_border_xlg radius">border + radius</button>
+                            <button type="button" class="btn_border_xlg radius">border + radius<span class="ico_bluearrow" aria-hidden="true"></span></button>
+                            <button type="button" class="btn_navyborder_xlg">border</button>
+                            <button type="button" class="btn_navyborder_xlg radius">border + radius</button>
+                            <button type="button" class="btn_navy_xlg">border</button>
+                            <br />
+                            <br />
+                            <button type="button" class="btn_primary_xxl">primary</button>
+                            <button type="button" class="btn_secondary_xxl">secondary</button>
+                            <button type="button" class="btn_secondary_xxl">secondary<span class="ico_outlink"></span></button>
+                            <button type="button" class="btn_outline_xxl">outline</button>
+                            <button type="button" class="btn_border_xxl">border</button>
+                            <button type="button" class="btn_border_xxl radius">border + radius</button>
+                            <button type="button" class="btn_border_xxl radius">border + radius<span class="ico_bluearrow"></span></button>
+                            <button type="button" class="btn_navyborder_xxl">border</button>
+                            <button type="button" class="btn_navyborder_xxl radius">border + radius</button>
+                            <button type="button" class="btn_navy_xxl">border</button>
+                            <br />
+                            <br />
+                            <button type="button" class="btn_underline">이수증신청</button>
+                            <button type="button" class="btn_txt">출력하기</button>
+                            <a href="javascript:;" class="btn_link">전체일정<span class="ico_link"></span></a>
+                            <button type="button" class="btn_txtlink">팝업보기</button>
+                            <button type="button" class="btn_txtlink line">팝업보기(+라인)</button>
+                            <a href="javascript:;" class="btn_more_plus">더보기</a>
+                            <button type="button" class="btn_download">다운로드</button>
+                        </div>
+                        <pre>
                     <code class="html">
 // 기본 min-width 90px
 
@@ -246,25 +300,25 @@
 &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg&#x22;&#x3E;border&#x3C;/button&#x3E;
                     </code>
                 </pre>
-                <div>
-                    <h3>페이지 하단</h3>
-                    <div class="bottom_btn_area">
-                        <div class="lside">
-                            <button type="button" class="btn_outline_lg">이전으로</button>
-                        </div>
-                        <div class="rside">
-                            <button type="button" class="btn_primary_lg">가입신청</button>
-                        </div>
-                    </div>
+                        <div>
+                            <h3>페이지 하단</h3>
+                            <div class="bottom_btn_area">
+                                <div class="lside">
+                                    <button type="button" class="btn_outline_lg">이전으로</button>
+                                </div>
+                                <div class="rside">
+                                    <button type="button" class="btn_primary_lg">가입신청</button>
+                                </div>
+                            </div>
 
-                    <div class="bottom_btn_area">
-                        <button type="button" class="btn_primary_lg">가입신청</button>
-                    </div>
+                            <div class="bottom_btn_area">
+                                <button type="button" class="btn_primary_lg">가입신청</button>
+                            </div>
 
-                    <div class="bottom_btn_area full">
-                        <button type="button" class="btn_primary_lg">메인</button>
-                    </div>
-                    <pre>
+                            <div class="bottom_btn_area full">
+                                <button type="button" class="btn_primary_lg">메인</button>
+                            </div>
+                            <pre>
                         <code class="html">
 * 기본 (PC : min-width 251px / MO : 100%)<br>
 버튼과 컨텐츠 사이의 간격 50px
@@ -278,18 +332,21 @@
 &#x3C;/div&#x3E;
                         </code>
                     </pre>
-                </div>
-
-                <div>
-                    <h3>페이지 중간</h3>
-                    <div class="page_btn_area">
-                        <div class="lside">
-                            <button type="button" class="btn_primary_lg">확인</button>
                         </div>
-                        <div class="rside">
-                            <button type="button" class="btn_secondary_lg">확인</button>
+
+                        <div>
+                            <h3>페이지 중간</h3>
+                            <div class="page_btn_area">
+                                <div class="lside">
+                                    <button type="button" class="btn_primary_lg">확인</button>
+                                </div>
+                                <div class="rside">
+                                    <button type="button" class="btn_secondary_lg">확인</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!--// 버튼 -->
                 </div>
             </div>
         </div>

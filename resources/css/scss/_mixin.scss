@@ -112,14 +112,14 @@
     display: flex;
     width: 100%;
     height: auto;
-    padding: 0.3rem var(--gap-8) 0;
+    padding: var(--gap-5) var(--gap-8) 0;
     border: 0;
     text-align: left;
 }
 
 @mixin data-cell-header {
     content: attr(data-cell-header);
-    width: 15rem;
+    width: 8rem;
     margin-right: var(--gap-10);
     color: var(--color-black);
     font-weight: var(--font-bold);

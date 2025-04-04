@@ -146,6 +146,12 @@
     > .lyinner {
         display: flex;
         gap: 6.4rem;
+        @include desktop {
+            margin: 0 var(--gap-24);
+        }
+        @include mobile {
+            margin: 0;
+        }
     }
     #aside {
         width: 24.8rem;

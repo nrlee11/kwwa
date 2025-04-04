@@ -23,7 +23,7 @@
         font-size: var(--font-size-sm);
         line-height: 4rem;
     }
-    &[class*="_xl"] {
+    &[class*="_xlg"] {
         height: 5.2rem;
         line-height: 5.2rem;
         font-weight: var(--font-semibold);
@@ -74,9 +74,15 @@
             border-radius: 0.8rem;
         }
     }
+    &[class*="_red"] {
+        color: #d63d4a;
+        border: $border #d63d4a;
+        background-color: #fdefec;
+    }
     &[class*="_outline"],
     &[class*="_border"],
-    &[class*="_navyborder"] {
+    &[class*="_navyborder"],
+    &[class*="_red"] {
         &[class*="_sm"] {
             line-height: 2.8rem;
         }
@@ -92,10 +98,6 @@
         &[class*="_xxl"] {
             line-height: 6.8rem;
         }
-    }
-    &:disabled {
-        opacity: 0.3;
-        cursor: default;
     }
     &[class*="_txt"] {
         color: var(--color-gray);
@@ -116,31 +118,25 @@
         color: #4c87f6;
         text-decoration: underline;
     }
-
-    // &[class*="_sm"] {
-    //     height: 3rem;
-    //     line-height: 3rem;
-    //     border-radius: 5rem;
-    //     font-size: var(--font-size-sm);
-    //     font-weight: var(--font-semibold);
-    // }
-    // &[class*="_xlg"] {
-    //     height: 5.2rem;
-    //     line-height: 5.2rem;
-    // }
-    // &[class*="_tertiary"] {
-    //     color: var(--color-darkblue);
-    //     border: $border var(--color-blue);
-    //     background-color: #b1cefb;
-    // }
-    // &[class*="_link"] {
-    // }
-    .ico_outlink {
-        margin-left: var(--gap-4);
+    &[class*="_txtlink"] {
+        color: #4c87f6;
+        &.line {
+            text-decoration: underline;
+        }
+    }
+    &:disabled {
+        opacity: 0.3;
+        cursor: default;
     }
     &.auto {
         min-width: auto;
         width: 100%;
+    }
+    .ico_outlink {
+        margin-left: var(--gap-4);
+    }
+    [class^="ico_"] {
+        margin: 0 0 0 var(--gap-7);
     }
 }
 
