@@ -165,6 +165,31 @@
     }
 }
 
+// 실무교육
+// 실무교육 확인조회
+.result_area {
+    position: relative;
+    padding: var(--gap-16) var(--gap-16) var(--gap-16) 4.8rem;
+    border: $border #d8eedd;
+    background-color: #eaf6ec;
+    border-radius: 0.8rem;
+    &.positive {
+        background: #eaf6ec url($url-img-icon + "ico_positive.svg") no-repeat 1.6rem;
+    }
+    &.negative {
+        border-color: #fcdfd9;
+        background: #fdefec url($url-img-icon + "ico_negative.svg") no-repeat 1.6rem;
+    }
+    &.ongoing {
+        border-color: #d3ebfd;
+        background: #e7f4fe url($url-img-icon + "ico_mark.svg") no-repeat 1.6rem;
+    }
+    &.warning {
+        border-color: #ffe0a3;
+        background: #fff3db url($url-img-icon + "ico_warning.svg") no-repeat 1.6rem;
+    }
+}
+
 // 자격증 발급
 // 자격증 발급절차
 .license_process {

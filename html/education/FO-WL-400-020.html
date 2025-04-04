@@ -11,7 +11,7 @@
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
-        <title>서류제출 | 실무교육 | 한국상하수도협회</title>
+        <title>실무교육 확인조회 | 실무교육 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -34,22 +34,22 @@
                             <ol class="breadcrumb">
                                 <li><a href="javascript:;">홈</a></li>
                                 <li><a href="javascript:;">실무교육</a></li>
-                                <li><span>서류제출</span></li>
+                                <li><span>실무교육 확인조회</span></li>
                             </ol>
                         </nav>
                         <!--// breadcrumb(e) -->
 
                         <!-- page_title(s) -->
                         <div class="page_title">
-                            <h2 class="tit">서류제출</h2>
+                            <h2 class="tit">실무교육 확인조회</h2>
                         </div>
                         <!--// page_title(e) -->
 
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
-                                <h3 class="tit">양성과정 현황</h3>
-                                <div class="desc">양성과정의 이수를 위해서 아래 3가지 요건을 충족해야 하며 현황은 아래와 같습니다.</div>
+                                <h3 class="tit">신청결과 안내</h3>
+                                <div class="desc">실무교육 확인신청 결과를 안내해 드립니다.</div>
                             </div>
                         </div>
                         <!--// section(e) -->
@@ -59,101 +59,20 @@
                             <div class="tit_area">
                                 <h3 class="tit">조회내역</h3>
                             </div>
-
-                            <!-- board -->
-                            <div class="board_area">
-                                <div class="board_tit">
-                                    <strong class="tit">1급</strong>
-                                </div>
-
-                                <div class="nodata">조회할 내역이 없습니다.</div>
-
-                                <!-- board_view -->
-                                <table class="tbl">
-                                    <caption class="hidden">
-                                        구분, 상태, 세부내용, 비고 정보 제공
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 23%" span="2" />
-                                        <col style="width: 31%" />
-                                        <col style="width: 23%" />
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">구분</th>
-                                            <th scope="col">상태</th>
-                                            <th scope="col">세부내용</th>
-                                            <th scope="col">비고</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-cell-header="구분"><div>양성교육</div></td>
-                                            <td data-cell-header="상태">
-                                                <div>
-                                                    <span class="badge_negative">미수료</span>
-                                                    <span class="badge_positive">수료</span>
-                                                </div>
-                                            </td>
-                                            <td data-cell-header="세부내용">
-                                                <div>
-                                                    교육기간
-                                                    <p class="txt_blue">2025-00-00~2025-00-00</p>
-                                                    수료일
-                                                    <p class="txt_blue">2025-01-02</p>
-                                                </div>
-                                            </td>
-                                            <td data-cell-header="비고"><div></div></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-cell-header="구분"><div>이수평가시험</div></td>
-                                            <td data-cell-header="상태">
-                                                <div>
-                                                    -
-                                                    <span class="badge_negative">불합격</span>
-                                                    <span class="badge_positive">합격</span>
-                                                </div>
-                                            </td>
-                                            <td data-cell-header="세부내용">
-                                                <div>
-                                                    시험일
-                                                    <p class="txt_blue">2025-00-00~2025-00-00</p>
-                                                </div>
-                                            </td>
-                                            <td data-cell-header="비고">
-                                                <div>
-                                                    <button type="button" class="btn_border_md radius">시험일정<span class="ico_bluearrow2"></span></button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-cell-header="구분"><div>실무교육</div></td>
-                                            <td data-cell-header="상태"><div>- 미확인 심사중</div></td>
-                                            <td data-cell-header="세부내용">
-                                                <div>
-                                                    신청일
-                                                    <p class="txt_blue">2025-00-00~2025-00-00</p>
-                                                </div>
-                                            </td>
-                                            <td data-cell-header="비고">
-                                                <div>
-                                                    <button type="button" class="btn_border_md radius">서류제출<span class="ico_bluearrow2"></span></button>
-                                                    <button type="button" class="btn_border_md radius">확인조회<span class="ico_bluearrow2"></span></button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_view -->
+                            <div class="result_area negative">
+                                실무교육 확인신청 내역이 없습니다. 이수증 발급을 위해서는 서류제출이 필요합니다.
+                                <a href="javascript:;" class="btn_link">바로가기<span class="ico_link"></span></a>
                             </div>
-                            <!--// board -->
+                            <div class="result_area ongoing">심사 중입니다. 서류 확인 결과는 알림을 통해 안내해드립니다.</div>
+                            <div class="result_area positive">실무교육 확인이 완료되었습니다.</div>
+                            <div class="result_area warning">보완요청 안내입니다. 내용 확인 후 7일 이내 미보완시 자동 반려로 처리 됩니다.</div>
                         </div>
                         <!--// section(e) -->
 
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
-                                <h3 class="tit">실무교육 확인 서류 제출</h3>
+                                <h3 class="tit">신청조회내역</h3>
                                 <div class="desc">
                                     실무교육 확인을 위해서는 아래 3가지 중 하나의 서류가 제출되어야 합니다. (2개 이상 제출 불필요)<br />
                                     ❶ 실무교육 확인서 ❷ 경력증명서 ❸ 직업능력개발훈련 수료증
@@ -206,7 +125,7 @@
 
                                 <div class="board_desc_bottom">
                                     <ul class="list_mark">
-                                        <li>상수도분야 1년 이상 실무 종사(수도시설의 설치유지관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
+                                        <li>상수도분야 1년 이상 실무 종사(수도시설의 설치〮유지〮관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
                                         <li>상수도 분야 고용노동부 직업능력개발훈련을 400시간 이상 수료는 실무교육을 면제함.(교육훈련 수료증 제출 필수)</li>
                                         <li>실무교육은 수도시설의 설치나 운영, 유지·관리 분야의 기관·기업체의 업무 실무교육으로 '실무교육확인서'를 제출하여야 함.</li>
                                     </ul>

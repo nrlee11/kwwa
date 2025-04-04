@@ -99,27 +99,13 @@
             line-height: 6.8rem;
         }
     }
-    &[class*="_txt"] {
-        color: var(--color-gray);
-    }
-    &[class*="_underline"] {
-        color: var(--color-gray);
+    &[class*="_download"] {
+        color: var(--color-warmblue);
         text-decoration: underline;
     }
     &[class*="_link"] {
-        color: var(--color-darkgray);
-        font-size: 1.6rem;
-        font-weight: var(--font-semibold);
-        [class^="ico_"] {
-            margin: 0 0 0 0.6rem;
-        }
-    }
-    &[class*="_download"] {
-        color: #4c87f6;
+        color: var(--color-warmblue);
         text-decoration: underline;
-    }
-    &[class*="_txtlink"] {
-        color: #4c87f6;
         &.line {
             text-decoration: underline;
         }

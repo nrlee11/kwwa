@@ -365,11 +365,35 @@ button {
 #header .utility > .box + .box [class^=btn_] + [class^=btn_] {
   margin-left: var(--gap-8);
 }
-#header .utility > .box + .box [class^=btn_].switch {
+#header .utility .site_switch {
+  margin-left: var(--gap-15);
+}
+#header .utility .site_switch a {
+  position: relative;
+  display: inline-block;
+  min-width: 24rem;
+  height: 3rem;
+  padding: 0 var(--gap-15);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  line-height: 3rem;
+  background-color: #8a949e;
+  border-radius: 5rem;
   font-weight: var(--font-medium);
 }
-#header .utility > .box + .box [class^=btn_].switch > strong {
+#header .utility .site_switch a:hover {
+  background-color: var(--color-warmblue);
+}
+#header .utility .site_switch a > strong {
   font-weight: var(--font-bold);
+}
+#header .utility .site_switch a [class^=ico_] {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.5rem;
+}
+#header .utility .site_switch ul li + li {
+  margin-top: var(--gap-5);
 }
 @media screen and (max-width: 1024px) {
   #header .utility,
@@ -1011,6 +1035,7 @@ button {
 }
 .page_title .tit {
   font-size: var(--font-size-xxl);
+  font-weight: var(--font-semibold);
 }
 @media screen and (max-width: 1024px) {
   .page_title .tit {
@@ -1076,7 +1101,7 @@ button {
 .badge_positive, .badge_negative {
   position: relative;
   display: inline-block;
-  padding-left: 2.7rem;
+  padding-left: 2.9rem;
   color: #3e9651;
 }
 .badge_positive::before, .badge_negative::before {
@@ -1084,16 +1109,16 @@ button {
   position: absolute;
   top: 50%;
   left: 0;
-  top: 0.2rem;
-  width: 2rem;
-  height: 2rem;
-  background: url("../../resources/images/common/bg_positive.svg") no-repeat 0 0;
+  top: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url("../../resources/images/icon/ico_positive.svg") no-repeat 0 0;
 }
 .badge_negative {
   color: #de3412;
 }
 .badge_negative::before {
-  background: url("../../resources/images/common/bg_negative.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_negative.svg") no-repeat 0 0;
 }
 
 .progress-bar {
@@ -1215,6 +1240,8 @@ button {
   vertical-align: var(--align-m);
 }
 [class^=ico_][class*=_link] {
+  width: 1rem;
+  height: 1rem;
   background: url("../../resources/images/icon/ico_link.svg") no-repeat 0 0;
 }
 [class^=ico_][class*=_outlink] {
@@ -2661,29 +2688,15 @@ select.round {
 [class^=btn_][class*=_outline][class*=_xxl], [class^=btn_][class*=_border][class*=_xxl], [class^=btn_][class*=_navyborder][class*=_xxl], [class^=btn_][class*=_red][class*=_xxl] {
   line-height: 6.8rem;
 }
-[class^=btn_][class*=_txt] {
-  color: var(--color-gray);
-}
-[class^=btn_][class*=_underline] {
-  color: var(--color-gray);
+[class^=btn_][class*=_download] {
+  color: var(--color-warmblue);
   text-decoration: underline;
 }
 [class^=btn_][class*=_link] {
-  color: var(--color-darkgray);
-  font-size: 1.6rem;
-  font-weight: var(--font-semibold);
-}
-[class^=btn_][class*=_link] [class^=ico_] {
-  margin: 0 0 0 0.6rem;
-}
-[class^=btn_][class*=_download] {
-  color: #4c87f6;
+  color: var(--color-warmblue);
   text-decoration: underline;
 }
-[class^=btn_][class*=_txtlink] {
-  color: #4c87f6;
-}
-[class^=btn_][class*=_txtlink].line {
+[class^=btn_][class*=_link].line {
   text-decoration: underline;
 }
 [class^=btn_]:disabled {
@@ -3677,6 +3690,29 @@ select.round {
   .join_wrap .bottom_btn_area {
     margin-top: var(--gap-50);
   }
+}
+
+.result_area {
+  position: relative;
+  padding: var(--gap-16) var(--gap-16) var(--gap-16) 4.8rem;
+  border: 0.1rem solid #d8eedd;
+  background-color: #eaf6ec;
+  border-radius: 0.8rem;
+}
+.result_area.positive {
+  background: #eaf6ec url("../../resources/images/icon/ico_positive.svg") no-repeat 1.6rem;
+}
+.result_area.negative {
+  border-color: #fcdfd9;
+  background: #fdefec url("../../resources/images/icon/ico_negative.svg") no-repeat 1.6rem;
+}
+.result_area.ongoing {
+  border-color: #d3ebfd;
+  background: #e7f4fe url("../../resources/images/icon/ico_mark.svg") no-repeat 1.6rem;
+}
+.result_area.warning {
+  border-color: #ffe0a3;
+  background: #fff3db url("../../resources/images/icon/ico_warning.svg") no-repeat 1.6rem;
 }
 
 .license_process > ol {
