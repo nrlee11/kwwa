@@ -77,14 +77,19 @@
 
                             <!-- board -->
                             <div class="board_area">
+                                <div class="board_desc_top">
+                                    <div class="rside">조회일시: 2025.02.30 00:00:00</div>
+                                </div>
+
                                 <!-- board_view -->
                                 <table class="tbl">
                                     <caption class="hidden">
                                         신청번호, 급수, 신청일, 진행상태, 비고 정보 제공
                                     </caption>
                                     <colgroup>
-                                        <col style="width: 20%" span="4" />
+                                        <col style="width: 19%" span="3" />
                                         <col />
+                                        <col style="width: 20%" />
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -108,20 +113,54 @@
                                             <td data-cell-header="급수"><div>1급</div></td>
                                             <td data-cell-header="신청일"><div>2025-01-02</div></td>
                                             <td data-cell-header="진행상태">
-                                                <div>보완요청</div>
+                                                <div>
+                                                    <span class="txt_red">보완요청</span><br />
+                                                    요청일 : <span class="txt_blue">2025-01-10</span><br />
+                                                    만료일 : <span class="txt_red">2025-01-17</span>
+                                                </div>
                                             </td>
-                                            <td data-cell-header="비고"><div></div></td>
+                                            <td data-cell-header="비고">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">보완서류 제출<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="신청번호"><div>B000000000</div></td>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="신청일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="진행상태">
+                                                <div><span class="txt_green">확인완료</span></div>
+                                            </td>
+                                            <td data-cell-header="비고">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">이수증 발급<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="신청번호"><div>B000000000</div></td>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="신청일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="진행상태">
+                                                <div>
+                                                    <span class="txt_red">반려</span><br />
+                                                    <span class="txt_red">2025-01-10</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="비고">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">반려 확인<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <!--// board_view -->
 
-                                <div class="board_desc_bottom">
-                                    <ul class="list_mark">
-                                        <li>상수도분야 1년 이상 실무 종사(수도시설의 설치〮유지〮관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
-                                        <li>상수도 분야 고용노동부 직업능력개발훈련을 400시간 이상 수료는 실무교육을 면제함.(교육훈련 수료증 제출 필수)</li>
-                                        <li>실무교육은 수도시설의 설치나 운영, 유지·관리 분야의 기관·기업체의 업무 실무교육으로 '실무교육확인서'를 제출하여야 함.</li>
-                                    </ul>
+                                <div class="board_desc_bottom gap_mt10">
+                                    <p class="txt_note">실무교육 확인서에 교육기관 직인이 없습니다. 다시 제출해 주세요.</p>
+                                    <p class="txt_note">경력증빙이 1년 이하로 해당하지 않습니다.</p>
                                 </div>
                             </div>
                             <!--// board -->
