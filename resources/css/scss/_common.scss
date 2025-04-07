@@ -1011,11 +1011,20 @@ select {
                 [data-cell-header]:before {
                     @include data-cell-header;
                 }
+                &.size70 [data-cell-header]:before {
+                    width: 7rem;
+                }
+                &.size90 [data-cell-header]:before {
+                    width: 9rem;
+                }
                 &.size100 [data-cell-header]:before {
                     width: 10rem;
                 }
                 &.size110 [data-cell-header]:before {
                     width: 11rem;
+                }
+                &.size130 [data-cell-header]:before {
+                    width: 13rem;
                 }
                 &.size150 [data-cell-header]:before {
                     width: 15rem;
@@ -1345,7 +1354,8 @@ select {
 .list {
     &_dot,
     &_dash,
-    &_mark {
+    &_mark,
+    &_square {
         > li {
             position: relative;
             padding-left: var(--gap-12);
@@ -1382,6 +1392,18 @@ select {
             &::before {
                 content: "※";
                 top: 0;
+            }
+        }
+    }
+    &_square {
+        > li {
+            padding-left: var(--gap-20);
+            &::before {
+                top: 0.5rem;
+                width: 1.3rem;
+                height: 1.3rem;
+                background-color: var(--color-base);
+                border-radius: 0.3rem;
             }
         }
     }

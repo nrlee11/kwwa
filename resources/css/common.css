@@ -1916,11 +1916,20 @@ select.round {
     color: var(--color-black);
     font-weight: var(--font-bold);
   }
+  .board_area .tbl.size70 [data-cell-header]:before {
+    width: 7rem;
+  }
+  .board_area .tbl.size90 [data-cell-header]:before {
+    width: 9rem;
+  }
   .board_area .tbl.size100 [data-cell-header]:before {
     width: 10rem;
   }
   .board_area .tbl.size110 [data-cell-header]:before {
     width: 11rem;
+  }
+  .board_area .tbl.size130 [data-cell-header]:before {
+    width: 13rem;
   }
   .board_area .tbl.size150 [data-cell-header]:before {
     width: 15rem;
@@ -2240,11 +2249,11 @@ select.round {
   color: #d63d4a;
 }
 
-.list_dot > li, .list_dash > li, .list_mark > li {
+.list_dot > li, .list_dash > li, .list_mark > li, .list_square > li {
   position: relative;
   padding-left: var(--gap-12);
 }
-.list_dot > li::before, .list_dash > li::before, .list_mark > li::before {
+.list_dot > li::before, .list_dash > li::before, .list_mark > li::before, .list_square > li::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2272,6 +2281,16 @@ select.round {
 .list_mark > li::before {
   content: "※";
   top: 0;
+}
+.list_square > li {
+  padding-left: var(--gap-20);
+}
+.list_square > li::before {
+  top: 0.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: var(--color-base);
+  border-radius: 0.3rem;
 }
 
 .notice_box {
@@ -3088,7 +3107,7 @@ select.round {
   right: 0;
   width: 2.4rem;
   height: 2.4rem;
-  background: url("../../resources/images/common/bg_arrow_right.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_arrow_gray.svg") no-repeat 0 0;
   background-size: contain;
 }
 .service_area .cs_info .link + .link {
@@ -3143,7 +3162,7 @@ select.round {
   width: 2.4rem;
   height: 2.4rem;
   margin-top: -1.2rem;
-  background: url("../../resources/images/common/bg_arrow_right.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_arrow_gray.svg") no-repeat 0 0;
 }
 .service_area .mb_info .member_benefits .link > a.education::before {
   top: 0;
@@ -3384,7 +3403,7 @@ select.round {
   right: 2.4rem;
   width: 2.4rem;
   height: 2.4rem;
-  background: url("../../resources/images/common/bg_arrow_right.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/bg_arrow_gray.svg") no-repeat 0 0;
 }
 @media screen and (max-width: 320px) {
   .post_list .data_group::before {
@@ -3760,8 +3779,8 @@ select.round {
   align-items: center;
   position: relative;
   width: calc(25% - var(--gap-24));
-  height: 5rem;
-  padding: 0 var(--gap-16);
+  min-height: 5rem;
+  padding: var(--gap-12) var(--gap-16);
   color: #131416;
   font-weight: var(--font-bold);
   text-align: center;
@@ -3778,11 +3797,19 @@ select.round {
   width: 2.4rem;
   height: 2.4rem;
   margin-top: -1.2rem;
-  background: url("../../resources/images/common/bg_arrow_right.png") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_arrow_gray2.svg") no-repeat 0 0;
   background-size: contain;
 }
 .license_process > ol > li:last-child:after {
   display: var(--hide);
+}
+.license_process > ol > li.fs14 {
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 1024px) {
+  .license_process > ol > li.fs14 {
+    font-size: var(--font-size-md);
+  }
 }
 @media screen and (max-width: 1024px) {
   .license_process {

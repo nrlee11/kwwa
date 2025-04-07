@@ -176,7 +176,7 @@
                     right: 0;
                     width: 2.4rem;
                     height: 2.4rem;
-                    background: url($url-img-common + "bg_arrow_right.svg") no-repeat 0 0;
+                    background: url($url-img-icon + "ico_arrow_gray.svg") no-repeat 0 0;
                     background-size: contain;
                 }
             }
@@ -231,7 +231,7 @@
                         width: 2.4rem;
                         height: 2.4rem;
                         margin-top: -1.2rem;
-                        background: url($url-img-common + "bg_arrow_right.svg") no-repeat 0 0;
+                        background: url($url-img-icon + "ico_arrow_gray.svg") no-repeat 0 0;
                     }
                     &.education {
                         &::before {
@@ -444,7 +444,7 @@
             right: 2.4rem;
             width: 2.4rem;
             height: 2.4rem;
-            background: url($url-img-common + "bg_arrow_right.svg") no-repeat 0 0;
+            background: url($url-img-icon + "bg_arrow_gray.svg") no-repeat 0 0;
             @include xs-mobile {
                 display: var(--hide);
             }

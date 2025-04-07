@@ -49,11 +49,13 @@
                         <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">자격조회</h3>
-                                <div class="desc">자격증 발급신청을 위해서는 자격요건 확인을 위한 서류가 첨부되어야 하므로 서류준비가 되신 경우에 신청해 주시기 바랍니다. 단 서류첨부 없이도 신청은 가능하며 추후에 서류를 추가로 제출할 수 있습니다. 다만 이 경우 발급시기가 지연될 수 있습니다.</div>
+                                <div class="desc">자격증 발급신청을 위해서는 자격요건 확인을 위한 서류가 첨부되어야 하므로 서류준비가 되신 경우에 신청해 주시기 바랍니다.</div>
                             </div>
 
                             <div class="page_btn_area">
-                                <button type="button" class="btn_secondary_lg">자격증 발급 가이드라인<span class="ico_outlink"></span></button>
+                                <div class="lside">
+                                    <button type="button" class="btn_secondary_lg">자격증 발급 가이드라인<span class="ico_outlink"></span></button>
+                                </div>
                             </div>
                         </div>
                         <!--// section(e) -->
@@ -64,80 +66,86 @@
                             <div class="board_area">
                                 <!-- board_info -->
                                 <div class="board_info">
-                                    <div>상수도관망시설운영관리사 자격조회 내역</div>
+                                    <div>상수도관망시설운영관리사 자격증 발급 신청 내역</div>
                                 </div>
                                 <!--// board_info -->
+
                                 <!-- board_view -->
-                                <table class="tbl react">
+                                <table class="tbl">
                                     <caption class="hidden">
-                                        이수증 번호, 자격증 번호, 상태, 급수, 자격취득일, 신청 정보 제공
+                                        급수, 이수증 번호, 상태, 설명, 신청완료일, 신청 정보 제공
                                     </caption>
-                                    <!-- <colgroup>
-                                        <col style="width: 33.33%" span="2" />
-                                        <col />
-                                    </colgroup> -->
+                                    <colgroup>
+                                        <col style="width: 10%" />
+                                        <col style="width: 17%" />
+                                        <col style="width: 15%" />
+                                        <col style="width: 20%" />
+                                        <col style="width: 15%" />
+                                        <col style="width: 23%" />
+                                    </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col">이수증 번호</th>
-                                            <th scope="col">자격증 번호</th>
-                                            <th scope="col">상태</th>
                                             <th scope="col">급수</th>
-                                            <th scope="col">자격취득일</th>
+                                            <th scope="col">이수증 번호</th>
+                                            <th scope="col">상태</th>
+                                            <th scope="col">설명</th>
+                                            <th scope="col">신청완료일</th>
                                             <th scope="col">신청</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td data-cell-header="이수증 번호"><div>-</div></td>
-                                            <td data-cell-header="자격증 번호"><div>-</div></td>
-                                            <td data-cell-header="상태"><div>신청가능</div></td>
                                             <td data-cell-header="급수"><div>1급</div></td>
-                                            <td data-cell-header="자격취득일"><div>2020.11.15</div></td>
+                                            <td data-cell-header="이수증 번호"><div>CER1-25-0001</div></td>
+                                            <td data-cell-header="상태"><div>신청가능</div></td>
+                                            <td data-cell-header="설명"><div></div></td>
+                                            <td data-cell-header="신청완료일"><div>-</div></td>
                                             <td data-cell-header="신청">
-                                                <div><button type="button" class="btn_underline">이수증신청</button></div>
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">발급 신청<span class="ico_bluearrow2"></span></button>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-cell-header="이수증 번호"><div>A-24210001</div></td>
-                                            <td data-cell-header="자격증 번호"><div>24210001</div></td>
-                                            <td data-cell-header="상태"><div>심사중</div></td>
-                                            <td data-cell-header="급수"><div>2급</div></td>
-                                            <td data-cell-header="자격취득일"><div>2025.02.24 신청</div></td>
-                                            <td data-cell-header="신청"><div>자격요건확인</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-cell-header="이수증 번호"><div>A-24210001</div></td>
-                                            <td data-cell-header="자격증 번호"><div>24210001</div></td>
-                                            <td data-cell-header="상태"><div>취득</div></td>
-                                            <td data-cell-header="급수"><div>2급</div></td>
-                                            <td data-cell-header="자격취득일"><div>2025.02.24 신청</div></td>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="이수증 번호"><div>CER1-25-0001</div></td>
+                                            <td data-cell-header="상태"><div>신청 중</div></td>
+                                            <td data-cell-header="설명"><div>임시저장 상태</div></td>
+                                            <td data-cell-header="신청완료일"><div></div></td>
                                             <td data-cell-header="신청">
-                                                <div><button type="button" class="btn_underline">발급신청</button></div>
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">발급 신청 작성중<span class="ico_bluearrow2"></span></button>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-cell-header="이수증 번호"><div>A-24210001</div></td>
-                                            <td data-cell-header="자격증 번호"><div>24210001</div></td>
-                                            <td data-cell-header="상태"><div>정상</div></td>
-                                            <td data-cell-header="급수"><div>2급</div></td>
-                                            <td data-cell-header="자격취득일"><div>2025.02.24 신청</div></td>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="이수증 번호"><div>CER1-25-0001</div></td>
+                                            <td data-cell-header="상태"><div>접수(결제 전)</div></td>
+                                            <td data-cell-header="설명"><div>수수료 결제 전</div></td>
+                                            <td data-cell-header="신청완료일"><div></div></td>
                                             <td data-cell-header="신청">
-                                                <div><button type="button" class="btn_underline">재발급신청</button></div>
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">수수료 결제<span class="ico_bluearrow2"></span></button>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-cell-header="이수증 번호"><div>A-24210001</div></td>
-                                            <td data-cell-header="자격증 번호"><div>24210001</div></td>
-                                            <td data-cell-header="상태"><div>재발급</div></td>
-                                            <td data-cell-header="급수"><div>2급</div></td>
-                                            <td data-cell-header="자격취득일"><div>2025.02.24 신청</div></td>
-                                            <td data-cell-header="신청"><div>자격증 제작</div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="nodata" colspan="6">조회된 DATA가 없습니다.</td>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="이수증 번호"><div>CER1-25-0001</div></td>
+                                            <td data-cell-header="상태"><div>신청완료</div></td>
+                                            <td data-cell-header="설명"><div>등기 수령 후 심사</div></td>
+                                            <td data-cell-header="신청완료일"><div>2025-02-24</div></td>
+                                            <td data-cell-header="신청">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">발급현황 조회<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
+
+                                <div class="nodata">조회된 DATA가 없습니다.</div>
                                 <!--// board_view -->
                             </div>
                             <!--// board(e) -->

@@ -202,8 +202,8 @@
             align-items: center;
             position: relative;
             width: calc(25% - var(--gap-24));
-            height: 5rem;
-            padding: 0 var(--gap-16);
+            min-height: 5rem;
+            padding: var(--gap-12) var(--gap-16);
             color: #131416;
             font-weight: var(--font-bold);
             text-align: center;
@@ -216,11 +216,17 @@
                 width: 2.4rem;
                 height: 2.4rem;
                 margin-top: -1.2rem;
-                background: url($url-img-common + "bg_arrow_right.png") no-repeat 0 0;
+                background: url($url-img-icon + "ico_arrow_gray2.svg") no-repeat 0 0;
                 background-size: contain;
             }
             &:last-child:after {
                 display: var(--hide);
+            }
+            &.fs14 {
+                font-size: 1.4rem;
+                @include mobile {
+                    font-size: var(--font-size-md);
+                }
             }
         }
     }
