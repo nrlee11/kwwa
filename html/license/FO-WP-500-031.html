@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>자격증 발급신청 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="../include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- [include] aside(s) : 확인용 -->
+                    <div data-include-file="../include/aside.html" class="includeJs"></div>
+                    <!--// [include] aside(e) : 확인용 -->
+
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- breadcrumb(s) -->
+                        <nav class="breadcrumb_wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="javascript:;">홈</a></li>
+                                <li><a href="javascript:;">자격증발급</a></li>
+                                <li><span>자격증 발급신청</span></li>
+                            </ol>
+                        </nav>
+                        <!--// breadcrumb(e) -->
+
+                        <!-- page_title(s) -->
+                        <div class="page_title">
+                            <h2 class="tit">자격증 발급신청</h2>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <!-- progress(s) -->
+                            <div class="progress-bar">
+                                <div class="on">
+                                    <span class="step">
+                                        <span>1단계</span>
+                                    </span>
+                                    <strong>신청서 작성</strong>
+                                    <span class="hidden">총 3단계 중 1단계 신청서 작성</span>
+                                </div>
+                                <div>
+                                    <span class="step">
+                                        <span>2단계</span>
+                                    </span>
+                                    <strong>신청정보확인</strong>
+                                </div>
+                                <div>
+                                    <span class="step">
+                                        <span>3단계</span>
+                                    </span>
+                                    <strong>수수료 결제</strong>
+                                </div>
+                            </div>
+                            <!--// progress(e) -->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">신청서 작성</h3>
+                                <div class="desc">자격증 발급신청을 위해서는 자격요건 확인을 위한 서류가 첨부되어야 하므로 서류준비가 되신 경우에 신청해 주시기 바랍니다.</div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">자격증정보</h3>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl row size110">
+                                    <caption class="hidden">
+                                        자격명, 급수 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col style="width: 29.1rem" />
+                                        <col style="width: 15.3rem" />
+                                        <col style="width: 29.1rem" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">자격명</th>
+                                            <td data-cell-header="자격명"><div>상수도관망시설운영관리사</div></td>
+                                            <th scope="row">급수</th>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">신청자 정보</h3>
+                            </div>
+
+                            <div class="ly_half">
+                                <div style="width: 210px">
+                                    <style>
+                                        .preview_file_set {
+                                            position: relative;
+                                        }
+                                        .preview_file_set input[type="file"] {
+                                            width: 10rem;
+                                        }
+                                        .preview_file_set label {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 19.4rem;
+                                            height: 21.7rem;
+                                            text-align: center;
+                                            background-color: #e6e8ea;
+                                        }
+                                        .preview_file_set #preview {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+                                    </style>
+                                    <div class="preview_file_set">
+                                        <strong>자격증 발급용 사진</strong>
+                                        <div>
+                                            <input type="file" id="imgfile" onchange="readURL(this);" />
+                                            <label for="imgfile">증명사진을 등록해<br />주세요</label>
+                                            <img id="preview" />
+                                            <script>
+                                                function readURL(input) {
+                                                    if (input.files && input.files[0]) {
+                                                        var reader = new FileReader();
+                                                        reader.onload = function (e) {
+                                                            document.getElementById("preview").src = e.target.result;
+                                                        };
+                                                        reader.readAsDataURL(input.files[0]);
+                                                    } else {
+                                                        document.getElementById("preview").src = "";
+                                                    }
+                                                }
+                                            </script>
+                                        </div>
+                                        <!-- <div>
+                                            <ul class="list_dash">
+                                                <li>6개월 이내에 촬영한 사진</li>
+                                                <li>사진은 3X4(반명함), 3.5X4.5(증명사진), 5X7(명함판) 중 택1</li>
+                                                <li>150DPI이상의 고화질 파일</li>
+                                                <li>파일포멧 : JPG, PNG</li>
+                                                <li>파일용량 : 10MB 미만</li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- form-->
+                                    <div class="form_section">
+                                        <!-- write -->
+                                        <div class="form_list table">
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userName">이름</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <input type="text" value="홍길동" id="userName" readonly />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="idNumber">주민등록번호</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="idcard_set">
+                                                                <div class="inp_set">
+                                                                    <div class="inp size_289">
+                                                                        <input type="tel" value="900105" id="idNumber" readonly />
+                                                                    </div>
+                                                                    <span class="txt_dash">-</span>
+                                                                </div>
+                                                                <div class="inp size_289">
+                                                                    <input type="password" value="0000000" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="address">주소</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <div class="inp size_130">
+                                                                        <input type="tel" value="07379" id="address" readonly />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <button type="button" class="btn_primary_lg">우편번호 검색</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell no-line">
+                                                        <div class="inp">
+                                                            <input type="text" value="서울특별시 영등포구 대림로 244" readonly />
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell no-line">
+                                                        <div class="inp">
+                                                            <input type="text" value="2F 201호" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="cellPhone">휴대폰 번호</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="tel" value="010-1234-5678" id="cellPhone" readonly />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="phoneNum">전화번호</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="phone_set">
+                                                                <div class="inp_select">
+                                                                    <select title="전화번호 국번 선택" id="phoneNum">
+                                                                        <option value="">선택</option>
+                                                                        <option value="02">서울 (02)</option>
+                                                                        <option value="031">경기 (031)</option>
+                                                                        <option value="032">인천 (032)</option>
+                                                                        <option value="033">강원 (033)</option>
+                                                                        <option value="041">충남 (041)</option>
+                                                                        <option value="042">대전 (042)</option>
+                                                                        <option value="043">충북 (043)</option>
+                                                                        <option value="044">세종 (044)</option>
+                                                                        <option value="051">부산 (051)</option>
+                                                                        <option value="052">울산 (052)</option>
+                                                                        <option value="053">대구 (053)</option>
+                                                                        <option value="054">경북 (054)</option>
+                                                                        <option value="055">경남 (055)</option>
+                                                                        <option value="061">전남 (061)</option>
+                                                                        <option value="062">광주 (062)</option>
+                                                                        <option value="063">전북 (063)</option>
+                                                                        <option value="064">제주 (064)</option>
+                                                                        <option value="070">인터넷전화 (070)</option>
+                                                                        <option value="050">평생전화 (050)</option>
+                                                                    </select>
+                                                                    <span class="txt_dash">-</span>
+                                                                </div>
+                                                                <div class="inp_set">
+                                                                    <div class="inp">
+                                                                        <input type="tel" value="1234" title="전화번호 앞자리 입력" />
+                                                                    </div>
+                                                                    <span class="txt_dash">-</span>
+                                                                </div>
+                                                                <div class="inp_set">
+                                                                    <div class="inp">
+                                                                        <input type="tel" value="1234" title="전화번호 뒷자리 입력" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// write -->
+                                    </div>
+                                    <!--// form-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="../include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+    </body>
+</html>
