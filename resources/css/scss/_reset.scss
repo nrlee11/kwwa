@@ -26,6 +26,7 @@ html {
     font-size: var(--font-size-base);
 }
 body {
+    -webkit-text-size-adjust: none;
     font-size: var(--font-size-md);
 }
 div,

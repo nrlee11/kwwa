@@ -169,8 +169,8 @@ $(function () {
             const left = ($(window).width() - $(this).width()) / 2;
             const top = ($(window).height() - $(this).height()) / 2;
 
-            if (top < 0) top = 0;
-            if (left < 0) left = 0;
+            //if (top < 0) top = 0;
+            //if (left < 0) left = 0;
 
             $(this).css({ left: left, top: top });
         });
@@ -180,8 +180,8 @@ $(function () {
                 const left = ($(window).width() - $(this).width()) / 2;
                 const top = ($(window).height() - $(this).height()) / 2;
 
-                if (top < 0) top = 0;
-                if (left < 0) left = 0;
+                //if (top < 0) top = 0;
+                //if (left < 0) left = 0;
 
                 $(this).css({ left: left, top: top });
             });

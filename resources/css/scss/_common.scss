@@ -104,7 +104,13 @@
         color: #de3412;
     }
     &_green {
-        color: #228738;
+        color: #3fa654;
+    }
+    &_navy {
+        color: #052561;
+    }
+    &_navy1 {
+        color: #083891;
     }
     &_underline {
         text-decoration: underline;
@@ -250,6 +256,7 @@
             border-radius: 50%;
         }
         &.completion {
+            color: var(--color-darkgray);
             .step {
                 border-color: var(--color-darkgray);
             }
@@ -270,6 +277,12 @@
             }
         }
         &.on {
+            color: var(--color-blue);
+            .step {
+                span {
+                    color: var(--color-blue);
+                }
+            }
             &::before {
                 background-color: var(--color-blue);
                 border: 0;
@@ -296,7 +309,7 @@
     }
     strong {
         display: block;
-        margin: 0.2rem 0 0 -1rem;
+        margin: 0.2rem 0 0 -1.2rem;
         font-size: 2rem;
     }
     .hidden {
@@ -330,13 +343,17 @@
             display: var(--show);
         }
     }
+    @include xs-mobile {
+        width: 16rem;
+    }
 }
 
 // ico
 [class^="ico_"] {
-    &[class*="_link"],
+    &[class*="_pop"],
     &[class*="_outlink"],
     &[class*="_download"],
+    &[class*="_upload"],
     &[class*="_arrow"],
     &[class*="_bluearrow"],
     &[class*="_mark"],
@@ -351,16 +368,19 @@
         vertical-align: var(--align-m);
     }
     // 변수처리할것 (mixin btn-bgtype 참고)
-    &[class*="_link"] {
+    &[class*="_pop"] {
         width: 1rem;
         height: 1rem;
-        background: url($url-img-icon + "ico_link.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_pop.svg") no-repeat 0 0;
     }
     &[class*="_outlink"] {
         background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
     }
     &[class*="_download"] {
         background: url($url-img-icon + "ico_download.svg") no-repeat 0 0;
+    }
+    &[class*="_upload"] {
+        background: url($url-img-icon + "ico_upload.svg") no-repeat 0 0;
     }
     &[class*="_arrow"] {
         width: 1.6rem;
@@ -396,7 +416,7 @@
         &:has([class*="_warning"]) {
             padding-left: 3rem;
             [class^="ico_"] {
-                margin-top: -1.3rem;
+                top: 0;
             }
         }
     }
@@ -623,6 +643,9 @@ select {
     width: 11.3rem;
     height: 15.1rem;
     margin: 0 auto;
+    color: var(--color-white);
+    background-color: #b1b8be;
+    text-align: center;
     input[type="file"] {
         position: absolute;
         width: 0;
@@ -639,7 +662,6 @@ select {
         padding: var(--gap-7) var(--gap-16);
         color: #6d7882;
         background-color: #e6e8ea;
-        text-align: center;
         &::after {
             content: "";
             position: absolute;
@@ -661,14 +683,20 @@ select {
         }
         .btn_reset {
             position: absolute;
-            top: -1rem;
-            right: -1rem;
+            top: -0.5rem;
+            right: -0.5rem;
             display: var(--hide);
         }
         &:has(img) {
             .btn_reset {
                 display: var(--show);
             }
+        }
+        .msg {
+            @include flex-aligncenter;
+            justify-content: center;
+            width: 11.3rem;
+            height: 15.1rem;
         }
     }
 }
@@ -1142,6 +1170,9 @@ select {
                 &.size110 [data-cell-header]:before {
                     width: 11rem;
                 }
+                &.size120 [data-cell-header]:before {
+                    width: 12rem;
+                }
                 &.size130 [data-cell-header]:before {
                     width: 13rem;
                 }
@@ -1167,6 +1198,7 @@ select {
     [class^="board_desc"] {
         &[class*="_top"] {
             @include flex-between;
+            align-items: flex-end;
             width: 100%;
             margin-bottom: var(--gap-13);
             > div {
@@ -1497,8 +1529,11 @@ select {
         }
     }
     .rside {
+        flex: 1;
         .form_list {
-            border-top: 0.1rem solid #cdd1d5;
+            @include mobile {
+                border-top: 0.1rem solid #cdd1d5;
+            }
         }
     }
 }
@@ -1519,9 +1554,10 @@ select {
     }
     &_dot {
         > li {
-            padding-left: var(--gap-15);
+            padding-left: var(--gap-20);
             &::before {
                 top: 1rem;
+                left: 0.4rem;
                 width: 0.4rem;
                 height: 0.4rem;
                 border-radius: 50%;
@@ -1611,6 +1647,70 @@ select {
     }
 }
 
+// 결제 방법 선택
+.payment_option {
+    @include flex-between;
+    gap: 0 5.8rem;
+    @include mobile {
+        gap: 0 1.2rem;
+    }
+    @include xs-mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type="radio"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        border: 0;
+        + label {
+            position: relative;
+            display: block;
+            width: 13rem;
+            height: 16.6rem;
+            padding-top: 14rem;
+            text-align: center;
+            color: var(--color-black);
+            @include mobile {
+                width: 9rem;
+                height: 12.3rem;
+                padding-top: 10rem;
+                font-size: 1.4rem;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 13rem;
+                height: 13rem;
+                @include mobile {
+                    width: 9rem;
+                    height: 9rem;
+                    background-size: 9rem !important;
+                }
+            }
+            @each $payment-bgtype in (creditcard, wiretransfer, bankaccount) {
+                &.#{$payment-bgtype}::before {
+                    background: url($url-img-common + "bg_" + $payment-bgtype + ".svg") no-repeat 0 0;
+                }
+            }
+        }
+        &:checked {
+            + label {
+                color: var(--color-blue);
+                font-weight: var(--font-semibold);
+                @each $payment-bgtype in (creditcard, wiretransfer, bankaccount) {
+                    &.#{$payment-bgtype}::before {
+                        background: url($url-img-common + "bg_" + $payment-bgtype + "_on" + ".svg") no-repeat 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // layer
 .layerDim {
     display: var(--hide);
@@ -1631,6 +1731,12 @@ select {
     @include mobile {
         width: calc(100% - 4rem) !important;
         min-width: 24.8rem;
+        // &.alertPopup {
+        //     position: absolute;
+        //     @include xsh-mobile {
+        //         top: 2rem !important;
+        //     }
+        // }
     }
     &:focus {
         outline: var(--color-white) dotted 0.1rem;
@@ -1820,6 +1926,43 @@ select {
                     margin-top: var(--gap-20);
                 }
             }
+        }
+    }
+    .progress-bar {
+        margin-bottom: var(--gap-20);
+        > div {
+            &::before {
+                width: 2rem;
+                height: 2rem;
+            }
+            &.completion {
+                &::after {
+                    top: 0.5rem;
+                    left: -0.7rem;
+                }
+            }
+            &.on {
+                color: var(--color-blue);
+                .step {
+                    span {
+                        color: var(--color-blue);
+                    }
+                }
+                &::before {
+                    background-color: var(--color-blue);
+                    border: 0;
+                }
+                &::after {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
+        }
+        .step {
+            font-size: var(--font-size-xsm);
+        }
+        strong {
+            font-size: var(--font-size-sm);
         }
     }
 }

@@ -21,12 +21,12 @@
 
             <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
-                    <button type="button" class="btn_primary_lg" id="alert1">기본증명서 안내</button>
+                    <button type="button" class="btn_primary_lg" id="basicguide">기본증명서 안내</button>
                 </div>
             </div>
 
             <!-- Layer : 기본증명서 안내 -->
-            <div class="layerFix fullPopup" id="alertPop1" style="display: none" tabindex="0">
+            <div class="layerFix fullPopup" id="basicguidePop" style="display: none" tabindex="0">
                 <div class="layer_wrap">
                     <div class="head">
                         <strong class="tit">상하수도 국가전문자격시스템</strong>
@@ -66,13 +66,13 @@
         <script type="text/javascript">
             $(function () {
                 // Layer : 기본증명서 안내
-                $("#alert1").click(function (e) {
+                $("#basicguide").click(function (e) {
                     $("html").addClass("layerOpen");
                     $(".layerDim").show();
-                    $("#alertPop1").show().focus();
+                    $("#basicguidePop").show().focus();
                 });
-                $("#alertPop1 .layer_close").click(function (e) {
-                    $("#alert1").focus(); // 접근성
+                $("#basicguidePop .layer_close").click(function (e) {
+                    $("#basicguide").focus(); // 접근성
                 });
             });
         </script>

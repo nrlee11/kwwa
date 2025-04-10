@@ -174,19 +174,19 @@
     background-color: #eaf6ec;
     border-radius: 0.8rem;
     &.positive {
-        background: #eaf6ec url($url-img-icon + "ico_positive.svg") no-repeat 1.6rem;
+        background: #eaf6ec url($url-img-icon + "ico_positive.svg") no-repeat 1.6rem 1.6rem;
     }
     &.negative {
         border-color: #fcdfd9;
-        background: #fdefec url($url-img-icon + "ico_negative.svg") no-repeat 1.6rem;
+        background: #fdefec url($url-img-icon + "ico_negative.svg") no-repeat 1.6rem 1.6rem;
     }
     &.ongoing {
         border-color: #d3ebfd;
-        background: #e7f4fe url($url-img-icon + "ico_mark.svg") no-repeat 1.6rem;
+        background: #e7f4fe url($url-img-icon + "ico_mark.svg") no-repeat 1.6rem 1.6rem;
     }
     &.warning {
         border-color: #ffe0a3;
-        background: #fff3db url($url-img-icon + "ico_warning.svg") no-repeat 1.6rem;
+        background: #fff3db url($url-img-icon + "ico_warning.svg") no-repeat 1.6rem 1.6rem;
     }
 }
 

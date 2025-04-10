@@ -14,7 +14,7 @@
         height: 3rem;
         border-radius: 5rem;
         font-size: var(--font-size-sm);
-        font-weight: var(--font-semibold);
+        font-weight: var(--font-medium);
         line-height: 3rem;
     }
     &[class*="_md"] {
@@ -74,15 +74,10 @@
             border-radius: 0.8rem;
         }
     }
-    &[class*="_red"] {
-        color: #d63d4a;
-        border: $border #d63d4a;
-        background-color: #fdefec;
-    }
+    &[class*="_secondary"],
     &[class*="_outline"],
     &[class*="_border"],
-    &[class*="_navyborder"],
-    &[class*="_red"] {
+    &[class*="_navyborder"] {
         &[class*="_sm"] {
             line-height: 2.8rem;
         }
@@ -99,16 +94,20 @@
             line-height: 6.8rem;
         }
     }
-    &[class*="_download"] {
-        color: var(--color-warmblue);
-        text-decoration: underline;
-    }
+    &[class*="_download"],
+    &[class*="_upload"],
+    &[class*="_pop"],
     &[class*="_link"] {
         color: var(--color-warmblue);
         text-decoration: underline;
-        &.line {
-            text-decoration: underline;
+        text-align: left;
+        &.center {
+            text-align: center;
         }
+    }
+    &[class*="_download"],
+    &[class*="_upload"] {
+        text-decoration: none;
     }
     &:disabled {
         opacity: 0.3;
@@ -118,11 +117,11 @@
         min-width: auto;
         width: 100%;
     }
-    .ico_outlink {
-        margin-left: var(--gap-4);
-    }
+    // .ico_outlink {
+    //     margin-left: var(--gap-4);
+    // }
     [class^="ico_"] {
-        margin: 0 0 0 var(--gap-7);
+        margin: 0 0 0 var(--gap-4);
     }
 }
 
@@ -135,25 +134,32 @@
         &:not(.lside) {
             text-align: right;
         }
-    }
-
-    @include mobile {
-        button {
-            width: 100%;
-        }
-        .lside > button,
-        .lside > a {
-            border-radius: 0.6rem 0 0 0.6rem;
-        }
-        .rside > button,
-        .rside > a {
-            border-radius: 0 0.6rem 0.6rem 0;
-        }
-        &:not(:has(.lside)) {
-            button,
-            a {
-                border-radius: 0.6rem;
+        &:not(.lside):has(.box) {
+            @include flex-aligncenter;
+            justify-content: flex-end;
+            gap: 0 1.5rem;
+            @include mobile {
+                justify-content: space-between;
+                width: 100%;
+                > .box {
+                    flex: 1;
+                    [class^="btn_"] {
+                        width: 100%;
+                        min-width: auto;
+                    }
+                }
             }
+        }
+    }
+    @include mobile {
+        gap: 0 1.5rem;
+        [class^="btn_"] {
+            width: 100%;
+            min-width: auto;
+        }
+        > div {
+            flex: 1;
+            margin: 0;
         }
     }
 }
@@ -177,7 +183,6 @@
         }
     }
     @include mobile {
-        // margin-top: var(--gap-30);
         gap: 0 1.5rem;
         [class^="btn_"] {
             width: 100%;
@@ -187,27 +192,6 @@
             flex: 1;
             margin: 0;
         }
-        // &.full {
-        //     width: 100%;
-        //     [class^="btn_"] {
-        //         width: 100%;
-        //         min-width: auto;
-        //     }
-        // }
-        // .lside > button,
-        // .lside > a {
-        //     border-radius: 0.6rem 0 0 0.6rem;
-        // }
-        // .rside > button,
-        // .rside > a {
-        //     border-radius: 0 0.6rem 0.6rem 0;
-        // }
-        // &:not(:has(.lside)) {
-        //     button,
-        //     a {
-        //         border-radius: 0.6rem;
-        //     }
-        // }
     }
 }
 

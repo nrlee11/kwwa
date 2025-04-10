@@ -123,7 +123,7 @@
                                 <h3 class="tit">신청자 정보</h3>
                                 <div class="desc">
                                     회원가입시 인증받은 정보입니다. 개인정보는 회원정보관리에서 변경 가능합니다.
-                                    <a href="javascript:;" class="btn_link">정보변경<span class="ico_link"></span></a>
+                                    <a href="javascript:;" class="btn_link">정보변경<span class="ico_bluearrow"></span></a>
                                 </div>
                             </div>
 
@@ -135,7 +135,7 @@
                                             <input type="file" id="imgfile" onchange="setThumbnail(event);" />
                                             <label for="imgfile">증명사진을<br />등록해<br />주세요</label>
                                             <div class="img_preview">
-                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                <button type="button" class="btn_reset"><span class="hidden">자격증 발급용 사진 삭제</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@
                                                         <div class="form_item">
                                                             <div class="inp size_289">
                                                                 <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                <input type="text" value="홍길동" id="userName" readonly />
+                                                                <input type="text" value="홍길동" id="userName" autocomplete="off" readonly />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -183,12 +183,12 @@
                                                             <div class="idcard_set">
                                                                 <div class="inp_set">
                                                                     <div class="inp">
-                                                                        <input type="tel" value="900105" id="idNumber" readonly />
+                                                                        <input type="tel" value="900105" id="idNumber" autocomplete="off" readonly />
                                                                     </div>
                                                                     <span class="txt_dash">-</span>
                                                                 </div>
                                                                 <div class="inp size_289">
-                                                                    <input type="password" value="0000000" />
+                                                                    <input type="password" value="0000000" autocomplete="off" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -206,7 +206,7 @@
                                                                 <div class="group_box">
                                                                     <div class="box">
                                                                         <div class="inp size_130">
-                                                                            <input type="tel" value="07379" id="address" readonly />
+                                                                            <input type="tel" value="07379" id="address" autocomplete="off" readonly />
                                                                         </div>
                                                                     </div>
                                                                     <div class="box">
@@ -214,10 +214,10 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="inp">
-                                                                    <input type="text" value="서울특별시 영등포구 대림로 244" readonly />
+                                                                    <input type="text" value="서울특별시 영등포구 대림로 244" autocomplete="off" readonly />
                                                                 </div>
                                                                 <div class="inp">
-                                                                    <input type="text" value="2F 201호" />
+                                                                    <input type="text" value="2F 201호" autocomplete="off" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -232,7 +232,7 @@
                                                     <div class="cell">
                                                         <div class="form_item">
                                                             <div class="inp size_289">
-                                                                <input type="tel" value="010-1234-5678" id="cellPhone" readonly />
+                                                                <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -273,13 +273,13 @@
                                                                 </div>
                                                                 <div class="inp_set">
                                                                     <div class="inp">
-                                                                        <input type="tel" value="1234" title="전화번호 앞자리 입력" />
+                                                                        <input type="tel" value="1234" title="전화번호 앞자리 입력" autocomplete="off" />
                                                                     </div>
                                                                     <span class="txt_dash">-</span>
                                                                 </div>
                                                                 <div class="inp_set">
                                                                     <div class="inp">
-                                                                        <input type="tel" value="1234" title="전화번호 뒷자리 입력" />
+                                                                        <input type="tel" value="1234" title="전화번호 뒷자리 입력" autocomplete="off" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -323,7 +323,7 @@
                                                         <div class="group_box">
                                                             <div class="box">
                                                                 <div class="inp size_130">
-                                                                    <input type="tel" placeholder="우편번호" id="address1" readonly />
+                                                                    <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" readonly />
                                                                 </div>
                                                             </div>
                                                             <div class="box">
@@ -331,10 +331,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="inp">
-                                                            <input type="text" placeholder="배송지 주소" readonly />
+                                                            <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
                                                         </div>
                                                         <div class="inp">
-                                                            <input type="text" placeholder="상세주소 입력" />
+                                                            <input type="text" placeholder="상세주소 입력" autocomplete="off" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -361,7 +361,7 @@
                             <!-- form-->
                             <div class="form_section">
                                 <div class="form_desc_top">
-                                    <button type="button" class="btn_link">자격요건안내<span class="ico_link"></span></button>
+                                    <button type="button" class="btn_pop">자격요건 안내<span class="ico_pop"></span></button>
                                 </div>
 
                                 <!-- write -->
@@ -442,7 +442,7 @@
                                                         <div class="box">
                                                             <div class="file_set">
                                                                 <div class="inp">
-                                                                    <input type="text" placeholder="파일을 선택하세요" />
+                                                                    <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
                                                                     <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                                 </div>
                                                                 <label for="file1">파일찾기</label>
@@ -450,7 +450,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="box">
-                                                            <button type="button" class="btn_link" id="alert1">기본증명서 안내<span class="ico_link"></span></button>
+                                                            <button type="button" class="btn_pop" id="basicguide">기본증명서 안내<span class="ico_pop"></span></button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -538,12 +538,12 @@
                                                     <div class="group_box">
                                                         <div class="box">
                                                             <div class="inp size_219">
-                                                                <input type="text" id="school" placeholder="학교" />
+                                                                <input type="text" id="school" placeholder="학교" autocomplete="off" />
                                                             </div>
                                                         </div>
                                                         <div class="box">
                                                             <div class="inp size_219">
-                                                                <input type="text" placeholder="전공학과" />
+                                                                <input type="text" placeholder="전공학과" autocomplete="off" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -562,7 +562,7 @@
                                                         <div class="box">
                                                             <div class="file_set">
                                                                 <div class="inp">
-                                                                    <input type="text" placeholder="파일을 선택하세요" />
+                                                                    <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
                                                                     <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                                 </div>
                                                                 <label for="file2">파일찾기</label>
@@ -570,7 +570,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="box">
-                                                            <button type="button" class="btn_link" id="alert2">학력증명서류안내<span class="ico_link"></span></button>
+                                                            <button type="button" class="btn_pop" id="alert2">학력증명서류안내<span class="ico_pop"></span></button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -621,13 +621,13 @@
                                                             <div class="career_set">
                                                                 <div class="inp_set">
                                                                     <div class="inp size_100">
-                                                                        <input type="tel" value="50" id="work1_1" readonly />
+                                                                        <input type="tel" value="50" id="work1_1" autocomplete="off" readonly />
                                                                     </div>
                                                                     <span class="txt">년</span>
                                                                 </div>
                                                                 <div class="inp_set">
                                                                     <div class="inp size_100">
-                                                                        <input type="tel" value="50" readonly />
+                                                                        <input type="tel" value="50" autocomplete="off" readonly />
                                                                     </div>
                                                                     <span class="txt">개월</span>
                                                                 </div>
@@ -652,17 +652,17 @@
                                                         <div class="box">
                                                             <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
                                                             <div class="inp size_219">
-                                                                <input type="text" value="" placeholder="근무지 입력" id="work1_2" />
+                                                                <input type="text" value="" placeholder="근무지 입력" id="work1_2" autocomplete="off" />
                                                             </div>
                                                         </div>
                                                         <div class="box">
                                                             <div class="calendar_set">
                                                                 <div class="inp_set">
-                                                                    <input type="text" value="" placeholder="시작일" id="startDate" />
+                                                                    <input type="text" value="" placeholder="시작일" id="startDate" autocomplete="off" />
                                                                     <span class="txt_dash">~</span>
                                                                 </div>
                                                                 <div class="inp">
-                                                                    <input type="text" value="" placeholder="종료일" id="endDate" />
+                                                                    <input type="text" value="" placeholder="종료일" id="endDate" autocomplete="off" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -686,7 +686,7 @@
                                                 <div class="form_item">
                                                     <div class="file_set">
                                                         <div class="inp">
-                                                            <input type="text" placeholder="파일을 선택하세요" />
+                                                            <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
                                                             <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                         </div>
                                                         <label for="file3">파일찾기</label>
@@ -718,17 +718,17 @@
                                                         <div class="box">
                                                             <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
                                                             <div class="inp size_219">
-                                                                <input type="text" value="" placeholder="근무지 입력" id="work2_2" />
+                                                                <input type="text" value="" placeholder="근무지 입력" id="work2_2" autocomplete="off" />
                                                             </div>
                                                         </div>
                                                         <div class="box">
                                                             <div class="calendar_set">
                                                                 <div class="inp_set">
-                                                                    <input type="text" value="" placeholder="시작일" id="startDate1" />
+                                                                    <input type="text" value="" placeholder="시작일" id="startDate1" autocomplete="off" />
                                                                     <span class="txt_dash">~</span>
                                                                 </div>
                                                                 <div class="inp">
-                                                                    <input type="text" value="" placeholder="종료일" id="endDate1" />
+                                                                    <input type="text" value="" placeholder="종료일" id="endDate1" autocomplete="off" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -752,7 +752,7 @@
                                                 <div class="form_item">
                                                     <div class="file_set">
                                                         <div class="inp">
-                                                            <input type="text" placeholder="파일을 선택하세요" />
+                                                            <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
                                                             <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                         </div>
                                                         <label for="file4">파일찾기</label>
@@ -787,41 +787,6 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
-
-            <!-- Layer : 기본증명서 안내 -->
-            <div class="layerFix fullPopup" id="alertPop1" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont base">
-                        <div class="tit_area">
-                            <strong class="tit">기본증명서 안내</strong>
-                        </div>
-                        <div class="article">
-                            <div class="tit">발급내용</div>
-                            <ul class="list_dash">
-                                <li>신청인 본인확인을 위한 기본증명서로 <strong class="txt_underline">주민등록번호 13자리 모두 표시</strong>하여 제출</li>
-                                <li><strong class="txt_underline">유형(일반, 상세)과 상관없이 모두 제출이 가능</strong>합니다. 다만, 제출 서류상의 이름이 서로 달라 <strong class="txt_underline">개명사실 확인이 필요한 경우 '상세'유형으로 제출</strong>해야 합니다.</li>
-                            </ul>
-                        </div>
-                        <div class="article">
-                            <div class="tit">발급방법</div>
-                            <ul class="list_dash">
-                                <li>(방문발급) 주민센터</li>
-                                <li>(인터넷 발급) 대한민국 법원 <strong class="txt_underline">전자가족관계등록시스템</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">실무교육 증빙 주의사항 닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 기본증명서 안내 -->
 
             <!-- Layer : 학력 증명 서류 안내 -->
             <div class="layerFix fullPopup" id="alertPop2" style="display: none" tabindex="0">
@@ -866,6 +831,41 @@
                 </div>
             </div>
             <!--// Layer : 학력 증명 서류 안내 -->
+
+            <!-- Layer : 기본증명서 안내 -->
+            <div class="layerFix fullPopup" id="basicguidePop" style="display: none" tabindex="0">
+                <div class="layer_wrap">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont base">
+                        <div class="tit_area">
+                            <strong class="tit">기본증명서 안내</strong>
+                        </div>
+                        <div class="article">
+                            <div class="tit">발급내용</div>
+                            <ul class="list_dash">
+                                <li>신청인 본인확인을 위한 기본증명서로 <strong class="txt_underline">주민등록번호 13자리 모두 표시</strong>하여 제출</li>
+                                <li><strong class="txt_underline">유형(일반, 상세)과 상관없이 모두 제출이 가능</strong>합니다. 다만, 제출 서류상의 이름이 서로 달라 <strong class="txt_underline">개명사실 확인이 필요한 경우 '상세'유형으로 제출</strong>해야 합니다.</li>
+                            </ul>
+                        </div>
+                        <div class="article">
+                            <div class="tit">발급방법</div>
+                            <ul class="list_dash">
+                                <li>(방문발급) 주민센터</li>
+                                <li>(인터넷 발급) 대한민국 법원 <strong class="txt_underline">전자가족관계등록시스템</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">실무교육 증빙 주의사항 닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 기본증명서 안내 -->
         </div>
         <!--// wrap(e) -->
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
@@ -904,7 +904,7 @@
                 reader.onload = function (event) {
                     var img = document.createElement("img");
                     img.setAttribute("src", event.target.result);
-                    imgWrap.appendChild(img);
+                    imgWrap.appendChild(img).setAttribute("alt", "자격증 발급용 사진");
                 };
                 reader.readAsDataURL(event.target.files[0]);
 
@@ -940,6 +940,16 @@
             });
             $("#alertPop2 .layer_close").click(function (e) {
                 $("#alert2").focus(); // 접근성
+            });
+
+            // Layer : 기본증명서 안내
+            $("#basicguide").click(function (e) {
+                $("html").addClass("layerOpen");
+                $(".layerDim").show();
+                $("#basicguidePop").show().focus();
+            });
+            $("#basicguidePop .layer_close").click(function (e) {
+                $("#basicguide").focus(); // 접근성
             });
         </script>
     </body>

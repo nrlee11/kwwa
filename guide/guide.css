@@ -35,12 +35,12 @@ pre code.hljs {
 .section .inner {
     padding: 1rem;
 }
-.section .box {
+.section > .inner > .box {
     padding: 3rem;
     border: 0.1rem solid #cdd1d5;
     border-radius: 0.8rem;
 }
-.section .box + .box {
+.section > .inner > .box + .box {
     margin-top: 3rem;
 }
 .article.html_code {
@@ -56,10 +56,10 @@ pre code.hljs {
     #guide_wrap {
         min-width: 100%;
     }
-    .section .inner {
+    .section > .inner {
         padding: 0;
     }
-    .section .box {
+    .section > .inner > .box {
         padding: 3rem 1.5rem;
     }
 }
