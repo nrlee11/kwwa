@@ -165,16 +165,6 @@
                 dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
                 ignoreReadonly: true,
                 buttonImageOnly: false,
-                beforeShow: function (input, inst) {
-                    $(".calendar_wrap").show().append($("#ui-datepicker-div"));
-                },
-                onSelect: function (dateText, inst) {
-                    $(".calendar_wrap").hide();
-                },
-            });
-            $(".calendar_wrap .dim").click(function () {
-                $(".calendar_wrap").hide();
-                console.log("aaaa");
             });
 
             // 첨부파일 샘플

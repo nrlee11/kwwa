@@ -10,9 +10,8 @@
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
-        <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
-        <title>실무교육 확인조회 | 실무교육 | 한국상하수도협회</title>
+        <title>발급현황 조회 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -34,8 +33,8 @@
                         <nav class="breadcrumb_wrap">
                             <ol class="breadcrumb">
                                 <li><a href="javascript:;">홈</a></li>
-                                <li><a href="javascript:;">실무교육</a></li>
-                                <li><span>실무교육 확인조회</span></li>
+                                <li><a href="javascript:;">자격증발급</a></li>
+                                <li><span>발급현황 조회</span></li>
                             </ol>
                         </nav>
                         <!--// breadcrumb(e) -->
@@ -94,7 +93,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">요청구분</th>
-                                            <td data-cell-header="요청구분"><div>경력증명서</div></td>
+                                            <td data-cell-header="요청구분"><div>자격요건 미충족</div></td>
                                             <th scope="row">보완대상</th>
                                             <td data-cell-header="보완대상">
                                                 <div><span class="txt_red">경력 증빙</span></div>
@@ -116,6 +115,134 @@
                         <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">신청서 수정하기 (신청자가 작성)</h3>
+                            </div>
+
+                            <div class="tit_area">
+                                <h4 class="tit">학력 정보</h4>
+                            </div>
+
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- write -->
+                                <div class="form_list table">
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="finalAcademic">최종 학력</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="inp_select size_219">
+                                                        <select title="학력 선택" id="finalAcademic">
+                                                            <option value="">학력 선택</option>
+                                                            <option value="">4년제 대학 이상</option>
+                                                            <option value="">2년제 대학 이상</option>
+                                                            <option value="">고등학교 졸업</option>
+                                                            <option value="">없음</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>이공계 여부</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="radio_set">
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="type1_1" name="type1" />
+                                                                    <label for="type1_1">이공계</label>
+                                                                </span>
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="type1_2" name="type1" checked />
+                                                                    <label for="type1_2">그 외</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <p class="txt_note">이공계 여부를 정확히 확인하세요.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="school">학교/전공학과</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="inp size_219">
+                                                                <input type="text" id="school" placeholder="학교" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="inp size_219">
+                                                                <input type="text" placeholder="전공학과" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>학력증명서류</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="file_set">
+                                                                <div class="inp">
+                                                                    <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                </div>
+                                                                <label for="file1">파일찾기</label>
+                                                                <input type="file" id="file1" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <button type="button" class="btn_pop" id="alert2">학력증명서류 안내<span class="ico_pop"></span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// write -->
+
+                                <div class="form_desc_bottom">
+                                    <ul class="list_mark">
+                                        <li>증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">경력 정보</h3>
+                                <div class="desc">
+                                    자격획득을 위해서는 상수도 운영, 유지관리 분야 근무 경력증명서<br />
+                                    근무처가 여러 곳인 경우 합산 산정하므로 근무경력추가 버튼을 눌러 추가 입력할 수 있습니다.
+                                </div>
                             </div>
 
                             <!-- form-->
@@ -152,7 +279,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="box">
-                                                            <p class="txt_note">경력추가</p>
+                                                            <p class="txt_note">아래 기간 선택 시 자동계산</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -202,20 +329,13 @@
                                         <div class="item">
                                             <div class="cell">
                                                 <div class="form_item">
-                                                    <div class="group_box">
-                                                        <div class="box">
-                                                            <div class="file_set">
-                                                                <div class="inp">
-                                                                    <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
-                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                                </div>
-                                                                <label for="file1">파일찾기</label>
-                                                                <input type="file" id="file1" />
-                                                            </div>
+                                                    <div class="file_set">
+                                                        <div class="inp">
+                                                            <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                         </div>
-                                                        <div class="box">
-                                                            <p class="txt_note">기존파일 -> 신규파일로 교체</p>
-                                                        </div>
+                                                        <label for="file2">파일찾기</label>
+                                                        <input type="file" id="file2" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -280,8 +400,8 @@
                                                             <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
                                                             <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                         </div>
-                                                        <label for="file2">파일찾기</label>
-                                                        <input type="file" id="file2" />
+                                                        <label for="file3">파일찾기</label>
+                                                        <input type="file" id="file3" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -290,13 +410,6 @@
                                 </div>
                                 <!--// write -->
                                 <!--// 근무경력 추가 -->
-
-                                <div class="form_desc_bottom">
-                                    <ul class="list_mark">
-                                        <li>자격증 급수에 따라 상수도 설치/운영/유지관리 분야 근무 경력증명서 또는 실무교육확인서가 필요합니다.</li>
-                                        <li>근무처가 여러 곳인 경우 합산 산정하므로 ‘근무경력추가’ 버튼을 눌러 경력 추가할 수 있습니다.</li>
-                                    </ul>
-                                </div>
                             </div>
                             <!--// form-->
                         </div>
@@ -310,23 +423,13 @@
                                 <div class="form_list table">
                                     <div class="form_group">
                                         <div class="tit">
-                                            <spapn>답변일</spapn>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_txt">2025-03-02 00:00:00</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="answer">답변내용</label>
+                                            <label for="answer">답변</label>
                                         </div>
                                         <div class="item">
                                             <div class="cell">
                                                 <div class="form_item">
                                                     <div class="inp_textarea">
-                                                        <textarea placeholder="자료 수정내용 또는 보완의 근거나 사실을 입력해주세요." id="answer"></textarea>
+                                                        <textarea placeholder="보완내용을 입력해 주세요" id="answer"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,7 +443,7 @@
                         <!--// section(e) -->
 
                         <div class="bottom_btn_area">
-                            <button type="button" class="btn_primary_lg">제출</button>
+                            <button type="button" class="btn_primary_lg">제출하기</button>
                         </div>
                     </div>
                     <!--// contents(e) -->
@@ -351,34 +454,74 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
+
+            <!-- Layer : 학력 증명 서류 안내 -->
+            <div class="layerFix fullPopup" id="alertPop2" style="display: none" tabindex="0">
+                <div class="layer_wrap">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont base">
+                        <div class="tit_area">
+                            <strong class="tit">
+                                학력 증명 서류 안내
+                                <strong class="sm_txt">(해당 택1)</strong>
+                            </strong>
+                        </div>
+                        <div class="article">
+                            <div class="tit">졸업증명서</div>
+                            <ul class="list_dash">
+                                <li>대학졸업자 경우 이학사 또는 공학사 학위를 취득하였는지 확인(졸업증명서에 표기되어 있음)</li>
+                                <li>전문대학 졸업자 중 이공계열의 전문학사 학위를 취득하였는지 확인</li>
+                            </ul>
+                            <ul class="list_mark">
+                                <li>전문대학 졸업자의 경우 해당학과가 공학 또는 이학 분야에 해당하는지 반드시 해당 학교에 조회</li>
+                            </ul>
+                        </div>
+                        <div class="article">
+                            <div class="tit">수료증명서 또는 학위증</div>
+                            <ul class="list_dash">
+                                <li>이공계 대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                                <li>이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                            </ul>
+                        </div>
+                        <div class="article">
+                            <div class="tit">고등학교 졸업증명서</div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">학력 증명 서류 안내 닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 학력 증명 서류 안내 -->
         </div>
         <!--// wrap(e) -->
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
-        <script src="/resources/js/jquery-ui.js"></script>
-        <script>
-            // 달력 샘플
-            $.datepicker.setDefaults($.datepicker.regional["ko"]);
-            $("#startDate, #endDate, #startDate1, #endDate1").datepicker({
-                dateFormat: "yy-mm-dd",
-                showOtherMonths: true,
-                showMonthAfterYear: true,
-                nextText: "다음 달",
-                prevText: "이전 달",
-                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-                ignoreReadonly: true,
-                buttonImageOnly: false,
-            });
+        <script type="text/javascript">
+            $(function () {
+                // 첨부파일 샘플
+                $("#file1, #file2, #file3").on("change", function () {
+                    var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
+                    $(this).parent().children().children("input").val(fileName);
+                });
+                $(".file_set .btn_reset").click(function () {
+                    $(this).parent().children("input").val(""); // 파일명 삭제
+                });
 
-            // 첨부파일 샘플
-            $("#file1, #file2, #file3, #file4").on("change", function () {
-                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                $(this).parent().children().children("input").val(fileName);
-            });
-            $(".file_set .btn_reset").click(function () {
-                $(this).parent().children("input").val(""); // 파일명 삭제
+                // Layer : 학력 증명 서류 안내
+                $("#alert2").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $(".layerDim").show();
+                    $("#alertPop2").show().focus();
+                });
+                $("#alertPop2 .layer_close").click(function (e) {
+                    $("#alert2").focus(); // 접근성
+                });
             });
         </script>
     </body>

@@ -58,10 +58,6 @@
 
                             <!-- board -->
                             <div class="board_area">
-                                <div class="board_desc_top">
-                                    <div class="rside">조회일시: 2025.02.30 00:00:00</div>
-                                </div>
-
                                 <!-- board_view -->
                                 <table class="tbl">
                                     <!-- 2025-04-08 : class삭제 -->
@@ -165,16 +161,6 @@
                 dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
                 ignoreReadonly: true,
                 buttonImageOnly: false,
-                beforeShow: function (input, inst) {
-                    $(".calendar_wrap").show().append($("#ui-datepicker-div"));
-                },
-                onSelect: function (dateText, inst) {
-                    $(".calendar_wrap").hide();
-                },
-            });
-            $(".calendar_wrap .dim").click(function () {
-                $(".calendar_wrap").hide();
-                console.log("aaaa");
             });
 
             // 첨부파일 샘플

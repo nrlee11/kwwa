@@ -530,7 +530,7 @@
                                     </div>
                                     <div class="form_group">
                                         <div class="tit">
-                                            <label for="school">학교 / 전공학과</label>
+                                            <label for="school">학교/전공학과</label>
                                         </div>
                                         <div class="item">
                                             <div class="cell">
@@ -570,7 +570,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="box">
-                                                            <button type="button" class="btn_pop" id="alert2">학력증명서류안내<span class="ico_pop"></span></button>
+                                                            <button type="button" class="btn_pop" id="alert2">학력증명서류 안내<span class="ico_pop"></span></button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -827,7 +827,7 @@
                             <button type="button" class="btn_primary_md layer_close">확인</button>
                         </div>
                     </div>
-                    <button class="btn_close layer_close"><span class="hidden">실무교육 증빙 주의사항 닫기</span></button>
+                    <button class="btn_close layer_close"><span class="hidden">학력 증명 서류 안내 닫기</span></button>
                 </div>
             </div>
             <!--// Layer : 학력 증명 서류 안내 -->
@@ -862,10 +862,52 @@
                             <button type="button" class="btn_primary_md layer_close">확인</button>
                         </div>
                     </div>
-                    <button class="btn_close layer_close"><span class="hidden">실무교육 증빙 주의사항 닫기</span></button>
+                    <button class="btn_close layer_close"><span class="hidden">기본증명서 안내 닫기</span></button>
                 </div>
             </div>
             <!--// Layer : 기본증명서 안내 -->
+
+            <!-- Layer : 첨부불가 안내 -->
+            <div class="layerFix alertPopup" id="filetypealertPop" style="display: none" tabindex="0">
+                <div class="layer_wrap">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont">
+                        <div class="alert_msg">
+                            <div class="msg">첨부가 불가한 파일입니다.</div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 첨부불가 안내 -->
+
+            <!-- Layer : 파일용량 초과 안내 -->
+            <div class="layerFix alertPopup" id="filesizealertPop" style="display: none" tabindex="0">
+                <div class="layer_wrap">
+                    <div class="head">
+                        <strong class="tit">상하수도 국가전문자격시스템</strong>
+                    </div>
+                    <div class="cont">
+                        <div class="alert_msg">
+                            <div class="msg">첨부파일은 최대 10MB까지 등록 가능합니다.</div>
+                        </div>
+                    </div>
+                    <div class="foot">
+                        <div class="btn_area">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                </div>
+            </div>
+            <!--// Layer : 파일용량 초과 안내 -->
         </div>
         <!--// wrap(e) -->
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
@@ -885,22 +927,17 @@
                 dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
                 ignoreReadonly: true,
                 buttonImageOnly: false,
-                beforeShow: function (input, inst) {
-                    $(".calendar_wrap").show().append($("#ui-datepicker-div"));
-                },
-                onSelect: function (dateText, inst) {
-                    $(".calendar_wrap").hide();
-                },
-            });
-            $(".calendar_wrap .dim").click(function () {
-                $(".calendar_wrap").hide();
-                console.log("aaaa");
             });
 
-            // 첨부파일 샘플
-            function setThumbnail(event) {
+            // 자격증 발급용 사진 첨부파일 샘플
+            function setThumbnail() {
                 var reader = new FileReader();
                 var imgWrap = $(".img_preview")[0];
+                var fileinp = $("#imgfile")[0];
+                var fileaccept = $("#imgfile").val().split(".").pop().toLowerCase(); // 파일 확장자
+                var maxSize = 10 * 1024 * 1024; // 10MB 사이즈 제한
+                var fileSize = fileinp.files[0].size; // 파일 용량
+
                 reader.onload = function (event) {
                     var img = document.createElement("img");
                     img.setAttribute("src", event.target.result);
@@ -908,10 +945,34 @@
                 };
                 reader.readAsDataURL(event.target.files[0]);
 
-                $(".img_preview .btn_reset").click(function () {
-                    $(this).parent().children(".img_preview img").remove();
-                });
+                if ($.inArray(fileaccept, ["png", "jpg"]) == -1) {
+                    // 첨부불가 안내
+                    $("#filetypealertPop, .layerDim").show();
+                    setTimeout(() => {
+                        $("#filetypealertPop").focus();
+                    }, 100);
+                    return false;
+                }
+
+                if (fileSize > maxSize) {
+                    // 파일용량 초과 안내
+                    $("#filesizealertPop, .layerDim").show();
+                    setTimeout(() => {
+                        $("#filesizealertPop").focus();
+                    }, 100);
+                    return false;
+                }
             }
+            $(".img_preview .btn_reset").click(function () {
+                // 파일 삭제
+                $(this).parent().children(".img_preview img").remove();
+                $(".imgfile").val("").focus();
+            });
+            $("#filetypealertPop .layer_close, #filesizealertPop .layer_close").click(function (e) {
+                // 첨부불가 안내 파일 삭제
+                $(".img_preview img").remove();
+                $(".imgfile").val("").focus();
+            });
 
             // 첨부파일 샘플
             $("#file1, #file2, #file3, #file4").on("change", function () {
