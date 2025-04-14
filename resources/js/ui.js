@@ -162,6 +162,17 @@ $(function () {
         });
     };
 
+    // Common Tab
+    const commonTab = function () {
+        $(".tab_area .tab li").on("click", function () {
+            $(this).parent().parent().parent().find(".tab_cont").hide().attr("aria-hidden", "true");
+            $(this).parent().parent().parent().find(".tab_cont").eq($(this).index()).show().attr("aria-hidden", "false");
+            $(this).parent().find("li").removeClass("on").children("button, a").removeAttr("title");
+            $(this).addClass("on").children("button, a").attr("title", "선택 됨");
+            return false;
+        });
+    };
+
     // Layer
     const layerFix = function () {
         // LayerFix
@@ -244,5 +255,6 @@ $(function () {
     fullLayerClose();
     alertLayerClose();
     selectLayer();
+    commonTab();
     includeHtml();
 });

@@ -366,10 +366,8 @@
 
 // ico
 [class^="ico_"] {
-    &[class*="_pop"],
     &[class*="_outlink"],
     &[class*="_download"],
-    &[class*="_upload"],
     &[class*="_arrow"],
     &[class*="_bluearrow"],
     &[class*="_mark"],
@@ -385,23 +383,24 @@
     }
     // 변수처리할것 (mixin btn-bgtype 참고)
     &[class*="_outlink"] {
+        top: -0.2rem;
         background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
     }
-    &[class*="_download2"] {
+    &[class*="_download"] {
         top: -0.2rem;
         background: url($url-img-icon + "ico_download2.svg") no-repeat 0 0 !important;
     }
-    &[class*="_pop"] {
-        width: 1rem;
-        height: 1rem;
-        background: url($url-img-icon + "ico_pop.svg") no-repeat 0 0;
-    }
-    &[class*="_download"] {
-        background: url($url-img-icon + "ico_download.svg") no-repeat 0 0;
-    }
-    &[class*="_upload"] {
-        background: url($url-img-icon + "ico_upload.svg") no-repeat 0 0;
-    }
+    // &[class*="_pop"] {
+    //     width: 1rem;
+    //     height: 1rem;
+    //     background: url($url-img-icon + "ico_pop.svg") no-repeat 0 0;
+    // }
+    // &[class*="_download"] {
+    //     background: url($url-img-icon + "ico_download.svg") no-repeat 0 0;
+    // }
+    // &[class*="_upload"] {
+    //     background: url($url-img-icon + "ico_upload.svg") no-repeat 0 0;
+    // }
     &[class*="_arrow"] {
         width: 1.6rem;
         height: 0.9rem;
@@ -1112,6 +1111,9 @@ select {
             &:first-child {
                 border-left: 0;
             }
+            &.line {
+                border-left: $border #d6e0eb;
+            }
         }
         thead th {
             height: 3.2rem;
@@ -1132,6 +1134,16 @@ select {
                 @include mobile {
                     text-align: left !important;
                 }
+            }
+            &.line {
+                border-left: $border #d6e0eb;
+            }
+        }
+        tfoot th,
+        tfoot td {
+            @include tbl-tfoot;
+            &:first-child {
+                border-left: 0;
             }
         }
         &.row tbody td {
@@ -1243,6 +1255,44 @@ select {
             }
         }
     }
+    .scroll_guide {
+        display: var(--hide);
+        margin-bottom: var(--gap-10);
+        text-align: right;
+        .txt_scroll {
+            position: relative;
+            display: inline-block;
+            padding-right: 2.3rem;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0.8rem;
+                right: 0;
+                width: 1.85rem;
+                height: 0.89rem;
+                background: url($url-img-common + "bg_scroll.svg") no-repeat 0 0;
+            }
+        }
+        @include sm-mobile {
+            display: var(--show);
+        }
+    }
+    .scroll_area {
+        @include sm-mobile {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            // &::-webkit-scrollbar {
+            //     display: none;
+            // }
+            table {
+                width: 88.8rem;
+            }
+            .scroll_guide {
+                display: var(--show);
+            }
+        }
+    }
     .board_tit {
         margin-bottom: var(--gap-24);
         .tit {
@@ -1261,7 +1311,7 @@ select {
             @include flex-between;
             align-items: flex-end;
             width: 100%;
-            margin-bottom: var(--gap-13);
+            margin-bottom: var(--gap-10);
             > div {
                 flex: 1;
                 &:not(.lside) {
@@ -1724,14 +1774,16 @@ select {
 .tab_area {
     position: relative;
     .tab {
-        // display: flex;
-        // align-items: flex-end;
+        display: flex;
+        align-items: flex-end;
         width: 100%;
         margin-bottom: var(--gap-15);
         border-bottom: 0.2rem solid #083891;
         > li {
             display: inline-block;
-            > a {
+            > button,
+            > a,
+            > strong {
                 display: block;
                 min-width: 12rem;
                 min-height: 4.2rem;
@@ -1745,13 +1797,11 @@ select {
                 border-top-left-radius: 0.6rem;
                 border-top-right-radius: 0.6rem;
                 border-bottom: 0;
-                @include mobile {
-                    min-width: 8.2rem;
-                    padding: 0 var(--gap-5);
-                }
             }
             &.on {
-                a {
+                button,
+                a,
+                strong {
                     position: relative;
                     min-height: 4.8rem;
                     line-height: 4.7rem;
@@ -2055,7 +2105,7 @@ select {
                         tbody th,
                         tbody td {
                             height: 3.2rem;
-                            padding: 0 var(--gap-16);
+                            padding: 0.2rem var(--gap-16);
                             @include mobile {
                                 height: auto;
                                 padding: 0.3rem var(--gap-8) 0;
@@ -2071,6 +2121,13 @@ select {
                 }
                 &[class*="_bottom"] {
                     margin-top: var(--gap-20);
+                }
+            }
+        }
+        .scroll_area {
+            @include sm-mobile {
+                table {
+                    width: 51.2rem;
                 }
             }
         }

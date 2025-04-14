@@ -113,6 +113,18 @@
     text-align: center;
 }
 
+@mixin tbl-tfoot {
+    height: 3.2rem;
+    padding: 0 var(--gap-16);
+    font-size: var(--font-size-sm);
+    color: var(--color-warblack);
+    font-weight: var(--font-bold);
+    border-bottom: $border #d6e0eb;
+    border-left: $border #d6e0eb;
+    background-color: var(--color-lightblue);
+    text-align: center;
+}
+
 @mixin mo-tbl-body {
     display: flex;
     width: 100%;
