@@ -98,7 +98,7 @@
                                     <!-- board -->
                                     <div class="board_area">
                                         <!-- board_view -->
-                                        <table class="tbl row size110">
+                                        <table class="tbl react row size110">
                                             <caption>
                                                 자격번호, 자격 취득일, 교부 연월일, 재발급 신청사유 정보 제공
                                             </caption>
@@ -156,53 +156,57 @@
                                 <h3 class="tit">배송지 정보</h3>
                             </div>
 
-                            <!-- form-->
-                            <div class="form_section">
-                                <!-- write -->
-                                <div class="form_list table">
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="address1">배송지주소</label>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <span class="inp_check">
-                                                    <input type="checkbox" id="deliveryinfo1_1" />
-                                                    <label for="deliveryinfo1_1">신청자 정보의 주소와 배송지가 같을 경우 체크해 주세요.</label>
-                                                </span>
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="address1">배송지주소</label>
                                             </div>
-                                            <div class="cell line">
-                                                <div class="form_item">
-                                                    <div class="address_set">
-                                                        <div class="group_box">
-                                                            <div class="box">
-                                                                <div class="inp size_130">
-                                                                    <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" readonly />
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <span class="inp_check">
+                                                        <input type="checkbox" id="deliveryinfo1_1" />
+                                                        <label for="deliveryinfo1_1">신청자 정보의 주소와 배송지가 같을 경우 체크해 주세요.</label>
+                                                    </span>
+                                                </div>
+                                                <div class="cell line">
+                                                    <div class="form_item">
+                                                        <div class="address_set">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <div class="inp size_130">
+                                                                        <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" readonly />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <button type="button" class="btn_primary_lg full">우편번호 검색</button>
                                                                 </div>
                                                             </div>
-                                                            <div class="box">
-                                                                <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                            <div class="inp">
+                                                                <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
                                                             </div>
-                                                        </div>
-                                                        <div class="inp">
-                                                            <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
-                                                        </div>
-                                                        <div class="inp">
-                                                            <input type="text" placeholder="상세주소 입력" autocomplete="off" />
+                                                            <div class="inp">
+                                                                <input type="text" placeholder="상세주소 입력" autocomplete="off" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--// write -->
                                 </div>
-                                <!--// write -->
+                                <!--// form-->
 
-                                <div class="form_desc_bottom gap_mt10">
+                                <div class="board_desc_bottom gap_mt10">
                                     <p class="txt_note">배송시 등록된 본인명의의 휴대전화로 연락드립니다.</p>
                                 </div>
                             </div>
-                            <!--// form-->
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
 
@@ -266,7 +270,7 @@
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
         <script>
-            // 첨부파일 샘플
+            // 자격증 발급용 사진 첨부파일 샘플
             function setThumbnail() {
                 var reader = new FileReader();
                 var imgWrap = $(".img_preview")[0];
@@ -300,7 +304,6 @@
                     return false;
                 }
             }
-
             $(".img_preview .btn_reset").click(function () {
                 // 파일 삭제
                 $(this).parent().children(".img_preview img").remove();

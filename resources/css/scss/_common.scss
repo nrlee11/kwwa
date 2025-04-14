@@ -384,13 +384,17 @@
         vertical-align: var(--align-m);
     }
     // 변수처리할것 (mixin btn-bgtype 참고)
+    &[class*="_outlink"] {
+        background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
+    }
+    &[class*="_download2"] {
+        top: -0.2rem;
+        background: url($url-img-icon + "ico_download2.svg") no-repeat 0 0 !important;
+    }
     &[class*="_pop"] {
         width: 1rem;
         height: 1rem;
         background: url($url-img-icon + "ico_pop.svg") no-repeat 0 0;
-    }
-    &[class*="_outlink"] {
-        background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
     }
     &[class*="_download"] {
         background: url($url-img-icon + "ico_download.svg") no-repeat 0 0;
@@ -466,7 +470,6 @@ textarea {
     background-color: var(--color-white);
     vertical-align: middle;
 }
-
 select {
     width: 100%;
     height: 4.8rem;
@@ -1142,7 +1145,7 @@ select {
             }
         }
         @include mobile {
-            & {
+            &.react {
                 // border-top: $border var(--color-black);
                 border-bottom: $border var(--color-black);
                 colgroup,
@@ -1247,12 +1250,12 @@ select {
             font-size: var(--font-size-lg);
         }
     }
-    .board_info {
-        @include flex-between;
-        margin-bottom: var(--gap-24);
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-bold);
-    }
+    // .board_info {
+    //     @include flex-between;
+    //     margin-bottom: var(--gap-24);
+    //     font-size: var(--font-size-lg);
+    //     font-weight: var(--font-bold);
+    // }
     [class^="board_desc"] {
         &[class*="_top"] {
             @include flex-between;
@@ -1292,27 +1295,6 @@ select {
         .tit {
             font-size: var(--font-size-md);
             font-weight: var(--font-regular);
-        }
-    }
-    [class^="form_desc"] {
-        &[class*="_top"] {
-            @include flex-between;
-            width: 100%;
-            margin-bottom: var(--gap-24);
-            > div {
-                flex: 1;
-                &:not(.lside) {
-                    text-align: right;
-                    [class^="btn_"] {
-                        @include mobile {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-        &[class*="_bottom"] {
-            margin-top: var(--gap-24);
         }
     }
     .form_list {
@@ -1499,6 +1481,27 @@ select {
             color: #bd2c0f;
         }
     }
+    // [class^="form_desc"] {
+    //     &[class*="_top"] {
+    //         @include flex-between;
+    //         width: 100%;
+    //         margin-bottom: var(--gap-24);
+    //         > div {
+    //             flex: 1;
+    //             &:not(.lside) {
+    //                 text-align: right;
+    //                 [class^="btn_"] {
+    //                     @include mobile {
+    //                         width: 100%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     &[class*="_bottom"] {
+    //         margin-top: var(--gap-24);
+    //     }
+    // }
 }
 .terms_area {
     .terms_check_all {
@@ -1714,6 +1717,70 @@ select {
     }
     &.center {
         text-align: center;
+    }
+}
+
+// tab
+.tab_area {
+    position: relative;
+    .tab {
+        // display: flex;
+        // align-items: flex-end;
+        width: 100%;
+        margin-bottom: var(--gap-15);
+        border-bottom: 0.2rem solid #083891;
+        > li {
+            display: inline-block;
+            > a {
+                display: block;
+                min-width: 12rem;
+                min-height: 4.2rem;
+                padding: 0 var(--gap-16);
+                color: #8a949e;
+                text-align: center;
+                font-weight: var(--font-semibold);
+                line-height: 4.1rem;
+                border: $border #b1b8be;
+                background-color: #e6e8ea;
+                border-top-left-radius: 0.6rem;
+                border-top-right-radius: 0.6rem;
+                border-bottom: 0;
+                @include mobile {
+                    min-width: 8.2rem;
+                    padding: 0 var(--gap-5);
+                }
+            }
+            &.on {
+                a {
+                    position: relative;
+                    min-height: 4.8rem;
+                    line-height: 4.7rem;
+                    color: var(--color-white);
+                    font-weight: var(--font-bold);
+                    background-color: #083891;
+                    border-color: #083891;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        right: -1.7rem;
+                        width: 1.6rem;
+                        height: 1.7rem;
+                        background: url($url-img-common + "bg_tab_on.svg") no-repeat 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .scroll_area {
+        .tab {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 }
 
@@ -2082,30 +2149,6 @@ select {
         }
     }
 }
-
-// 달력
-// @include mobile {
-//     #ui-datepicker-div {
-//         background-color: #fff;
-//         position: fixed !important;
-//         width: 100% !important;
-//         padding: 2rem;
-//         top: auto !important;
-//         bottom: 0 !important;
-//         left: 0 !important;
-//         right: 0 !important;
-//     }
-//     .calendar_wrap .dim {
-//         position: fixed;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         width: 100%;
-//         height: 100%;
-//         background-color: rgba(0, 0, 0, 0.75);
-//     }
-// }
 
 // slider controls
 .swiper-pagination {

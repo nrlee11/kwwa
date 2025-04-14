@@ -185,6 +185,7 @@
         }
         @include mobile {
             margin: 0;
+            display: block;
         }
     }
     #aside {

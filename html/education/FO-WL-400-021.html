@@ -67,9 +67,7 @@
                             <!-- board -->
                             <div class="board_area">
                                 <!-- board_view -->
-                                <!-- 2025-04-08 : size110 class삭제 -->
-                                <table class="tbl row">
-                                    <!-- 2025-04-08 : class삭제 -->
+                                <table class="tbl react row">
                                     <caption>
                                         신청번호, 진행상태, 자격종목, 요청일, 요청구분, 보완대상, 사유 정보 제공
                                     </caption>
@@ -118,224 +116,238 @@
                                 <h3 class="tit">신청서 수정하기 (신청자가 작성)</h3>
                             </div>
 
-                            <!-- form-->
-                            <div class="form_section">
-                                <div class="form_desc_top">
+                            <!-- board -->
+                            <div class="board_area">
+                                <div class="board_desc_top">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">근무경력 추가</button>
                                     </div>
                                 </div>
-                                <!-- write -->
-                                <div class="form_list table">
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="work1_1">전체 경력</label>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="group_box">
-                                                        <div class="box">
-                                                            <div class="career_set">
-                                                                <div class="inp_set">
-                                                                    <div class="inp size_100">
-                                                                        <input type="tel" value="50" id="work1_1" autocomplete="off" readonly />
+
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- board_write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="work1_1">전체 경력</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <div class="career_set">
+                                                                    <div class="inp_set">
+                                                                        <div class="inp size_100">
+                                                                            <input type="tel" value="50" id="work1_1" autocomplete="off" readonly />
+                                                                        </div>
+                                                                        <span class="txt">년</span>
                                                                     </div>
-                                                                    <span class="txt">년</span>
-                                                                </div>
-                                                                <div class="inp_set">
-                                                                    <div class="inp size_100">
-                                                                        <input type="tel" value="50" autocomplete="off" readonly />
+                                                                    <div class="inp_set">
+                                                                        <div class="inp size_100">
+                                                                            <input type="tel" value="50" autocomplete="off" readonly />
+                                                                        </div>
+                                                                        <span class="txt">개월</span>
                                                                     </div>
-                                                                    <span class="txt">개월</span>
                                                                 </div>
                                                             </div>
+                                                            <div class="box">
+                                                                <p class="txt_note">경력추가</p>
+                                                            </div>
                                                         </div>
-                                                        <div class="box">
-                                                            <p class="txt_note">경력추가</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="work1_2">근무지</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <div class="inp size_219">
+                                                                    <input type="text" value="한국상하수도협회" placeholder="근무지 입력" id="work1_2" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="calendar_set">
+                                                                    <div class="inp_set">
+                                                                        <input type="text" value="2025-03-10" placeholder="시작일" id="startDate" autocomplete="off" />
+                                                                        <span class="txt_dash">~</span>
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" value="2025-04-07" placeholder="종료일" id="endDate" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <span class="inp_check">
+                                                                    <input type="checkbox" id="work1_3" checked />
+                                                                    <label for="work1_3">재직중</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <span>근무지 경력증명</span>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <div class="file_set">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                        <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                    </div>
+                                                                    <label for="file1">파일찾기</label>
+                                                                    <input type="file" id="file1" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <p class="txt_note">기존파일 -> 신규파일로 교체</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="work1_2">근무지</label>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="group_box">
-                                                        <div class="box">
-                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                            <div class="inp size_219">
-                                                                <input type="text" value="한국상하수도협회" placeholder="근무지 입력" id="work1_2" autocomplete="off" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="box">
-                                                            <div class="calendar_set">
-                                                                <div class="inp_set">
-                                                                    <input type="text" value="2025-03-10" placeholder="시작일" id="startDate" autocomplete="off" />
-                                                                    <span class="txt_dash">~</span>
-                                                                </div>
-                                                                <div class="inp">
-                                                                    <input type="text" value="2025-04-07" placeholder="종료일" id="endDate" autocomplete="off" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="box">
-                                                            <span class="inp_check">
-                                                                <input type="checkbox" id="work1_3" checked />
-                                                                <label for="work1_3">재직중</label>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <span>근무지 경력증명</span>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="group_box">
-                                                        <div class="box">
-                                                            <div class="file_set">
-                                                                <div class="inp">
-                                                                    <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
-                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                                </div>
-                                                                <label for="file1">파일찾기</label>
-                                                                <input type="file" id="file1" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="box">
-                                                            <p class="txt_note">기존파일 -> 신규파일로 교체</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!--// board_write -->
                                 </div>
-                                <!--// write -->
+                                <!--// form-->
 
                                 <!-- 근무경력 추가 -->
-                                <div class="form_desc_top">
+                                <div class="board_desc_top gap_mt24">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">삭제</button>
                                     </div>
                                 </div>
-                                <!-- write -->
-                                <div class="form_list table">
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="work2_2">근무지</label>
+
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- board_write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="work2_2">근무지</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <div class="inp size_219">
+                                                                    <input type="text" value="" placeholder="근무지 입력" id="work2_2" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <div class="calendar_set">
+                                                                    <div class="inp_set">
+                                                                        <input type="text" value="" placeholder="시작일" id="startDate1" autocomplete="off" />
+                                                                        <span class="txt_dash">~</span>
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" value="" placeholder="종료일" id="endDate1" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">
+                                                                <span class="inp_check">
+                                                                    <input type="checkbox" id="work2_3" />
+                                                                    <label for="work2_3">재직중</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="group_box">
-                                                        <div class="box">
-                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                            <div class="inp size_219">
-                                                                <input type="text" value="" placeholder="근무지 입력" id="work2_2" autocomplete="off" />
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <span>근무지 경력증명</span>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="file_set">
+                                                            <div class="inp">
+                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
-                                                        </div>
-                                                        <div class="box">
-                                                            <div class="calendar_set">
-                                                                <div class="inp_set">
-                                                                    <input type="text" value="" placeholder="시작일" id="startDate1" autocomplete="off" />
-                                                                    <span class="txt_dash">~</span>
-                                                                </div>
-                                                                <div class="inp">
-                                                                    <input type="text" value="" placeholder="종료일" id="endDate1" autocomplete="off" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="box">
-                                                            <span class="inp_check">
-                                                                <input type="checkbox" id="work2_3" />
-                                                                <label for="work2_3">재직중</label>
-                                                            </span>
+                                                            <label for="file2">파일찾기</label>
+                                                            <input type="file" id="file2" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <span>근무지 경력증명</span>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="file_set">
-                                                        <div class="inp">
-                                                            <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
-                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                        </div>
-                                                        <label for="file2">파일찾기</label>
-                                                        <input type="file" id="file2" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!--// board_write -->
                                 </div>
-                                <!--// write -->
+                                <!--// form-->
                                 <!--// 근무경력 추가 -->
 
-                                <div class="form_desc_bottom">
+                                <div class="board_desc_bottom">
                                     <ul class="list_mark">
                                         <li>자격증 급수에 따라 상수도 설치/운영/유지관리 분야 근무 경력증명서 또는 실무교육확인서가 필요합니다.</li>
                                         <li>근무처가 여러 곳인 경우 합산 산정하므로 ‘근무경력추가’ 버튼을 눌러 경력 추가할 수 있습니다.</li>
                                     </ul>
                                 </div>
                             </div>
-                            <!--// form-->
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
 
                         <!-- section(s) -->
                         <div class="section">
-                            <!-- form-->
-                            <div class="form_section">
-                                <!-- write -->
-                                <div class="form_list table">
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <spapn>답변일</spapn>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_txt">2025-03-02 00:00:00</div>
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- board_write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <spapn>답변일</spapn>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_txt">2025-03-02 00:00:00</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="answer">답변내용</label>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="inp_textarea">
-                                                        <textarea placeholder="자료 수정내용 또는 보완의 근거나 사실을 입력해주세요." id="answer"></textarea>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="answer">답변내용</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp_textarea">
+                                                            <textarea placeholder="자료 수정내용 또는 보완의 근거나 사실을 입력해주세요." id="answer"></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--// board_write -->
                                 </div>
-                                <!--// write -->
+                                <!--// form-->
                             </div>
-                            <!--// form-->
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
 

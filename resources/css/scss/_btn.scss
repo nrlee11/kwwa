@@ -94,10 +94,9 @@
             line-height: 6.8rem;
         }
     }
-    &[class*="_download"],
-    &[class*="_upload"],
     &[class*="_pop"],
-    &[class*="_link"] {
+    &[class*="_link"],
+    &[class*="_txtlink"] {
         color: var(--color-warmblue);
         text-decoration: underline;
         text-align: left;
@@ -105,9 +104,23 @@
             text-align: center;
         }
     }
+    &[class*="_pop"] {
+        padding-right: var(--gap-14);
+        background: url($url-img-icon + "ico_pop.svg") no-repeat right 0.5rem;
+    }
+    &[class*="_link"] {
+        padding-right: var(--gap-28);
+        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat right -0.2rem;
+    }
     &[class*="_download"],
     &[class*="_upload"] {
-        text-decoration: none;
+        padding-right: var(--gap-28);
+        color: var(--color-warmblue);
+        text-align: left;
+        background: url($url-img-icon + "ico_download.svg") no-repeat right -0.2rem;
+    }
+    &[class*="_upload"] {
+        background: url($url-img-icon + "ico_upload.svg") no-repeat right -0.2rem;
     }
     &:disabled {
         opacity: 0.3;
@@ -149,6 +162,14 @@
                     }
                 }
             }
+        }
+    }
+    &.tab_position {
+        position: relative;
+        bottom: -3.5rem;
+        @include mobile {
+            position: static;
+            margin-bottom: var(--gap-50);
         }
     }
     @include mobile {

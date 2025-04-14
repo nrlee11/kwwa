@@ -51,6 +51,102 @@
                                 <h3 class="tit">양성과정 현황</h3>
                                 <div class="desc">양성과정의 이수를 위해서 아래 3가지 요건을 충족해야 하며 현황은 아래와 같습니다.</div>
                             </div>
+                            <div class="scroll_wrap">
+                                <ul>
+                                      <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>BBBAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>CCCAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>BBBAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>CCCAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>BBBAAAAAAAAAAAAAAAAAAAAA</li>
+                                      <li>CCCAAAAAAAAAAAAAAAAAAAAAAAAAAA</li>
+                                <ul>
+                            </div>
+                            
+                            <style>
+                                #container > .lyinner {
+                                    display: block;
+                                }
+                            .scroll_wrap { width: 100%; overflow-x: auto; white-space: nowrap; ﻿
+                                    -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */}
+                            .scroll_wrap::-webkit-scrollbar {display: none;}
+                            ul li {display:inline-block;}
+                            </style>
+
+                            <br>
+                            <br>
+                            <!-- Rounded switch -->
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+
+  <style>
+    /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+  </style>
                         </div>
                         <!--// section(e) -->
 
@@ -69,7 +165,8 @@
                                 <div class="nodata">조회된 내역이 없습니다.</div>
 
                                 <!-- board_view -->
-                                <table class="tbl react">
+                                <table class="tbl">
+                                    <!-- 2025-04-08 : class삭제 -->
                                     <caption>
                                         구분, 상태, 세부내용, 비고 정보 제공
                                     </caption>
@@ -163,7 +260,8 @@
                             <!-- board -->
                             <div class="board_area">
                                 <!-- board_view -->
-                                <table class="tbl react">
+                                <table class="tbl">
+                                    <!-- 2025-04-08 : class삭제 -->
                                     <caption>
                                         구분, 설명, 비고 정보 제공
                                     </caption>
@@ -185,7 +283,7 @@
                                             <td data-cell-header="비고" class="left">
                                                 <div>
                                                     전체 400시간 이상 교육이 확인되어야 함<br />
-                                                    <button type="button" class="btn_download">양식 다운로드</button>
+                                                    <button type="button" class="btn_download">양식 다운로드<span class="ico_download"></span></button>
                                                 </div>
                                             </td>
                                         </tr>
@@ -209,7 +307,7 @@
 
                                 <div class="board_desc_bottom">
                                     <ul class="list_mark">
-                                        <li>상수도분야 1년 이상 실무 종사(수도시설의 설&middot;치유&middot;지관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
+                                        <li>※ 상수도분야 1년 이상 실무 종사(수도시설의 설&middot;치유&middot;지관리 등 상수도 분야만 해당되며, 이외 분야는 해당 안됨.)는 실무교육을 면제함.</li>
                                         <li>상수도 분야 고용노동부 직업능력개발훈련을 400시간 이상 수료는 실무교육을 면제함.(교육훈련 수료증 제출 필수)</li>
                                         <li>실무교육은 수도시설의 설치나 운영, 유지·관리 분야의 기관·기업체의 업무 실무교육으로 '실무교육확인서'를 제출하여야 함.</li>
                                     </ul>

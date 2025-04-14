@@ -444,7 +444,7 @@
             right: 2.4rem;
             width: 2.4rem;
             height: 2.4rem;
-            background: url($url-img-icon + "bg_arrow_gray.svg") no-repeat 0 0;
+            background: url($url-img-icon + "ico_arrow_gray.svg") no-repeat 0 0;
             @include xs-mobile {
                 display: var(--hide);
             }

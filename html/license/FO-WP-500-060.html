@@ -53,78 +53,82 @@
                                 <div class="desc">진위여부 확인을 위해 아래 정보를 입력 후 조회 하시기 바랍니다.</div>
                             </div>
 
-                            <!-- form-->
-                            <div class="form_section">
-                                <!-- write -->
-                                <div class="form_list table">
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <span>자격종목</span>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_txt">상수도관망시설운영관리사</div>
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- board_write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <span>자격종목</span>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_txt">상수도관망시설운영관리사</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="userName">이름</label>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="inp size_219">
-                                                        <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                        <input type="text" id="userName" placeholder="성명 입력" autocomplete="off" />
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="userName">이름</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp size_219">
+                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                            <input type="text" id="userName" placeholder="성명 입력" autocomplete="off" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="licenseNumber">자격증번호</label>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="licenseNumber">자격증번호</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <div class="inp size_219">
+                                                                    <input type="tel" id="licenseNumber" placeholder="자격증 번호 입력" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">(영문 대소문자, 숫자 구분합니다)</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="group_box">
-                                                        <div class="box">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="licenseDate">자격취득일</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="calendar_set">
                                                             <div class="inp size_219">
-                                                                <input type="tel" id="licenseNumber" placeholder="자격증 번호 입력" autocomplete="off" />
+                                                                <input type="text" value="" placeholder="취득일" id="date1" autocomplete="off" />
                                                             </div>
                                                         </div>
-                                                        <div class="box">(영문 대소문자, 숫자 구분합니다)</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form_group">
-                                        <div class="tit">
-                                            <label for="licenseDate">자격취득일</label>
-                                        </div>
-                                        <div class="item">
-                                            <div class="cell">
-                                                <div class="form_item">
-                                                    <div class="calendar_set">
-                                                        <div class="inp size_219">
-                                                            <input type="text" value="" placeholder="취득일" id="date1" autocomplete="off" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!--// board_write -->
                                 </div>
-                                <!--// write -->
+                                <!--// form-->
 
-                                <div class="form_desc_bottom gap_mt10">
+                                <div class="board_desc_bottom gap_mt10">
                                     <p class="txt_note">자격증에 표기된 자격 취득일과 교부 년월일은 다른 항목입니다. 정확히 입력해 주세요.</p>
                                 </div>
                             </div>
-                            <!--// form-->
+                            <!--// board -->
 
                             <div class="page_btn_area">
                                 <div class="rside">
@@ -143,7 +147,7 @@
                             <!-- board -->
                             <div class="board_area">
                                 <!-- board_view -->
-                                <table class="tbl row size100">
+                                <table class="tbl react row size100">
                                     <caption>
                                         자격 종목, 자격증번호, 진위확인 결과, 진위확인 결과 정보 제공
                                     </caption>

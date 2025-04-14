@@ -19,7 +19,7 @@
         <div id="wrap" class="wrap">
             <div class="layerDim" style="display: none"></div>
 
-            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+            <div class="printout" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="applicationform">자격증 발급 신청서</button>
                 </div>
@@ -40,7 +40,7 @@
                                 <!-- board -->
                                 <div class="board_area">
                                     <!-- board_view -->
-                                    <table class="tbl size100">
+                                    <table class="tbl react size100">
                                         <caption>
                                             접수번호, 신청일, 처리일자, 처리기간 정보 제공
                                         </caption>
@@ -98,7 +98,7 @@
                                         <!-- board -->
                                         <div class="board_area">
                                             <!-- board_view -->
-                                            <table class="tbl row size100">
+                                            <table class="tbl react row size100">
                                                 <caption>
                                                     이름, 주민등록번호, 휴대폰 번호, 전화번호, 배송지 주소 정보 제공
                                                 </caption>
@@ -145,7 +145,7 @@
                                 <!-- board -->
                                 <div class="board_area">
                                     <!-- board_view -->
-                                    <table class="tbl row size100">
+                                    <table class="tbl react row size100">
                                         <caption>
                                             자격 종목, 급수 정보 제공
                                         </caption>
@@ -173,7 +173,7 @@
                                 <!-- board -->
                                 <div class="board_area">
                                     <!-- board_view -->
-                                    <table class="tbl row size100">
+                                    <table class="tbl react row size100">
                                         <caption>
                                             구분, 내용, 학력(전공), 경력 정보 제공
                                         </caption>
@@ -193,7 +193,7 @@
                                                 <td data-cell-header="학력(전공)" class="center">
                                                     <div>
                                                         4년제 대학 졸업(컴퓨터공학과)<br />
-                                                        <button type="button" class="btn_download">졸업증명서<span class="ico_download"></span></button>
+                                                        <button type="button" class="btn_download">졸업증명서</button>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -204,9 +204,9 @@
                                                         총 4년 6개월<br />
                                                         한국상하수도협회<br />
                                                         근무기간(3년 6개월): 2022.01.01~2025.08.31 (재직중)<br />
-                                                        <button type="button" class="btn_download">경력증명서<span class="ico_download"></span></button><br />
+                                                        <button type="button" class="btn_download">경력증명서</button><br />
                                                         한국상하수도협회 1년 근무기간(1년 0개월): 2022.01.01~2025.08.31<br />
-                                                        <button type="button" class="btn_download">경력증명서<span class="ico_download"></span></button>
+                                                        <button type="button" class="btn_download">경력증명서</button>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -226,14 +226,14 @@
                     <div class="foot">
                         <div class="btn_area">
                             <div class="lside">
-                                <button type="button" class="btn_outline_md">인쇄하기</button>
+                                <button type="button" class="btn_outline_md" onclick="return window.print();">인쇄하기</button>
                             </div>
                             <div class="rside">
                                 <button type="button" class="btn_primary_md layer_close">확인</button>
                             </div>
                         </div>
                     </div>
-                    <button class="btn_close layer_close"><span class="hidden">자격증 발급 신청서 닫기</span></button>
+                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
                 </div>
             </div>
             <!--// Layer : 자격증 발급 신청서 -->
@@ -245,14 +245,22 @@
             $(function () {
                 // Layer : 자격증 발급 신청서
                 $("#applicationform").click(function (e) {
-                    $("html").addClass("layerOpen");
+                    $("html").addClass("layerOpen printpop");
                     $(".layerDim").show();
                     $("#applicationformPop").show().focus();
                 });
                 $("#applicationformPop .layer_close").click(function (e) {
+                    $("html").removeClass("printpop");
                     $("#applicationform").focus(); // 접근성
                 });
             });
         </script>
+        <style>
+            @media print {
+                .printpop .printout {
+                    display: var(--hide) !important;
+                }
+            }
+        </style>
     </body>
 </html>
