@@ -2610,6 +2610,11 @@ select.round {
   margin-bottom: var(--gap-15);
   border-bottom: 0.2rem solid #083891;
 }
+@media screen and (max-width: 1024px) {
+  .tab_area .tab {
+    margin-bottom: var(--gap-50);
+  }
+}
 .tab_area .tab > li {
   display: inline-block;
 }
@@ -2659,6 +2664,15 @@ select.round {
 }
 .tab_area .scroll_area .tab::-webkit-scrollbar {
   display: none;
+}
+@media screen and (max-width: 1024px) {
+  .tab_area .board_area .tbl.react {
+    margin-top: -2.6rem;
+  }
+  .tab_area .board_area .tbl.react tr:first-child td:nth-child(2) {
+    padding-top: 0 !important;
+    border-top: 0 !important;
+  }
 }
 
 .payment_option {
@@ -2869,8 +2883,10 @@ select.round {
 .layerFix .layer_wrap .cont .alert_msg .msg.completion::before {
   background: url("../../resources/images/common/bg_completion.svg") no-repeat 0 0;
 }
+.layerFix .layer_wrap .cont .alert_msg .msg + .txt {
+  color: var(--color-darkgray);
+}
 .layerFix .layer_wrap .cont .alert_msg .txt {
-  margin-top: var(--gap-20);
   color: var(--color-darkgray);
 }
 .layerFix .layer_wrap .cont.base {

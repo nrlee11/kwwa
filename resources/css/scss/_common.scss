@@ -1779,6 +1779,9 @@ select {
         width: 100%;
         margin-bottom: var(--gap-15);
         border-bottom: 0.2rem solid #083891;
+        @include mobile {
+            margin-bottom: var(--gap-50);
+        }
         > li {
             display: inline-block;
             > button,
@@ -1829,6 +1832,17 @@ select {
             white-space: nowrap;
             &::-webkit-scrollbar {
                 display: none;
+            }
+        }
+    }
+    @include mobile {
+        .board_area {
+            .tbl.react {
+                margin-top: -2.6rem;
+                tr:first-child td:nth-child(2) {
+                    padding-top: 0 !important;
+                    border-top: 0 !important;
+                }
             }
         }
     }
@@ -2027,9 +2041,11 @@ select {
                     &.completion::before {
                         background: url($url-img-common + "bg_completion.svg") no-repeat 0 0;
                     }
+                    + .txt {
+                        color: var(--color-darkgray);
+                    }
                 }
                 .txt {
-                    margin-top: var(--gap-20);
                     color: var(--color-darkgray);
                 }
             }
