@@ -1,18 +1,10 @@
 @charset "UTF-8";
 
 // breakpoints
-// $breakpoint-xs-mobile: 319px;
-// $breakpoint-mobile: 320px;
-// $breakpoint-xs-mobile: 374px;
 $breakpoint-xs-mobile: 320px;
 $breakpoint-sm-mobile: 767px;
-$breakpoint-mobile: 1024px;
-$breakpoint-pc: 1025px;
-$breakpoint-desktop: 1200px;
-// xs, sm, md, lg, xl, xxl
-// 테블릿 768
-// 노트북 1024
-// 데스크탑 1280
+$breakpoint-mobile: 1200px;
+$breakpoint-desktop: 1201px;
 
 // url
 $url-img: "../../resources/images/";

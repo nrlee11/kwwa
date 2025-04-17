@@ -162,14 +162,33 @@ $(function () {
         });
     };
 
-    // Common Tab
+    // Common Tab (수정예정)
     const commonTab = function () {
         $(".tab_area .tab li").on("click", function () {
             $(this).parent().parent().parent().find(".tab_cont").hide().attr("aria-hidden", "true");
             $(this).parent().parent().parent().find(".tab_cont").eq($(this).index()).show().attr("aria-hidden", "false");
-            $(this).parent().find("li").removeClass("on").children("button, a").removeAttr("title");
-            $(this).addClass("on").children("button, a").attr("title", "선택 됨");
+            $(this).parent().find("li").removeClass("on").children("button, a").attr("aria-selected", "false");
+            $(this).addClass("on").children("button, a").attr("aria-selected", "true");
             return false;
+        });
+    };
+
+    // Accordion
+    const accordion = function () {
+        const accFold = $(".accordion_area .fold");
+        const accBox = $(".accordion_area .accordion_box");
+        const accBody = $(".accordion_area .accordion_body");
+        accFold.on("click", function () {
+            if ($(this).parent().parent().hasClass("is_open")) {
+                $(this).attr("aria-expanded", "false").parent().next(accBody).slideUp();
+                $(this).parent().parent().removeClass("is_open");
+            } else {
+                accBox.removeClass("is_open");
+                accFold.attr("aria-expanded", "false");
+                accBody.slideUp();
+                $(this).attr("aria-expanded", "true").parent().next(accBody).slideDown();
+                $(this).parent().parent().addClass("is_open");
+            }
         });
     };
 
@@ -251,10 +270,11 @@ $(function () {
     sideNave();
     // SideNaveClose();
     moGnbToggle();
+    selectLayer();
+    commonTab();
+    accordion();
     layerFix();
     fullLayerClose();
     alertLayerClose();
-    selectLayer();
-    commonTab();
     includeHtml();
 });

@@ -165,31 +165,6 @@
     }
 }
 
-// 실무교육
-// 실무교육 확인조회
-.result_area {
-    position: relative;
-    padding: var(--gap-16) var(--gap-16) var(--gap-16) 4.8rem;
-    border: $border #d8eedd;
-    background-color: #eaf6ec;
-    border-radius: 0.8rem;
-    &.positive {
-        background: #eaf6ec url($url-img-icon + "ico_positive.svg") no-repeat 1.6rem 1.6rem;
-    }
-    &.negative {
-        border-color: #fcdfd9;
-        background: #fdefec url($url-img-icon + "ico_negative.svg") no-repeat 1.6rem 1.6rem;
-    }
-    &.ongoing {
-        border-color: #d3ebfd;
-        background: #e7f4fe url($url-img-icon + "ico_mark.svg") no-repeat 1.6rem 1.6rem;
-    }
-    &.warning {
-        border-color: #ffe0a3;
-        background: #fff3db url($url-img-icon + "ico_warning.svg") no-repeat 1.6rem 1.6rem;
-    }
-}
-
 // 자격증 발급
 // 자격증 발급절차
 .license_process {
@@ -298,30 +273,68 @@
     }
 }
 
-// layer
-// 이용약관
-.terms_wrap {
-    .tit {
-        display: block;
-        margin: 3.2rem 0 1.3rem;
-        color: var(--color-black);
-        font-size: var(--font-size-lg);
-        font-weight: var(--font-medium);
-        &:first-child {
-            margin-top: 0;
+// 양성교육
+// 교육신청
+.consent_form {
+    margin-top: var(--gap-50);
+    padding-top: var(--gap-50);
+    border-top: $border #cdd1d5;
+    .article {
+        + .article {
+            margin-top: var(--gap-50);
+        }
+        dl {
+            dt {
+                .tit {
+                    display: block;
+                }
+            }
+            dd {
+                margin-top: var(--gap-10);
+                @include mobile {
+                    margin-top: var(--gap-20);
+                    .radio_set {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
-    ul {
-        margin-top: var(--gap-5);
-        + ul {
-            margin-top: 0;
+}
+.pay_amount_area {
+    @include flex-between;
+    align-items: center;
+    margin-top: var(--gap-17);
+    padding-bottom: var(--gap-24);
+    border-bottom: $border var(--color-black);
+    .total {
+        > strong {
+            margin-left: var(--gap-15);
+            font-size: var(--font-size-lg);
         }
-        > li > ul {
-            margin: 0.8rem 0 0.8rem 0.4rem;
+        @include mobile {
+            text-align: right;
+            span,
+            strong {
+                display: block;
+            }
         }
     }
-    .terms_info {
-        margin-top: var(--gap-20);
+}
+.page_msg {
+    @include flex-between;
+    align-items: center;
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        > div {
+            width: 100%;
+        }
+        .rside {
+            margin-top: var(--gap-50);
+            text-align: right;
+        }
     }
 }
 
@@ -368,6 +381,50 @@
             .bottom_btn_area {
                 margin-top: var(--gap-50);
             }
+        }
+    }
+}
+
+// layer
+// 이용약관
+.terms_wrap {
+    .tit {
+        display: block;
+        margin: 3.2rem 0 1.3rem;
+        color: var(--color-black);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-medium);
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    ul {
+        margin-top: var(--gap-5);
+        + ul {
+            margin-top: 0;
+        }
+        > li > ul {
+            margin: 0.8rem 0 0.8rem 0.4rem;
+        }
+    }
+    .terms_info {
+        margin-top: var(--gap-20);
+    }
+}
+
+// 환불 정보
+.payment_info {
+    margin-top: var(--gap-24);
+    padding: var(--gap-12) var(--gap-16);
+    border: $border #cdd1d5;
+    .item {
+        display: flex;
+        .item_tit {
+            width: 7.5rem;
+            font-weight: var(--font-semibold);
+        }
+        .item_cont {
+            flex: 1;
         }
     }
 }

@@ -5,9 +5,6 @@
     width: 100%;
     height: 100%;
     min-width: 120rem;
-    @include desktop {
-        min-width: auto;
-    }
     @include mobile {
         min-width: 28rem;
     }
@@ -95,10 +92,6 @@
         width: 120rem;
         margin: 0 auto;
         padding: var(--gap-30) 0;
-        @include desktop {
-            width: auto;
-            margin: 0 var(--gap-24);
-        }
         @include mobile {
             width: auto;
             margin: 0;
@@ -180,9 +173,6 @@
     > .lyinner {
         display: flex;
         gap: 6.4rem;
-        @include desktop {
-            margin: 0 var(--gap-24);
-        }
         @include mobile {
             margin: 0;
             display: block;
@@ -194,7 +184,11 @@
     }
     #contents {
         flex: 1;
+        width: 88.8rem;
         padding: 2.3rem 0 10rem;
+        @include mobile {
+            width: 100%;
+        }
         .section + .section {
             margin-top: var(--gap-50);
         }
@@ -229,11 +223,8 @@
     .inner {
         width: 120rem;
         margin: 0 auto;
-        @include desktop {
-            width: auto;
-            margin: 0 var(--gap-24);
-        }
         @include mobile {
+            width: auto;
             margin: 0 var(--gap-24);
         }
         @include sm-mobile {
@@ -260,10 +251,6 @@
         width: 120rem;
         margin: 0 auto;
         padding-bottom: 9rem;
-        @include desktop {
-            width: auto;
-            margin: 0 var(--gap-24);
-        }
         @include mobile {
             margin: 0;
         }
@@ -412,10 +399,6 @@
     display: block;
     max-width: 120rem;
     margin: 0 auto;
-    @include desktop {
-        max-width: auto;
-        margin: 0 var(--gap-20);
-    }
     .depth1 {
         @include flex-between;
         > li {

@@ -5,11 +5,6 @@
         @content;
     }
 }
-// @mixin xsh-mobile {
-//     @media screen and (max-height: #{$breakpoint-xs-mobile}) {
-//         @content;
-//     }
-// }
 @mixin sm-mobile {
     @media screen and (max-width: #{$breakpoint-sm-mobile}) {
         @content;
@@ -21,12 +16,7 @@
     }
 }
 @mixin desktop {
-    @media screen and (max-width: #{$breakpoint-desktop}) {
-        @content;
-    }
-}
-@mixin pc {
-    @media screen and (min-width: #{$breakpoint-pc}) {
+    @media screen and (min-width: #{$breakpoint-desktop}) {
         @content;
     }
 }
