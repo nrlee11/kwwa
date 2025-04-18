@@ -176,8 +176,8 @@ $(function () {
     // Accordion
     const accordion = function () {
         const accFold = $(".accordion_area .fold");
-        const accBox = $(".accordion_area .accordion_box");
-        const accBody = $(".accordion_area .accordion_body");
+        const accBox = $(".accordion_box");
+        const accBody = $(".accordion_body");
         accFold.on("click", function () {
             if ($(this).parent().parent().hasClass("is_open")) {
                 $(this).attr("aria-expanded", "false").parent().next(accBody).slideUp();
@@ -186,9 +186,15 @@ $(function () {
                 accBox.removeClass("is_open");
                 accFold.attr("aria-expanded", "false");
                 accBody.slideUp();
-                $(this).attr("aria-expanded", "true").parent().next(accBody).slideDown();
                 $(this).parent().parent().addClass("is_open");
-            }
+                $(this).attr("aria-expanded", "true").parent().next(accBody).slideDown();
+
+                setTimeout(() => {
+                    $('body, html').animate({
+                      scrollTop: $(this).offset().top - 19
+                     }, 500)
+                  }, 400)
+            }   
         });
     };
 

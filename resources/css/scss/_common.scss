@@ -718,7 +718,7 @@ select {
         background-color: var(--color-darkgray);
         -webkit-transition: 0.4s;
         transition: 0.4s;
-        border-radius: 100rem;
+        border-radius: 5rem;
         &::before,
         &::after {
             content: "";
@@ -1814,7 +1814,6 @@ select {
         }
     }
     .box {
-        position: relative;
         display: flex;
         gap: 0 3.3rem;
         padding: var(--gap-20) 14rem var(--gap-20) 2.3rem;
@@ -1938,6 +1937,7 @@ select {
     }
     &.md {
         .box {
+            position: relative;
             padding-right: 48.4rem;
             @include mobile {
                 padding-right: var(--gap-16);
@@ -2315,6 +2315,7 @@ select {
 // tab
 .tab_area {
     .tab {
+        overflow: hidden;
         position: relative;
         display: flex;
         align-items: flex-end;

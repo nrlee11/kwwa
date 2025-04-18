@@ -1580,7 +1580,7 @@ select.round {
   background-color: var(--color-darkgray);
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 100rem;
+  border-radius: 5rem;
 }
 .switch .slider::before, .switch .slider::after {
   content: "";
@@ -2640,7 +2640,6 @@ select.round {
   background-color: #eef3ff;
 }
 .edu_group .box {
-  position: relative;
   display: flex;
   gap: 0 3.3rem;
   padding: var(--gap-20) 14rem var(--gap-20) 2.3rem;
@@ -2775,6 +2774,7 @@ select.round {
   background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
 }
 .edu_group.md .box {
+  position: relative;
   padding-right: 48.4rem;
 }
 @media screen and (max-width: 1200px) {
@@ -3136,6 +3136,7 @@ select.round {
 }
 
 .tab_area .tab {
+  overflow: hidden;
   position: relative;
   display: flex;
   align-items: flex-end;

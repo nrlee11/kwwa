@@ -305,6 +305,7 @@
                     }
                 });
                 $("#switchAlarmPop1 .layer_close, #switchAlarmPop2 .layer_close").click(function () {
+                    $("html").removeClass("layerOpen");
                     $("#alarm1").focus(); // 접근성
                     // $("#alarm2").focus();
                 });
