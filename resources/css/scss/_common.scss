@@ -56,6 +56,9 @@
     &_mt10 {
         margin-top: var(--gap-10) !important;
     }
+    &_mt14 {
+        margin-top: var(--gap-14) !important;
+    }
     &_mt20 {
         margin-top: var(--gap-20) !important;
     }
@@ -139,6 +142,9 @@
     }
     &_underline {
         text-decoration: underline;
+    }
+    &_size_lg {
+        font-size: var(--font-size-lg);
     }
 }
 .txt_note {
@@ -260,6 +266,35 @@
         &::before {
             background: url($url-img-icon + "ico_negative.svg") no-repeat 0 0;
         }
+    }
+}
+[class^="value_"] {
+    display: inline-block;
+    min-width: 8.9rem;
+    height: 2.6rem;
+    padding: 0 var(--gap-15);
+    border-radius: 5rem;
+    color: var(--color-white);
+    font-weight: var(--font-semibold);
+    line-height: 2.6rem;
+    text-align: center;
+    &[class*="_badge1"] {
+        background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
+    }
+    &[class*="_badge2"] {
+        color: var(--color-blue);
+        border: $border var(--color-blue);
+        background-color: var(--color-white);
+        line-height: 2.4rem;
+    }
+    &[class*="_badge3"] {
+        background: linear-gradient(90deg, #7ec88e 0%, #228738 100%);
+    }
+    &[class*="_badge4"] {
+        background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
+    }
+    &[class*="_badge5"] {
+        background: linear-gradient(90deg, #ffb114 0%, #9e6a00 100%);
     }
 }
 
@@ -676,6 +711,19 @@ select {
             }
         }
     }
+    &.alone {
+        width: 2rem;
+        height: 2rem;
+        input[type="checkbox"] {
+            + label {
+                width: 2rem;
+                height: 2rem;
+                > span {
+                    display: var(--hide);
+                }
+            }
+        }
+    }
 }
 .check_set {
     margin-top: -1rem;
@@ -692,6 +740,11 @@ select {
         // opacity: 0;
         width: 6rem;
         height: 2.4rem;
+        @include mobile {
+            width: 1rem;
+            height: 1rem;
+            margin: 0 0 0 3rem;
+        }
         &:checked {
             + .slider {
                 background-color: var(--color-blue);
@@ -1614,6 +1667,9 @@ select {
                             }
                         }
                     }
+                    .check_set {
+                        margin-top: 0;
+                    }
                 }
             }
         }
@@ -2127,6 +2183,27 @@ select {
             text-align: center;
             @include sm-mobile {
                 width: 100%;
+            }
+        }
+        &.sm {
+            gap: 0 3rem;
+            .timetable {
+                gap: 0 1.5rem;
+                > div {
+                    width: 11.6rem;
+                    &:first-child {
+                        width: 10rem;
+                    }
+                    &:nth-child(2) {
+                        width: 13rem;
+                    }
+                    &:nth-child(4) {
+                        width: 9.7rem;
+                    }
+                    &:last-child {
+                        width: 6rem;
+                    }
+                }
             }
         }
     }
