@@ -610,6 +610,11 @@
             }
             .btn_area {
                 margin-top: var(--gap-14);
+                [class^="btn_"] {
+                    + [class^="btn_"] {
+                        margin-top: var(--gap-5);
+                    }
+                }
             }
         }
         .btn_side_close {
@@ -625,7 +630,7 @@
     .side_nav {
         overflow-y: auto;
         width: 100%;
-        height: calc(100% - 10.8rem);
+        height: calc(100% - 14.3rem);
         padding: 0 var(--gap-12) 4.8rem var(--gap-16);
         .depth1 {
             > li {
