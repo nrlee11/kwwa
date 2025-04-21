@@ -941,11 +941,17 @@ button {
 .gap_mt14 {
   margin-top: var(--gap-14) !important;
 }
+.gap_mt15 {
+  margin-top: var(--gap-15) !important;
+}
 .gap_mt20 {
   margin-top: var(--gap-20) !important;
 }
 .gap_mt24 {
   margin-top: var(--gap-24) !important;
+}
+.gap_mt28 {
+  margin-top: var(--gap-28) !important;
 }
 .gap_mt33 {
   margin-top: 3.3rem !important;
@@ -955,6 +961,9 @@ button {
 }
 .gap_mt50 {
   margin-top: var(--gap-50) !important;
+}
+.gap_mb0 {
+  margin-bottom: 0 !important;
 }
 .gap_mb10 {
   margin-bottom: var(--gap-10) !important;
@@ -1105,6 +1114,7 @@ button {
 }
 
 .tit_area {
+  position: relative;
   margin-bottom: var(--gap-24);
 }
 .tit_area .tit {
@@ -1126,6 +1136,21 @@ button {
 }
 .tit_area .desc {
   margin-top: var(--gap-24);
+}
+.tit_area .right_position {
+  position: absolute;
+  top: -0.6rem;
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  .tit_area .right_position {
+    position: static;
+    margin-top: var(--gap-24);
+    text-align: right;
+  }
+}
+.tit_area.center {
+  text-align: center;
 }
 
 .badge_positive, .badge_negative {
@@ -1153,7 +1178,7 @@ button {
 
 [class^=value_] {
   display: inline-block;
-  min-width: 8.9rem;
+  min-width: 7.5rem;
   height: 2.6rem;
   padding: 0 var(--gap-15);
   border-radius: 5rem;
@@ -1175,10 +1200,22 @@ button {
   background: linear-gradient(90deg, #7ec88e 0%, #228738 100%);
 }
 [class^=value_][class*=_badge4] {
-  background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
+  color: #de3412;
+  border: 0.1rem solid #de3412;
+  background-color: var(--color-white);
+  line-height: 2.4rem;
 }
 [class^=value_][class*=_badge5] {
   background: linear-gradient(90deg, #ffb114 0%, #9e6a00 100%);
+}
+[class^=value_][class*=_badge6] {
+  background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
+}
+
+.badge_set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
 }
 
 .progress-bar {
@@ -2352,6 +2389,21 @@ select.round {
   font-size: var(--font-size-md);
   font-weight: var(--font-regular);
 }
+.form_section .form_tit.bg {
+  padding: var(--gap-10);
+  text-align: center;
+  background-color: var(--color-lightblue);
+}
+.form_section .form_tit.bg .tit {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-medium);
+}
+@media screen and (max-width: 1200px) {
+  .form_section .form_tit.bg {
+    padding: var(--gap-10) var(--gap-35);
+    text-align: left;
+  }
+}
 .form_section .form_list {
   padding: var(--gap-20) 0;
   border-top: 0.1rem solid var(--color-black);
@@ -2389,6 +2441,9 @@ select.round {
   .form_section .form_list .form_group .tit {
     width: 100%;
   }
+  .form_section .form_list .form_group .tit + .item {
+    margin-top: var(--gap-10);
+  }
 }
 .form_section .form_list .form_group .tit > label,
 .form_section .form_list .form_group .tit > span {
@@ -2403,11 +2458,6 @@ select.round {
 }
 .form_section .form_list .form_group .item {
   flex: 1;
-}
-@media screen and (max-width: 1200px) {
-  .form_section .form_list .form_group .item {
-    margin-top: var(--gap-10);
-  }
 }
 .form_section .form_list .form_group .item .cell + .cell {
   margin-top: var(--gap-20);
@@ -2699,7 +2749,7 @@ select.round {
 .edu_group .box {
   display: flex;
   gap: 0 3.3rem;
-  padding: var(--gap-20) 14rem var(--gap-20) 2.3rem;
+  padding: var(--gap-20);
   border: 0.1rem solid #cdd1d5;
   border-radius: 1rem;
   background-color: var(--color-white);
@@ -2721,25 +2771,58 @@ select.round {
     display: var(--hide);
   }
 }
-.edu_group .timetable {
-  flex: 1;
-  display: block;
-}
-.edu_group .timetable .edu_info {
+.edu_group .edu_info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: var(--gap-20);
 }
-.edu_group .timetable .edu_info .date {
+.edu_group .edu_info .date {
   color: #b1b8be;
 }
 @media screen and (max-width: 320px) {
-  .edu_group .timetable .edu_info {
+  .edu_group .edu_info {
     flex-direction: column;
   }
-  .edu_group .timetable .edu_info .date {
+  .edu_group .edu_info .rside {
     margin-top: var(--gap-10);
+  }
+}
+.edu_group .edu_info.more {
+  margin-bottom: var(--gap-15);
+}
+.edu_group .edu_info.more .badge_set {
+  display: inline-block;
+  margin-top: -0.5rem;
+}
+.edu_group .edu_info.more .badge_set [class^=value_] {
+  margin: var(--gap-5) var(--gap-5) 0 0;
+}
+.edu_group .edu_info.more .wl_number {
+  display: inline-block;
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .edu_info.more {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem 0;
+  }
+  .edu_group .edu_info.more .wl_number {
+    display: block;
+    margin-top: var(--gap-10);
+  }
+  .edu_group .edu_info.more .wl_number {
+    margin-top: var(--gap-10);
+  }
+}
+.edu_group .timetable {
+  display: block;
+  width: 47.2rem;
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .timetable {
+    width: 100% !important;
   }
 }
 .edu_group .timetable .edu_tit {
@@ -2768,6 +2851,9 @@ select.round {
   align-items: flex-start;
   line-height: 2.28rem;
   text-align: left;
+}
+.edu_group .timetable > .cell + .cell {
+  margin-top: var(--gap-4);
 }
 @media screen and (max-width: 767px) {
   .edu_group .timetable > .cell {
@@ -2800,6 +2886,22 @@ select.round {
   color: var(--color-darkblack);
   font-weight: var(--font-medium);
 }
+.edu_group .edu_result .grade {
+  display: flex;
+  align-items: center;
+  gap: 0 1.5rem;
+}
+.edu_group .edu_result .grade .txt {
+  color: #8a949e;
+  font-weight: var(--font-semibold);
+}
+.edu_group .edu_result .grade + .msg {
+  margin-top: var(--gap-15);
+}
+.edu_group .edu_result .msg {
+  color: var(--color-darkblack);
+  font-weight: var(--font-semibold);
+}
 .edu_group .crew {
   display: inline-block;
   min-width: 7.5rem;
@@ -2830,22 +2932,27 @@ select.round {
   justify-content: space-between;
   background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
 }
+.edu_group .wl_number {
+  color: var(--color-darkgray);
+}
+.edu_group.lg .box {
+  flex-direction: column;
+}
+.edu_group.lg .timetable {
+  width: 50.7rem;
+}
 .edu_group.md .box {
   position: relative;
-  padding-right: 48.4rem;
+  flex-direction: column;
+  min-height: 21rem;
 }
 @media screen and (max-width: 1200px) {
   .edu_group.md .box {
     padding-right: var(--gap-16);
   }
 }
-.edu_group.md .timetable .edu_info {
-  margin-right: -45.4rem;
-}
-@media screen and (max-width: 1200px) {
-  .edu_group.md .timetable .edu_info {
-    margin-right: 0;
-  }
+.edu_group.md .timetable {
+  width: 37.4rem;
 }
 @media screen and (max-width: 1200px) {
   .edu_group.md .timetable > .cell.btn_position {
@@ -2863,6 +2970,9 @@ select.round {
   .edu_group.sm .box {
     gap: 0;
   }
+}
+.edu_group.sm .timetable {
+  width: 51rem;
 }
 .edu_group.sm .thumbnail {
   width: 10.2rem;
@@ -3136,9 +3246,12 @@ select.round {
 .notice_box .tit {
   color: #096ab3;
   font-weight: var(--font-bold);
+  padding-left: var(--gap-28);
 }
 .notice_box .tit + .txt {
   margin-top: var(--gap-20);
+}
+.notice_box .tit .txt {
   color: var(--color-gray);
 }
 .notice_box .tit:has([class*=_marknavy]) {
@@ -3190,6 +3303,13 @@ select.round {
 .result_area.warning {
   border-color: #ffe0a3;
   background: #fff3db url("../../resources/images/icon/ico_warning.svg") no-repeat 1.6rem 1.6rem;
+}
+.result_area.base {
+  padding: var(--gap-20);
+  color: var(--color-darkblack);
+  font-weight: var(--font-medium);
+  border-color: #cdd1d5;
+  background-color: var(--color-white);
 }
 
 .notice_area .notice_head {
@@ -3340,7 +3460,7 @@ select.round {
   position: relative;
   display: block;
   width: 100%;
-  padding: 1.9rem 27rem 1.9rem 1.9rem;
+  padding: 1.9rem;
   border: 0.1rem solid #cdd1d5;
   border-radius: 1rem;
 }
@@ -3671,7 +3791,6 @@ select.round {
 }
 .layerFix .layer_wrap .board_area [class^=board_desc][class*=_top] {
   margin-bottom: var(--gap-10);
-  font-size: 1.2rem;
 }
 .layerFix .layer_wrap .board_area [class^=board_desc][class*=_bottom] {
   margin-top: var(--gap-20);
@@ -4101,6 +4220,14 @@ select.round {
   .bottom_btn_area.cell4 > div + div {
     margin-top: var(--gap-15);
   }
+}
+@media screen and (max-width: 1200px) and (max-width: 320px) {
+  .bottom_btn_area.cell4 > div {
+    flex-direction: column;
+    gap: 1.5rem 0;
+  }
+}
+@media screen and (max-width: 1200px) {
   .bottom_btn_area.cell4 [class^=btn_] {
     margin: 0;
   }
@@ -5204,6 +5331,15 @@ select.round {
   .page_msg .rside {
     margin-top: var(--gap-50);
     text-align: right;
+  }
+}
+
+.gap_react_area .gap_react {
+  margin-top: var(--gap-24);
+}
+@media screen and (max-width: 1200px) {
+  .gap_react_area .gap_react {
+    margin-top: var(--gap-50);
   }
 }
 

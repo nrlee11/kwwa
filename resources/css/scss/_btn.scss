@@ -241,6 +241,10 @@
                 + div {
                     margin-top: var(--gap-15);
                 }
+                @include xs-mobile {
+                    flex-direction: column;
+                    gap: 1.5rem 0;
+                }
             }
             [class^="btn_"] {
                 margin: 0;

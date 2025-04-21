@@ -59,11 +59,17 @@
     &_mt14 {
         margin-top: var(--gap-14) !important;
     }
+    &_mt15 {
+        margin-top: var(--gap-15) !important;
+    }
     &_mt20 {
         margin-top: var(--gap-20) !important;
     }
     &_mt24 {
         margin-top: var(--gap-24) !important;
+    }
+    &_mt28 {
+        margin-top: var(--gap-28) !important;
     }
     &_mt33 {
         margin-top: 3.3rem !important;
@@ -73,6 +79,9 @@
     }
     &_mt50 {
         margin-top: var(--gap-50) !important;
+    }
+    &_mb0 {
+        margin-bottom: 0 !important;
     }
     &_mb10 {
         margin-bottom: var(--gap-10) !important;
@@ -225,6 +234,7 @@
     }
 }
 .tit_area {
+    position: relative;
     margin-bottom: var(--gap-24);
     .tit {
         font-size: var(--font-size-lg);
@@ -242,6 +252,19 @@
     }
     .desc {
         margin-top: var(--gap-24);
+    }
+    .right_position {
+        position: absolute;
+        top: -0.6rem;
+        right: 0;
+        @include mobile {
+            position: static;
+            margin-top: var(--gap-24);
+            text-align: right;
+        }
+    }
+    &.center {
+        text-align: center;
     }
 }
 
@@ -270,7 +293,7 @@
 }
 [class^="value_"] {
     display: inline-block;
-    min-width: 8.9rem;
+    min-width: 7.5rem;
     height: 2.6rem;
     padding: 0 var(--gap-15);
     border-radius: 5rem;
@@ -291,11 +314,22 @@
         background: linear-gradient(90deg, #7ec88e 0%, #228738 100%);
     }
     &[class*="_badge4"] {
-        background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
+        color: #de3412;
+        border: $border #de3412;
+        background-color: var(--color-white);
+        line-height: 2.4rem;
     }
     &[class*="_badge5"] {
         background: linear-gradient(90deg, #ffb114 0%, #9e6a00 100%);
     }
+    &[class*="_badge6"] {
+        background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
+    }
+}
+.badge_set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
 }
 
 // progress-bar
@@ -1516,6 +1550,19 @@ select {
             font-size: var(--font-size-md);
             font-weight: var(--font-regular);
         }
+        &.bg {
+            padding: var(--gap-10);
+            text-align: center;
+            background-color: var(--color-lightblue);
+            .tit {
+                font-size: var(--font-size-lg);
+                font-weight: var(--font-medium);
+            }
+            @include mobile {
+                padding: var(--gap-10) var(--gap-35);
+                text-align: left;
+            }
+        }
     }
     .form_list {
         padding: var(--gap-20) 0;
@@ -1544,6 +1591,9 @@ select {
                 width: 20.4rem;
                 @include mobile {
                     width: 100%;
+                    + .item {
+                        margin-top: var(--gap-10);
+                    }
                 }
                 > label,
                 > span {
@@ -1556,9 +1606,6 @@ select {
             }
             .item {
                 flex: 1;
-                @include mobile {
-                    margin-top: var(--gap-10);
-                }
                 .cell {
                     + .cell {
                         margin-top: var(--gap-20);
@@ -1872,7 +1919,8 @@ select {
     .box {
         display: flex;
         gap: 0 3.3rem;
-        padding: var(--gap-20) 14rem var(--gap-20) 2.3rem;
+        // padding: var(--gap-20) 14rem var(--gap-20) 2.3rem;
+        padding: var(--gap-20);
         border: $border #cdd1d5;
         border-radius: 1rem;
         background-color: var(--color-white);
@@ -1890,22 +1938,52 @@ select {
             display: var(--hide);
         }
     }
-    .timetable {
-        flex: 1;
-        display: block;
-        .edu_info {
-            @include flex-between;
-            align-items: center;
-            margin-bottom: var(--gap-20);
-            .date {
-                color: #b1b8be;
+    .edu_info {
+        @include flex-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: var(--gap-20);
+        .date {
+            color: #b1b8be;
+        }
+        @include xs-mobile {
+            flex-direction: column;
+            .rside {
+                margin-top: var(--gap-10);
             }
-            @include xs-mobile {
+        }
+        &.more {
+            margin-bottom: var(--gap-15);
+            .badge_set {
+                display: inline-block;
+                margin-top: -0.5rem;
+                [class^="value_"] {
+                    margin: var(--gap-5) var(--gap-5) 0 0;
+                }
+            }
+            .wl_number {
+                display: inline-block;
+            }
+            @include mobile {
                 flex-direction: column;
-                .date {
+                align-items: flex-start;
+                gap: 1rem 0;
+                .wl_number {
+                    display: block;
+                    margin-top: var(--gap-10);
+                }
+                .wl_number {
                     margin-top: var(--gap-10);
                 }
             }
+        }
+    }
+    .timetable {
+        // flex: 1;
+        display: block;
+        width: 47.2rem;
+        @include mobile {
+            width: 100% !important;
         }
         .edu_tit {
             display: flex;
@@ -1931,6 +2009,9 @@ select {
             align-items: flex-start;
             line-height: 2.28rem;
             text-align: left;
+            + .cell {
+                margin-top: var(--gap-4);
+            }
             @include sm-mobile {
                 flex-direction: column;
                 gap: 0.2rem 0;
@@ -1962,6 +2043,23 @@ select {
             }
         }
     }
+    .edu_result {
+        .grade {
+            @include flex-aligncenter;
+            gap: 0 1.5rem;
+            .txt {
+                color: #8a949e;
+                font-weight: var(--font-semibold);
+            }
+            + .msg {
+                margin-top: var(--gap-15);
+            }
+        }
+        .msg {
+            color: var(--color-darkblack);
+            font-weight: var(--font-semibold);
+        }
+    }
     .crew {
         display: inline-block;
         min-width: 7.5rem;
@@ -1991,21 +2089,28 @@ select {
             background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
         }
     }
+    .wl_number {
+        color: var(--color-darkgray);
+    }
+    &.lg {
+        .box {
+            flex-direction: column;
+        }
+        .timetable {
+            width: 50.7rem;
+        }
+    }
     &.md {
         .box {
             position: relative;
-            padding-right: 48.4rem;
+            flex-direction: column;
+            min-height: 21rem;
             @include mobile {
                 padding-right: var(--gap-16);
             }
         }
         .timetable {
-            .edu_info {
-                margin-right: -45.4rem;
-                @include mobile {
-                    margin-right: 0;
-                }
-            }
+            width: 37.4rem;
             > .cell {
                 @include mobile {
                     &.btn_position {
@@ -2025,6 +2130,9 @@ select {
             @include mobile {
                 gap: 0;
             }
+        }
+        .timetable {
+            width: 51rem;
         }
         .thumbnail {
             width: 10.2rem;
@@ -2303,8 +2411,11 @@ select {
     .tit {
         color: #096ab3;
         font-weight: var(--font-bold);
+        padding-left: var(--gap-28);
         + .txt {
             margin-top: var(--gap-20);
+        }
+        .txt {
             color: var(--color-gray);
         }
         & {
@@ -2359,6 +2470,13 @@ select {
     &.warning {
         border-color: #ffe0a3;
         background: #fff3db url($url-img-icon + "ico_warning.svg") no-repeat 1.6rem 1.6rem;
+    }
+    &.base {
+        padding: var(--gap-20);
+        color: var(--color-darkblack);
+        font-weight: var(--font-medium);
+        border-color: #cdd1d5;
+        background-color: var(--color-white);
     }
 }
 
@@ -2524,7 +2642,7 @@ select {
                     position: relative;
                     display: block;
                     width: 100%;
-                    padding: 1.9rem 27rem 1.9rem 1.9rem;
+                    padding: 1.9rem;
                     border: $border #cdd1d5;
                     border-radius: 1rem;
                     @include mobile {
@@ -2849,7 +2967,6 @@ select {
             [class^="board_desc"] {
                 &[class*="_top"] {
                     margin-bottom: var(--gap-10);
-                    font-size: 1.2rem;
                 }
                 &[class*="_bottom"] {
                     margin-top: var(--gap-20);

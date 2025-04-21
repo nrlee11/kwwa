@@ -338,6 +338,17 @@
     }
 }
 
+// 평가시험
+// 합격조회 (간격이 다틀림)
+.gap_react_area {
+    .gap_react {
+        margin-top: var(--gap-24);
+        @include mobile {
+            margin-top: var(--gap-50);
+        }
+    }
+}
+
 // 에러페이지
 .error_wrap {
     padding: 0 var(--gap-16);
