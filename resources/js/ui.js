@@ -148,6 +148,31 @@ $(function () {
             });
     }
 
+    function lnbToggle() {
+        $(document)
+            .off("click.lnb")
+            .on("click.lnb", "#lnb > li > a", function (e) {
+                e.preventDefault();
+
+                var $this = $(this),
+                    $sub = $this.next("ul"),
+                    $li = $("#lnb > li"),
+                    $subDepth = $("#lnb > li > ul"),
+                    _hasSub = $sub.length >= 1,
+                    _bool = $this.parent().hasClass("on");
+
+                $li.removeClass("on");
+                $this.parent().toggleClass("on", _hasSub && !_bool);
+
+                if (_hasSub && !_bool) {
+                    $subDepth.slideUp(300); // 모두 닫기
+                    $sub.slideDown(300); // 열기
+                } else {
+                    $sub.slideUp(300); // 닫기
+                }
+            });
+    }
+
     // Select Layer
     const selectLayer = function () {
         const $this = $(".select_layer .select_tit");
@@ -190,11 +215,14 @@ $(function () {
                 $(this).attr("aria-expanded", "true").parent().next(accBody).slideDown();
 
                 setTimeout(() => {
-                    $('body, html').animate({
-                      scrollTop: $(this).offset().top - 19
-                     }, 500)
-                  }, 400)
-            }   
+                    $("body, html").animate(
+                        {
+                            scrollTop: $(this).offset().top - 19,
+                        },
+                        500
+                    );
+                }, 400);
+            }
         });
     };
 
@@ -276,6 +304,7 @@ $(function () {
     sideNave();
     // SideNaveClose();
     moGnbToggle();
+    lnbToggle();
     selectLayer();
     commonTab();
     accordion();

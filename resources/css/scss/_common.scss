@@ -2030,6 +2030,17 @@ select {
                         margin-top: var(--gap-10);
                     }
                 }
+                &.middle {
+                    top: 50%;
+                    margin-top: -2.4rem;
+                    @include mobile {
+                        position: static;
+                        margin-top: var(--gap-15);
+                        [class^="btn_"] {
+                            width: 100%;
+                        }
+                    }
+                }
             }
             > .tit {
                 width: 10rem;
@@ -2058,6 +2069,16 @@ select {
         .msg {
             color: var(--color-darkblack);
             font-weight: var(--font-semibold);
+        }
+    }
+    .edu_note {
+        margin: var(--gap-20) -2rem 0;
+        padding: var(--gap-20) var(--gap-20) 0;
+        color: var(--color-darkblack);
+        font-weight: var(--font-medium);
+        background: url($url-img-common + "bg_dotted.png") repeat-x 0 0;
+        @include mobile {
+            margin: var(--gap-15) -1.6rem 0;
         }
     }
     .crew {
@@ -2094,6 +2115,7 @@ select {
     }
     &.lg {
         .box {
+            position: relative;
             flex-direction: column;
         }
         .timetable {

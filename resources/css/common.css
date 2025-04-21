@@ -410,6 +410,65 @@ button {
   width: 24.8rem;
   margin-top: 2.3rem;
 }
+#container #aside .aside_title .tit {
+  margin: var(--gap-24) var(--gap-8) var(--gap-16);
+  font-size: var(--font-size-lg);
+}
+#container #aside .lnb {
+  border-top: 0.1rem solid #8a949e;
+}
+#container #aside .lnb > li {
+  min-height: 5.7rem;
+  border-bottom: 0.1rem solid #cdd1d5;
+}
+#container #aside .lnb > li > a {
+  position: relative;
+  display: block;
+  padding: var(--gap-16) var(--gap-8);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-bold);
+}
+#container #aside .lnb > li:has(ul) > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -1rem;
+  background: url("../../resources/images/common/bg_lnb.svg") no-repeat 0 0;
+}
+#container #aside .lnb > li.on > a, #container #aside .lnb > li:hover > a {
+  background-color: #eef2f7;
+}
+#container #aside .lnb .depth2 {
+  border-top: 0.3rem solid #063a74;
+  padding: var(--gap-8) 0;
+}
+#container #aside .lnb .depth2 > li > a {
+  position: relative;
+  display: block;
+  min-height: 4.2rem;
+  padding: var(--gap-8) var(--gap-28);
+  font-size: var(--font-size-md);
+  border-radius: 0.6rem;
+  background-color: var(--color-white);
+}
+#container #aside .lnb .depth2 > li > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  left: 1.6rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: -0.2rem;
+  border-radius: 50%;
+  background-color: #33363d;
+}
+#container #aside .lnb .depth2 > li.on > a, #container #aside .lnb .depth2 > li:hover > a {
+  background-color: #eef2f7;
+}
 #container #contents {
   flex: 1;
   width: 88.8rem;
@@ -2876,6 +2935,19 @@ select.round {
 .edu_group .timetable > .cell.btn_position [class^=btn_] + [class^=btn_] {
   margin-top: var(--gap-10);
 }
+.edu_group .timetable > .cell.btn_position.middle {
+  top: 50%;
+  margin-top: -2.4rem;
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .timetable > .cell.btn_position.middle {
+    position: static;
+    margin-top: var(--gap-15);
+  }
+  .edu_group .timetable > .cell.btn_position.middle [class^=btn_] {
+    width: 100%;
+  }
+}
 .edu_group .timetable > .cell > .tit {
   width: 10rem;
   padding-right: var(--gap-10);
@@ -2901,6 +2973,18 @@ select.round {
 .edu_group .edu_result .msg {
   color: var(--color-darkblack);
   font-weight: var(--font-semibold);
+}
+.edu_group .edu_note {
+  margin: var(--gap-20) -2rem 0;
+  padding: var(--gap-20) var(--gap-20) 0;
+  color: var(--color-darkblack);
+  font-weight: var(--font-medium);
+  background: url("../../resources/images/common/bg_dotted.png") repeat-x 0 0;
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .edu_note {
+    margin: var(--gap-15) -1.6rem 0;
+  }
 }
 .edu_group .crew {
   display: inline-block;
@@ -2936,6 +3020,7 @@ select.round {
   color: var(--color-darkgray);
 }
 .edu_group.lg .box {
+  position: relative;
   flex-direction: column;
 }
 .edu_group.lg .timetable {
@@ -5331,15 +5416,6 @@ select.round {
   .page_msg .rside {
     margin-top: var(--gap-50);
     text-align: right;
-  }
-}
-
-.gap_react_area .gap_react {
-  margin-top: var(--gap-24);
-}
-@media screen and (max-width: 1200px) {
-  .gap_react_area .gap_react {
-    margin-top: var(--gap-50);
   }
 }
 
