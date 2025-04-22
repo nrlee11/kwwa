@@ -1895,7 +1895,7 @@ select {
             height: 2.4rem;
             margin-top: -1.2rem;
             background: url($url-img-icon + "ico_arrow_gray2.svg") no-repeat 0 0;
-            @include sm-mobile {
+            @include mobile {
                 top: auto;
                 left: 50%;
                 bottom: 1.6rem;
@@ -1905,7 +1905,7 @@ select {
             }
         }
         .box {
-            @include sm-mobile {
+            @include mobile {
                 padding: var(--gap-16) var(--gap-16) var(--gap-40);
             }
         }
@@ -1919,13 +1919,12 @@ select {
     .box {
         display: flex;
         gap: 0 3.3rem;
-        // padding: var(--gap-20) 14rem var(--gap-20) 2.3rem;
         padding: var(--gap-20);
         border: $border #cdd1d5;
         border-radius: 1rem;
         background-color: var(--color-white);
         @include sm-mobile {
-            padding: var(--gap-16);
+            padding: var(--gap-16) !important;
         }
     }
     .thumbnail {
@@ -1938,48 +1937,7 @@ select {
             display: var(--hide);
         }
     }
-    .edu_info {
-        @include flex-between;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: var(--gap-20);
-        .date {
-            color: #b1b8be;
-        }
-        @include xs-mobile {
-            flex-direction: column;
-            .rside {
-                margin-top: var(--gap-10);
-            }
-        }
-        &.more {
-            margin-bottom: var(--gap-15);
-            .badge_set {
-                display: inline-block;
-                margin-top: -0.5rem;
-                [class^="value_"] {
-                    margin: var(--gap-5) var(--gap-5) 0 0;
-                }
-            }
-            .wl_number {
-                display: inline-block;
-            }
-            @include mobile {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem 0;
-                .wl_number {
-                    display: block;
-                    margin-top: var(--gap-10);
-                }
-                .wl_number {
-                    margin-top: var(--gap-10);
-                }
-            }
-        }
-    }
     .timetable {
-        // flex: 1;
         display: block;
         width: 47.2rem;
         @include mobile {
@@ -1991,11 +1949,11 @@ select {
             margin-bottom: var(--gap-10);
             padding-bottom: var(--gap-10);
             border-bottom: $border #cdd1d5;
-            @include sm-mobile {
+            @include mobile {
                 margin-bottom: var(--gap-15);
                 padding-bottom: var(--gap-15);
             }
-            .crew {
+            [class^="value_"] {
                 margin-right: var(--gap-20);
             }
             .tit {
@@ -2009,14 +1967,11 @@ select {
             align-items: flex-start;
             line-height: 2.28rem;
             text-align: left;
-            + .cell {
-                margin-top: var(--gap-4);
-            }
-            @include sm-mobile {
+            @include mobile {
                 flex-direction: column;
                 gap: 0.2rem 0;
                 + .cell {
-                    margin-top: var(--gap-15);
+                    margin-top: var(--gap-15) !important;
                 }
             }
             &.btn_position {
@@ -2054,6 +2009,45 @@ select {
             }
         }
     }
+    .edu_info {
+        @include flex-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: var(--gap-20);
+        .date {
+            color: #b1b8be;
+        }
+        @include xs-mobile {
+            flex-direction: column;
+            .rside {
+                margin-top: var(--gap-10);
+            }
+        }
+        &.more {
+            .badge_set {
+                display: inline-block;
+                margin-top: -0.5rem;
+                [class^="value_"] {
+                    margin: var(--gap-5) var(--gap-5) 0 0;
+                }
+            }
+            .wl_number {
+                display: inline-block;
+            }
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem 0;
+                .wl_number {
+                    display: block;
+                    margin-top: var(--gap-10);
+                }
+                .wl_number {
+                    margin-top: var(--gap-10);
+                }
+            }
+        }
+    }
     .edu_result {
         .grade {
             @include flex-aligncenter;
@@ -2081,18 +2075,6 @@ select {
             margin: var(--gap-15) -1.6rem 0;
         }
     }
-    .crew {
-        display: inline-block;
-        min-width: 7.5rem;
-        height: 2.6rem;
-        padding: 0 var(--gap-15);
-        color: var(--color-white);
-        font-weight: var(--font-semibold);
-        border-radius: 5rem;
-        background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
-        line-height: 2.6rem;
-        text-align: center;
-    }
     .rate {
         display: inline-block;
         width: 13rem;
@@ -2113,37 +2095,7 @@ select {
     .wl_number {
         color: var(--color-darkgray);
     }
-    &.lg {
-        .box {
-            position: relative;
-            flex-direction: column;
-        }
-        .timetable {
-            width: 50.7rem;
-        }
-    }
-    &.md {
-        .box {
-            position: relative;
-            flex-direction: column;
-            min-height: 21rem;
-            @include mobile {
-                padding-right: var(--gap-16);
-            }
-        }
-        .timetable {
-            width: 37.4rem;
-            > .cell {
-                @include mobile {
-                    &.btn_position {
-                        position: static;
-                        align-items: center;
-                    }
-                }
-            }
-        }
-    }
-    &.sm {
+    &.type1 {
         .box {
             gap: 0 3rem;
             padding: 0;
@@ -2159,8 +2111,62 @@ select {
         .thumbnail {
             width: 10.2rem;
             height: 6.4rem;
+        }
+    }
+    &.type2 {
+        .box {
+            flex-direction: column;
+            padding: 2.2rem var(--gap-30);
+        }
+        .timetable_set {
+            @include flex-between;
+            align-items: flex-end;
             @include mobile {
-                display: var(--hide);
+                flex-direction: column;
+            }
+        }
+        .timetable {
+            width: 37.4rem;
+        }
+        .side {
+            [class^="btn_"] {
+                display: block;
+                min-width: 12.3rem;
+                + [class^="btn_"] {
+                    margin-top: var(--gap-10);
+                }
+            }
+            @include mobile {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                gap: 0 1.5rem;
+                width: 100%;
+                margin-top: var(--gap-15);
+                [class^="btn_"] {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &.type3 {
+        .box {
+            position: relative;
+            flex-direction: column;
+        }
+        .timetable {
+            width: 50.7rem;
+            > .cell {
+                + .cell {
+                    margin-top: var(--gap-4);
+                }
+            }
+        }
+        .bottom_btn_area {
+            margin-top: var(--gap-24);
+            @include mobile {
+                margin-top: var(--gap-15);
             }
         }
     }
@@ -2422,18 +2428,13 @@ select {
 
 // box
 .notice_box {
-    // margin-top: var(--gap-20);
     padding: var(--gap-18) var(--gap-16);
     background-color: #e7f4fe;
     border: $border #d3ebfd;
     border-radius: 0.8rem;
-    // @include mobile {
-    //     padding: var(--gap-4) var(--gap-16);
-    // }
     .tit {
         color: #096ab3;
         font-weight: var(--font-bold);
-        padding-left: var(--gap-28);
         + .txt {
             margin-top: var(--gap-20);
         }
@@ -2445,10 +2446,6 @@ select {
                 color: #052b57;
             }
         }
-    }
-    &.warning {
-        background-color: #fff3db;
-        border-color: #ffe0a3;
     }
     &.lightblue {
         padding: 2.2rem var(--gap-24);
@@ -2680,7 +2677,7 @@ select {
                         margin-top: -1.2rem;
                         background: url($url-img-icon + "ico_arrow_gray2.svg") no-repeat 0 0;
                         transform: rotate(90deg);
-                        @include sm-mobile {
+                        @include mobile {
                             top: auto;
                             left: 50%;
                             bottom: 1.6rem;
