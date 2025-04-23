@@ -161,14 +161,14 @@ $(function () {
                     _hasSub = $sub.length >= 1,
                     _bool = $this.parent().hasClass("on");
 
-                $li.removeClass("on");
-                $this.parent().toggleClass("on", _hasSub && !_bool);
+                $li.removeClass("on").children("a").attr("aria-expanded", "false");
+                $this.parent().addClass("on").children("a").attr("aria-expanded", "true");
 
                 if (_hasSub && !_bool) {
-                    $subDepth.slideUp(300); // 모두 닫기
-                    $sub.slideDown(300); // 열기
+                    $subDepth.slideUp(300).attr("aria-hidden", "true"); // 모두 닫기
+                    $sub.slideDown(300).attr("aria-hidden", "false"); // 열기
                 } else {
-                    $sub.slideUp(300); // 닫기
+                    $sub.slideUp(300).attr("aria-hidden", "true").parent().removeClass("on").children("a").attr("aria-expanded", "false"); // 닫기
                 }
             });
     }
@@ -284,6 +284,25 @@ $(function () {
     };
 
     // 퍼블확인용! (삭제예정)
+    const urlChk = function () {
+        if (window.location.href.indexOf("/info/") > -1) {
+            $(".menuitem-01").show();
+        } else if (window.location.href.indexOf("/edu/") > -1) {
+            $(".menuitem-02").show();
+        } else if (window.location.href.indexOf("/edutest/") > -1) {
+            $(".menuitem-03").show();
+        } else if (window.location.href.indexOf("/education/") > -1) {
+            $(".menuitem-04").show();
+        } else if (window.location.href.indexOf("/license/") > -1) {
+            $(".menuitem-05").show();
+        } else if (window.location.href.indexOf("/my/") > -1) {
+            $(".menuitem-06").show();
+        } else if (window.location.href.indexOf("/cs/") > -1) {
+            $(".menuitem-07").show();
+        }
+    };
+
+    // 퍼블확인용! (삭제예정)
     const includeHtml = function () {
         const includeTarget = document.querySelectorAll(".includeJs");
         includeTarget.forEach(function (el, idx) {
@@ -291,12 +310,6 @@ $(function () {
             if (targetFile) {
                 let xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
-                    allNaveToggle();
-                    sideNave();
-                    // SideNaveClose();
-                    moGnbToggle();
-                    allSearch();
-                    selectLayer();
                     if (this.readyState === XMLHttpRequest.DONE) {
                         this.status === 200 ? (el.innerHTML = this.responseText) : null;
                         this.status === 404 ? (el.innerHTML = "include not found.") : null;
@@ -306,6 +319,7 @@ $(function () {
                         moGnbToggle();
                         allSearch();
                         selectLayer();
+                        urlChk();
                     }
                 };
                 xhttp.open("GET", targetFile, true);
@@ -328,5 +342,6 @@ $(function () {
     layerFix();
     fullLayerClose();
     alertLayerClose();
+    urlChk();
     includeHtml();
 });

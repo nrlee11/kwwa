@@ -1069,6 +1069,15 @@ button {
     display: var(--show);
   }
 }
+.txt_ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
 .gap_mt0 {
   margin-top: 0 !important;
 }
@@ -1132,6 +1141,9 @@ button {
 }
 .size_300 {
   width: 30rem !important;
+}
+.size_360 {
+  width: 36rem !important;
 }
 
 .align_left {
@@ -1313,7 +1325,7 @@ button {
   background: url("../../resources/images/icon/ico_negative.svg") no-repeat 0 0;
 }
 
-[class^=value_] {
+[class^=value_][class*=_badge1], [class^=value_][class*=_badge2], [class^=value_][class*=_badge3], [class^=value_][class*=_badge4], [class^=value_][class*=_badge5], [class^=value_][class*=_badge6], [class^=value_][class*=_badge7] {
   display: inline-block;
   min-width: 7.5rem;
   height: 2.6rem;
@@ -1347,6 +1359,28 @@ button {
 }
 [class^=value_][class*=_badge6] {
   background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
+}
+[class^=value_][class*=_badge7] {
+  background-color: #6750a4;
+}
+
+[class^=data_][class*=_badge1], [class^=data_][class*=_badge2] {
+  display: inline-block;
+  min-width: 4.6rem;
+  height: 3.2rem;
+  padding: 0 var(--gap-8);
+  border-radius: 0.4rem;
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-regular);
+  line-height: 3.2rem;
+  text-align: center;
+}
+[class^=data_][class*=_badge1] {
+  background-color: #063a74;
+}
+[class^=data_][class*=_badge2] {
+  background-color: var(--color-darkgray);
 }
 
 .badge_set {
@@ -1478,7 +1512,7 @@ button {
   }
 }
 
-[class^=ico_][class*=_outlink], [class^=ico_][class*=_download], [class^=ico_][class*=_arrow], [class^=ico_][class*=_bluearrow], [class^=ico_][class*=_mark], [class^=ico_][class*=_marknavy], [class^=ico_][class*=_warning], [class^=ico_][class*=_print], [class^=ico_][class*=_copy] {
+[class^=ico_][class*=_outlink], [class^=ico_][class*=_download], [class^=ico_][class*=_arrow], [class^=ico_][class*=_bluearrow], [class^=ico_][class*=_mark], [class^=ico_][class*=_marknavy], [class^=ico_][class*=_warning], [class^=ico_][class*=_print], [class^=ico_][class*=_copy], [class^=ico_][class*=_file] {
   position: relative;
   top: -0.1rem;
   display: inline-block;
@@ -1524,6 +1558,9 @@ button {
 [class^=ico_][class*=_copy] {
   background: url("../../resources/images/icon/ico_copy.svg") no-repeat 0 0;
 }
+[class^=ico_][class*=_file] {
+  background: url("../../resources/images/icon/ico_file.svg") no-repeat 0 0;
+}
 [class^=ico_][class*=_txt] {
   position: relative;
 }
@@ -1537,6 +1574,9 @@ button {
 }
 [class^=ico_][class*=_txt]:has([class*=_mark]) [class^=ico_], [class^=ico_][class*=_txt]:has([class*=_warning]) [class^=ico_] {
   top: 0;
+}
+[class^=ico_]:has(.hidden) {
+  margin-right: 0;
 }
 
 input[type=text],
@@ -2201,6 +2241,33 @@ select.round {
   border: 0;
 }
 
+.drop_file_set {
+  padding: var(--gap-16);
+  background-color: #e6e8ea;
+  border-radius: 1.2rem;
+  text-align: center;
+}
+.drop_file_set label {
+  display: inline-block;
+  width: 9rem;
+  height: 4.8rem;
+  margin-left: var(--gap-15);
+  padding: 0 var(--gap-15);
+  color: var(--color-white);
+  border-radius: 0.6rem;
+  background-color: var(--color-blue);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 4.8rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .drop_file_set label {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 .preview_file_set {
   position: relative;
   width: 11.3rem;
@@ -2323,6 +2390,9 @@ select.round {
 }
 .board_area .tbl tbody td.line {
   border-left: 0.1rem solid #d6e0eb;
+}
+.board_area .tbl .txt_red td > div {
+  color: #de3412;
 }
 .board_area .tbl tfoot th,
 .board_area .tbl tfoot td {
@@ -2507,13 +2577,61 @@ select.round {
   position: relative;
   color: #4c87f6;
 }
-.board_area .nodata {
+
+.nodata {
   min-height: 5.7rem;
   padding: var(--gap-16) 0;
   text-align: center;
   text-decoration: underline;
   border-top: 0.1rem solid #cdd1d5;
   border-bottom: 0.1rem solid #cdd1d5;
+}
+
+.board_view .head {
+  padding-bottom: var(--gap-10);
+  border-bottom: 0.1rem solid var(--color-black);
+}
+.board_view .head .tit_sec {
+  display: flex;
+  gap: 0 1.6rem;
+  margin-bottom: 0;
+}
+.board_view .head .tit_sec .tit {
+  flex: 1;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+}
+.board_view .head .desc_sec {
+  margin-top: var(--gap-24);
+}
+.board_view .cont {
+  padding: var(--gap-24) 0;
+  color: var(--color-black);
+}
+.board_view .add_file {
+  padding: var(--gap-16) 0;
+  background: url("../../resources/images/common/bg_dotted.png") repeat-x 0 0;
+}
+.board_view .add_file > [class^=btn_] {
+  display: block;
+}
+.board_view .add_file > [class^=btn_] + [class^=btn_] {
+  margin-top: var(--gap-10);
+}
+.board_view.answer {
+  margin-top: var(--gap-40);
+  padding: var(--gap-16);
+  background-color: #eef2f7;
+  border: 0.1rem solid #d6e0eb;
+  border-radius: 1.2rem;
+}
+.board_view.answer .head {
+  border: 0;
+}
+@media screen and (max-width: 1200px) {
+  .board_view.answer {
+    margin-top: 3.4rem;
+  }
 }
 
 .form_section + .form_section {
@@ -2908,6 +3026,16 @@ select.round {
     display: var(--hide);
   }
 }
+.edu_group .timetable_set {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .timetable_set {
+    flex-direction: column;
+  }
+}
 .edu_group .timetable {
   display: block;
   width: 47.2rem;
@@ -2943,6 +3071,9 @@ select.round {
   align-items: flex-start;
   line-height: 2.28rem;
   text-align: left;
+}
+.edu_group .timetable > .cell + .cell {
+  margin-top: var(--gap-4);
 }
 @media screen and (max-width: 1200px) {
   .edu_group .timetable > .cell {
@@ -2987,6 +3118,27 @@ select.round {
 .edu_group .timetable > .cell > .item {
   color: var(--color-darkblack);
   font-weight: var(--font-medium);
+}
+.edu_group .side [class^=btn_] {
+  display: block;
+  min-width: 12.3rem;
+}
+.edu_group .side [class^=btn_] + [class^=btn_] {
+  margin-top: var(--gap-10);
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 0 1.5rem;
+    width: 100%;
+    margin-top: var(--gap-15);
+  }
+  .edu_group .side [class^=btn_] {
+    display: inline-block;
+  }
 }
 .edu_group .edu_info {
   display: flex;
@@ -3072,9 +3224,17 @@ select.round {
   text-align: center;
 }
 .edu_group .rate.on {
+  background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
+}
+.edu_group .rate.on:has(span) {
   display: flex;
   justify-content: space-between;
+}
+.edu_group .rate.on:has(span).on {
   background: linear-gradient(90deg, #86aff9 0%, #256ef4 100%);
+}
+.edu_group .rate.off {
+  background: linear-gradient(90deg, #f48771 0%, #de3412 100%);
 }
 .edu_group .wl_number {
   color: var(--color-darkgray);
@@ -3101,39 +3261,12 @@ select.round {
   flex-direction: column;
   padding: 2.2rem var(--gap-30);
 }
-.edu_group.type2 .timetable_set {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-@media screen and (max-width: 1200px) {
-  .edu_group.type2 .timetable_set {
-    flex-direction: column;
-  }
-}
 .edu_group.type2 .timetable {
   width: 37.4rem;
 }
-.edu_group.type2 .side [class^=btn_] {
-  display: block;
-  min-width: 12.3rem;
-}
-.edu_group.type2 .side [class^=btn_] + [class^=btn_] {
-  margin-top: var(--gap-10);
-}
-@media screen and (max-width: 1200px) {
-  .edu_group.type2 .side {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 0 1.5rem;
-    width: 100%;
-    margin-top: var(--gap-15);
-  }
-  .edu_group.type2 .side [class^=btn_] {
-    display: inline-block;
-  }
+.edu_group.type2 .edu_note {
+  margin: var(--gap-20) -3rem 0;
+  padding-top: var(--gap-20);
 }
 .edu_group.type3 .box {
   position: relative;
@@ -3142,9 +3275,6 @@ select.round {
 .edu_group.type3 .timetable {
   width: 50.7rem;
 }
-.edu_group.type3 .timetable > .cell + .cell {
-  margin-top: var(--gap-4);
-}
 .edu_group.type3 .bottom_btn_area {
   margin-top: var(--gap-24);
 }
@@ -3152,6 +3282,9 @@ select.round {
   .edu_group.type3 .bottom_btn_area {
     margin-top: var(--gap-15);
   }
+}
+.edu_group.type3.wide .timetable {
+  width: 100%;
 }
 
 .edu_schedule_list .schedule_group {
@@ -4376,6 +4509,10 @@ select.round {
   .bottom_btn_area.cell4 {
     gap: 0 1.5rem;
     display: block;
+  }
+  .bottom_btn_area.cell4.wide > div {
+    flex-direction: column;
+    gap: 1.5rem 0;
   }
   .bottom_btn_area.cell4 > div {
     display: flex;

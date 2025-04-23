@@ -234,6 +234,12 @@
         @include mobile {
             gap: 0 1.5rem;
             display: block;
+            &.wide {
+                > div {
+                    flex-direction: column;
+                    gap: 1.5rem 0;
+                }
+            }
             > div {
                 display: flex;
                 gap: 0 1.5rem;
