@@ -1254,6 +1254,12 @@ button {
   content: "*";
 }
 
+.box_border {
+  margin-top: var(--gap-20);
+  padding: var(--gap-16);
+  border: 0.1rem solid #cdd1d5;
+}
+
 .breadcrumb_wrap {
   margin-bottom: var(--gap-50);
 }
@@ -6184,4 +6190,21 @@ select.sm {
 }
 .payment_info .item .item_cont {
   flex: 1;
+}
+
+.question_area .question_box .tit {
+  display: block;
+  padding-left: 2.3rem;
+  text-indent: -2.3rem;
+  font-weight: normal;
+}
+.question_area .question_box + .answer_box {
+  margin-top: var(--gap-20);
+}
+.question_area .radio_set .inp_radio {
+  display: block;
+  margin: 0;
+}
+.question_area .radio_set .inp_radio + .inp_radio {
+  margin-top: var(--gap-24);
 }

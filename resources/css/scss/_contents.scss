@@ -505,7 +505,6 @@
         margin-top: var(--gap-20);
     }
 }
-
 // 환불 정보
 .payment_info {
     margin-top: var(--gap-24);
@@ -519,6 +518,29 @@
         }
         .item_cont {
             flex: 1;
+        }
+    }
+}
+// 자격취득 가능여부 자가진단
+.question_area {
+    .question_box {
+        .tit {
+            display: block;
+            padding-left: 2.3rem;
+            text-indent: -2.3rem;
+            font-weight: normal;
+        }
+        + .answer_box {
+            margin-top: var(--gap-20);
+        }
+    }
+    .radio_set {
+        .inp_radio {
+            display: block;
+            margin: 0;
+            + .inp_radio {
+                margin-top: var(--gap-24);
+            }
         }
     }
 }

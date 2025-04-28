@@ -232,6 +232,11 @@
         }
     }
 }
+.box_border {
+    margin-top: var(--gap-20);
+    padding: var(--gap-16);
+    border: $border #cdd1d5;
+}
 
 // breadcrumb
 .breadcrumb_wrap {
