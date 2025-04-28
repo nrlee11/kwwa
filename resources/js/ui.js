@@ -102,33 +102,41 @@ $(function () {
             $subMenu.hide();
             $bg.stop(true, true).slideUp(200);
         });
-        // $("#header .logo a, .banner_area a").focusin(function () {
-        //     $(".nav_area").removeClass("folding");
-        //     $(".gnb .sub, .nav_area .bg").hide();
-        // });
     };
 
     // Side Gnb
     const sideNave = function () {
-        $mgnb = $("#sideGnb");
-        $dim = $(".side_dim");
-        $fousin = $("#sideGnb .utility a:first-child");
-        $fousout = $(".sideOpen");
+        const $mgnb = $("#sideGnb");
+        const $dim = $(".side_dim");
+        const $body = $("body");
+        const $focusIn = $("#sideGnb .utility a:first-child");
+        const $focusOut = $(".sideOpen");
 
-        $(".sideOpen").click(function (e) {
-            $mgnb.show().stop().animate({ right: "0" }, 300).attr("aria-hidden", false);
+        $(".sideOpen").on("click", function () {
+            $mgnb.show().stop(true, true).animate({ right: "0" }, 300).attr("aria-hidden", "false");
+
             $body.addClass("sideOn");
             $dim.show();
-            $fousin.focus();
+            $(this).attr("aria-expanded", "true");
+
+            $focusIn.focus();
         });
 
-        $(".sideClose").click(function (e) {
-            $mgnb.stop().animate({ right: "-100%" }, 300, function () {
-                $(this).hide().attr("aria-hidden", true).focus(".sideOpen");
-                $dim.hide();
+        $(".sideClose").on("click", function () {
+            $mgnb.stop(true, true).animate({ right: "-100%" }, 300, function () {
+                $mgnb.hide().attr("aria-hidden", "true");
+                $focusOut.focus();
             });
+
             $body.removeClass("sideOn");
-            $fousout.focus();
+            $dim.hide();
+            $(".sideOpen").attr("aria-expanded", "false");
+        });
+
+        $(document).on("keydown", function (e) {
+            if (e.key === "Escape" && $mgnb.is(":visible")) {
+                $(".sideClose").trigger("click");
+            }
         });
     };
 
@@ -230,12 +238,12 @@ $(function () {
             }
         });
 
-        // $(document).on("click", function (e) {
-        //     if (!$(e.target).closest(".select_layer").length) {
-        //         $(".select_layer").removeClass("on").find(".select_box").hide();
-        //         $(".select_layer .select_tit").attr("title", "열기");
-        //     }
-        // });
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest(".select_layer").length) {
+                $(".select_layer").removeClass("on").find(".select_box").hide();
+                $(".select_layer .select_tit").attr("title", "열기");
+            }
+        });
     };
 
     // Common Tab
