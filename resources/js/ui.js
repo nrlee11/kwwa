@@ -340,6 +340,7 @@ $(function () {
             "/license/": ".menuitem-05",
             "/my/": ".menuitem-06",
             "/cs/": ".menuitem-07",
+            "/search/": ".menuitem-08",
         };
 
         //$(".lnb_wrap").hide();
