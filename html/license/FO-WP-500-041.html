@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
-        <title>발급현황 조회 | 한국상하수도협회</title>
+        <title>발급현황 조회 | 자격증발급 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -208,7 +208,7 @@
                                                             <div class="box">
                                                                 <div class="file_set">
                                                                     <div class="inp">
-                                                                        <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                        <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                         <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                                     </div>
                                                                     <label for="file1">파일찾기</label>
@@ -229,9 +229,7 @@
                                 <!--// form-->
 
                                 <div class="board_desc_bottom">
-                                    <ul class="list_mark">
-                                        <li>증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</li>
-                                    </ul>
+                                    <p class="txt_mark">증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</p>
                                 </div>
                             </div>
                             <!--// board -->
@@ -250,7 +248,7 @@
 
                             <!-- board -->
                             <div class="board_area">
-                                <div class="board_desc_top">
+                                <div class="page_btn_area gap_mb24">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">근무경력 추가</button>
                                     </div>
@@ -337,7 +335,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file2">파일찾기</label>
@@ -353,11 +351,12 @@
                                 <!--// form-->
 
                                 <!-- 근무경력 추가 -->
-                                <div class="board_desc_top gap_mt24">
+                                <div class="page_btn_area gap_mb24 gap_mt24">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">삭제</button>
                                     </div>
                                 </div>
+
                                 <!-- form-->
                                 <div class="form_section">
                                     <!-- board_write -->
@@ -407,7 +406,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file3">파일찾기</label>
@@ -470,52 +469,51 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
-
-            <!-- Layer : 학력 증명 서류 안내 -->
-            <div class="layerFix fullPopup" id="alertPop2" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="tit_area">
-                            <strong class="tit">
-                                학력 증명 서류 안내
-                                <strong class="sm_txt">(해당 택1)</strong>
-                            </strong>
-                        </div>
-                        <div class="article">
-                            <div class="tit">졸업증명서</div>
-                            <ul class="list_dash">
-                                <li>대학졸업자 경우 이학사 또는 공학사 학위를 취득하였는지 확인(졸업증명서에 표기되어 있음)</li>
-                                <li>전문대학 졸업자 중 이공계열의 전문학사 학위를 취득하였는지 확인</li>
-                            </ul>
-                            <ul class="list_mark">
-                                <li>전문대학 졸업자의 경우 해당학과가 공학 또는 이학 분야에 해당하는지 반드시 해당 학교에 조회</li>
-                            </ul>
-                        </div>
-                        <div class="article">
-                            <div class="tit">수료증명서 또는 학위증</div>
-                            <ul class="list_dash">
-                                <li>이공계 대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
-                                <li>이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
-                            </ul>
-                        </div>
-                        <div class="article">
-                            <div class="tit">고등학교 졸업증명서</div>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 학력 증명 서류 안내 -->
         </div>
         <!--// wrap(e) -->
+
+        <!-- Layer : 학력 증명 서류 안내 -->
+        <div class="layerFix fullPopup" id="alertPop2" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">
+                            학력 증명 서류 안내
+                            <strong class="sm_txt">(해당 택1)</strong>
+                        </strong>
+                    </div>
+                    <div class="article">
+                        <div class="tit">졸업증명서</div>
+                        <ul class="list_dash">
+                            <li>대학졸업자 경우 이학사 또는 공학사 학위를 취득하였는지 확인(졸업증명서에 표기되어 있음)</li>
+                            <li>전문대학 졸업자 중 이공계열의 전문학사 학위를 취득하였는지 확인</li>
+                        </ul>
+                        <p class="txt_mark">전문대학 졸업자의 경우 해당학과가 공학 또는 이학 분야에 해당하는지 반드시 해당 학교에 조회</p>
+                    </div>
+                    <div class="article">
+                        <div class="tit">수료증명서 또는 학위증</div>
+                        <ul class="list_dash">
+                            <li>이공계 대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                            <li>이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                        </ul>
+                    </div>
+                    <div class="article">
+                        <div class="tit">고등학교 졸업증명서</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 학력 증명 서류 안내 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
@@ -537,17 +535,20 @@
                 });
 
                 // 첨부파일 샘플
-                $("#file1, #file2, #file3").on("change", function () {
-                    var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                    $(this).parent().children().children("input").val(fileName);
+                $(".file_set input[type='file']").on("change", function () {
+                    var fileName = $(this).val().split("/").pop().split("\\").pop();
+                    $(this).siblings(".inp").find("input[type='text']").val(fileName);
                 });
                 $(".file_set .btn_reset").click(function () {
-                    $(this).parent().children("input").val(""); // 파일명 삭제
+                    $(this).siblings("input[type='text']").val("");
+                    var fileInput = $(this).closest(".file_set").find("input[type='file']");
+                    fileInput.val("");
                 });
 
                 // Layer : 학력 증명 서류 안내
                 $("#alert2").click(function (e) {
                     $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
                     $(".layerDim").show();
                     $("#alertPop2").show().focus();
                 });

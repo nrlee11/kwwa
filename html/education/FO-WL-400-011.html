@@ -322,6 +322,12 @@
 
                             <!-- board -->
                             <div class="board_area">
+                                <div class="page_btn_area gap_mb24">
+                                    <div class="rside">
+                                        <button type="button" class="btn_primary_lg">근무경력 추가</button>
+                                    </div>
+                                </div>
+
                                 <!-- form-->
                                 <div class="form_section">
                                     <!-- board_write -->
@@ -403,7 +409,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file1">파일찾기</label>
@@ -419,7 +425,7 @@
                                 <!--// form-->
 
                                 <!-- 근무경력 추가 -->
-                                <div class="board_desc_top gap_mt24">
+                                <div class="page_btn_area gap_mt24 gap_mb24">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">삭제</button>
                                     </div>
@@ -474,7 +480,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file2">파일찾기</label>
@@ -564,7 +570,7 @@
                                                             <div class="box">
                                                                 <div class="file_set">
                                                                     <div class="inp">
-                                                                        <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                        <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                         <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                                     </div>
                                                                     <label for="file3">파일찾기</label>
@@ -666,7 +672,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file4">파일찾기</label>
@@ -701,62 +707,63 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
-
-            <!-- Layer : 실무교육 증빙 주의사항 -->
-            <div class="layerFix alertPopup" id="alertPop1" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="tit_area">
-                            <strong class="tit">실무교육 증빙 주의사항</strong>
-                        </div>
-                        <div class="article center">
-                            <ul class="list_dot">
-                                <li>지정양식으로 작성하여 제출, 타양식 인정 안됨</li>
-                                <li>교육기관의 인감, 직인이 없는 경우 인정 안됨</li>
-                                <li>교육내역서는 필요시 2장 이상 작성하며 전체를 제출함</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 실무교육 증빙 주의사항 -->
-
-            <!-- Layer : 교육 수료 증빙 주의사항 -->
-            <div class="layerFix alertPopup" id="alertPop2" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="tit_area">
-                            <strong class="tit">고용노동부 직업능력개발훈련 수료증 증빙 주의사항</strong>
-                        </div>
-                        <div class="article center">
-                            <ul class="list_dot">
-                                <li>교육기관의 인감, 직인이 없는 경우 인정 안됨</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 교육 수료 증빙 주의사항 -->
         </div>
         <!--// wrap(e) -->
+
+        <!-- Layer : 실무교육 증빙 주의사항 -->
+        <div class="layerFix alertPopup" id="alertPop1" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">실무교육 증빙 주의사항</strong>
+                    </div>
+                    <div class="article center">
+                        <ul class="list_dot">
+                            <li>지정양식으로 작성하여 제출, 타양식 인정 안됨</li>
+                            <li>교육기관의 인감, 직인이 없는 경우 인정 안됨</li>
+                            <li>교육내역서는 필요시 2장 이상 작성하며 전체를 제출함</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 실무교육 증빙 주의사항 -->
+
+        <!-- Layer : 교육 수료 증빙 주의사항 -->
+        <div class="layerFix alertPopup" id="alertPop2" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">고용노동부 직업능력개발훈련 수료증 증빙 주의사항</strong>
+                    </div>
+                    <div class="article center">
+                        <ul class="list_dot">
+                            <li>교육기관의 인감, 직인이 없는 경우 인정 안됨</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 교육 수료 증빙 주의사항 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
@@ -777,16 +784,20 @@
             });
 
             // 첨부파일 샘플
-            $("#file1, #file2, #file3, #file4").on("change", function () {
-                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                $(this).parent().children().children("input").val(fileName);
+            $(".file_set input[type='file']").on("change", function () {
+                var fileName = $(this).val().split("/").pop().split("\\").pop();
+                $(this).siblings(".inp").find("input[type='text']").val(fileName);
             });
             $(".file_set .btn_reset").click(function () {
-                $(this).parent().children("input").val(""); // 파일명 삭제
+                $(this).siblings("input[type='text']").val("");
+                var fileInput = $(this).closest(".file_set").find("input[type='file']");
+                fileInput.val("");
             });
 
             // Layer : 실무교육 증빙 주의사항
             $("#alert1").click(function (e) {
+                $("html").addClass("layerOpen");
+                $("#wrap").attr("aria-hidden", "true");
                 $(".layerDim").show();
                 $("#alertPop1").show().focus();
             });
@@ -796,6 +807,8 @@
 
             // Layer : 교육 수료 증빙 주의사항
             $("#alert2").click(function (e) {
+                $("html").addClass("layerOpen");
+                $("#wrap").attr("aria-hidden", "true");
                 $(".layerDim").show();
                 $("#alertPop2").show().focus();
             });

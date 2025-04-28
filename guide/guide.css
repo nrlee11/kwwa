@@ -43,6 +43,9 @@ pre code.hljs {
 .section > .inner > .box + .box {
     margin-top: 3rem;
 }
+.article + .article {
+    margin-top: 4rem;
+}
 .article.html_code {
     margin-top: 3rem;
 }

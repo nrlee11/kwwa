@@ -49,10 +49,25 @@
                         <div class="section">
                             <!-- board -->
                             <div class="board_area">
+                                <div class="board_desc_top">
+                                    <div class="rside">
+                                        <div class="form_item inblock">
+                                            <div class="inp_select size_80">
+                                                <select class="sm" title="노출 개수 선택">
+                                                    <option value="">15</option>
+                                                    <option value="">30</option>
+                                                    <option value="">50</option>
+                                                    <option value="" selected>100</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- board_list -->
                                 <table class="tbl react">
                                     <caption>
-                                        급수, 신청 번호, 자격증 번호, 상태, 신청접수일, 처리일시, 상세 정보 제공
+                                        No, 답변상태, 제목, 첨부파일, 작성일 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 80px" />
@@ -97,15 +112,34 @@
                                 </table>
                                 <!--// board_list -->
 
-                                <div class="nodata">나의 문의현황 내역이 없습니다.</div>
+                                <div class="nodata">조회된 내역이 없습니다.</div>
+
+                                <!-- pagination -->
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="arrow prev">
+                                            <button type="button" title="이전"><span class="pc_only">이전</span></button>
+                                        </li>
+                                        <!-- 활성화 on, 접근성 title -->
+                                        <li class="on"><button type="button" title="선택 됨">1</button></li>
+                                        <li><button type="button">2</button></li>
+                                        <li><button type="button">3</button></li>
+                                        <li class="ellipsis">...</li>
+                                        <li><button type="button">10</button></li>
+                                        <li class="arrow next">
+                                            <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--// pagination -->
                             </div>
                             <!--// board -->
-
-                            <div class="bottom_btn_area">
-                                <button type="button" class="btn_primary_lg">문의하기</button>
-                            </div>
                         </div>
                         <!--// section(e) -->
+
+                        <div class="bottom_btn_area">
+                            <button type="button" class="btn_primary_lg">문의하기</button>
+                        </div>
                     </div>
                     <!--// contents(e) -->
                 </div>

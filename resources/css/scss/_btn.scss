@@ -2,11 +2,10 @@
 
 // btn
 [class^="btn_"] {
-    // xs, sm, md, lg, xl, xxl
+    // xs, sm, md, lg, xl, xlg, xxl
     &[class*="_sm"],
     &[class*="_md"],
     &[class*="_lg"],
-    &[class*="_xlg"],
     &[class*="_xxl"] {
         @include btn-default; // primary
     }
@@ -22,11 +21,6 @@
         padding: 0 var(--gap-12);
         font-size: var(--font-size-sm);
         line-height: 4rem;
-    }
-    &[class*="_xlg"] {
-        height: 5.2rem;
-        line-height: 5.2rem;
-        font-weight: var(--font-semibold);
     }
     &[class*="_xxl"] {
         height: 7rem;
@@ -62,22 +56,9 @@
         color: var(--color-white);
         background-color: var(--color-warmblue);
     }
-    &[class*="_navy"] {
-        color: var(--color-white);
-        background-color: #083891;
-    }
-    &[class*="_navyborder"] {
-        color: #083891;
-        border: $border #083891;
-        background-color: var(--color-white);
-        &.radius {
-            border-radius: 0.8rem;
-        }
-    }
     &[class*="_secondary"],
     &[class*="_outline"],
-    &[class*="_border"],
-    &[class*="_navyborder"] {
+    &[class*="_border"] {
         &[class*="_sm"] {
             line-height: 2.8rem;
         }
@@ -86,9 +67,6 @@
         }
         &[class*="_lg"] {
             line-height: 4.6rem;
-        }
-        &[class*="_xlg"] {
-            line-height: 5rem;
         }
         &[class*="_xxl"] {
             line-height: 6.8rem;
@@ -117,7 +95,7 @@
         padding-right: var(--gap-28);
         color: var(--color-warmblue);
         text-align: left;
-        background: url($url-img-icon + "ico_download.svg") no-repeat right -0.2rem;
+        background: url($url-img-icon + "ico_download.svg") no-repeat right 50%;
     }
     &[class*="_upload"] {
         background: url($url-img-icon + "ico_upload.svg") no-repeat right -0.2rem;
@@ -130,9 +108,6 @@
         min-width: auto;
         width: 100%;
     }
-    // .ico_outlink {
-    //     margin-left: var(--gap-4);
-    // }
     [class^="ico_"] {
         margin: 0 0 0 var(--gap-4);
         &[class*="_print"] {
@@ -150,9 +125,9 @@
         &:not(.lside) {
             text-align: right;
         }
-        &:not(.lside):has(.box) {
+        &:not(.lside):has(.box),
+        &:not(.rside):has(.box) {
             @include flex-aligncenter;
-            justify-content: flex-end;
             gap: 0 1.5rem;
             @include mobile {
                 justify-content: space-between;
@@ -163,6 +138,18 @@
                         width: 100%;
                         min-width: auto;
                     }
+                }
+            }
+        }
+        &:not(.lside):has(.box) {
+            justify-content: flex-end;
+        }
+        &.full {
+            @include sm-mobile {
+                flex-direction: column;
+                gap: 1.5rem 0 !important;
+                > .box {
+                    width: 100%;
                 }
             }
         }
@@ -278,13 +265,11 @@
     background: url($url-img-common + "bg_reset.svg") no-repeat 0 0;
     background-size: contain;
 }
-
 .btn_search {
     width: 2.4rem;
     height: 2.4rem;
     background: url($url-img-icon + "ico_search.svg") no-repeat 0 0;
 }
-
 .btn_more_plus {
     position: relative;
     padding-right: 2rem;

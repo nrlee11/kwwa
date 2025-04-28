@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="guide.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css" />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
         <script>
             hljs.highlightAll();
         </script>
@@ -27,7 +29,7 @@
                 <div class="guide_cont">
                     <!-- CSS -->
                     <div class="section" id="title">
-                        <h2 class="h2">- CSS</h2>
+                        <h2 class="h2">- Assets</h2>
 
                         <div class="article">
                             <pre><code class="html">
@@ -42,9 +44,22 @@
 /resources/css/scss/_contents.scss
 
 // CSS
-/resources/css/common.css (scss 컴파일)
+/resources/css/common.css (scss 컴파일) <- 수정 X
 /resources/css/jquery-ui.css (datepicker)
 /resources/css/swiper-bundle.min.css (swiper)
+
+// JS
+/resources/js/ui.js
+/resources/js/jquery-2.2.4.min.js
+/resources/js/jquery-ui.js (datepicker)
+/resources/js/swiper-bundle.min.js (swiper)
+
+// IMAGES
+/resources/images/common/...
+/resources/images/icon/...
+/resources/images/temp/...
+/resources/images/calendar/...
+/resources/images/favicon/...
                             </code></pre>
                         </div>
                     </div>
@@ -53,90 +68,75 @@
                     <!-- 타이틀 -->
                     <div class="section" id="title">
                         <h2 class="h2">- 타이틀</h2>
-
+                        <!-- article -->
                         <div class="article">
-                            <!-- <h3>기본</h3> -->
-                            <style>
-                                .code_html {
-                                    position: relative;
-                                }
-                                .code_html .bg {
-                                    position: absolute;
-                                    left: 0;
-                                    bottom: -50px;
-                                    background-color: red;
-                                    opacity: 0.2;
-                                    width: 100%;
-                                    height: 50px;
-                                    text-align: center;
-                                    color: #fff;
-                                    line-height: 50px;
-                                }
-                            </style>
                             <div class="code_html">
                                 <!-- page_title -->
                                 <div class="page_title">
-                                    <h2 class="tit">메인 타이틀</h2>
+                                    <h2 class="tit">페이지 타이틀</h2>
                                 </div>
                                 <!--// page_title -->
-                                <span class="bg">간격 50px</span>
                             </div>
-                            <pre><code class="html">
-// PC : font size 40px 
-// MO : font size 28px 
-// 타이틀 컨텐츠 간격 margin-bottom: 50px
-
+                            <pre><code class="html">// 타이틀 컨텐츠 간격 50px
 &#x3C;!-- page_title --&#x3E;
 &#x3C;div class=&#x22;page_title&#x22;&#x3E;
-    &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD68C;&#xC6D0; &#xAC00;&#xC785;&#x3C;/h2&#x3E;
+    &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD398;&#xC774;&#xC9C0; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h2&#x3E;
 &#x3C;/div&#x3E;
-&#x3C;!--// page_title --&#x3E;
-</code></pre>
+&#x3C;!--// page_title --&#x3E;</code></pre>
+
                             <div class="code_html">
                                 <!-- page_title -->
                                 <div class="page_title center">
-                                    <h2 class="tit">메인 타이틀</h2>
+                                    <h2 class="tit">페이지 타이틀</h2>
                                 </div>
                                 <!--// page_title -->
-                                <span class="bg">간격 50px</span>
                             </div>
-                            <pre>
-                        <code class="html">
-// 사이드 메뉴(LNB)가 없는 경우 사용 (예: 회원가입,로그인 등...)
+                            <pre><code class="html">// 사이드 메뉴(LNB)가 없는 경우 사용 (예: 회원가입,로그인 등...)
+// 타이틀 컨텐츠 간격 50px
 &#x3C;!-- page_title --&#x3E;
-&#x3C;div class=&#x22;page_title center&#x22;&#x3E;
-    &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD68C;&#xC6D0; &#xAC00;&#xC785;&#x3C;/h2&#x3E;
+&#x3C;div class=&#x22;page_title center&#x22;&#x3E;&#x3C;!-- class : center --&#x3E;
+    &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD398;&#xC774;&#xC9C0; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h2&#x3E;
 &#x3C;/div&#x3E;
-&#x3C;!--// page_title --&#x3E;
-                        </code>
-                    </pre>
+&#x3C;!--// page_title --&#x3E;</code></pre>
                         </div>
+                        <!--// article -->
 
+                        <!-- article -->
                         <div class="article">
-                            <h3>서브 타이틀</h3>
-                            <br />
-                            <div class="tit_area">
-                                <h3 class="tit">본인인증으로 찾기</h3>
-                                <div class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</div>
+                            <div class="code_html">
+                                <!-- tit_area -->
+                                <div class="tit_area">
+                                    <h3 class="tit">서브 타이틀</h3>
+                                    <div class="desc">서브 설명글</div>
+                                </div>
+                                <!--// tit_area -->
                             </div>
+                            <pre><code class="html">&#x3C;!-- tit_area --&#x3E;
+&#x3C;div class=&#x22;tit_area&#x22;&#x3E;
+    &#x3C;h3 class=&#x22;tit&#x22;&#x3E;&#xC11C;&#xBE0C; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+    &#x3C;div class=&#x22;desc&#x22;&#x3E;&#xC11C;&#xBE0C; &#xC124;&#xBA85;&#xAE00;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// tit_area --&#x3E;</code></pre>
+
                             <br />
                             <div class="tit_area center">
-                                <h3 class="tit">본인인증으로 찾기</h3>
-                                <div class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</div>
+                                <h3 class="tit">서브 타이틀</h3>
+                                <div class="desc">서브 설명글</div>
                             </div>
                             <br />
                             <div class="tit_area">
-                                <h3 class="tit ico">본인인증으로 찾기</h3>
-                                <div class="desc">회원정보에 등록한 휴대전화 번호와 입력한 번호가 동일해야 인증번호를 받을 수 있습니다.</div>
+                                <h3 class="tit ico">서브 타이틀</h3>
+                                <div class="desc">서브 설명글</div>
                             </div>
                         </div>
+                        <!--// article -->
                     </div>
                     <!--// 타이틀 -->
 
                     <!-- 아이콘 -->
                     <div class="section" id="icon">
-                        <h2>아이콘</h2>
-                        <div>
+                        <h2 class="h2">아이콘</h2>
+                        <div class="article">
                             <span class="ico_mark"></span>
                             <span class="ico_marknavy"></span>
                             <br />
@@ -159,7 +159,7 @@
 
                     <!-- 이미지 -->
                     <div class="section" id="images">
-                        <h2>이미지</h2>
+                        <h2>- 이미지</h2>
                         <div>
                             <img src="/resources/images/icon/ico_home.svg" alt="" />
                             <img src="/resources/images/icon/ico_user.svg" alt="" />
@@ -171,6 +171,8 @@
                             <img src="/resources/images/icon/ico_file.svg" alt="" />
                             <br />
                             <br />
+                            <img src="/resources/images/common/bg_education.svg" alt="" />
+                            <img src="/resources/images/common/bg_classroom.svg" alt="" />
                             <img src="/resources/images/icon/ico_quick1.svg" alt="" />
                             <img src="/resources/images/icon/ico_quick2.svg" alt="" />
                             <img src="/resources/images/icon/ico_quick3.svg" alt="" />
@@ -226,10 +228,8 @@
 
                     <!-- 버튼 -->
                     <div class="section" id="btn">
-                        <h2>Button</h2>
+                        <h2>- Button</h2>
                         <div>
-                            <h3>기본</h3>
-                            <br />
                             <button type="button" class="btn_primary_sm">primary</button>
                             <button type="button" class="btn_secondary_sm">secondary</button>
                             <button type="button" class="btn_secondary_sm">secondary<span class="ico_outlink"></span></button>
@@ -237,9 +237,6 @@
                             <button type="button" class="btn_border_sm">border</button>
                             <button type="button" class="btn_border_sm radius">border + radius</button>
                             <button type="button" class="btn_border_sm radius">border + radius<span class="ico_bluearrow"></span></button>
-                            <button type="button" class="btn_navyborder_sm">border</button>
-                            <button type="button" class="btn_navyborder_sm radius">border + radius</button>
-                            <button type="button" class="btn_navy_sm">border</button>
                             <br />
                             <br />
                             <button type="button" class="btn_primary_md">primary</button>
@@ -249,9 +246,6 @@
                             <button type="button" class="btn_border_md">border</button>
                             <button type="button" class="btn_border_md radius">border + radius</button>
                             <button type="button" class="btn_border_md radius">border + radius<span class="ico_bluearrow"></span></button>
-                            <button type="button" class="btn_navyborder_md">border</button>
-                            <button type="button" class="btn_navyborder_md radius">border + radius</button>
-                            <button type="button" class="btn_navy_md">border</button>
                             <br />
                             <br />
                             <button type="button" class="btn_primary_lg">primary</button>
@@ -262,21 +256,6 @@
                             <button type="button" class="btn_border_lg radius">border + radius</button>
                             <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow"></span></button>
                             <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow2"></span></button>
-                            <button type="button" class="btn_navyborder_lg">border</button>
-                            <button type="button" class="btn_navyborder_lg radius">border + radius</button>
-                            <button type="button" class="btn_navy_lg">border</button>
-                            <br />
-                            <br />
-                            <button type="button" class="btn_primary_xlg">primary</button>
-                            <button type="button" class="btn_secondary_xlg">secondary</button>
-                            <button type="button" class="btn_secondary_xlg">secondary<span class="ico_outlink"></span></button>
-                            <button type="button" class="btn_outline_xlg">outline</button>
-                            <button type="button" class="btn_border_xlg">border</button>
-                            <button type="button" class="btn_border_xlg radius">border + radius</button>
-                            <button type="button" class="btn_border_xlg radius">border + radius<span class="ico_bluearrow"></span></button>
-                            <button type="button" class="btn_navyborder_xlg">border</button>
-                            <button type="button" class="btn_navyborder_xlg radius">border + radius</button>
-                            <button type="button" class="btn_navy_xlg">border</button>
                             <br />
                             <br />
                             <button type="button" class="btn_primary_xxl">primary</button>
@@ -286,9 +265,6 @@
                             <button type="button" class="btn_border_xxl">border</button>
                             <button type="button" class="btn_border_xxl radius">border + radius</button>
                             <button type="button" class="btn_border_xxl radius">border + radius<span class="ico_bluearrow"></span></button>
-                            <button type="button" class="btn_navyborder_xxl">border</button>
-                            <button type="button" class="btn_navyborder_xxl radius">border + radius</button>
-                            <button type="button" class="btn_navy_xxl">border</button>
                             <br />
                             <br />
                             <a href="javascript:;" class="btn_more_plus">더보기</a>
@@ -319,8 +295,76 @@
 &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg&#x22;&#x3E;border&#x3C;/button&#x3E;
                     </code>
                 </pre>
+
                         <div>
-                            <h3>페이지 하단</h3>
+                            <h3>- 페이지 중간</h3>
+                            <div class="page_btn_area">
+                                <div class="lside">
+                                    <button type="button" class="btn_primary_lg">확인</button>
+                                </div>
+                                <div class="rside">
+                                    <button type="button" class="btn_secondary_lg">확인</button>
+                                </div>
+                            </div>
+                            <div class="page_btn_area">
+                                <div class="rside">
+                                    <button type="button" class="btn_secondary_lg">확인</button>
+                                </div>
+                            </div>
+                            <div class="page_btn_area">
+                                <div class="lside">
+                                    <div class="box">
+                                        <button type="button" class="btn_outline_lg">취소</button>
+                                    </div>
+                                    <div class="box">
+                                        <button type="button" class="btn_secondary_lg">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page_btn_area">
+                                <div class="lside full">
+                                    <div class="box">
+                                        <a href="javascript:;" class="btn_secondary_lg">자격요건 확인<span class="ico_outlink"></span></a>
+                                    </div>
+                                    <div class="box">
+                                        <a href="javascript:;" class="btn_secondary_lg">자격취득 가능여부 자가진단<span class="ico_outlink"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page_btn_area">
+                                <div class="rside">
+                                    <div class="box">
+                                        <button type="button" class="btn_outline_lg">취소</button>
+                                    </div>
+                                    <div class="box">
+                                        <button type="button" class="btn_secondary_lg">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page_btn_area">
+                                <div class="rside full">
+                                    <div class="box">
+                                        <a href="javascript:;" class="btn_secondary_lg">자격요건 확인<span class="ico_outlink"></span></a>
+                                    </div>
+                                    <div class="box">
+                                        <a href="javascript:;" class="btn_secondary_lg">자격취득 가능여부 자가진단<span class="ico_outlink"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page_btn_area center">
+                                <div class="lside">
+                                    <button type="button" class="btn_outline_lg">취소</button>
+                                </div>
+                                <div class="rside">
+                                    <button type="button" class="btn_primary_lg">확인</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br /><br />
+
+                        <div>
+                            <h3>- 페이지 하단</h3>
                             <div class="bottom_btn_area">
                                 <div class="lside">
                                     <button type="button" class="btn_outline_lg">이전으로</button>
@@ -362,41 +406,6 @@
 &#x3C;/div&#x3E;
                         </code>
                     </pre>
-                        </div>
-
-                        <div>
-                            <h3>페이지 중간</h3>
-                            <div class="page_btn_area">
-                                <div class="lside">
-                                    <button type="button" class="btn_primary_lg">확인</button>
-                                </div>
-                                <div class="rside">
-                                    <button type="button" class="btn_secondary_lg">확인</button>
-                                </div>
-                            </div>
-                            <div class="page_btn_area">
-                                <div class="rside">
-                                    <button type="button" class="btn_secondary_lg">확인</button>
-                                </div>
-                            </div>
-                            <div class="page_btn_area">
-                                <div class="rside">
-                                    <div class="box">
-                                        <button type="button" class="btn_outline_lg">취소</button>
-                                    </div>
-                                    <div class="box">
-                                        <button type="button" class="btn_secondary_lg">확인</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="page_btn_area center">
-                                <div class="lside">
-                                    <button type="button" class="btn_outline_lg">취소</button>
-                                </div>
-                                <div class="rside">
-                                    <button type="button" class="btn_primary_lg">확인</button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!--// 버튼 -->
@@ -509,6 +518,8 @@
                             <span class="txt_navy1">텍스트</span><br />
                             <span class="txt_underline">텍스트</span><br />
                             <p class="txt_note">응시 확정 후에는 변경이 불가합니다.</p>
+                            <p class="txt_dot">근거법령: 수도법 제24조</p>
+                            <p class="txt_mark">실무교육: 수도시설의 설치나 유지, 관리 분야의 실제 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 교육</p>
                         </div>
                         <br />
                         <pre><code class="html"></code></pre>
@@ -536,9 +547,13 @@
                                     <p class="txt">평가시험 일정 또는 응시여부를 확인하여 주시기 바랍니다.</p>
                                 </div>
                             </div>
-                            <div class="notice_box lightblue">
+                            <div class="notice_box lightblue center">
                                 <p class="tit"><span class="ico_marknavy"></span>이전 시스템 가입자 회원 전환 가입 안내</p>
-                                <p class="txt">2025.08. 이전 시스템 가입자는 시스템 변경에 따라 신규시스템 회원으로 전환 가입하셔야 서비스 이용이 가능합니다</p>
+                                <p class="txt left">2025.08. 이전 시스템 가입자는 시스템 변경에 따라 신규시스템 회원으로 전환 가입하셔야 서비스 이용이 가능합니다</p>
+                            </div>
+                            <div class="notice_box lightblue">
+                                <strong>상수도관망시설운영관리사</strong>는 등급별로 요건을 충족하여야 자격을 취득할 수 있습니다. (단 자격요건이 충족되지 않더라도 양성과정 참여는 가능하며, 추후 자격요건을 충족시 자격발급이 가능) 또한 자격요건을 충족하더라도 결격사유에 해당하는 경우 자격취득이
+                                불가능하므로 자격요건과 결격사유를 확인하시기 바랍니다.
                             </div>
                         </div>
                         <br />
@@ -560,7 +575,176 @@
                             <span class="value_badge6">취소</span>
                             <span class="value_badge7">만족도 조사</span>
                             <br />
+                            <span class="data_badge1">문의</span>
+                            <span class="data_badge2">답변</span>
+                            <span class="data_badge3">구분</span>
                         </div>
+                        <br />
+                        <pre><code class="html"></code></pre>
+                        <br />
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="tab">
+                        <h2>Tab</h2>
+                        <br />
+                        <!-- tab -->
+                        <div class="tab_area">
+                            <div class="scroll_area">
+                                <ul class="tab" role="tablist">
+                                    <!-- 접근성 aria-controls -->
+                                    <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">tab1</button></li>
+                                    <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">tab2</button></li>
+                                    <li role="presentation" aria-controls="tab3"><button type="button" role="tab" aria-selected="false">tab3</button></li>
+                                    <li role="presentation" aria-controls="tab4"><button type="button" role="tab" aria-selected="false">tab4</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="tabpanel" role="tabpanel">
+                                <!-- 접근성 aria-controls과 id값 동일하게 적용 -->
+                                <!-- tab1 -->
+                                <div id="tab1" class="tab_cont" aria-hidden="false">
+                                    <h3 class="hidden">tab1 타이틀</h3>
+                                    <div class="detail_view">tab1 내용</div>
+                                </div>
+                                <!--// tab1 -->
+
+                                <!-- tab2 -->
+                                <div id="tab2" class="tab_cont" aria-hidden="true" style="display: none">
+                                    <h3 class="hidden">tab2 타이틀</h3>
+                                    <div class="detail_view">tab2 내용</div>
+                                </div>
+                                <!--// tab1 -->
+
+                                <!-- tab3 -->
+                                <div id="tab3" class="tab_cont" aria-hidden="true" style="display: none">
+                                    <h3 class="hidden">tab3 타이틀</h3>
+                                    <div class="detail_view">tab3 내용</div>
+                                </div>
+                                <!--// tab3 -->
+
+                                <!-- tab4 -->
+                                <div id="tab4" class="tab_cont" aria-hidden="true" style="display: none">
+                                    <h3 class="hidden">tab4 타이틀</h3>
+                                    <div class="detail_view">tab4 내용</div>
+                                </div>
+                                <!--// tab4 -->
+                            </div>
+                        </div>
+                        <!--// tab -->
+                        <br />
+                        <pre><code class="html"></code></pre>
+                        <br />
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="accordion">
+                        <h2>Accordion</h2>
+                        <br />
+                        <!-- accordion -->
+                        <div class="accordion_area qna">
+                            <!-- 활성화 : is_open -->
+                            <dl class="accordion_box is_open">
+                                <dt class="accordion_head">
+                                    <!-- 접근성 : aria-expanded, aria-controls -->
+                                    <!-- 접근성 : 활성화 aria-expanded="true" // 비활성화 시 aria-expanded="false" -->
+                                    <button type="button" class="fold" aria-expanded="true" aria-controls="qna1">Q. 동영상 강의와 교재 중 시험은 어디서 나오나요?</button>
+                                </dt>
+                                <!-- 접근성 : aria-controls값과 id값 동일하게 적용 -->
+                                <dd id="qna1" class="accordion_body" style="display: block">
+                                    <div class="article"><span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                    <div class="article">
+                                        <button type="button" class="btn_download">상사도관망시설운영관리사 3급 양성과정 모집요강.hwp</button>
+                                        <button type="button" class="btn_download">양성과정 모집요강.hwp</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="accordion_box">
+                                <dt class="accordion_head">
+                                    <button type="button" class="fold" aria-expanded="false" aria-controls="qna2">Q. 교육수료기준이 어떻게 되나요?</button>
+                                </dt>
+                                <dd id="qna2" class="accordion_body" style="display: none">
+                                    <div class="article"><span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                    <div class="article">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                    <div class="article">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                    <div class="article">
+                                        <button type="button" class="btn_download">상사도관망시설운영관리사 3급 양성과정 모집요강.hwp</button>
+                                        <button type="button" class="btn_download">양성과정 모집요강.hwp</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="accordion_box">
+                                <dt class="accordion_head">
+                                    <button type="button" class="fold" aria-expanded="false" aria-controls="qna3">Q. 교육수료기준이 어떻게 되나요?</button>
+                                </dt>
+                                <dd id="qna3" class="accordion_body" style="display: none">
+                                    <div class="article"><span class="txt_a">A.</span> 내용</div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!--// accordion -->
+                        <pre><code class="html"></code></pre>
+                        <br />
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="progress">
+                        <h2>Progress</h2>
+                        <br />
+                        <!-- progress -->
+                        <div class="progress-bar">
+                            <div class="completion">
+                                <span class="step">
+                                    <span>1단계</span>
+                                </span>
+                                <strong>신청서 작성</strong>
+                            </div>
+                            <div class="on">
+                                <span class="step">
+                                    <span>2단계</span>
+                                </span>
+                                <strong>신청정보확인</strong>
+                                <span class="hidden">총 3단계 중 2단계 신청정보확인</span>
+                            </div>
+                            <div>
+                                <span class="step">
+                                    <span>3단계</span>
+                                </span>
+                                <strong>수수료 결제</strong>
+                            </div>
+                        </div>
+                        <!--// progress -->
+                        <br />
+                        <pre><code class="html"></code></pre>
+                        <br />
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="pagination">
+                        <h2>Pagination</h2>
+                        <br />
+                        <!-- pagination -->
+                        <div class="pagination">
+                            <ul>
+                                <li class="arrow prev">
+                                    <button type="button" title="이전"><span class="pc_only">이전</span></button>
+                                </li>
+                                <!-- 활성화 on, 접근성 title -->
+                                <li class="on"><button type="button" title="선택 됨">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li class="ellipsis">...</li>
+                                <li><button type="button">10</button></li>
+                                <li class="arrow next">
+                                    <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--// pagination -->
                         <br />
                         <pre><code class="html"></code></pre>
                         <br />

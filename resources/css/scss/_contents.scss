@@ -101,6 +101,11 @@
         font-size: 2rem;
         text-align: center;
     }
+    @include desktop {
+        .bottom_btn_area {
+            margin-top: var(--gap-24);
+        }
+    }
 }
 
 // 간편인증
@@ -161,6 +166,73 @@
         margin-top: var(--gap-24);
         @include mobile {
             margin-top: var(--gap-50);
+        }
+    }
+}
+
+// 자격·과정안내
+// 취득방법 및 절차
+.license_process2 {
+    width: 74rem;
+    > ol {
+        > li {
+            position: relative;
+            padding-bottom: var(--gap-24);
+            color: var(--color-gray);
+            > strong {
+                display: inline-block;
+                width: 23rem;
+                padding: var(--gap-12) var(--gap-16);
+                margin-right: var(--gap-16);
+                color: var(--color-warblack);
+                background-color: #eef2f7;
+                text-align: center;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 2.4rem;
+                height: 2.4rem;
+                margin-left: -1.2rem;
+                background: url($url-img-common + "bg_arrow_right.png") no-repeat 0 0;
+                background-size: contain;
+                transform: rotate(90deg);
+            }
+            &:last-child {
+                padding-bottom: 0;
+                &:after {
+                    display: var(--hide);
+                }
+            }
+        }
+    }
+    @include mobile {
+        width: 100%;
+        > ol {
+            > li {
+                display: flex;
+                align-content: stretch;
+                > strong {
+                    display: flex;
+                    align-items: center;
+                    width: 16.6rem;
+                    margin-right: 0;
+                    > span {
+                        flex: 1;
+                    }
+                }
+                > .txt {
+                    display: flex;
+                    align-items: center;
+                    width: calc(100% - 16.6rem);
+                    padding: var(--gap-12) var(--gap-16);
+                }
+                &:after {
+                    left: 16.6rem;
+                }
+            }
         }
     }
 }
@@ -384,6 +456,25 @@
             .bottom_btn_area {
                 margin-top: var(--gap-50);
             }
+        }
+    }
+}
+
+// 마이페이지
+// 문의하기
+.board_addfile_set {
+    .form_list {
+        + .form_list {
+            margin-top: var(--gap-24);
+            @include mobile {
+                margin-top: var(--gap-50);
+            }
+        }
+    }
+    .list_addfile {
+        margin-top: var(--gap-10);
+        @include mobile {
+            margin-top: var(--gap-50);
         }
     }
 }

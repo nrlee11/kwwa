@@ -11,7 +11,7 @@
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
-        <title>발급현황 조회 | 한국상하수도협회</title>
+        <title>발급현황 조회 | 자격증발급 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -222,50 +222,51 @@
             <!-- [include] footer(s) : 확인용 -->
             <div data-include-file="../include/footer.html" class="includeJs"></div>
             <!--// [include] footer(e) : 확인용 -->
-
-            <!-- Layer : 첨부불가 안내 -->
-            <div class="layerFix alertPopup" id="filetypealertPop" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="alert_msg">
-                            <div class="msg">첨부가 불가한 파일입니다.</div>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 첨부불가 안내 -->
-
-            <!-- Layer : 파일용량 초과 안내 -->
-            <div class="layerFix alertPopup" id="filesizealertPop" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="alert_msg">
-                            <div class="msg">첨부파일은 최대 10MB까지 등록 가능합니다.</div>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 파일용량 초과 안내 -->
         </div>
         <!--// wrap(e) -->
+
+        <!-- Layer : 첨부불가 안내 -->
+        <div class="layerFix alertPopup" id="filetypealertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg">첨부가 불가한 파일입니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 첨부불가 안내 -->
+
+        <!-- Layer : 파일용량 초과 안내 -->
+        <div class="layerFix alertPopup" id="filesizealertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg">첨부파일은 최대 10MB까지 등록 가능합니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 파일용량 초과 안내 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
@@ -288,6 +289,8 @@
 
                 if ($.inArray(fileaccept, ["png", "jpg"]) == -1) {
                     // 첨부불가 안내
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
                     $("#filetypealertPop, .layerDim").show();
                     setTimeout(() => {
                         $("#filetypealertPop").focus();
@@ -297,6 +300,8 @@
 
                 if (fileSize > maxSize) {
                     // 파일용량 초과 안내
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
                     $("#filesizealertPop, .layerDim").show();
                     setTimeout(() => {
                         $("#filesizealertPop").focus();

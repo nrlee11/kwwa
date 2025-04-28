@@ -11,7 +11,7 @@
         <meta name="format-detection" content="telephone=no" />
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
-        <title>자격취득 확인서 발급 | 한국상하수도협회</title>
+        <title>자격취득 확인서 발급 | 자격증발급 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -110,7 +110,8 @@
                             </div>
 
                             <ul class="list_dash">
-                                <li>자격취득확인서는 자격증 발급여부를 확인하는 문서이며, 자격의 증빙은 실제 발급된 자격증을 통해서만 확인할 수 있습니다. 자격증 신청이 완료(자격요건확인, 결격사유조회 포함) 되어야 발급이 가능합니다.</li>
+                                <li>자격취득확인서는 자격증 발급여부를 확인하는 문서이며, 자격의 증빙은 실제 발급된 자격증을 통해서만 확인할 수 있습니다.</li>
+                                <li>자격증 신청이 완료(자격요건확인, 결격사유조회 포함) 되어야 발급이 가능합니다.</li>
                             </ul>
                         </div>
                         <!--// section(e) -->
@@ -128,22 +129,5 @@
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
-        <script>
-            // 첨부파일 샘플
-            function setThumbnail() {
-                var reader = new FileReader();
-                var imgWrap = $(".img_preview")[0];
-                reader.onload = function (event) {
-                    var img = document.createElement("img");
-                    img.setAttribute("src", event.target.result);
-                    imgWrap.appendChild(img).setAttribute("alt", "자격증 발급용 사진");
-                };
-                reader.readAsDataURL(event.target.files[0]);
-            }
-            $(".img_preview .btn_reset").click(function () {
-                $(this).parent().children(".img_preview img").remove();
-                $("#imgfile").val("");
-            });
-        </script>
     </body>
 </html>

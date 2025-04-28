@@ -592,16 +592,24 @@
         border: 0.2rem solid #555;
         border-radius: 5rem;
         background-color: #fafafa;
-        input {
-            height: auto;
-            padding: 0;
-            border: 0;
-            background: 0;
-            font-size: 2.2rem;
-            color: var(--color-black);
-            &::placeholder {
-                color: #6d7882 !important;
-                font-size: 2.2rem;
+        .form_item {
+            width: 100%;
+            .inp {
+                input {
+                    height: auto;
+                    padding: 0 var(--gap-40) 0 0;
+                    border: 0;
+                    background: 0;
+                    font-size: 2.2rem;
+                    color: var(--color-black);
+                    + .btn_reset {
+                        right: 0;
+                    }
+                    &::placeholder {
+                        color: #6d7882 !important;
+                        font-size: 2.2rem;
+                    }
+                }
             }
         }
         .btn_search {

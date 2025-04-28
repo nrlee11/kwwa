@@ -23,43 +23,44 @@
                     <button type="button" class="btn_primary_lg" id="requirements03">정수시설운영관리사 자격요건(3급)</button>
                 </div>
             </div>
-
-            <!-- Layer : 정수시설운영관리사 자격요건(3급) -->
-            <div class="layerFix fullPopup" id="requirementsPop03" style="display: none" tabindex="0">
-                <div class="layer_wrap">
-                    <div class="head">
-                        <strong class="tit">상하수도 국가전문자격시스템</strong>
-                    </div>
-                    <div class="cont">
-                        <div class="tit_area">
-                            <em>※ 수도법 시행령 [별표 3] &lt;개정 2024. 8. 13.&gt; </em>
-                            <strong class="tit">
-                                정수시설운영관리사 3급 자격요건
-                                <span>(제41조제1항 관련)</span>
-                            </strong>
-                        </div>
-                        <div class="terms_wrap">
-                            <p>다음 각 호의 어느 하나에 해당하는 사람으로서 법 제24조제1항 및 제3항에 따른 정수시설운영관리사 3급의 양성과정을 이수한 사람</p>
-                            <br />
-                            <ul>
-                                <li>1. 이공계 전문대학 졸업 이상의 학력을 가진 자</li>
-                                <li>2. 고등학교 졸업 후 수도시설의 설치나 유지관리 분야에서 1년 이상 실무에 종사한 자</li>
-                                <li>3. 수도시설의 설치나 유지관리 분야에서 3년 이상 실무에 종사한 자</li>
-                                <li>4. 「학점인정 등에 관한 법률」 제8조에 따라 이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="btn_area">
-                            <button type="button" class="btn_primary_md layer_close">확인</button>
-                        </div>
-                    </div>
-                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-                </div>
-            </div>
-            <!--// Layer : 정수시설운영관리사 자격요건(3급) -->
         </div>
         <!--// wrap(e) -->
+
+        <!-- Layer : 정수시설운영관리사 자격요건(3급) -->
+        <div class="layerFix fullPopup" id="requirementsPop03" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <em>※ 수도법 시행령 [별표 3] &lt;개정 2024. 8. 13.&gt; </em>
+                        <strong class="tit">
+                            정수시설운영관리사 3급 자격요건
+                            <span>(제41조제1항 관련)</span>
+                        </strong>
+                    </div>
+                    <div class="terms_wrap">
+                        <p>다음 각 호의 어느 하나에 해당하는 사람으로서 법 제24조제1항 및 제3항에 따른 정수시설운영관리사 3급의 양성과정을 이수한 사람</p>
+                        <br />
+                        <ul>
+                            <li>1. 이공계 전문대학 졸업 이상의 학력을 가진 자</li>
+                            <li>2. 고등학교 졸업 후 수도시설의 설치나 유지관리 분야에서 1년 이상 실무에 종사한 자</li>
+                            <li>3. 수도시설의 설치나 유지관리 분야에서 3년 이상 실무에 종사한 자</li>
+                            <li>4. 「학점인정 등에 관한 법률」 제8조에 따라 이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 정수시설운영관리사 자격요건(3급) -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -67,6 +68,7 @@
                 // Layer : 정수시설운영관리사 자격요건(3급)
                 $("#requirements03").click(function (e) {
                     $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
                     $(".layerDim").show();
                     $("#requirementsPop03").show().focus();
                 });

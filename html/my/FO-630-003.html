@@ -51,102 +51,81 @@
                             <div class="board_area">
                                 <!-- form-->
                                 <div class="form_section">
-                                    <!-- board_write -->
-                                    <div class="form_list base gap_mt24">
-                                        <div class="form_group">
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="group_box">
-                                                            <div class="box">
-                                                                <span class="data_badge1">문의</span>
-                                                            </div>
-                                                            <div class="box">
-                                                                <div class="inp_select size_190">
-                                                                    <select title="카테고리 선택">
-                                                                        <option value="">카테고리</option>
-                                                                        <option value="">교육</option>
-                                                                        <option value="">평가시험</option>
-                                                                        <option value="">실무교육</option>
-                                                                        <option value="">자격증</option>
-                                                                        <option value="">결제</option>
-                                                                        <option value="">기타</option>
-                                                                    </select>
+                                    <div class="board_addfile_set">
+                                        <!-- board_write -->
+                                        <div class="form_list base">
+                                            <div class="form_group">
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <span class="data_badge1">문의</span>
                                                                 </div>
-                                                            </div>
-                                                            <div class="box">
-                                                                <div class="inp size_360">
-                                                                    <input type="text" placeholder="제목을 입력하세요" autocomplete="off" />
+                                                                <div class="box">
+                                                                    <div class="inp_select size_190">
+                                                                        <select title="카테고리 선택">
+                                                                            <option value="">카테고리</option>
+                                                                            <option value="">교육</option>
+                                                                            <option value="">평가시험</option>
+                                                                            <option value="">실무교육</option>
+                                                                            <option value="">자격증</option>
+                                                                            <option value="">결제</option>
+                                                                            <option value="">기타</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <div class="inp size_360">
+                                                                        <input type="text" placeholder="제목을 입력하세요" autocomplete="off" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="inp_textarea">
-                                                            <textarea placeholder="내용을 입력하세요" style="height: 144px"></textarea>
+                                            <div class="form_group">
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp_textarea">
+                                                                <textarea placeholder="내용을 입력하세요" style="height: 144px"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--// board_write -->
+
+                                        <!-- board_write -->
+                                        <div class="form_list table">
+                                            <div class="form_group">
+                                                <div class="tit"><span>파일 첨부</span></div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="file_set">
+                                                                <div class="inp">
+                                                                    <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                    <!-- <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button> -->
+                                                                </div>
+                                                                <label for="file1">파일찾기</label>
+                                                                <input type="file" id="file1" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// board_write -->
+                                        <!-- 파일첨부 목록 -->
+                                        <div class="list_addfile"></div>
+                                        <!--// 파일첨부 목록 -->
                                     </div>
-                                    <!--// board_write -->
                                 </div>
                                 <!--// form-->
-
-                                <div class="drop_file_set gap_mt24">
-                                    <div class="drop-zone">
-                                        <div>
-                                            <span class="drop-zone__prompt">첨부할 파일을 여기에 끌어다 놓거나. 파일 선택 버튼을 직접 선택해주세요.</span>
-                                            <input type="file" name="myFile" class="drop-zone__input" id="file111" />
-                                            <label for="file111">파일찾기</label>
-                                        </div>
-                                        <div class="drop-list"></div>
-                                    </div>
-                                </div>
-                                <style>
-                                    .drop-zone {
-                                        width: 100%;
-                                        height: 18rem;
-                                    }
-
-                                    .drop-zone--over {
-                                        border-style: solid;
-                                    }
-
-                                    .drop-zone__input {
-                                        display: none;
-                                    }
-
-                                    .filess {
-                                        width: 100%;
-                                        height: 100%;
-                                        border-radius: 10px;
-                                        overflow: hidden;
-                                        background-color: #cccccc;
-                                        background-size: cover;
-                                        position: relative;
-                                    }
-
-                                    .filess::after {
-                                        content: attr(data-label);
-                                        position: absolute;
-                                        bottom: 0;
-                                        left: 0;
-                                        width: 100%;
-                                        padding: 5px 0;
-                                        color: #ffffff;
-                                        background: rgba(0, 0, 0, 0.75);
-                                        font-size: 14px;
-                                        text-align: center;
-                                    }
-                                </style>
                             </div>
                             <!--// board -->
                         </div>
@@ -154,10 +133,10 @@
 
                         <div class="bottom_btn_area center">
                             <div class="lside">
-                                <button type="button" class="btn_primary_lg">수정</button>
+                                <button type="button" class="btn_outline_lg">초기화</button>
                             </div>
                             <div class="rside">
-                                <button type="button" class="btn_outline_lg">목록</button>
+                                <button type="button" class="btn_primary_lg" id="alert">저장</button>
                             </div>
                         </div>
                     </div>
@@ -171,90 +150,51 @@
             <!--// [include] footer(e) : 확인용 -->
         </div>
         <!--// wrap(e) -->
+
+        <!-- Layer : 완료 -->
+        <div class="layerFix alertPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg completion">저장되었습니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 완료 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script>
             // 첨부파일 샘플
-            // $("#file1").on("change", function () {
-            //     var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-            //     $(this).parent().children().children("input").val(fileName);
-            // });
-            // $(".file_set .btn_reset").click(function () {
-            //     $(this).parent().children("input").val(""); // 파일명 삭제
-            // });
-
-            document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-                const dropZoneElement = inputElement.closest(".drop-zone");
-                const dropZoneElementList = inputElement.parent(".drop-zone").children(".drop-list");
-
-                dropZoneElement.addEventListener("click", (e) => {
-                    inputElement.click();
-                });
-
-                inputElement.addEventListener("change", (e) => {
-                    if (inputElement.files.length) {
-                        updateThumbnail(dropZoneElement, inputElement.files[0]);
-                    }
-                });
-
-                dropZoneElement.addEventListener("dragover", (e) => {
-                    e.preventDefault();
-                    dropZoneElement.classList.add("drop-zone--over");
-                });
-
-                ["dragleave", "dragend"].forEach((type) => {
-                    dropZoneElement.addEventListener(type, (e) => {
-                        dropZoneElement.classList.remove("drop-zone--over");
-                    });
-                });
-
-                dropZoneElement.addEventListener("drop", (e) => {
-                    e.preventDefault();
-
-                    if (e.dataTransfer.files.length) {
-                        inputElement.files = e.dataTransfer.files;
-                        updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-                    }
-
-                    dropZoneElement.classList.remove("drop-zone--over");
-                });
+            $("#file1").on("change", function () {
+                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명 추출
+                var addHtml = "<span class='addfile'>" + fileName + "<button type='button' class='btn_reset'><span class='hidden'>입력 내용 지우기</span></button></span>";
+                $(".list_addfile").append(addHtml);
+            });
+            $(".list_addfile").on("click", ".btn_reset", function () {
+                $(this).closest(".addfile").remove();
             });
 
-            /**
-             * Updates the thumbnail on a drop zone element.
-             *
-             * @param {HTMLElement} dropZoneElement
-             * @param {File} file
-             */
-            function updateThumbnail(dropZoneElement, file) {
-                let thumbnailElement = dropZoneElement.querySelector(".filess");
-
-                // First time - remove the prompt
-                if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-                    dropZoneElement.querySelector(".drop-zone__prompt").remove();
-                }
-
-                // First time - there is no thumbnail element, so lets create it
-                if (!thumbnailElement) {
-                    thumbnailElement = document.createElement("div");
-                    thumbnailElement.classList.add("filess");
-                    dropZoneElementList.append(thumbnailElement);
-                }
-
-                thumbnailElement.dataset.label = file.name;
-
-                // Show thumbnail for image files
-                if (file.type.startsWith("image/")) {
-                    const reader = new FileReader();
-
-                    reader.readAsDataURL(file);
-                    reader.onload = () => {
-                        thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-                    };
-                } else {
-                    thumbnailElement.style.backgroundImage = null;
-                }
-            }
+            // Layer : 완료
+            $("#alert").click(function (e) {
+                $("html").addClass("layerOpen");
+                $("#wrap").attr("aria-hidden", "true");
+                $(".layerDim").show();
+                $("#alertPop").show().focus();
+            });
+            $("#alertPop .layer_close").click(function (e) {
+                $("#alert").focus(); // 접근성
+            });
         </script>
     </body>
 </html>

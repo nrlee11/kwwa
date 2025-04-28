@@ -531,7 +531,420 @@
                         <h3 class="h3">- View</h3>
                         <div class="inner">
                             <div class="box">
-                                <div class="article"></div>
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <div class="board_desc_top">
+                                            <div class="lside">신청번호를 클릭하면 신청서를 보실 수 있습니다.</div>
+                                            <div class="rsdie">조회된 내역(100건)</div>
+                                        </div>
+
+                                        <!-- board_view -->
+                                        <table class="tbl react">
+                                            <caption>
+                                                심사기간 내 신청 취소 , 심사반려, 제작 완료, 발송완료 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 25%" span="4" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">타이틀1</th>
+                                                    <th scope="col">타이틀타이틀타이틀타이틀2</th>
+                                                    <th scope="col">타이틀3</th>
+                                                    <th scope="col">타이틀4</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-cell-header="타이틀1"><div>내용</div></td>
+                                                    <td data-cell-header="타이틀타이틀타이틀타이틀2" class="left"><div>내용이 길어요 내용이 길어요 내용이 길어요 내용이 길어요</div></td>
+                                                    <td data-cell-header="타이틀3"><div>내용</div></td>
+                                                    <td data-cell-header="타이틀4" class="right"><div>내용</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-cell-header="타이틀1"><div>내용</div></td>
+                                                    <td data-cell-header="타이틀2" class="left"><div>내용</div></td>
+                                                    <td data-cell-header="타이틀3"><div>내용</div></td>
+                                                    <td data-cell-header="타이틀4" class="right"><div>내용</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="nodata">조회된 내역이 없습니다.</div>
+                                        <!--// board_view -->
+
+                                        <div class="board_desc_bottom">
+                                            <p class="txt_mark">(기본간격 24px) 증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</p>
+                                        </div>
+
+                                        <div class="board_desc_bottom gap_mt10">
+                                            <p class="txt_note">(txt_note만 노출될 경우 10px) 배송시 등록된 본인명의의 휴대전화로 연락드립니다.</p>
+                                        </div>
+                                    </div>
+                                    <!--// board -->
+                                    <br />
+                                    <br />
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_view -->
+                                        <table class="tbl react row">
+                                            <caption>
+                                                신청번호, 진행상태, 자격종목, 요청일, 요청구분, 보완대상, 사유 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15.3rem" />
+                                                <col style="width: 29.1rem" />
+                                                <col style="width: 15.3rem" />
+                                                <col style="width: 29.1rem" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">신청번호</th>
+                                                    <td data-cell-header="신청번호"><div>A000000</div></td>
+                                                    <th scope="row">진행상태</th>
+                                                    <td data-cell-header="진행상태"><div>보완요청</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">자격종목</th>
+                                                    <td data-cell-header="자격종목"><div>상수도관망시설운영관리사 1급</div></td>
+                                                    <th scope="row">요청일</th>
+                                                    <td data-cell-header="요청일"><div>2025-02-02</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">요청구분</th>
+                                                    <td data-cell-header="요청구분"><div>자격요건 미충족</div></td>
+                                                    <th scope="row">보완대상</th>
+                                                    <td data-cell-header="보완대상">
+                                                        <div><span class="txt_red">경력 증빙</span></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">사유</th>
+                                                    <td data-cell-header="사유" colspan="3"><div>관리자 메모 출력</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_view -->
+                                    </div>
+                                    <!--// board -->
+                                    <br />
+                                    <br />
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_view -->
+                                        <table class="tbl react row size110">
+                                            <caption>
+                                                이름, 주민등록번호, 주소, 휴대폰 번호, 전화번호 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15.3rem" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">이름</th>
+                                                    <td data-cell-header="이름"><div>홍길동</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">주민등록번호</th>
+                                                    <td data-cell-header="주민등록번호"><div>900105-*******</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">주소</th>
+                                                    <td data-cell-header="주소">
+                                                        <div>07379<br />서울특별시 영등포구 대림로-244(대림동)<br />2F 201호</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">휴대폰 번호</th>
+                                                    <td data-cell-header="휴대폰 번호"><div>010-1234-1234</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">전화번호</th>
+                                                    <td data-cell-header="전화번호"><div>02-1234-5678</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_view -->
+                                    </div>
+                                    <!--// board -->
+                                    <br />
+                                    <br />
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_view -->
+                                        <table class="tbl react row sm size120">
+                                            <caption>
+                                                신청번호, 자격번호, 자격 취득일, 교부 연월일, 재발급 신청일, 재발급 신청사유, 재발급 신청사유 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15.3rem" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">신청번호</th>
+                                                    <td data-cell-header="신청번호"><div>REQ2-25-0001</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">자격번호</th>
+                                                    <td data-cell-header="자격번호"><div>WL000000</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">자격 취득일</th>
+                                                    <td data-cell-header="자격 취득일"><div>2025-02-10</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">교부 연월일</th>
+                                                    <td data-cell-header="교부 연월일"><div>2025-02-10</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">재발급 신청일</th>
+                                                    <td data-cell-header="재발급 신청일"><div>2025-02-10</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">재발급 신청사유</th>
+                                                    <td data-cell-header="재발급 신청사유"><div>분실</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">배송지 주소</th>
+                                                    <td data-cell-header="배송지 주소">
+                                                        <div>
+                                                            07379<br />
+                                                            서울특별시 영등포구 대림로-244(대림동)
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_view -->
+                                    </div>
+                                    <!--// board -->
+                                    <br />
+                                    <br />
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_view -->
+                                        <table class="tbl react row size110">
+                                            <caption>
+                                                자격번호, 자격 취득일, 교부 연월일, 재발급 신청사유 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15.3rem" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">자격번호</th>
+                                                    <td data-cell-header="자격번호"><div>WL000000</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">자격 취득일</th>
+                                                    <td data-cell-header="자격 취득일"><div>2025-02-20</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">교부 연월일</th>
+                                                    <td data-cell-header="교부 연월일"><div>2025-02-20</div></td>
+                                                </tr>
+                                                <tr class="write_cell">
+                                                    <th scope="row">
+                                                        <label for="answer">재발급 신청사유</label>
+                                                    </th>
+                                                    <td data-cell-header="재발급 신청사유">
+                                                        <div>
+                                                            <div class="form_item">
+                                                                <div class="inp_select">
+                                                                    <select title="신청사유 선택" id="answer">
+                                                                        <option value="">신청사유 선택</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_item">
+                                                                <div class="inp_textarea">
+                                                                    <textarea placeholder="재발급 신청사유을 입력해 주세요"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_view -->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3 class="h3">- List</h3>
+                        <div class="inner">
+                            <div class="box">
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_search -->
+                                        <div class="board_search">
+                                            <div class="form_item">
+                                                <div class="inp_select size_190">
+                                                    <select title="검색 조건 선택">
+                                                        <option value="">전체</option>
+                                                        <option value="">제목</option>
+                                                        <option value="">내용</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form_item wide">
+                                                <div class="inp">
+                                                    <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
+                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                </div>
+                                                <button type="button" class="btn_search"><span class="hidden">검색</span></button>
+                                            </div>
+                                        </div>
+                                        <!--// board_search -->
+
+                                        <div class="board_desc_top">
+                                            <div class="lside">
+                                                <div class="board_count">전체 <span>10</span>/1,000</div>
+                                            </div>
+                                            <div class="rside">
+                                                <div class="form_item inblock">
+                                                    <div class="inp_select size_80">
+                                                        <select class="sm" title="노출 개수 선택">
+                                                            <option value="">15</option>
+                                                            <option value="">30</option>
+                                                            <option value="">50</option>
+                                                            <option value="">100</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- board_list -->
+                                        <table class="tbl react">
+                                            <caption>
+                                                No, 구분, 제목, 첨부파일, 등록일, 조회 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 80px" span="2" />
+                                                <col />
+                                                <col style="width: 88px" />
+                                                <col style="width: 111px" span="2" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">No</th>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">제목</th>
+                                                    <th scope="col">첨부파일</th>
+                                                    <th scope="col">등록일</th>
+                                                    <th scope="col">조회</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-cell-header="No">
+                                                        <div><span class="data_badge1">문의</span></div>
+                                                    </td>
+                                                    <td data-cell-header="구분"><div>시험</div></td>
+                                                    <td data-cell-header="제목" class="left">
+                                                        <div>
+                                                            <div class="new_set">
+                                                                <a href="javascript:;" class="txt_ellipsis">
+                                                                    [정수] 2025년 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사
+                                                                    <span class="ico_new"><span class="hidden">new</span></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-cell-header="첨부파일">
+                                                        <div>
+                                                            <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                                        </div>
+                                                    </td>
+                                                    <td data-cell-header="등록일"><div>2021-03-10</div></td>
+                                                    <td data-cell-header="조회"><div>000</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-cell-header="No">
+                                                        <div>1</div>
+                                                    </td>
+                                                    <td data-cell-header="구분"><div>시험</div></td>
+                                                    <td data-cell-header="제목" class="left">
+                                                        <div>
+                                                            <div class="new_set">
+                                                                <a href="javascript:;" class="txt_ellipsis">
+                                                                    [참고] 업무처리지침
+                                                                    <span class="ico_new"><span class="hidden">new</span></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-cell-header="첨부파일">
+                                                        <div>
+                                                            <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                                        </div>
+                                                    </td>
+                                                    <td data-cell-header="작성일"><div>2021-03-10</div></td>
+                                                    <td data-cell-header="조회"><div>000</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-cell-header="No">
+                                                        <div>1</div>
+                                                    </td>
+                                                    <td data-cell-header="구분"><div>시험</div></td>
+                                                    <td data-cell-header="제목" class="left">
+                                                        <div>
+                                                            <div class="new_set">
+                                                                <a href="javascript:;" class="txt_ellipsis"> [참고] 업무처리지침 업무처리지침 업무처리지침 업무처리지침 업무처리지침 업무처리지침업무처리지침 </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td data-cell-header="첨부파일">
+                                                        <div>
+                                                            <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                                        </div>
+                                                    </td>
+                                                    <td data-cell-header="작성일"><div>2021-03-10</div></td>
+                                                    <td data-cell-header="조회"><div>000</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_list -->
+
+                                        <div class="nodata">조회된 내역이 없습니다.</div>
+
+                                        <!-- pagination -->
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="arrow prev">
+                                                    <button type="button" title="이전"><span class="pc_only">이전</span></button>
+                                                </li>
+                                                <!-- 활성화 on, 접근성 title -->
+                                                <li class="on"><button type="button" title="선택 됨">1</button></li>
+                                                <li><button type="button">2</button></li>
+                                                <li><button type="button">3</button></li>
+                                                <li class="ellipsis">...</li>
+                                                <li><button type="button">10</button></li>
+                                                <li class="arrow next">
+                                                    <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--// pagination -->
+                                    </div>
+                                    <!--// board -->
+                                    <script>
+                                        // 검색 value 삭제 샘플
+                                        $(".inp .btn_reset").click(function () {
+                                            const $input = $(this).parent().children("input");
+                                            $input.val("").focus();
+                                        });
+                                    </script>
+                                </div>
                             </div>
                         </div>
                     </div>

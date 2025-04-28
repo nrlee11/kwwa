@@ -118,7 +118,7 @@
 
                             <!-- board -->
                             <div class="board_area">
-                                <div class="board_desc_top">
+                                <div class="page_btn_area gap_mb24">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">근무경력 추가</button>
                                     </div>
@@ -207,7 +207,7 @@
                                                             <div class="box">
                                                                 <div class="file_set">
                                                                     <div class="inp">
-                                                                        <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                        <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                         <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                                     </div>
                                                                     <label for="file1">파일찾기</label>
@@ -228,7 +228,7 @@
                                 <!--// form-->
 
                                 <!-- 근무경력 추가 -->
-                                <div class="board_desc_top gap_mt24">
+                                <div class="page_btn_area gap_mt24 gap_mb24">
                                     <div class="rside">
                                         <button type="button" class="btn_primary_lg">삭제</button>
                                     </div>
@@ -283,7 +283,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file2">파일찾기</label>
@@ -385,12 +385,14 @@
             });
 
             // 첨부파일 샘플
-            $("#file1, #file2, #file3, #file4").on("change", function () {
-                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                $(this).parent().children().children("input").val(fileName);
+            $(".file_set input[type='file']").on("change", function () {
+                var fileName = $(this).val().split("/").pop().split("\\").pop();
+                $(this).siblings(".inp").find("input[type='text']").val(fileName);
             });
             $(".file_set .btn_reset").click(function () {
-                $(this).parent().children("input").val(""); // 파일명 삭제
+                $(this).siblings("input[type='text']").val("");
+                var fileInput = $(this).closest(".file_set").find("input[type='file']");
+                fileInput.val("");
             });
         </script>
     </body>

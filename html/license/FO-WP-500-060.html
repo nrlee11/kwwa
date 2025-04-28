@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
-        <title>진위여부 조회 | 한국상하수도협회</title>
+        <title>진위여부 조회 | 자격증발급 | 한국상하수도협회</title>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -94,7 +94,7 @@
                                                         <div class="group_box">
                                                             <div class="box">
                                                                 <div class="inp size_219">
-                                                                    <input type="tel" id="licenseNumber" placeholder="자격증 번호 입력" autocomplete="off" />
+                                                                    <input type="text" id="licenseNumber" placeholder="자격증 번호 입력" autocomplete="off" />
                                                                 </div>
                                                             </div>
                                                             <div class="box">(영문 대소문자, 숫자 구분합니다)</div>
@@ -197,76 +197,5 @@
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
-        <script>
-            // 달력 샘플
-            $.datepicker.setDefaults($.datepicker.regional["ko"]);
-            $("#date1").datepicker({
-                dateFormat: "yy-mm-dd",
-                showOtherMonths: true,
-                showMonthAfterYear: true,
-                nextText: "다음 달",
-                prevText: "이전 달",
-                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-                ignoreReadonly: true,
-                buttonImageOnly: false,
-            });
-
-            // 첨부파일 샘플
-            function setThumbnail() {
-                var reader = new FileReader();
-                var imgWrap = $(".img_preview")[0];
-                reader.onload = function (event) {
-                    var img = document.createElement("img");
-                    img.setAttribute("src", event.target.result);
-                    imgWrap.appendChild(img).setAttribute("alt", "자격증 발급용 사진");
-                };
-                reader.readAsDataURL(event.target.files[0]);
-            }
-            $(".img_preview .btn_reset").click(function () {
-                $(this).parent().children(".img_preview img").remove();
-                $("#imgfile").val("");
-            });
-
-            // 첨부파일 샘플
-            $("#file1, #file2, #file3, #file4").on("change", function () {
-                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                $(this).parent().children().children("input").val(fileName);
-            });
-            $(".file_set .btn_reset").click(function () {
-                $(this).parent().children("input").val(""); // 파일명 삭제
-            });
-
-            // Layer : 기본증명서 안내
-            $("#alert1").click(function (e) {
-                $("html").addClass("layerOpen");
-                $(".layerDim").show();
-                $("#alertPop1").show().focus();
-            });
-            $("#alertPop1 .layer_close").click(function (e) {
-                $("#alert1").focus(); // 접근성
-            });
-
-            // Layer : 학력 증명 서류 안내
-            $("#alert2").click(function (e) {
-                $("html").addClass("layerOpen");
-                $(".layerDim").show();
-                $("#alertPop2").show().focus();
-            });
-            $("#alertPop2 .layer_close").click(function (e) {
-                $("#alert2").focus(); // 접근성
-            });
-
-            // Layer : 기본증명서 안내
-            $("#basicguide").click(function (e) {
-                $("html").addClass("layerOpen");
-                $(".layerDim").show();
-                $("#basicguidePop").show().focus();
-            });
-            $("#basicguidePop .layer_close").click(function (e) {
-                $("#basicguide").focus(); // 접근성
-            });
-        </script>
     </body>
 </html>

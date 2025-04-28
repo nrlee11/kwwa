@@ -354,30 +354,5 @@
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
-        <script>
-            // 달력 샘플
-            $.datepicker.setDefaults($.datepicker.regional["ko"]);
-            $("#startDate, #endDate, #startDate1, #endDate1, #startDate2, #endDate2, #startDate3, #endDate3").datepicker({
-                dateFormat: "yy-mm-dd",
-                showOtherMonths: true,
-                showMonthAfterYear: true,
-                nextText: "다음 달",
-                prevText: "이전 달",
-                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-                ignoreReadonly: true,
-                buttonImageOnly: false,
-            });
-
-            // 첨부파일 샘플
-            $("#file1, #file2, #file3, #file4").on("change", function () {
-                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                $(this).parent().children().children("input").val(fileName);
-            });
-            $(".file_set .btn_reset").click(function () {
-                $(this).parent().children("input").val(""); // 파일명 삭제
-            });
-        </script>
     </body>
 </html>

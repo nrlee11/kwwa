@@ -24,7 +24,7 @@
             <div id="container" class="container">
                 <div class="lyinner">
                     <!-- [include] aside(s) : 확인용 -->
-                    <div data-include-file="../include/aside06.html" class="includeJs"></div>
+                    <div data-include-file="../include/aside.html" class="includeJs"></div>
                     <!--// [include] aside(e) : 확인용 -->
 
                     <!-- contents(s) -->
@@ -49,191 +49,200 @@
                         <div class="section">
                             <div class="tab_area">
                                 <div class="scroll_area">
-                                    <ul class="tab">
-                                        <li class="on"><button type="button" aria-selected="true">결제내역</button></li>
-                                        <li><button type="button" aria-selected="false">환불내역</button></li>
+                                    <ul class="tab" role="tablist">
+                                        <!-- 접근성 aria-controls -->
+                                        <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">결제내역</button></li>
+                                        <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">환불내역</button></li>
                                     </ul>
                                 </div>
 
-                                <!-- tab1 : 결제내역 -->
-                                <div class="tab_cont" aria-hidden="false">
-                                    <h3 class="hidden">결제내역</h3>
-                                    <p class="txt gap_mb24">결제하신 내역은 아래와 같습니다.</p>
-                                    <div class="edu_detail_list">
-                                        <div class="edu_group type3">
-                                            <div class="box">
-                                                <div class="edu_info more">
-                                                    <div class="lside">
-                                                        <div class="badge_set">
-                                                            <span class="value_badge1">결제완료</span>
+                                <div class="tabpanel" role="tabpanel">
+                                    <!-- 접근성 aria-controls과 id값 동일하게 적용 -->
+                                    <!-- tab1 : 결제내역 -->
+                                    <div id="tab1" class="tab_cont" aria-hidden="false">
+                                        <h3 class="hidden">결제내역</h3>
+                                        <p class="txt gap_mb24">결제하신 내역은 아래와 같습니다.</p>
+                                        <div class="edu_detail_list">
+                                            <!-- 양성교육 -->
+                                            <div class="edu_group type3">
+                                                <div class="box">
+                                                    <div class="edu_info">
+                                                        <div class="lside">
+                                                            <div class="badge_set">
+                                                                <span class="value_badge1">결제완료</span>
+                                                            </div>
+                                                            <span class="wl_number">2025-01-02 00:00:00</span>
                                                         </div>
-                                                        <span class="wl_number">2025-01-02 00:00:00</span>
                                                     </div>
-                                                </div>
-                                                <div class="timetable">
-                                                    <div class="edu_tit">
-                                                        <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                                    <div class="timetable">
+                                                        <div class="edu_tit">
+                                                            <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제금액</span>
+                                                            <span class="item">000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제수단</span>
+                                                            <span class="item">카드결제</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제금액</span>
-                                                        <span class="item">000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제수단</span>
-                                                        <span class="item">카드결제</span>
-                                                    </div>
-                                                </div>
-                                                <div class="bottom_btn_area cell4 wide">
-                                                    <div>
-                                                        <button type="button" class="btn_outline_lg">교육비 납입 확인서</button>
-                                                        <button type="button" class="btn_primary_lg">영수증 출력</button>
+                                                    <!-- class : wide -->
+                                                    <div class="bottom_btn_area cell4 wide">
+                                                        <div>
+                                                            <button type="button" class="btn_outline_lg">교육비 납입 확인서</button>
+                                                            <button type="button" class="btn_primary_lg">영수증 출력</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="edu_group type3">
-                                            <div class="box">
-                                                <div class="edu_info more">
-                                                    <div class="lside">
-                                                        <div class="badge_set">
-                                                            <span class="value_badge1">결제완료</span>
+                                            <!--// 양성교육 -->
+                                            <!-- 평가시험 -->
+                                            <div class="edu_group type3">
+                                                <div class="box">
+                                                    <div class="edu_info">
+                                                        <div class="lside">
+                                                            <div class="badge_set">
+                                                                <span class="value_badge1">결제완료</span>
+                                                            </div>
+                                                            <span class="wl_number">2025-01-02 00:00:00</span>
                                                         </div>
-                                                        <span class="wl_number">2025-01-02 00:00:00</span>
                                                     </div>
-                                                </div>
-                                                <div class="timetable">
-                                                    <div class="edu_tit">
-                                                        <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                                    <div class="timetable">
+                                                        <div class="edu_tit">
+                                                            <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제금액</span>
+                                                            <span class="item">000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제수단</span>
+                                                            <span class="item">카드결제</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제금액</span>
-                                                        <span class="item">000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제수단</span>
-                                                        <span class="item">카드결제</span>
-                                                    </div>
-                                                </div>
-                                                <div class="bottom_btn_area cell4">
-                                                    <div>
-                                                        <button type="button" class="btn_outline_lg">확인서</button>
-                                                        <button type="button" class="btn_primary_lg">영수증 출력</button>
+                                                    <div class="bottom_btn_area cell4">
+                                                        <div>
+                                                            <button type="button" class="btn_outline_lg">확인서</button>
+                                                            <button type="button" class="btn_primary_lg">영수증 출력</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="edu_group type3">
-                                            <div class="box">
-                                                <div class="edu_info more">
-                                                    <div class="lside">
-                                                        <div class="badge_set">
-                                                            <span class="value_badge1">결제완료</span>
+                                            <div class="edu_group type3">
+                                                <div class="box">
+                                                    <div class="edu_info">
+                                                        <div class="lside">
+                                                            <div class="badge_set">
+                                                                <span class="value_badge1">결제완료</span>
+                                                            </div>
+                                                            <span class="wl_number">2025-01-02 00:00:00</span>
                                                         </div>
-                                                        <span class="wl_number">2025-01-02 00:00:00</span>
                                                     </div>
-                                                </div>
-                                                <div class="timetable">
-                                                    <div class="edu_tit">
-                                                        <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가</strong>
+                                                    <div class="timetable">
+                                                        <div class="edu_tit">
+                                                            <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가상수도관망시설운영관리사 0급 이수평가</strong>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제금액</span>
+                                                            <span class="item">000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제수단</span>
+                                                            <span class="item">카드결제</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제금액</span>
-                                                        <span class="item">000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제수단</span>
-                                                        <span class="item">카드결제</span>
-                                                    </div>
-                                                </div>
-                                                <div class="bottom_btn_area cell4">
-                                                    <div>
-                                                        <button type="button" class="btn_outline_lg">확인서</button>
-                                                        <button type="button" class="btn_primary_lg">영수증 출력</button>
+                                                    <div class="bottom_btn_area cell4">
+                                                        <div>
+                                                            <button type="button" class="btn_outline_lg">확인서</button>
+                                                            <button type="button" class="btn_primary_lg">영수증 출력</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--// 평가시험 -->
                                         </div>
+                                        <div class="nodata">조회된 내역이 없습니다.</div>
                                     </div>
-                                    <div class="nodata">결제하신 내역이 없습니다.</div>
-                                </div>
-                                <!--// tab1 : 결제내역 -->
+                                    <!--// tab1 : 결제내역 -->
 
-                                <!-- tab2 : 환불내역 -->
-                                <div class="tab_cont" aria-hidden="true" style="display: none">
-                                    <h3 class="hidden">환불내역</h3>
-                                    <p class="txt gap_mb24">환불하신 내역은 아래와 같습니다.</p>
-                                    <div class="edu_detail_list">
-                                        <div class="edu_group type3">
-                                            <div class="box">
-                                                <div class="edu_info more">
-                                                    <div class="lside">
-                                                        <div class="badge_set">
-                                                            <span class="value_badge6">환불완료</span>
+                                    <!-- tab2 : 환불내역 -->
+                                    <div id="tab2" class="tab_cont" aria-hidden="true" style="display: none">
+                                        <h3 class="hidden">환불내역</h3>
+                                        <p class="txt gap_mb24">환불하신 내역은 아래와 같습니다.</p>
+                                        <div class="edu_detail_list">
+                                            <div class="edu_group type3">
+                                                <div class="box">
+                                                    <div class="edu_info">
+                                                        <div class="lside">
+                                                            <div class="badge_set">
+                                                                <span class="value_badge6">환불완료</span>
+                                                            </div>
+                                                            <span class="wl_number">2025-01-02 00:00:00</span>
                                                         </div>
-                                                        <span class="wl_number">2025-01-02 00:00:00</span>
+                                                    </div>
+                                                    <div class="timetable">
+                                                        <div class="edu_tit">
+                                                            <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제금액</span>
+                                                            <span class="item">000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제수단</span>
+                                                            <span class="item">카드결제</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">환불금액</span>
+                                                            <span class="item">-000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">환불방법</span>
+                                                            <span class="item">카드결제 부분취소</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="timetable">
-                                                    <div class="edu_tit">
-                                                        <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                            </div>
+                                            <div class="edu_group type3">
+                                                <div class="box">
+                                                    <div class="edu_info">
+                                                        <div class="lside">
+                                                            <div class="badge_set">
+                                                                <span class="value_badge6">환불완료</span>
+                                                            </div>
+                                                            <span class="wl_number">2025-01-02 00:00:00</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제금액</span>
-                                                        <span class="item">000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제수단</span>
-                                                        <span class="item">카드결제</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">환불금액</span>
-                                                        <span class="item">-000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">환불방법</span>
-                                                        <span class="item">카드결제 부분취소</span>
+                                                    <div class="timetable">
+                                                        <div class="edu_tit">
+                                                            <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제금액</span>
+                                                            <span class="item">000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">결제수단</span>
+                                                            <span class="item">카드결제</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">환불금액</span>
+                                                            <span class="item">-000,000원</span>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <span class="tit">환불방법</span>
+                                                            <span class="item">카드결제 부분취소</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="edu_group type3">
-                                            <div class="box">
-                                                <div class="edu_info more">
-                                                    <div class="lside">
-                                                        <div class="badge_set">
-                                                            <span class="value_badge6">환불완료</span>
-                                                        </div>
-                                                        <span class="wl_number">2025-01-02 00:00:00</span>
-                                                    </div>
-                                                </div>
-                                                <div class="timetable">
-                                                    <div class="edu_tit">
-                                                        <strong class="tit">제00회 상수도관망시설운영관리사 0급 이수평가</strong>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제금액</span>
-                                                        <span class="item">000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">결제수단</span>
-                                                        <span class="item">카드결제</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">환불금액</span>
-                                                        <span class="item">-000,000원</span>
-                                                    </div>
-                                                    <div class="cell">
-                                                        <span class="tit">환불방법</span>
-                                                        <span class="item">카드결제 부분취소</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <p class="txt_note gap_mt10">결제수단에 따라 영업일기준 3~7일정도 소요될 수 있습니다. (무통장 환불의 경우 최고 14일 소요)</p>
+                                        <div class="nodata">조회된 내역이 없습니다.</div>
                                     </div>
-                                    <p class="txt_note gap_mt10">결제수단에 따라 영업일기준 3~7일정도 소요될 수 있습니다. (무통장 환불의 경우 최고 14일 소요)</p>
-                                    <div class="nodata">환불하신 내역이 없습니다.</div>
+                                    <!--// tab2 : 환불내역 -->
                                 </div>
-                                <!--// tab2 : 환불내역 -->
                             </div>
                         </div>
                         <!--// section(e) -->

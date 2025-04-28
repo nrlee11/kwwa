@@ -274,7 +274,7 @@
                                                     <div class="form_item">
                                                         <div class="file_set">
                                                             <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" autocomplete="off" />
+                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
                                                                 <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
                                                             </div>
                                                             <label for="file1">파일찾기</label>
@@ -527,12 +527,14 @@
         <script src="/resources/js/ui.js"></script>
         <script>
             // 첨부파일 샘플
-            $("#file1").on("change", function () {
-                var fileName = $(this).val().split("/").pop().split("\\").pop(); // 파일명만 추출
-                $(this).parent().children().children("input").val(fileName);
+            $(".file_set input[type='file']").on("change", function () {
+                var fileName = $(this).val().split("/").pop().split("\\").pop();
+                $(this).siblings(".inp").find("input[type='text']").val(fileName);
             });
             $(".file_set .btn_reset").click(function () {
-                $(this).parent().children("input").val(""); // 파일명 삭제
+                $(this).siblings("input[type='text']").val("");
+                var fileInput = $(this).closest('.file_set').find("input[type='file']");
+                fileInput.val("");
             });
         </script>
     </body>

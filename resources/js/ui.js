@@ -81,21 +81,31 @@ $(function () {
 
     // GNB
     const allNaveToggle = function () {
-        $("#gnb .depth1 > li > a").bind("focus mouseover", function () {
-            $(".nav_area").addClass("folding");
-            $(".gnb .sub").show();
-            $(".nav_area .bg").stop().slideDown(300);
+        const $navArea = $(".nav_area");
+        const $subMenu = $(".gnb .sub");
+        const $bg = $(".nav_area .bg");
+
+        $("#gnb .depth1 > li > a").on("focus mouseover", function () {
+            $navArea.addClass("folding");
+            $subMenu.show();
+            $bg.stop(true, true).slideDown(300);
         });
 
-        $("#header .nav_area").mouseleave(function () {
-            $(".nav_area").removeClass("folding");
-            $(".gnb .sub, .nav_area .bg").hide();
+        $("#header .nav_area").on("mouseleave", function () {
+            $navArea.removeClass("folding");
+            $subMenu.hide();
+            $bg.stop(true, true).slideUp(200);
         });
 
-        $("#header .logo a, .banner_area a").focusin(function () {
-            $(".nav_area").removeClass("folding");
-            $(".gnb .sub, .nav_area .bg").hide();
+        $("#header .logo a, #main, #container").on("focusin", function () {
+            $navArea.removeClass("folding");
+            $subMenu.hide();
+            $bg.stop(true, true).slideUp(200);
         });
+        // $("#header .logo a, .banner_area a").focusin(function () {
+        //     $(".nav_area").removeClass("folding");
+        //     $(".gnb .sub, .nav_area .bg").hide();
+        // });
     };
 
     // Side Gnb
@@ -148,6 +158,7 @@ $(function () {
             });
     }
 
+    // LNB
     function lnbToggle() {
         $(document)
             .off("click.lnb")
@@ -155,20 +166,21 @@ $(function () {
                 e.preventDefault();
 
                 var $this = $(this),
+                    $li = $this.parent(),
                     $sub = $this.next("ul"),
-                    $li = $("#lnb > li"),
-                    $subDepth = $("#lnb > li > ul"),
-                    _hasSub = $sub.length >= 1,
-                    _bool = $this.parent().hasClass("on");
+                    $allItems = $("#lnb > li"),
+                    $allSubs = $("#lnb > li > ul"),
+                    hasSub = $sub.length > 0,
+                    isOpen = $li.hasClass("on");
 
-                $li.removeClass("on").children("a").attr("aria-expanded", "false");
-                $this.parent().addClass("on").children("a").attr("aria-expanded", "true");
+                $allItems.removeClass("on").children("[role=menuitem]").attr("aria-expanded", "false");
+                $allSubs.slideUp(300).attr("aria-hidden", "true");
 
-                if (_hasSub && !_bool) {
-                    $subDepth.slideUp(300).attr("aria-hidden", "true"); // 모두 닫기
-                    $sub.slideDown(300).attr("aria-hidden", "false"); // 열기
+                if (hasSub && !isOpen) {
+                    $li.addClass("on").children("a").attr("aria-expanded", "true");
+                    $sub.stop(true, true).slideDown(300).attr("aria-hidden", "false");
                 } else {
-                    $sub.slideUp(300).attr("aria-hidden", "true").parent().removeClass("on").children("a").attr("aria-expanded", "false"); // 닫기
+                    $li.removeClass("on").children("a").attr("aria-expanded", "false");
                 }
             });
     }
@@ -176,38 +188,68 @@ $(function () {
     // allSearch
     var allSearch = function () {
         var $allSearchBox = $("#allSearchBox");
+        var $openBtn = $("#header .btn_allsearch");
+        var $closeBtn = $("#allSearchBox .btn_allsearch_close");
 
-        $("#header .btn_allsearch").click(function () {
-            $allSearchBox.slideDown().focus();
+        $openBtn.on("click", function () {
+            $allSearchBox.stop(true, true).slideDown(300, function () {
+                $allSearchBox.find("input").focus();
+            });
         });
 
-        $("#allSearchBox .btn_allsearch_close").click(function () {
-            $allSearchBox.slideUp();
-            $("#header .btn_allsearch").focus();
+        $closeBtn.on("click", function () {
+            $allSearchBox.stop(true, true).slideUp(300, function () {
+                $openBtn.focus();
+            });
+        });
+
+        $(document).on("keydown", function (e) {
+            if (e.key === "Escape" && $allSearchBox.is(":visible")) {
+                $closeBtn.trigger("click");
+            }
         });
     };
 
     // Select Layer
     const selectLayer = function () {
-        const $this = $(".select_layer .select_tit");
-        $this.click(function (e) {
-            if ($(this).parent().hasClass("on")) {
-                $(this).attr("title", "열기").parent().removeClass("on").children(".select_box").hide();
-                console.log("열기");
-            } else {
-                $(this).attr("title", "닫기").parent().addClass("on").children(".select_box").show();
+        const $titles = $(".select_layer .select_tit");
+
+        $titles.on("click", function (e) {
+            const $parent = $(this).parent();
+            const isOpen = $parent.hasClass("on");
+
+            $(".select_layer").removeClass("on").find(".select_box").hide();
+            $(".select_layer .select_tit").attr("aria-expanded", "false");
+
+            if (!isOpen) {
+                $parent.addClass("on").find(".select_box").show();
+                $(this).attr("aria-expanded", "true");
                 console.log("닫기");
+            } else {
+                console.log("열기");
             }
         });
+
+        // $(document).on("click", function (e) {
+        //     if (!$(e.target).closest(".select_layer").length) {
+        //         $(".select_layer").removeClass("on").find(".select_box").hide();
+        //         $(".select_layer .select_tit").attr("title", "열기");
+        //     }
+        // });
     };
 
-    // Common Tab (수정예정)
+    // Common Tab
     const commonTab = function () {
         $(".tab_area .tab li").on("click", function () {
-            $(this).parent().parent().parent().find(".tab_cont").hide().attr("aria-hidden", "true");
-            $(this).parent().parent().parent().find(".tab_cont").eq($(this).index()).show().attr("aria-hidden", "false");
-            $(this).parent().find("li").removeClass("on").children("button, a").attr("aria-selected", "false");
-            $(this).addClass("on").children("button, a").attr("aria-selected", "true");
+            const $clickedTab = $(this);
+            const $tabList = $clickedTab.parent();
+            const $tabContainer = $tabList.closest(".tab_area");
+            const tabIndex = $clickedTab.index();
+
+            $tabContainer.find(".tab_cont").hide().attr("aria-hidden", "true");
+            $tabContainer.find(".tab_cont").eq(tabIndex).show().attr("aria-hidden", "false");
+            $tabList.find("li").removeClass("on").children("button, a").attr("aria-selected", "false");
+            $clickedTab.addClass("on").children("button, a").attr("aria-selected", "true");
             return false;
         });
     };
@@ -217,25 +259,26 @@ $(function () {
         const accFold = $(".accordion_area .fold");
         const accBox = $(".accordion_box");
         const accBody = $(".accordion_body");
+
         accFold.on("click", function () {
-            if ($(this).parent().parent().hasClass("is_open")) {
-                $(this).attr("aria-expanded", "false").parent().next(accBody).slideUp();
-                $(this).parent().parent().removeClass("is_open");
+            const $this = $(this);
+
+            if ($this.closest(".accordion_box").hasClass("is_open")) {
+                $this.attr("aria-expanded", "false").parent().next(accBody).slideUp();
+                $this.closest(".accordion_box").removeClass("is_open");
             } else {
                 accBox.removeClass("is_open");
                 accFold.attr("aria-expanded", "false");
                 accBody.slideUp();
-                $(this).parent().parent().addClass("is_open");
-                $(this).attr("aria-expanded", "true").parent().next(accBody).slideDown();
 
-                setTimeout(() => {
-                    $("body, html").animate(
-                        {
-                            scrollTop: $(this).offset().top - 19,
-                        },
-                        500
-                    );
-                }, 400);
+                $this.closest(".accordion_box").addClass("is_open");
+                $this
+                    .attr("aria-expanded", "true")
+                    .parent()
+                    .next(accBody)
+                    .slideDown(400, function () {
+                        $("html, body").animate({ scrollTop: $this.offset().top - 19 }, 300);
+                    });
             }
         });
     };
@@ -247,9 +290,6 @@ $(function () {
             const left = ($(window).width() - $(this).width()) / 2;
             const top = ($(window).height() - $(this).height()) / 2;
 
-            //if (top < 0) top = 0;
-            //if (left < 0) left = 0;
-
             $(this).css({ left: left, top: top });
         });
 
@@ -258,51 +298,58 @@ $(function () {
                 const left = ($(window).width() - $(this).width()) / 2;
                 const top = ($(window).height() - $(this).height()) / 2;
 
-                //if (top < 0) top = 0;
-                //if (left < 0) left = 0;
-
                 $(this).css({ left: left, top: top });
             });
         });
     };
 
-    // fullLayerClose
-    const fullLayerClose = function () {
-        $(".fullPopup .layer_close").click(function (e) {
+    // LayerClose
+    const layerClose = function () {
+        $(".layerFix .layer_close").click(function (e) {
             $(this).parents(".layerFix, .layerDim").hide();
             $(".layerDim").hide();
             $("html").removeClass("layerOpen");
+            $("#wrap").removeAttr("aria-hidden");
         });
     };
 
     // alertLayerClose
-    const alertLayerClose = function () {
-        $(".alertPopup .layer_close").click(function (e) {
-            $(this).parents(".layerFix, .layerDim").hide();
-            $(".layerDim").hide();
+    // const alertLayerClose = function () {
+    //     $(".alertPopup .layer_close").click(function (e) {
+    //         $(this).parents(".layerFix, .layerDim").hide();
+    //         $(".layerDim").hide();
+    //         $("html").removeClass("layerOpen");
+    //     });
+    // };
+
+    // 퍼블확인용
+    const urlChk = function () {
+        const menuMap = {
+            "/info/": ".menuitem-01",
+            "/edu/": ".menuitem-02",
+            "/edutest/": ".menuitem-03",
+            "/education/": ".menuitem-04",
+            "/license/": ".menuitem-05",
+            "/my/": ".menuitem-06",
+            "/cs/": ".menuitem-07",
+        };
+
+        //$(".lnb_wrap").hide();
+
+        for (const path in menuMap) {
+            if (window.location.href.indexOf(path) > -1) {
+                $(menuMap[path]).show();
+                break;
+            }
+        }
+
+        // 통합검색 value 삭제 샘플
+        $(".allsearch_wrap .inp .btn_reset").click(function () {
+            const $input = $(this).parent().children("input");
+            $input.val("").focus();
         });
     };
-
-    // 퍼블확인용! (삭제예정)
-    const urlChk = function () {
-        if (window.location.href.indexOf("/info/") > -1) {
-            $(".menuitem-01").show();
-        } else if (window.location.href.indexOf("/edu/") > -1) {
-            $(".menuitem-02").show();
-        } else if (window.location.href.indexOf("/edutest/") > -1) {
-            $(".menuitem-03").show();
-        } else if (window.location.href.indexOf("/education/") > -1) {
-            $(".menuitem-04").show();
-        } else if (window.location.href.indexOf("/license/") > -1) {
-            $(".menuitem-05").show();
-        } else if (window.location.href.indexOf("/my/") > -1) {
-            $(".menuitem-06").show();
-        } else if (window.location.href.indexOf("/cs/") > -1) {
-            $(".menuitem-07").show();
-        }
-    };
-
-    // 퍼블확인용! (삭제예정)
+    // 퍼블확인용
     const includeHtml = function () {
         const includeTarget = document.querySelectorAll(".includeJs");
         includeTarget.forEach(function (el, idx) {
@@ -340,8 +387,7 @@ $(function () {
     commonTab();
     accordion();
     layerFix();
-    fullLayerClose();
-    alertLayerClose();
+    layerClose();
     urlChk();
     includeHtml();
 });
