@@ -4721,6 +4721,29 @@ select.sm {
 [class^=btn_][class*=_border].radius[class*=_xxl] {
   border-radius: 1rem;
 }
+[class^=btn_][class*=_border]:hover {
+  color: var(--color-darkblue);
+  border-color: var(--color-darkblue);
+  background-color: #eef3ff;
+}
+[class^=btn_][class*=_border]:hover [class*=_bluearrow] {
+  background: url("../../resources/images/icon/ico_arrow_blue4.svg") no-repeat 0 0;
+}
+[class^=btn_][class*=_border]:hover [class*=_bluearrow2] {
+  background: url("../../resources/images/icon/ico_arrow_blue3.svg") no-repeat 0 0;
+}
+[class^=btn_][class*=_border]:hover .ico_quick1 {
+  background: url("../../resources/images/icon/ico_quick1_on.svg") no-repeat 0 0;
+}
+[class^=btn_][class*=_border]:hover .ico_quick2 {
+  background: url("../../resources/images/icon/ico_quick2_on.svg") no-repeat 0 0;
+}
+[class^=btn_][class*=_border]:hover .ico_quick3 {
+  background: url("../../resources/images/icon/ico_quick3_on.svg") no-repeat 0 0;
+}
+[class^=btn_][class*=_border]:hover .ico_quick4 {
+  background: url("../../resources/images/icon/ico_quick4_on.svg") no-repeat 0 0;
+}
 [class^=btn_][class*=_warmblue] {
   color: var(--color-white);
   background-color: var(--color-warmblue);
@@ -5215,6 +5238,9 @@ select.sm {
     margin-top: var(--gap-10);
   }
 }
+.service_area .cs_info .link:hover {
+  background-color: var(--color-lightblue);
+}
 .service_area .mb_info .member_join {
   display: flex;
   justify-content: space-between;
@@ -5282,6 +5308,17 @@ select.sm {
   display: block;
   margin-top: 0.2rem;
   font-size: 1.5rem;
+}
+.service_area .mb_info .member_benefits .link:hover {
+  background-color: var(--color-lightblue);
+}
+.service_area .mb_info .member_benefits .link:first-child {
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+.service_area .mb_info .member_benefits .link:last-child {
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
 }
 
 .schedule_list .schedule_group {
