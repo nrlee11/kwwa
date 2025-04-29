@@ -76,6 +76,7 @@ $(function () {
         $html = window.$html || $("html") || document.getElementsByTagName("html")[0],
         $body = $("body"),
         $header = $("#header"),
+        $wrap = $("#wrap"),
         $main = $("#container"),
         $footer = $("#footer");
 
@@ -116,6 +117,7 @@ $(function () {
             $mgnb.show().stop(true, true).animate({ right: "0" }, 300).attr("aria-hidden", "false");
 
             $body.addClass("sideOn");
+            $wrap.attr("aria-hidden", "true");
             $dim.show();
             $(this).attr("aria-expanded", "true");
 
@@ -129,6 +131,7 @@ $(function () {
             });
 
             $body.removeClass("sideOn");
+            $wrap.removeAttr("aria-hidden");
             $dim.hide();
             $(".sideOpen").attr("aria-expanded", "false");
         });
@@ -144,28 +147,32 @@ $(function () {
     function moGnbToggle() {
         $(document)
             .off("click.mo_gnb")
-            .on("click.mo_gnb", "#moGnb > li > a", function (e) {
+            .on("click.mo_gnb", '#moGnb a[aria-haspopup]', function (e) {
                 e.preventDefault();
-
+    
                 var $this = $(this),
-                    $sub = $this.next("ul"),
-                    $li = $("#moGnb > li"),
-                    $subDepth = $("#moGnb > li > ul"),
-                    _hasSub = $sub.length >= 1,
-                    _bool = $this.parent().hasClass("on");
-
-                $li.removeClass("on");
-                $this.parent().toggleClass("on", _hasSub && !_bool);
-
-                if (_hasSub && !_bool) {
-                    $subDepth.slideUp(300); // 모두 닫기
-                    $sub.slideDown(300); // 열기
+                    $submenu = $this.next("ul[role='menu']"),
+                    $parentLi = $this.parent("li"),
+                    isOpen = $parentLi.hasClass("on");
+    
+                var $siblings = $parentLi.siblings("li");
+    
+                $siblings.removeClass("on")
+                    .children("ul[role='menu']").slideUp(300).attr("aria-hidden", "true")
+                    .end().children("a[role='menuitem']").attr("aria-expanded", "false");
+    
+                if (!isOpen) {
+                    $parentLi.addClass("on");
+                    $submenu.slideDown(300).attr("aria-hidden", "false");
+                    $this.attr("aria-expanded", "true");
                 } else {
-                    $sub.slideUp(300); // 닫기
+                    $parentLi.removeClass("on");
+                    $submenu.slideUp(300).attr("aria-hidden", "true");
+                    $this.attr("aria-expanded", "false");
                 }
             });
     }
-
+    
     // LNB
     function lnbToggle() {
         $(document)

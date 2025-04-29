@@ -67,8 +67,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -836,6 +834,10 @@ button {
 }
 .allsearch .allsearch_wrap .form_item .inp input + .btn_reset {
   right: 0;
+}
+.allsearch .allsearch_wrap .form_item .inp input::-moz-placeholder {
+  color: #6d7882 !important;
+  font-size: 2.2rem;
 }
 .allsearch .allsearch_wrap .form_item .inp input::placeholder {
   color: #6d7882 !important;
@@ -1640,12 +1642,20 @@ input[type=tel] {
   border-radius: 0.6rem;
   background-color: var(--color-white);
 }
+input[type=text]:-moz-read-only, input[type=password]:-moz-read-only, input[type=tel]:-moz-read-only {
+  color: var(--color-darkgray);
+  border-color: #b1b8be;
+  background-color: #cdd1d5;
+}
 input[type=text]:read-only,
 input[type=password]:read-only,
 input[type=tel]:read-only {
   color: var(--color-darkgray);
   border-color: #b1b8be;
   background-color: #cdd1d5;
+}
+input[type=text]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=tel]::-moz-placeholder {
+  color: #8a949e !important;
 }
 input[type=text]::placeholder,
 input[type=password]::placeholder,
@@ -1669,7 +1679,8 @@ select {
   padding: 0 var(--gap-55) 0 var(--gap-16);
   border: 0.1rem solid #58616a;
   background: var(--color-white) url("../../resources/images/common/bg_select.svg") no-repeat right var(--gap-16) center;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
 }
 select.round {
@@ -1903,7 +1914,6 @@ select.sm {
   right: 0;
   bottom: 0;
   background-color: var(--color-darkgray);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 5rem;
 }
@@ -1944,8 +1954,15 @@ select.sm {
   display: var(--show);
   margin: -1rem 0 0 0;
 }
+.form_item .inp input:-moz-placeholder-shown + .btn_reset {
+  display: var(--hide);
+}
 .form_item .inp input:placeholder-shown + .btn_reset {
   display: var(--hide);
+}
+.form_item .inp input:-moz-read-only + .btn_reset {
+  display: var(--hide);
+  filter: invert(100%);
 }
 .form_item .inp input:read-only + .btn_reset {
   display: var(--hide);
@@ -1956,6 +1973,9 @@ select.sm {
 }
 .form_item .inp:has(.btn_reset) > input {
   padding-right: var(--gap-50);
+}
+.form_item .inp:has(.btn_reset) > input:-moz-read-only {
+  padding-right: var(--gap-16);
 }
 .form_item .inp:has(.btn_reset) > input:read-only {
   padding-right: var(--gap-16);
@@ -1975,6 +1995,9 @@ select.sm {
 .form_item .inp.error input[type=password]:focus,
 .form_item .inp.error input[type=tel]:focus {
   outline-color: #de3412;
+}
+.form_item .inp.error input[type=text]::-moz-placeholder, .form_item .inp.error input[type=password]::-moz-placeholder, .form_item .inp.error input[type=tel]::-moz-placeholder {
+  color: var(--color-gray) !important;
 }
 .form_item .inp.error input[type=text]::placeholder,
 .form_item .inp.error input[type=password]::placeholder,
@@ -2276,14 +2299,26 @@ select.sm {
 .form_item .file_set .inp input + .btn_reset {
   display: var(--show);
 }
+.form_item .file_set .inp input:-moz-read-only {
+  padding-right: var(--gap-50);
+  color: var(--color-base);
+  border: 0.1rem solid #58616a;
+  background-color: var(--color-white);
+}
 .form_item .file_set .inp input:read-only {
   padding-right: var(--gap-50);
   color: var(--color-base);
   border: 0.1rem solid #58616a;
   background-color: var(--color-white);
 }
+.form_item .file_set .inp input:-moz-read-only + .btn_reset {
+  filter: invert(0);
+}
 .form_item .file_set .inp input:read-only + .btn_reset {
   filter: invert(0);
+}
+.form_item .file_set .inp input:-moz-placeholder-shown + .btn_reset {
+  display: var(--hide);
 }
 .form_item .file_set .inp input:placeholder-shown + .btn_reset {
   display: var(--hide);
@@ -3278,6 +3313,7 @@ select.sm {
 
 .edu_group > a {
   position: relative;
+  display: block;
   flex: 1;
 }
 .edu_group > a::before {
@@ -3302,7 +3338,7 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .edu_group > a .box {
-    padding: var(--gap-16) var(--gap-16) var(--gap-40);
+    padding: var(--gap-16) var(--gap-16) var(--gap-40) !important;
   }
 }
 .edu_group > a:hover .box {

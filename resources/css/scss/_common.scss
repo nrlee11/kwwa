@@ -2296,6 +2296,7 @@ select {
 .edu_group {
     > a {
         position: relative;
+        display: block;
         flex: 1;
         &::before {
             content: "";
@@ -2317,7 +2318,7 @@ select {
         }
         .box {
             @include mobile {
-                padding: var(--gap-16) var(--gap-16) var(--gap-40);
+                padding: var(--gap-16) var(--gap-16) var(--gap-40) !important;
             }
         }
         &:hover {
