@@ -1030,8 +1030,11 @@ select {
     .group_box {
         @include flex-aligncenter;
         gap: 0 1.5rem;
+        width: 100%;
+        > .box {
+            flex-grow: 1;
+        }
         @include mobile {
-            flex: 1;
             flex-direction: column;
             > .box {
                 width: 100%;

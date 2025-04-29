@@ -2028,10 +2028,13 @@ select.sm {
   display: flex;
   align-items: center;
   gap: 0 1.5rem;
+  width: 100%;
+}
+.form_item .group_box > .box {
+  flex-grow: 1;
 }
 @media screen and (max-width: 1200px) {
   .form_item .group_box {
-    flex: 1;
     flex-direction: column;
   }
   .form_item .group_box > .box {
