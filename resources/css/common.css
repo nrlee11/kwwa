@@ -4083,6 +4083,9 @@ select.sm {
   font-size: 2rem;
   margin-bottom: var(--gap-15);
 }
+.tab_area .tab_cont .scroll_area {
+  margin: 0;
+}
 @media screen and (max-width: 1200px) {
   .tab_area .board_area .tbl.noline tr:first-child td:nth-child(2) {
     padding-top: 0 !important;

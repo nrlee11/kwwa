@@ -3085,6 +3085,9 @@ select {
                 margin-bottom: var(--gap-15);
             }
         }
+        .scroll_area {
+            margin: 0;
+        }
     }
     @include mobile {
         .board_area {
