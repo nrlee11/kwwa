@@ -1458,7 +1458,7 @@ select {
                 }
             }
             &.right {
-                text-align: right !important;
+                text-align: right;
             }
             &.line {
                 border-left: $border #d6e0eb;
