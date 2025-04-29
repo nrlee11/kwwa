@@ -9,18 +9,19 @@
         <link rel="stylesheet" type="text/css" href="guide.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css" />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
         <script>
             hljs.highlightAll();
         </script>
         <style>
-            .section > .inner > .box {
+            /* .section > .inner > .box {
                 width: 950px;
             }
             @media only screen and (max-width: 768px) {
                 .section > .inner > .box {
                     width: 100%;
                 }
-            }
+            } */
         </style>
     </head>
     <body>
@@ -108,7 +109,9 @@
                                         <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
                                     </div>
                                     <div class="boxing" style="display: none">
-                                        <pre><code class="html">// 기본 : td center정렬 (모바일 left)
+                                        <pre><code class="html">// 기본 : td center정렬 (mo left)
+// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
+
 &#x3C;!-- board --&#x3E;
 &#x3C;div class=&#x22;board_area&#x22;&#x3E;
     &#x3C;!-- board top --&#x3E;
@@ -179,7 +182,7 @@
                                     <!-- board -->
                                     <div class="board_area">
                                         <!-- board_view -->
-                                        <table class="tbl react row">
+                                        <table class="tbl react row size90">
                                             <caption>
                                                 타이틀1, 타이틀2, 타이틀3, 타이틀4 정보 제공
                                             </caption>
@@ -208,6 +211,47 @@
                                     </div>
                                     <!--// board -->
                                 </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// row : td left 정렬 (mo left)
+// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
+
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- board_view --&#x3E;
+    &#x3C;table class=&#x22;tbl react row size90&#x22;&#x3E;&#x3C;!-- class : row, size90 --&#x3E;
+        &#x3C;caption&#x3E;
+            &#xD0C0;&#xC774;&#xD2C0;1, &#xD0C0;&#xC774;&#xD2C0;2, &#xD0C0;&#xC774;&#xD2C0;3, &#xD0C0;&#xC774;&#xD2C0;4 &#xC815;&#xBCF4; &#xC81C;&#xACF5;
+        &#x3C;/caption&#x3E;
+        &#x3C;colgroup&#x3E;
+            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
+            &#x3C;col style=&#x22;width: 29.1rem&#x22; /&#x3E;
+            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
+            &#x3C;col style=&#x22;width: 29.1rem&#x22; /&#x3E;
+        &#x3C;/colgroup&#x3E;
+        &#x3C;tbody&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;1&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;1&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;2&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;2&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;3&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;1&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;4&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;2&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+        &#x3C;/tbody&#x3E;
+    &#x3C;/table&#x3E;
+    &#x3C;!--// board_view --&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;</code></pre>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="box">
@@ -215,93 +259,8 @@
                                     <!-- board -->
                                     <div class="board_area">
                                         <!-- board_view -->
-                                        <table class="tbl react row">
-                                            <caption>
-                                                신청번호, 진행상태, 자격종목, 요청일, 요청구분, 보완대상, 사유 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 15.3rem" />
-                                                <col style="width: 29.1rem" />
-                                                <col style="width: 15.3rem" />
-                                                <col style="width: 29.1rem" />
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">신청번호</th>
-                                                    <td data-cell-header="신청번호"><div>A000000</div></td>
-                                                    <th scope="row">진행상태</th>
-                                                    <td data-cell-header="진행상태"><div>보완요청</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">자격종목</th>
-                                                    <td data-cell-header="자격종목"><div>상수도관망시설운영관리사 1급</div></td>
-                                                    <th scope="row">요청일</th>
-                                                    <td data-cell-header="요청일"><div>2025-02-02</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">요청구분</th>
-                                                    <td data-cell-header="요청구분"><div>자격요건 미충족</div></td>
-                                                    <th scope="row">보완대상</th>
-                                                    <td data-cell-header="보완대상">
-                                                        <div><span class="txt_red">경력 증빙</span></div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">사유</th>
-                                                    <td data-cell-header="사유" colspan="3"><div>관리자 메모 출력</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_view -->
-                                    </div>
-                                    <!--// board -->
-                                    <br />
-                                    <br />
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- board_view -->
-                                        <table class="tbl react row size110">
-                                            <caption>
-                                                이름, 주민등록번호, 주소, 휴대폰 번호, 전화번호 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 15.3rem" />
-                                                <col />
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">이름</th>
-                                                    <td data-cell-header="이름"><div>홍길동</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">주민등록번호</th>
-                                                    <td data-cell-header="주민등록번호"><div>900105-*******</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">주소</th>
-                                                    <td data-cell-header="주소">
-                                                        <div>07379<br />서울특별시 영등포구 대림로-244(대림동)<br />2F 201호</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">휴대폰 번호</th>
-                                                    <td data-cell-header="휴대폰 번호"><div>010-1234-1234</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">전화번호</th>
-                                                    <td data-cell-header="전화번호"><div>02-1234-5678</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_view -->
-                                    </div>
-                                    <!--// board -->
-                                    <br />
-                                    <br />
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- board_view -->
                                         <table class="tbl react row sm size120">
+                                            <!-- class : sm -->
                                             <caption>
                                                 신청번호, 자격번호, 자격 취득일, 교부 연월일, 재발급 신청일, 재발급 신청사유, 재발급 신청사유 정보 제공
                                             </caption>
@@ -348,8 +307,72 @@
                                         <!--// board_view -->
                                     </div>
                                     <!--// board -->
-                                    <br />
-                                    <br />
+                                </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// sm : th,td height:32px; (PC만 적용)
+// row : td left 정렬 (mo left)
+// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
+
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- board_view --&#x3E;
+    &#x3C;table class=&#x22;tbl react row sm size120&#x22;&#x3E;&#x3C;!-- class : sm --&#x3E;
+        &#x3C;caption&#x3E;
+            &#xC2E0;&#xCCAD;&#xBC88;&#xD638;, &#xC790;&#xACA9;&#xBC88;&#xD638;, &#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;, &#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC77C;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC815;&#xBCF4; &#xC81C;&#xACF5;
+        &#x3C;/caption&#x3E;
+        &#x3C;colgroup&#x3E;
+            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
+            &#x3C;col /&#x3E;
+        &#x3C;/colgroup&#x3E;
+        &#x3C;tbody&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC2E0;&#xCCAD;&#xBC88;&#xD638;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC2E0;&#xCCAD;&#xBC88;&#xD638;&#x22;&#x3E;&#x3C;div&#x3E;REQ2-25-0001&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x22;&#x3E;&#x3C;div&#x3E;WL000000&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-10&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-10&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC77C;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-10&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x22;&#x3E;&#x3C;div&#x3E;&#xBD84;&#xC2E4;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xBC30;&#xC1A1;&#xC9C0; &#xC8FC;&#xC18C;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xBC30;&#xC1A1;&#xC9C0; &#xC8FC;&#xC18C;&#x22;&#x3E;
+                    &#x3C;div&#x3E;
+                        07379&#x3C;br /&#x3E;
+                        &#xC11C;&#xC6B8;&#xD2B9;&#xBCC4;&#xC2DC; &#xC601;&#xB4F1;&#xD3EC;&#xAD6C; &#xB300;&#xB9BC;&#xB85C;-244(&#xB300;&#xB9BC;&#xB3D9;)
+                    &#x3C;/div&#x3E;
+                &#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+        &#x3C;/tbody&#x3E;
+    &#x3C;/table&#x3E;
+    &#x3C;!--// board_view --&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="article">
                                     <!-- board -->
                                     <div class="board_area">
                                         <!-- board_view -->
@@ -401,6 +424,67 @@
                                     </div>
                                     <!--// board -->
                                 </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// View + Write 조합
+// row : td left 정렬 (mo left)
+// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- board_view --&#x3E;
+    &#x3C;table class=&#x22;tbl react row size110&#x22;&#x3E;
+        &#x3C;caption&#x3E;
+            &#xC790;&#xACA9;&#xBC88;&#xD638;, &#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;, &#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC815;&#xBCF4; &#xC81C;&#xACF5;
+        &#x3C;/caption&#x3E;
+        &#x3C;colgroup&#x3E;
+            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
+            &#x3C;col /&#x3E;
+        &#x3C;/colgroup&#x3E;
+        &#x3C;tbody&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x22;&#x3E;&#x3C;div&#x3E;WL000000&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-20&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-20&#x3C;/div&#x3E;&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr class=&#x22;write_cell&#x22;&#x3E;
+                &#x3C;th scope=&#x22;row&#x22;&#x3E;
+                    &#x3C;label for=&#x22;answer&#x22;&#x3E;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x3C;/label&#x3E;
+                &#x3C;/th&#x3E;
+                &#x3C;td data-cell-header=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x22;&#x3E;
+                    &#x3C;div&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
+                                &#x3C;select title=&#x22;&#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC120;&#xD0DD;&#x22; id=&#x22;answer&#x22;&#x3E;
+                                    &#x3C;option value=&#x22;&#x22;&#x3E;&#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
+                                &#x3C;/select&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp_textarea&#x22;&#x3E;
+                                &#x3C;textarea placeholder=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#xC744; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;&#x22;&#x3E;&#x3C;/textarea&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+        &#x3C;/tbody&#x3E;
+    &#x3C;/table&#x3E;
+    &#x3C;!--// board_view --&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;
+</code></pre>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -410,484 +494,1000 @@
                         <div class="inner">
                             <div class="box">
                                 <div class="article">
-                                    <!-- form-->
-                                    <div class="form_section">
-                                        <!-- write -->
-                                        <div class="form_list">
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="userName">
-                                                        이름
-                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                    </label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp size_289">
-                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                <input type="text" value="홍길동" id="userName" />
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- tit -->
+                                        <div class="form_tit">
+                                            <h3 class="tit">타이틀</h3>
+                                        </div>
+                                        <!--// tit -->
+
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- board_write -->
+                                            <div class="form_list">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="userName">
+                                                            이름
+                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                    <input type="text" value="홍길동" id="userName" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="text" autocomplete="off" />
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="birthDate">
-                                                        생년월일
-                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                    </label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp size_289">
-                                                                <input type="tel" value="1980.01.01" id="birthDate" />
-                                                            </div>
-                                                        </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="work1">근무지</label>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="email">
-                                                        아이디(E-mail)
-                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                    </label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="email_set">
-                                                                <div class="inp_set">
-                                                                    <!-- 에러 : error class추가 -->
-                                                                    <div class="inp size_289">
-                                                                        <input type="text" value="" id="email" placeholder="아이디" />
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="inp">
+                                                                            <input type="text" placeholder="근무지 입력" id="work1" autocomplete="off" />
+                                                                        </div>
                                                                     </div>
-                                                                    <span class="txt_between">@</span>
+                                                                    <div class="box">
+                                                                        <div class="inp">
+                                                                            <input type="text" placeholder="근무지 입력2" autocomplete="off" />
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="box">
+                                                                        <div class="inp">
+                                                                            <input type="text" placeholder="근무지 입력3" autocomplete="off" />
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="inp size_190">
-                                                                    <input type="text" value="dreamwiz.com" title="도메인 입력" id="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="cellPhone">
+                                                            휴대폰 번호
+                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly />
                                                                 </div>
-                                                                <div class="inp_set full">
-                                                                    <div class="inp_select size_190">
-                                                                        <select title="이메일 도메인 선택">
-                                                                            <option value="">직접입력</option>
-                                                                            <option value="naver.com">naver.com</option>
-                                                                            <option value="daum.net">daum.net</option>
-                                                                            <option value="gmail.com">gmail.com</option>
-                                                                            <option value="hanmail.net">hanmail.net</option>
-                                                                            <option value="hotmail.com">hotmail.com</option>
-                                                                            <option value="nate.com">nate.com</option>
-                                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>
-                                                                            <option value="empas.com">empas.com</option>
-                                                                            <option value="dreamwiz.com">dreamwiz.com</option>
-                                                                            <option value="freechal.com">freechal.com</option>
-                                                                            <option value="lycos.co.kr">lycos.co.kr</option>
-                                                                            <option value="korea.kr">korea.kr</option>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group gap0">
+                                                    <div class="tit">
+                                                        <span>
+                                                            성별
+                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="radio_set reset">
+                                                                    <span class="inp_radio">
+                                                                        <input type="radio" id="male" name="gender" checked />
+                                                                        <label for="male">남성</label>
+                                                                    </span>
+                                                                    <span class="inp_radio">
+                                                                        <input type="radio" id="female" name="gender" />
+                                                                        <label for="female">여성</label>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group line">
+                                                    <div class="tit">
+                                                        <label for="userPassword">
+                                                            비밀번호
+                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="password" value="" id="userPassword" maxlength="16" placeholder="8자 이상(영문자, 숫자, 특수문자)" />
+                                                                </div>
+                                                            </div>
+                                                            <p class="msg_txt">비밀번호는 8자 이상, 16자 이하의 영문자, 숫자 및 특수문자를 조합하여 사용해야 합니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="userPasswordCheck">
+                                                            비밀번호 확인
+                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289 error">
+                                                                    <input type="password" value="" id="userPasswordCheck" maxlength="16" placeholder="비밀번호 확인" />
+                                                                </div>
+                                                            </div>
+                                                            <!-- 에러 : error -->
+                                                            <p class="msg_error">비밀번호 조건에 맞지 않습니다. 다시 입력해 주세요.</p>
+                                                            <p class="msg_error">비밀번호가 다릅니다.</p>
+                                                            <!--// 에러 : error -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// board_write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// gap0 : min-height: auto; 
+// line : border top
+
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- tit --&#x3E;
+    &#x3C;div class=&#x22;form_tit&#x22;&#x3E;
+        &#x3C;h3 class=&#x22;tit&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--// tit --&#x3E;
+
+    &#x3C;!-- form--&#x3E;
+    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
+        &#x3C;!-- board_write --&#x3E;
+        &#x3C;div class=&#x22;form_list&#x22;&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;userName&#x22;&#x3E;
+                        &#xC774;&#xB984;
+                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+                    &#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
+                                &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
+                                &#x3C;input type=&#x22;text&#x22; value=&#x22;&#xD64D;&#xAE38;&#xB3D9;&#x22; id=&#x22;userName&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
+                                &#x3C;input type=&#x22;text&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;work1&#x22;&#x3E;&#xADFC;&#xBB34;&#xC9C0;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;group_box&#x22;&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;&#xADFC;&#xBB34;&#xC9C0; &#xC785;&#xB825;&#x22; id=&#x22;work1&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;&#xADFC;&#xBB34;&#xC9C0; &#xC785;&#xB825;2&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;&#xADFC;&#xBB34;&#xC9C0; &#xC785;&#xB825;3&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;cellPhone&#x22;&#x3E;
+                        &#xD734;&#xB300;&#xD3F0; &#xBC88;&#xD638;
+                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+                    &#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
+                                &#x3C;input type=&#x22;tel&#x22; value=&#x22;010-1234-5678&#x22; id=&#x22;cellPhone&#x22; autocomplete=&#x22;off&#x22; readonly /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group gap0&#x22;&#x3E;&#x3C;!-- gap0 --&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;span&#x3E;
+                        &#xC131;&#xBCC4;
+                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+                    &#x3C;/span&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;radio_set reset&#x22;&#x3E;
+                                &#x3C;span class=&#x22;inp_radio&#x22;&#x3E;
+                                    &#x3C;input type=&#x22;radio&#x22; id=&#x22;male&#x22; name=&#x22;gender&#x22; checked /&#x3E;
+                                    &#x3C;label for=&#x22;male&#x22;&#x3E;&#xB0A8;&#xC131;&#x3C;/label&#x3E;
+                                &#x3C;/span&#x3E;
+                                &#x3C;span class=&#x22;inp_radio&#x22;&#x3E;
+                                    &#x3C;input type=&#x22;radio&#x22; id=&#x22;female&#x22; name=&#x22;gender&#x22; /&#x3E;
+                                    &#x3C;label for=&#x22;female&#x22;&#x3E;&#xC5EC;&#xC131;&#x3C;/label&#x3E;
+                                &#x3C;/span&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group line&#x22;&#x3E;&#x3C;!-- line --&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;userPassword&#x22;&#x3E;
+                        &#xBE44;&#xBC00;&#xBC88;&#xD638;
+                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+                    &#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
+                                &#x3C;input type=&#x22;password&#x22; value=&#x22;&#x22; id=&#x22;userPassword&#x22; maxlength=&#x22;16&#x22; placeholder=&#x22;8&#xC790; &#xC774;&#xC0C1;(&#xC601;&#xBB38;&#xC790;, &#xC22B;&#xC790;, &#xD2B9;&#xC218;&#xBB38;&#xC790;)&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB294; 8&#xC790; &#xC774;&#xC0C1;, 16&#xC790; &#xC774;&#xD558;&#xC758; &#xC601;&#xBB38;&#xC790;, &#xC22B;&#xC790; &#xBC0F; &#xD2B9;&#xC218;&#xBB38;&#xC790;&#xB97C; &#xC870;&#xD569;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;userPasswordCheck&#x22;&#x3E;
+                        &#xBE44;&#xBC00;&#xBC88;&#xD638; &#xD655;&#xC778;
+                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+                    &#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289 error&#x22;&#x3E;
+                                &#x3C;input type=&#x22;password&#x22; value=&#x22;&#x22; id=&#x22;userPasswordCheck&#x22; maxlength=&#x22;16&#x22; placeholder=&#x22;&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xD655;&#xC778;&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
+                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC2DC; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
+                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                        &#x3C;!--// &#xC5D0;&#xB7EC; : error --&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// board_write --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--// form--&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list col">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="userName1">이름</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp">
+                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                    <input type="text" value="" id="userName1" placeholder="이름을 입력하세요" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="cellPhone1">휴대폰번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp">
+                                                                    <input type="tel" value="" id="cellPhone1" placeholder="휴대폰번호 (숫자만 입력)" />
+                                                                </div>
+                                                            </div>
+                                                            <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요.</p>
+                                                            <!-- 에러 : error -->
+                                                            <p class="msg_error">등록된 회원정보가 아닙니다.</p>
+                                                            <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
+                                                            <!--// 에러 : error -->
+                                                        </div>
+                                                        <div class="cell full">
+                                                            <button type="button" class="btn_secondary_lg">인증번호 받기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// col : column
+
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- form--&#x3E;
+    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
+        &#x3C;!-- write --&#x3E;
+        &#x3C;div class=&#x22;form_list col&#x22;&#x3E;&#x3C;!-- col --&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;userName1&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
+                                &#x3C;input type=&#x22;text&#x22; value=&#x22;&#x22; id=&#x22;userName1&#x22; placeholder=&#x22;&#xC774;&#xB984;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;cellPhone1&#x22;&#x3E;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                &#x3C;input type=&#x22;tel&#x22; value=&#x22;&#x22; id=&#x22;cellPhone1&#x22; placeholder=&#x22;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638; (&#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;)&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#x27;-&#x27;&#xC0DD;&#xB7B5;, 11&#xC790;&#xB9AC; &#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
+                        &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
+                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xB4F1;&#xB85D;&#xB41C; &#xD68C;&#xC6D0;&#xC815;&#xBCF4;&#xAC00; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xC798;&#xBABB;&#xB41C; &#xD615;&#xC2DD;&#xC758; &#xC804;&#xD654;&#xBC88;&#xD638;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                        &#x3C;!--// &#xC5D0;&#xB7EC; : error --&#x3E;
+                    &#x3C;/div&#x3E;
+                    &#x3C;div class=&#x22;cell full&#x22;&#x3E;
+                        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC778;&#xC99D;&#xBC88;&#xD638; &#xBC1B;&#xAE30;&#x3C;/button&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// write --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--// form--&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- board_write -->
+                                            <div class="form_list base">
+                                                <!-- base -->
+                                                <div class="form_group">
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="inp_select">
+                                                                            <select title="경력 선택">
+                                                                                <option value="">경력 선택</option>
+                                                                                <option value="">1년이상</option>
+                                                                                <option value="">1년이하</option>
+                                                                                <option value="">없음</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <div class="inp_select">
+                                                                            <select title="교육 선택">
+                                                                                <option value="">교육 선택</option>
+                                                                                <option value="">실무교육확인서</option>
+                                                                                <option value="">고용노동부 직업능력개발훈련 수료증</option>
+                                                                                <option value="">해당없음</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <button type="button" class="btn_primary_lg full">선택적용</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// board_write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// base
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- form--&#x3E;
+    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
+        &#x3C;!-- board_write --&#x3E;
+        &#x3C;div class=&#x22;form_list base&#x22;&#x3E;&#x3C;!-- base --&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;group_box&#x22;&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
+                                        &#x3C;select title=&#x22;&#xACBD;&#xB825; &#xC120;&#xD0DD;&#x22;&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xACBD;&#xB825; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;1&#xB144;&#xC774;&#xC0C1;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;1&#xB144;&#xC774;&#xD558;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xC5C6;&#xC74C;&#x3C;/option&#x3E;
+                                        &#x3C;/select&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
+                                        &#x3C;select title=&#x22;&#xAD50;&#xC721; &#xC120;&#xD0DD;&#x22;&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xAD50;&#xC721; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721;&#xD655;&#xC778;&#xC11C;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xACE0;&#xC6A9;&#xB178;&#xB3D9;&#xBD80; &#xC9C1;&#xC5C5;&#xB2A5;&#xB825;&#xAC1C;&#xBC1C;&#xD6C8;&#xB828; &#xC218;&#xB8CC;&#xC99D;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xD574;&#xB2F9;&#xC5C6;&#xC74C;&#x3C;/option&#x3E;
+                                        &#x3C;/select&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg full&#x22;&#x3E;&#xC120;&#xD0DD;&#xC801;&#xC6A9;&#x3C;/button&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// board_write --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--// form--&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;
+                                        </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="userName2">이름</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="text" value="홍길동" id="userName2" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="birthDate2">생년월일</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="tel" value="1980.01.01" id="birthDate2" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="phoneNum">전화번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="phone_set">
+                                                                    <div class="inp_select">
+                                                                        <select title="전화번호 국번 선택" id="phoneNum">
+                                                                            <option value="">선택</option>
+                                                                            <option value="02">서울 (02)</option>
+                                                                            <option value="031">경기 (031)</option>
+                                                                            <option value="032">인천 (032)</option>
+                                                                            <option value="033">강원 (033)</option>
+                                                                            <option value="041">충남 (041)</option>
+                                                                            <option value="042">대전 (042)</option>
+                                                                            <option value="043">충북 (043)</option>
+                                                                            <option value="044">세종 (044)</option>
+                                                                            <option value="051">부산 (051)</option>
+                                                                            <option value="052">울산 (052)</option>
+                                                                            <option value="053">대구 (053)</option>
+                                                                            <option value="054">경북 (054)</option>
+                                                                            <option value="055">경남 (055)</option>
+                                                                            <option value="061">전남 (061)</option>
+                                                                            <option value="062">광주 (062)</option>
+                                                                            <option value="063">전북 (063)</option>
+                                                                            <option value="064">제주 (064)</option>
+                                                                            <option value="070">인터넷전화 (070)</option>
+                                                                            <option value="050">평생전화 (050)</option>
                                                                         </select>
+                                                                        <span class="txt_dash">-</span>
                                                                     </div>
-                                                                    <button type="button" class="btn_primary_lg">중복확인</button>
+                                                                    <div class="inp_set">
+                                                                        <div class="inp">
+                                                                            <input type="tel" value="1234" title="전화번호 앞자리 입력" autocomplete="off" />
+                                                                        </div>
+                                                                        <span class="txt_dash">-</span>
+                                                                    </div>
+                                                                    <div class="inp_set">
+                                                                        <div class="inp">
+                                                                            <input type="tel" value="1234" title="전화번호 뒷자리 입력" autocomplete="off" />
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <p class="msg_txt">이메일 주소를 아이디로 사용합니다.</p>
-                                                        <!-- 에러 : error -->
-                                                        <p class="msg_error">이메일 형식이 다릅니다. 다시 확인해 주세요.</p>
-                                                        <p class="msg_error">이미 사용중인 아이디입니다.</p>
-                                                        <!-- 에러 : error -->
                                                     </div>
-                                                    <div class="cell">
-                                                        <button type="button" class="btn_secondary_lg full" id="emailValidation">이메일 인증하기</button>
-                                                        <p class="msg_txt">입력하신 이메일 주소로 인증메일을 발송합니다.</p>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="label1">인증번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="request_set">
+                                                                    <div class="inp size_289">
+                                                                        <input type="tel" id="label1" maxlength="6" placeholder="인증번호 6자리" autocomplete="off" />
+                                                                        <div class="request">
+                                                                            <time class="time" datetime="03:00">03:00</time>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button type="button" class="btn_primary_lg">확인</button>
+                                                                </div>
+                                                            </div>
+                                                            <p class="msg_txt">이메일을 확인 후 전송된 인증번호를 입력해 주세요.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>정보수신동의(선택)</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="check_set">
+                                                                    <span class="inp_check">
+                                                                        <input type="checkbox" id="marketing1" checked />
+                                                                        <label for="marketing1">E-mail 수신</label>
+                                                                    </span>
+                                                                    <span class="inp_check">
+                                                                        <input type="checkbox" id="marketing2" />
+                                                                        <label for="marketing2">SMS 수신</label>
+                                                                    </span>
+                                                                    <span class="inp_check">
+                                                                        <input type="checkbox" id="marketing3" />
+                                                                        <label for="marketing3">광고, 홍보, 프로모션 수신</label>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell">교육/평가시험/자격증 관련 신청정보/교육/합격 여부는 선택여부와 상관없이 기본 발송 됩니다.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="work1_1">전체 경력</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="career_set">
+                                                                            <div class="inp_set">
+                                                                                <div class="inp size_100">
+                                                                                    <input type="tel" value="50" id="work1_1" autocomplete="off" readonly />
+                                                                                </div>
+                                                                                <span class="txt">년</span>
+                                                                            </div>
+                                                                            <div class="inp_set">
+                                                                                <div class="inp size_100">
+                                                                                    <input type="tel" value="50" autocomplete="off" readonly />
+                                                                                </div>
+                                                                                <span class="txt">개월</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <p class="txt_note">아래 기간 선택 시 자동계산</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="work1_2">근무지</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                        <div class="inp size_219">
+                                                                            <input type="text" value="" placeholder="근무지 입력" id="work1_2" autocomplete="off" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <div class="calendar_set">
+                                                                            <div class="inp_set">
+                                                                                <input type="text" value="" placeholder="시작일" id="startDate" autocomplete="off" />
+                                                                                <span class="txt_dash">~</span>
+                                                                            </div>
+                                                                            <div class="inp">
+                                                                                <input type="text" value="" placeholder="종료일" id="endDate" autocomplete="off" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <span class="inp_check">
+                                                                            <input type="checkbox" id="work1_3" />
+                                                                            <label for="work1_3">재직중</label>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>근무지 경력증명</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="file_set">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                        <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                    </div>
+                                                                    <label for="file1">파일찾기</label>
+                                                                    <input type="file" id="file1" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>실무교육확인서</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="file_set">
+                                                                            <div class="inp">
+                                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                            </div>
+                                                                            <label for="file3">파일찾기</label>
+                                                                            <input type="file" id="file3" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <button type="button" class="btn_secondary_lg full">지정서식 다운로드<span class="ico_download"></span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell line">
+                                                            <p class="txt_note">
+                                                                서류가 여러 장인 경우 PDF파일 또는 이미지(JPG, PNG) 파일을 올려 주시기 바랍니다.<br />
+                                                                그 외 포맷은 업로드가 불가능합니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="time">교육시간</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="inp_set">
+                                                                            <div class="inp size_219">
+                                                                                <input type="tel" value="" placeholder="총 교육시간 입력" id="time" autocomplete="off" />
+                                                                            </div>
+                                                                            <span class="txt">시간</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <div class="calendar_set">
+                                                                            <div class="inp_set">
+                                                                                <input type="text" value="" placeholder="시작일" id="startDate2" autocomplete="off" />
+                                                                                <span class="txt_dash">~</span>
+                                                                            </div>
+                                                                            <div class="inp">
+                                                                                <input type="text" value="" placeholder="종료일" id="endDate2" autocomplete="off" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="idNumber">주민등록번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="idcard_set">
+                                                                    <div class="inp_set">
+                                                                        <div class="inp size_289">
+                                                                            <input type="tel" value="900105" id="idNumber" autocomplete="off" readonly />
+                                                                        </div>
+                                                                        <span class="txt_dash">-</span>
+                                                                    </div>
+                                                                    <div class="inp size_289">
+                                                                        <input type="password" value="0000000" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="address">주소</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="address_set">
+                                                                    <div class="group_box">
+                                                                        <div class="box">
+                                                                            <div class="inp size_130">
+                                                                                <input type="tel" value="07379" id="address" autocomplete="off" readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="box">
+                                                                            <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" value="서울특별시 영등포구 대림로 244" autocomplete="off" readonly />
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" value="2F 201호" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="address1">배송지주소</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <span class="inp_check">
+                                                                <input type="checkbox" id="deliveryinfo1_1" />
+                                                                <label for="deliveryinfo1_1">신청자 정보의 주소와 배송지가 같을 경우 체크해 주세요.</label>
+                                                            </span>
+                                                        </div>
+                                                        <div class="cell line">
+                                                            <div class="form_item">
+                                                                <div class="address_set">
+                                                                    <div class="group_box">
+                                                                        <div class="box">
+                                                                            <div class="inp size_130">
+                                                                                <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="box">
+                                                                            <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="상세주소 입력" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--// write -->
                                         </div>
-                                        <!--// write -->
+                                        <!--// form-->
                                     </div>
-                                    <!--// form-->
+                                    <!--// board -->
                                 </div>
                                 <div class="article html_code on">
                                     <div class="btn">
                                         <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
                                     </div>
                                     <div class="boxing" style="display: none">
-                                        <pre><code class="html">&#x3C;!-- form--&#x3E;
-&#x3C;div class=&#x22;form_section&#x22;&#x3E;
-    &#x3C;!-- write --&#x3E;
-    &#x3C;div class=&#x22;form_list&#x22;&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;userName&#x22;&#x3E;
-                    &#xC774;&#xB984;
-                    &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                &#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                            &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
-                            &#x3C;input type=&#x22;text&#x22; value=&#x22;&#xD64D;&#xAE38;&#xB3D9;&#x22; id=&#x22;userName&#x22; /&#x3E;
+                                        <pre><code class="html">// table
+
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- form--&#x3E;
+    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
+        &#x3C;!-- write --&#x3E;
+        &#x3C;div class=&#x22;form_list table&#x22;&#x3E;&#x3C;!-- table --&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;userName2&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
+                                &#x3C;input type=&#x22;text&#x22; value=&#x22;&#xD64D;&#xAE38;&#xB3D9;&#x22; id=&#x22;userName2&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
                         &#x3C;/div&#x3E;
                     &#x3C;/div&#x3E;
                 &#x3C;/div&#x3E;
             &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;birthDate&#x22;&#x3E;
-                    &#xC0DD;&#xB144;&#xC6D4;&#xC77C;
-                    &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                &#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                            &#x3C;input type=&#x22;tel&#x22; value=&#x22;1980.01.01&#x22; id=&#x22;birthDate&#x22; /&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;birthDate2&#x22;&#x3E;&#xC0DD;&#xB144;&#xC6D4;&#xC77C;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
+                                &#x3C;input type=&#x22;tel&#x22; value=&#x22;1980.01.01&#x22; id=&#x22;birthDate2&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
                         &#x3C;/div&#x3E;
                     &#x3C;/div&#x3E;
                 &#x3C;/div&#x3E;
             &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;email&#x22;&#x3E;
-                    &#xC544;&#xC774;&#xB514;(E-mail)
-                    &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                &#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;email_set&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp_set&#x22;&#x3E;
-                                &#x3C;!-- &#xC5D0;&#xB7EC; : error class&#xCD94;&#xAC00; --&#x3E;
-                                &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                                    &#x3C;input type=&#x22;text&#x22; value=&#x22;&#x22; id=&#x22;email&#x22; placeholder=&#x22;&#xC544;&#xC774;&#xB514;&#x22; /&#x3E;
-                                &#x3C;/div&#x3E;
-                                &#x3C;span class=&#x22;txt_between&#x22;&#x3E;@&#x3C;/span&#x3E;
-                            &#x3C;/div&#x3E;
-                            &#x3C;div class=&#x22;inp size_190&#x22;&#x3E;
-                                &#x3C;input type=&#x22;text&#x22; value=&#x22;dreamwiz.com&#x22; title=&#x22;&#xB3C4;&#xBA54;&#xC778; &#xC785;&#xB825;&#x22; id=&#x22;&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                            &#x3C;div class=&#x22;inp_set full&#x22;&#x3E;
-                                &#x3C;div class=&#x22;inp_select size_190&#x22;&#x3E;
-                                    &#x3C;select title=&#x22;&#xC774;&#xBA54;&#xC77C; &#xB3C4;&#xBA54;&#xC778; &#xC120;&#xD0DD;&#x22;&#x3E;
-                                        &#x3C;option value=&#x22;&#x22;&#x3E;&#xC9C1;&#xC811;&#xC785;&#xB825;&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;naver.com&#x22;&#x3E;naver.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;daum.net&#x22;&#x3E;daum.net&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;gmail.com&#x22;&#x3E;gmail.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;hanmail.net&#x22;&#x3E;hanmail.net&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;hotmail.com&#x22;&#x3E;hotmail.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;nate.com&#x22;&#x3E;nate.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;yahoo.co.kr&#x22;&#x3E;yahoo.co.kr&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;empas.com&#x22;&#x3E;empas.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;dreamwiz.com&#x22;&#x3E;dreamwiz.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;freechal.com&#x22;&#x3E;freechal.com&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;lycos.co.kr&#x22;&#x3E;lycos.co.kr&#x3C;/option&#x3E;
-                                        &#x3C;option value=&#x22;korea.kr&#x22;&#x3E;korea.kr&#x3C;/option&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;phoneNum&#x22;&#x3E;&#xC804;&#xD654;&#xBC88;&#xD638;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;phone_set&#x22;&#x3E;
+                                &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
+                                    &#x3C;select title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xAD6D;&#xBC88; &#xC120;&#xD0DD;&#x22; id=&#x22;phoneNum&#x22;&#x3E;
+                                        &#x3C;option value=&#x22;&#x22;&#x3E;&#xC120;&#xD0DD;&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;02&#x22;&#x3E;&#xC11C;&#xC6B8; (02)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;031&#x22;&#x3E;&#xACBD;&#xAE30; (031)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;032&#x22;&#x3E;&#xC778;&#xCC9C; (032)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;033&#x22;&#x3E;&#xAC15;&#xC6D0; (033)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;041&#x22;&#x3E;&#xCDA9;&#xB0A8; (041)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;042&#x22;&#x3E;&#xB300;&#xC804; (042)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;043&#x22;&#x3E;&#xCDA9;&#xBD81; (043)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;044&#x22;&#x3E;&#xC138;&#xC885; (044)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;051&#x22;&#x3E;&#xBD80;&#xC0B0; (051)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;052&#x22;&#x3E;&#xC6B8;&#xC0B0; (052)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;053&#x22;&#x3E;&#xB300;&#xAD6C; (053)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;054&#x22;&#x3E;&#xACBD;&#xBD81; (054)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;055&#x22;&#x3E;&#xACBD;&#xB0A8; (055)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;061&#x22;&#x3E;&#xC804;&#xB0A8; (061)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;062&#x22;&#x3E;&#xAD11;&#xC8FC; (062)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;063&#x22;&#x3E;&#xC804;&#xBD81; (063)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;064&#x22;&#x3E;&#xC81C;&#xC8FC; (064)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;070&#x22;&#x3E;&#xC778;&#xD130;&#xB137;&#xC804;&#xD654; (070)&#x3C;/option&#x3E;
+                                        &#x3C;option value=&#x22;050&#x22;&#x3E;&#xD3C9;&#xC0DD;&#xC804;&#xD654; (050)&#x3C;/option&#x3E;
                                     &#x3C;/select&#x3E;
+                                    &#x3C;span class=&#x22;txt_dash&#x22;&#x3E;-&#x3C;/span&#x3E;
                                 &#x3C;/div&#x3E;
-                                &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xC911;&#xBCF5;&#xD655;&#xC778;&#x3C;/button&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#xC774;&#xBA54;&#xC77C; &#xC8FC;&#xC18C;&#xB97C; &#xC544;&#xC774;&#xB514;&#xB85C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                    &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
-                    &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xC774;&#xBA54;&#xC77C; &#xD615;&#xC2DD;&#xC774; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC2DC; &#xD655;&#xC778;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
-                    &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xC774;&#xBBF8; &#xC0AC;&#xC6A9;&#xC911;&#xC778; &#xC544;&#xC774;&#xB514;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                    &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg full&#x22; id=&#x22;emailValidation&#x22;&#x3E;&#xC774;&#xBA54;&#xC77C; &#xC778;&#xC99D;&#xD558;&#xAE30;&#x3C;/button&#x3E;
-                    &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#xC785;&#xB825;&#xD558;&#xC2E0; &#xC774;&#xBA54;&#xC77C; &#xC8FC;&#xC18C;&#xB85C; &#xC778;&#xC99D;&#xBA54;&#xC77C;&#xC744; &#xBC1C;&#xC1A1;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// write --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// form--&#x3E;</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="article">
-                                    <!-- form-->
-                                    <div class="form_section">
-                                        <!-- write -->
-                                        <div class="form_list col">
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="userName1">이름</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp">
-                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                <input type="text" value="" id="userName1" placeholder="이름을 입력하세요" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="cellPhone1">휴대폰번호</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp">
-                                                                <input type="tel" value="" id="cellPhone1" placeholder="휴대폰번호 (숫자만 입력)" />
-                                                            </div>
-                                                        </div>
-                                                        <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요.</p>
-                                                        <!-- 에러 : error -->
-                                                        <p class="msg_error">등록된 회원정보가 아닙니다.</p>
-                                                        <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
-                                                        <!--// 에러 : error -->
-                                                    </div>
-                                                    <div class="cell full">
-                                                        <button type="button" class="btn_secondary_lg">인증번호 받기</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--// write -->
-                                    </div>
-                                    <!--// form-->
-                                </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">
-&#x3C;!-- form--&#x3E;
-&#x3C;div class=&#x22;form_section&#x22;&#x3E;
-    &#x3C;!-- write --&#x3E;
-    &#x3C;div class=&#x22;form_list col&#x22;&#x3E; // class "col"
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;userName1&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                            &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
-                            &#x3C;input type=&#x22;text&#x22; value=&#x22;&#x22; id=&#x22;userName1&#x22; placeholder=&#x22;&#xC774;&#xB984;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;&#x22; /&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;cellPhone1&#x22;&#x3E;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638;&#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                            &#x3C;input type=&#x22;tel&#x22; value=&#x22;&#x22; id=&#x22;cellPhone1&#x22; placeholder=&#x22;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638; (&#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;)&#x22; /&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#x27;-&#x27;&#xC0DD;&#xB7B5;, 11&#xC790;&#xB9AC; &#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
-                    &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
-                    &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xB4F1;&#xB85D;&#xB41C; &#xD68C;&#xC6D0;&#xC815;&#xBCF4;&#xAC00; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                    &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xC798;&#xBABB;&#xB41C; &#xD615;&#xC2DD;&#xC758; &#xC804;&#xD654;&#xBC88;&#xD638;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                    &#x3C;!--// &#xC5D0;&#xB7EC; : error --&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;cell full&#x22;&#x3E;
-                    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC778;&#xC99D;&#xBC88;&#xD638; &#xBC1B;&#xAE30;&#x3C;/button&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// write --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// form--&#x3E;</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="article">
-                                    <!-- form-->
-                                    <div class="form_section">
-                                        <!-- write -->
-                                        <div class="form_list table">
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="userName2">이름</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp size_289">
-                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                <input type="text" value="홍길동" id="userName2" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="birthDate2">생년월일</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="inp size_289">
-                                                                <input type="tel" value="1980.01.01" id="birthDate2" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form_group">
-                                                <div class="tit">
-                                                    <label for="phoneNum">전화번호</label>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="cell">
-                                                        <div class="form_item">
-                                                            <div class="phone_set">
-                                                                <div class="inp_select">
-                                                                    <select title="전화번호 국번 선택" id="phoneNum">
-                                                                        <option value="">선택</option>
-                                                                        <option value="02">서울 (02)</option>
-                                                                        <option value="031">경기 (031)</option>
-                                                                        <option value="032">인천 (032)</option>
-                                                                        <option value="033">강원 (033)</option>
-                                                                        <option value="041">충남 (041)</option>
-                                                                        <option value="042">대전 (042)</option>
-                                                                        <option value="043">충북 (043)</option>
-                                                                        <option value="044">세종 (044)</option>
-                                                                        <option value="051">부산 (051)</option>
-                                                                        <option value="052">울산 (052)</option>
-                                                                        <option value="053">대구 (053)</option>
-                                                                        <option value="054">경북 (054)</option>
-                                                                        <option value="055">경남 (055)</option>
-                                                                        <option value="061">전남 (061)</option>
-                                                                        <option value="062">광주 (062)</option>
-                                                                        <option value="063">전북 (063)</option>
-                                                                        <option value="064">제주 (064)</option>
-                                                                        <option value="070">인터넷전화 (070)</option>
-                                                                        <option value="050">평생전화 (050)</option>
-                                                                    </select>
-                                                                    <span class="txt_dash">-</span>
-                                                                </div>
-                                                                <div class="inp_set">
-                                                                    <div class="inp">
-                                                                        <input type="tel" value="1234" title="전화번호 앞자리 입력" />
-                                                                    </div>
-                                                                    <span class="txt_dash">-</span>
-                                                                </div>
-                                                                <div class="inp_set">
-                                                                    <div class="inp">
-                                                                        <input type="tel" value="1234" title="전화번호 뒷자리 입력" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--// write -->
-                                    </div>
-                                    <!--// form-->
-                                </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">&#x3C;!-- form--&#x3E;
-&#x3C;div class=&#x22;form_section&#x22;&#x3E;
-    &#x3C;!-- write --&#x3E;
-    &#x3C;div class=&#x22;form_list table&#x22;&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;userName2&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                            &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
-                            &#x3C;input type=&#x22;text&#x22; value=&#x22;&#xD64D;&#xAE38;&#xB3D9;&#x22; id=&#x22;userName2&#x22; /&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;birthDate2&#x22;&#x3E;&#xC0DD;&#xB144;&#xC6D4;&#xC77C;&#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                            &#x3C;input type=&#x22;tel&#x22; value=&#x22;1980.01.01&#x22; id=&#x22;birthDate2&#x22; /&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-            &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                &#x3C;label for=&#x22;phoneNum&#x22;&#x3E;&#xC804;&#xD654;&#xBC88;&#xD638;&#x3C;/label&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;item&#x22;&#x3E;
-                &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                    &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                        &#x3C;div class=&#x22;phone_set&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
-                                &#x3C;select title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xAD6D;&#xBC88; &#xC120;&#xD0DD;&#x22; id=&#x22;phoneNum&#x22;&#x3E;
-                                    &#x3C;option value=&#x22;&#x22;&#x3E;&#xC120;&#xD0DD;&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;02&#x22;&#x3E;&#xC11C;&#xC6B8; (02)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;031&#x22;&#x3E;&#xACBD;&#xAE30; (031)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;032&#x22;&#x3E;&#xC778;&#xCC9C; (032)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;033&#x22;&#x3E;&#xAC15;&#xC6D0; (033)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;041&#x22;&#x3E;&#xCDA9;&#xB0A8; (041)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;042&#x22;&#x3E;&#xB300;&#xC804; (042)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;043&#x22;&#x3E;&#xCDA9;&#xBD81; (043)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;044&#x22;&#x3E;&#xC138;&#xC885; (044)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;051&#x22;&#x3E;&#xBD80;&#xC0B0; (051)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;052&#x22;&#x3E;&#xC6B8;&#xC0B0; (052)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;053&#x22;&#x3E;&#xB300;&#xAD6C; (053)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;054&#x22;&#x3E;&#xACBD;&#xBD81; (054)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;055&#x22;&#x3E;&#xACBD;&#xB0A8; (055)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;061&#x22;&#x3E;&#xC804;&#xB0A8; (061)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;062&#x22;&#x3E;&#xAD11;&#xC8FC; (062)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;063&#x22;&#x3E;&#xC804;&#xBD81; (063)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;064&#x22;&#x3E;&#xC81C;&#xC8FC; (064)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;070&#x22;&#x3E;&#xC778;&#xD130;&#xB137;&#xC804;&#xD654; (070)&#x3C;/option&#x3E;
-                                    &#x3C;option value=&#x22;050&#x22;&#x3E;&#xD3C9;&#xC0DD;&#xC804;&#xD654; (050)&#x3C;/option&#x3E;
-                                &#x3C;/select&#x3E;
-                                &#x3C;span class=&#x22;txt_dash&#x22;&#x3E;-&#x3C;/span&#x3E;
-                            &#x3C;/div&#x3E;
-                            &#x3C;div class=&#x22;inp_set&#x22;&#x3E;
-                                &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                    &#x3C;input type=&#x22;tel&#x22; value=&#x22;1234&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xC55E;&#xC790;&#xB9AC; &#xC785;&#xB825;&#x22; /&#x3E;
+                                &#x3C;div class=&#x22;inp_set&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                        &#x3C;input type=&#x22;tel&#x22; value=&#x22;1234&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xC55E;&#xC790;&#xB9AC; &#xC785;&#xB825;&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                                    &#x3C;/div&#x3E;
+                                    &#x3C;span class=&#x22;txt_dash&#x22;&#x3E;-&#x3C;/span&#x3E;
                                 &#x3C;/div&#x3E;
-                                &#x3C;span class=&#x22;txt_dash&#x22;&#x3E;-&#x3C;/span&#x3E;
-                            &#x3C;/div&#x3E;
-                            &#x3C;div class=&#x22;inp_set&#x22;&#x3E;
-                                &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                    &#x3C;input type=&#x22;tel&#x22; value=&#x22;1234&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xB4B7;&#xC790;&#xB9AC; &#xC785;&#xB825;&#x22; /&#x3E;
+                                &#x3C;div class=&#x22;inp_set&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                        &#x3C;input type=&#x22;tel&#x22; value=&#x22;1234&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xB4B7;&#xC790;&#xB9AC; &#xC785;&#xB825;&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
+                                    &#x3C;/div&#x3E;
                                 &#x3C;/div&#x3E;
                             &#x3C;/div&#x3E;
                         &#x3C;/div&#x3E;
@@ -895,10 +1495,11 @@
                 &#x3C;/div&#x3E;
             &#x3C;/div&#x3E;
         &#x3C;/div&#x3E;
+        &#x3C;!--// write --&#x3E;
     &#x3C;/div&#x3E;
-    &#x3C;!--// write --&#x3E;
+    &#x3C;!--// form--&#x3E;
 &#x3C;/div&#x3E;
-&#x3C;!--// form--&#x3E;</code></pre>
+&#x3C;!--// board --&#x3E;</code></pre>
                                     </div>
                                 </div>
                             </div>
@@ -1080,6 +1681,8 @@
             </div>
         </div>
     </body>
+    <script src="/resources/js/ui.js"></script>
+    <script src="/resources/js/jquery-ui.js"></script>
     <script>
         $(".html_code .btn_code_toggle").click(function () {
             if ($(this).parent().parent().hasClass("on")) {
@@ -1087,6 +1690,32 @@
             } else {
                 $(this).text("html code 열기").parent().parent().addClass("on").children(".boxing").hide();
             }
+        });
+
+        // 달력 샘플
+        $.datepicker.setDefaults($.datepicker.regional["ko"]);
+        $("#startDate, #endDate, #startDate1, #endDate1, #startDate2, #endDate2, #startDate3, #endDate3").datepicker({
+            dateFormat: "yy-mm-dd",
+            showOtherMonths: true,
+            showMonthAfterYear: true,
+            nextText: "다음 달",
+            prevText: "이전 달",
+            monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+            monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+            dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+            ignoreReadonly: true,
+            buttonImageOnly: false,
+        });
+
+        // 첨부파일 샘플
+        $(".file_set input[type='file']").on("change", function () {
+            var fileName = $(this).val().split("/").pop().split("\\").pop();
+            $(this).siblings(".inp").find("input[type='text']").val(fileName);
+        });
+        $(".file_set .btn_reset").click(function () {
+            $(this).siblings("input[type='text']").val("");
+            var fileInput = $(this).closest(".file_set").find("input[type='file']");
+            fileInput.val("");
         });
     </script>
 </html>

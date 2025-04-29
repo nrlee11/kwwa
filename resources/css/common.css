@@ -2136,7 +2136,6 @@ select.sm {
 .form_item .idcard_set {
   display: flex;
   align-items: center;
-  width: 100%;
 }
 .form_item .idcard_set > div {
   width: 50%;

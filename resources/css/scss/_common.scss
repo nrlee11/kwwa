@@ -1134,7 +1134,6 @@ select {
     // 주민등록번호
     .idcard_set {
         @include flex-aligncenter;
-        width: 100%;
         > div {
             width: 50%;
         }
