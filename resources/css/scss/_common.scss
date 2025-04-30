@@ -3693,6 +3693,7 @@ select {
         }
         .layerFix {
             // position: static; // 출력 미리보기 시 빈 페이지 발생
+            position: absolute;
             top: 0 !important;
             left: 0 !important;
             margin: 0;

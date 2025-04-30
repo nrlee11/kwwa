@@ -4660,6 +4660,7 @@ select.sm {
     display: var(--hide) !important;
   }
   .printpop .layerFix {
+    position: absolute;
     top: 0 !important;
     left: 0 !important;
     margin: 0;
