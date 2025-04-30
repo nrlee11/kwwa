@@ -10,9 +10,9 @@
             $(window).load(function () {
                 // Work Progress
                 var arrTitle = new Array("task", "dev");
-                var intDone, intUnDone, intTotal;
+                var intDone, intUnDone, intTotal, intYet;
                 for (var i = 0; i < arrTitle.length; i++) {
-                    intDone = intUnDone = intTotal = 0;
+                    intDone = intUnDone = intYet = intTotal = 0;
                     $("#tableSheet tr td." + arrTitle[i]).each(function () {
                         if ($(this).hasClass("done")) {
                             intDone++;
@@ -20,11 +20,15 @@
                         if ($(this).hasClass("undone")) {
                             intUnDone++;
                         }
+                        if ($(this).hasClass("yet")) {
+                            intYet++;
+                        }
                         intTotal++;
                     });
                     $("#tableTotal td").eq(i).find(".done").text(intDone);
                     $("#tableTotal td").eq(i).find(".undone").text(intUnDone);
                     $("#tableTotal td").eq(i).find(".total").text(intTotal);
+                    $("#tableTotal td").eq(i).find(".yet").text(intYet);
                 }
 
                 // Memo Numbering
@@ -128,6 +132,17 @@
                 font-weight: bold;
                 text-align: center;
                 color: #000;
+            }
+            #mwork .yet {
+                padding: 0;
+                font-weight: bold;
+                text-align: center;
+                color: #00f;
+            }
+            #tableSheet .yet:before {
+                display: block;
+                color: currentColor;
+                content: '!';
             }
             #mwork .center {
                 text-align: center;
@@ -235,7 +250,12 @@
                     <tbody>
                         <tr>
                             <th>Task</th>
-                            <td><span class="done"></span>/<span class="undone"></span> : <span class="total"></span></td>
+                            <td>
+                                <span class="done"></span>/
+                                <span class="undone"></span>/
+                                <span class="yet"></span> : 
+                                <span class="total"></span>
+                            </td>
                             <!-- <th>Dev</th>
                             <td><span class="done"></span>/<span class="undone"></span> : <span class="total"></span></td> -->
                         </tr>
@@ -1180,7 +1200,7 @@
                         <tr class="green">
                             <td></td>
                             <td>강의실 입장</td>
-                            <td></td>
+                            <td>신청현황 조회</td>
                             <td></td>
                             <td class="center">List</td>
                             <td class="center">
@@ -1188,6 +1208,96 @@
                             </td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-17</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="green">
+                            <td></td>
+                            <td></td>
+                            <td>강의실 팝업</td>
+                            <td>강의실 홈</td>
+                            <td class="center"></td>
+                            <td class="center">
+                                <a href="/html/edu/FO-250-002P.html" target="_blank">FO-250-002P</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-00-00</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="green">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>학습목차</td>
+                            <td class="center"></td>
+                            <td class="center">
+                                <a href="/html/edu/FO-250-003P.html" target="_blank">FO-250-003P</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-00-00</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="green">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>설문</td>
+                            <td class="center"></td>
+                            <td class="center">
+                                <a href="/html/edu/FO-250-004P.html" target="_blank">FO-250-004P</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-00-00</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="green">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>설문 - 설문팝업</td>
+                            <td class="center"></td>
+                            <td class="center">
+                                <a href="/html/edu/FO-250-004P-01P.html" target="_blank">FO-250-004P-01P</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-00-00</td>
+                            <td class="center"></td>
+                            <td>
+                                <span class="red">* 기획/디자인 확인필요</span><br>
+                                [2025-04-30] (기획서) 설문 팝업 추후 정의
+                            </td>
+                        </tr>
+                        <tr class="green">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>자료실</td>
+                            <td class="center"></td>
+                            <td class="center">
+                                <a href="/html/edu/FO-250-005P.html" target="_blank">FO-250-005P</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-00-00</td>
+                            <td class="center"></td>
+                            <td>
+                                <span class="red">* 디자인 확인필요</span><br>
+                                [2025-04-30] (디자인 필요)
+                            </td>
+                        </tr>
+                        <tr class="green">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>자료실 상세</td>
+                            <td class="center"></td>
+                            <td class="center">
+                                <a href="/html/edu/FO-250-005P-01P.html" target="_blank">FO-250-005P-01P</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-00-00</td>
                             <td class="center"></td>
                             <td></td>
                         </tr>
