@@ -101,27 +101,32 @@
     .utility {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: var(--gap-55);
-        [class^="btn_"] {
-            + [class^="btn_"] {
-                margin-left: 3.2rem;
-            }
-        }
-        > .box {
+        margin-bottom: var(--gap-25);
+        .box {
             display: flex;
+            height: 4rem;
+            gap: 3.2rem;
             align-items: center;
-            + .box {
-                margin-left: var(--gap-35);
-                [class^="btn_"] {
-                    + [class^="btn_"] {
-                        margin-left: var(--gap-8);
-                    }
-                    // &.switch {
-                    //     font-weight: var(--font-medium);
-                    //     > strong {
-                    //         font-weight: var(--font-bold);
-                    //     }
-                    // }
+        }
+        .box_utility {
+            display: flex;
+            gap: 1.5rem;
+            margin: var(--gap-5) 0 0 var(--gap-35);
+            [class^="btn_"] {
+                + [class^="btn_"] {
+                    margin-left: 0;
+                }
+            }
+            .inner {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .btn_primary_sm {
+                min-width: 24rem;
+                background-color: var(--active-bgcolor, #8A949E);
+                &:hover {
+                    --active-bgcolor: #4c87f6;
                 }
             }
         }
@@ -689,12 +694,11 @@
                 }
             }
             .btn_area {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: var(--gap-5);
                 margin-top: var(--gap-14);
-                [class^="btn_"] {
-                    + [class^="btn_"] {
-                        margin-top: var(--gap-5);
-                    }
-                }
             }
         }
         .btn_side_close {

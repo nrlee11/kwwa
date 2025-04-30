@@ -340,20 +340,33 @@ button {
 #header .utility {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: var(--gap-55);
+  margin-bottom: var(--gap-25);
 }
-#header .utility [class^=btn_] + [class^=btn_] {
-  margin-left: 3.2rem;
-}
-#header .utility > .box {
+#header .utility .box {
   display: flex;
+  height: 4rem;
+  gap: 3.2rem;
   align-items: center;
 }
-#header .utility > .box + .box {
-  margin-left: var(--gap-35);
+#header .utility .box_utility {
+  display: flex;
+  gap: 1.5rem;
+  margin: var(--gap-5) 0 0 var(--gap-35);
 }
-#header .utility > .box + .box [class^=btn_] + [class^=btn_] {
-  margin-left: var(--gap-8);
+#header .utility .box_utility [class^=btn_] + [class^=btn_] {
+  margin-left: 0;
+}
+#header .utility .box_utility .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#header .utility .box_utility .btn_primary_sm {
+  min-width: 24rem;
+  background-color: var(--active-bgcolor, #8A949E);
+}
+#header .utility .box_utility .btn_primary_sm:hover {
+  --active-bgcolor: #4c87f6;
 }
 #header .utility .site_switch {
   margin-left: var(--gap-15);
@@ -923,10 +936,11 @@ button {
   margin-left: 2.4rem;
 }
 .side_gnb .side_nav_wrap .global_link .btn_area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--gap-5);
   margin-top: var(--gap-14);
-}
-.side_gnb .side_nav_wrap .global_link .btn_area [class^=btn_] + [class^=btn_] {
-  margin-top: var(--gap-5);
 }
 .side_gnb .side_nav_wrap .btn_side_close {
   position: absolute;
