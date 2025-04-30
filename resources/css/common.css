@@ -1439,6 +1439,9 @@ button {
 [class^=data_][class*=_badge3] {
   background-color: #ffb114;
 }
+[class^=data_][class*=_badge4] {
+  background-color: #0b78cb;
+}
 
 .progress-bar {
   display: flex;
