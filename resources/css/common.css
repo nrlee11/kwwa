@@ -1351,6 +1351,19 @@ button {
   text-align: center;
 }
 
+.tit_search_total {
+  margin-bottom: var(--gap-15);
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+}
+
+.tit_search_detail {
+  margin-bottom: var(--gap-10);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-regular);
+  color: var(--color-gray);
+}
+
 .badge_positive, .badge_negative {
   position: relative;
   display: inline-block;
