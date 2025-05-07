@@ -508,6 +508,9 @@
                     -webkit-box-orient: vertical;
                     word-break: break-all;
                     line-height: 2rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
             .txt_new {
