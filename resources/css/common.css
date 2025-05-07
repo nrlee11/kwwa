@@ -361,8 +361,13 @@ button {
   gap: 0.5rem;
 }
 #header .utility .box_utility .btn_primary_sm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-width: 24rem;
-  background-color: var(--active-bgcolor, #8A949E);
+  padding: 0 var(--gap-15);
+  background-color: var(--active-bgcolor, #8a949e);
+  text-align: left;
 }
 #header .utility .box_utility .btn_primary_sm:hover {
   --active-bgcolor: #4c87f6;
