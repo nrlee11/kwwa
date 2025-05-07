@@ -31,7 +31,6 @@
             display: block;
             color: #083891;
             font-size: 2rem;
-            font-weight: var(--font-bold);
             line-height: 2rem;
             > em {
                 display: block;
@@ -42,12 +41,8 @@
                 display: block;
                 margin-top: 1.3rem;
                 font-size: 3.2rem;
-                font-weight: var(--font-medium);
+                font-weight: var(--font-bold);
                 line-height: 3.2rem;
-                strong {
-                    font-weight: 800;
-                    font-weight: var(--font-bold);
-                }
             }
             @include mobile {
                 > em,

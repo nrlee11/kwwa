@@ -267,7 +267,6 @@ button {
   display: block;
   color: #083891;
   font-size: 2rem;
-  font-weight: var(--font-bold);
   line-height: 2rem;
 }
 #header .logo > a > em {
@@ -279,12 +278,8 @@ button {
   display: block;
   margin-top: 1.3rem;
   font-size: 3.2rem;
-  font-weight: var(--font-medium);
-  line-height: 3.2rem;
-}
-#header .logo > a > span strong {
-  font-weight: 800;
   font-weight: var(--font-bold);
+  line-height: 3.2rem;
 }
 @media screen and (max-width: 1200px) {
   #header .logo > a > em,
