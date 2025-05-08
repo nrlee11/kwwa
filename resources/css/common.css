@@ -1199,6 +1199,9 @@ button {
 .txt_navy1 {
   color: #083891;
 }
+.txt_gray {
+  color: #8a949e;
+}
 .txt_underline {
   text-decoration: underline;
 }
