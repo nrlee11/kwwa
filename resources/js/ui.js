@@ -147,20 +147,18 @@ $(function () {
     function moGnbToggle() {
         $(document)
             .off("click.mo_gnb")
-            .on("click.mo_gnb", '#moGnb a[aria-haspopup]', function (e) {
+            .on("click.mo_gnb", "#moGnb a[aria-haspopup]", function (e) {
                 e.preventDefault();
-    
+
                 var $this = $(this),
                     $submenu = $this.next("ul[role='menu']"),
                     $parentLi = $this.parent("li"),
                     isOpen = $parentLi.hasClass("on");
-    
+
                 var $siblings = $parentLi.siblings("li");
-    
-                $siblings.removeClass("on")
-                    .children("ul[role='menu']").slideUp(300).attr("aria-hidden", "true")
-                    .end().children("a[role='menuitem']").attr("aria-expanded", "false");
-    
+
+                $siblings.removeClass("on").children("ul[role='menu']").slideUp(300).attr("aria-hidden", "true").end().children("a[role='menuitem']").attr("aria-expanded", "false");
+
                 if (!isOpen) {
                     $parentLi.addClass("on");
                     $submenu.slideDown(300).attr("aria-hidden", "false");
@@ -172,7 +170,7 @@ $(function () {
                 }
             });
     }
-    
+
     // LNB
     function lnbToggle() {
         $(document)
@@ -382,6 +380,7 @@ $(function () {
                         moGnbToggle();
                         allSearch();
                         selectLayer();
+                        layerFix();
                         urlChk();
                     }
                 };
