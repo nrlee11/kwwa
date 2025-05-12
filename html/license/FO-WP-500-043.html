@@ -70,8 +70,8 @@
                             <div class="ly_half_form">
                                 <div class="lside">
                                     <strong class="tit">자격증 발급용 사진</strong>
-                                    <div class="align_center"><button type="button" class="btn_pop">샘플사진보기</button></div>
-                                    <div class="article">
+                                    <div class="align_center"><button type="button" id="licensePhoto" class="btn_pop">샘플사진보기</button></div>
+                                    <div class="article gap_mt10">
                                         <div class="preview_file_set">
                                             <input type="file" id="imgfile" class="imgfile" onchange="setThumbnail();" />
                                             <label for="imgfile">증명사진을<br />등록해<br />주세요</label>
@@ -272,6 +272,14 @@
         </div>
         <!--// Layer : 파일용량 초과 안내 -->
 
+        <!--Layer : 자격증 발급용 사진으로 연결 -->
+        <div class="layerFix fullPopup" id="licensePhotoPop" role="dialog" tabindex="0" style="display: none">
+            <div class="layer_wrap">
+                <a href="../license/FO-WP-500-040-P.html" style="display: block; text-align: center">이전 자격증 발급용 사진으로 연결</a>
+            </div>
+        </div>
+        <!--// Layer : 자격증 발급용 사진으로 연결 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
@@ -323,6 +331,17 @@
                 // 첨부불가 안내 파일 삭제
                 $(".img_preview img").remove();
                 $(".imgfile").val("").focus();
+            });
+
+            // Layer :  자격증 발급용 사진 연결
+            $("#licensePhoto").click(function (e) {
+                $("html").addClass("layerOpen");
+                $("#wrap").attr("aria-hidden", "true");
+                $(".layerDim").show();
+                $("#licensePhotoPop").show().focus();
+            });
+            $("#licensePhotoPop .layer_close").click(function (e) {
+                $("#licensePhoto").focus(); // 접근성
             });
         </script>
     </body>

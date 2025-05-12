@@ -4472,6 +4472,15 @@ select.sm {
 .layerFix .layer_wrap .cont .alert_msg .txt {
   color: var(--color-darkgray);
 }
+.layerFix .layer_wrap .cont .license_photo_box {
+  width: 11.3rem;
+  height: 15.1rem;
+  margin: 0 auto;
+}
+.layerFix .layer_wrap .cont .license_photo_box img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .layerFix .layer_wrap .foot {
   width: 100%;
   padding: var(--gap-20) var(--gap-24) 0;
