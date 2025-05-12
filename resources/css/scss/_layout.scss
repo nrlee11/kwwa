@@ -698,6 +698,15 @@
                 align-items: flex-end;
                 gap: var(--gap-5);
                 margin-top: var(--gap-14);
+                .btn_warmblue_sm {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    min-width: 24rem;
+                    padding: 0 1.5rem;
+                    text-align: left;
+                    box-sizing: border-box;
+                }
             }
         }
         .btn_side_close {
