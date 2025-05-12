@@ -381,6 +381,7 @@ $(function () {
                         allSearch();
                         selectLayer();
                         layerFix();
+                        layerClose();
                         urlChk();
                     }
                 };
