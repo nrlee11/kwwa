@@ -356,6 +356,21 @@ $(function () {
     //     });
     // };
 
+    // 강의실 - 동영상 플레이어
+    const aviToggle = function () {
+        $(".container_avi .btn[aria-controls='aviPlayer']").click(function (e) {
+            $("#aviPlayer").slideToggle(700);
+        });
+    };
+
+    // 강의실 - 동영상 선택
+    const aviCurrent = function () {
+        $(".container_avi .btn_avi").click(function (e) {
+            $(".btn_avi").attr("aria-current", false);
+            $(this).attr("aria-current", true);
+        });
+    };
+
     // 퍼블확인용
     const urlChk = function () {
         const menuMap = {
@@ -428,5 +443,7 @@ $(function () {
     layerFix();
     layerClose();
     urlChk();
+    aviToggle();
+    aviCurrent();
     includeHtml();
 });

@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+.container_avi {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    max-height: 100vh;
+    background: #2e2e2e;
+    color: var(--color-white);
+    .lside {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2.2rem 10.4rem;
+        max-height: 100vh;
+        @include mobile {
+            padding: 0;
+        }
+        .tit_area {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+            padding: 2.5rem 0 2.9rem;
+            @include mobile {
+                flex: 0 0 auto;
+                align-items: center;
+                margin-bottom: 0;
+                padding: 0 0 0 1.6rem;
+            }
+        }
+        .tit {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 3.2rem;
+            line-height: 1;
+            @include mobile {
+                font-size: 2rem;
+            }
+            &.ico {
+                padding-left: 0;
+                &:before {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    display: inline-block;
+                    width: 0.6rem;
+                    height: 4.2rem;
+                    margin-top: 0;
+                    background: var(--color-warmblue);
+                    content: "";
+                    @include mobile {
+                        height: 2.4rem;
+                    }
+                }
+            }
+        }
+        .btn {
+            display: none;
+            padding: 1.6rem;
+            font-size: 1.5rem;
+            color: var(--color-white);
+            line-height: 1.5;
+            @include mobile {
+                display: block;
+            }
+        }
+        .avi_box {
+            flex: 0 1 auto;
+            height: 100%;
+        }
+    }
+
+    .rside {
+        @include mobile {
+            display: none;
+            position: fixed;
+            top: 5.7rem;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .inner {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            width: 55.5rem;
+            max-height: 100vh;
+            padding: 0 2.3rem 2rem;
+            background: #525254;
+            box-sizing: border-box;
+            @include mobile {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        }
+
+        .tit_area {
+            flex: 0 0 auto;
+            margin: 2.9rem 0;
+            @include mobile {
+                margin: 1.4rem;
+            }
+            .tit {
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+                @include mobile {
+                    font-size: 2.5rem;
+                    line-height: 1;
+                }
+            }
+        }
+        .avi_area {
+            flex: 1 1 auto;
+            overflow: auto;
+        }
+        .avi_list {
+            background: #2e2e2e;
+            .txt_avi {
+                display: flex;
+                gap: 0.4rem;
+                padding: 2.1rem 3.3rem 2.1rem 1rem;
+                text-align: left;
+                font-size: 2rem;
+                color: #b1b8be;
+                @include mobile {
+                    padding: 1rem 2.5rem 1rem 1rem;
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                }
+            }
+            .num {
+                flex: 0 0 auto;
+            }
+            .tit {
+                display: block;
+                font-weight: var(--font-regular);
+            }
+            .sub_list {
+                li {
+                    border-top: 0.3rem solid #525254;
+                }
+                .txt_avi {
+                    padding-left: 3rem;
+                }
+            }
+        }
+        .avi_item {
+            &:not(:first-child) {
+                border-top: 0.3rem solid #525254;
+            }
+        }
+        .btn {
+            flex: 0 0 auto;
+            display: block;
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: 2.9rem;
+            background: #1e2124;
+            font-size: 2.2rem;
+            font-weight: var(--font-bold);
+            text-align: center;
+            color: var(--color-white);
+            @include mobile {
+                padding: 1.7rem;
+                font-size: 2rem;
+            }
+        }
+        .btn_avi {
+            display: block;
+            width: 100%;
+            .txt_avi {
+                &:after {
+                    align-self: center;
+                    flex: 0 0 auto;
+                    width: 3.4rem;
+                    height: 3.4rem;
+                    margin-left: 2.6rem;
+                    background: url($url-img-icon + "ico_avi.svg") no-repeat 0 0;
+                    content: "";
+                    @include mobile {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        background-size: contain;
+                        margin-left: 0;
+                    }
+                }
+            }
+            &[aria-current="true"] {
+                .txt_avi {
+                    background: linear-gradient(90deg, #256ef4 0%, #86aff9 100%);
+                    font-weight: var(--font-bold);
+                    color: var(--color-white);
+                    &:after {
+                        background-image: url($url-img-icon + "ico_avi_active.svg");
+                    }
+                }
+            }
+        }
+    }
+}
