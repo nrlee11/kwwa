@@ -25,10 +25,22 @@
                         }
                         intTotal++;
                     });
-                    $("#tableTotal td").eq(i).find(".done").text(intDone);
-                    $("#tableTotal td").eq(i).find(".undone").text(intUnDone);
-                    $("#tableTotal td").eq(i).find(".total").text(intTotal);
-                    $("#tableTotal td").eq(i).find(".yet").text(intYet);
+                    $("#tableTotal td")
+                        .eq(i)
+                        .find(".done")
+                        .text("완료" + intDone);
+                    $("#tableTotal td")
+                        .eq(i)
+                        .find(".undone")
+                        .text("확인필요" + intUnDone);
+                    $("#tableTotal td")
+                        .eq(i)
+                        .find(".total")
+                        .text("전체" + intTotal);
+                    $("#tableTotal td")
+                        .eq(i)
+                        .find(".yet")
+                        .text("예정" + intYet);
                 }
 
                 // Memo Numbering
@@ -41,6 +53,9 @@
         </script>
         <!-- style -->
         <style type="text/css">
+            html {
+                scroll-behavior: smooth;
+            }
             body {
                 height: auto;
                 min-height: auto;
@@ -106,7 +121,7 @@
             #mwork td {
                 font-size: 14px;
                 padding: 4px 6px;
-                border: 1px solid #666;
+                border: 1px solid #ccc;
                 background-color: #fff;
             }
             #mwork td:hover ul {
@@ -122,7 +137,7 @@
                 transition: max-height 500ms;
             }
             #mwork .line td {
-                border-top: 2px solid #666;
+                border-top: 3px solid #666;
             }
             #mwork .memo {
                 color: #000;
@@ -159,44 +174,51 @@
             #mwork .center {
                 text-align: center;
             }
+            #mwork tr:hover td {
+                background-color: var(--first-bg);
+            }
+            #mwork td:first-child {
+                background-color: var(--first-bg);
+                font-size: larger !important;
+            }
             p.del {
                 text-decoration: line-through;
             }
             .del td {
                 text-decoration: line-through;
             }
-            .red td {
-                background-color: #ffe6e7 !important;
+            .red {
+                --first-bg: #ffe6e7 !important;
             }
-            .blue td {
-                background-color: #e1f5fd !important;
+            .blue {
+                --first-bg: #e1f5fd !important;
             }
-            .sky td {
-                background-color: #d4f0f0 !important;
+            .sky {
+                --first-bg: #d4f0f0 !important;
             }
-            .orange td {
-                background-color: #ffe4ca !important;
+            .orange {
+                --first-bg: #ffe4ca !important;
             }
-            .purple td {
-                background-color: #f1e6ff !important;
+            .purple {
+                --first-bg: #f1e6ff !important;
             }
-            .green td {
-                background-color: #deeed5 !important;
+            .green {
+                --first-bg: #deeed5 !important;
             }
-            .yellow td {
-                background-color: #fcfbdc !important;
+            .yellow {
+                --first-bg: #fcfbdc !important;
             }
-            .brown td {
-                background-color: #e6dcd2 !important;
+            .brown {
+                --first-bg: #e6dcd2 !important;
             }
-            .white td {
-                background-color: #fff !important;
+            .white {
+                --first-bg: #fff !important;
             }
-            .pink td {
-                background-color: #fee1e8 !important;
+            .pink {
+                --first-bg: #fee1e8 !important;
             }
-            .gray td {
-                background-color: #eceae4 !important;
+            .gray {
+                --first-bg: #eceae4 !important;
             }
             .point {
                 display: inline-block;
@@ -223,10 +245,6 @@
             }
             .only_mo {
                 display: none !important;
-            }
-
-            tr:hover td {
-                font-weight: 600;
             }
 
             /* @media all and (max-width: 640px) {
@@ -970,7 +988,7 @@
                             <td></td>
                             <td>알림신청/해체</td>
                             <td class="center">Layer Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
@@ -1026,7 +1044,9 @@
                             <td></td>
                             <td>주소변경</td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center">
+                                <a href="#tblCommon">공통팝업</a>
+                            </td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
@@ -1071,7 +1091,7 @@
                             <td></td>
                             <td>수수료 결제 방법 선택</td>
                             <td class="center">Layer Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center"></td>
                             <td class="center"></td>
@@ -1129,7 +1149,7 @@
                             <td></td>
                             <td>주소변경</td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
@@ -1368,7 +1388,7 @@
                             <td></td>
                             <td>알림신청/해체</td>
                             <td class="center">Layer Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
@@ -1562,7 +1582,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-009P.html" target="_blank">FO-320-009P</a>
                             </td>
-                            <td class="task undone">▲</td>
+                            <td class="task undone">△</td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td>
@@ -1868,7 +1888,7 @@
                             <td></td>
                             <td class="center">Layer Popup</td>
                             <td class="center">
-                                <a href="#" target="_blank">FO-WP-500-011P</a>
+                                <span>FO-WP-500-011P</span>
                             </td>
                             <td class="task undone">X</td>
                             <td class="center"></td>
@@ -1999,7 +2019,7 @@
                             <td></td>
                             <td>수수료 결제 방법 선택</td>
                             <td class="center">Layer Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
@@ -2011,7 +2031,7 @@
                             <td></td>
                             <td>기본증명서 안내</td>
                             <td class="center">Layer Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
@@ -2037,7 +2057,7 @@
                             <td></td>
                             <td>기본증명서 안내</td>
                             <td class="center">Layer Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
@@ -2068,7 +2088,7 @@
                             <td>원본서류 우편제출 안내</td>
                             <td></td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
@@ -2080,7 +2100,7 @@
                             <td>가상계좌번호</td>
                             <td></td>
                             <td class="center"></td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task undone"></td>
                             <td class="center"></td>
                             <td class="center"></td>
@@ -2097,7 +2117,7 @@
                             <td>자격증 발급 신청서</td>
                             <td></td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
@@ -2109,7 +2129,7 @@
                             <td>재발급 신청내역</td>
                             <td></td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
@@ -2222,7 +2242,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-033-3P.html" target="_blank">FO-WP-500-033-3P</a>
                             </td>
-                            <td class="task undone">▲</td>
+                            <td class="task undone">△</td>
                             <td class="center">2025-04-11</td>
                             <td class="center"></td>
                             <td>
@@ -2241,7 +2261,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-033-4P.html" target="_blank">FO-WP-500-033-4P</a>
                             </td>
-                            <td class="task undone">▲</td>
+                            <td class="task undone">△</td>
                             <td class="center">2025-04-11</td>
                             <td class="center"></td>
                             <td>
@@ -2374,7 +2394,7 @@
                             <td></td>
                             <td>원본서류 우편제출 안내</td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
@@ -2405,7 +2425,7 @@
                             <td></td>
                             <td>자격증 발급 신청서</td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
@@ -2417,7 +2437,7 @@
                             <td></td>
                             <td>재발급 신청내역</td>
                             <td class="center">Full Popup</td>
-                            <td class="center">공통팝업</td>
+                            <td class="center"><a href="#tblCommon">공통팝업</a></td>
                             <td class="task done">O</td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
@@ -2758,7 +2778,7 @@
                         </tr>
                         <!-- //통합검색 -->
                         <!-- 공통 -->
-                        <tr class="line">
+                        <tr id="tblCommon" class="line yellow">
                             <td>공통</td>
                             <td>로그아웃</td>
                             <td></td>
@@ -2777,7 +2797,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>기본증명서 안내</td>
                             <td></td>
@@ -2791,7 +2811,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>과목별 점수표</td>
                             <td></td>
@@ -2815,7 +2835,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>자격증</td>
                             <td>원본서류 우편제출 안내</td>
@@ -2829,7 +2849,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>가상계좌번호</td>
@@ -2848,7 +2868,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>자격증 발급 신청서</td>
@@ -2862,7 +2882,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>재발급 신청내역</td>
@@ -2876,7 +2896,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>자격증 발급용 사진</td>
@@ -2895,7 +2915,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>주소변경</td>
                             <td></td>
@@ -2909,7 +2929,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>수수료 결제 방법 선택</td>
                             <td></td>
@@ -2929,7 +2949,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>자격요건 확인</td>
                             <td>정수시설운영관리사 1급</td>
@@ -2948,7 +2968,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>정수시설운영관리사 2급</td>
@@ -2967,7 +2987,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>정수시설운영관리사 3급</td>
@@ -2986,7 +3006,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>상수도관망시설운영관리사 1급</td>
@@ -3005,7 +3025,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>상수도관망시설운영관리사 2급</td>
@@ -3024,7 +3044,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td>자격취득 가능여부 자가진단</td>
                             <td>자격증 급수 선택</td>
@@ -3038,7 +3058,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>최종 학력 선택</td>
@@ -3052,7 +3072,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>경력 선택</td>
@@ -3066,7 +3086,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>교육 선택</td>
@@ -3080,7 +3100,7 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>결격사유</td>
@@ -3099,7 +3119,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="yellow">
                             <td></td>
                             <td></td>
                             <td>자가진단 결과</td>
@@ -3118,7 +3138,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>알림신청 완료/해체</td>
                             <td></td>
@@ -3137,35 +3157,35 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>기관 검색</td>
                             <td></td>
                             <td></td>
                             <td class="center">Layer Popup</td>
                             <td class="center">
-                                <a href="#" target="_blank">FO-WP-400-031-1P</a>
+                                <span>FO-WP-400-031-1P</span>
                             </td>
                             <td class="task undone">X</td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>학교 검색</td>
                             <td></td>
                             <td></td>
                             <td class="center">Layer Popup</td>
                             <td class="center">
-                                <a href="#" target="_blank">FO-WP-400-031-2P</a>
+                                <span>FO-WP-400-031-2P</span>
                             </td>
                             <td class="task undone">X</td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>시스템 에러</td>
                             <td></td>
@@ -3184,7 +3204,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>404 에러</td>
                             <td></td>
@@ -3203,7 +3223,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>Loading</td>
                             <td></td>
@@ -3212,7 +3232,7 @@
                             <td class="center">
                                 <a href="/html/common/loading.html" target="_blank">loading</a>
                             </td>
-                            <td class="task undone">▲</td>
+                            <td class="task undone">△</td>
                             <td class="center">2025-03-19</td>
                             <td class="center"></td>
                             <td>
@@ -3222,7 +3242,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>Alert Sample</td>
                             <td></td>
@@ -3241,8 +3261,7 @@
                                 </ul>
                             </td>
                         </tr>
-                        <!-- 이메일 -->
-                        <tr class="white">
+                        <tr class="yellow">
                             <td></td>
                             <td>이메일 템플릿</td>
                             <td></td>
@@ -3256,7 +3275,6 @@
                             <td class="center"></td>
                             <td></td>
                         </tr>
-                        <!-- // 이메일 -->
                         <!-- //공통 -->
                     </tbody>
                 </table>
