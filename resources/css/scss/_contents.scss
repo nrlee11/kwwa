@@ -544,3 +544,154 @@
         }
     }
 }
+
+// 강의실
+.page_educlass_title {
+    padding: 3.6rem 0 2.2rem;
+    color: var(--color-base);
+    @include mobile {
+        padding: 1.6rem 0 var(--gap-50);
+    }
+    .tit {
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-semibold);
+    }
+    .txt_info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--gap-25);
+        font-size: var(--font-size-sm);
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: var(--gap-10);
+        }
+    }
+}
+.educlass_panel {
+    margin-top: var(--gap-50);
+    padding-bottom: 10rem;
+}
+
+.educlass_info_area {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+        flex-direction: column;
+        gap: var(--gap-50);
+    }
+    .educlass_info_list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-5);
+        color: var(--color-base);
+        .type {
+            display: inline-block;
+            width: 10rem;
+        }
+        .txt {
+            display: inline-block;
+        }
+    }
+}
+
+.educlass_info_box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--gap-24);
+    &:not(:first-child) {
+        margin-top: var(--gap-50);
+    }
+    .tit {
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-bold);
+    }
+    .txt {
+        font-size: 1.7rem;
+    }
+    .btn_border_md {
+        @include mobile {
+            align-self: flex-end;
+        }
+    }
+}
+.educlass_percent_box {
+    width: 19.2rem;
+    height: 17rem;
+    @include mobile {
+        margin: 0 auto;
+    }
+}
+
+// 강의실 > 학습목차 테이블
+.tbl_colgroup_educlass {
+    th,
+    td {
+        &:first-child {
+            width: 81px;
+            min-width: 81px;
+        }
+        &:nth-child(2) {
+            width: 81px;
+            min-width: 81px;
+        }
+        // &:nth-child(3) {
+        // }
+        &:nth-child(4) {
+            width: 123px;
+            min-width: 123px;
+        }
+        &:nth-child(5) {
+            width: 123px;
+            min-width: 123px;
+        }
+        &:nth-child(6) {
+            width: 123px;
+            min-width: 123px;
+        }
+        &:nth-child(7) {
+            width: 90px;
+            min-width: 90px;
+        }
+        &:nth-child(8) {
+            width: 162px;
+            min-width: 162px;
+        }
+    }
+}
+.tbl_sub_panel {
+    > td {
+        height: auto !important;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+    .tbl_sub {
+        tbody {
+            td {
+                background-color: #f4f5f6;
+            }
+        }
+    }
+}
+.btn_accrodion_tr {
+    position: relative;
+    top: -0.1rem;
+    display: inline-block;
+    padding: 1rem;
+    &[aria-expanded="false"] {
+        &:after {
+            transform: rotate(0);
+        }
+    }
+    &:after {
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url($url-img-icon + "ico_arrowdown.svg") no-repeat 0 0;
+        transition: 400ms;
+        transform: rotate(-180deg);
+        content: "";
+    }
+}

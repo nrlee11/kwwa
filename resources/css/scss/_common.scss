@@ -97,6 +97,9 @@
     &_mb24 {
         margin-bottom: var(--gap-24) !important;
     }
+    &_p0 {
+        padding: 0 !important;
+    }
     &_pt0 {
         padding-top: 0 !important;
     }
@@ -177,6 +180,9 @@
     }
     &_size_xmd {
         font-size: 2rem;
+    }
+    &_size_sm {
+        font-size: var(--font-size-sm);
     }
     &_size_lg {
         font-size: var(--font-size-lg);
@@ -285,9 +291,6 @@
     .tit {
         font-size: var(--font-size-xxl);
         font-weight: var(--font-semibold);
-        // @include mobile {
-        //     font-size: var(--font-size-xl);
-        // }
     }
     &.center {
         margin-top: 6.5rem;
@@ -636,6 +639,22 @@
     &:has(.hidden) {
         margin-right: 0;
     }
+}
+.ico_cal,
+.ico_time {
+    position: relative;
+    top: -0.1rem;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: var(--gap-6);
+    vertical-align: var(--align-m);
+}
+.ico_cal {
+    background: url($url-img-icon + "ico_cal.svg") no-repeat 0 0;
+}
+.ico_time {
+    background: url($url-img-icon + "ico_time.svg") no-repeat 0 0;
 }
 
 // form
@@ -3013,6 +3032,36 @@ select {
             height: 0.2rem;
             background-color: var(--color-warmblue);
         }
+        &.full_type {
+            li {
+                width: 100%;
+                &.on {
+                    button {
+                        min-height: 7.2rem;
+                        line-height: 7.2rem;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        @include mobile {
+                            min-height: 4rem;
+                            border-radius: 10rem;
+                            line-height: 4rem;
+                        }
+                    }
+                }
+            }
+            button {
+                width: 100%;
+                min-height: 7rem;
+                font-size: 2.3rem;
+                text-align: center;
+                line-height: 7.2rem;
+                @include mobile {
+                    font-size: 1.7rem;
+                    min-height: 4rem;
+                    line-height: 4rem;
+                }
+            }
+        }
         @include mobile {
             &::before {
                 display: var(--hide);
@@ -3740,6 +3789,27 @@ select {
                     height: auto;
                 }
             }
+        }
+    }
+}
+
+.gage_box {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.4rem;
+    color: #de3412;
+    .gage_bar {
+        display: inline-block;
+        width: 10.6rem;
+        height: 1.6rem;
+        background-color: #d9d9d9;
+        &:after {
+            display: block;
+            width: var(--bar-percent, 0);
+            height: 100%;
+            background: #de3412;
+            content: "";
         }
     }
 }

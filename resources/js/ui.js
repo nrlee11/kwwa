@@ -275,7 +275,6 @@ $(function () {
 
         accFold.on("click", function () {
             const $this = $(this);
-
             if ($this.closest(".accordion_box").hasClass("is_open")) {
                 $this.attr("aria-expanded", "false").parent().next(accBody).slideUp();
                 $this.closest(".accordion_box").removeClass("is_open");
@@ -292,6 +291,28 @@ $(function () {
                     .slideDown(400, function () {
                         $("html, body").animate({ scrollTop: $this.offset().top - 19 }, 300);
                     });
+            }
+        });
+    };
+    // Accordion - tr
+    const accordionTr = function () {
+        const btnFold = $(".btn_accrodion_tr");
+        let time = 400;
+
+        btnFold.on("click", function () {
+            const controlId = $(this).attr("aria-controls");
+            const panel = $("#" + controlId);
+            const isActive = $(this).hasClass("is_active");
+
+            btnFold.removeClass("is_active").attr("aria-expanded", "false");
+
+            $(".tbl_sub_panel .inner").slideUp(time);
+
+            if (!isActive) {
+                $(this).addClass("is_active").attr("aria-expanded", "true");
+                panel.find(".inner").slideDown(time, function () {
+                    $("html, body").animate({ scrollTop: $(this).offset().top - 19 }, time);
+                });
             }
         });
     };
@@ -383,6 +404,7 @@ $(function () {
                         layerFix();
                         layerClose();
                         urlChk();
+                        commonTab();
                     }
                 };
                 xhttp.open("GET", targetFile, true);
@@ -402,6 +424,7 @@ $(function () {
     selectLayer();
     commonTab();
     accordion();
+    accordionTr();
     layerFix();
     layerClose();
     urlChk();
