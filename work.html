@@ -110,11 +110,16 @@
                 background-color: #fff;
             }
             #mwork td:hover ul {
-                max-height: 100%;
+                overflow-y: auto;
+                max-height: 500px;
             }
             #mwork td ul {
                 overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
                 max-height: 0;
+                transition: max-height 500ms;
             }
             #mwork .line td {
                 border-top: 2px solid #666;
@@ -2669,7 +2674,12 @@
                             <td class="task done">O</td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
-                            <td></td>
+                            <td>
+                                <span class="red">* 기획 확인필요</span>
+                                <ul>
+                                    <li>[20250418(수정사항).pptx] 채용공고는 정수 전용, 상수는 삭제</li>
+                                </ul>
+                            </td>
                         </tr>
                         <tr class="gray">
                             <td></td>
@@ -2684,6 +2694,42 @@
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
+                        </tr>
+                        <tr class="gray">
+                            <td></td>
+                            <td>정수 전용</td>
+                            <td>채용공고</td>
+                            <td></td>
+                            <td class="center">List</td>
+                            <td class="center">
+                                <a href="/html/cs/FO-750-001.html" target="_blank">FO-750-001</a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-05-00</td>
+                            <td class="center"></td>
+                            <td>
+                                <ul>
+                                    <li>[20250418(수정사항).pptx] 채용공고는 정수 전용, 상수는 삭제</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="gray">
+                            <td></td>
+                            <td></td>
+                            <td>채용공고 (로그인/비로그인)</td>
+                            <td></td>
+                            <td class="center">View</td>
+                            <td class="center">
+                                <a href="/html/cs/FO-750-002.html" target="_blank">FO-750-002<br />FO-750-003 </a>
+                            </td>
+                            <td class="task yet"></td>
+                            <td class="center">2025-05-00</td>
+                            <td class="center"></td>
+                            <td>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </td>
                         </tr>
                         <!-- //고객지원 -->
                         <!-- 통합검색 -->
