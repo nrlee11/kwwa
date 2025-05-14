@@ -371,6 +371,45 @@ $(function () {
         });
     };
 
+    // 체크박스 - 전체
+    const checkboxAll = () => {
+        $(".inp_round_txt.all").on("change", function () {
+            let name = $(this).attr("name");
+            $(`.inp_round_txt[name='${name}']`).prop("checked", $(this).is(":checked"));
+        });
+        $(".inp_round_txt")
+            .not(".all")
+            .on("change", function () {
+                let name = $(this).attr("name");
+                let $group = $(`.inp_round_txt[name='${name}']`).not(".all");
+                let allChecked = $group.length === $group.filter(":checked").length;
+                $(`.inp_round_txt.all[name='${name}']`).prop("checked", allChecked);
+            });
+    };
+
+    // 복사
+    const initCopyButtons = () => {
+        $(".btn_copy").on("click", function () {
+            const $btn = $(this);
+            const controlId = $btn.attr("aria-controls");
+            const targetText = controlId ? $("#" + controlId).text() : window.location.href;
+            const message = $btn.attr("title");
+
+            const toast = $(`
+                <div class="toast_popup">
+                    <div class="inner">${message}</div>
+                </div>
+            `);
+
+            navigator.clipboard.writeText(targetText);
+
+            $(".wrap").append(toast);
+            toast.fadeToggle(1500, () => {
+                toast.remove();
+            });
+        });
+    };
+
     // 퍼블확인용
     const urlChk = function () {
         const menuMap = {
@@ -445,5 +484,7 @@ $(function () {
     urlChk();
     aviToggle();
     aviCurrent();
+    checkboxAll();
+    initCopyButtons();
     includeHtml();
 });

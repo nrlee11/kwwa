@@ -333,3 +333,29 @@
 }
 
 @include btn-bgtype;
+
+.btn_copy,
+.btn_print {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    &:after {
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin: 1rem 0.5rem;
+        background: no-repeat 0 0;
+        content: "";
+    }
+}
+.btn_copy {
+    text-align: left;
+    &:after {
+        background-image: url($url-img-icon + "ico_copy_light.svg");
+    }
+}
+.btn_print {
+    &:after {
+        background-image: url($url-img-icon + "ico_print_light.svg");
+    }
+}

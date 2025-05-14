@@ -1436,6 +1436,67 @@
                                         </div>
                                         <!--// board_search -->
 
+                                        <!-- board_search + checkbox -->
+                                        <div class="board_search flex_wrap">
+                                            <div class="form_item">
+                                                <div class="inp_select size_190">
+                                                    <select title="검색 조건 선택">
+                                                        <option value="">전체</option>
+                                                        <option value="">제목</option>
+                                                        <option value="">내용</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form_item wide">
+                                                <div class="inp">
+                                                    <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
+                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                </div>
+                                                <button type="button" class="btn_search"><span class="hidden">검색</span></button>
+                                            </div>
+                                            <div class="inp_round_box">
+                                                <!-- [D] 전체선택 사용시:
+                                                 1. 전체선택에 all 클래스 추가
+                                                 2. 동일 name 추가
+                                                 -->
+                                                <div>
+                                                    <input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked />
+                                                    <label for="roundchk1">전체목록</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" />
+                                                    <label for="roundchk2">1급</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" />
+                                                    <label for="roundchk3">2급</label>
+                                                </div>
+                                            </div>
+                                            <div class="inp_round_box">
+                                                <!-- [D] 전체선택 사용시:
+                                                 1. 전체선택에 all 클래스 추가
+                                                 2. 동일 name 추가
+                                                 -->
+                                                <div>
+                                                    <input type="checkbox" id="roundchk001" name="roundchk00" class="inp_round_txt all" checked />
+                                                    <label for="roundchk001">전체</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="roundchk002" name="roundchk00" class="inp_round_txt" />
+                                                    <label for="roundchk002">1-234567890</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="roundchk003" name="roundchk00" class="inp_round_txt" />
+                                                    <label for="roundchk003">2-123457980</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" id="roundchk004" name="roundchk00" class="inp_round_txt" />
+                                                    <label for="roundchk004">3-123457980</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// board_search + checkbox -->
+
                                         <div class="board_desc_top">
                                             <div class="lside">
                                                 <div class="board_count">전체 <span>10</span>/1,000</div>
