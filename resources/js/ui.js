@@ -320,21 +320,18 @@ $(function () {
     // Layer
     const layerFix = function () {
         // LayerFix
-        $(".layerFix").each(function () {
-            const left = ($(window).width() - $(this).width()) / 2;
-            const top = ($(window).height() - $(this).height()) / 2;
-
-            $(this).css({ left: left, top: top });
-        });
-
-        $(window).resize(function () {
-            $(".layerFix").each(function () {
-                const left = ($(window).width() - $(this).width()) / 2;
-                const top = ($(window).height() - $(this).height()) / 2;
-
-                $(this).css({ left: left, top: top });
-            });
-        });
+        // $(".layerFix").each(function () {
+        //     const left = ($(window).width() - $(this).width()) / 2;
+        //     const top = ($(window).height() - $(this).height()) / 2;
+        //     $(this).css({ left: left, top: top });
+        // });
+        // $(window).resize(function () {
+        //     $(".layerFix").each(function () {
+        //         const left = ($(window).width() - $(this).width()) / 2;
+        //         const top = ($(window).height() - $(this).height()) / 2;
+        //         $(this).css({ left: left, top: top });
+        //     });
+        // });
     };
 
     // LayerClose
