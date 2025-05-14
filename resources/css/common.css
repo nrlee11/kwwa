@@ -4653,6 +4653,9 @@ select.sm {
   flex: 1 1 auto;
   max-height: 100%;
 }
+.layerFix .layer_wrap .tab_cont {
+  position: relative;
+}
 .layerFix .layer_wrap .foot {
   width: 100%;
   padding: var(--gap-20) var(--gap-24) 0;

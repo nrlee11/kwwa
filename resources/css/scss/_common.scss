@@ -3643,6 +3643,9 @@ select {
             flex: 1 1 auto;
             max-height: 100%;
         }
+        .tab_cont {
+            position: relative;
+        }
         .foot {
             width: 100%;
             padding: var(--gap-20) var(--gap-24) 0;
