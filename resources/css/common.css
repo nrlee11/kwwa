@@ -6700,7 +6700,10 @@ select.sm {
 }
 .container_avi .rside .avi_list .tit {
   display: block;
-  font-weight: var(--font-regular);
+  background: var(--color-black);
+}
+.container_avi .rside .avi_list .tit .txt_avi {
+  color: var(--color-white);
 }
 .container_avi .rside .avi_list .sub_list li {
   border-top: 0.3rem solid #525254;
@@ -6732,6 +6735,7 @@ select.sm {
 .container_avi .rside .btn_avi {
   display: block;
   width: 100%;
+  background: #2e2e2e;
 }
 .container_avi .rside .btn_avi .txt_avi:after {
   align-self: center;
