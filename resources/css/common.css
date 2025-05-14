@@ -4649,11 +4649,14 @@ select.sm {
 .layerFix .layer_wrap .tab_area .scroll_area {
   flex: 0 0 auto;
 }
+.layerFix .layer_wrap .tab_area .tab_cont {
+  position: relative;
+}
 .layerFix .layer_wrap .tabpanel {
   flex: 1 1 auto;
   max-height: 100%;
 }
-.layerFix .layer_wrap .tab_cont {
+.layerFix .layer_wrap .box_border {
   position: relative;
 }
 .layerFix .layer_wrap .foot {

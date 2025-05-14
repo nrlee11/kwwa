@@ -3638,12 +3638,15 @@ select {
             .scroll_area {
                 flex: 0 0 auto;
             }
+            .tab_cont {
+                position: relative;
+            }
         }
         .tabpanel {
             flex: 1 1 auto;
             max-height: 100%;
         }
-        .tab_cont {
+        .box_border {
             position: relative;
         }
         .foot {
