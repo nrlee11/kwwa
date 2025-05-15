@@ -27,37 +27,47 @@
         <!--// wrap(e) -->
 
         <!-- Layer : 교육 선택 -->
-        <div class="layerFix alertPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+        <div class="layerFix minPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
             <div class="layer_wrap">
                 <div class="head">
                     <strong class="tit">자격취득 가능여부 자가진단</strong>
                 </div>
                 <div class="cont">
-                    <div class="tit_area">
-                        <em>상수도관망시설운영관리사 1급</em>
-                        <strong class="tit">교육 선택</strong>
-                    </div>
+                    <!-- 자격명 -->
+                    <em class="name_badge">상수도관망시설운영관리사 <br class="mo_only" />자격취득 가능여부 자가진단</em>
+                    <!-- // 자격명 -->
 
-                    <div class="article">
-                        <div class="question_area">
-                            <div class="question_box">
-                                <strong class="tit">Q. 수도시설의 설치나 유지관리 분야의 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 실무교육을 400시간 이상 받으셨습니까?</strong>
-                            </div>
-                            <div class="answer_box">
-                                <div class="radio_set">
-                                    <span class="inp_radio">
-                                        <input type="radio" id="label1" name="label" checked />
-                                        <label for="label1">받음</label>
-                                    </span>
-                                    <span class="inp_radio">
-                                        <input type="radio" id="label2" name="label" />
-                                        <label for="label2">안받음</label>
-                                    </span>
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">교육 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <strong class="tit">Q. 수도시설의 설치나 유지관리 분야의 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 실무교육을 400시간 이상 받으셨습니까?</strong>
                                 </div>
-                                <p class="gap_mt20">※실무교육확인서를 제출하여야 합니다.</p>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" checked />
+                                            <label for="label1">받음</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">안받음</label>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">실무교육 확인서를 제출합니다.</span></p>
                 </div>
                 <div class="foot">
                     <div class="btn_area">
