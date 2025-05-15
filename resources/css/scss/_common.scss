@@ -345,6 +345,42 @@
                 background-color: var(--color-warmblue);
             }
         }
+        &.ico_progress {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            &:before {
+                flex: 0 0 auto;
+                width: 2rem;
+                height: 2rem;
+                background: url($url-img-icon + "ico_completion_before.svg") no-repeat;
+                content: "";
+            }
+            &:after {
+                flex: 1 1 auto;
+                height: 2rem;
+                // background-image: url($url-img-icon + "ico_completion_after1.svg"), url($url-img-icon + "ico_completion_after2.svg");
+                // background-repeat: repeat-x, no-repeat;
+                // background-size: auto 100%, 44px 100%;
+                // background-position: top left, top right;
+                background-image: url($url-img-icon + "ico_completion_after2.svg"), url($url-img-icon + "ico_completion_after1.svg");
+                background-repeat: no-repeat, repeat-x;
+                background-size: 44px 100%, auto 100%;
+                background-position: top right, top left;
+                content: "";
+            }
+            &.is_progress_last {
+                &:after {
+                    display: none;
+                }
+            }
+            @include mobile {
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
     }
     .desc {
         margin-top: var(--gap-24);
@@ -3484,6 +3520,11 @@ select {
         .layer_wrap {
             height: 77.4rem;
         }
+        .cont {
+            .layer_scroll {
+                flex: 1 1 auto;
+            }
+        }
     }
     .layer_wrap {
         display: flex;
@@ -3542,6 +3583,9 @@ select {
                         color: var(--color-black);
                         font-size: var(--font-size-md);
                         font-weight: var(--font-regular);
+                    }
+                    &.ico_progress {
+                        display: flex;
                     }
                     .sm_txt {
                         font-size: 2rem;
@@ -3714,6 +3758,11 @@ select {
             @include sm-mobile {
                 table {
                     width: 51.2rem;
+                }
+            }
+            @include landscape {
+                table {
+                    width: 100%;
                 }
             }
         }

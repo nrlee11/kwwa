@@ -1392,6 +1392,35 @@ button {
   margin-top: -1rem;
   background-color: var(--color-warmblue);
 }
+.tit_area .tit.ico_progress {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.tit_area .tit.ico_progress:before {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  background: url("../../resources/images/icon/ico_completion_before.svg") no-repeat;
+  content: "";
+}
+.tit_area .tit.ico_progress:after {
+  flex: 1 1 auto;
+  height: 2rem;
+  background-image: url("../../resources/images/icon/ico_completion_after2.svg"), url("../../resources/images/icon/ico_completion_after1.svg");
+  background-repeat: no-repeat, repeat-x;
+  background-size: 44px 100%, auto 100%;
+  background-position: top right, top left;
+  content: "";
+}
+.tit_area .tit.ico_progress.is_progress_last:after {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .tit_area .tit.ico_progress:before, .tit_area .tit.ico_progress:after {
+    display: none;
+  }
+}
 .tit_area .desc {
   margin-top: var(--gap-24);
 }
@@ -4505,6 +4534,9 @@ select.sm {
 .layerFix.minPopup .layer_wrap {
   height: 77.4rem;
 }
+.layerFix.minPopup .cont .layer_scroll {
+  flex: 1 1 auto;
+}
 .layerFix .layer_wrap {
   display: flex;
   flex-direction: column;
@@ -4567,6 +4599,9 @@ select.sm {
   color: var(--color-black);
   font-size: var(--font-size-md);
   font-weight: var(--font-regular);
+}
+.layerFix .layer_wrap .cont .tit_area .tit.ico_progress {
+  display: flex;
 }
 .layerFix .layer_wrap .cont .tit_area .tit .sm_txt {
   font-size: 2rem;
@@ -4719,6 +4754,11 @@ select.sm {
 @media screen and (max-width: 767px) {
   .layerFix .layer_wrap .scroll_area table {
     width: 51.2rem;
+  }
+}
+@media screen and (orientation: landscape) {
+  .layerFix .layer_wrap .scroll_area table {
+    width: 100%;
   }
 }
 .layerFix .progress-bar {
