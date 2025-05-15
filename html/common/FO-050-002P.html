@@ -27,45 +27,55 @@
         <!--// wrap(e) -->
 
         <!-- Layer : 최종 학력 선택 -->
-        <div class="layerFix alertPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+        <div class="layerFix minPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
             <div class="layer_wrap">
                 <div class="head">
                     <strong class="tit">자격취득 가능여부 자가진단</strong>
                 </div>
                 <div class="cont">
-                    <div class="tit_area">
-                        <em>상수도관망시설운영관리사 1급</em>
-                        <strong class="tit">최종 학력 선택</strong>
-                    </div>
+                    <!-- 자격명 -->
+                    <em class="name_badge">상수도관망시설운영관리사 <br class="mo_only" />자격취득 가능여부 자가진단</em>
+                    <!-- // 자격명 -->
 
-                    <div class="article">
-                        <div class="question_area">
-                            <div class="question_box">
-                                <storng class="tit">Q. 귀하의 최종 학력은 어떻게 되십니까?</storng>
-                            </div>
-                            <div class="answer_box">
-                                <div class="radio_set">
-                                    <span class="inp_radio">
-                                        <input type="radio" id="label1" name="label" checked />
-                                        <label for="label1">고등학교 졸업</label>
-                                    </span>
-                                    <span class="inp_radio">
-                                        <input type="radio" id="label2" name="label" />
-                                        <label for="label2">2년제 대학 이공계 학과 졸업</label>
-                                    </span>
-                                    <span class="inp_radio">
-                                        <input type="radio" id="label3" name="label" />
-                                        <label for="label3">4년제 대학 이공계 학과 졸업</label>
-                                    </span>
-                                    <span class="inp_radio">
-                                        <input type="radio" id="label4" name="label" />
-                                        <label for="label4">2, 4년제 대학 비이공계(인문, 사회, 체육, 예술 등) 학과 졸업</label>
-                                    </span>
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">최종 학력 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <storng class="tit">Q. 귀하의 최종 학력은 어떻게 되십니까?</storng>
                                 </div>
-                                <p class="txt_mark gap_mt20">자격증 취득시 학력증명서를 제출합니다.</p>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" checked />
+                                            <label for="label1">고등학교 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">2년제 대학 이공계 학과 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label3" name="label" />
+                                            <label for="label3">4년제 대학 이공계 학과 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label4" name="label" />
+                                            <label for="label4">2, 4년제 대학 비이공계(인문, 사회, 체육, 예술 등) 학과 졸업</label>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">자격증 취득시 학력증명서를 제출합니다.</span></p>
                 </div>
                 <div class="foot">
                     <div class="btn_area">
