@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.layer_wrap {
+    &.type_survay {
+        background: #ecf2fe;
+        .answer_box {
+            .inp_radio,
+            .inp_check {
+                label {
+                    &:before {
+                        background-color: var(--color-white);
+                    }
+                }
+            }
+            .inp_check input[type="checkbox"]:checked + label::before {
+                background-color: var(--color-blue);
+            }
+        }
+        .foot {
+            background: #ecf2fe !important;
+        }
+    }
+}
+
+.article_servay {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 100%;
+    .box_round {
+        flex: 1 1 auto;
+    }
+}
+
+.box_round {
+    margin-top: var(--gap-20);
+    padding: var(--gap-20) var(--gap-16);
+    border-radius: 1rem;
+    background: var(--color-white);
+    box-sizing: border-box;
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+}

@@ -3556,25 +3556,6 @@ select {
         @include mobile {
             width: 100% !important;
         }
-        &.type_survay {
-            background: #ecf2fe;
-            .answer_box {
-                .inp_radio,
-                .inp_check {
-                    label {
-                        &:before {
-                            background-color: var(--color-white);
-                        }
-                    }
-                }
-                .inp_check input[type="checkbox"]:checked + label::before {
-                    background-color: var(--color-blue);
-                }
-            }
-            .foot {
-                background: #ecf2fe !important;
-            }
-        }
         .head {
             min-height: 4.8rem;
             padding: 0 5.8rem var(--gap-20) var(--gap-24);

@@ -4568,19 +4568,6 @@ select.sm {
     width: 100% !important;
   }
 }
-.layerFix .layer_wrap.type_survay {
-  background: #ecf2fe;
-}
-.layerFix .layer_wrap.type_survay .answer_box .inp_radio label:before,
-.layerFix .layer_wrap.type_survay .answer_box .inp_check label:before {
-  background-color: var(--color-white);
-}
-.layerFix .layer_wrap.type_survay .answer_box .inp_check input[type=checkbox]:checked + label::before {
-  background-color: var(--color-blue);
-}
-.layerFix .layer_wrap.type_survay .foot {
-  background: #ecf2fe !important;
-}
 .layerFix .layer_wrap .head {
   min-height: 4.8rem;
   padding: 0 5.8rem var(--gap-20) var(--gap-24);
@@ -7075,4 +7062,41 @@ select.sm {
 }
 .container_avi .rside .btn_avi[aria-current=true] .txt_avi:after {
   background-image: url("../../resources/images/icon/ico_avi_active.svg");
+}
+
+.layer_wrap.type_survay {
+  background: #ecf2fe;
+}
+.layer_wrap.type_survay .answer_box .inp_radio label:before,
+.layer_wrap.type_survay .answer_box .inp_check label:before {
+  background-color: var(--color-white);
+}
+.layer_wrap.type_survay .answer_box .inp_check input[type=checkbox]:checked + label::before {
+  background-color: var(--color-blue);
+}
+.layer_wrap.type_survay .foot {
+  background: #ecf2fe !important;
+}
+
+.article_servay {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+}
+.article_servay .box_round {
+  flex: 1 1 auto;
+}
+
+.box_round {
+  margin-top: var(--gap-20);
+  padding: var(--gap-20) var(--gap-16);
+  border-radius: 1rem;
+  background: var(--color-white);
+  box-sizing: border-box;
+}
+.box_round img {
+  display: block;
+  max-width: 100%;
+  margin: 1rem 0;
 }
