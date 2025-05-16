@@ -143,6 +143,17 @@
             #mwork .memo {
                 color: #000;
             }
+            #mwork .task.done:empty:before {
+                content: "O";
+            }
+            #mwork .task.undone:empty:before {
+                content: "X";
+            }
+            #mwork .task.yet:empty:before {
+                display: block;
+                color: currentColor;
+                content: "!";
+            }
             #mwork .done {
                 padding: 0;
                 font-weight: bold;
@@ -166,11 +177,6 @@
                 font-weight: bold;
                 text-align: center;
                 color: #00f;
-            }
-            #tableSheet .yet:before {
-                display: block;
-                color: currentColor;
-                content: "!";
             }
             #mwork .center {
                 text-align: center;
@@ -332,7 +338,7 @@
                             <td class="center">
                                 <a href="index.html" target="_blank">Index</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-31</td>
                             <td class="center">2025-04-04</td>
                             <td>
@@ -361,7 +367,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-001.html" target="_blank">FO-WP-020-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-17</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -381,7 +387,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-001P.html" target="_blank">FO-WP-020-001P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td>
@@ -400,7 +406,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-111P.html" target="_blank">FO-WP-020-111P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-17</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -419,7 +425,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-210.html" target="_blank">FO-WP-020-210</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-20</td>
                             <td class="center"></td>
                             <td>
@@ -438,7 +444,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-211P.html" target="_blank">FO-WP-020-211P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-20</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -458,7 +464,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-212.html" target="_blank">FO-WP-020-212</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-20</td>
                             <td class="center"></td>
                             <td></td>
@@ -472,7 +478,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-311.html" target="_blank">FO-WP-020-311</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-20</td>
                             <td class="center"></td>
                             <td></td>
@@ -486,7 +492,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-313.html" target="_blank">FO-WP-020-313</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-20</td>
                             <td class="center">2025-04-23</td>
                             <td>
@@ -505,7 +511,7 @@
                             <td class="center">
                                 <a href="/html/login/FO-WP-020-314.html" target="_blank">FO-WP-020-314</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-20</td>
                             <td class="center"></td>
                             <td></td>
@@ -521,7 +527,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-002.html" target="_blank">FO-WP-020-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-14</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -542,7 +548,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-003P.html" target="_blank">FO-WP-020-003P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-17</td>
                             <td class="center"></td>
                             <td>
@@ -562,7 +568,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-004P.html" target="_blank">FO-WP-020-004P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-17</td>
                             <td class="center"></td>
                             <td>
@@ -582,7 +588,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-004.html" target="_blank">FO-WP-020-004</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-14</td>
                             <td class="center">2025-04-04</td>
                             <td>
@@ -601,7 +607,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-005P.html" target="_blank">FO-WP-020-005P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-17</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -624,7 +630,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-006.html" target="_blank">FO-WP-020-006</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-14</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -646,7 +652,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-009P.html" target="_blank">FO-WP-020-009P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-14</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -665,7 +671,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-010P.html" target="_blank">FO-WP-020-010P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-14</td>
                             <td class="center">2025-04-28</td>
                             <td>
@@ -684,7 +690,7 @@
                             <td class="center">
                                 <a href="/html/join/FO-WP-020-011.html" target="_blank">FO-WP-020-011</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center"></td>
                             <td>
@@ -705,7 +711,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-110-001PG.html" target="_blank">FO-110-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -719,7 +725,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-120-001PG.html" target="_blank">FO-120-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -733,7 +739,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-130-001PG.html" target="_blank">FO-130-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -747,7 +753,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-140-001PG.html" target="_blank">FO-140-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -761,7 +767,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-111-001PG.html" target="_blank">FO-111-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -775,7 +781,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-121-001PG.html" target="_blank">FO-121-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -789,7 +795,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-131-001PG.html" target="_blank">FO-131-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -803,7 +809,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-141-001PG.html" target="_blank">FO-141-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -817,7 +823,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-112-001PG.html" target="_blank">FO-112-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -831,7 +837,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-122-001PG.html" target="_blank">FO-122-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -845,7 +851,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-132-001PG.html" target="_blank">FO-132-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -859,7 +865,7 @@
                             <td class="center">
                                 <a href="/html/info/FO-142-001PG.html" target="_blank">FO-142-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center"></td>
                             <td></td>
@@ -875,7 +881,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-210-001PG.html" target="_blank">FO-210-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-14</td>
                             <td class="center"></td>
                             <td></td>
@@ -889,7 +895,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-WL-200-010.html" target="_blank">FO-WL-200-010</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-14</td>
                             <td class="center">2025-05-07</td>
                             <td>
@@ -908,7 +914,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-212-001PG.html" target="_blank">FO-212-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-14</td>
                             <td class="center"></td>
                             <td></td>
@@ -922,7 +928,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-212-002P.html" target="_blank">FO-212-002P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-14</td>
                             <td class="center"></td>
                             <td></td>
@@ -936,7 +942,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-220-001PG.html" target="_blank">FO-220-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-14</td>
                             <td class="center"></td>
                             <td>
@@ -955,7 +961,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-222-001PG.html" target="_blank">FO-222-001PG</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-15</td>
                             <td class="center"></td>
                             <td>
@@ -974,7 +980,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-001.html" target="_blank">FO-230-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td>
@@ -991,7 +997,7 @@
                             <td>알림신청/해체</td>
                             <td class="center">Layer Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td>
@@ -1010,7 +1016,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-002.html" target="_blank">FO-230-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td>
@@ -1029,7 +1035,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-003.html" target="_blank">FO-230-003</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td>
@@ -1049,7 +1055,7 @@
                             <td class="center">
                                 <a href="#tblCommon">공통팝업</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td></td>
@@ -1063,7 +1069,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-004.html" target="_blank">FO-230-004</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td>
@@ -1082,7 +1088,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-004-1P.html" target="_blank">FO-230-004-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1094,7 +1100,7 @@
                             <td>수수료 결제 방법 선택</td>
                             <td class="center">Layer Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td></td>
@@ -1108,7 +1114,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-005.html" target="_blank">FO-230-005</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td>
@@ -1131,7 +1137,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-230-006.html" target="_blank">FO-230-006</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td>
@@ -1152,7 +1158,7 @@
                             <td>주소변경</td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td></td>
@@ -1166,7 +1172,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-240-001.html" target="_blank">FO-240-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1180,7 +1186,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-240-002P.html" target="_blank">FO-240-002P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1194,7 +1200,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-240-003P.html" target="_blank">FO-240-003P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1208,7 +1214,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-240-004P.html" target="_blank">FO-240-004P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1222,7 +1228,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-240-005P.html" target="_blank">FO-240-005P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1236,7 +1242,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-240-006P.html" target="_blank">FO-240-006P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1250,7 +1256,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-250-001.html" target="_blank">FO-250-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1269,7 +1275,7 @@
                                     <div>FO-250-005P</div>
                                 </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-13</td>
                             <td class="center"></td>
                             <td></td>
@@ -1302,7 +1308,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-250-005P-01P.html" target="_blank">FO-250-005P-01P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-13</td>
                             <td class="center"></td>
                             <td></td>
@@ -1316,7 +1322,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-250-008P.html" target="_blank">FO-250-008P </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-13</td>
                             <td class="center"></td>
                             <td></td>
@@ -1330,7 +1336,7 @@
                             <td class="center">
                                 <a href="/html/edu/FO-260-001.html" target="_blank">FO-260-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-17</td>
                             <td class="center"></td>
                             <td></td>
@@ -1346,7 +1352,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-310-001.html" target="_blank">FO-310-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1360,7 +1366,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-311-001.html" target="_blank">FO-311-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1374,7 +1380,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-312-001.html" target="_blank">FO-312-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1388,7 +1394,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-001.html" target="_blank">FO-320-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td>
@@ -1425,7 +1431,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-003.html" target="_blank">FO-320-003</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1439,7 +1445,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-003-03P.html" target="_blank">FO-320-003-03P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1453,7 +1459,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-004.html" target="_blank">FO-320-004</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1467,7 +1473,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-005.html" target="_blank">FO-320-005</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1481,7 +1487,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-007.html" target="_blank">FO-320-007</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1495,7 +1501,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-320-008.html" target="_blank">FO-320-008</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td>
@@ -1514,7 +1520,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-321-001.html" target="_blank">FO-321-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1528,7 +1534,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-321-003.html" target="_blank">FO-321-003</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1542,7 +1548,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-321-004.html" target="_blank">FO-321-004</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1556,7 +1562,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-321-005.html" target="_blank">FO-321-005</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1570,7 +1576,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-321-006.html" target="_blank">FO-321-006</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1584,7 +1590,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-321-007.html" target="_blank">FO-321-007</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-18</td>
                             <td class="center"></td>
                             <td></td>
@@ -1616,7 +1622,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-330-001.html" target="_blank">FO-330-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -1630,7 +1636,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-340-001.html" target="_blank">FO-340-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -1644,7 +1650,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-350-001.html" target="_blank">FO-350-001<br />FO-350-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -1658,7 +1664,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-350-003P.html" target="_blank">FO-350-003P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -1672,7 +1678,7 @@
                             <td class="center">
                                 <a href="/html/edutest/FO-360-001.html" target="_blank">FO-360-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -1688,7 +1694,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-010.html" target="_blank">FO-WL-400-010</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1707,7 +1713,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-011.html" target="_blank">FO-WL-400-011</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1727,7 +1733,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-011-01P.html" target="_blank">FO-WL-400-011-01P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center"></td>
                             <td></td>
@@ -1741,7 +1747,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-011-02P.html" target="_blank">FO-WL-400-011-02P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center"></td>
                             <td></td>
@@ -1755,7 +1761,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-012.html" target="_blank">FO-WL-400-012</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1774,7 +1780,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-012-1P.html" target="_blank">FO-WL-400-012-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center"></td>
                             <td></td>
@@ -1788,7 +1794,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-013.html" target="_blank">FO-WL-400-013</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-04</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1807,7 +1813,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-020.html" target="_blank">FO-WL-400-020</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1826,7 +1832,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-021.html" target="_blank">FO-WL-400-021</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1846,7 +1852,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-022.html" target="_blank">FO-WL-400-022</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1866,7 +1872,7 @@
                             <td class="center">
                                 <a href="/html/education/FO-WL-400-030.html" target="_blank">FO-WL-400-030</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-04-08</td>
                             <td>
@@ -1887,7 +1893,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-010.html" target="_blank">FO-WP-500-010</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-10</td>
                             <td class="center">2025-04-07</td>
                             <td>
@@ -1906,7 +1912,7 @@
                             <td class="center">
                                 <span>FO-WP-500-011P</span>
                             </td>
-                            <td class="task undone">X</td>
+                            <td class="task undone"></td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td>
@@ -1925,7 +1931,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-020.html" target="_blank">FO-WP-500-020</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-11</td>
                             <td class="center">2025-04-07</td>
                             <td>
@@ -1944,7 +1950,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-030.html" target="_blank">FO-WP-500-030</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-11</td>
                             <td class="center">2025-04-07</td>
                             <td>
@@ -1963,7 +1969,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-031.html" target="_blank">FO-WP-500-031</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-08</td>
                             <td class="center"></td>
                             <td></td>
@@ -1977,7 +1983,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-032.html" target="_blank">FO-WP-500-032</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -1991,7 +1997,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-032-1P.html" target="_blank">FO-WP-500-032-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -2005,7 +2011,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-033.html" target="_blank">FO-WP-500-033</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center">2025-04-17</td>
                             <td>
@@ -2024,7 +2030,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-033-1P.html" target="_blank">FO-WP-500-033-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -2036,7 +2042,7 @@
                             <td>수수료 결제 방법 선택</td>
                             <td class="center">Layer Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -2048,7 +2054,7 @@
                             <td>기본증명서 안내</td>
                             <td class="center">Layer Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -2062,7 +2068,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-034.html" target="_blank">FO-WP-500-034</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -2074,7 +2080,7 @@
                             <td>기본증명서 안내</td>
                             <td class="center">Layer Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center"></td>
                             <td></td>
@@ -2088,7 +2094,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-040.html" target="_blank">FO-WP-500-040</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td>
@@ -2105,7 +2111,7 @@
                             <td></td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2134,7 +2140,7 @@
                             <td></td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2146,7 +2152,7 @@
                             <td></td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2160,7 +2166,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-041.html" target="_blank">FO-WP-500-041</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2174,7 +2180,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-042.html" target="_blank">FO-WP-500-042</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2188,7 +2194,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-043.html" target="_blank">FO-WP-500-043</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2202,7 +2208,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-043-1P.html" target="_blank">FO-WP-500-043-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2216,7 +2222,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-050.html" target="_blank">FO-WP-500-050</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2230,7 +2236,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-060.html" target="_blank">FO-WP-500-060</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-11</td>
                             <td class="center"></td>
                             <td></td>
@@ -2244,7 +2250,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-031-2P.html" target="_blank">FO-WP-500-031-2P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-08</td>
                             <td class="center"></td>
                             <td></td>
@@ -2298,7 +2304,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-610-001.html" target="_blank">FO-610-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td>
@@ -2317,7 +2323,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-610-002.html" target="_blank">FO-610-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center">2025-04-24</td>
                             <td>
@@ -2337,7 +2343,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-610-003T.html" target="_blank">FO-610-003T</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center">2025-04-23</td>
                             <td>
@@ -2357,7 +2363,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-610-005.html" target="_blank">FO-610-005</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center">2025-04-23</td>
                             <td>
@@ -2379,7 +2385,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-610-006P.html" target="_blank">FO-610-006P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td>
@@ -2398,7 +2404,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-620-001.html" target="_blank">FO-620-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td>
@@ -2416,7 +2422,7 @@
                             <td>원본서류 우편제출 안내</td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -2447,7 +2453,7 @@
                             <td>자격증 발급 신청서</td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -2459,7 +2465,7 @@
                             <td>재발급 신청내역</td>
                             <td class="center">Full Popup</td>
                             <td class="center"><a href="#tblCommon">공통팝업</a></td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -2473,7 +2479,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-630-001.html" target="_blank">FO-630-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td>
@@ -2496,7 +2502,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-630-002.html" target="_blank">FO-630-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td>
@@ -2516,7 +2522,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-630-003.html" target="_blank">FO-630-003</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td>
@@ -2535,7 +2541,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-640-001.html" target="_blank">FO-640-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-23</td>
                             <td class="center"></td>
                             <td>
@@ -2556,7 +2562,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-650-001.html" target="_blank">FO-650-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-23</td>
                             <td class="center"></td>
                             <td></td>
@@ -2570,7 +2576,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-650-001-3P.html" target="_blank">FO-650-001-3P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-24</td>
                             <td class="center"></td>
                             <td></td>
@@ -2584,7 +2590,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-650-001-1P.html" target="_blank">FO-650-001-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-23</td>
                             <td class="center"></td>
                             <td></td>
@@ -2598,7 +2604,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-660-001.html" target="_blank">FO-660-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-24</td>
                             <td class="center"></td>
                             <td></td>
@@ -2612,7 +2618,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-660-003P.html" target="_blank">FO-660-003P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-24</td>
                             <td class="center"></td>
                             <td></td>
@@ -2626,7 +2632,7 @@
                             <td class="center">
                                 <a href="/html/my/FO-630-003-1P.html" target="_blank">FO-630-003-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center"></td>
                             <td></td>
@@ -2642,7 +2648,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-710-001.html" target="_blank">FO-710-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
@@ -2656,7 +2662,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-710-002.html" target="_blank">FO-710-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
@@ -2670,7 +2676,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-720-001.html" target="_blank">FO-720-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
@@ -2684,7 +2690,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-720-002.html" target="_blank">FO-720-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
@@ -2698,7 +2704,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-730-001.html" target="_blank">FO-730-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
@@ -2712,7 +2718,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-740-001.html" target="_blank">FO-740-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td>
@@ -2731,7 +2737,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-740-002.html" target="_blank">FO-740-002</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-25</td>
                             <td class="center"></td>
                             <td></td>
@@ -2745,7 +2751,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-750-001.html" target="_blank">FO-750-001</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-14</td>
                             <td class="center"></td>
                             <td>
@@ -2763,7 +2769,7 @@
                             <td class="center">
                                 <a href="/html/cs/FO-750-002.html" target="_blank">FO-750-002<br />FO-750-003 </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-14</td>
                             <td class="center"></td>
                             <td>
@@ -2810,7 +2816,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-WP-020-112P.html" target="_blank">FO-WP-020-112P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-19</td>
                             <td class="center"></td>
                             <td>
@@ -2829,7 +2835,7 @@
                             <td class="center">
                                 <a href="/html/common/alert_sample.html" target="_blank">Alert 템플릿</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-15</td>
                             <td class="center">2025-04-18</td>
                             <td>
@@ -2848,7 +2854,7 @@
                             <td class="center">
                                 <a href="/html/common/layer_template.html" target="_blank">팝업 템플릿</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-14</td>
                             <td class="center"></td>
                             <td></td>
@@ -2862,7 +2868,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-031-1P.html" target="_blank">FO-WP-500-031-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-08</td>
                             <td class="center"></td>
                             <td></td>
@@ -2876,7 +2882,7 @@
                             <td class="center">
                                 <a href="/html/common/BO-000-005P.html" target="_blank">BO-000-005P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-21</td>
                             <td class="center">2025-04-22</td>
                             <td>
@@ -2900,7 +2906,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-040-1P.html" target="_blank">FO-WP-500-040-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2933,7 +2939,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-040-2P.html" target="_blank">FO-WP-500-040-2P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2947,7 +2953,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-040-3P.html" target="_blank">FO-WP-500-040-3P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-10</td>
                             <td class="center"></td>
                             <td></td>
@@ -2961,7 +2967,7 @@
                             <td class="center">
                                 <a href="/html/license/FO-WP-500-040-P.html" target="_blank">FO-WP-500-040-P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-12</td>
                             <td class="center"></td>
                             <td>
@@ -2980,7 +2986,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-230-007P.html" target="_blank">FO-230-007P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-16</td>
                             <td class="center"></td>
                             <td></td>
@@ -2994,7 +3000,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-WP-500-033-2P.html" target="_blank">FO-WP-500-033-2P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-09</td>
                             <td class="center">2025-04-17</td>
                             <td>
@@ -3017,7 +3023,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-007P.html" target="_blank">FO-050-007P<br />(FO-050-008P)</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3038,7 +3044,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-008P.html" target="_blank">FO-050-008P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3058,7 +3064,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-009P.html" target="_blank">FO-050-009P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3077,7 +3083,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-010P.html" target="_blank">FO-050-010P<br />(FO-050-011P)</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3097,7 +3103,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-011P.html" target="_blank">FO-050-011P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-07</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3117,7 +3123,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-001P.html" target="_blank">FO-050-001P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3136,7 +3142,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-002P.html" target="_blank">FO-050-002P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center">2025-05-15</td>
                             <td></td>
@@ -3150,7 +3156,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-003P.html" target="_blank">FO-050-003P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center">2025-05-15</td>
                             <td></td>
@@ -3164,7 +3170,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-004P.html" target="_blank">FO-050-004P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center">2025-05-15</td>
                             <td></td>
@@ -3178,7 +3184,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-005P.html" target="_blank">FO-050-005P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3197,7 +3203,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-050-006P.html" target="_blank">FO-050-006P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-04-28</td>
                             <td class="center">2025-05-15</td>
                             <td>
@@ -3216,7 +3222,7 @@
                             <td class="center">
                                 <a href="./html/common/FO-230-001-1P.html" target="_blank">FO-230-001-1P</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center"></td>
                             <td class="center">2025-05-12</td>
                             <td>
@@ -3235,7 +3241,7 @@
                             <td class="center">
                                 <span>FO-WP-400-031-1P</span>
                             </td>
-                            <td class="task undone">X</td>
+                            <td class="task undone"></td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td></td>
@@ -3249,7 +3255,7 @@
                             <td class="center">
                                 <span>FO-WP-400-031-2P</span>
                             </td>
-                            <td class="task undone">X</td>
+                            <td class="task undone"></td>
                             <td class="center"></td>
                             <td class="center"></td>
                             <td></td>
@@ -3263,7 +3269,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-610-004-01P.html" target="_blank">FO-610-004-01P </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-15</td>
                             <td class="center"></td>
                             <td>
@@ -3282,7 +3288,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-610-004-02P.html" target="_blank">FO-610-004-02P </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-16</td>
                             <td class="center"></td>
                             <td></td>
@@ -3296,7 +3302,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-610-004-03P.html" target="_blank">FO-610-004-03P </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-15</td>
                             <td class="center"></td>
                             <td></td>
@@ -3310,7 +3316,7 @@
                             <td class="center">
                                 <a href="/html/common/BO-610-004-01P.html" target="_blank" onclick="window.open(this.href, 'popup', 'width=560,height=774'); return false;">BO-610-004-01P </a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-16</td>
                             <td class="center"></td>
                             <td>
@@ -3329,7 +3335,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-WP-020-116.html" target="_blank">FO-WP-020-116</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-19</td>
                             <td class="center"></td>
                             <td>
@@ -3348,7 +3354,7 @@
                             <td class="center">
                                 <a href="/html/common/FO-WP-020-117.html" target="_blank">FO-WP-020-117</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-03-19</td>
                             <td class="center"></td>
                             <td>
@@ -3386,7 +3392,7 @@
                             <td class="center">
                                 <a href="/html/mail/FO-020-012.html" target="_blank">FO-020-012</a>
                             </td>
-                            <td class="task done">O</td>
+                            <td class="task done"></td>
                             <td class="center">2025-05-09</td>
                             <td class="center"></td>
                             <td></td>
