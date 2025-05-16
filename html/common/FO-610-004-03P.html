@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div class="layerDim" style="display: none"></div>
+
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="popup1Btn">만족도 조사(종료)</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- 팝업 -->
+        <div class="layerFix minPopup fullPopup" id="popup1" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap type_survay">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- 자격명 -->
+                    <h1 class="name_badge">상수도관망시설운영관리사 <br class="mo_only" />양성과정 만족도 조사</h1>
+                    <!-- // 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <div class="article_servay">
+                            <!-- [include] 설문기간 -->
+                            <div data-include-file="./survay/date.html" class="includeJs"></div>
+                            <!-- //[include] 설문기간 -->
+
+                            <!-- [include] 설문지안내문구 영역 -->
+                            <div data-include-file="./survay/step3.html" class="includeJs" style="flex: 1 1 auto; display: flex"></div>
+                            <!--// [include] 설문지안내문구 영역 -->
+
+                            <!-- foot -->
+                            <div class="foot">
+                                <div class="btn_area">
+                                    <div class="lside">
+                                        <button type="button" class="btn_outline_md">뒤로</button>
+                                    </div>
+                                    <div class="rside">
+                                        <button type="button" class="btn_primary_md">제출</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // foot -->
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!--// 팝업 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer
+                $("#popup1Btn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $(".layerDim").show();
+                    $("#popup1").show().focus();
+                });
+                $("#popup1 .layer_close").click(function (e) {
+                    $("#popup1Btn").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

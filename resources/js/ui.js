@@ -407,6 +407,48 @@ $(function () {
         });
     };
 
+    // 체크박스 & 라디오의 텍스트 박스 입력 필수
+    const choiceTextRequired = () => {
+        const choiceAllBox = $(".choice_text_box input");
+        const choiceBox = $(".choice_text_box input[aria-controls='inputField']");
+
+        choiceAllBox.on("click", function () {
+            let thisName = $(this).attr("name");
+
+            if (thisName) {
+                $('input[name="' + thisName + '"]').on("change", function () {
+                    if (choiceBox.prop("checked")) {
+                        $(this).parent().siblings(".inp_choice_txt").attr("required", true);
+                        $(this).parent().siblings(".inp_choice_txt").prop({ disabled: false });
+                    } else {
+                        choiceBox.parent().siblings(".inp_choice_txt").val("");
+                        choiceBox.parent().siblings(".inp_choice_txt").prop({ required: false, disabled: true });
+                    }
+                });
+            } else {
+                choiceBox.on("change", function () {
+                    if ($(this).prop("checked")) {
+                        $(this).parent().siblings(".inp_choice_txt").attr("required", true);
+                        $(this).parent().siblings(".inp_choice_txt").prop({ disabled: false });
+                    } else {
+                        $(this).parent().siblings(".inp_choice_txt").val("");
+                        $(this).parent().siblings(".inp_choice_txt").prop({ required: false, disabled: true });
+                    }
+                });
+            }
+        });
+    };
+
+    // textarea
+    const textareaRow = () => {
+        const textarea = $("textarea.inp_choice_txt");
+
+        textarea.on("input", function () {
+            this.style.height = "auto";
+            this.style.height = this.scrollHeight + "px";
+        });
+    };
+
     // 퍼블확인용
     const urlChk = function () {
         const menuMap = {
@@ -455,6 +497,8 @@ $(function () {
                         layerFix();
                         layerClose();
                         urlChk();
+                        choiceTextRequired();
+                        textareaRow();
                         commonTab();
                     }
                 };
@@ -483,5 +527,7 @@ $(function () {
     aviCurrent();
     checkboxAll();
     initCopyButtons();
+    choiceTextRequired();
+    textareaRow();
     includeHtml();
 });
