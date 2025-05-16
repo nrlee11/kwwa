@@ -486,8 +486,19 @@ $(function () {
                 let xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState === XMLHttpRequest.DONE) {
-                        this.status === 200 ? (el.innerHTML = this.responseText) : null;
-                        this.status === 404 ? (el.innerHTML = "include not found.") : null;
+                        if (this.status === 200) {
+                            // 임시 요소에 로드된 HTML을 넣기
+                            const tempDiv = document.createElement("div");
+                            tempDiv.innerHTML = this.responseText;
+
+                            // 원래 요소를 불러온 내용으로 교체
+                            while (tempDiv.firstChild) {
+                                el.parentNode.insertBefore(tempDiv.firstChild, el);
+                            }
+                            el.remove(); // 원래 include div 제거
+                        } else if (this.status === 404) {
+                            el.innerHTML = "include not found.";
+                        }
                         allNaveToggle();
                         sideNave();
                         // SideNaveClose();
