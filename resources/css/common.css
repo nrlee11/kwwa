@@ -707,7 +707,7 @@ button {
   z-index: 99;
   width: 100%;
   height: auto;
-  min-height: 61rem;
+  min-height: 42.5rem;
   background-color: var(--color-white);
   box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
 }
@@ -747,9 +747,9 @@ button {
   top: 7rem;
   left: 0;
   z-index: 100;
-  min-height: 55.3rem;
-  margin: 1.7rem 0 var(--gap-20);
-  padding: var(--gap-20) var(--gap-10) var(--gap-30);
+  min-height: 40.5rem;
+  margin: var(--gap-10) 0;
+  padding: var(--gap-28) var(--gap-10);
   border-left: 0.1rem solid #c8c8c8;
 }
 .gnb .depth1 > li:first-child .sub {
@@ -776,6 +776,7 @@ button {
 }
 .gnb .depth3 {
   margin-top: var(--gap-5);
+  font-size: var(--font-size-sm);
 }
 .gnb .depth3 > li {
   position: relative;
