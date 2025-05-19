@@ -398,11 +398,11 @@ $(function () {
                 </div>
             `);
 
-            navigator.clipboard.writeText(targetText);
-
-            $(".wrap").append(toast);
-            toast.fadeToggle(1500, () => {
-                toast.remove();
+            navigator.clipboard.writeText(targetText).then(function () {
+                $(".wrap").append(toast);
+                toast.fadeToggle(1500, () => {
+                    toast.remove();
+                });
             });
         });
     };
