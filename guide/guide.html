@@ -26,7 +26,7 @@
                 </div>
                 <div class="guide_cont">
                     <!-- 폴더구조 -->
-                    <div class="section" id="title">
+                    <div class="section" id="assetFolder">
                         <h2 class="h2">- Assets (폴더구조)</h2>
                         <div class="article html_code on">
                             <div class="btn">
@@ -84,7 +84,7 @@
                     <!--// 폴더구조 -->
 
                     <!-- ========== 타이틀 ========== -->
-                    <div class="section" id="title">
+                    <div class="section" id="titleHead">
                         <h2 class="h2">- Title</h2>
 
                         <div class="article html_code on">
@@ -1475,8 +1475,9 @@
                                     </ul>
                                 </div>
                                 <!--// pagination -->
+                            </div>
 
-                                        <div class="btn">
+                            <div class="btn">
                                 <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
                             </div>
                             <div class="boxing" style="display: none">
@@ -1520,18 +1521,18 @@
                 </div>
             </div>
         </div>
+        <script src="/resources/js/ui.js"></script>
+        <script src="/resources/js/jquery-ui.js"></script>
+        <script>
+            $(".html_code .btn_code_toggle").click(function () {
+                if ($(this).parent().parent().hasClass("on")) {
+                    $(this).find("span").text("닫기");
+                    $(this).parent().parent().removeClass("on").children(".boxing").slideDown();
+                } else {
+                    $(this).find("span").text("열기");
+                    $(this).parent().parent().addClass("on").children(".boxing").slideUp();
+                }
+            });
+        </script>
     </body>
-    <script src="/resources/js/ui.js"></script>
-    <script src="/resources/js/jquery-ui.js"></script>
-    <script>
-        $(".html_code .btn_code_toggle").click(function () {
-            if ($(this).parent().parent().hasClass("on")) {
-                $(this).find("span").text("닫기");
-                $(this).parent().parent().removeClass("on").children(".boxing").slideDown();
-            } else {
-                $(this).find("span").text("열기");
-                $(this).parent().parent().addClass("on").children(".boxing").slideUp();
-            }
-        });
-    </script>
 </html>

@@ -47,7 +47,7 @@ pre code.hljs {
     border: 0.1rem solid #cdd1d5;
     border-radius: 0.8rem;
 }
-.section .box[content-title] {
+.section .box[data-content-title] {
     margin-top: 2rem;
 }
 .section > .inner > .box:after {
@@ -59,7 +59,7 @@ pre code.hljs {
     font-size: 1.5rem;
     font-weight: 700;
     transform: translateY(-50%);
-    content: attr(content-title);
+    content: attr(data-content-title);
 }
 .section > .inner > .box + .box {
     margin-top: 3rem;
