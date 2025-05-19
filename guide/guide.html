@@ -25,84 +25,112 @@
                     </ul>
                 </div>
                 <div class="guide_cont">
-                    <!-- CSS -->
+                    <!-- 폴더구조 -->
                     <div class="section" id="title">
-                        <h2 class="h2">Assets</h2>
-                        <div class="article">
-                            <pre><code class="html">// SCSS
-/resources/css/scss/_variables.scss
-/resources/css/scss/_reset.scss
-/resources/css/scss/_mixin.scss
-/resources/css/scss/_layout.scss
-/resources/css/scss/_common.scss
-/resources/css/scss/_btn.scss
-/resources/css/scss/_main.scss
-/resources/css/scss/_contents.scss
+                        <h2 class="h2">Assets (폴더구조)</h2>
+                        <div class="article html_code on">
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">목록<span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
+                                <dl class="box_border">
+                                    <div>
+                                        <dt><strong>SCSS</strong></dt>
+                                        <dd>
+                                            /resources/css/scss/_variables.scss<br />
+                                            /resources/css/scss/_reset.scss<br />
+                                            /resources/css/scss/_mixin.scss<br />
+                                            /resources/css/scss/_layout.scss<br />
+                                            /resources/css/scss/_common.scss<br />
+                                            /resources/css/scss/_btn.scss<br />
+                                            /resources/css/scss/_main.scss<br />
+                                            /resources/css/scss/_contents.scss<br />
+                                        </dd>
+                                    </div>
 
-// CSS
-/resources/css/common.css (scss 컴파일)
-/resources/css/jquery-ui.css (datepicker)
-/resources/css/swiper-bundle.min.css (swiper)
+                                    <div class="gap_mt24">
+                                        <dt><strong>CSS</strong></dt>
+                                        <dd>
+                                            /resources/css/common.css (scss 컴파일)<br />
+                                            /resources/css/jquery-ui.css (datepicker)<br />
+                                            /resources/css/swiper-bundle.min.css (swiper)<br />
+                                        </dd>
+                                    </div>
 
-// JS
-/resources/js/ui.js
-/resources/js/jquery-2.2.4.min.js
-/resources/js/jquery-ui.js (datepicker)
-/resources/js/swiper-bundle.min.js (swiper)
+                                    <div class="gap_mt24">
+                                        <dt><strong>JS</strong></dt>
+                                        <dd>
+                                            /resources/js/ui.js<br />
+                                            /resources/js/jquery-2.2.4.min.js<br />
+                                            /resources/js/jquery-ui.js (datepicker)<br />
+                                            /resources/js/swiper-bundle.min.js (swiper)<br />
+                                        </dd>
+                                    </div>
 
-// IMAGES
-/resources/images/common/...
-/resources/images/icon/...
-/resources/images/temp/...
-/resources/images/calendar/...
-/resources/images/favicon/...
-                            </code></pre>
+                                    <div class="gap_mt24">
+                                        <dt><strong>IMAGES</strong></dt>
+                                        <dd>
+                                            /resources/images/common/...<br />
+                                            /resources/images/icon/...<br />
+                                            /resources/images/temp/...<br />
+                                            /resources/images/calendar/...<br />
+                                            /resources/images/favicon/...<br />
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                    <!--// CSS -->
+                    <!--// 폴더구조 -->
 
-                    <!-- 타이틀 -->
+                    <!-- ========== 타이틀 ========== -->
                     <div class="section" id="title">
-                        <h2 class="h2">Title</h2>
-                        <!-- article -->
-                        <div class="article">
-                            <div class="code_html">
-                                <!-- page_title -->
-                                <div class="page_title">
-                                    <h2 class="tit">페이지 타이틀</h2>
-                                </div>
-                                <!--// page_title -->
-                                <div class="code_wrap">
-                                    <pre><code class="html">&#x3C;!-- page_title --&#x3E;
+                        <h2 class="h2 gap_mt20">Title</h2>
+
+                        <div class="article html_code on">
+                            <!-- page_title -->
+                            <div class="page_title">
+                                <h2 class="tit">페이지 타이틀</h2>
+                            </div>
+                            <!--// page_title -->
+
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
+                                <pre><code class="html">&#x3C;!-- page_title --&#x3E;
 &#x3C;div class=&#x22;page_title&#x22;&#x3E;
     &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD398;&#xC774;&#xC9C0; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h2&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// page_title --&#x3E;</code></pre>
-                                </div>
                             </div>
+                        </div>
 
-                            <div class="code_html">
-                                <!-- page_title -->
-                                <div class="page_title center">
-                                    <h2 class="tit">페이지 타이틀</h2>
-                                </div>
-                                <!--// page_title -->
-                                <div class="code_wrap">
-                                    <pre><code class="html">// 사이드 메뉴(LNB)가 없는 경우 사용 (예: 회원가입,로그인 등...)
+                        <div class="article html_code on">
+                            <!-- page_title -->
+                            <div class="page_title center">
+                                <h2 class="tit">페이지 타이틀 (중앙정렬)</h2>
+                            </div>
+                            <!--// page_title -->
+
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
+                                <pre><code class="html">// 사이드 메뉴(LNB)가 없는 경우 사용 (예: 회원가입,로그인 등...)
 &#x3C;!-- page_title --&#x3E;
 &#x3C;div class=&#x22;page_title center&#x22;&#x3E;&#x3C;!-- class : center --&#x3E;
     &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD398;&#xC774;&#xC9C0; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h2&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// page_title --&#x3E;</code></pre>
-                                </div>
                             </div>
                         </div>
 
-                        <div class="code_html">
-                            <!-- page_title -->
+                        <div class="article html_code on">
+                            <!-- page title -->
                             <div class="page_title flex">
                                 <div class="lside">
-                                    <h2 class="tit">페이지 타이틀</h2>
+                                    <h2 class="tit">페이지 타이틀 (분할)</h2>
                                 </div>
                                 <div class="rside">
                                     <button type="button" title="복사" class="btn_copy">
@@ -112,56 +140,139 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                        <!--// article -->
+                            <!-- // page title -->
 
-                        <!-- article -->
-                        <div class="article">
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
+                                <pre><code class="html">// .flex클래스 추가 + .lside, .rside사용
+&lt;div class="page_title flex"&gt;
+    &lt;div class="lside"&gt;
+        &lt;h2 class="tit"&gt;페이지 타이틀 (분할)&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class="rside"&gt;
+        &lt;button type="button" title="복사" class="btn_copy"&gt;
+            &lt;span class="hidden"&gt;복사&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button type="button" title="인쇄" class="btn_print"&gt;
+            &lt;span class="hidden"&gt;인쇄&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// ========== 타이틀 ========== -->
+
+                    <!-- ========== 서브타이틀 ========== -->
+                    <div class="section" id="subtitle">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <!-- tit_area -->
                                 <div class="tit_area">
                                     <h3 class="tit">서브 타이틀(기본)</h3>
-                                    <div class="desc">설명글</div>
+                                    <div class="desc">설명글(기본)</div>
                                 </div>
                                 <!--// tit_area -->
                             </div>
 
-                            <div class="code_html gap_mt24">
-                                <!-- tit_area -->
-                                <div class="tit_area center">
-                                    <h3 class="tit">서브 타이틀(중앙정렬)</h3>
-                                    <div class="desc">설명글</div>
-                                </div>
-                                <!--// tit_area -->
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
+                                <pre><code class="html">// 기본
+&lt;div class="tit_area"&gt;
+    &lt;h3 class="tit"&gt;서브 타이틀(기본)&lt;/h3&gt;
+    &lt;div class="desc"&gt;설명글(기본)&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
                             </div>
 
-                            <div class="code_htm gap_mt24">
-                                <!-- tit_area -->
-                                <div class="tit_area">
-                                    <h3 class="tit ico">서브 타이틀</h3>
-                                    <div class="desc">설명글</div>
+                            <div class="article html_code on">
+                                <div class="code_html">
+                                    <!-- tit_area -->
+                                    <div class="tit_area center">
+                                        <h3 class="tit">서브 타이틀(중앙정렬)</h3>
+                                        <div class="desc">설명글</div>
+                                    </div>
+                                    <!--// tit_area -->
                                 </div>
-                                <!--// tit_area -->
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <pre><code class="html"> // 중앙정렬
+&lt;div class="tit_area center"&gt;
+    &lt;h3 class="tit"&gt;서브 타이틀(중앙정렬)&lt;/h3&gt;
+    &lt;div class="desc"&gt;설명글&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                                </div>
                             </div>
 
-                            <div class="code_html gap_mt24">
-                                <!-- tit_area -->
-                                <div class="tit_area">
-                                    <h3 class="tit ico_progress">서브 타이틀(화살표)</h3>
-                                    <h3 class="tit ico_progress is_progress_last">서브 타이틀(화살표)</h3>
-                                    <div class="desc">설명글</div>
+                            <div class="article html_code on">
+                                <div class="code_html">
+                                    <!-- tit_area -->
+                                    <div class="tit_area">
+                                        <h3 class="tit ico">서브 타이틀 (왼쪽 보더)</h3>
+                                        <div class="desc">설명글</div>
+                                    </div>
+                                    <!--// tit_area -->
                                 </div>
-                                <!--// tit_area -->
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <pre><code class="html"> // 왼쪽 바
+&lt;div class="tit_area"&gt;
+    &lt;h3 class="tit ico"&gt;서브 타이틀 (왼쪽 보더)&lt;/h3&gt;
+    &lt;div class="desc"&gt;설명글&lt;/div&gt;
+&lt;/div&gt;
+                                </code></pre>
+                                </div>
+                            </div>
+
+                            <div class="article html_code on">
+                                <div class="code_html">
+                                    <!-- tit_area -->
+                                    <div class="tit_area">
+                                        <h3 class="tit ico_progress">서브 타이틀(화살표)</h3>
+                                        <h3 class="tit ico_progress is_progress_last">서브 타이틀(화살표&마지막)</h3>
+                                        <div class="desc">설명글</div>
+                                    </div>
+                                    <!--// tit_area -->
+                                </div>
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <pre><code class="html"> // 화살표
+&lt;div class="tit_area"&gt;
+    &lt;h3 class="tit ico_progress"&gt;서브 타이틀(화살표)&lt;/h3&gt;
+&lt;/div&gt;
+                                </code></pre>
+                                    <pre><code class="html"> // 화살표 마지막
+&lt;h3 class="tit ico_progress is_progress_last"&gt;서브 타이틀(화살표&amp;마지막)&lt;/h3&gt;
+                                </code></pre>
+                                    <pre><code class="html"> // 설명글
+&lt;div class="desc"&gt;설명글&lt;/div&gt;
+                                </code></pre>
+                                </div>
                             </div>
                         </div>
-                        <!--// article -->
                     </div>
-                    <!--// 타이틀 -->
+                    <!-- // ========== 서브타이틀 ========== -->
 
                     <!-- 아이콘 -->
                     <div class="section" id="icon">
                         <h2 class="h2">아이콘</h2>
-                        <div class="article">
+                        <p>기본 margin-right: 7px; (첨부파일과 같이 (단독 사용 시) hidden요소가 들어갈 경우 margin-right: 0;)</p>
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <span class="ico_mark"></span>
                                 <span class="ico_marknavy"></span>
@@ -174,8 +285,14 @@
                                 <span class="ico_copy"></span>
                                 <span class="ico_file"></span>
                                 <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                <span class="ico_cal"></span>
+                                <span class="ico_time"></span>
                             </div>
-                            <div class="code_wrap gap_mt24">
+
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
                                 <pre><code class="html">// 기본 margin-right: 7px; (첨부파일과 같이 (단독 사용 시) hidden요소가 들어갈 경우 margin-right: 0;)
 &#x3C;span class=&#x22;ico_mark&#x22;&#x3E;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;ico_marknavy&#x22;&#x3E;&#x3C;/span&#x3E;
@@ -187,11 +304,10 @@
 &#x3C;span class=&#x22;ico_print&#x22;&#x3E;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;ico_copy&#x22;&#x3E;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;ico_file&#x22;&#x3E;&#x3C;/span&#x3E;
-&#x3C;span class=&#x22;ico_file&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xCCA8;&#xBD80;&#xD30C;&#xC77C;&#x3C;/span&#x3E;&#x3C;/span&#x3E;</code></pre>
+&#x3C;span class=&#x22;ico_file&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xCCA8;&#xBD80;&#xD30C;&#xC77C;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_cal&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_time&#x22;&#x3E;&#x3C;/span&#x3E;</code></pre>
                             </div>
-
-                            <span class="ico_cal"></span>
-                            <span class="ico_time"></span>
                         </div>
                     </div>
                     <!--// 아이콘 -->
@@ -199,7 +315,7 @@
                     <!-- 이미지 -->
                     <div class="section" id="images">
                         <h2 class="h2">이미지</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <img src="/resources/images/icon/ico_home.svg" alt="" />
                             <img src="/resources/images/icon/ico_user.svg" alt="" />
                             <img src="/resources/images/icon/ico_join.svg" alt="" />
@@ -275,7 +391,7 @@
                     <!-- 버튼 -->
                     <div class="section" id="btn">
                         <h2 class="h2">Button</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <button type="button" class="btn_primary_sm">primary</button>
                                 <button type="button" class="btn_secondary_sm">secondary</button>
@@ -333,8 +449,13 @@
                                 <button type="button" class="btn_pop">팝업</button>
                                 <a href="javascript:;" class="btn_link">아이콘링크</a>
                                 <a href="javascript:;" class="btn_txtlink">텍스트링크</a>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">// 기본 min-width 90px
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">// 기본 min-width 90px
 
 // height 30px
 &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_sm&#x22;&#x3E;primary&#x3C;/button&#x3E;
@@ -381,11 +502,12 @@
 &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_pop&#x22;&#x3E;&#xD31D;&#xC5C5;&#x3C;/button&#x3E;
 &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_link&#x22;&#x3E;&#xC544;&#xC774;&#xCF58;&#xB9C1;&#xD06C;&#x3C;/a&#x3E;
 &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_txtlink&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#xB9C1;&#xD06C;&#x3C;/a&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="article">
+                        <div class="article html_code on">
                             <h3 class="h3">- 페이지 중간</h3>
                             <div class="code_html">
                                 <!-- page_btn_area -->
@@ -414,8 +536,13 @@
                                     </div>
                                 </div>
                                 <!--// page_btn_area -->
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
+
+                                <div class="btn gap_mt20">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
 &#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
     &#x3C;div class=&#x22;lside&#x22;&#x3E;
         &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
@@ -441,6 +568,7 @@
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// page_btn_area --&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
 
@@ -496,9 +624,12 @@
                                     </div>
                                 </div>
                                 <!--// page_btn_area -->
-
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
+                                <div class="btn gap_mt20">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
 &#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
     &#x3C;div class=&#x22;lside&#x22;&#x3E;
         &#x3C;div class=&#x22;box&#x22;&#x3E;
@@ -549,6 +680,7 @@
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// page_btn_area --&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
 
@@ -564,8 +696,12 @@
                                 </div>
                                 <!--// page_btn_area -->
 
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
 &#x3C;div class=&#x22;page_btn_area center&#x22;&#x3E;
     &#x3C;div class=&#x22;lside&#x22;&#x3E;
         &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#x3C;/button&#x3E;
@@ -575,11 +711,12 @@
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// page_btn_area --&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="article">
+                        <div class="article html_code on">
                             <h3 class="h3">- 페이지 하단</h3>
                             <div class="code_html">
                                 <!-- bottom_btn_area -->
@@ -629,8 +766,13 @@
                                     </div>
                                 </div>
                                 <!--// bottom_btn_area -->
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- bottom_btn_area --&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;!-- bottom_btn_area --&#x3E;
 &#x3C;div class=&#x22;bottom_btn_area&#x22;&#x3E;
     &#x3C;div class=&#x22;lside&#x22;&#x3E;
         &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC774;&#xC804;&#xC73C;&#xB85C;&#x3C;/button&#x3E;
@@ -677,6 +819,7 @@
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// bottom_btn_area --&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -686,7 +829,7 @@
                     <!-- List -->
                     <div class="section" id="list">
                         <h2 class="h2">List</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <ul class="list_dot">
                                     <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
@@ -694,18 +837,24 @@
                                     <li>경력증명서 1부</li>
                                     <li>학력증명서 1부</li>
                                 </ul>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;ul class=&#x22;list_dot&#x22;&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;ul class=&#x22;list_dot&#x22;&#x3E;
     &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <ul class="list_dash">
                                     <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
@@ -713,18 +862,24 @@
                                     <li>경력증명서 1부</li>
                                     <li>학력증명서 1부</li>
                                 </ul>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;ul class=&#x22;list_dash&#x22;&#x3E;
-        &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
-        &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
-        &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
-        &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
-    &#x3C;/ul&#x3E;</code></pre>
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;ul class=&#x22;list_dash&#x22;&#x3E;
+    &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <ul class="list_mark">
                                     <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
@@ -732,18 +887,24 @@
                                     <li>경력증명서 1부</li>
                                     <li>학력증명서 1부</li>
                                 </ul>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;ul class=&#x22;list_mark&#x22;&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;ul class=&#x22;list_mark&#x22;&#x3E;
     &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <ul class="list_square">
                                     <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
@@ -751,18 +912,24 @@
                                     <li>경력증명서 1부</li>
                                     <li>학력증명서 1부</li>
                                 </ul>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;ul class=&#x22;list_square&#x22;&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;ul class=&#x22;list_square&#x22;&#x3E;
     &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <ul class="list_item">
                                     <li><span>1.</span>상수도관로 송배급수시설 운영관리 상수도관로 송배급수시설 운영관리 상수도관로 송배급수시설 운영관리</li>
@@ -773,8 +940,12 @@
                                     <li><span>가.</span>상수도관로 시설 진단 및 조사 상수도관로 시설 진단 및 조사 상수도관로 시설 진단 및 조사</li>
                                     <li><span>나.</span>상수도관로 블록시스템 구축</li>
                                 </ul>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;ul class=&#x22;list_item&#x22;&#x3E;
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap gap_mt24">
+                                        <pre><code class="html">&#x3C;ul class=&#x22;list_item&#x22;&#x3E;
     &#x3C;li&#x3E;&#x3C;span&#x3E;1.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC1A1;&#xBC30;&#xAE09;&#xC218;&#xC2DC;&#xC124; &#xC6B4;&#xC601;&#xAD00;&#xB9AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC1A1;&#xBC30;&#xAE09;&#xC218;&#xC2DC;&#xC124; &#xC6B4;&#xC601;&#xAD00;&#xB9AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC1A1;&#xBC30;&#xAE09;&#xC218;&#xC2DC;&#xC124; &#xC6B4;&#xC601;&#xAD00;&#xB9AC;&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#x3C;span&#x3E;2.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC6B4;&#xC601;&#xB7;&#xAD00;&#xB9AC; &#xACC4;&#xD68D;&#xC218;&#xB9BD;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;
@@ -783,6 +954,7 @@
     &#x3C;li&#x3E;&#x3C;span&#x3E;&#xAC00;.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC2DC;&#xC124; &#xC9C4;&#xB2E8; &#xBC0F; &#xC870;&#xC0AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC2DC;&#xC124; &#xC9C4;&#xB2E8; &#xBC0F; &#xC870;&#xC0AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC2DC;&#xC124; &#xC9C4;&#xB2E8; &#xBC0F; &#xC870;&#xC0AC;&#x3C;/li&#x3E;
     &#x3C;li&#x3E;&#x3C;span&#x3E;&#xB098;.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xBE14;&#xB85D;&#xC2DC;&#xC2A4;&#xD15C; &#xAD6C;&#xCD95;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -792,7 +964,7 @@
                     <!-- text -->
                     <div class="section" id="text">
                         <h2 class="h2">Text</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <span class="txt_blue">텍스트</span><br />
                                 <span class="txt_red">텍스트</span><br />
@@ -802,26 +974,38 @@
                                 <span class="txt_gray">텍스트</span><br />
                                 <span class="txt_gray2">텍스트</span><br />
                                 <span class="txt_underline">텍스트</span>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;span class=&#x22;txt_blue&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
+
+                                <div class="btn gap_mt24">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;span class=&#x22;txt_blue&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;txt_red&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;txt_green&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;txt_navy&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;txt_navy1&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
 &#x3C;span class=&#x22;txt_underline&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <p class="txt_note">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
                                 <p class="txt_note txt_red">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
                                 <p class="txt_dot">근거법령: 수도법 제24조 수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조</p>
                                 <p class="txt_mark">실무교육: 수도시설의 설치나 유지, 관리 분야의 실제 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 교육</p>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;p class=&#x22;txt_note&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;p class=&#x22;txt_note&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt_note txt_red&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;txt_dot&#x22;&#x3E;&#xADFC;&#xAC70;&#xBC95;&#xB839;: &#xC218;&#xB3C4;&#xBC95;&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;txt_mark&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721;: &#xC218;&#xB3C4;&#xC2DC;&#xC124;&#xC758; &#xC124;&#xCE58;&#xB098; &#xC720;&#xC9C0;, &#xAD00;&#xB9AC; &#xBD84;&#xC57C;&#xC758; &#xC2E4;&#xC81C; &#xC2DC;&#xC124; &#xB610;&#xB294; &#xAD00;&#xB828; &#xC5C5;&#xBB34;&#xC5D0; &#xC885;&#xC0AC;&#xD558;&#xB294; &#xAE30;&#xAD00;, &#xAE30;&#xC5C5;&#xCCB4;&#xC758; &#xADFC;&#xBB34;&#xC7A5;&#xC18C;&#xC5D0;&#xC11C; &#xC2E4;&#xC2DC;&#xD558;&#xB294; &#xAD50;&#xC721;&#x3C;/p&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -831,7 +1015,7 @@
                     <!-- box -->
                     <div class="section" id="box">
                         <h2 class="h2">알림 박스</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <div class="result_area negative">실무교육 확인신청 내역이 없습니다. 이수증 발급을 위해서는 서류제출이 필요합니다.</div>
                                 <br />
@@ -845,16 +1029,22 @@
                                     조회 가능한 평가시험이 결과가 없습니다.<br />
                                     평가시험 일정 또는 마이페이지를 확인해 주시기 바랍니다.
                                 </div>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;div class=&#x22;result_area negative&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721; &#xD655;&#xC778;&#xC2E0;&#xCCAD; &#xB0B4;&#xC5ED;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xC218;&#xC99D; &#xBC1C;&#xAE09;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC11C;&#xB958;&#xC81C;&#xCD9C;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;div class=&#x22;result_area negative&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721; &#xD655;&#xC778;&#xC2E0;&#xCCAD; &#xB0B4;&#xC5ED;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xC218;&#xC99D; &#xBC1C;&#xAE09;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC11C;&#xB958;&#xC81C;&#xCD9C;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;result_area ongoing&#x22;&#x3E;&#xC2EC;&#xC0AC; &#xC911;&#xC785;&#xB2C8;&#xB2E4;. &#xC11C;&#xB958; &#xD655;&#xC778; &#xACB0;&#xACFC;&#xB294; &#xC54C;&#xB9BC;&#xC744; &#xD1B5;&#xD574; &#xC548;&#xB0B4;&#xD574;&#xB4DC;&#xB9BD;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;result_area positive&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721; &#xD655;&#xC778;&#xC774; &#xC644;&#xB8CC;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;result_area warning&#x22;&#x3E;&#xBCF4;&#xC644;&#xC694;&#xCCAD; &#xC548;&#xB0B4;&#xC785;&#xB2C8;&#xB2E4;. &#xB0B4;&#xC6A9; &#xD655;&#xC778; &#xD6C4; 7&#xC77C; &#xC774;&#xB0B4; &#xBBF8;&#xBCF4;&#xC644;&#xC2DC; &#xC790;&#xB3D9; &#xBC18;&#xB824;&#xB85C; &#xCC98;&#xB9AC; &#xB429;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;result_area base&#x22;&#x3E;&#xC870;&#xD68C; &#xAC00;&#xB2A5;&#xD55C; &#xD3C9;&#xAC00;&#xC2DC;&#xD5D8;&#xC774; &#xACB0;&#xACFC;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;br /&#x3E;&#xD3C9;&#xAC00;&#xC2DC;&#xD5D8; &#xC77C;&#xC815; &#xB610;&#xB294; &#xB9C8;&#xC774;&#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574; &#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <div class="notice_box center">
                                     <div class="box">
@@ -873,13 +1063,13 @@
                                     <strong>상수도관망시설운영관리사</strong>는 등급별로 요건을 충족하여야 자격을 취득할 수 있습니다. (단 자격요건이 충족되지 않더라도 양성과정 참여는 가능하며, 추후 자격요건을 충족시 자격발급이 가능) 또한 자격요건을 충족하더라도 결격사유에 해당하는 경우 자격취득이
                                     불가능하므로 자격요건과 결격사유를 확인하시기 바랍니다.
                                 </div>
-                                <br />
-                                <div class="result_area base">
-                                    조회 가능한 평가시험이 결과가 없습니다.<br />
-                                    평가시험 일정 또는 마이페이지를 확인해 주시기 바랍니다.
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
                                 </div>
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;div class=&#x22;notice_box center&#x22;&#x3E;
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;div class=&#x22;notice_box center&#x22;&#x3E;
     &#x3C;div class=&#x22;box&#x22;&#x3E;
         &#x3C;p class=&#x22;tit&#x22;&#x3E;&#x3C;span class=&#x22;ico_marknavy&#x22;&#x3E;&#x3C;/span&#x3E;&#xC758;&#xACAC;&#xC81C;&#xCD9C; &#xAE30;&#xAC04;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
         &#x3C;p class=&#x22;txt&#x22;&#x3E;&#xC774;&#xC758;&#xC2E0;&#xCCAD;&#xC744; &#xD560; &#xC218; &#xC788;&#xB294; &#xD3C9;&#xAC00;&#xC2DC;&#xD5D8;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
@@ -896,12 +1086,8 @@
     &#x3C;strong&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB9DD;&#xC2DC;&#xC124;&#xC6B4;&#xC601;&#xAD00;&#xB9AC;&#xC0AC;&#x3C;/strong&#x3E;&#xB294; &#xB4F1;&#xAE09;&#xBCC4;&#xB85C; &#xC694;&#xAC74;&#xC744; &#xCDA9;&#xC871;&#xD558;&#xC5EC;&#xC57C; &#xC790;&#xACA9;&#xC744; &#xCDE8;&#xB4DD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. (&#xB2E8; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xC774; &#xCDA9;&#xC871;&#xB418;&#xC9C0; &#xC54A;&#xB354;&#xB77C;&#xB3C4; &#xC591;&#xC131;&#xACFC;&#xC815; &#xCC38;&#xC5EC;&#xB294; &#xAC00;&#xB2A5;&#xD558;&#xBA70;, &#xCD94;&#xD6C4; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xC744; &#xCDA9;&#xC871;&#xC2DC; &#xC790;&#xACA9;&#xBC1C;&#xAE09;&#xC774; &#xAC00;&#xB2A5;) &#xB610;&#xD55C; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xC744; &#xCDA9;&#xC871;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xACB0;&#xACA9;&#xC0AC;&#xC720;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#xC790;&#xACA9;&#xCDE8;&#xB4DD;&#xC774;
     &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xBBC0;&#xB85C; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xACFC; &#xACB0;&#xACA9;&#xC0AC;&#xC720;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.
 &#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;result_area base&#x22;&#x3E;
-    &#xC870;&#xD68C; &#xAC00;&#xB2A5;&#xD55C; &#xD3C9;&#xAC00;&#xC2DC;&#xD5D8;&#xC774; &#xACB0;&#xACFC;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;br /&#x3E;
-    &#xD3C9;&#xAC00;&#xC2DC;&#xD5D8; &#xC77C;&#xC815; &#xB610;&#xB294; &#xB9C8;&#xC774;&#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574; &#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.
-&#x3C;/div&#x3E;
                                     </code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -911,7 +1097,7 @@
                     <!-- box -->
                     <div class="section" id="badge">
                         <h2 class="h2">badge</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <span class="value_badge1">신청완료</span>
                                 <span class="value_badge2">최초응시</span>
@@ -935,7 +1121,7 @@
                     <!-- box -->
                     <div class="section" id="tab">
                         <h2 class="h2">Tab</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <!-- tab -->
                                 <div class="tab_area">
@@ -980,8 +1166,13 @@
                                     </div>
                                 </div>
                                 <!--// tab -->
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- tab --&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;!-- tab --&#x3E;
 &#x3C;div class=&#x22;tab_area&#x22;&#x3E;
     &#x3C;div class=&#x22;scroll_area&#x22;&#x3E;
         &#x3C;ul class=&#x22;tab&#x22; role=&#x22;tablist&#x22;&#x3E;
@@ -1024,16 +1215,70 @@
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// tab --&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="article">
+
+                        <div class="article html_code on">
+                            <p>ul.tab에 .full_type클래스 추가</p>
                             <div class="tab_area">
                                 <div class="scroll_area">
                                     <ul class="tab full_type" role="tablist">
                                         <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">tab1</button></li>
                                         <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">tab2</button></li>
                                     </ul>
+                                </div>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
+                                <div class="code_wrap">
+                                    <pre><code class="html">&#x3C;!-- tab --&#x3E;
+&#x3C;div class=&#x22;tab_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;scroll_area&#x22;&#x3E;
+        &#x3C;ul class=&#x22;tab full_type&#x22; role=&#x22;tablist&#x22;&#x3E;
+            &#x3C;li class=&#x22;on&#x22; role=&#x22;presentation&#x22; aria-controls=&#x22;tab1&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;true&#x22;&#x3E;tab1&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab2&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab2&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab3&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab3&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab4&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab4&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;tabpanel&#x22; role=&#x22;tabpanel&#x22;&#x3E;
+        &#x3C;!-- aria-controls&#xACFC; tab_cont id&#xAC12; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC801;&#xC6A9; --&#x3E;
+        &#x3C;!-- tab1 --&#x3E;
+        &#x3C;div id=&#x22;tab1&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;false&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab1 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab1 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab1 --&#x3E;
+
+        &#x3C;!-- tab2 --&#x3E;
+        &#x3C;div id=&#x22;tab2&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab2 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab2 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab1 --&#x3E;
+
+        &#x3C;!-- tab3 --&#x3E;
+        &#x3C;div id=&#x22;tab3&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab3 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab3 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab3 --&#x3E;
+
+        &#x3C;!-- tab4 --&#x3E;
+        &#x3C;div id=&#x22;tab4&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab4 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab4 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab4 --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// tab --&#x3E;</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1043,7 +1288,7 @@
                     <!-- box -->
                     <div class="section" id="accordion">
                         <h2 class="h2">Accordion</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <!-- accordion -->
                                 <div class="accordion_area qna">
@@ -1054,8 +1299,10 @@
                                         </dt>
                                         <!-- aria-controls값과 id값 동일하게 적용 -->
                                         <dd id="qna1" class="accordion_body" style="display: block">
-                                            <div class="article"><span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
-                                            <div class="article">
+                                            <div class="article html_code on">
+                                                <span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.
+                                            </div>
+                                            <div class="article html_code on">
                                                 <button type="button" class="btn_download">상사도관망시설운영관리사 3급 양성과정 모집요강.hwp</button>
                                                 <button type="button" class="btn_download">양성과정 모집요강.hwp</button>
                                             </div>
@@ -1066,10 +1313,12 @@
                                             <button type="button" class="fold" aria-expanded="false" aria-controls="qna2">Q. 교육수료기준이 어떻게 되나요?</button>
                                         </dt>
                                         <dd id="qna2" class="accordion_body" style="display: none">
-                                            <div class="article"><span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
-                                            <div class="article">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
-                                            <div class="article">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
-                                            <div class="article">
+                                            <div class="article html_code on">
+                                                <span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.
+                                            </div>
+                                            <div class="article html_code on">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                            <div class="article html_code on">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                            <div class="article html_code on">
                                                 <button type="button" class="btn_download">상사도관망시설운영관리사 3급 양성과정 모집요강.hwp</button>
                                                 <button type="button" class="btn_download">양성과정 모집요강.hwp</button>
                                             </div>
@@ -1080,13 +1329,18 @@
                                             <button type="button" class="fold" aria-expanded="false" aria-controls="qna3">Q. 교육수료기준이 어떻게 되나요?</button>
                                         </dt>
                                         <dd id="qna3" class="accordion_body" style="display: none">
-                                            <div class="article"><span class="txt_a">A.</span> 내용</div>
+                                            <div class="article html_code on"><span class="txt_a">A.</span> 내용</div>
                                         </dd>
                                     </dl>
                                 </div>
                                 <!--// accordion -->
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- accordion --&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;!-- accordion --&#x3E;
 &#x3C;div class=&#x22;accordion_area qna&#x22;&#x3E;
     &#x3C;!-- &#xD65C;&#xC131;&#xD654; : is_open --&#x3E;
     &#x3C;dl class=&#x22;accordion_box is_open&#x22;&#x3E;
@@ -1127,6 +1381,7 @@
 &#x3C;/div&#x3E;
 &#x3C;!--// accordion --&#x3E;
                                     </code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1136,7 +1391,7 @@
                     <!-- box -->
                     <div class="section" id="progress">
                         <h2 class="h2">Progress</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <!-- progress -->
                                 <div class="progress-bar">
@@ -1161,8 +1416,13 @@
                                     </div>
                                 </div>
                                 <!--// progress -->
-                                <div class="code_wrap gap_mt24">
-                                    <pre><code class="html">&#x3C;!-- progress --&#x3E;
+
+                                <div class="btn">
+                                    <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                </div>
+                                <div class="boxing" style="display: none">
+                                    <div class="code_wrap">
+                                        <pre><code class="html">&#x3C;!-- progress --&#x3E;
 &#x3C;div class=&#x22;progress-bar&#x22;&#x3E;
     &#x3C;div class=&#x22;completion&#x22;&#x3E;
         &#x3C;span class=&#x22;step&#x22;&#x3E;
@@ -1185,6 +1445,7 @@
     &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;
 &#x3C;!--// progress --&#x3E;</code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1194,7 +1455,7 @@
                     <!-- box -->
                     <div class="section" id="pagination">
                         <h2 class="h2">Pagination</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <div class="code_html">
                                 <!-- pagination -->
                                 <div class="pagination">
@@ -1214,6 +1475,11 @@
                                     </ul>
                                 </div>
                                 <!--// pagination -->
+
+                                        <div class="btn">
+                                <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                            </div>
+                            <div class="boxing" style="display: none">
                                 <div class="code_wrap gap_mt24">
                                     <pre><code class="html">&#x3C;!-- pagination --&#x3E;
 &#x3C;div class=&#x22;pagination&#x22;&#x3E;
@@ -1242,7 +1508,7 @@
                     <!-- 기타 -->
                     <div class="section" id="etc">
                         <h2 class="h2">etc</h2>
-                        <div class="article">
+                        <div class="article html_code on">
                             <!-- 해당 퍼센트 값 입력(--bar-percent: 0%)   -->
                             <div class="gage_box" style="--bar-percent: 80%">
                                 <div class="gage_bar"></div>
@@ -1255,4 +1521,17 @@
             </div>
         </div>
     </body>
+    <script src="/resources/js/ui.js"></script>
+    <script src="/resources/js/jquery-ui.js"></script>
+    <script>
+        $(".html_code .btn_code_toggle").click(function () {
+            if ($(this).parent().parent().hasClass("on")) {
+                $(this).find("span").text("닫기");
+                $(this).parent().parent().removeClass("on").children(".boxing").slideDown();
+            } else {
+                $(this).find("span").text("열기");
+                $(this).parent().parent().addClass("on").children(".boxing").slideUp();
+            }
+        });
+    </script>
 </html>

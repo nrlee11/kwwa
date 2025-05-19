@@ -31,6 +31,8 @@ pre code.hljs {
 }
 .section + .section {
     margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 4px solid lightslategray;
 }
 .section .inner {
     padding: 1rem;
