@@ -38,927 +38,596 @@
                     <h2 class="h2">Board</h2>
 
                     <div class="section">
-                        <h3 class="h3">- View</h3>
+                        <h3 class="h3">기본 구조 (상단+본문)</h3>
                         <div class="inner">
+                            <h4 class="h4">- 상단</h4>
                             <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- board top -->
-                                        <div class="board_desc_top">
-                                            <div class="lside">신청번호를 클릭하면 신청서를 보실 수 있습니다.</div>
-                                            <div class="rsdie">조회된 내역(100건)</div>
-                                        </div>
-                                        <!--// board top -->
-
-                                        <!-- board_view -->
-                                        <table class="tbl react">
-                                            <caption>
-                                                타이틀1 , 타이틀타이틀타이틀타이틀2, 타이틀3, 타이틀4 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 25%" span="4" />
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">타이틀1</th>
-                                                    <th scope="col">타이틀타이틀타이틀타이틀2</th>
-                                                    <th scope="col">타이틀3</th>
-                                                    <th scope="col">타이틀4</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td data-cell-header="타이틀1"><div>내용</div></td>
-                                                    <td data-cell-header="타이틀타이틀타이틀타이틀2" class="left"><div>내용이 길어요 내용이 길어요 내용이 길어요 내용이 길어요</div></td>
-                                                    <td data-cell-header="타이틀3"><div>내용</div></td>
-                                                    <td data-cell-header="타이틀4" class="right"><div>내용</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-cell-header="타이틀1">
-                                                        <div>
-                                                            <span class="inp_check alone">
-                                                                <input type="checkbox" id="check1" />
-                                                                <label for="check1"><span>선택</span></label>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="타이틀2" class="left"><div>내용</div></td>
-                                                    <td data-cell-header="타이틀3"><div>내용</div></td>
-                                                    <td data-cell-header="타이틀4" class="right"><div>내용</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="nodata">조회된 내역이 없습니다.</div>
-                                        <!--// board_view -->
-
-                                        <!-- board bottom -->
-                                        <div class="board_desc_bottom">
-                                            <p class="txt_mark">(기본간격 24px) 증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</p>
-                                        </div>
-
-                                        <div class="board_desc_bottom gap_mt10">
-                                            <p class="txt_note">(txt_note만 노출될 경우 10px) 배송시 등록된 본인명의의 휴대전화로 연락드립니다.</p>
-                                        </div>
-                                        <!--// board bottom -->
-                                    </div>
-                                    <!--// board -->
-                                </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// 기본 : td center정렬 (mo left)
-// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
-
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- board top --&#x3E;
-    &#x3C;div class=&#x22;board_desc_top&#x22;&#x3E;
-        &#x3C;div class=&#x22;lside&#x22;&#x3E;&#xC2E0;&#xCCAD;&#xBC88;&#xD638;&#xB97C; &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xC2E0;&#xCCAD;&#xC11C;&#xB97C; &#xBCF4;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;rsdie&#x22;&#x3E;&#xC870;&#xD68C;&#xB41C; &#xB0B4;&#xC5ED;(100&#xAC74;)&#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// board top --&#x3E;
-
-    &#x3C;!-- board_view --&#x3E;
-    &#x3C;table class=&#x22;tbl react&#x22;&#x3E;&#x3C;!-- &#xAE30;&#xBCF8; class : tbl react --&#x3E;
-        &#x3C;caption&#x3E;
-            &#xD0C0;&#xC774;&#xD2C0;1 , &#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;2, &#xD0C0;&#xC774;&#xD2C0;3, &#xD0C0;&#xC774;&#xD2C0;4 &#xC815;&#xBCF4; &#xC81C;&#xACF5;
-        &#x3C;/caption&#x3E;
-        &#x3C;colgroup&#x3E;
-            &#x3C;col style=&#x22;width: 25%&#x22; span=&#x22;4&#x22; /&#x3E;
-        &#x3C;/colgroup&#x3E;
-        &#x3C;thead&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;col&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;1&#x3C;/th&#x3E;
-                &#x3C;th scope=&#x22;col&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;2&#x3C;/th&#x3E;
-                &#x3C;th scope=&#x22;col&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;3&#x3C;/th&#x3E;
-                &#x3C;th scope=&#x22;col&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;4&#x3C;/th&#x3E;
-            &#x3C;/tr&#x3E;
-        &#x3C;/thead&#x3E;
-        &#x3C;tbody&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;1&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;&#xD0C0;&#xC774;&#xD2C0;2&#x22; class=&#x22;left&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#xC774; &#xAE38;&#xC5B4;&#xC694; &#xB0B4;&#xC6A9;&#xC774; &#xAE38;&#xC5B4;&#xC694; &#xB0B4;&#xC6A9;&#xC774; &#xAE38;&#xC5B4;&#xC694; &#xB0B4;&#xC6A9;&#xC774; &#xAE38;&#xC5B4;&#xC694;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;3&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;4&#x22; class=&#x22;right&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;1&#x22;&#x3E;
-                    &#x3C;div&#x3E;
-                        &#x3C;span class=&#x22;inp_check alone&#x22;&#x3E;
-                            &#x3C;input type=&#x22;checkbox&#x22; id=&#x22;check1&#x22; /&#x3E;
-                            &#x3C;label for=&#x22;check1&#x22;&#x3E;&#x3C;span&#x3E;&#xC120;&#xD0DD;&#x3C;/span&#x3E;&#x3C;/label&#x3E;
-                        &#x3C;/span&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/td&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;2&#x22; class=&#x22;left&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;3&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;4&#x22; class=&#x22;right&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-        &#x3C;/tbody&#x3E;
-    &#x3C;/table&#x3E;
-    &#x3C;div class=&#x22;nodata&#x22;&#x3E;&#xC870;&#xD68C;&#xB41C; &#xB0B4;&#xC5ED;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
-    &#x3C;!--// board_view --&#x3E;
-
-    &#x3C;!-- board bottom --&#x3E;
-    &#x3C;div class=&#x22;board_desc_bottom&#x22;&#x3E;
-        &#x3C;p class=&#x22;txt_mark&#x22;&#x3E;(&#xAE30;&#xBCF8;&#xAC04;&#xACA9; 24px) &#xC99D;&#xBA85;&#xC11C;&#xB958; : &#xC878;&#xC5C5;&#xC99D;&#xBA85;&#xC11C;, &#xC218;&#xB8CC;&#xC99D;&#xBA85;&#xC11C;(&#xB300;&#xD559;&#xAD50;2&#xB144;&#xC774;&#xC0C1; &#xC218;&#xB8CC;), &#xD559;&#xC704;&#xC99D; &#xB4F1;&#x3C;/p&#x3E;
-    &#x3C;/div&#x3E;
-
-    &#x3C;div class=&#x22;board_desc_bottom gap_mt10&#x22;&#x3E;
-        &#x3C;p class=&#x22;txt_note&#x22;&#x3E;(txt_note&#xB9CC; &#xB178;&#xCD9C;&#xB420; &#xACBD;&#xC6B0; 10px) &#xBC30;&#xC1A1;&#xC2DC; &#xB4F1;&#xB85D;&#xB41C; &#xBCF8;&#xC778;&#xBA85;&#xC758;&#xC758; &#xD734;&#xB300;&#xC804;&#xD654;&#xB85C; &#xC5F0;&#xB77D;&#xB4DC;&#xB9BD;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// board bottom --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;</code></pre>
-                                    </div>
-                                </div>
+                                <ul class="txt_blue">
+                                    <li><a href="#topFormTitle">폼 타이틀</a></li>
+                                    <li><a href="#topBoardSearch">검색 / 검색 + 체크박스 옵션</a></li>
+                                    <li><a href="#topBoardInfo">상단 정보</a></li>
+                                </ul>
                             </div>
+                        </div>
 
+                        <div class="inner">
+                            <h4 class="h4">- 본문</h4>
                             <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- board_view -->
-                                        <table class="tbl react row size90">
-                                            <caption>
-                                                타이틀1, 타이틀2, 타이틀3, 타이틀4 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 15.3rem" />
-                                                <col style="width: 29.1rem" />
-                                                <col style="width: 15.3rem" />
-                                                <col style="width: 29.1rem" />
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">타이틀1</th>
-                                                    <td data-cell-header="타이틀1"><div>내용</div></td>
-                                                    <th scope="row">타이틀2</th>
-                                                    <td data-cell-header="타이틀2"><div>내용</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">타이틀3</th>
-                                                    <td data-cell-header="타이틀1"><div>내용</div></td>
-                                                    <th scope="row">타이틀4</th>
-                                                    <td data-cell-header="타이틀2"><div>내용</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_view -->
-                                    </div>
-                                    <!--// board -->
-                                </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// row : td left 정렬 (mo left)
-// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
-
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- board_view --&#x3E;
-    &#x3C;table class=&#x22;tbl react row size90&#x22;&#x3E;&#x3C;!-- class : row, size90 --&#x3E;
-        &#x3C;caption&#x3E;
-            &#xD0C0;&#xC774;&#xD2C0;1, &#xD0C0;&#xC774;&#xD2C0;2, &#xD0C0;&#xC774;&#xD2C0;3, &#xD0C0;&#xC774;&#xD2C0;4 &#xC815;&#xBCF4; &#xC81C;&#xACF5;
-        &#x3C;/caption&#x3E;
-        &#x3C;colgroup&#x3E;
-            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
-            &#x3C;col style=&#x22;width: 29.1rem&#x22; /&#x3E;
-            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
-            &#x3C;col style=&#x22;width: 29.1rem&#x22; /&#x3E;
-        &#x3C;/colgroup&#x3E;
-        &#x3C;tbody&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;1&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;1&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;2&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;2&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;3&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;1&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;4&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xD0C0;&#xC774;&#xD2C0;2&#x22;&#x3E;&#x3C;div&#x3E;&#xB0B4;&#xC6A9;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-        &#x3C;/tbody&#x3E;
-    &#x3C;/table&#x3E;
-    &#x3C;!--// board_view --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;</code></pre>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>테이블</strong>
+                                        <ul class="txt_blue" style="padding-left: 1rem">
+                                            <li><a href="#boardTableHori">반응형-가로</a></li>
+                                            <li><a href="#boardTableVer">반응형-세로</a></li>
+                                            <li><a href="#boardTableScroll">밀어서 보기</a></li>
+                                            <li><a href="#boardTableTd">상세 케이스</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="gap_mt20">
+                                        <strong>리스트</strong>
+                                        <ul class="txt_blue" style="padding-left: 1rem">
+                                            <li><a href="#boardList">케이스</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
+                        </div>
 
+                        <div class="inner">
+                            <h4 class="h4">- 하단영역</h4>
                             <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- board_view -->
-                                        <table class="tbl react row sm size120">
-                                            <!-- class : sm -->
-                                            <caption>
-                                                신청번호, 자격번호, 자격 취득일, 교부 연월일, 재발급 신청일, 재발급 신청사유, 재발급 신청사유 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 15.3rem" />
-                                                <col />
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">신청번호</th>
-                                                    <td data-cell-header="신청번호"><div>REQ2-25-0001</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">자격번호</th>
-                                                    <td data-cell-header="자격번호"><div>WL000000</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">자격 취득일</th>
-                                                    <td data-cell-header="자격 취득일"><div>2025-02-10</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">교부 연월일</th>
-                                                    <td data-cell-header="교부 연월일"><div>2025-02-10</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">재발급 신청일</th>
-                                                    <td data-cell-header="재발급 신청일"><div>2025-02-10</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">재발급 신청사유</th>
-                                                    <td data-cell-header="재발급 신청사유"><div>분실</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">배송지 주소</th>
-                                                    <td data-cell-header="배송지 주소">
-                                                        <div>
-                                                            07379<br />
-                                                            서울특별시 영등포구 대림로-244(대림동)
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_view -->
-                                    </div>
-                                    <!--// board -->
-                                </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// sm : th,td height:32px; (PC만 적용)
-// row : td left 정렬 (mo left)
-// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
-
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- board_view --&#x3E;
-    &#x3C;table class=&#x22;tbl react row sm size120&#x22;&#x3E;&#x3C;!-- class : sm --&#x3E;
-        &#x3C;caption&#x3E;
-            &#xC2E0;&#xCCAD;&#xBC88;&#xD638;, &#xC790;&#xACA9;&#xBC88;&#xD638;, &#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;, &#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC77C;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC815;&#xBCF4; &#xC81C;&#xACF5;
-        &#x3C;/caption&#x3E;
-        &#x3C;colgroup&#x3E;
-            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
-            &#x3C;col /&#x3E;
-        &#x3C;/colgroup&#x3E;
-        &#x3C;tbody&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC2E0;&#xCCAD;&#xBC88;&#xD638;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC2E0;&#xCCAD;&#xBC88;&#xD638;&#x22;&#x3E;&#x3C;div&#x3E;REQ2-25-0001&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x22;&#x3E;&#x3C;div&#x3E;WL000000&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-10&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-10&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC77C;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-10&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x22;&#x3E;&#x3C;div&#x3E;&#xBD84;&#xC2E4;&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xBC30;&#xC1A1;&#xC9C0; &#xC8FC;&#xC18C;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xBC30;&#xC1A1;&#xC9C0; &#xC8FC;&#xC18C;&#x22;&#x3E;
-                    &#x3C;div&#x3E;
-                        07379&#x3C;br /&#x3E;
-                        &#xC11C;&#xC6B8;&#xD2B9;&#xBCC4;&#xC2DC; &#xC601;&#xB4F1;&#xD3EC;&#xAD6C; &#xB300;&#xB9BC;&#xB85C;-244(&#xB300;&#xB9BC;&#xB3D9;)
-                    &#x3C;/div&#x3E;
-                &#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-        &#x3C;/tbody&#x3E;
-    &#x3C;/table&#x3E;
-    &#x3C;!--// board_view --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- board_view -->
-                                        <table class="tbl react row size110">
-                                            <caption>
-                                                자격번호, 자격 취득일, 교부 연월일, 재발급 신청사유 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 15.3rem" />
-                                                <col />
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">자격번호</th>
-                                                    <td data-cell-header="자격번호"><div>WL000000</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">자격 취득일</th>
-                                                    <td data-cell-header="자격 취득일"><div>2025-02-20</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">교부 연월일</th>
-                                                    <td data-cell-header="교부 연월일"><div>2025-02-20</div></td>
-                                                </tr>
-                                                <tr class="write_cell">
-                                                    <th scope="row">
-                                                        <label for="answer">재발급 신청사유</label>
-                                                    </th>
-                                                    <td data-cell-header="재발급 신청사유">
-                                                        <div>
-                                                            <div class="form_item">
-                                                                <div class="inp_select">
-                                                                    <select title="신청사유 선택" id="answer">
-                                                                        <option value="">신청사유 선택</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form_item">
-                                                                <div class="inp_textarea">
-                                                                    <textarea placeholder="재발급 신청사유을 입력해 주세요"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_view -->
-                                    </div>
-                                    <!--// board -->
-                                </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// View + Write 조합
-// row : td left 정렬 (mo left)
-// size70, size90, size100, size110, size120, size130, size150 : mo [data-cell-header] 사이즈 (디폴트 80px)
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- board_view --&#x3E;
-    &#x3C;table class=&#x22;tbl react row size110&#x22;&#x3E;
-        &#x3C;caption&#x3E;
-            &#xC790;&#xACA9;&#xBC88;&#xD638;, &#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;, &#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;, &#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC815;&#xBCF4; &#xC81C;&#xACF5;
-        &#x3C;/caption&#x3E;
-        &#x3C;colgroup&#x3E;
-            &#x3C;col style=&#x22;width: 15.3rem&#x22; /&#x3E;
-            &#x3C;col /&#x3E;
-        &#x3C;/colgroup&#x3E;
-        &#x3C;tbody&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9;&#xBC88;&#xD638;&#x22;&#x3E;&#x3C;div&#x3E;WL000000&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC790;&#xACA9; &#xCDE8;&#xB4DD;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-20&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xAD50;&#xBD80; &#xC5F0;&#xC6D4;&#xC77C;&#x22;&#x3E;&#x3C;div&#x3E;2025-02-20&#x3C;/div&#x3E;&#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-            &#x3C;tr class=&#x22;write_cell&#x22;&#x3E;
-                &#x3C;th scope=&#x22;row&#x22;&#x3E;
-                    &#x3C;label for=&#x22;answer&#x22;&#x3E;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x3C;/label&#x3E;
-                &#x3C;/th&#x3E;
-                &#x3C;td data-cell-header=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#x22;&#x3E;
-                    &#x3C;div&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
-                                &#x3C;select title=&#x22;&#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC120;&#xD0DD;&#x22; id=&#x22;answer&#x22;&#x3E;
-                                    &#x3C;option value=&#x22;&#x22;&#x3E;&#xC2E0;&#xCCAD;&#xC0AC;&#xC720; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
-                                &#x3C;/select&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp_textarea&#x22;&#x3E;
-                                &#x3C;textarea placeholder=&#x22;&#xC7AC;&#xBC1C;&#xAE09; &#xC2E0;&#xCCAD;&#xC0AC;&#xC720;&#xC744; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;&#x22;&#x3E;&#x3C;/textarea&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/td&#x3E;
-            &#x3C;/tr&#x3E;
-        &#x3C;/tbody&#x3E;
-    &#x3C;/table&#x3E;
-    &#x3C;!--// board_view --&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;
-</code></pre>
-                                    </div>
-                                </div>
+                                <ul class="txt_blue">
+                                    <li><a href="#boardBottom">문구</a></li>
+                                    <li><a href="#boardPage">페이지네이션</a></li>
+                                    <li><a href="#boardEmpty">내용 없음</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="section">
-                        <h3 class="h3">- Write &amp; Modify</h3>
+                        <h3 class="h3">상단</h3>
+
                         <div class="inner">
+                            <h4 class="h4" id="topFormTitle">- 폼 타이틀</h4>
                             <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- tit -->
-                                        <div class="form_tit">
-                                            <h3 class="tit">타이틀</h3>
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- tit -->
+                                    <div class="form_tit">
+                                        <h3 class="tit">타이틀</h3>
+                                    </div>
+                                    <!--// tit -->
+                                </div>
+                                <!-- // board -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="topBoardSearch">- 검색 / 검색+체크박스</h4>
+                            <div class="box" content-title="검색">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board_search -->
+                                    <div class="board_search">
+                                        <div class="form_item">
+                                            <div class="inp_select size_190">
+                                                <select title="검색 조건 선택">
+                                                    <option value="">전체</option>
+                                                    <option value="">제목</option>
+                                                    <option value="">내용</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <!--// tit -->
+                                        <div class="form_item wide">
+                                            <div class="inp">
+                                                <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
+                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                            </div>
+                                            <button type="button" class="btn_search"><span class="hidden">검색</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- // board_search -->
+                                </div>
+                                <!-- // board -->
+                            </div>
 
-                                        <!-- form-->
-                                        <div class="form_section">
-                                            <!-- board_write -->
-                                            <div class="form_list">
-                                                <div class="form_group">
-                                                    <div class="tit">
-                                                        <label for="userName">
-                                                            이름
-                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp size_289">
-                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                    <input type="text" value="홍길동" id="userName" autocomplete="off" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp size_289">
-                                                                    <input type="text" autocomplete="off" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_group">
-                                                    <div class="tit">
-                                                        <label for="work1">근무지</label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="group_box">
-                                                                    <div class="box">
-                                                                        <div class="inp">
-                                                                            <input type="text" placeholder="근무지 입력" id="work1" autocomplete="off" />
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="box">
-                                                                        <div class="inp">
-                                                                            <input type="text" placeholder="근무지 입력2" autocomplete="off" />
-                                                                        </div>
-                                                                    </div>
+                            <div class="box" content-title="검색 + 체크박스(검색옵션)">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board_search + checkbox -->
+                                    <div class="board_search flex_wrap">
+                                        <div class="form_item">
+                                            <div class="inp_select size_190">
+                                                <select title="검색 조건 선택">
+                                                    <option value="">전체</option>
+                                                    <option value="">제목</option>
+                                                    <option value="">내용</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item wide">
+                                            <div class="inp">
+                                                <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
+                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                            </div>
+                                            <button type="button" class="btn_search"><span class="hidden">검색</span></button>
+                                        </div>
+                                        <div class="inp_round_box">
+                                            <!-- [D] 전체선택 사용시:
+                                                1. 전체선택에 all 클래스 추가
+                                                2. 동일 name 추가
+                                                -->
+                                            <div>
+                                                <input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked />
+                                                <label for="roundchk1">전체목록</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" />
+                                                <label for="roundchk2">1급</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" />
+                                                <label for="roundchk3">2급</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // board_search + checkbox -->
+                                </div>
+                                <!-- // board -->
+                            </div>
+                        </div>
 
-                                                                    <div class="box">
-                                                                        <div class="inp">
-                                                                            <input type="text" placeholder="근무지 입력3" autocomplete="off" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                        <div class="inner">
+                            <h4 class="h4" id="topBoardInfo">- 상단 정보</h4>
+                            <div class="box" content-title="텍스트 + 텍스트">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board top -->
+                                    <div class="board_desc_top">
+                                        <div class="lside">신청번호를 클릭하면 신청서를 보실 수 있습니다.</div>
+                                        <div class="rsdie">조회된 내역(100건)</div>
+                                    </div>
+                                    <!-- // board top -->
+                                </div>
+                                <!-- // board -->
+                            </div>
+
+                            <div class="box" content-title="카운트 + select">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board top -->
+                                    <div class="board_desc_top">
+                                        <div class="lside">
+                                            <div class="board_count">전체 <span>10</span>/1,000</div>
+                                        </div>
+                                        <div class="rside">
+                                            <div class="form_item inblock">
+                                                <div class="inp_select size_80">
+                                                    <select class="sm" title="노출 개수 선택">
+                                                        <option value="">15</option>
+                                                        <option value="">30</option>
+                                                        <option value="">50</option>
+                                                        <option value="">100</option>
+                                                    </select>
                                                 </div>
-                                                <div class="form_group">
-                                                    <div class="tit">
-                                                        <label for="cellPhone">
-                                                            휴대폰 번호
-                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp size_289">
-                                                                    <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // board top -->
+                                </div>
+                                <!-- // board -->
+                            </div>
+
+                            <div class="box" content-title="select + select">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board top -->
+                                    <div class="board_desc_top">
+                                        <div class="lside">
+                                            <div class="form_item inblock">
+                                                <div class="inp_select size_160">
+                                                    <select class="sm" title="카테고리 선택">
+                                                        <option value="">카테고리 전체</option>
+                                                        <option value="">자격증</option>
+                                                        <option value="">교육</option>
+                                                        <option value="">평가시험</option>
+                                                        <option value="">의견제출</option>
+                                                    </select>
                                                 </div>
-                                                <div class="form_group gap0">
-                                                    <div class="tit">
-                                                        <span>
-                                                            성별
-                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="rside">
+                                            <div class="form_item inblock">
+                                                <div class="inp_select size_80">
+                                                    <select class="sm" title="노출 개수 선택">
+                                                        <option value="">15</option>
+                                                        <option value="">30</option>
+                                                        <option value="">50</option>
+                                                        <option value="">100</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // board top -->
+                                </div>
+                                <!-- // board -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== 본문 - 테이블 ========== -->
+                    <div class="section">
+                        <h3 class="h3">본문 - 테이블</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableHori">- 테이블(가로)</h4>
+                            <p>
+                                mo [data-cell-header] 사이즈: size(숫자) 클래스 추가<br />
+                                (70, 90, 100, 110, 120, 130, 150) <br />
+                                (디폴트 80px)
+                            </p>
+                            <div class="box" content-title="가로">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react">
+                                        <caption>
+                                            타이틀1 , 타이틀타이틀타이틀타이틀2, 타이틀3, 타이틀4 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 25%" span="4" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">타이틀1</th>
+                                                <th scope="col">타이틀타이틀타이틀타이틀2</th>
+                                                <th scope="col">타이틀3</th>
+                                                <th scope="col">타이틀4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div>
+                                                        <span class="inp_check alone">
+                                                            <input type="checkbox" id="check1" />
+                                                            <label for="check1"><span>선택</span></label>
                                                         </span>
                                                     </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="radio_set reset">
-                                                                    <span class="inp_radio">
-                                                                        <input type="radio" id="male" name="gender" checked />
-                                                                        <label for="male">남성</label>
-                                                                    </span>
-                                                                    <span class="inp_radio">
-                                                                        <input type="radio" id="female" name="gender" />
-                                                                        <label for="female">여성</label>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_group line">
-                                                    <div class="tit">
-                                                        <label for="userPassword">
-                                                            비밀번호
-                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp size_289">
-                                                                    <input type="password" value="" id="userPassword" maxlength="16" placeholder="8자 이상(영문자, 숫자, 특수문자)" />
-                                                                </div>
-                                                            </div>
-                                                            <p class="msg_txt">비밀번호는 8자 이상, 16자 이하의 영문자, 숫자 및 특수문자를 조합하여 사용해야 합니다.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_group">
-                                                    <div class="tit">
-                                                        <label for="userPasswordCheck">
-                                                            비밀번호 확인
-                                                            <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp size_289 error">
-                                                                    <input type="password" value="" id="userPasswordCheck" maxlength="16" placeholder="비밀번호 확인" />
-                                                                </div>
-                                                            </div>
-                                                            <!-- 에러 : error -->
-                                                            <p class="msg_error">비밀번호 조건에 맞지 않습니다. 다시 입력해 주세요.</p>
-                                                            <p class="msg_error">비밀번호가 다릅니다.</p>
-                                                            <!--// 에러 : error -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--// board_write -->
-                                        </div>
-                                        <!--// form-->
-                                    </div>
-                                    <!--// board -->
+                                                </td>
+                                                <td data-cell-header="타이틀타이틀타이틀타이틀2" class="left"><div>내용이 길어요 내용이 길어요 내용이 길어요 내용이 길어요</div></td>
+                                                <td data-cell-header="타이틀3"><div>내용</div></td>
+                                                <td data-cell-header="타이틀4" class="right"><div>내용</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// gap0 : min-height: auto; 
-// line : border top
-
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- tit --&#x3E;
-    &#x3C;div class=&#x22;form_tit&#x22;&#x3E;
-        &#x3C;h3 class=&#x22;tit&#x22;&#x3E;&#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// tit --&#x3E;
-
-    &#x3C;!-- form--&#x3E;
-    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
-        &#x3C;!-- board_write --&#x3E;
-        &#x3C;div class=&#x22;form_list&#x22;&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;userName&#x22;&#x3E;
-                        &#xC774;&#xB984;
-                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                    &#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                                &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
-                                &#x3C;input type=&#x22;text&#x22; value=&#x22;&#xD64D;&#xAE38;&#xB3D9;&#x22; id=&#x22;userName&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                                &#x3C;input type=&#x22;text&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;work1&#x22;&#x3E;&#xADFC;&#xBB34;&#xC9C0;&#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;group_box&#x22;&#x3E;
-                                &#x3C;div class=&#x22;box&#x22;&#x3E;
-                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;&#xADFC;&#xBB34;&#xC9C0; &#xC785;&#xB825;&#x22; id=&#x22;work1&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
-                                    &#x3C;/div&#x3E;
-                                &#x3C;/div&#x3E;
-                                &#x3C;div class=&#x22;box&#x22;&#x3E;
-                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;&#xADFC;&#xBB34;&#xC9C0; &#xC785;&#xB825;2&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
-                                    &#x3C;/div&#x3E;
-                                &#x3C;/div&#x3E;
-
-                                &#x3C;div class=&#x22;box&#x22;&#x3E;
-                                    &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;&#xADFC;&#xBB34;&#xC9C0; &#xC785;&#xB825;3&#x22; autocomplete=&#x22;off&#x22; /&#x3E;
-                                    &#x3C;/div&#x3E;
-                                &#x3C;/div&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;cellPhone&#x22;&#x3E;
-                        &#xD734;&#xB300;&#xD3F0; &#xBC88;&#xD638;
-                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                    &#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                                &#x3C;input type=&#x22;tel&#x22; value=&#x22;010-1234-5678&#x22; id=&#x22;cellPhone&#x22; autocomplete=&#x22;off&#x22; readonly /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;form_group gap0&#x22;&#x3E;&#x3C;!-- gap0 --&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;span&#x3E;
-                        &#xC131;&#xBCC4;
-                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                    &#x3C;/span&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;radio_set reset&#x22;&#x3E;
-                                &#x3C;span class=&#x22;inp_radio&#x22;&#x3E;
-                                    &#x3C;input type=&#x22;radio&#x22; id=&#x22;male&#x22; name=&#x22;gender&#x22; checked /&#x3E;
-                                    &#x3C;label for=&#x22;male&#x22;&#x3E;&#xB0A8;&#xC131;&#x3C;/label&#x3E;
-                                &#x3C;/span&#x3E;
-                                &#x3C;span class=&#x22;inp_radio&#x22;&#x3E;
-                                    &#x3C;input type=&#x22;radio&#x22; id=&#x22;female&#x22; name=&#x22;gender&#x22; /&#x3E;
-                                    &#x3C;label for=&#x22;female&#x22;&#x3E;&#xC5EC;&#xC131;&#x3C;/label&#x3E;
-                                &#x3C;/span&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;form_group line&#x22;&#x3E;&#x3C;!-- line --&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;userPassword&#x22;&#x3E;
-                        &#xBE44;&#xBC00;&#xBC88;&#xD638;
-                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                    &#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp size_289&#x22;&#x3E;
-                                &#x3C;input type=&#x22;password&#x22; value=&#x22;&#x22; id=&#x22;userPassword&#x22; maxlength=&#x22;16&#x22; placeholder=&#x22;8&#xC790; &#xC774;&#xC0C1;(&#xC601;&#xBB38;&#xC790;, &#xC22B;&#xC790;, &#xD2B9;&#xC218;&#xBB38;&#xC790;)&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                        &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB294; 8&#xC790; &#xC774;&#xC0C1;, 16&#xC790; &#xC774;&#xD558;&#xC758; &#xC601;&#xBB38;&#xC790;, &#xC22B;&#xC790; &#xBC0F; &#xD2B9;&#xC218;&#xBB38;&#xC790;&#xB97C; &#xC870;&#xD569;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;userPasswordCheck&#x22;&#x3E;
-                        &#xBE44;&#xBC00;&#xBC88;&#xD638; &#xD655;&#xC778;
-                        &#x3C;span class=&#x22;txt_require&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xD544;&#xC218;&#xC785;&#xB825; &#xC0AC;&#xD56D;&#x3C;/span&#x3E;&#x3C;/span&#x3E;
-                    &#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp size_289 error&#x22;&#x3E;
-                                &#x3C;input type=&#x22;password&#x22; value=&#x22;&#x22; id=&#x22;userPasswordCheck&#x22; maxlength=&#x22;16&#x22; placeholder=&#x22;&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xD655;&#xC778;&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                        &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
-                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC2DC; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
-                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                        &#x3C;!--// &#xC5D0;&#xB7EC; : error --&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;!--// board_write --&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// form--&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;</code></pre>
-                                    </div>
-                                </div>
+                                <!-- // board -->
                             </div>
 
-                            <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- form-->
-                                        <div class="form_section">
-                                            <!-- write -->
-                                            <div class="form_list col">
-                                                <div class="form_group">
-                                                    <div class="tit">
-                                                        <label for="userName1">이름</label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp">
-                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                                    <input type="text" value="" id="userName1" placeholder="이름을 입력하세요" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_group">
-                                                    <div class="tit">
-                                                        <label for="cellPhone1">휴대폰번호</label>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="inp">
-                                                                    <input type="tel" value="" id="cellPhone1" placeholder="휴대폰번호 (숫자만 입력)" />
-                                                                </div>
-                                                            </div>
-                                                            <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요.</p>
-                                                            <!-- 에러 : error -->
-                                                            <p class="msg_error">등록된 회원정보가 아닙니다.</p>
-                                                            <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
-                                                            <!--// 에러 : error -->
-                                                        </div>
-                                                        <div class="cell full">
-                                                            <button type="button" class="btn_secondary_lg">인증번호 받기</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--// write -->
-                                        </div>
-                                        <!--// form-->
-                                    </div>
-                                    <!--// board -->
+                            <div class="box" content-title="가로 - 분할">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react row size90">
+                                        <caption>
+                                            타이틀1, 타이틀2 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col style="width: 29.1rem" />
+                                            <col style="width: 15.3rem" />
+                                            <col style="width: 29.1rem" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">타이틀1</th>
+                                                <td data-cell-header="타이틀1"><div>내용</div></td>
+                                                <th scope="row">타이틀2</th>
+                                                <td data-cell-header="타이틀2"><div>내용</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// col : column
+                                <!-- // board -->
+                            </div>
+                        </div>
 
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- form--&#x3E;
-    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
-        &#x3C;!-- write --&#x3E;
-        &#x3C;div class=&#x22;form_list col&#x22;&#x3E;&#x3C;!-- col --&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;userName1&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
-                                &#x3C;input type=&#x22;text&#x22; value=&#x22;&#x22; id=&#x22;userName1&#x22; placeholder=&#x22;&#xC774;&#xB984;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;tit&#x22;&#x3E;
-                    &#x3C;label for=&#x22;cellPhone1&#x22;&#x3E;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638;&#x3C;/label&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;inp&#x22;&#x3E;
-                                &#x3C;input type=&#x22;tel&#x22; value=&#x22;&#x22; id=&#x22;cellPhone1&#x22; placeholder=&#x22;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638; (&#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;)&#x22; /&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                        &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#x27;-&#x27;&#xC0DD;&#xB7B5;, 11&#xC790;&#xB9AC; &#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
-                        &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
-                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xB4F1;&#xB85D;&#xB41C; &#xD68C;&#xC6D0;&#xC815;&#xBCF4;&#xAC00; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xC798;&#xBABB;&#xB41C; &#xD615;&#xC2DD;&#xC758; &#xC804;&#xD654;&#xBC88;&#xD638;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
-                        &#x3C;!--// &#xC5D0;&#xB7EC; : error --&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;div class=&#x22;cell full&#x22;&#x3E;
-                        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC778;&#xC99D;&#xBC88;&#xD638; &#xBC1B;&#xAE30;&#x3C;/button&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;!--// write --&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// form--&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;</code></pre>
-                                    </div>
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableVer">- 테이블(세로)</h4>
+                            <p>
+                                mo [data-cell-header] 사이즈: size(숫자) 클래스 추가<br />
+                                (70, 90, 100, 110, 120, 130, 150) <br />
+                                (디폴트 80px)
+                            </p>
+
+                            <div class="box" content-title="세로">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react row size110">
+                                        <caption>
+                                            자격번호, 재발급 신청사유 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">자격번호</th>
+                                                <td data-cell-header="자격번호"><div>WL000000</div></td>
+                                            </tr>
+                                            <tr class="write_cell">
+                                                <th scope="row">
+                                                    <label for="answer">재발급 신청사유</label>
+                                                </th>
+                                                <td data-cell-header="재발급 신청사유">
+                                                    <div>
+                                                        <div class="form_item">
+                                                            <div class="inp_select">
+                                                                <select title="신청사유 선택" id="answer">
+                                                                    <option value="">신청사유 선택</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_item">
+                                                            <div class="inp_textarea">
+                                                                <textarea placeholder="재발급 신청사유을 입력해 주세요"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
+                                <!-- // board -->
                             </div>
 
+                            <div class="box" content-title="세로 - 좁은">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react row sm size120">
+                                        <!-- class : sm -->
+                                        <caption>
+                                            타이틀1, 신청번호, 배송지 주소 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">타이틀1</th>
+                                                <td data-cell-header="타이틀1"><div>텍스트1</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">신청번호</th>
+                                                <td data-cell-header="신청번호"><div>REQ2-25-0001</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">배송지 주소</th>
+                                                <td data-cell-header="배송지 주소">
+                                                    <div>
+                                                        07379<br />
+                                                        서울특별시 영등포구 대림로-244(대림동)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // board -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableScroll">- 테이블(밀어서보기)</h4>
+                            <p>모바일) 가로스크롤</p>
+
+                            <div class="box" content-title="밀어서보기">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <div class="scroll_guide">
+                                        <p class="txt_scroll">밀어서 보기</p>
+                                    </div>
+                                    <div class="scroll_area">
+                                        <table class="tbl">
+                                            <caption>
+                                                NO, 과목, 문항수, 점수, 비고 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 80px" />
+                                                <col style="width: 192px" />
+                                                <col style="width: 80px" span="3" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">NO</th>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">문항수</th>
+                                                    <th scope="col">점수</th>
+                                                    <th scope="col">비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><div>1</div></td>
+                                                    <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                    <td><div>40</div></td>
+                                                    <td><div>100</div></td>
+                                                    <td><div></div></td>
+                                                </tr>
+                                                <tr class="txt_red">
+                                                    <td><div>1</div></td>
+                                                    <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                    <td><div>40</div></td>
+                                                    <td><div>39</div></td>
+                                                    <td><div>과락</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- // board -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableTd">- 테이블(상세 케이스)</h4>
+
+                            <div class="box" content-title="케이스">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react">
+                                        <caption>
+                                            타이틀1, 타이틀2, 타이틀3, 타이틀4 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 80px" />
+                                            <col style="width: 120px" />
+                                            <col />
+                                            <col style="width: 160px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">타이틀1</th>
+                                                <th scope="col">타이틀2</th>
+                                                <th scope="col">타이틀3</th>
+                                                <th scope="col">타이틀4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div><span class="data_badge1">문의</span></div>
+                                                </td>
+                                                <td data-cell-header="타이틀2"><div>시험</div></td>
+                                                <td data-cell-header="타이틀3" class="left">
+                                                    <div>
+                                                        <div class="new_set">
+                                                            <a href="javascript:;" class="txt_ellipsis">
+                                                                [정수] 2025년 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사
+                                                                <span class="ico_new"><span class="hidden">new</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀4">
+                                                    <div>
+                                                        <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div><strong>B000000000</strong></div>
+                                                </td>
+                                                <td data-cell-header="타이틀2"><div>-</div></td>
+                                                <td data-cell-header="타이틀3" class="left">
+                                                    <div>
+                                                        <ul class="list_dash">
+                                                            <li><strong>공무원:</strong> 공무원 경력증명서</li>
+                                                            <li><strong>일반사업장 근로자:</strong> 한국건설기술인협회나 한국엔지니어링협회 경력증명서 또는 회사 경력증명서(재직기간, 소속, 직위, 담당업무(구체적)가 모두 기재)</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀4">
+                                                    <div>
+                                                        <button type="button" class="btn_border_md radius">교육 수료증<span class="ico_bluearrow2"></span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div><span class="txt_green">확인완료</span></div>
+                                                </td>
+                                                <td data-cell-header="타이틀2"><div>시험</div></td>
+                                                <td data-cell-header="타이틀3" class="left">
+                                                    <div>
+                                                        <span class="txt_red">보완요청</span><br />
+                                                        요청일 : <span class="txt_blue">2025-01-10</span><br />
+                                                        만료일 : <span class="txt_red">2025-01-17</span>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀4">
+                                                    <div>456</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // ========== 본문 - 테이블 ========== -->
+
+                    <!-- ========== 본문 - 리스트 ========== -->
+                    <div class="section">
+                        <h3 class="h3">본문 (리스트)</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardList">- 리스트</h4>
                             <div class="box">
-                                <div class="article">
-                                    <!-- board -->
-                                    <div class="board_area">
-                                        <!-- form-->
-                                        <div class="form_section">
-                                            <!-- board_write -->
-                                            <div class="form_list base">
-                                                <!-- base -->
-                                                <div class="form_group">
-                                                    <div class="item">
-                                                        <div class="cell">
-                                                            <div class="form_item">
-                                                                <div class="group_box">
-                                                                    <div class="box">
-                                                                        <div class="inp_select">
-                                                                            <select title="경력 선택">
-                                                                                <option value="">경력 선택</option>
-                                                                                <option value="">1년이상</option>
-                                                                                <option value="">1년이하</option>
-                                                                                <option value="">없음</option>
-                                                                            </select>
-                                                                        </div>
+                                <!-- board  -->
+                                <div class="board_area">
+                                    <!-- tit -->
+                                    <div class="form_tit">
+                                        <h3 class="tit">폼 타이틀타이틀타이틀타이틀타이틀</h3>
+                                    </div>
+                                    <!--// tit -->
+
+                                    <!-- form-->
+                                    <div class="form_section">
+                                        <!-- board_write -->
+                                        <div class="form_list">
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userName">
+                                                        이름
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <input type="text" value="홍길동" id="userName" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="text" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="work1">근무지</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="근무지 입력" id="work1" autocomplete="off" />
                                                                     </div>
-                                                                    <div class="box">
-                                                                        <div class="inp_select">
-                                                                            <select title="교육 선택">
-                                                                                <option value="">교육 선택</option>
-                                                                                <option value="">실무교육확인서</option>
-                                                                                <option value="">고용노동부 직업능력개발훈련 수료증</option>
-                                                                                <option value="">해당없음</option>
-                                                                            </select>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="근무지 입력2" autocomplete="off" />
                                                                     </div>
-                                                                    <div class="box">
-                                                                        <button type="button" class="btn_primary_lg full">선택적용</button>
+                                                                </div>
+
+                                                                <div class="box">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="근무지 입력3" autocomplete="off" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -966,66 +635,92 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--// board_write -->
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="cellPhone">
+                                                        휴대폰 번호
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group gap0">
+                                                <div class="tit">
+                                                    <span>
+                                                        성별
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </span>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="radio_set reset">
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="male" name="gender" checked="" />
+                                                                    <label for="male">남성</label>
+                                                                </span>
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="female" name="gender" />
+                                                                    <label for="female">여성</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group line">
+                                                <div class="tit">
+                                                    <label for="userPassword">
+                                                        비밀번호
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="password" value="" id="userPassword" maxlength="16" placeholder="8자 이상(영문자, 숫자, 특수문자)" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="msg_txt">비밀번호는 8자 이상, 16자 이하의 영문자, 숫자 및 특수문자를 조합하여 사용해야 합니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userPasswordCheck">
+                                                        비밀번호 확인
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289 error">
+                                                                <input type="password" value="" id="userPasswordCheck" maxlength="16" placeholder="비밀번호 확인" />
+                                                            </div>
+                                                        </div>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">비밀번호 조건에 맞지 않습니다. 다시 입력해 주세요.</p>
+                                                        <p class="msg_error">비밀번호가 다릅니다.</p>
+                                                        <!--// 에러 : error -->
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!--// form-->
+                                        <!--// board_write -->
                                     </div>
-                                    <!--// board -->
+                                    <!--// form-->
                                 </div>
-                                <div class="article html_code on">
-                                    <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
-                                    </div>
-                                    <div class="boxing" style="display: none">
-                                        <pre><code class="html">// base
-&#x3C;!-- board --&#x3E;
-&#x3C;div class=&#x22;board_area&#x22;&#x3E;
-    &#x3C;!-- form--&#x3E;
-    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
-        &#x3C;!-- board_write --&#x3E;
-        &#x3C;div class=&#x22;form_list base&#x22;&#x3E;&#x3C;!-- base --&#x3E;
-            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
-                &#x3C;div class=&#x22;item&#x22;&#x3E;
-                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
-                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
-                            &#x3C;div class=&#x22;group_box&#x22;&#x3E;
-                                &#x3C;div class=&#x22;box&#x22;&#x3E;
-                                    &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
-                                        &#x3C;select title=&#x22;&#xACBD;&#xB825; &#xC120;&#xD0DD;&#x22;&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xACBD;&#xB825; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;1&#xB144;&#xC774;&#xC0C1;&#x3C;/option&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;1&#xB144;&#xC774;&#xD558;&#x3C;/option&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xC5C6;&#xC74C;&#x3C;/option&#x3E;
-                                        &#x3C;/select&#x3E;
-                                    &#x3C;/div&#x3E;
-                                &#x3C;/div&#x3E;
-                                &#x3C;div class=&#x22;box&#x22;&#x3E;
-                                    &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
-                                        &#x3C;select title=&#x22;&#xAD50;&#xC721; &#xC120;&#xD0DD;&#x22;&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xAD50;&#xC721; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721;&#xD655;&#xC778;&#xC11C;&#x3C;/option&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xACE0;&#xC6A9;&#xB178;&#xB3D9;&#xBD80; &#xC9C1;&#xC5C5;&#xB2A5;&#xB825;&#xAC1C;&#xBC1C;&#xD6C8;&#xB828; &#xC218;&#xB8CC;&#xC99D;&#x3C;/option&#x3E;
-                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xD574;&#xB2F9;&#xC5C6;&#xC74C;&#x3C;/option&#x3E;
-                                        &#x3C;/select&#x3E;
-                                    &#x3C;/div&#x3E;
-                                &#x3C;/div&#x3E;
-                                &#x3C;div class=&#x22;box&#x22;&#x3E;
-                                    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg full&#x22;&#x3E;&#xC120;&#xD0DD;&#xC801;&#xC6A9;&#x3C;/button&#x3E;
-                                &#x3C;/div&#x3E;
-                            &#x3C;/div&#x3E;
-                        &#x3C;/div&#x3E;
-                    &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;!--// board_write --&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;!--// form--&#x3E;
-&#x3C;/div&#x3E;
-&#x3C;!--// board --&#x3E;
-                                        </code></pre>
-                                    </div>
-                                </div>
+                                <!-- // board -->
                             </div>
 
                             <div class="box">
@@ -1405,269 +1100,286 @@
                                     <!--// board -->
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="section">
-                        <h3 class="h3">- List</h3>
-                        <div class="inner">
                             <div class="box">
                                 <div class="article">
                                     <!-- board -->
                                     <div class="board_area">
-                                        <!-- board_search -->
-                                        <div class="board_search">
-                                            <div class="form_item">
-                                                <div class="inp_select size_190">
-                                                    <select title="검색 조건 선택">
-                                                        <option value="">전체</option>
-                                                        <option value="">제목</option>
-                                                        <option value="">내용</option>
-                                                    </select>
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list col">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="userName1">이름</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp">
+                                                                    <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                    <input type="text" value="" id="userName1" placeholder="이름을 입력하세요" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form_item wide">
-                                                <div class="inp">
-                                                    <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
-                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                </div>
-                                                <button type="button" class="btn_search"><span class="hidden">검색</span></button>
-                                            </div>
-                                        </div>
-                                        <!--// board_search -->
-
-                                        <!-- board_search + checkbox -->
-                                        <div class="board_search flex_wrap">
-                                            <div class="form_item">
-                                                <div class="inp_select size_190">
-                                                    <select title="검색 조건 선택">
-                                                        <option value="">전체</option>
-                                                        <option value="">제목</option>
-                                                        <option value="">내용</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form_item wide">
-                                                <div class="inp">
-                                                    <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
-                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                </div>
-                                                <button type="button" class="btn_search"><span class="hidden">검색</span></button>
-                                            </div>
-                                            <div class="inp_round_box">
-                                                <!-- [D] 전체선택 사용시:
-                                                 1. 전체선택에 all 클래스 추가
-                                                 2. 동일 name 추가
-                                                 -->
-                                                <div>
-                                                    <input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked />
-                                                    <label for="roundchk1">전체목록</label>
-                                                </div>
-                                                <div>
-                                                    <input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" />
-                                                    <label for="roundchk2">1급</label>
-                                                </div>
-                                                <div>
-                                                    <input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" />
-                                                    <label for="roundchk3">2급</label>
-                                                </div>
-                                            </div>
-                                            <div class="inp_round_box">
-                                                <!-- [D] 전체선택 사용시:
-                                                 1. 전체선택에 all 클래스 추가
-                                                 2. 동일 name 추가
-                                                 -->
-                                                <div>
-                                                    <input type="checkbox" id="roundchk001" name="roundchk00" class="inp_round_txt all" checked />
-                                                    <label for="roundchk001">전체</label>
-                                                </div>
-                                                <div>
-                                                    <input type="checkbox" id="roundchk002" name="roundchk00" class="inp_round_txt" />
-                                                    <label for="roundchk002">1-234567890</label>
-                                                </div>
-                                                <div>
-                                                    <input type="checkbox" id="roundchk003" name="roundchk00" class="inp_round_txt" />
-                                                    <label for="roundchk003">2-123457980</label>
-                                                </div>
-                                                <div>
-                                                    <input type="checkbox" id="roundchk004" name="roundchk00" class="inp_round_txt" />
-                                                    <label for="roundchk004">3-123457980</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--// board_search + checkbox -->
-
-                                        <div class="board_desc_top">
-                                            <div class="lside">
-                                                <div class="board_count">전체 <span>10</span>/1,000</div>
-                                            </div>
-                                            <div class="rside">
-                                                <div class="form_item inblock">
-                                                    <div class="inp_select size_80">
-                                                        <select class="sm" title="노출 개수 선택">
-                                                            <option value="">15</option>
-                                                            <option value="">30</option>
-                                                            <option value="">50</option>
-                                                            <option value="">100</option>
-                                                        </select>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="cellPhone1">휴대폰번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp">
+                                                                    <input type="tel" value="" id="cellPhone1" placeholder="휴대폰번호 (숫자만 입력)" />
+                                                                </div>
+                                                            </div>
+                                                            <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요.</p>
+                                                            <!-- 에러 : error -->
+                                                            <p class="msg_error">등록된 회원정보가 아닙니다.</p>
+                                                            <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
+                                                            <!--// 에러 : error -->
+                                                        </div>
+                                                        <div class="cell full">
+                                                            <button type="button" class="btn_secondary_lg">인증번호 받기</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--// write -->
                                         </div>
-
-                                        <div class="board_desc_top">
-                                            <div class="lside">
-                                                <div class="form_item inblock">
-                                                    <div class="inp_select size_160">
-                                                        <select class="sm" title="카테고리 선택">
-                                                            <option value="">카테고리 전체</option>
-                                                            <option value="">자격증</option>
-                                                            <option value="">교육</option>
-                                                            <option value="">평가시험</option>
-                                                            <option value="">의견제출</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="rside">
-                                                <div class="form_item inblock">
-                                                    <div class="inp_select size_80">
-                                                        <select class="sm" title="노출 개수 선택">
-                                                            <option value="">15</option>
-                                                            <option value="">30</option>
-                                                            <option value="">50</option>
-                                                            <option value="">100</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- board_list -->
-                                        <table class="tbl react">
-                                            <caption>
-                                                No, 구분, 제목, 첨부파일, 등록일, 조회 정보 제공
-                                            </caption>
-                                            <colgroup>
-                                                <col style="width: 80px" span="2" />
-                                                <col />
-                                                <col style="width: 88px" />
-                                                <col style="width: 111px" span="2" />
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">No</th>
-                                                    <th scope="col">구분</th>
-                                                    <th scope="col">제목</th>
-                                                    <th scope="col">첨부파일</th>
-                                                    <th scope="col">등록일</th>
-                                                    <th scope="col">조회</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td data-cell-header="No">
-                                                        <div><span class="data_badge1">문의</span></div>
-                                                    </td>
-                                                    <td data-cell-header="구분"><div>시험</div></td>
-                                                    <td data-cell-header="제목" class="left">
-                                                        <div>
-                                                            <div class="new_set">
-                                                                <a href="javascript:;" class="txt_ellipsis">
-                                                                    [정수] 2025년 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사
-                                                                    <span class="ico_new"><span class="hidden">new</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="첨부파일">
-                                                        <div>
-                                                            <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="등록일"><div>2021-03-10</div></td>
-                                                    <td data-cell-header="조회"><div>000</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-cell-header="No">
-                                                        <div>1</div>
-                                                    </td>
-                                                    <td data-cell-header="구분"><div>시험</div></td>
-                                                    <td data-cell-header="제목" class="left">
-                                                        <div>
-                                                            <div class="new_set">
-                                                                <a href="javascript:;" class="txt_ellipsis">
-                                                                    [참고] 업무처리지침
-                                                                    <span class="ico_new"><span class="hidden">new</span></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="첨부파일">
-                                                        <div>
-                                                            <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="작성일"><div>2021-03-10</div></td>
-                                                    <td data-cell-header="조회"><div>000</div></td>
-                                                </tr>
-                                                <tr>
-                                                    <td data-cell-header="No">
-                                                        <div>1</div>
-                                                    </td>
-                                                    <td data-cell-header="구분"><div>시험</div></td>
-                                                    <td data-cell-header="제목" class="left">
-                                                        <div>
-                                                            <div class="new_set">
-                                                                <a href="javascript:;" class="txt_ellipsis"> [참고] 업무처리지침 업무처리지침 업무처리지침 업무처리지침 업무처리지침 업무처리지침업무처리지침 </a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="첨부파일">
-                                                        <div>
-                                                            <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                        </div>
-                                                    </td>
-                                                    <td data-cell-header="작성일"><div>2021-03-10</div></td>
-                                                    <td data-cell-header="조회"><div>000</div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!--// board_list -->
-
-                                        <div class="nodata">조회된 내역이 없습니다.</div>
-
-                                        <!-- pagination -->
-                                        <div class="pagination">
-                                            <ul>
-                                                <li class="arrow prev">
-                                                    <button type="button" title="이전"><span class="pc_only">이전</span></button>
-                                                </li>
-                                                <!-- 활성화 on, 접근성 title -->
-                                                <li class="on"><button type="button" title="선택 됨">1</button></li>
-                                                <li><button type="button">2</button></li>
-                                                <li><button type="button">3</button></li>
-                                                <li class="ellipsis">...</li>
-                                                <li><button type="button">10</button></li>
-                                                <li class="arrow next">
-                                                    <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!--// pagination -->
+                                        <!--// form-->
                                     </div>
                                     <!--// board -->
-                                    <script>
-                                        // 검색 value 삭제 샘플
-                                        $(".inp .btn_reset").click(function () {
-                                            const $input = $(this).parent().children("input");
-                                            $input.val("").focus();
-                                        });
-                                    </script>
+                                </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// col : column
+
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- form--&#x3E;
+    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
+        &#x3C;!-- write --&#x3E;
+        &#x3C;div class=&#x22;form_list col&#x22;&#x3E;&#x3C;!-- col --&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;userName1&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                &#x3C;!-- (&#xACF5;&#xD1B5;)&#xC811;&#xADFC;&#xC131; : id&#xAC12; &#xBCC0;&#xACBD; &#xC2DC; label for&#xAC12;&#xB3C4; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xBCC0;&#xACBD; --&#x3E;
+                                &#x3C;input type=&#x22;text&#x22; value=&#x22;&#x22; id=&#x22;userName1&#x22; placeholder=&#x22;&#xC774;&#xB984;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;tit&#x22;&#x3E;
+                    &#x3C;label for=&#x22;cellPhone1&#x22;&#x3E;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638;&#x3C;/label&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;inp&#x22;&#x3E;
+                                &#x3C;input type=&#x22;tel&#x22; value=&#x22;&#x22; id=&#x22;cellPhone1&#x22; placeholder=&#x22;&#xD734;&#xB300;&#xD3F0;&#xBC88;&#xD638; (&#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;)&#x22; /&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;p class=&#x22;msg_txt&#x22;&#x3E;&#x27;-&#x27;&#xC0DD;&#xB7B5;, 11&#xC790;&#xB9AC; &#xC22B;&#xC790;&#xB9CC; &#xC785;&#xB825;&#xD574; &#xC8FC;&#xC138;&#xC694;.&#x3C;/p&#x3E;
+                        &#x3C;!-- &#xC5D0;&#xB7EC; : error --&#x3E;
+                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xB4F1;&#xB85D;&#xB41C; &#xD68C;&#xC6D0;&#xC815;&#xBCF4;&#xAC00; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                        &#x3C;p class=&#x22;msg_error&#x22;&#x3E;&#xC798;&#xBABB;&#xB41C; &#xD615;&#xC2DD;&#xC758; &#xC804;&#xD654;&#xBC88;&#xD638;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                        &#x3C;!--// &#xC5D0;&#xB7EC; : error --&#x3E;
+                    &#x3C;/div&#x3E;
+                    &#x3C;div class=&#x22;cell full&#x22;&#x3E;
+                        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC778;&#xC99D;&#xBC88;&#xD638; &#xBC1B;&#xAE30;&#x3C;/button&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// write --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--// form--&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- board_write -->
+                                            <div class="form_list base">
+                                                <!-- base -->
+                                                <div class="form_group">
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="inp_select">
+                                                                            <select title="경력 선택">
+                                                                                <option value="">경력 선택</option>
+                                                                                <option value="">1년이상</option>
+                                                                                <option value="">1년이하</option>
+                                                                                <option value="">없음</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <div class="inp_select">
+                                                                            <select title="교육 선택">
+                                                                                <option value="">교육 선택</option>
+                                                                                <option value="">실무교육확인서</option>
+                                                                                <option value="">고용노동부 직업능력개발훈련 수료증</option>
+                                                                                <option value="">해당없음</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <button type="button" class="btn_primary_lg full">선택적용</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// board_write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">html code 열기</button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// base
+&#x3C;!-- board --&#x3E;
+&#x3C;div class=&#x22;board_area&#x22;&#x3E;
+    &#x3C;!-- form--&#x3E;
+    &#x3C;div class=&#x22;form_section&#x22;&#x3E;
+        &#x3C;!-- board_write --&#x3E;
+        &#x3C;div class=&#x22;form_list base&#x22;&#x3E;&#x3C;!-- base --&#x3E;
+            &#x3C;div class=&#x22;form_group&#x22;&#x3E;
+                &#x3C;div class=&#x22;item&#x22;&#x3E;
+                    &#x3C;div class=&#x22;cell&#x22;&#x3E;
+                        &#x3C;div class=&#x22;form_item&#x22;&#x3E;
+                            &#x3C;div class=&#x22;group_box&#x22;&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
+                                        &#x3C;select title=&#x22;&#xACBD;&#xB825; &#xC120;&#xD0DD;&#x22;&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xACBD;&#xB825; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;1&#xB144;&#xC774;&#xC0C1;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;1&#xB144;&#xC774;&#xD558;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xC5C6;&#xC74C;&#x3C;/option&#x3E;
+                                        &#x3C;/select&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;div class=&#x22;inp_select&#x22;&#x3E;
+                                        &#x3C;select title=&#x22;&#xAD50;&#xC721; &#xC120;&#xD0DD;&#x22;&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xAD50;&#xC721; &#xC120;&#xD0DD;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721;&#xD655;&#xC778;&#xC11C;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xACE0;&#xC6A9;&#xB178;&#xB3D9;&#xBD80; &#xC9C1;&#xC5C5;&#xB2A5;&#xB825;&#xAC1C;&#xBC1C;&#xD6C8;&#xB828; &#xC218;&#xB8CC;&#xC99D;&#x3C;/option&#x3E;
+                                            &#x3C;option value=&#x22;&#x22;&#x3E;&#xD574;&#xB2F9;&#xC5C6;&#xC74C;&#x3C;/option&#x3E;
+                                        &#x3C;/select&#x3E;
+                                    &#x3C;/div&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                                    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg full&#x22;&#x3E;&#xC120;&#xD0DD;&#xC801;&#xC6A9;&#x3C;/button&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// board_write --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--// form--&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// board --&#x3E;
+                                        </code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- ========== 본문 - 리스트 ========== -->
+
+                    <!-- ========== 본문 - 하단 ========== -->
+                    <div class="section">
+                        <h3 class="h3" id="boardBottom">하단</h3>
+
+                        <div class="inner">
+                            <div class="box" content-title="문구">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <div class="board_desc_bottom">
+                                        <p class="txt_mark">(기본간격 24px) 증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</p>
+                                    </div>
+                                    <div class="board_desc_bottom gap_mt10">
+                                        <p class="txt_note">(txt_note만 노출될 경우 10px) 배송시 등록된 본인명의의 휴대전화로 연락드립니다.</p>
+                                    </div>
+                                </div>
+                                <!-- // board -->
+                            </div>
+
+                            <div class="box" id="boardPage" content-title="페이지네이션">
+                                <!-- pagination -->
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="arrow prev">
+                                            <button type="button" title="이전"><span class="pc_only">이전</span></button>
+                                        </li>
+                                        <!-- 활성화 on, 접근성 title -->
+                                        <li class="on"><button type="button" title="선택 됨">1</button></li>
+                                        <li><button type="button">2</button></li>
+                                        <li><button type="button">3</button></li>
+                                        <li class="ellipsis">...</li>
+                                        <li><button type="button">10</button></li>
+                                        <li class="arrow next">
+                                            <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--// pagination -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== 하단 ========== -->
+
+                    <!-- ========== 본문 - 내용 없음 ========== -->
+                    <div class="section">
+                        <h3 class="h3">본문 (내용없음)</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardEmpty">- 내용없음</h4>
+
+                            <div class="box">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <div class="nodata">조회된 내역이 없습니다.</div>
+                                </div>
+                                <!-- // board -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== 본문 - 내용 없음 ========== -->
                 </div>
             </div>
         </div>
@@ -1696,6 +1408,12 @@
             dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
             ignoreReadonly: true,
             buttonImageOnly: false,
+        });
+
+        // 검색 value 삭제 샘플
+        $(".inp .btn_reset").click(function () {
+            const $input = $(this).parent().children("input");
+            $input.val("").focus();
         });
 
         // 첨부파일 샘플

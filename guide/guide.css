@@ -1,7 +1,7 @@
 @charset "utf-8";
 #guide_wrap {
     padding: 20px;
-    min-width: 120rem;
+    /* min-width: 120rem; */
 }
 .guide_gnb {
     margin-bottom: 2rem;
@@ -25,6 +25,10 @@
     font-size: 23px;
     margin-bottom: 10px;
 }
+.h4 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
 pre code.hljs {
     font-size: 13px;
     letter-spacing: -0.06rem;
@@ -38,9 +42,24 @@ pre code.hljs {
     padding: 1rem;
 }
 .section > .inner > .box {
+    position: relative;
     padding: 3rem;
     border: 0.1rem solid #cdd1d5;
     border-radius: 0.8rem;
+}
+.section .box[content-title] {
+    margin-top: 2rem;
+}
+.section > .inner > .box:after {
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    padding: 0 1rem;
+    background: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transform: translateY(-50%);
+    content: attr(content-title);
 }
 .section > .inner > .box + .box {
     margin-top: 3rem;
