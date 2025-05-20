@@ -76,6 +76,14 @@ pre code.hljs {
 .article.html_code .boxing {
     margin-top: 1rem;
 }
+.list_guide_demical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    li {
+        list-style: decimal inside;
+    }
+}
 @media only screen and (max-width: 768px) {
     #guide_wrap {
         min-width: 100%;
