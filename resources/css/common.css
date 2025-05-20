@@ -5303,6 +5303,13 @@ select.sm {
   min-width: 11.8rem;
   margin: 0 var(--gap-5);
 }
+.bottom_btn_area.cell4 .rside:has(.btn_primary_lg:only-child) {
+  flex: 1 1 auto;
+  text-align: right;
+}
+.bottom_btn_area.cell4 .rside .btn_primary_lg:only-child {
+  min-width: 25.1rem;
+}
 @media screen and (max-width: 1200px) {
   .bottom_btn_area.cell4 {
     gap: 0 1.5rem;

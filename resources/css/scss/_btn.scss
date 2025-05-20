@@ -241,6 +241,25 @@
             min-width: 11.8rem;
             margin: 0 var(--gap-5);
         }
+        // .lside {
+        //     &:has([class^="btn_"]:nth-child(2)),
+        //     &:has([class^="btn_"]:nth-child(3)) {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: 1.5rem 0;
+        //     }
+        // }
+        .rside {
+            &:has(.btn_primary_lg:only-child) {
+                flex: 1 1 auto;
+                text-align: right;
+            }
+            .btn_primary_lg {
+                &:only-child {
+                    min-width: 25.1rem;
+                }
+            }
+        }
         @include mobile {
             gap: 0 1.5rem;
             display: block;
