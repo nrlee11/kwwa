@@ -334,7 +334,7 @@ button {
 #header .utility {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: var(--gap-25);
+  margin-bottom: var(--gap-55);
 }
 #header .utility .box {
   display: flex;
@@ -346,26 +346,6 @@ button {
   display: flex;
   gap: 1.5rem;
   margin: var(--gap-5) 0 0 var(--gap-35);
-}
-#header .utility .box_utility [class^=btn_] + [class^=btn_] {
-  margin-left: 0;
-}
-#header .utility .box_utility .inner {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-#header .utility .box_utility .btn_primary_sm {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 24rem;
-  padding: 0 var(--gap-15);
-  background-color: var(--active-bgcolor, #8a949e);
-  text-align: left;
-}
-#header .utility .box_utility .btn_primary_sm:hover {
-  --active-bgcolor: #4c87f6;
 }
 #header .utility .site_switch {
   margin-left: var(--gap-15);
@@ -397,9 +377,31 @@ button {
 #header .utility .site_switch ul li + li {
   margin-top: var(--gap-5);
 }
+#header .inner_header {
+  display: flex;
+  justify-content: space-between;
+}
+#header .inner_header .rside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#header .inner_header .btn_primary_sm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 24rem;
+  padding: 0 var(--gap-15);
+  background-color: var(--active-bgcolor, #8a949e);
+  text-align: left;
+}
+#header .inner_header .btn_primary_sm:hover {
+  --active-bgcolor: #4c87f6;
+}
 @media screen and (max-width: 1200px) {
   #header .utility,
-  #header .nav_area {
+  #header .nav_area,
+  #header .inner_header .rside {
     display: var(--hide);
   }
 }
