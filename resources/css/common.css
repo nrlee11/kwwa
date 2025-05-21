@@ -546,17 +546,7 @@ button {
   }
 }
 #main .section + .section {
-  margin-top: var(--gap-70);
-}
-@media screen and (max-width: 1200px) {
-  #main .section + .section {
-    margin-top: var(--gap-50);
-  }
-}
-@media screen and (max-width: 767px) {
-  #main .section + .section {
-    margin-top: 5.8rem;
-  }
+  margin-top: var(--gap-50);
 }
 
 #footer {

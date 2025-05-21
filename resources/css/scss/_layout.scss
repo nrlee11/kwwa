@@ -307,13 +307,7 @@
     }
     .section {
         + .section {
-            margin-top: var(--gap-70);
-            @include mobile {
-                margin-top: var(--gap-50);
-            }
-            @include sm-mobile {
-                margin-top: 5.8rem;
-            }
+            margin-top: var(--gap-50);
         }
     }
 }
