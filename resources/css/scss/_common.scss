@@ -2012,6 +2012,9 @@ select {
                 font-size: var(--font-size-lg);
                 font-weight: var(--font-bold);
             }
+            .medium_point {
+                font-weight: var(--font-medium);
+            }
             .info {
                 margin-top: var(--gap-7);
                 color: var(--color-gray);

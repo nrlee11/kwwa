@@ -3010,6 +3010,9 @@ select.sm {
   font-size: var(--font-size-lg);
   font-weight: var(--font-bold);
 }
+.board_view .head .tit_sec .medium_point {
+  font-weight: var(--font-medium);
+}
 .board_view .head .tit_sec .info {
   margin-top: var(--gap-7);
   color: var(--color-gray);
