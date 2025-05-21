@@ -1191,6 +1191,9 @@ button {
 .align_right {
   text-align: right;
 }
+.align_middle {
+  vertical-align: middle;
+}
 
 .txt_blue {
   color: var(--color-warmblue);
