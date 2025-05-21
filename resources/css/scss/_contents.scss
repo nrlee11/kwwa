@@ -469,35 +469,6 @@
             margin-top: var(--gap-20);
         }
     }
-    .choice_text_box {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: var(--gap-20) var(--gap-10);
-        .inp_choice {
-            flex: 0 0 auto;
-            position: relative;
-        }
-        .inp_choice_txt {
-            flex: 1 0 0;
-            height: auto;
-            padding: 0;
-            border-radius: 0;
-            border: 0.2rem solid var(--color-darkgray);
-            border-width: 0 0 0.2rem 0;
-            font-size: var(--font-size-md);
-            line-height: 2rem;
-            resize: none;
-            &:focus {
-                border-color: #de3412;
-                outline: none;
-            }
-        }
-        .txt_note {
-            flex: 0 0 auto;
-            width: 100%;
-        }
-    }
     .radio_set {
         .inp_radio {
             display: block;

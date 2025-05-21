@@ -29,15 +29,20 @@
     height: 100%;
     .box_round {
         flex: 1 1 auto;
+        box-sizing: border-box;
     }
 }
 
 .box_round {
     margin-top: var(--gap-20);
     padding: var(--gap-20) var(--gap-16);
+    border: 1px solid var(--color-white);
     border-radius: 1rem;
     background: var(--color-white);
     box-sizing: border-box;
+    &.is_error {
+        border-color: #de3412;
+    }
     img {
         display: block;
         max-width: 100%;

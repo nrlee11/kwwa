@@ -3691,15 +3691,6 @@ select {
             }
         }
 
-        .article_servay {
-            display: flex;
-            align-items: stretch;
-            flex-direction: column;
-            height: 100%;
-            .box_round {
-                flex: 1 1 auto;
-            }
-        }
         .tab_area {
             flex: 0 1 auto;
             display: flex;
@@ -3733,18 +3724,6 @@ select {
                 padding: var(--gap-12) var(--gap-16);
                 border-radius: 0 0 1rem 1rem;
                 background: var(--color-white);
-            }
-        }
-        .box_round {
-            margin-top: var(--gap-20);
-            padding: var(--gap-20) var(--gap-16);
-            border-radius: 1rem;
-            background: var(--color-white);
-            box-sizing: border-box;
-            img {
-                display: block;
-                max-width: 100%;
-                margin: 1rem 0;
             }
         }
         .foot {
