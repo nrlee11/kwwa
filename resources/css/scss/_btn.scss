@@ -54,25 +54,7 @@
         &:hover {
             color: var(--color-darkblue);
             border-color: var(--color-darkblue);
-            background-color: #eef3ff;
-            [class*="_bluearrow"] {
-                background: url($url-img-icon + "ico_arrow_blue4.svg") no-repeat 0 0;
-            }
-            [class*="_bluearrow2"] {
-                background: url($url-img-icon + "ico_arrow_blue3.svg") no-repeat 0 0;
-            }
-            .ico_quick1 {
-                background: url($url-img-icon + "ico_quick1_on.svg") no-repeat 0 0;
-            }
-            .ico_quick2 {
-                background: url($url-img-icon + "ico_quick2_on.svg") no-repeat 0 0;
-            }
-            .ico_quick3 {
-                background: url($url-img-icon + "ico_quick3_on.svg") no-repeat 0 0;
-            }
-            .ico_quick4 {
-                background: url($url-img-icon + "ico_quick4_on.svg") no-repeat 0 0;
-            }
+            background-color: rgba(#4c87f6, 0.1);
         }
     }
     &[class*="_warmblue"] {
