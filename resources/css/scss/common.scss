@@ -1,2 +1,18 @@
 @charset "UTF-8";
-@import "_variables", "_reset", "_mixin", "_layout", "_common", "_btn", "_main", "_contents", "_avi", "_survay";
+
+// reset
+@import "_variables";
+@import "_reset";
+@import "_mixin";
+
+// common
+@import "_layout";
+@import "_common";
+@import "_btn";
+
+// page
+@import "_main";
+@import "_contents";
+@import "_join";
+@import "_avi";
+@import "_survay";

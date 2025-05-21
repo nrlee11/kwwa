@@ -105,68 +105,6 @@
     }
 }
 
-// 간편인증
-.identity_area {
-    @include flex-center;
-    gap: 0 1.5rem;
-    > button {
-        width: 13rem;
-        height: 12.2rem;
-        padding: var(--gap-18) var(--gap-7);
-        color: var(--color-warmblue);
-        font-size: var(--font-size-sm);
-        font-weight: var(--font-bold);
-        border-radius: 1rem;
-        border: $border var(--color-warmblue);
-        [class^="ico_"] {
-            display: block;
-            width: 4rem;
-            height: 4rem;
-            margin: var(--gap-20) auto 0;
-        }
-        @for $i from 1 through 2 {
-            .ico_identity#{$i} {
-                background: url($url-img-icon + "ico_identity#{$i}.svg") no-repeat 0 0;
-            }
-        }
-    }
-}
-
-// 회원가입
-.join_wrap {
-    // margin-top: 7.5rem;
-    // @include mobile {
-    //     margin-top: var(--gap-50) !important;
-    // }
-    // .identity_area {
-    //     padding: 3.5rem 0 11rem;
-    //     @include mobile {
-    //         padding: 0 0 var(--gap-50);
-    //     }
-    // }
-    .join_form {
-        .form_list {
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-    }
-    &.wide {
-        margin-top: var(--gap-24);
-        @include mobile {
-            margin-top: var(--gap-50);
-        }
-        .bottom_btn_area {
-            margin-top: var(--gap-50);
-        }
-    }
-    .bottom_btn_area {
-        margin-top: var(--gap-24);
-        @include mobile {
-            margin-top: var(--gap-50);
-        }
-    }
-}
-
 // 자격·과정안내
 // 취득방법 및 절차
 .license_process2 {

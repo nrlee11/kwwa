@@ -39,18 +39,9 @@
                                     <h3 class="tit ico">본인인증으로 찾기</h3>
                                 </div>
 
-                                <!-- 본인확인 -->
-                                <div class="identity_area">
-                                    <button type="button">
-                                        휴대폰 본인인증
-                                        <span class="ico_identity1"></span>
-                                    </button>
-                                    <button type="button">
-                                        통합인증(간편인증)
-                                        <span class="ico_identity2"></span>
-                                    </button>
-                                </div>
-                                <!--// 본인확인 -->
+                                <!-- [include] 본인인증 -->
+                                <div data-include-file="../include/components/identity.html" class="includeJs"></div>
+                                <!--// [include] 본인인증 -->
                             </div>
                             <!--// section(e) -->
 
@@ -156,7 +147,7 @@
         <!-- [include] side(s) : 확인용 -->
         <div data-include-file="/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
-        
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
     </body>
