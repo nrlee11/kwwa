@@ -42,6 +42,11 @@
                         <!-- page_title(s) -->
                         <div class="page_title">
                             <h2 class="tit">영수증, 계산서 발급</h2>
+                            <p class="gap_mt50">
+                                발행가능한 지출증빙 중 영수증과 납입확인서는 바로 출력이 가능하며, 계산서는 별도로 발급요청 하여야 합니다.<br />
+                                계산서는 발행신청 접수 후 발행에 영업일 기준 3~5일 정도가 소요되며, 등록하신 이메일을 통해 받아보실 수 있습니다.<br />
+                                계산서 발행을 요청하는 경우 해당건을 선택하신 후 요청버튼을 클릭하여 주십시오.
+                            </p>
                         </div>
                         <!--// page_title(e) -->
 
@@ -57,7 +62,7 @@
                                     <!-- board_list -->
                                     <table class="tbl" style="width: 1033px">
                                         <caption>
-                                            선택, No, 상품명, 자격증 유형, 구분, 금액, 결제방법, 결제상태, 승인일, 비고 정보 제공
+                                            선택, No, 상품명, 자격증 유형, 구분, 금액, 결제방법, 결제상태, 승인일, 출력 정보 제공
                                         </caption>
                                         <colgroup>
                                             <col style="width: 80px" span="2" />
@@ -79,7 +84,7 @@
                                                 <th scope="col">결제방법</th>
                                                 <th scope="col">결제상태</th>
                                                 <th scope="col">승인일</th>
-                                                <th scope="col">비고</th>
+                                                <th scope="col">출력</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -92,16 +97,19 @@
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td data-cell-header="No"><div>1</div></td>
-                                                <td data-cell-header="상품명"><div>양성과정 교육비</div></td>
-                                                <td data-cell-header="자격 유형"><div>상수 1급</div></td>
-                                                <td data-cell-header="구분"><div>1차</div></td>
-                                                <td data-cell-header="금액"><div>783,000</div></td>
-                                                <td data-cell-header="결제방법"><div>가상계좌</div></td>
-                                                <td data-cell-header="결제상태"><div>입금확인</div></td>
-                                                <td data-cell-header="승인일"><div>2021-03-10</div></td>
-                                                <td data-cell-header="비고">
-                                                    <div><button type="button" class="btn_txtlink">영수증</button></div>
+                                                <td><div>1</div></td>
+                                                <td><div>양성과정 교육비</div></td>
+                                                <td><div>상수 1급</div></td>
+                                                <td><div>1차</div></td>
+                                                <td><div>783,000</div></td>
+                                                <td><div>가상계좌</div></td>
+                                                <td><div>입금확인</div></td>
+                                                <td><div>2021-03-10</div></td>
+                                                <td class="left">
+                                                    <div>
+                                                        <button type="button" class="btn_txtlink">영수증</button><br />
+                                                        <button type="button" class="btn_txtlink">납입확인서</button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -113,17 +121,15 @@
                                                         </span>
                                                     </div>
                                                 </td>
-                                                <td data-cell-header="No"><div></div></td>
-                                                <td data-cell-header="상품명"><div></div></td>
-                                                <td data-cell-header="자격 유형"><div></div></td>
-                                                <td data-cell-header="구분"><div></div></td>
-                                                <td data-cell-header="금액"><div></div></td>
-                                                <td data-cell-header="결제방법"><div></div></td>
-                                                <td data-cell-header="결제상태"><div></div></td>
-                                                <td data-cell-header="승인일"><div></div></td>
-                                                <td data-cell-header="비고">
-                                                    <div><button type="button" class="btn_txtlink"></button></div>
-                                                </td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td><div></div></td>
+                                                <td class="left"><div></div></td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
@@ -147,7 +153,7 @@
 
                                 <div class="board_desc_bottom">
                                     <ul class="list_mark">
-                                        <li>카드 결제 및 가상계좌 입금의 영수증은 비고란을 확인해 주세요.</li>
+                                        <li>카드 결제 및 가상계좌 입금의 영수증은 출력란을 확인해 주세요.</li>
                                         <li>납부사실 확인에 대해 협회 승인이 필요할 경우 영수증이 있는 건에 대해 납입확인서 발급이 가능합니다.</li>
                                         <li>사업자인 경우 가상계좌 입금완료 및 현금영수증 미 발행 건에 대해 계산서 발행이 가능합니다. 그 외 발행이 불가 합니다.</li>
                                     </ul>
