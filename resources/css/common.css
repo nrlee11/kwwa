@@ -6796,11 +6796,14 @@ select.sm {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  width: 70%;
   padding: 0 2.2rem 10.4rem;
   max-height: 100vh;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 1200px) {
   .container_avi .lside {
+    width: 100%;
     padding: 0;
   }
 }
@@ -6809,55 +6812,45 @@ select.sm {
   justify-content: space-between;
   margin-bottom: 0;
   padding: 2.5rem 0 2.9rem;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 1200px) {
   .container_avi .lside .tit_area {
     flex: 0 0 auto;
     align-items: center;
+    min-height: 8rem;
     margin-bottom: 0;
-    padding: 0 0 0 1.6rem;
+    padding: 1.6rem 0 1.6rem 1.6rem;
   }
 }
 .container_avi .lside .tit {
   display: flex;
-  align-items: center;
-  gap: 0.7rem;
+  padding-left: 0.7rem;
+  border-left: 0.6rem solid var(--color-warmblue);
   font-size: 3.2rem;
-  line-height: 1;
+  line-height: 4.2rem;
 }
 @media screen and (max-width: 1200px) {
   .container_avi .lside .tit {
     font-size: 2rem;
+    line-height: 2.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
-.container_avi .lside .tit.ico {
-  padding-left: 0;
-}
-.container_avi .lside .tit.ico:before {
-  position: relative;
-  top: auto;
-  left: auto;
-  display: inline-block;
-  width: 0.6rem;
-  height: 4.2rem;
-  margin-top: 0;
-  background: var(--color-warmblue);
-  content: "";
-}
-@media screen and (max-width: 1200px) {
-  .container_avi .lside .tit.ico:before {
-    height: 2.4rem;
-  }
-}
-.container_avi .lside .btn {
+.container_avi .lside .btn_mo {
   display: none;
-  padding: 1.6rem;
+  flex: 0 0 auto;
+  padding: 0 1.6rem 0 1rem;
   font-size: 1.5rem;
   color: var(--color-white);
   line-height: 1.5;
 }
 @media screen and (max-width: 1200px) {
-  .container_avi .lside .btn {
+  .container_avi .lside .btn_mo {
     display: block;
   }
 }
@@ -6865,21 +6858,28 @@ select.sm {
   flex: 0 1 auto;
   height: 100%;
 }
+.container_avi .rside {
+  flex: 1 1 auto;
+  width: 30%;
+  max-width: 55.5rem;
+  min-width: 30rem;
+}
 @media screen and (max-width: 1200px) {
   .container_avi .rside {
     display: none;
     position: fixed;
-    top: 5.7rem;
+    top: 8rem;
     left: 0;
     bottom: 0;
     width: 100%;
+    max-width: auto;
+    min-width: 100%;
   }
 }
 .container_avi .rside .inner {
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  width: 55.5rem;
+  height: 100%;
   max-height: 100vh;
   padding: 0 2.3rem 2rem;
   background: #525254;
@@ -6908,50 +6908,9 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .container_avi .rside .tit_area .tit {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     line-height: 1;
   }
-}
-.container_avi .rside .avi_area {
-  flex: 1 1 auto;
-  overflow: auto;
-}
-.container_avi .rside .avi_list {
-  background: #2e2e2e;
-}
-.container_avi .rside .avi_list .txt_avi {
-  display: flex;
-  gap: 0.4rem;
-  padding: 2.1rem 3.3rem 2.1rem 1rem;
-  text-align: left;
-  font-size: 2rem;
-  color: #b1b8be;
-}
-@media screen and (max-width: 1200px) {
-  .container_avi .rside .avi_list .txt_avi {
-    padding: 1rem 2.5rem 1rem 1rem;
-    font-size: 1.6rem;
-    line-height: 2.5rem;
-  }
-}
-.container_avi .rside .avi_list .num {
-  flex: 0 0 auto;
-}
-.container_avi .rside .avi_list .tit {
-  display: block;
-  background: var(--color-black);
-}
-.container_avi .rside .avi_list .tit .txt_avi {
-  color: var(--color-white);
-}
-.container_avi .rside .avi_list .sub_list li {
-  border-top: 0.3rem solid #525254;
-}
-.container_avi .rside .avi_list .sub_list .txt_avi {
-  padding-left: 3rem;
-}
-.container_avi .rside .avi_item:not(:first-child) {
-  border-top: 0.3rem solid #525254;
 }
 .container_avi .rside .btn {
   flex: 0 0 auto;
@@ -6971,34 +6930,86 @@ select.sm {
     font-size: 2rem;
   }
 }
-.container_avi .rside .btn_avi {
+.container_avi .avi_area {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+.container_avi .avi_list {
+  background: #2e2e2e;
+}
+.container_avi .avi_list .txt_avi {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 9rem;
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1;
+  color: #b1b8be;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1200px) {
+  .container_avi .avi_list .txt_avi {
+    min-height: auto;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+}
+.container_avi .avi_list .tit {
+  display: block;
+  transition: 300ms;
+}
+.container_avi .avi_list .tit .txt_avi {
+  font-weight: var(--font-medium);
+}
+.container_avi .avi_list .sub_list li {
+  border-top: 0.3rem solid #525254;
+}
+.container_avi .avi_list .sub_list .txt_avi {
+  padding-left: 3rem;
+}
+.container_avi .avi_item:not(:first-child) {
+  border-top: 0.3rem solid #525254;
+}
+.container_avi .avi_item:has(.btn_avi[aria-current=true]) .tit {
+  background-color: var(--color-black);
+}
+.container_avi .avi_item:has(.btn_avi[aria-current=true]) .tit .txt_avi {
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+}
+.container_avi .btn_avi {
   display: block;
   width: 100%;
   background: #2e2e2e;
 }
-.container_avi .rside .btn_avi .txt_avi:after {
-  align-self: center;
+.container_avi .btn_avi .txt_avi {
+  align-items: center;
+  gap: 2.6rem;
+}
+.container_avi .btn_avi .txt_avi:after {
   flex: 0 0 auto;
   width: 3.4rem;
   height: 3.4rem;
-  margin-left: 2.6rem;
+  margin-left: auto;
   background: url("../../resources/images/icon/ico_avi.svg") no-repeat 0 0;
   content: "";
 }
 @media screen and (max-width: 1200px) {
-  .container_avi .rside .btn_avi .txt_avi:after {
+  .container_avi .btn_avi .txt_avi:after {
     width: 2.5rem;
     height: 2.5rem;
     background-size: contain;
-    margin-left: 0;
   }
 }
-.container_avi .rside .btn_avi[aria-current=true] .txt_avi {
+.container_avi .btn_avi[aria-current=true] .txt_avi {
   background: linear-gradient(90deg, #256ef4 0%, #86aff9 100%);
   font-weight: var(--font-bold);
   color: var(--color-white);
+  transition: 300ms;
 }
-.container_avi .rside .btn_avi[aria-current=true] .txt_avi:after {
+.container_avi .btn_avi[aria-current=true] .txt_avi:after {
   background-image: url("../../resources/images/icon/ico_avi_active.svg");
 }
 

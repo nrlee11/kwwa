@@ -355,7 +355,7 @@ $(function () {
 
     // 강의실 - 동영상 플레이어
     const aviToggle = function () {
-        $(".container_avi .btn[aria-controls='aviPlayer']").click(function (e) {
+        $(".container_avi .btn_mo[aria-controls='aviPlayer']").click(function (e) {
             $("#aviPlayer").slideToggle(700);
         });
     };
