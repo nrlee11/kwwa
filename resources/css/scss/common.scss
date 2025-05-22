@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
-// reset
-@import "_variables";
-@import "_reset";
-@import "_mixin";
+// 설정
+@import "_variables"; // 변수
+@import "_reset"; // 초기화
+@import "_mixin"; // 믹스인
 
-// common
+// 공통
 @import "_layout";
 @import "_common";
 @import "_btn";
-@import "_input";
+@import "_input"; // 모든 타입
 
-// page
+// 페이지 - work.html 기준 분리
 @import "_main";
-@import "_contents";
-@import "_join";
+@import "_contents"; // 메인, 분리된 페이지를 제외한 나머지
+@import "_join"; //
 @import "_license"; // license + info
-@import "_avi";
-@import "_survay";
+@import "_avi"; // 강의실 (동영상플레이어)
+@import "_survay"; // 만족도 조사

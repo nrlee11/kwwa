@@ -50,28 +50,29 @@
                     </div>
 
                     <!-- 폴더구조 -->
-                    <div class="section" id="assetFolder">
-                        <h2 class="h2">- Assets (폴더구조)</h2>
+                    <div class="section">
+                        <h2 class="h2">- 폴더구조</h2>
                         <div class="inner">
-                            <div class="box">
+                            <div class="box" data-content-title="HTML">
+                                <ul>
+                                    <li><strong>include : </strong>공통 HTML</li>
+                                    <ul class="list_dot">
+                                        <li>/html/include/... : 전체 공통</li>
+                                        <li>/html/.../include : 해당 폴더 공통</li>
+                                    </ul>
+                                </ul>
+                            </div>
+
+                            <div class="box" data-content-title="HTML외">
                                 <div class="article html_code on">
                                     <div class="btn">
-                                        <button type="button" class="btn_primary_sm btn_code_toggle">목록<span>열기</span></button>
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">상세 <span>열기</span></button>
                                     </div>
                                     <div class="boxing" style="display: none">
                                         <dl class="box_border">
                                             <div>
                                                 <dt><strong>SCSS</strong></dt>
-                                                <dd>
-                                                    /resources/css/scss/_variables.scss<br />
-                                                    /resources/css/scss/_reset.scss<br />
-                                                    /resources/css/scss/_mixin.scss<br />
-                                                    /resources/css/scss/_layout.scss<br />
-                                                    /resources/css/scss/_common.scss<br />
-                                                    /resources/css/scss/_btn.scss<br />
-                                                    /resources/css/scss/_main.scss<br />
-                                                    /resources/css/scss/_contents.scss<br />
-                                                </dd>
+                                                <dd>/resources/css/scss/common.scss 주석 참고</dd>
                                             </div>
 
                                             <div class="gap_mt24">
@@ -387,7 +388,7 @@
                                     <img src="/resources/images/icon/ico_avi.svg" alt="" />
                                     <img src="/resources/images/icon/ico_copy_light.svg" alt="" />
                                     <img src="/resources/images/icon/ico_print_light.svg" alt="" />
-                                    
+
                                     <img src="/resources/images/icon/ico_identity1.svg" alt="" />
                                     <img src="/resources/images/icon/ico_identity2.svg" alt="" />
 
@@ -398,9 +399,9 @@
 
                                     <div class="size_full">
                                         <img src="/resources/images/common/bg_checkbox_off.svg" alt="" />
-                                        <span style="padding: 1px 3px;background:black;">
+                                        <span style="padding: 1px 3px; background: black">
                                             <img src="/resources/images/common/bg_checkbox.svg" alt="" />
-                                        </span>                                        
+                                        </span>
                                         <img src="/resources/images/icon/ico_completion_before.svg" alt="" />
                                         <img src="/resources/images/icon/ico_completion_after1.svg" alt="" />
                                         <img src="/resources/images/icon/ico_completion_after2.svg" alt="" />
@@ -415,12 +416,11 @@
                                         <img src="/resources/images/icon/ico_mark_blue.svg" alt="" />
                                     </div>
 
-
                                     <div class="size_full">
                                         <img src="/resources/images/icon/ico_download2.svg" alt="" />
                                         <img src="/resources/images/icon/ico_download.svg" alt="" />
                                         <img src="/resources/images/icon/ico_upload.svg" alt="" />
-                                        <span style="padding: 1px 3px;background:black;">
+                                        <span style="padding: 1px 3px; background: black">
                                             <img src="/resources/images/icon/ico_arrow.svg" alt="" />
                                         </span>
                                         <img src="/resources/images/icon/ico_outlink.svg" alt="" />
@@ -886,15 +886,14 @@
                             </div>
 
                             <h3 class="h3 gap_mt28">- 페이지 하단</h3>
-                            <p>
-                                옵션
-                                (bottom_btn_area에 클래스추가)<br />
+                            <div>
+                                옵션 (bottom_btn_area에 클래스추가)<br />
                                 <ul class="list_guide_demical">
                                     <li>.full</li>
                                     <li>.cell4 : (모바일 320스타일 별도)</li>
                                     <li>.cell4.wide : (모바일 세로 정렬)</li>
                                 </ul>
-                            </p>
+                            </div>
                             <div class="box" data-content-title="251">
                                 <div class="article html_code on">
                                     <!-- bottom_btn_area -->
@@ -1271,21 +1270,19 @@
 
                             <div class="box">
                                 <div class="article html_code on">
-                                    <div class="code_html">
-                                        <p class="txt_note">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
-                                        <p class="txt_note txt_red">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
-                                        <p class="txt_dot">근거법령: 수도법 제24조 수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조</p>
-                                        <p class="txt_mark">실무교육: 수도시설의 설치나 유지, 관리 분야의 실제 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 교육</p>
-                                        <div class="btn">
-                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
-                                        </div>
-                                        <div class="boxing" style="display: none">
-                                            <div class="code_wrap">
-                                                <pre><code class="html">&#x3C;p class=&#x22;txt_note&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+                                    <p class="txt_note">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
+                                    <p class="txt_note txt_red">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
+                                    <p class="txt_dot">근거법령: 수도법 제24조 수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조</p>
+                                    <p class="txt_mark">실무교육: 수도시설의 설치나 유지, 관리 분야의 실제 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 교육</p>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre><code class="html">&#x3C;p class=&#x22;txt_note&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;txt_note txt_red&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;txt_dot&#x22;&#x3E;&#xADFC;&#xAC70;&#xBC95;&#xB839;: &#xC218;&#xB3C4;&#xBC95;&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;txt_mark&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721;: &#xC218;&#xB3C4;&#xC2DC;&#xC124;&#xC758; &#xC124;&#xCE58;&#xB098; &#xC720;&#xC9C0;, &#xAD00;&#xB9AC; &#xBD84;&#xC57C;&#xC758; &#xC2E4;&#xC81C; &#xC2DC;&#xC124; &#xB610;&#xB294; &#xAD00;&#xB828; &#xC5C5;&#xBB34;&#xC5D0; &#xC885;&#xC0AC;&#xD558;&#xB294; &#xAE30;&#xAD00;, &#xAE30;&#xC5C5;&#xCCB4;&#xC758; &#xADFC;&#xBB34;&#xC7A5;&#xC18C;&#xC5D0;&#xC11C; &#xC2E4;&#xC2DC;&#xD558;&#xB294; &#xAD50;&#xC721;&#x3C;/p&#x3E;</code></pre>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
