@@ -169,7 +169,8 @@
             &::after {
                 background: url($url-img-icon + "ico_arrow_gray.svg") no-repeat 0 0;
             }
-            &:hover {
+            &:hover,
+            &:focus {
                 border-color: var(--color-darkgray);
                 background-color: var(--color-lightblue);
                 color: var(--font-color-base);

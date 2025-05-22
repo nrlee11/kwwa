@@ -158,7 +158,8 @@
             padding: 0 var(--gap-15);
             background-color: var(--active-bgcolor, #8a949e);
             text-align: left;
-            &:hover {
+            &:hover,
+            &:focus {
                 --active-bgcolor: #4c87f6;
             }
         }

@@ -395,7 +395,7 @@ button {
   background-color: var(--active-bgcolor, #8a949e);
   text-align: left;
 }
-#header .inner_header .btn_primary_sm:hover {
+#header .inner_header .btn_primary_sm:hover, #header .inner_header .btn_primary_sm:focus {
   --active-bgcolor: #4c87f6;
 }
 @media screen and (max-width: 1200px) {
@@ -5633,12 +5633,12 @@ select.sm {
 .service_area .mb_info .link::after {
   background: url("../../resources/images/icon/ico_arrow_gray.svg") no-repeat 0 0;
 }
-.service_area .mb_info .link:hover {
+.service_area .mb_info .link:hover, .service_area .mb_info .link:focus {
   border-color: var(--color-darkgray);
   background-color: var(--color-lightblue);
   color: var(--font-color-base);
 }
-.service_area .mb_info .link:hover:after {
+.service_area .mb_info .link:hover:after, .service_area .mb_info .link:focus:after {
   background-image: url("../../resources/images/icon/ico_arrow_black.svg");
 }
 @media screen and (max-width: 1200px) {
