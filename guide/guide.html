@@ -35,6 +35,7 @@
                                     <li><a href="#icon">아이콘</a></li>
                                     <li><a href="#images">이미지</a></li>
                                     <li><a href="#btn">버튼</a></li>
+                                    <li><a href="#input">input</a></li>
                                     <li><a href="#list">리스트</a></li>
                                     <li><a href="#text">텍스트</a></li>
                                     <li><a href="#alertbox">알림박스</a></li>
@@ -1097,6 +1098,233 @@
                         </div>
                     </div>
                     <!--// 버튼 -->
+
+                    <!-- input -->
+                    <div class="section" id="input">
+                        <h2 class="h2">- input</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="checkbox (기본)">
+                                <div class="article html_code on">
+                                    <p>
+                                        단독: .inp_check에 alone 클래스 추가<br />
+                                        - label &gt; span은 display: none
+                                    </p>
+                                    <span class="inp_check alone">
+                                        <input type="checkbox" id="check1" />
+                                        <label for="check1"><span>선택</span></label>
+                                    </span>
+
+                                    <br /><br />
+
+                                    <div class="check_set">
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type1" checked />
+                                            <label for="chk_type1">체크박스 1</label>
+                                        </span>
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type2" />
+                                            <label for="chk_type2">체크박스 2</label>
+                                        </span>
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type3" disabled />
+                                            <label for="chk_type3">비활성화 (미선택)</label>
+                                        </span>
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type4" checked disabled />
+                                            <label for="chk_type4">비활성화 (선택)</label>
+                                        </span>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&lt;!-- [D] 단독사용시 : inp_check에 alone 클래스 추가 --&gt;
+&lt;span class="inp_check alone"&gt;
+    &lt;input type="checkbox" id="check1" /&gt;
+    &lt;label for="check1"&gt;&lt;span&gt;선택&lt;/span&gt;&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;div class="check_set"&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type1" checked /&gt;
+        &lt;label for="chk_type1"&gt;체크박스 1&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type2" /&gt;
+        &lt;label for="chk_type2"&gt;체크박스 2&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type3" disabled /&gt;
+        &lt;label for="chk_type3"&gt;비활성화 (미선택)&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type4" checked disabled /&gt;
+        &lt;label for="chk_type4"&gt;비활성화 (선택)&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="checkbox (태그)">
+                                <div class="article html_code on">
+                                    <div class="inp_round_box">
+                                        <!-- [D] 전체선택 사용시:
+                                            1. 전체선택에 all 클래스 추가
+                                            2. 동일 name 추가
+                                        -->
+                                        <div>
+                                            <input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked />
+                                            <label for="roundchk1">전체목록</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" />
+                                            <label for="roundchk2">1급</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" />
+                                            <label for="roundchk3">2급</label>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&lt;div class="inp_round_box"&gt;
+    &lt;!-- [D] 전체선택 사용시:
+        1. 전체선택에 all 클래스 추가
+        2. 동일 name 추가
+    --&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked /&gt;
+        &lt;label for="roundchk1"&gt;전체목록&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" /&gt;
+        &lt;label for="roundchk2"&gt;1급&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" /&gt;
+        &lt;label for="roundchk3"&gt;2급&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="radio (기본)">
+                                <div class="article html_code on">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="type1_1" name="type1" />
+                                            <label for="type1_1">동의함</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="type1_2" name="type1" checked />
+                                            <label for="type1_2">동의안함</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="type1_3" name="type1" disabled />
+                                            <label for="type1_3">비활성화</label>
+                                        </span>
+                                    </div>
+
+                                    <p class="gap_mt24">.radio_set에 .flex_row 클래스 추가</p>
+                                    <div class="radio_set flex_row">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" required="" />
+                                            <label for="label1">O</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">X</label>
+                                        </span>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+ &lt;div class="radio_set"&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="type1_1" name="type1" /&gt;
+        &lt;label for="type1_1"&gt;동의함&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="type1_2" name="type1" checked /&gt;
+        &lt;label for="type1_2"&gt;동의안함&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="type1_3" name="type1" disabled /&gt;
+        &lt;label for="type1_3"&gt;비활성화&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--.radio_set에 .flex_row 클래스 추가 --&gt;
+&lt;div class="radio_set flex_row"&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="label1" name="label" required="" /&gt;
+        &lt;label for="label1"&gt;O&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="label2" name="label" /&gt;
+        &lt;label for="label2"&gt;X&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="text/textarea">
+                                <div class="article html_code on">
+                                    <strong>input type="text" : </strong>
+                                    <div class="choice_text_box">
+                                        <input type="text" class="inp_choice_txt" placeholder="답변을 입력해주세요(1줄)" required="" />
+                                    </div>
+
+                                    <br /><br />
+                                    <strong>textarea : </strong>
+                                    <div class="choice_text_box">
+                                        <textarea rows="1" class="inp_choice_txt" placeholder="답변을 입력해주세요(2줄이상)" required=""></textarea>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&lt;!-- 한줄 --&gt;
+&lt;div class="choice_text_box"&gt;
+    &lt;input type="text" class="inp_choice_txt" placeholder="답변을 입력해주세요(1줄)" /&gt;
+&lt;/div&gt;
+&lt;!-- // 한줄 --&gt;
+
+&lt;!-- 2줄 이상 --&gt;
+&lt;div class="choice_text_box"&gt;
+    &lt;textarea rows="1" class="inp_choice_txt" placeholder="답변을 입력해주세요(2줄이상)"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;!-- // 2줄 이상 --&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // input -->
 
                     <!-- List -->
                     <div class="section" id="list">
