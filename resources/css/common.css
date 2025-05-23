@@ -6637,6 +6637,8 @@ select.sm {
   display: block;
   margin-top: 0.8rem;
   padding: 0 4rem 0 6.4rem;
+  line-height: 1.5;
+  word-break: keep-all;
 }
 @media screen and (max-width: 767px) {
   .identity_area .btn_identity {
