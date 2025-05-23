@@ -361,6 +361,7 @@
         padding: 0 2.4rem;
         @include mobile {
             gap: 0 2.5rem;
+            padding: 0 1.6rem;
         }
         @include xs-mobile {
             flex-direction: column;

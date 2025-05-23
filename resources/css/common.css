@@ -5872,6 +5872,7 @@ select.sm {
 @media screen and (max-width: 1200px) {
   .post_list .data_group {
     gap: 0 2.5rem;
+    padding: 0 1.6rem;
   }
 }
 @media screen and (max-width: 320px) {
