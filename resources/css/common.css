@@ -1380,6 +1380,13 @@ button {
   position: relative;
   margin-bottom: var(--gap-24);
 }
+.tit_area.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}
 .tit_area .tit {
   font-size: var(--font-size-lg);
 }
@@ -4893,6 +4900,9 @@ select.sm {
   font-weight: var(--font-medium);
   line-height: 3rem;
 }
+[class^=btn_][class*=_sm].radius {
+  border-radius: 0.4rem;
+}
 [class^=btn_][class*=_md] {
   height: 4rem;
   padding: 0 var(--gap-12);
@@ -4925,6 +4935,9 @@ select.sm {
 }
 [class^=btn_][class*=_border].radius [class*=_bluearrow] {
   margin: 0 0 0 var(--gap-4);
+}
+[class^=btn_][class*=_border].radius[class*=_sm] {
+  border-radius: 0.4rem;
 }
 [class^=btn_][class*=_border].radius[class*=_xxl] {
   border-radius: 1rem;

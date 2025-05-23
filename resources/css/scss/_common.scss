@@ -344,6 +344,13 @@
 .tit_area {
     position: relative;
     margin-bottom: var(--gap-24);
+    &.flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+    }
     .tit {
         font-size: var(--font-size-lg);
         &.ico {
