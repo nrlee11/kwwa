@@ -248,6 +248,11 @@ button {
     border-bottom: 0;
   }
 }
+@media screen and (max-width: 320px) {
+  #header {
+    padding-right: 6rem;
+  }
+}
 #header .logo {
   display: inline-block;
 }

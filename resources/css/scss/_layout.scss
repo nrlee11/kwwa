@@ -17,6 +17,9 @@
         padding: var(--gap-13) 9rem var(--gap-13) var(--gap-24);
         border-bottom: 0;
     }
+    @include xs-mobile {
+        padding-right: 6rem;
+    }
     .logo {
         display: inline-block;
         @include mobile {
