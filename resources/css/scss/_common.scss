@@ -1841,17 +1841,16 @@ select {
         .badge_sec {
             @include flex-aligncenter;
             gap: 0 1.5rem;
-            margin-bottom: var(--gap-24);
-            @include mobile {
-                margin-bottom: var(--gap-50);
-            }
+            margin-bottom: var(--gap-10);
         }
         .tit_sec {
             @include flex-between;
-            // align-items: center;
-            gap: 0 1.5rem;
+            align-items: flex-end;
+            gap: 0 2rem;
+            [class^="data_badge"] {
+                align-self: flex-start;
+            }
             .tit {
-                width: 60%;
                 font-size: var(--font-size-lg);
                 font-weight: var(--font-bold);
             }
@@ -1859,7 +1858,6 @@ select {
                 font-weight: var(--font-medium);
             }
             .info {
-                margin-top: var(--gap-7);
                 color: var(--color-gray);
                 > span {
                     + span {
@@ -1877,6 +1875,9 @@ select {
                     text-align: right;
                 }
             }
+        }
+        .side {
+            flex: 0 0 auto;
         }
     }
     .add_file {
