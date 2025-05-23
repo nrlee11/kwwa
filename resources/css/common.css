@@ -6610,10 +6610,29 @@ select.sm {
 .identity_area .btn_identity.simple .identity_tit:before {
   background-image: url("../../resources/images/icon/ico_identity2.svg");
 }
+.identity_area .btn_identity:hover, .identity_area .btn_identity:focus {
+  background: var(--color-warmblue);
+  color: var(--color-white);
+}
+.identity_area .btn_identity:hover.self, .identity_area .btn_identity:focus.self {
+  color: var(--color-white);
+}
+.identity_area .btn_identity:hover.self .identity_tit:before, .identity_area .btn_identity:focus.self .identity_tit:before {
+  background-image: url("../../resources/images/icon/ico_identity1_on.svg");
+}
+.identity_area .btn_identity:hover.simple .identity_tit:before, .identity_area .btn_identity:focus.simple .identity_tit:before {
+  background-image: url("../../resources/images/icon/ico_identity2_on.svg");
+}
+.identity_area .btn_identity:hover .identity_tit, .identity_area .btn_identity:focus .identity_tit {
+  color: var(--color-white);
+}
+.identity_area .btn_identity:hover .identity_tit:after, .identity_area .btn_identity:focus .identity_tit:after {
+  background-image: url("../../resources/images/icon/ico_arrow_white.svg");
+}
 .identity_area .identity_tit {
   display: flex;
   align-items: center;
-  gap: 2.4rem;
+  gap: 1.8rem;
   font-size: 1.9rem;
   font-weight: var(--font-bold);
   color: var(--font-color-base);
@@ -6640,6 +6659,7 @@ select.sm {
   padding: 0 4rem 0 6.4rem;
   line-height: 1.5;
   word-break: keep-all;
+  overflow-wrap: break-word;
 }
 @media screen and (max-width: 767px) {
   .identity_area .btn_identity {

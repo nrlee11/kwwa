@@ -24,11 +24,33 @@
                 background-image: url($url-img-icon + "ico_identity2.svg");
             }
         }
+        &:hover,
+        &:focus {
+            background: var(--color-warmblue);
+            color: var(--color-white);
+            &.self {
+                color: var(--color-white);
+                .identity_tit:before {
+                    background-image: url($url-img-icon + "ico_identity1_on.svg");
+                }
+            }
+            &.simple {
+                .identity_tit:before {
+                    background-image: url($url-img-icon + "ico_identity2_on.svg");
+                }
+            }
+            .identity_tit {
+                color: var(--color-white);
+                &:after {
+                    background-image: url($url-img-icon + "ico_arrow_white.svg");
+                }
+            }
+        }
     }
     .identity_tit {
         display: flex;
         align-items: center;
-        gap: 2.4rem;
+        gap: 1.8rem;
         font-size: 1.9rem;
         font-weight: var(--font-bold);
         color: var(--font-color-base);
@@ -56,6 +78,7 @@
         padding: 0 4rem 0 6.4rem;
         line-height: 1.5;
         word-break: keep-all;
+        overflow-wrap: break-word;
     }
     @include sm-mobile {
         .btn_identity {
