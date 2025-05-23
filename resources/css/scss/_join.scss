@@ -30,7 +30,6 @@
                 background: var(--color-warmblue);
                 color: var(--color-white);
                 &.self {
-                    color: var(--color-white);
                     .identity_tit:before {
                         background-image: url($url-img-icon + "ico_identity1_on.svg");
                     }

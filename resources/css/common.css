@@ -6615,9 +6615,6 @@ select.sm {
     background: var(--color-warmblue);
     color: var(--color-white);
   }
-  .identity_area .btn_identity:hover.self, .identity_area .btn_identity:focus.self {
-    color: var(--color-white);
-  }
   .identity_area .btn_identity:hover.self .identity_tit:before, .identity_area .btn_identity:focus.self .identity_tit:before {
     background-image: url("../../resources/images/icon/ico_identity1_on.svg");
   }
