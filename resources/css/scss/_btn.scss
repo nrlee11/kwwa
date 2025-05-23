@@ -58,6 +58,7 @@
                 border-radius: 1rem;
             }
         }
+        &:focus,
         &:hover {
             color: var(--color-darkblue);
             border-color: var(--color-darkblue);

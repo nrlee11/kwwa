@@ -4947,7 +4947,7 @@ select.sm {
 [class^=btn_][class*=_border].radius[class*=_xxl] {
   border-radius: 1rem;
 }
-[class^=btn_][class*=_border]:hover {
+[class^=btn_][class*=_border]:focus, [class^=btn_][class*=_border]:hover {
   color: var(--color-darkblue);
   border-color: var(--color-darkblue);
   background-color: rgba(76, 135, 246, 0.1);
@@ -7038,6 +7038,7 @@ select.sm {
   background: #ecf2fe;
 }
 .layer_wrap.type_survay .foot {
+  padding-bottom: 0.1rem;
   background: #ecf2fe !important;
 }
 
