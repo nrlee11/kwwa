@@ -34,15 +34,17 @@
         .timetable {
             width: 51rem;
         }
-        .box {
-            @include mobile {
-                padding: var(--gap-16) var(--gap-16) var(--gap-40) !important;
-            }
-        }
         &:hover {
             .box {
                 border-color: var(--color-darkblue);
                 background-color: #eef3ff;
+            }
+        }
+        @include mobile {
+            .box {
+                .timetable {
+                    padding-bottom: 2.4rem;
+                }
             }
         }
     }

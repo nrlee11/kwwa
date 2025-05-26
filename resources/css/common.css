@@ -6076,14 +6076,14 @@ select.sm {
 .edu_group > a .timetable {
   width: 51rem;
 }
-@media screen and (max-width: 1200px) {
-  .edu_group > a .box {
-    padding: var(--gap-16) var(--gap-16) var(--gap-40) !important;
-  }
-}
 .edu_group > a:hover .box {
   border-color: var(--color-darkblue);
   background-color: #eef3ff;
+}
+@media screen and (max-width: 1200px) {
+  .edu_group > a .box .timetable {
+    padding-bottom: 2.4rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .edu_group:not(.type1) .box {
