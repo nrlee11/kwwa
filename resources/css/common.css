@@ -6120,6 +6120,11 @@ select.sm {
 .edu_group .timetable {
   display: block;
 }
+@media screen and (max-width: 1200px) {
+  .edu_group .timetable {
+    width: 100% !important;
+  }
+}
 .edu_group .timetable .edu_tit {
   display: flex;
   align-items: flex-start;
