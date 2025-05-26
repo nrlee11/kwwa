@@ -43,16 +43,20 @@
             }
         }
     }
+    &:not(.type1) {
+        .box {
+            @include sm-mobile {
+                padding: var(--gap-16) !important;
+            }
+        }
+    }
     .box {
         display: flex;
         gap: 0 3.3rem;
-        padding: var(--gap-20);
+        padding: 2.2rem 3rem;
         border: $border #cdd1d5;
         border-radius: 1rem;
         background-color: var(--color-white);
-        @include sm-mobile {
-            padding: var(--gap-16) !important;
-        }
     }
     .thumbnail {
         display: block;
@@ -73,10 +77,6 @@
     }
     .timetable {
         display: block;
-        width: 47.2rem;
-        @include mobile {
-            width: 100% !important;
-        }
         .edu_tit {
             display: flex;
             align-items: flex-start;
@@ -260,6 +260,7 @@
         color: var(--color-darkgray);
     }
     &.type1 {
+        // type 1 - 아코디언
         .box {
             gap: 0 3rem;
             padding: 0;
@@ -280,10 +281,9 @@
     &.type2 {
         .box {
             flex-direction: column;
-            padding: 2.2rem var(--gap-30);
         }
         .timetable {
-            width: 37.4rem;
+            width: 51rem;
         }
         .edu_result {
             margin: var(--gap-20) -3rem 0;
@@ -295,8 +295,11 @@
             position: relative;
             flex-direction: column;
         }
+        .timetable_set {
+            gap: 0 3rem;
+        }
         .timetable {
-            width: 50.7rem;
+            width: 100%;
         }
         .bottom_btn_area {
             margin-top: var(--gap-24);

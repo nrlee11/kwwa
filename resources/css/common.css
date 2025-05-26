@@ -6082,18 +6082,18 @@ select.sm {
   border-color: var(--color-darkblue);
   background-color: #eef3ff;
 }
+@media screen and (max-width: 767px) {
+  .edu_group:not(.type1) .box {
+    padding: var(--gap-16) !important;
+  }
+}
 .edu_group .box {
   display: flex;
   gap: 0 3.3rem;
-  padding: var(--gap-20);
+  padding: 2.2rem 3rem;
   border: 0.1rem solid #cdd1d5;
   border-radius: 1rem;
   background-color: var(--color-white);
-}
-@media screen and (max-width: 767px) {
-  .edu_group .box {
-    padding: var(--gap-16) !important;
-  }
 }
 .edu_group .thumbnail {
   display: block;
@@ -6119,12 +6119,6 @@ select.sm {
 }
 .edu_group .timetable {
   display: block;
-  width: 47.2rem;
-}
-@media screen and (max-width: 1200px) {
-  .edu_group .timetable {
-    width: 100% !important;
-  }
 }
 .edu_group .timetable .edu_tit {
   display: flex;
@@ -6344,10 +6338,9 @@ select.sm {
 }
 .edu_group.type2 .box {
   flex-direction: column;
-  padding: 2.2rem var(--gap-30);
 }
 .edu_group.type2 .timetable {
-  width: 37.4rem;
+  width: 51rem;
 }
 .edu_group.type2 .edu_result {
   margin: var(--gap-20) -3rem 0;
@@ -6357,8 +6350,11 @@ select.sm {
   position: relative;
   flex-direction: column;
 }
+.edu_group.type3 .timetable_set {
+  gap: 0 3rem;
+}
 .edu_group.type3 .timetable {
-  width: 50.7rem;
+  width: 100%;
 }
 .edu_group.type3 .bottom_btn_area {
   margin-top: var(--gap-24);
