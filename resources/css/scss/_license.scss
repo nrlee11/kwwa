@@ -133,6 +133,14 @@
     display: flex;
     align-items: stretch;
     gap: 3.1rem;
+    &:not(:has(.status_level_items[aria-current="step"])) {
+        .status_level_items {
+            --current-color: #8a949e;
+            &:before {
+                background-image: url($url-img-common + "bg_double_arrow.svg");
+            }
+        }
+    }
 }
 .status_level_items {
     position: relative;

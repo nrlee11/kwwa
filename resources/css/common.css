@@ -6817,6 +6817,12 @@ select.sm {
   align-items: stretch;
   gap: 3.1rem;
 }
+.status_level_list:not(:has(.status_level_items[aria-current=step])) .status_level_items {
+  --current-color: #8a949e;
+}
+.status_level_list:not(:has(.status_level_items[aria-current=step])) .status_level_items:before {
+  background-image: url("../../resources/images/common/bg_double_arrow.svg");
+}
 
 .status_level_items {
   position: relative;
