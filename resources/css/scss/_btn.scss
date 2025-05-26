@@ -59,6 +59,12 @@
             color: var(--color-darkblue);
             border-color: var(--color-darkblue);
             background-color: rgba(#4c87f6, 0.1);
+            .ico_bluearrow {
+                background-image: url($url-img-icon + "ico_arrow_blue4.svg");
+            }
+            .ico_bluearrow2 {
+                background-image: url($url-img-icon + "ico_arrow_blue3.svg");
+            }
         }
     }
     &[class*="_warmblue"] {

@@ -4395,6 +4395,12 @@ select.sm {
   border-color: var(--color-darkblue);
   background-color: rgba(76, 135, 246, 0.1);
 }
+[class^=btn_][class*=_border]:focus .ico_bluearrow, [class^=btn_][class*=_border]:hover .ico_bluearrow {
+  background-image: url("../../resources/images/icon/ico_arrow_blue4.svg");
+}
+[class^=btn_][class*=_border]:focus .ico_bluearrow2, [class^=btn_][class*=_border]:hover .ico_bluearrow2 {
+  background-image: url("../../resources/images/icon/ico_arrow_blue3.svg");
+}
 [class^=btn_][class*=_warmblue] {
   color: var(--color-white);
   background-color: var(--color-warmblue);
