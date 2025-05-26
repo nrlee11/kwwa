@@ -4390,9 +4390,6 @@ select.sm {
 [class^=btn_][class*=_border].radius[class*=_sm] {
   border-radius: 0.4rem;
 }
-[class^=btn_][class*=_border].radius[class*=_xxl] {
-  border-radius: 1rem;
-}
 [class^=btn_][class*=_border]:focus, [class^=btn_][class*=_border]:hover {
   color: var(--color-darkblue);
   border-color: var(--color-darkblue);
