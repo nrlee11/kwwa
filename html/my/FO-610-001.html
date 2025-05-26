@@ -75,11 +75,18 @@
                                     <div class="box">
                                         <div class="edu_info">
                                             <div class="lside">
-                                                <!-- class : on -->
-                                                <span class="rate on">
+                                                <!-- [D] 해당 뱃지로 교체하여 사용 -->
+                                                <!-- 1. 교육시작 전 : <span class="value_badge8">교육시작 전</span> -->
+                                                <!-- 2. 미수료 : <span class="value_badge4">미수료</span> -->
+                                                <!-- 3. 진도율 : <span class="value_badge1">신청완료</span> -->
+                                                <!-- 4. 수료 : <span class="value_badge2">수료</span> -->
+
+                                                <span class="value_badge1">
                                                     <span>진도율</span>
                                                     <span>55%</span>
                                                 </span>
+                                                <span class="value_badge2">수료: 6과목</span>
+                                                <span class="value_badge4">미수료: 5과목</span>
                                             </div>
                                             <div class="rside">
                                                 <span class="date">신청일 : 2025-03-01</span>
@@ -100,18 +107,21 @@
                                                 </div>
                                             </div>
                                             <div class="side">
-                                                <button type="button" class="btn_border_md radius">강의실 입장<span class="ico_bluearrow2"></span></button>
-                                                <button type="button" class="btn_outline_md">취소 신청</button>
+                                                <button type="button" class="btn_border_xxl radius"><span class="txt_size_sm">강의실 입장</span><span class="ico_bluearrow2"></span></button>
                                             </div>
                                         </div>
+                                        <!-- [D] 버튼: 과정 취소 -->
+                                        <div class="gap_mt28">
+                                            <a href="javascript:;"><span class="txt_size_sm txt_underline">과정 취소</span></a>
+                                        </div>
+                                        <!-- // [D] 버튼: 과정 취소 -->
                                     </div>
                                 </div>
                                 <div class="edu_group type2">
                                     <div class="box">
                                         <div class="edu_info">
                                             <div class="lside">
-                                                <!-- class : on -->
-                                                <span class="rate">교육 시작 전</span>
+                                                <span class="value_badge8">교육 시작 전</span>
                                             </div>
                                             <div class="rside">
                                                 <span class="date">신청일 : 2025-03-01</span>
@@ -138,8 +148,7 @@
                                     <div class="box">
                                         <div class="edu_info">
                                             <div class="lside">
-                                                <!-- class : on, off -->
-                                                <span class="rate on">수료</span>
+                                                <span class="value_badge2">수료</span>
                                             </div>
                                             <div class="rside">
                                                 <span class="date">신청일 : 2025-03-01</span>
@@ -160,7 +169,7 @@
                                                 </div>
                                             </div>
                                             <div class="side">
-                                                <a href="javascript:;" class="btn_border_md radius">수료증 발급<span class="ico_bluearrow2"></span></a>
+                                                <a href="javascript:;" class="btn_border_xxl radius"><span class="txt_size_sm">수료증 발급</span><span class="ico_bluearrow2"></span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -169,8 +178,7 @@
                                     <div class="box">
                                         <div class="edu_info">
                                             <div class="lside">
-                                                <!-- class : on, off -->
-                                                <span class="rate off">미수료</span>
+                                                <span class="value_badge4">미수료</span>
                                             </div>
                                             <div class="rside">
                                                 <span class="date">신청일 : 2025-03-01</span>
@@ -212,7 +220,7 @@
         <!-- [include] side(s) : 확인용 -->
         <div data-include-file="/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
-        
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
     </body>
