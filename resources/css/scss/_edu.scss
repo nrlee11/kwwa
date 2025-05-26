@@ -31,6 +31,9 @@
                 margin-top: 0;
             }
         }
+        .timetable {
+            width: 51rem;
+        }
         .box {
             @include mobile {
                 padding: var(--gap-16) var(--gap-16) var(--gap-40) !important;

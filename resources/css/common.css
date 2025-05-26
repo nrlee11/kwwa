@@ -6073,6 +6073,9 @@ select.sm {
     margin-top: 0;
   }
 }
+.edu_group > a .timetable {
+  width: 51rem;
+}
 @media screen and (max-width: 1200px) {
   .edu_group > a .box {
     padding: var(--gap-16) var(--gap-16) var(--gap-40) !important;
