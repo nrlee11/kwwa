@@ -1237,7 +1237,7 @@ button {
   font-size: var(--font-size-lg);
 }
 .txt_regular {
-  font-weight: var(--font-medium);
+  font-weight: var(--font-regular);
 }
 .txt_medium {
   font-weight: var(--font-medium);
