@@ -4344,12 +4344,12 @@ select.sm {
   text-align: center;
   background-color: var(--color-blue);
   border-radius: 0.6rem;
+  font-weight: var(--font-semibold);
 }
 [class^=btn_][class*=_sm] {
   height: 3rem;
   border-radius: 5rem;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-medium);
   line-height: 3rem;
 }
 [class^=btn_][class*=_sm].radius {
@@ -4364,7 +4364,6 @@ select.sm {
 [class^=btn_][class*=_xxl] {
   height: 7rem;
   line-height: 7rem;
-  font-weight: var(--font-bold);
 }
 [class^=btn_][class*=_secondary] {
   color: var(--color-darkblue);
@@ -4539,6 +4538,9 @@ select.sm {
     margin: 0;
   }
 }
+.page_btn_area [class^=btn_][class*=_sm], .page_btn_area [class^=btn_][class*=_md], .page_btn_area [class^=btn_][class*=_lg], .page_btn_area [class^=btn_][class*=_xxl] {
+  font-weight: var(--font-regular);
+}
 
 .bottom_btn_area {
   display: flex;
@@ -4615,6 +4617,9 @@ select.sm {
     flex: 1;
     margin: 0;
   }
+}
+.bottom_btn_area [class^=btn_][class*=_sm], .bottom_btn_area [class^=btn_][class*=_md], .bottom_btn_area [class^=btn_][class*=_lg], .bottom_btn_area [class^=btn_][class*=_xxl] {
+  font-weight: var(--font-regular);
 }
 
 .btn_reset {
