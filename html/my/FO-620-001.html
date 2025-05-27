@@ -230,7 +230,7 @@
                                                 </div>
                                             </td>
                                             <td data-cell-header="자격증 번호"><div>24210001</div></td>
-                                            <td data-cell-header="상태">
+                                            <td data-cell-header="상태" id="statuslevel1">
                                                 <div><span class="txt_green">완료</span></div>
                                             </td>
                                             <td data-cell-header="신청접수일"><div>2025-02-10</div></td>
@@ -244,8 +244,8 @@
                                             </td>
                                         </tr>
                                         <!-- 현황단계 -->
-                                        <tr class="status_level_box">
-                                            <td colspan="7">
+                                            <!-- [D] header="" 값은 상태의 id와 동일  -->
+                                            <td colspan="7" headers="statuslevel1">
                                                 <ul class="status_level_list">
                                                     <!-- [D] 현재 단계의 li[aria-current="false"]를 aria-current="step"로 수정 -->
                                                     <li class="status_level_items" aria-current="false">
