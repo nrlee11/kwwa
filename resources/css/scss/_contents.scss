@@ -442,6 +442,7 @@
     td {
         &:first-child {
             width: 81px;
+            min-width: 81px;
         }
         &:nth-child(2) {
             width: 81px;
@@ -463,6 +464,7 @@
         }
         &:nth-child(8) {
             width: 162px;
+            min-width: 162px;
         }
     }
 }
