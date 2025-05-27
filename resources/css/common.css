@@ -5983,37 +5983,34 @@ select.sm {
 .tbl_colgroup_educlass th:first-child,
 .tbl_colgroup_educlass td:first-child {
   width: 81px;
-  min-width: 81px;
 }
 .tbl_colgroup_educlass th:nth-child(2),
 .tbl_colgroup_educlass td:nth-child(2) {
   width: 81px;
-  min-width: 81px;
+}
+.tbl_colgroup_educlass th:nth-child(3),
+.tbl_colgroup_educlass td:nth-child(3) {
+  width: 417px;
 }
 .tbl_colgroup_educlass th:nth-child(4),
 .tbl_colgroup_educlass td:nth-child(4) {
   width: 123px;
-  min-width: 123px;
 }
 .tbl_colgroup_educlass th:nth-child(5),
 .tbl_colgroup_educlass td:nth-child(5) {
   width: 123px;
-  min-width: 123px;
 }
 .tbl_colgroup_educlass th:nth-child(6),
 .tbl_colgroup_educlass td:nth-child(6) {
   width: 123px;
-  min-width: 123px;
 }
 .tbl_colgroup_educlass th:nth-child(7),
 .tbl_colgroup_educlass td:nth-child(7) {
   width: 90px;
-  min-width: 90px;
 }
 .tbl_colgroup_educlass th:nth-child(8),
 .tbl_colgroup_educlass td:nth-child(8) {
   width: 162px;
-  min-width: 162px;
 }
 
 .tbl_sub_panel > td {
