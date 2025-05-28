@@ -7001,7 +7001,7 @@ select.sm {
     line-height: 1;
   }
 }
-.container_avi .rside .btn {
+.container_avi .rside .btn_save {
   flex: 0 0 auto;
   display: block;
   width: 100%;
@@ -7014,7 +7014,7 @@ select.sm {
   color: var(--color-white);
 }
 @media screen and (max-width: 1200px) {
-  .container_avi .rside .btn {
+  .container_avi .rside .btn_save {
     padding: 1.7rem;
     font-size: 2rem;
   }
@@ -7030,76 +7030,105 @@ select.sm {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  min-height: 9rem;
-  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  position: relative;
+  width: 100%;
+  min-height: 7rem;
+  padding: 0.5rem 1.5rem 0.5rem 4.9rem;
   text-align: left;
   font-size: 2rem;
-  line-height: 1;
-  color: #b1b8be;
+  font-weight: var(--font-medium);
+  line-height: 1.5;
   box-sizing: border-box;
 }
 @media screen and (max-width: 1200px) {
   .container_avi .avi_list .txt_avi {
-    min-height: auto;
+    min-height: 5rem;
     font-size: 1.6rem;
     line-height: 2.5rem;
   }
 }
-.container_avi .avi_list .tit {
-  display: block;
-  transition: 300ms;
+.container_avi .avi_list .fold {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: #33363d;
 }
-.container_avi .avi_list .tit .txt_avi {
-  font-weight: var(--font-medium);
+.container_avi .avi_list .fold[aria-expanded=true] .txt_avi:before {
+  transform: rotate(180deg);
+}
+.container_avi .avi_list .fold .txt_avi {
+  position: relative;
+  gap: 2.6rem;
+  justify-content: space-between;
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+}
+.container_avi .avi_list .fold .txt_avi:before {
+  flex: 0 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: -1.2rem;
+  background: url("../../resources/images/icon/ico_arrow_white_down.svg") no-repeat 0 0;
+  transition: transform 100ms;
+  content: "";
+}
+.container_avi .avi_list .fold .txt_avi_type {
+  flex: 1 1 auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container_avi .avi_list .fold .txt_avi_detail {
+  flex: 0 0 auto;
+  font-size: 1.6rem;
+  text-align: right;
+}
+@media screen and (max-width: 1200px) {
+  .container_avi .avi_list .fold .txt_avi_detail {
+    display: none;
+  }
 }
 .container_avi .avi_list .sub_list li {
   border-top: 0.3rem solid #525254;
 }
-.container_avi .avi_list .sub_list .txt_avi {
-  padding-left: 3rem;
-}
 .container_avi .avi_item:not(:first-child) {
   border-top: 0.3rem solid #525254;
-}
-.container_avi .avi_item:has(.btn_avi[aria-current=true]) .tit {
-  background-color: var(--color-black);
-}
-.container_avi .avi_item:has(.btn_avi[aria-current=true]) .tit .txt_avi {
-  font-weight: var(--font-bold);
-  color: var(--color-white);
 }
 .container_avi .btn_avi {
   display: block;
   width: 100%;
-  background: #2e2e2e;
+  background: #f4f5f6;
+  color: var(--font-color-base);
 }
-.container_avi .btn_avi .txt_avi {
+.container_avi .btn_avi:hover .txt_avi, .container_avi .btn_avi:focus .txt_avi, .container_avi .btn_avi[aria-current=true] .txt_avi {
+  background: #6d7882;
+  color: var(--color-white);
+}
+.container_avi .btn_avi:hover .txt_avi:before, .container_avi .btn_avi:focus .txt_avi:before, .container_avi .btn_avi[aria-current=true] .txt_avi:before {
+  background-image: url("../../resources/images/icon/ico_avi_on.svg");
+}
+.container_avi .btn_avi.is_done_avi .txt_avi:before {
+  background-image: url("../../resources/images/icon/ico_completion_before.svg");
+}
+.container_avi .txt_avi {
   align-items: center;
-  gap: 2.6rem;
+  gap: 1rem;
 }
-.container_avi .btn_avi .txt_avi:after {
+.container_avi .txt_avi:before {
   flex: 0 0 auto;
-  width: 3.4rem;
-  height: 3.4rem;
-  margin-left: auto;
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   background: url("../../resources/images/icon/ico_avi.svg") no-repeat 0 0;
   content: "";
-}
-@media screen and (max-width: 1200px) {
-  .container_avi .btn_avi .txt_avi:after {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-size: contain;
-  }
-}
-.container_avi .btn_avi[aria-current=true] .txt_avi {
-  background: linear-gradient(90deg, #256ef4 0%, #86aff9 100%);
-  font-weight: var(--font-bold);
-  color: var(--color-white);
-  transition: 300ms;
-}
-.container_avi .btn_avi[aria-current=true] .txt_avi:after {
-  background-image: url("../../resources/images/icon/ico_avi_active.svg");
 }
 
 .layer_wrap.type_survay {

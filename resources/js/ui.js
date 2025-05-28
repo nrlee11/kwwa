@@ -272,25 +272,39 @@ $(function () {
         const accFold = $(".accordion_area .fold");
         const accBox = $(".accordion_box");
         const accBody = $(".accordion_body");
+        const typeToggle = $(".accordion_area").hasClass("type_toggle");
 
         accFold.on("click", function () {
             const $this = $(this);
-            if ($this.closest(".accordion_box").hasClass("is_open")) {
-                $this.attr("aria-expanded", "false").parent().next(accBody).slideUp();
-                $this.closest(".accordion_box").removeClass("is_open");
-            } else {
-                accBox.removeClass("is_open");
-                accFold.attr("aria-expanded", "false");
-                accBody.slideUp();
 
-                $this.closest(".accordion_box").addClass("is_open");
+            if (typeToggle) {
                 $this
-                    .attr("aria-expanded", "true")
                     .parent()
                     .next(accBody)
-                    .slideDown(400, function () {
-                        $("html, body").animate({ scrollTop: $this.offset().top - 19 }, 300);
+                    .slideToggle(400, function () {
+                        $(".type_toggle").animate({ scrollTop: $this.offset().top - 130 }, 300);
                     });
+                $this.attr("aria-expanded", function (_, current) {
+                    return current === "true" ? "false" : "true";
+                });
+            } else {
+                if ($this.closest(".accordion_box").hasClass("is_open")) {
+                    $this.attr("aria-expanded", "false").parent().next(accBody).slideUp();
+                    $this.closest(".accordion_box").removeClass("is_open");
+                } else {
+                    accBox.removeClass("is_open");
+                    accFold.attr("aria-expanded", "false");
+                    accBody.slideUp();
+
+                    $this.closest(".accordion_box").addClass("is_open");
+                    $this
+                        .attr("aria-expanded", "true")
+                        .parent()
+                        .next(accBody)
+                        .slideDown(400, function () {
+                            $("html, body").animate({ scrollTop: $this.offset().top - 19 }, 300);
+                        });
+                }
             }
         });
     };
