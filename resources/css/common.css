@@ -2701,7 +2701,7 @@ select.sm {
 }
 .board_area [class^=board_desc][class*=_bottom] .note {
   position: relative;
-  color: #4c87f6;
+  color: var(--color-warmblue);
 }
 .board_area .board_count {
   font-size: var(--font-size-sm);
@@ -3574,7 +3574,7 @@ select.sm {
     min-height: 4.2rem;
     padding: 0 var(--gap-14);
     color: var(--color-white);
-    background-color: #4c87f6;
+    background-color: var(--color-warmblue);
     border-radius: 10rem;
     line-height: 4.2rem;
   }

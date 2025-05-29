@@ -1699,7 +1699,7 @@ select {
             margin-top: var(--gap-24);
             .note {
                 position: relative;
-                color: #4c87f6;
+                color: var(--color-warmblue);
             }
         }
     }
@@ -2595,7 +2595,7 @@ select {
                         min-height: 4.2rem;
                         padding: 0 var(--gap-14);
                         color: var(--color-white);
-                        background-color: #4c87f6;
+                        background-color: var(--color-warmblue);
                         border-radius: 10rem;
                         line-height: 4.2rem;
                     }
