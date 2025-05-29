@@ -519,7 +519,7 @@ $(function () {
                         moGnbToggle();
                         allSearch();
                         selectLayer();
-                        layerFix();
+                        // layerFix();
                         layerClose();
                         urlChk();
                         choiceTextRequired();
@@ -545,7 +545,7 @@ $(function () {
     commonTab();
     accordion();
     accordionTr();
-    layerFix();
+    // layerFix();
     layerClose();
     urlChk();
     aviToggle();
