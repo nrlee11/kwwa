@@ -119,6 +119,18 @@
                 color: #fff;
                 background-color: #000;
             }
+            #tableSheet tr:has(.undone) td:nth-child(2),
+            #tableSheet tr:has(.undone) td:nth-child(3),
+            #tableSheet tr:has(.undone) td:nth-child(4) {
+                font-weight: 700;
+                color: #f00;
+            }
+            #tableSheet tr:has(.yet) td:nth-child(2),
+            #tableSheet tr:has(.yet) td:nth-child(3),
+            #tableSheet tr:has(.yet) td:nth-child(4) {
+                font-weight: 700;
+                color: #00f;
+            }
             #mwork td {
                 font-size: 14px;
                 padding: 4px 6px;
@@ -164,7 +176,7 @@
                 padding: 0;
                 font-weight: bold;
                 text-align: center;
-                color: #900;
+                color: #f00;
             }
             #mwork .total {
                 padding: 0;
@@ -1284,25 +1296,6 @@
                             <td class="center">2025-05-13</td>
                             <td class="center"></td>
                             <td></td>
-                        </tr>
-                        <tr class="green">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>설문 - 설문팝업</td>
-                            <td class="center"></td>
-                            <td class="center">
-                                <!-- <a href="/html/edu/FO-250-004P-01P.html" target="_blank">FO-250-004P-01P</a> -->
-                            </td>
-                            <td class="task yet"></td>
-                            <td class="center">기획) 추후 정의</td>
-                            <td class="center"></td>
-                            <td>
-                                <span class="red">* 기획/디자인 확인필요</span><br />
-                                <ul>
-                                    <li>[2025-04-30] (기획서) 설문 팝업 추후 정의</li>
-                                </ul>
-                            </td>
                         </tr>
                         <tr class="green">
                             <td></td>
