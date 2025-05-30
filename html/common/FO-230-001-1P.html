@@ -16,12 +16,12 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
-                <div>
-                    <button type="button" class="btn_primary_lg" id="switchAlarm1">알림신청 완료</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="switchAlarm2">알림신청 해제</button>
-                </div>
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 15px">
+                <button type="button" class="btn_border_md radius" id="switchAlarm3">알림받기 (카톡/메일)<span class="ico_bluearrow2"></span></button>
+
+                <button type="button" class="btn_primary_lg" id="switchAlarm1">알림신청 완료</button>
+
+                <button type="button" class="btn_primary_lg" id="switchAlarm2">알림신청 해제</button>
             </div>
         </div>
         <!--// wrap(e) -->
@@ -58,6 +58,28 @@
                 });
                 $("#switchAlarmPop2 .layer_close").click(function (e) {
                     $("#switchAlarm2").focus(); // 접근성
+                });
+
+                // Layer : 알림신청 (카톡/메일)
+                $("#switchAlarm3").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#switchAlarmPop3").show().focus();
+                });
+                $("#switchAlarmPop3 .btn_outline_md").click(function (e) {
+                    $("#switchAlarm3").focus(); // 접근성
+                });
+
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $("#switchAlarmPop3 .btn_primary_md").click(function (e) {
+                            $("#switchAlarmPop1").show().focus();
+                        });
+                    });
                 });
             });
         </script>
