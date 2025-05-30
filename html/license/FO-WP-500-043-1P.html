@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="alert">자격증 발급 신청 완료</button>
@@ -55,7 +53,7 @@
                 $("#alert").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#alertPop").show().focus();
                 });
                 $("#alertPop .layer_close").click(function (e) {

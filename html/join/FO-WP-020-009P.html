@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="userValidation2">본인정보확인 팝업</button>
@@ -56,7 +54,7 @@
             </div>
         </div>
         <!--// 20250428 수정 : 위치이동 및 속성 추가 -->
-        
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -65,7 +63,7 @@
                 $("#userValidation2").click(function (e) {
                     $("html").addClass("layerOpen"); // 20250428 추가
                     $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
-                    $(".layerDim").show();
+
                     $("#userValidationPop").show().focus();
                 });
                 $("#userValidationPop .layer_close").click(function (e) {

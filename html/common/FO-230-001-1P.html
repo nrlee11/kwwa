@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="switchAlarm1">알림신청 완료</button>
@@ -44,7 +42,7 @@
                 $("#switchAlarm1").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#switchAlarmPop1").show().focus();
                 });
                 $("#switchAlarmPop1 .layer_close").click(function (e) {
@@ -55,7 +53,7 @@
                 $("#switchAlarm2").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#switchAlarmPop2").show().focus();
                 });
                 $("#switchAlarmPop2 .layer_close").click(function (e) {

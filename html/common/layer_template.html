@@ -12,34 +12,61 @@
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
         <title>레이어 템플릿 | 한국상하수도협회</title>
+        <!-- [D] ui확인용. 개발시 삭제 -->
+        <style>
+            .guide-flex-box {
+                display: flex;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+            .guide-column {
+                display: flex;
+                gap: 15px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                max-width: 200px;
+            }
+        </style>
+        <!-- // [D] ui확인용. 개발시 삭제 -->
     </head>
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap" aria-hidden="true">
-            <div class="layerDim" style="display: none"></div>
+            <div style="height: 100%; display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center">
+                <div class="box_border">
+                    <div class="guide-notice-box">
+                        <strong><span class="txt_size_xmd txt_blue">팝업 사용시</span></strong>
+                        <ul>
+                            <li>- 이중 팝업 사용시 : 2번째 팝업은 layerFix에 is_front_popup 클래스 추가</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div style="display: flex; align-items: center; justify-content: center; padding: 30px 15px">
-                <div>
-                    <strong class="center">기본팝업</strong><br />
-                    <button type="button" class="btn_primary_lg" id="alertPopDefaultBtn">기본</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="alertPopDefaultSCrollBtn">기본 + 스크롤</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="alertPopHeightBtn">기본 + PC 최소높이 774px</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="alertPopTableBtn">기본 + 테이블 밀어서보기</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="alertPopTableXBtn">기본 + 스크롤 +테이블 밀어서보기</button>
-                    <br /><br />
+                <div class="guide-flex-box">
+                    <div class="guide-column">
+                        <strong class="txt_size_xmd">기본팝업</strong>
+                        <button type="button" class="btn_primary_lg" id="alertPopDefaultBtn">기본</button>
 
-                    <strong class="center">모바일 풀</strong><br />
-                    <button type="button" class="btn_primary_lg" id="fullPopupBtn">모바일 풀</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="fullPopupScrollBtn">모바일 풀 + 스크롤</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="fullPopTableXBtn">모바일 풀 + 스크롤 + 테이블 밀어서보기</button>
-                    <br /><br />
-                    <button type="button" class="btn_primary_lg" id="fullPopTabBtn">모바일 풀 + 탭</button>
+                        <button type="button" class="btn_primary_lg" id="alertPopDefaultSCrollBtn">기본 + 스크롤</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopHeightBtn">기본 + PC 최소높이 774px</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopTableBtn">기본 + 테이블 밀어서보기</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopTableXBtn">기본 + 스크롤 +테이블 밀어서보기</button>
+                    </div>
+
+                    <div class="guide-column">
+                        <strong class="txt_size_xmd">모바일 풀</strong>
+                        <button type="button" class="btn_primary_lg" id="fullPopupBtn">모바일 풀</button>
+
+                        <button type="button" class="btn_primary_lg" id="fullPopupScrollBtn">모바일 풀 + 스크롤</button>
+
+                        <button type="button" class="btn_primary_lg" id="fullPopTableXBtn">모바일 풀 + 스크롤 + 테이블 밀어서보기</button>
+
+                        <button type="button" class="btn_primary_lg" id="fullPopTabBtn">모바일 풀 + 탭</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -876,7 +903,7 @@
                 $("#alertPopDefaultBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#alertPopDefault").show().focus();
                 });
                 $("#alertPopDefault .layer_close").click(function (e) {
@@ -886,7 +913,7 @@
                 $("#alertPopDefaultSCrollBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#alertPopDefaultSCroll").show().focus();
                 });
                 $("#alertPopDefaultSCroll .layer_close").click(function (e) {
@@ -897,7 +924,7 @@
                 $("#alertPopHeightBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#alertPopHeight").show().focus();
                 });
                 $("#alertPopHeight .layer_close").click(function (e) {
@@ -908,7 +935,7 @@
                 $("#alertPopTableBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#alertPopTable").show().focus();
                 });
                 $("#alertPopTable .layer_close").click(function (e) {
@@ -919,7 +946,7 @@
                 $("#alertPopTableXBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#alertPopTableX").show().focus();
                 });
                 $("#alertPopTableX .layer_close").click(function (e) {
@@ -930,7 +957,7 @@
                 $("#fullPopupBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#fullPopup").show().focus();
                 });
                 $("#fullPopup .layer_close").click(function (e) {
@@ -941,7 +968,7 @@
                 $("#fullPopupScrollBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#fullPopupScroll").show().focus();
                 });
                 $("#fullPopupScroll .layer_close").click(function (e) {
@@ -952,7 +979,7 @@
                 $("#fullPopTableXBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#fullPopTableX").show().focus();
                 });
                 $("#fullPopTableX .layer_close").click(function (e) {
@@ -963,7 +990,7 @@
                 $("#fullPopTabBtn").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#fullPopTab").show().focus();
                 });
                 $("#fullPopTab .layer_close").click(function (e) {

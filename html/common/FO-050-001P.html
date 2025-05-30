@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap" aria-hidden="true">
-            <div class="layerDim" style="display: block"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="alert">자격증 급수 선택</button>
@@ -85,7 +83,6 @@
                 $("#alert").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
                     $("#alertPop").show().focus();
                 });
                 $("#alertPop .layer_close").click(function (e) {

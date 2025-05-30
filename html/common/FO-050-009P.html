@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div style="text-align: center">
                     <button type="button" class="btn_primary_lg" id="requirements03">정수시설운영관리사 자격요건(3급)</button>
@@ -72,7 +70,7 @@
                 $("#requirements03").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#requirementsPop03").show().focus();
                 });
                 $("#requirementsPop03 .layer_close").click(function (e) {

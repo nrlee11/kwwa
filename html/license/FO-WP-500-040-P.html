@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="licensePhoto">자격증 발급용 사진</button>
@@ -58,7 +56,7 @@
                 $("#licensePhoto").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#licensePhotoPop").show().focus();
                 });
                 $("#licensePhotoPop .layer_close").click(function (e) {

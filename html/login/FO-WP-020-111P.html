@@ -16,14 +16,11 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="idValidation">계정확인</button>
                 </div>
             </div>
-
         </div>
         <!--// wrap(e) -->
 
@@ -63,7 +60,7 @@
                 $("#idValidation").click(function (e) {
                     $("html").addClass("layerOpen"); // 20250428 추가
                     $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
-                    $(".layerDim").show();
+
                     $("#idValidationPop").show().focus();
                 });
                 $("#idValidationPop .layer_close").click(function (e) {

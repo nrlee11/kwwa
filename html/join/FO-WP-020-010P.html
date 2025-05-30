@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="emailValidation">이메일 인증하기 팝업</button>
@@ -38,7 +36,7 @@
                 $("#emailValidation").click(function (e) {
                     $("html").addClass("layerOpen"); // 20250428 추가
                     $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
-                    $(".layerDim").show();
+
                     $("#emailValidationPop").show().focus();
                 });
                 $("#emailValidationPop .layer_close").click(function (e) {

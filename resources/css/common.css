@@ -3813,18 +3813,6 @@ select.sm {
   background: url("../../resources/images/common/bg_bankaccount_on.svg") no-repeat 0 0;
 }
 
-.layerDim {
-  display: var(--hide);
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-black);
-  opacity: 0.6;
-}
-
 .layerFix {
   position: fixed;
   top: 0;
@@ -3844,6 +3832,16 @@ select.sm {
     min-width: 24.8rem;
   }
 }
+.layerFix:before {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0.6;
+  content: "";
+}
 .layerFix:focus {
   outline: var(--color-white) dotted 0.1rem;
 }
@@ -3852,6 +3850,12 @@ select.sm {
 }
 .layerFix.minPopup .cont .layer_scroll {
   flex: 1 1 auto;
+}
+.layerFix.is_front_popup {
+  z-index: 1002;
+}
+.layerFix.is_front_popup:before {
+  opacity: 0.4;
 }
 .layerFix .layer_wrap {
   display: flex;
@@ -4288,7 +4292,7 @@ select.sm {
   .printpop #header,
   .printpop #container,
   .printpop #footer,
-  .printpop .layerDim {
+  .printpop .layerFix:before {
     display: var(--hide) !important;
   }
   .printpop .layerFix {

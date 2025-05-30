@@ -16,8 +16,6 @@
     <body>
         <!-- wrap(s) -->
         <div id="wrap" class="wrap">
-            <div class="layerDim" style="display: none"></div>
-
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
                     <button type="button" class="btn_primary_lg" id="policyService">서비스 이용약관</button>
@@ -141,7 +139,7 @@
             </div>
         </div>
         <!--// Layer : 서비스 이용약관 -->
-        
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -150,7 +148,7 @@
                 $("#policyService").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $(".layerDim").show();
+
                     $("#policyServicePop").show().focus();
                 });
                 $("#policyServicePop .layer_close").click(function (e) {

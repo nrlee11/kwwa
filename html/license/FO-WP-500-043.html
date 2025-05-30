@@ -304,7 +304,7 @@
                     // 첨부불가 안내
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $("#filetypealertPop, .layerDim").show();
+                    $("#filetypealertPop").show();
                     setTimeout(() => {
                         $("#filetypealertPop").focus();
                     }, 100);
@@ -315,7 +315,7 @@
                     // 파일용량 초과 안내
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
-                    $("#filesizealertPop, .layerDim").show();
+                    $("#filesizealertPop").show();
                     setTimeout(() => {
                         $("#filesizealertPop").focus();
                     }, 100);
@@ -337,7 +337,7 @@
             $("#licensePhoto").click(function (e) {
                 $("html").addClass("layerOpen");
                 $("#wrap").attr("aria-hidden", "true");
-                $(".layerDim").show();
+
                 $("#licensePhotoPop").show().focus();
             });
             $("#licensePhotoPop .layer_close").click(function (e) {

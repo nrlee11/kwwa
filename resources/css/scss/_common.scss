@@ -2847,17 +2847,6 @@ select {
 }
 
 // layer
-.layerDim {
-    display: var(--hide);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-black);
-    opacity: 0.6;
-}
 .layerFix {
     position: fixed;
     top: 0;
@@ -2875,6 +2864,18 @@ select {
         padding: 2rem;
         min-width: 24.8rem;
     }
+    &:before {
+        // display: var(--hide);
+        position: fixed;
+        left: 0;
+        top: 0;
+        // z-index: 1000;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-black);
+        opacity: 0.6;
+        content: "";
+    }
     &:focus {
         outline: var(--color-white) dotted 0.1rem;
     }
@@ -2886,6 +2887,12 @@ select {
             .layer_scroll {
                 flex: 1 1 auto;
             }
+        }
+    }
+    &.is_front_popup {
+        z-index: 1002;
+        &:before {
+            opacity: 0.4;
         }
     }
     .layer_wrap {
@@ -3359,7 +3366,7 @@ select {
         #header,
         #container,
         #footer,
-        .layerDim {
+        .layerFix:before {
             display: var(--hide) !important;
         }
         .layerFix {

@@ -351,8 +351,7 @@ $(function () {
     // LayerClose
     const layerClose = function () {
         $(".layerFix .layer_close").click(function (e) {
-            $(this).parents(".layerFix, .layerDim").hide();
-            $(".layerDim").hide();
+            $(this).parents(".layerFix").hide();
             $("html").removeClass("layerOpen");
             $("#wrap").removeAttr("aria-hidden");
         });
@@ -361,8 +360,7 @@ $(function () {
     // alertLayerClose
     // const alertLayerClose = function () {
     //     $(".alertPopup .layer_close").click(function (e) {
-    //         $(this).parents(".layerFix, .layerDim").hide();
-    //         $(".layerDim").hide();
+    //         $(this).parents(".layerFix").hide();
     //         $("html").removeClass("layerOpen");
     //     });
     // };
