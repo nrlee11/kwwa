@@ -176,7 +176,7 @@ $(function () {
         $(document)
             .off("click.lnb")
             .on("click.lnb", "#lnb > li > a", function (e) {
-                e.preventDefault();
+                // e.preventDefault();
 
                 var $this = $(this),
                     $li = $this.parent(),
