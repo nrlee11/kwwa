@@ -184,10 +184,10 @@
                             <div class="gap_mt24">
                                 <!-- [D] 자가진단 전/후에 따라 버튼/문구 제거 -->
                                 <!-- 자가진단 전 -->
-                                <button type="button" class="btn_secondary_lg">자격취득 가능여부 자가진단 바로가기<span class="ico_outlink"></span></button>
+                                <button type="button" class="btn_secondary_lg" id="btnPop1">자격취득 가능여부 자가진단 바로가기<span class="ico_outlink"></span></button>
                                 <!-- // 자가진단 전 -->
                                 <!-- 자가진단 후 -->
-                                <p class="result_area positive">자가진단 확인 완료되었습니다.</p>
+                                <p class="result_area positive" style="display: none">자가진단 확인 완료되었습니다.</p>
                                 <!-- // 자가진단 후 -->
                             </div>
 
@@ -340,7 +340,541 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- Layer : 자격증 급수 선택 -->
+        <div class="layerFix minPopup" id="btnPop1_1" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="/view_202506/html/common/layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">자격증 급수 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <strong class="tit">Q. 귀하는 몇 급을 취득하시길 원하십니까?</strong>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_level1" name="label_level" checked />
+                                            <label for="label_level1">1급</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_level2" name="label_level" />
+                                            <label for="label_level2">2급</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //스크롤 -->
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md">다음</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 자격증 급수 선택 -->
+
+        <!-- Layer : 최종 학력 선택 -->
+        <div class="layerFix minPopup" id="btnPop1_2" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="/view_202506/html/common/layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">최종 학력 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <storng class="tit">Q. 귀하의 최종 학력은 어떻게 되십니까?</storng>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_school1" name="label_school" checked />
+                                            <label for="label_school1">고등학교 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_school2" name="label_school" />
+                                            <label for="label_school2">2년제 대학 이공계 학과 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_school3" name="label_school" />
+                                            <label for="label_school3">4년제 대학 이공계 학과 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_school4" name="label_school" />
+                                            <label for="label_school4">2, 4년제 대학 비이공계(인문, 사회, 체육, 예술 등) 학과 졸업</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">자격증 취득시 학력증명서를 제출합니다.</span></p>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 최종 학력 선택 -->
+
+        <!-- Layer : 경력 선택 -->
+        <div class="layerFix minPopup" id="btnPop1_3" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="/view_202506/html/common/layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">경력 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <storng class="tit">Q. 수도시설의 설치, 유지, 관리와 관련한 분야에서 근무한 경력은 얼마나 되십니까?</storng>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_work1" name="label_work" checked />
+                                            <label for="label_work1">근무경력 없음</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_work2" name="label_work" />
+                                            <label for="label_work2">1년 이상</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_work3" name="label_work" />
+                                            <label for="label_work3">3년 이상</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_work4" name="label_work" />
+                                            <label for="label_work4">5년 이상</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note"> 자격증 취득시 경력증명서를 제출합니다.</span></p>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 경력 선택 -->
+
+        <!-- Layer : 교육 선택 -->
+        <div class="layerFix minPopup" id="btnPop1_4" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="/view_202506/html/common/layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">교육 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <strong class="tit">Q. 수도시설의 설치나 유지관리 분야의 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 실무교육을 400시간 이상 받으셨습니까?</strong>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_agr_001" name="label_agr_00" checked />
+                                            <label for="label_agr_001">받음</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label_agr_002" name="label_agr_00" />
+                                            <label for="label_agr_002">안받음</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">실무교육 확인서를 제출합니다.</span></p>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 교육 선택 -->
+
+        <!-- Layer : 결격사유 -->
+        <div class="layerFix alertPopup" id="btnPop1_5" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="/view_202506/html/common/layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress is_progress_last">결격 사유</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <strong class="tit">Q. 아래 사항에 해당하는 것이 한가지 이상 있습니까?</strong>
+                                    <div class="box_border">
+                                        <!-- [D] 운영관리사에 따라 사용 : 정수시설운영관리사 vs 상수도관망시설운영관리사  -->
+                                        <!-- 정수시설운영관리사 결격사유 (s) -->
+                                        <strong>정수시설운영관리사 결격사유</strong>
+                                        <ul class="list_item gap_mt10">
+                                            <li><span>1.</span>피성년후견인</li>
+                                            <li><span>2.</span>파산선고를 받고 복권되지 아니한 사람</li>
+                                            <li><span>3.</span>이 법, 「하수도법」, 「먹는물관리법」 또는 「물의 재이용 촉진 및 지원에 관한 법률」을 위반하여 금고 이상의 실형을 선고받고 그 집행이 종료(집행이 종료된 것으로 보는 경우를 포함한다)되거나 집행이 면제된 날부터 2년이 지나지 아니한 사람</li>
+                                            <li><span>4.</span>이 법, 「하수도법」, 「먹는물관리법」 또는 「물의 재이용 촉진 및 지원에 관한 법률」을 위반하여 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 사람</li>
+                                            <li><span>5.</span>「제25조에 따라 자격이 취소(제24조제4항제1호 또는 제2호에 해당하여 자격이 취소된 경우는 제외한다)된 날부터 3년이 지나지 아니한 사람</li>
+                                        </ul>
+                                        <p class="gap_mt10">* 수도법제24조(정수시설운영관리사)</p>
+                                        <!-- // 정수시설운영관리사 결격사유 (e) -->
+
+                                        <!-- 상수도관망시설운영관리사 결격사유 (s) -->
+                                        <strong>상수도관망시설운영관리사 결격사유</strong>
+                                        <ul class="list_item gap_mt10">
+                                            <li><span>1.</span>피성년후견인</li>
+                                            <li><span>2.</span>파산선고를 받고 복권되지 아니한 사람</li>
+                                            <li><span>3.</span>이 법, 「하수도법」, 「먹는물관리법」 또는 「물의 재이용 촉진 및 지원에 관한 법률」을 위반하여 금고 이상의 실형을 선고받고 그 집행이 종료(집행이 종료된 것으로 보는 경우를 포함한다)되거나 집행이 면제된 날부터 2년이 지나지 아니한 사람</li>
+                                            <li><span>4.</span>이 법, 「하수도법」, 「먹는물관리법」 또는 「물의 재이용 촉진 및 지원에 관한 법률」을 위반하여 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 사람</li>
+                                            <li><span>5.</span>제25조의3에 따라 자격이 취소 (제25조의2제2항제1호 또는 제2호에 해당하여 자격이 취소된 경우는 제외한다)된 날부터 3년이 지나지 아니한 사람</li>
+                                        </ul>
+                                        <p class="gap_mt10">* 수도법제25조의2(상수도관망시설운영관리사)</p>
+                                        <!-- // 상수도관망시설운영관리사 결격사유 (e) -->
+                                    </div>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" checked />
+                                            <label for="label1">없음</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">있음</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">결과확인</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 결격사유 -->
+
+        <!-- Layer : 자가진단 결과 -->
+        <div class="layerFix minPopup" id="btnPop1_6" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="/view_202506/html/common/layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit">자가진단 결과</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <p class="txt">귀하는 {상수도관망시설운영관리사/ 정수시설운영관리사} {급수}급 자격 취득이 {가능/불가능} 합니다.</p>
+                            <div class="box_border">
+                                <ul class="list_square">
+                                    <li>학력요건 : {충족 / 불충족 - 학력요건을 충족하지 못하였습니다.}</li>
+                                    <li>경력요건 : {충족 / 불충족 - 경력요건을 충족하지 못하였습니다.}</li>
+                                    <li>결격사유 : {없음 / 있음}</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="txt_mark txt_red gap_mt20">위 결과는 본인의 취득가능여부를 스스로 진단해보는 것으로 실제 제출서류의 사실관계 등에 따라 결과가 달라질 수 있음에 유의하시기 바랍니다.</p>
+                        <p class="txt_mark txt_red gap_mt20">양성과정을 이수한 경우라도 자격요건이 충족되지 않을 경우 자격을 취득 할 수 없기 때문에 양성과정에 참가하시기 전에 필히 사전확인을 하시기 바 랍니다.</p>
+                    </div>
+                    <!-- // 스크롤 -->
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 자가진단 결과 -->
+
+        <!-- Layer : 주소변경 -->
+        <div class="layerFix alertPopup" id="changeAddressPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">주소변경</strong>
+                    </div>
+                    <div class="article">
+                        <!-- board -->
+                        <div class="board_area">
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- board_write -->
+                                <div class="form_list">
+                                    <div class="form_item">
+                                        <div class="address_set full">
+                                            <div class="group_box">
+                                                <div class="box">
+                                                    <div class="inp">
+                                                        <input type="tel" placeholder="우편번호" value="07379" autocomplete="off" readonly />
+                                                    </div>
+                                                </div>
+                                                <div class="box">
+                                                    <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                </div>
+                                            </div>
+                                            <div class="inp">
+                                                <input type="text" value="서울특별시 영등포구 대림로-244(대림동)" placeholder="배송지 주소" autocomplete="off" readonly />
+                                            </div>
+                                            <div class="inp">
+                                                <input type="text" placeholder="상세 주소 입력" value="2F 201호" autocomplete="off" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_item line sm">
+                                        <div class="check_set">
+                                            <span class="inp_check">
+                                                <input type="checkbox" id="addressSave" />
+                                                <label for="addressSave">회원정보 주소도 변경</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// board_write -->
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// board -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md">적용하기</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 주소변경 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-230-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
+
+                // Layer : 자격증 급수 선택 활성화
+                $("#btnPop1").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_1").show().focus();
+                });
+                // Layer - 다음
+                $("#btnPop1_1 .btn_area .btn_primary_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_1").hide();
+                    $("#btnPop1_2").show().focus();
+                });
+                $("#btnPop1_2 .btn_area .btn_primary_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_2").hide();
+                    $("#btnPop1_3").show().focus();
+                });
+                $("#btnPop1_3 .btn_area .btn_primary_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_3").hide();
+                    $("#btnPop1_4").show().focus();
+                });
+                $("#btnPop1_4 .btn_area .btn_primary_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_4").hide();
+                    $("#btnPop1_5").show().focus();
+                });
+                $("#btnPop1_5 .btn_area .btn_primary_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_5").hide();
+                    $("#btnPop1_6").show().focus();
+                });
+                $("#btnPop1_6 .btn_area .btn_primary_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_6").hide();
+                    $("#btnPop1").hide().next(".result_area").show();
+                });
+                // Layer - 이전
+                $("#btnPop1_2 .btn_area .btn_outline_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_2").hide();
+                    $("#btnPop1_1").show().focus();
+                });
+                $("#btnPop1_3 .btn_area .btn_outline_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_3").hide();
+                    $("#btnPop1_2").show().focus();
+                });
+                $("#btnPop1_4 .btn_area .btn_outline_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_4").hide();
+                    $("#btnPop1_3").show().focus();
+                });
+                $("#btnPop1_5 .btn_area .btn_outline_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_5").hide();
+                    $("#btnPop1_4").show().focus();
+                });
+                $("#btnPop1_6 .btn_area .btn_outline_md").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#btnPop1_6").hide();
+                    $("#btnPop1_5").show().focus();
+                });
+
+                $("#btnPop1_1 .layer_close, #btnPop1_2 .layer_close, #btnPop1_3 .layer_close, #btnPop1_4 .layer_close, #btnPop1_5 .layer_close, #btnPop1_6 .layer_close").click(function (e) {
+                    $("#btnPop1").focus(); // 접근성
+                });
+
+                // 주소변경
+                $('.btn_primary_sm:contains("주소 변경")').click(function (e) {
+                    $("#changeAddressPop").show().focus();
+                });
+            });
+        </script>
     </body>
 </html>
