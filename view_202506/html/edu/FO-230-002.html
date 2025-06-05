@@ -52,20 +52,20 @@
                                     <div class="thumbnail"></div>
                                     <div class="timetable">
                                         <div class="edu_tit">
-                                            <span class="value_badge1">999기</span>
-                                            <strong class="tit">상수도관망시설운영관리사 양성과정 교육1급 (개정)</strong>
+                                            <span class="value_badge1">26기</span>
+                                            <strong class="tit">상수도관망시설운영관리사 양성과정 교육2급</strong>
                                         </div>
                                         <div class="cell">
                                             <span class="tit">신청기간</span>
-                                            <span class="item">2025-01-10 (금) ~ 2025-01-16 (목)</span>
+                                            <span class="item">6.27(금)~7.3(목)</span>
                                         </div>
                                         <div class="cell">
                                             <span class="tit">교육기간</span>
-                                            <span class="item">2025-01-10 (금) ~ 2025-01-16 (목)</span>
+                                            <span class="item">7.14(월)~8.24(일)</span>
                                         </div>
                                         <div class="cell">
                                             <span class="tit">수료일</span>
-                                            <span class="item">2025-03-10 (월)</span>
+                                            <span class="item">8.25(월)</span>
                                         </div>
                                         <div class="cell">
                                             <span class="tit">교육비</span>
@@ -77,20 +77,20 @@
 
                             <div class="page_btn_area center">
                                 <div class="lside">
-                                    <button type="button" class="btn_primary_lg">교육신청</button>
+                                    <a href="/view_202506/html/edu/FO-230-003.html" class="btn_primary_lg">교육신청</a>
                                 </div>
                                 <div class="rside">
-                                    <button type="button" class="btn_outline_lg">목록</button>
+                                    <a href="/view_202506/html/edu/FO-230-001.html" class="btn_outline_lg">목록</a>
                                 </div>
                             </div>
 
                             <!-- 신청한 교육일 경우 -->
                             <div class="page_btn_area center">
                                 <div class="lside">
-                                    <button type="button" class="btn_primary_lg">교육신청 현황</button>
+                                    <a href="/view_202506/html/edu/FO-240-001.html" class="btn_primary_lg">교육신청 현황</a>
                                 </div>
                                 <div class="rside">
-                                    <button type="button" class="btn_outline_lg">목록</button>
+                                    <a href="/view_202506/html/edu/FO-230-001.html" class="btn_outline_lg">목록</a>
                                 </div>
                             </div>
                             <!--// 신청한 교육일 경우 -->
@@ -442,5 +442,19 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-230-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
