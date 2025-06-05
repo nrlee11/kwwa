@@ -220,6 +220,9 @@
                             background: url($url-img-common + "bg_lnb.svg") no-repeat 0 0;
                         }
                     }
+                    a[aria-expanded="true"]::after {
+                        transform: rotate(180deg);
+                    }
                 }
                 &.on,
                 &:hover {

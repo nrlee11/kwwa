@@ -457,6 +457,9 @@ button {
   margin-top: -1rem;
   background: url("../../resources/images/common/bg_lnb.svg") no-repeat 0 0;
 }
+#container #aside .lnb > li:has(ul) a[aria-expanded=true]::after {
+  transform: rotate(180deg);
+}
 #container #aside .lnb > li.on > a, #container #aside .lnb > li:hover > a {
   background-color: #eef2f7;
 }
