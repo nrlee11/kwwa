@@ -101,15 +101,15 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">등급</th>
-                                            <td data-cell-header="등급"><div>등급</div></td>
+                                            <td data-cell-header="등급"><div>2급</div></td>
                                             <th scope="row">기수</th>
-                                            <td data-cell-header="기수"><div>11기</div></td>
+                                            <td data-cell-header="기수"><div>26기</div></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">교육기간</th>
-                                            <td data-cell-header="교육기간"><div>2025-01-27(월) ~ 2025-03-09(일)</div></td>
+                                            <td data-cell-header="교육기간"><div>2025-07-14(월) ~ 2025-08-24(일)</div></td>
                                             <th scope="row">수료일</th>
-                                            <td data-cell-header="기수"><div>2025-03-10(월)</div></td>
+                                            <td data-cell-header="기수"><div>2025-08-25(월)</div></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -195,9 +195,7 @@
                                 </div>
                             </div>
                             <div class="pay_amount_area">
-                                <div class="lside">
-                                    <button type="button" class="btn_pop">청구서 인쇄하기</button>
-                                </div>
+                                <div class="lside"></div>
                                 <div class="rside">
                                     <div class="total">
                                         <span>총 결제금액</span>
@@ -236,7 +234,83 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- Layer : 주소변경 -->
+        <div class="layerFix alertPopup" id="changeAddressPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">주소변경</strong>
+                    </div>
+                    <div class="article">
+                        <!-- board -->
+                        <div class="board_area">
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- board_write -->
+                                <div class="form_list">
+                                    <div class="form_item">
+                                        <div class="address_set full">
+                                            <div class="group_box">
+                                                <div class="box">
+                                                    <div class="inp">
+                                                        <input type="tel" placeholder="우편번호" value="07379" autocomplete="off" readonly />
+                                                    </div>
+                                                </div>
+                                                <div class="box">
+                                                    <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                </div>
+                                            </div>
+                                            <div class="inp">
+                                                <input type="text" value="서울특별시 영등포구 대림로-244(대림동)" placeholder="배송지 주소" autocomplete="off" readonly />
+                                            </div>
+                                            <div class="inp">
+                                                <input type="text" placeholder="상세 주소 입력" value="2F 201호" autocomplete="off" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_item line sm">
+                                        <div class="check_set">
+                                            <span class="inp_check">
+                                                <input type="checkbox" id="addressSave" />
+                                                <label for="addressSave">회원정보 주소도 변경</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// board_write -->
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// board -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md">적용하기</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 주소변경 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                // 주소변경
+                $('.btn_primary_sm:contains("주소 변경")').click(function (e) {
+                    $("#changeAddressPop").show().focus();
+                });
+            });
+        </script>
     </body>
 </html>
