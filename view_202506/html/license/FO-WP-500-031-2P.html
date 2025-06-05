@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>학력 증명 서류 안내 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert2">학력 증명 서류 안내</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 학력 증명 서류 안내 -->
+        <div class="layerFix fullPopup" id="alertPop2" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">
+                            학력 증명 서류 안내
+                            <strong class="sm_txt">(해당 택1)</strong>
+                        </strong>
+                    </div>
+                    <div class="article">
+                        <div class="tit">졸업증명서</div>
+                        <ul class="list_dash">
+                            <li>대학졸업자 경우 이학사 또는 공학사 학위를 취득하였는지 확인(졸업증명서에 표기되어 있음)</li>
+                            <li>전문대학 졸업자 중 이공계열의 전문학사 학위를 취득하였는지 확인</li>
+                        </ul>
+                        <p class="txt_mark">전문대학 졸업자의 경우 해당학과가 공학 또는 이학 분야에 해당하는지 반드시 해당 학교에 조회</p>
+                    </div>
+                    <div class="article">
+                        <div class="tit">수료증명서 또는 학위증</div>
+                        <ul class="list_dash">
+                            <li>이공계 대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                            <li>이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</li>
+                        </ul>
+                    </div>
+                    <div class="article">
+                        <div class="tit">고등학교 졸업증명서</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 학력 증명 서류 안내 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 학력 증명 서류 안내
+                $("#alert2").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop2").show().focus();
+                });
+                $("#alertPop2 .layer_close").click(function (e) {
+                    $("#alert2").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>레이어 템플릿 | 한국상하수도협회</title>
+        <!-- [D] ui확인용. 개발시 삭제 -->
+        <style>
+            .guide-flex-box {
+                display: flex;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+            .guide-column {
+                display: flex;
+                gap: 15px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                max-width: 200px;
+            }
+        </style>
+        <!-- // [D] ui확인용. 개발시 삭제 -->
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap" aria-hidden="true">
+            <div style="height: 100%; display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center">
+                <div class="box_border">
+                    <div class="guide-notice-box">
+                        <strong><span class="txt_size_xmd txt_blue">팝업 사용시</span></strong>
+                        <ul>
+                            <li>- 이중 팝업 사용시 : 2번째 팝업은 layerFix에 is_front_popup 클래스 추가</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-flex-box">
+                    <div class="guide-column">
+                        <strong class="txt_size_xmd">기본팝업</strong>
+                        <button type="button" class="btn_primary_lg" id="alertPopDefaultBtn">기본</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopDefaultSCrollBtn">기본 + 스크롤</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopHeightBtn">기본 + PC 최소높이 774px</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopTableBtn">기본 + 테이블 밀어서보기</button>
+
+                        <button type="button" class="btn_primary_lg" id="alertPopTableXBtn">기본 + 스크롤 +테이블 밀어서보기</button>
+                    </div>
+
+                    <div class="guide-column">
+                        <strong class="txt_size_xmd">모바일 풀</strong>
+                        <button type="button" class="btn_primary_lg" id="fullPopupBtn">모바일 풀</button>
+
+                        <button type="button" class="btn_primary_lg" id="fullPopupScrollBtn">모바일 풀 + 스크롤</button>
+
+                        <button type="button" class="btn_primary_lg" id="fullPopTableXBtn">모바일 풀 + 스크롤 + 테이블 밀어서보기</button>
+
+                        <button type="button" class="btn_primary_lg" id="fullPopTabBtn">모바일 풀 + 탭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <!-- LAYER : 타입(기본) -->
+        <div class="layerFix alertPopup" id="alertPopDefault" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit">기본</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <!-- 본문 -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, architecto ipsum possimus dolor omnis quaerat iusto amet excepturi eaque culpa, aut laborum accusamus, ab tempore provident ullam vitae saepe cupiditate?
+                        <!-- // 본문 -->
+                    </div>
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(기본) -->
+
+        <!-- LAYER : 타입(기본+스크롤) -->
+        <div class="layerFix alertPopup" id="alertPopDefaultSCroll" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit">기본(스크롤)</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <!-- 본문 -->
+                        <div class="article">
+                            <div class="notice_box">
+                                <p class="ico_txt"><span class="ico_mark" aria-hidden="true"></span>텍스트텍스트텍스트텍스트텍스트텍스트텍스트</p>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="box_border">
+                                <strong>리스트</strong>
+                                <ul class="list_item">
+                                    <li class="gap_mt20">
+                                        <span>1.</span>텍스트
+                                        <ul class="list_dash">
+                                            <li>
+                                                <a href="javascript:;" class="btn_txtlink">텍스트링크</a>
+                                            </li>
+                                            <li><a href="javascript:;" class="btn_link">아이콘링크</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="gap_mt20">
+                                        <span>2.</span>텍스트텍스트텍스트텍스트텍스트텍스트
+                                        <ul class="list_dash">
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                        </ul>
+                                    </li>
+                                    <li class="gap_mt20">
+                                        <span>2.</span>텍스트텍스트텍스트텍스트텍스트텍스트
+                                        <ul class="list_dash">
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="box_border">
+                                <ul class="list_item">
+                                    <li><span>1.</span>텍스트텍스트텍스트텍스트텍스트텍스트</li>
+                                    <li><span>2.</span>텍스트텍스트텍스트</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // 본문 -->
+                    </div>
+
+                    <div class="article gap_mt20">
+                        <div class="inp_check">
+                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                            <input type="checkbox" id="chkScroll00" />
+                            <label for="chkScroll00">위 내용을 잘 이해하였으며 동의합니다. </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(기본+스크롤) -->
+
+        <!-- LAYER : 타입(기본+최소높이(PC)) -->
+        <div class="layerFix minPopup" id="alertPopHeight" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="./layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 본문 -->
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <!-- [D] 마지막인 경우: .tit.ico_progress에 is_progress_last 클래스 추가  -->
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">PC 최소높이 774px</strong>
+                        </div>
+                        <div class="tit_area">
+                            <strong class="tit ico_progress is_progress_last">PC 최소높이 774px</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis nostrum omnis perspiciatis! Sint voluptatum quaerat ullam facilis! Nulla harum omnis eos ea maxime ullam iusto dolorem maiores eligendi necessitatibus dolorum voluptates dolor aut eum dicta odio,
+                        consequuntur quos, exercitationem recusandae ipsam asperiores vero ratione? Eum aliquam cumque dicta adipisci eos possimus rerum expedita iusto ab esse. Iste, provident ratione. Doloribus architecto adipisci, est id earum reprehenderit ab quae quam autem quos nisi ea natus
+                        voluptatem sunt eum odio dolorum, tempora vel nobis aperiam perferendis? Quis, totam fuga. Perferendis esse pariatur ipsam aliquam corporis nesciunt dolorum temporibus inventore quam nemo!
+                    </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">실무교육 확인서를 제출합니다.</span></p>
+                    <!-- // 본문 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(기본+최소높이(PC)) -->
+
+        <!-- LAYER : 타입(기본 + 테이블 밀어서보기 ) -->
+        <div class="layerFix" id="alertPopTable" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- 타이틀 -->
+                    <div class="tit_area">
+                        <strong class="tit">테이블 (밀어서보기)</strong>
+                    </div>
+                    <!-- // 타이틀 -->
+
+                    <!-- 본문 -->
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <div class="tit">과목별 점수표</div>
+                            <!-- board -->
+                            <div class="board_area gap_mt10">
+                                <div class="scroll_guide">
+                                    <p class="txt_scroll">밀어서 보기</p>
+                                </div>
+
+                                <div class="scroll_area">
+                                    <!-- board_view -->
+                                    <table class="tbl">
+                                        <caption>
+                                            NO, 과목, 문항수, 점수, 비고 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 80px" />
+                                            <col style="width: 192px" />
+                                            <col style="width: 80px" span="3" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">NO</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">문항수</th>
+                                                <th scope="col">점수</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div>1</div></td>
+                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td><div>40</div></td>
+                                                <td><div>100</div></td>
+                                                <td><div></div></td>
+                                            </tr>
+                                            <tr class="txt_red">
+                                                <td><div>1</div></td>
+                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td><div>40</div></td>
+                                                <td><div>39</div></td>
+                                                <td><div>과락</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// board_view -->
+                                </div>
+
+                                <div class="board_desc_bottom">
+                                    <p class="txt_mark">합격기준: 전체 평균점수 60점 이상, 전체 과목별 점수 40점 이상</p>
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                    </div>
+                    <!-- // 본문 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(기본 + 테이블 밀어서보기 ) -->
+
+        <!-- LAYER : 타입(기본 + 스크롤 + 테이블 밀어서보기 ) -->
+        <div class="layerFix" id="alertPopTableX" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- 타이틀 -->
+                    <div class="tit_area">
+                        <strong class="tit">테이블 (밀어서보기)</strong>
+                    </div>
+                    <!-- // 타이틀 -->
+
+                    <!-- 본문 -->
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <!-- board -->
+                            <div class="board_area">
+                                <div class="board_desc_top">
+                                    <div class="lside">자격증 : 상수도관망시설운영관리사<br />급수 : 2급</div>
+                                    <div class="rside">응시일 2025.01.02</div>
+                                </div>
+
+                                <!-- board_view -->
+                                <table class="tbl react">
+                                    <caption>
+                                        응시번호, 응시 결과, 전체평균 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 33.33%" span="2" />
+                                        <col />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">응시번호</th>
+                                            <th scope="col">응시 결과</th>
+                                            <th scope="col">전체평균</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="응시번호"><div>WL-001-1-1-1-001</div></td>
+                                            <td data-cell-header="응시 결과">
+                                                <div>
+                                                    <span class="txt_blue">합격</span>
+                                                    <span class="txt_red">불합격</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="전체평균"><div>60</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <div class="article">
+                            <div class="tit">과목별 점수표</div>
+                            <!-- board -->
+                            <div class="board_area gap_mt10">
+                                <div class="scroll_guide">
+                                    <p class="txt_scroll">밀어서 보기</p>
+                                </div>
+
+                                <div class="scroll_area">
+                                    <!-- board_view -->
+                                    <table class="tbl">
+                                        <caption>
+                                            NO, 과목, 문항수, 점수, 비고 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 80px" />
+                                            <col style="width: 192px" />
+                                            <col style="width: 80px" span="3" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">NO</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">문항수</th>
+                                                <th scope="col">점수</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div>1</div></td>
+                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td><div>40</div></td>
+                                                <td><div>100</div></td>
+                                                <td><div></div></td>
+                                            </tr>
+                                            <tr class="txt_red">
+                                                <td><div>1</div></td>
+                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td><div>40</div></td>
+                                                <td><div>39</div></td>
+                                                <td><div>과락</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// board_view -->
+                                </div>
+
+                                <div class="board_desc_bottom">
+                                    <p class="txt_mark">합격기준: 전체 평균점수 60점 이상, 전체 과목별 점수 40점 이상</p>
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                    </div>
+                    <!-- // 본문 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(기본 + 스크롤 + 테이블 밀어서보기 ) -->
+
+        <!-- LAYER : 타입(풀) -->
+        <div class="layerFix fullPopup" id="fullPopup" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit">모바일 풀</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <!-- 본문 -->
+                        <div class="article">
+                            <div class="notice_box">
+                                <p class="txt">회원님은 이전 홈페이지의 회원으로 아래 정보를 국가전문자격시스템으로 이전합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="result_area warning">아이디를 이메일주소로 사용해야 합니다.</div>
+                        </div>
+
+                        <p class="txt_mark txt_red gap_mt24">텍스트텍스트텍스트텍스트텍스트텍스트텍스트</p>
+                        <!-- // 본문 -->
+                    </div>
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(풀) -->
+
+        <!-- LAYER : 타입(풀+스크롤) -->
+        <div class="layerFix fullPopup" id="fullPopupScroll" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit">모바일 풀+스크롤</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <!-- 본문 -->
+                        <div class="article">
+                            <div class="notice_box">
+                                <p class="ico_txt"><span class="ico_mark" aria-hidden="true"></span>텍스트텍스트텍스트텍스트텍스트텍스트텍스트</p>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="box_border">
+                                <strong>리스트</strong>
+                                <ul class="list_item">
+                                    <li class="gap_mt20">
+                                        <span>1.</span>텍스트
+                                        <ul class="list_dash">
+                                            <li>
+                                                <a href="javascript:;" class="btn_txtlink">텍스트링크</a>
+                                            </li>
+                                            <li><a href="javascript:;" class="btn_link">아이콘링크</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="gap_mt20">
+                                        <span>2.</span>텍스트텍스트텍스트텍스트텍스트텍스트
+                                        <ul class="list_dash">
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                        </ul>
+                                    </li>
+                                    <li class="gap_mt20">
+                                        <span>2.</span>텍스트텍스트텍스트텍스트텍스트텍스트
+                                        <ul class="list_dash">
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                            <li>텍스트</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="box_border">
+                                <ul class="list_item">
+                                    <li><span>1.</span>텍스트텍스트텍스트텍스트텍스트텍스트</li>
+                                    <li><span>2.</span>텍스트텍스트텍스트</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // 본문 -->
+                    </div>
+
+                    <div class="article gap_mt20">
+                        <div class="inp_check">
+                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                            <input type="checkbox" id="chkScroll00" />
+                            <label for="chkScroll00">위 내용을 잘 이해하였으며 동의합니다. </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(풀+스크롤) -->
+
+        <!-- LAYER : 타입(풀 + 스크롤 + 테이블 밀어서보기 ) -->
+        <div class="layerFix fullPopup" id="fullPopTableX" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- 타이틀 -->
+                    <div class="tit_area">
+                        <strong class="tit">테이블 (밀어서보기)</strong>
+                    </div>
+                    <!-- // 타이틀 -->
+
+                    <!-- 본문 -->
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <!-- board -->
+                            <div class="board_area">
+                                <div class="board_desc_top">
+                                    <div class="lside">자격증 : 상수도관망시설운영관리사<br />급수 : 2급</div>
+                                    <div class="rside">응시일 2025.01.02</div>
+                                </div>
+
+                                <!-- board_view -->
+                                <table class="tbl react">
+                                    <caption>
+                                        응시번호, 응시 결과, 전체평균 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 33.33%" span="2" />
+                                        <col />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">응시번호</th>
+                                            <th scope="col">응시 결과</th>
+                                            <th scope="col">전체평균</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="응시번호"><div>WL-001-1-1-1-001</div></td>
+                                            <td data-cell-header="응시 결과">
+                                                <div>
+                                                    <span class="txt_blue">합격</span>
+                                                    <span class="txt_red">불합격</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="전체평균"><div>60</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <div class="article">
+                            <div class="tit">과목별 점수표</div>
+                            <!-- board -->
+                            <div class="board_area gap_mt10">
+                                <div class="scroll_guide">
+                                    <p class="txt_scroll">밀어서 보기</p>
+                                </div>
+
+                                <div class="scroll_area">
+                                    <!-- board_view -->
+                                    <table class="tbl">
+                                        <caption>
+                                            NO, 과목, 문항수, 점수, 비고 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 80px" />
+                                            <col style="width: 192px" />
+                                            <col style="width: 80px" span="3" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">NO</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">문항수</th>
+                                                <th scope="col">점수</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div>1</div></td>
+                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td><div>40</div></td>
+                                                <td><div>100</div></td>
+                                                <td><div></div></td>
+                                            </tr>
+                                            <tr class="txt_red">
+                                                <td><div>1</div></td>
+                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td><div>40</div></td>
+                                                <td><div>39</div></td>
+                                                <td><div>과락</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// board_view -->
+                                </div>
+
+                                <div class="board_desc_bottom">
+                                    <p class="txt_mark">합격기준: 전체 평균점수 60점 이상, 전체 과목별 점수 40점 이상</p>
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                    </div>
+                    <!-- // 본문 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(풀 + 스크롤 + 테이블 밀어서보기 ) -->
+
+        <!-- LAYER : 타입(풀 + 스크롤 + 탭 ) -->
+        <div class="layerFix fullPopup" id="fullPopTab" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- 타이틀 -->
+                    <div class="tit_area">
+                        <strong class="tit">탭메뉴</strong>
+                    </div>
+                    <!-- // 타이틀 -->
+
+                    <!-- 본문 -->
+                    <!-- tab -->
+                    <div class="tab_area">
+                        <div class="scroll_area">
+                            <ul class="tab" role="tablist">
+                                <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">tab1</button></li>
+                                <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">tab2</button></li>
+                            </ul>
+                        </div>
+
+                        <div class="tabpanel layer_scroll box_border" role="tabpanel">
+                            <!-- aria-controls과 tab_cont id값 동일하게 적용 -->
+                            <!-- tab1 -->
+                            <div id="tab1" class="tab_cont" aria-hidden="false">
+                                <ul style="display: flex; flex-direction: column; gap: 20px">
+                                    <li style="height: 60vh; background: #eee"></li>
+                                    <li style="height: 60vh; background: #eee"></li>
+                                </ul>
+                            </div>
+                            <!--// tab1 -->
+
+                            <!-- tab2 -->
+                            <div id="tab2" class="tab_cont" aria-hidden="true" style="display: none">
+                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dignissimos rerum eum aliquam repellat placeat.</div>
+                            </div>
+                            <!--// tab1 -->
+                        </div>
+                    </div>
+                    <!--// tab -->
+                    <!-- // 본문 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- foot -->
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // foot -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!-- // LAYER : 타입(풀 + 스크롤 + 탭 ) -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer
+                $("#alertPopDefaultBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPopDefault").show().focus();
+                });
+                $("#alertPopDefault .layer_close").click(function (e) {
+                    $("#alertPopDefaultBtn").focus(); // 접근성
+                });
+
+                $("#alertPopDefaultSCrollBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPopDefaultSCroll").show().focus();
+                });
+                $("#alertPopDefaultSCroll .layer_close").click(function (e) {
+                    $("#alertPopDefaultSCrollBtn").focus(); // 접근성
+                });
+
+                // 최소높이
+                $("#alertPopHeightBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPopHeight").show().focus();
+                });
+                $("#alertPopHeight .layer_close").click(function (e) {
+                    $("#alertPopHeightBtn").focus(); // 접근성
+                });
+
+                // 테이블 밀어서 보기
+                $("#alertPopTableBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPopTable").show().focus();
+                });
+                $("#alertPopTable .layer_close").click(function (e) {
+                    $("#alertPopTableBtn").focus(); // 접근성
+                });
+
+                // 스크롤 + 테이블 밀어서 보기
+                $("#alertPopTableXBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPopTableX").show().focus();
+                });
+                $("#alertPopTableX .layer_close").click(function (e) {
+                    $("#alertPopTableXBtn").focus(); // 접근성
+                });
+
+                // 모바일 풀
+                $("#fullPopupBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#fullPopup").show().focus();
+                });
+                $("#fullPopup .layer_close").click(function (e) {
+                    $("#fullPopupBtn").focus(); // 접근성
+                });
+
+                // 모바일 풀 + 스크롤
+                $("#fullPopupScrollBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#fullPopupScroll").show().focus();
+                });
+                $("#fullPopupScroll .layer_close").click(function (e) {
+                    $("#fullPopupScrollBtn").focus(); // 접근성
+                });
+
+                // 모바일 풀 + 스크롤 + 테이블 밀어서 보기
+                $("#fullPopTableXBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#fullPopTableX").show().focus();
+                });
+                $("#fullPopTableX .layer_close").click(function (e) {
+                    $("#fullPopTableXBtn").focus(); // 접근성
+                });
+
+                // 모바일 풀 + 탭
+                $("#fullPopTabBtn").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#fullPopTab").show().focus();
+                });
+                $("#fullPopTab .layer_close").click(function (e) {
+                    $("#fullPopTabBtn").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

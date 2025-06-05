@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>주소변경 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="changeAddress">주소변경</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 주소변경 -->
+        <div class="layerFix alertPopup" id="changeAddressPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">주소변경</strong>
+                    </div>
+                    <div class="article">
+                        <!-- board -->
+                        <div class="board_area">
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- board_write -->
+                                <div class="form_list">
+                                    <div class="form_item">
+                                        <div class="address_set full">
+                                            <div class="group_box">
+                                                <div class="box">
+                                                    <div class="inp">
+                                                        <input type="tel" placeholder="우편번호" value="07379" autocomplete="off" readonly />
+                                                    </div>
+                                                </div>
+                                                <div class="box">
+                                                    <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                </div>
+                                            </div>
+                                            <div class="inp">
+                                                <input type="text" value="서울특별시 영등포구 대림로-244(대림동)" placeholder="배송지 주소" autocomplete="off" readonly />
+                                            </div>
+                                            <div class="inp">
+                                                <input type="text" placeholder="상세 주소 입력" autocomplete="off" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_item line sm">
+                                        <div class="check_set">
+                                            <span class="inp_check">
+                                                <input type="checkbox" id="addressSave" />
+                                                <label for="addressSave">회원정보 주소도 변경</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// board_write -->
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// board -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md">적용하기</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 주소변경 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 주소변경
+                $("#changeAddress").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#changeAddressPop").show().focus();
+                });
+                $("#changeAddressPop .layer_close").click(function (e) {
+                    $("#changeAddress").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>
