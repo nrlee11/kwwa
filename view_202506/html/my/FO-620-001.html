@@ -732,6 +732,21 @@
                 $("#applicationformPop1 .layer_close").click(function (e) {
                     $("#applicationform1").focus(); // 접근성
                 });
+
+
+                
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='my/FO-620-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                        $("a[href*='my/FO-620-001.html']").closest(".depth2").show();
+                        $("a[aria-controls='site-select-my2'").attr("aria-expanded", "true");
+                    });
+                });
             });
         </script>
     </body>

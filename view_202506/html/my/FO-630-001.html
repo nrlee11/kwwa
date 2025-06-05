@@ -171,5 +171,19 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='my/FO-630-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

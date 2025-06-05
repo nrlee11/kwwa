@@ -139,5 +139,21 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='my/FO-610-005.html']").attr("aria-current", "page").parents("li").addClass("on");
+                        $("a[href*='my/FO-610-005.html']").closest(".depth2").show();
+                        $("a[aria-controls='site-select-my1'").attr("aria-expanded", "true");
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
