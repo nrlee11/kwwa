@@ -277,11 +277,11 @@
                                             <div class="tit">알림</div>
                                             <div class="item">
                                                 <div class="switch">
-                                                    <input id="alarm1" class="alert1" type="checkbox" />
-                                                    <label for="alarm1" class="slider"></label>
-                                                    <!-- 첫화면에 디폴트로 알림신청에 토글 되어있을 때 -->
+                                                    <!-- 알림 스위치 디폴트로 토글되어 있는것으로 할 때/이경우 자바스크립트alrm2삭제해야함 -->
                                                     <!-- <input id="alarm2" type="checkbox" checked />
                                                     <label for="alarm2" class="slider"></label> -->
+                                                    <input id="alarm1" class="alert1" type="checkbox" />
+                                                    <label for="alarm1" class="slider"></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -312,8 +312,8 @@
                                             <div class="tit">알림</div>
                                             <div class="item">
                                                 <div class="switch">
-                                                    <input id="alarm1" class="alert1" type="checkbox" />
-                                                    <label for="alarm1" class="slider"></label>
+                                                    <input id="alarm2" class="alert1" type="checkbox" />
+                                                    <label for="alarm2" class="slider"></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -359,6 +359,17 @@
                         $("html").addClass("layerOpen");
                         $("#wrap").attr("aria-hidden", "true");
 
+                        $("#switchAlarmPop2").show().focus();
+                    }
+                });
+                $("#alarm2").click(function () {
+                    var checked = $(this).is(":checked");
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    if (checked) {
+                        $("#switchAlarmPop1").show().focus();
+                    } else {
                         $("#switchAlarmPop2").show().focus();
                     }
                 });
