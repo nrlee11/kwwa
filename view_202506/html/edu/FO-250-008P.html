@@ -187,7 +187,7 @@
             let maxPlayedTime = 0; 
             let iframeAPI = null;
             function changeFrameSrc(videoKey, index) {
-                const playerUrl = "https://play.wecandeo.com/video/v/?key=" + videoKey;
+                const playerUrl = "https://waterpro.v4.wecandeo.com/play/video/v?key=" + videoKey;
                 document.getElementById("videoFrame").src = playerUrl;
                 document.getElementById("videoFrame").onload = function () {
                     const iframe = document.getElementById('videoFrame');
@@ -229,11 +229,11 @@
                 maxPlayedTime = 0;
             }
 
-            changeFrameSrc("BOKNS9AQWrGJDTlbxQ9IwNYpTZh4TCotfip1c5ismxLojLGNQ9dyCqkgieie", 0);
+            changeFrameSrc("BzX9iitJP4s1fgPzG6Hu3R0bhXxJzCjo6UBmMLo4gLqUie", 0);
 
             $(".btn_avi").each(function (idx) {
                 $(this).on("click", function () {
-                    changeFrameSrc("BOKNS9AQWrGJDTlbxQ9IwNYpTZh4TCotfip1c5ismxLojLGNQ9dyCqkgieie", idx);
+                    changeFrameSrc("BzX9iitJP4s1fgPzG6Hu3R0bhXxJzCjo6UBmMLo4gLqUie", idx);
                 });
             });
 
