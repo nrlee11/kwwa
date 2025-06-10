@@ -403,7 +403,7 @@ button {
     text-align: left;
 }
 #header .inner_header .btn_primary_sm:hover,
-#header .inner_header .btn_primary_sm:focus {
+#header .inner_header .btn_primary_sm:focus-visible {
     --active-bgcolor: #4c87f6;
 }
 @media screen and (max-width: 1200px) {
