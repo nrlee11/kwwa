@@ -1152,6 +1152,9 @@ button {
 .gap_pt0 {
   padding-top: 0 !important;
 }
+.gap_pb50 {
+  padding-bottom: 5rem !important;
+}
 
 .size_full {
   width: 100% !important;
