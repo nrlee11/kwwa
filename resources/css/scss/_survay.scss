@@ -7,6 +7,11 @@
             padding-bottom: 0.1rem;
             background: #ecf2fe !important;
         }
+        .list_dot {
+            li:before {
+                background: currentColor;
+            }
+        }
     }
 }
 
@@ -35,5 +40,26 @@
         display: block;
         max-width: 100%;
         margin: 1rem 0;
+    }
+}
+.txt_survay_result {
+    color: var(--color-warmblue);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    &:before {
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: var(--gap-7);
+        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat 0 0;
+        vertical-align: var(--align-m);
+        content: "";
+    }
+    @include mobile {
+        display: block;
+        margin-right: var(--gap-7);
+        &:before {
+            display: none;
+        }
     }
 }

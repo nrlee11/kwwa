@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko" class="layerOpen">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- 팝업 -->
+        <div class="layerFix minPopup fullPopup">
+            <div class="layer_wrap type_survay">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="./survay/name_badge.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <p>설문기간 : 2025-05-14 ~2025-06-30</p>
+                        <p class="gap_mt10">총 <span class="txt_blue txt_bold">NN</span>명 / 참여 <span class="txt_blue txt_bold">NN</span>명 / 미참여 <span class="txt_blue txt_bold">NN</span>명</p>
+
+                        <div class="gap_mt24"></div>
+
+                        <!-- ========== STEP 2 ========== -->
+                        <!-- [include] 설문기간 -->
+                        <div data-include-file="./survay/result_step2_top.html" class="includeJs"></div>
+                        <!-- //[include] 설문기간 -->
+
+                        <!-- 1. OX형 -->
+                        <div data-include-file="./survay/result_step2_q1.html" class="includeJs"></div>
+                        <!-- // 1. OX형 -->
+
+                        <!-- 2-1. 객관식단일형 -->
+                        <div data-include-file="./survay/result_step2_q2.html" class="includeJs"></div>
+                        <!-- // 2-1. 객관식단일형 -->
+
+                        <!-- 2-2. 객관식단일혼합형 -->
+                        <div data-include-file="./survay/result_step2_q2_2.html" class="includeJs"></div>
+                        <!-- // 2-2. 객관식단일혼합형 -->
+
+                        <!-- 2-3. 만족도형 -->
+                        <div data-include-file="./survay/result_step2_q2_3.html" class="includeJs"></div>
+                        <!-- // 2-3. 만족도형 -->
+
+                        <!-- 3. 객관식다중형 -->
+                        <div data-include-file="./survay/result_step2_q3.html" class="includeJs"></div>
+                        <!-- // 3. 객관식다중형 -->
+
+                        <!-- 3-2. 객관식다중혼합형 -->
+                        <div data-include-file="./survay/result_step2_q3_2.html" class="includeJs"></div>
+                        <!-- // 3-2. 객관식다중혼합형 -->
+
+                        <!-- 4. 주관식(1줄) -->
+                        <div data-include-file="./survay/result_step2_q4.html" class="includeJs"></div>
+                        <!-- // 4. 주관식(1줄) -->
+
+                        <!-- 4-2. 주관식(2줄) -->
+                        <div data-include-file="./survay/result_step2_q4_2.html" class="includeJs"></div>
+                        <!-- // 4-2. 주관식(2줄 -->
+                        <!-- // ========== STEP 2 ========== -->
+                    </div>
+                    <!-- // 스크롤 -->
+
+                    <!-- button -->
+                    <div class="foot">
+                        <div class="btn_area">
+                            <div class="lside">
+                                <button type="button" class="btn_primary_md layer_close">결과 엑셀 다운로드</button>
+                            </div>
+                            <div class="rside">
+                                <button type="button" class="btn_outline_md layer_close">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // button -->
+                </div>
+                <!-- // cont -->
+            </div>
+        </div>
+        <!--// 팝업 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+    </body>
+</html>
