@@ -162,7 +162,7 @@
             background-color: var(--active-bgcolor, #8a949e);
             text-align: left;
             &:hover,
-            &:focus {
+            &:focus-visible {
                 --active-bgcolor: #4c87f6;
             }
         }
