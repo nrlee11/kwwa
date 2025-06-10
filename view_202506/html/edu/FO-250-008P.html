@@ -29,8 +29,11 @@
                     <div class="avi_box">
                         <!-- 임시 영역: 영상 -->
                         <!-- [D] 영상추가시 제거 -->
-                        <div style="height: 100%; background: black; font-size: 40px; color: white">영상영역</div>
+                        <!-- <div style="height: 100%; background: black; font-size: 40px; color: white">영상영역</div> -->
                         <!-- // 임시 영역: 영상 -->
+                          <iframe id="videoFrame" 
+                          llowfullscreen style="width:100%; height:100%; border:none;">
+                        </iframe>
                     </div>
                 </div>
 
@@ -138,6 +141,32 @@
             <!--// container(e) -->
         </div>
         <!--// wrap(e) -->
+        
+        <!-- Layer : -->
+        <div class="layerFix alertPopup" role="dialog" aria-modal="true" id="alertPopUnified" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg" id="alertPopupCodeMessage">알림</div>
+                        <div class="txt" id="alertPopupDetailMessage">메시지 내용입니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area" id="alertPopupButtons">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md layer_close" id="alertPopupConfirmBtn">확인</button>
+                        </div>
+                        <div class="rside" id="alertPopupCancelWrap" style="display: none;">
+                            <button type="button" class="btn_outline_md layer_close" id="alertPopupCancelBtn">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
 
         <!-- [include] side(s) : 확인용 -->
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
@@ -145,10 +174,85 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+
         <!-- [D] ui확인용 (s) -->
+
         <script>
             $(function () {});
         </script>
         <!-- // [D] ui확인용 (e) -->
+        <script src="//play.acs.wecandeo.com/html/utils/iframeAPI.js"></script>
+        <script>
+            let currentIndex = 0; 
+            let maxPlayedTime = 0; 
+            let iframeAPI = null;
+            function changeFrameSrc(videoKey, index) {
+                const playerUrl = "https://waterpro.v4.wecandeo.com/play/video/v?key=" + videoKey;
+                document.getElementById("videoFrame").src = playerUrl;
+                document.getElementById("videoFrame").onload = function () {
+                    const iframe = document.getElementById('videoFrame');
+                    const contents = iframe.contentWindow || iframe.contentDocument;
+                    iframeAPI = new smIframeAPI(contents);
+
+                    iframeAPI.onEvent(smIframeEvent.READY, function () {
+                        iframeAPI.seekEnable(true); // 시크 허용
+
+                        iframeAPI.onEvent(smIframeEvent.SEEK, function (data) {
+                            // SEEK : 사용자가 이동할 경우 발생
+                            const seekedTo = data.time;
+                            const isUserSeek = data.seeking;
+
+                            if (isUserSeek && seekedTo > maxPlayedTime) {
+                                iframeAPI.pause();
+                                setTimeout(function () {
+                                     showUnifiedAlert("진도 제한", "아직 시청하지 않은 구간으로 이동할 수 없습니다.");
+                                }, 0);
+
+                                iframeAPI.setPosition(maxPlayedTime);
+                            }
+                        });
+
+                        iframeAPI.onEvent(smIframeEvent.TIME, function (data) {
+
+                            const currentTime = data.position; //현재 재생중인 위치
+
+                            //최대 본 시간 업데이트
+                            if (currentTime > maxPlayedTime) {  //매 시점마다 현재 재생시간을 받아서, 지금까지 가장 멀리본 시간과 비교해서
+                                maxPlayedTime = currentTime;
+                            }
+                        });
+
+                    });
+                };
+
+                currentIndex = index;
+                maxPlayedTime = 0;
+            }
+
+            changeFrameSrc("BzX9iitJP4s1fgPzG6Hu3R0bhXxJzCjo6UBmMLo4gLqUie", 0);
+
+            $(".btn_avi").each(function (idx) {
+                $(this).on("click", function () {
+                    changeFrameSrc("BzX9iitJP4s1fgPzG6Hu3R0bhXxJzCjo6UBmMLo4gLqUie", idx);
+                });
+            });
+
+            function showUnifiedAlert(codeMessage, detailMessage, confirmCallback = null) {
+                $("#alertPopupCodeMessage").text(codeMessage || "알림");
+                $("#alertPopupDetailMessage").text(detailMessage || "");
+
+                $("#alertPopUnified").show().focus();
+
+                $("#alertPopupConfirmBtn").off("click").on("click", function () {
+                    $("#alertPopUnified").hide();
+                    if (typeof confirmCallback === "function") {
+                        confirmCallback();
+                    }
+                });
+
+                // 취소 버튼 숨김
+                $("#alertPopupCancelWrap").hide();
+            }
+        </script>
     </body>
 </html>
