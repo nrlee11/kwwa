@@ -228,6 +228,7 @@ $(function () {
         const $titles = $(".select_layer .select_tit");
 
         $titles.on("click", function (e) {
+            e.stopPropagation();
             const $parent = $(this).parent();
             const isOpen = $parent.hasClass("on");
 
@@ -237,9 +238,6 @@ $(function () {
             if (!isOpen) {
                 $parent.addClass("on").find(".select_box").show();
                 $(this).attr("aria-expanded", "true");
-                console.log("닫기");
-            } else {
-                console.log("열기");
             }
         });
 
@@ -490,48 +488,109 @@ $(function () {
         });
     };
     // 퍼블확인용
-    const includeHtml = function () {
-        const includeTarget = document.querySelectorAll(".includeJs");
-        includeTarget.forEach(function (el, idx) {
-            const targetFile = el.dataset.includeFile;
-            if (targetFile) {
-                let xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState === XMLHttpRequest.DONE) {
-                        if (this.status === 200) {
-                            // 임시 요소에 로드된 HTML을 넣기
-                            const tempDiv = document.createElement("div");
-                            tempDiv.innerHTML = this.responseText;
+    const includeHtml = function (callback) {
+        const includeTargets = document.querySelectorAll(".includeJs");
+        let pending = includeTargets.length;
 
-                            // 원래 요소를 불러온 내용으로 교체
-                            while (tempDiv.firstChild) {
-                                el.parentNode.insertBefore(tempDiv.firstChild, el);
-                            }
-                            el.remove(); // 원래 include div 제거
-                        } else if (this.status === 404) {
-                            el.innerHTML = "include not found.";
-                        }
-                        allNaveToggle();
-                        sideNave();
-                        // SideNaveClose();
-                        moGnbToggle();
-                        allSearch();
-                        selectLayer();
-                        // layerFix();
-                        layerClose();
-                        urlChk();
-                        choiceTextRequired();
-                        textareaRow();
-                        commonTab();
-                    }
-                };
-                xhttp.open("GET", targetFile, true);
-                xhttp.send();
+        if (pending === 0) {
+            if (typeof callback === "function") callback();
+            return;
+        }
+
+        includeTargets.forEach(function (el) {
+            const targetFile = el.dataset.includeFile;
+            if (!targetFile) {
+                pending--;
+                if (pending === 0 && typeof callback === "function") callback();
                 return;
             }
+
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === XMLHttpRequest.DONE) {
+                    if (this.status === 200) {
+                        const tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = this.responseText;
+
+                        const children = Array.from(tempDiv.childNodes);
+                        el.replaceWith(...children);
+                    } else if (this.status === 404) {
+                        el.innerHTML = "include not found.";
+                    }
+
+                    pending--;
+                    if (pending === 0 && typeof callback === "function") callback();
+                }
+            };
+            xhttp.open("GET", targetFile, true);
+            xhttp.send();
         });
     };
 
+    includeHtml(function () {
+        allNaveToggle();
+        sideNave();
+        moGnbToggle();
+        allSearch();
+        selectLayer();
+        layerClose();
+        urlChk();
+        choiceTextRequired();
+        textareaRow();
+        commonTab();
+
+        // 상수 1/2급 <> 정수 3급
+        $(".inner_header .rside .btn_primary_sm").on("click", function () {
+            const currentText = $(this).text();
+
+            if (currentText === "상수도관망시설운영관리사") {
+                // 정수 3급
+                $(this).html(`정수시설운영관리사 3급<span class="ico_arrow"></span>`);
+                $("h1.logo span").text("상수도관망시설운영관리사");
+            } else {
+                // 상수 1/2급
+                $(this).html(`상수도관망시설운영관리사<span class="ico_arrow"></span>`);
+                $("h1.logo span").text("정수시설운영관리사 3급");
+            }
+        });
+
+        // 모바일전용 - 상수 1/2급 <> 정수 3급
+        $(".side_nav_wrap .btn_area .btn_warmblue_sm").click(function () {
+            const currentText = $(this).text();
+
+            if (currentText === "상수도관망시설운영관리사") {
+                // 정수 3급
+                $(this).html(`정수시설운영관리사 3급<span class="ico_arrow"></span>`);
+                $("h1.logo span").text("상수도관망시설운영관리사");
+            } else {
+                // 상수 1/2급
+                $(this).html(`상수도관망시설운영관리사<span class="ico_arrow"></span>`);
+                $("h1.logo span").text("정수시설운영관리사 3급");
+            }
+            $(".btn_side_close").trigger("click");
+        });
+
+        // 로그인 - pc
+        $(".header .btn_login").click(function () {
+            $(".header .btn_login, .header .btn_join").hide();
+            $(".header .btn_logout, .header .btn_user").show();
+        });
+        $(".header .btn_logout").click(function () {
+            $(".header .btn_login, .header .btn_join").show();
+            $(".header .btn_logout, .header .btn_user").hide();
+        });
+        // 로그인 - mo
+        $(".side_gnb .btn_login").click(function () {
+            $(".side_gnb .btn_login, .side_gnb .btn_join").hide();
+            $(".side_gnb .btn_logout, .side_gnb .btn_user").show();
+        });
+        $(".side_gnb .btn_logout").click(function () {
+            $(".side_gnb .btn_login, .side_gnb .btn_join").show();
+            $(".side_gnb .btn_logout, .side_gnb .btn_user").hide();
+        });
+    });
+
+    includeHtml();
     device();
     allNaveToggle();
     sideNave();
@@ -552,5 +611,4 @@ $(function () {
     initCopyButtons();
     choiceTextRequired();
     textareaRow();
-    includeHtml();
 });
