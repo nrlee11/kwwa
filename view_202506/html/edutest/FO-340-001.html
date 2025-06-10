@@ -122,7 +122,7 @@
                                         <div class="edu_result">
                                             <div class="grade">
                                                 <div class="txt">평균점수 : 00</div>
-                                                <div><button type="button" class="btn_pop">과목별 점수 확인하기</button></div>
+                                                <div><button type="button" class="btn_pop" id="btnGradeConfirm">과목별 점수 확인하기</button></div>
                                             </div>
                                             <div class="msg">축하합니다! 평가시험에 합격하셨어요.</div>
                                             <div class="msg">아쉽게 평가시험에 불합격하셨어요.</div>
@@ -178,6 +178,10 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- [include] layer -->
+        <div data-include-file="/view_202506/html/common/layer/000-005P.html" class="includeJs"></div>
+        <!--// [include] layer -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -190,6 +194,16 @@
                         $this.html(data);
                         // 현재 페이지 - 메뉴 활성화
                         $(".lnb a[href*='FO-340-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 과목별 점수표
+                        $("#btnGradeConfirm").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#popGradeConfirm").show().focus();
+                        });
+                        $("#popGradeConfirm .layer_close").click(function (e) {
+                            $("#btnGradeConfirm").focus(); // 접근성
+                        });
                     });
                 });
             });
