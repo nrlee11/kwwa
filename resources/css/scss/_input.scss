@@ -178,6 +178,9 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: var(--gap-20) var(--gap-10);
+    &:has(.list_dot) {
+        gap: var(--gap-10);
+    }
     .inp_choice {
         flex: 0 0 auto;
         position: relative;
@@ -192,9 +195,16 @@
         font-size: var(--font-size-md);
         line-height: 2rem;
         resize: none;
+        &::placeholder {
+            color: #8a949e;
+        }
         &:focus {
             border-color: #083891;
             outline: none;
+        }
+        &:disabled {
+            border-color: #b1b8be;
+            background-color: #cdd1d5;
         }
     }
     .txt_note {
