@@ -55,7 +55,7 @@
         vertical-align: var(--align-m);
         content: "";
     }
-    @include mobile {
+    @include xs-mobile {
         display: block;
         margin-right: var(--gap-7);
         &:before {
