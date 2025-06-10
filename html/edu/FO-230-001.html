@@ -65,9 +65,11 @@
                             <!-- list -->
                             <div class="edu_detail_list">
                                 <div class="edu_group">
-                                    <a href="/view_202506/html/edu/FO-230-002.html">
+                                    <a href="javascript:;">
                                         <div class="box">
-                                            <div class="thumbnail"></div>
+                                            <div class="thumbnail">
+                                                <img src="/resources/images/temp/temp01.png" alt="" />
+                                            </div>
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">24기</span>
@@ -94,9 +96,11 @@
                                     </a>
                                 </div>
                                 <div class="edu_group">
-                                    <a href="/view_202506/html/edu/FO-230-002.html">
+                                    <a href="javascript:;">
                                         <div class="box">
-                                            <div class="thumbnail"></div>
+                                            <div class="thumbnail">
+                                                <img src="/resources/images/icon/ico_default.png" alt="기본이미지" />
+                                            </div>
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">25기</span>
@@ -122,10 +126,12 @@
                                         </div>
                                     </a>
                                 </div>
-                                <!-- <div class="edu_group">
-                                    <a href="/view_202506/html/edu/FO-230-002.html">
+                                <div class="edu_group">
+                                    <a href="javascript:;">
                                         <div class="box">
-                                            <div class="thumbnail"></div>
+                                            <div class="thumbnail">
+                                                <img src="/resources/images/icon/ico_default.png" alt="기본이미지" />
+                                            </div>
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">25기</span>
@@ -152,9 +158,11 @@
                                     </a>
                                 </div>
                                 <div class="edu_group">
-                                    <a href="/view_202506/html/edu/FO-230-002.html">
+                                    <a href="javascript:;">
                                         <div class="box">
-                                            <div class="thumbnail"></div>
+                                            <div class="thumbnail">
+                                                <img src="/resources/images/icon/ico_default.png" alt="기본이미지" />
+                                            </div>
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">26기</span>
@@ -181,9 +189,11 @@
                                     </a>
                                 </div>
                                 <div class="edu_group">
-                                    <a href="/view_202506/html/edu/FO-230-002.html">
+                                    <a href="javascript:;">
                                         <div class="box">
-                                            <div class="thumbnail"></div>
+                                            <div class="thumbnail">
+                                                <img src="/resources/images/icon/ico_default.png" alt="기본이미지" />
+                                            </div>
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">26기</span>
@@ -210,9 +220,11 @@
                                     </a>
                                 </div>
                                 <div class="edu_group">
-                                    <a href="/view_202506/html/edu/FO-230-002.html">
+                                    <a href="javascript:;">
                                         <div class="box">
-                                            <div class="thumbnail"></div>
+                                            <div class="thumbnail">
+                                                <img src="/resources/images/icon/ico_default.png" alt="기본이미지" />
+                                            </div>
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">27기</span>
@@ -237,7 +249,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                </div> -->
+                                </div>
                             </div>
                             <!--// list -->
                             <!--// 접수기간 -->
@@ -376,17 +388,6 @@
                 $("#switchAlarmPop1 .layer_close, #switchAlarmPop2 .layer_close").click(function () {
                     $("#alarm1").focus(); // 접근성
                     // $("#alarm2").focus();
-                });
-
-                $("[data-include-file]").each(function () {
-                    const $this = $(this);
-                    const file = $this.data("include-file");
-
-                    $.get(file, function (data) {
-                        $this.html(data);
-                        // 현재 페이지 - 메뉴 활성화
-                        $(".lnb a[href*='FO-230-001.html']").attr("aria-current", "page").parents("li").addClass("on");
-                    });
                 });
             });
         </script>
