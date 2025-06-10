@@ -51,7 +51,7 @@
                                 <h3 class="tit">자격증 발급을 위한 제출서류</h3>
                                 <div class="desc">
                                     자격증 발급을 위해서는 학력, 경력 등 자격취득을 위한 요건을 충족하여야 합니다.
-                                    <button type="button" class="btn_pop">자격요건 확인</button><br />
+                                    <button type="button" class="btn_pop" id="requirements04">자격요건 확인</button><br />
                                     학력과 경력 확인을 위해 아래 증빙서류가 제출되어야 합니다.
                                 </div>
                             </div>
@@ -165,6 +165,10 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- [include] 자격요건 -->
+        <div data-include-file="/view_202506/html/common/layer/050-010P.html" class="includeJs"></div>
+        <!--// [include] 자격요건 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -177,6 +181,16 @@
                         $this.html(data);
                         // 현재 페이지 - 메뉴 활성화
                         $(".lnb a[href*='FO-WP-500-020.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        $("#requirements04").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#requirementsPop04").show().focus();
+                        });
+                        $("#requirementsPop04 .layer_close").click(function (e) {
+                            $("#requirements04").focus(); // 접근성
+                        });
                     });
                 });
             });
