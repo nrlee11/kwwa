@@ -18,14 +18,14 @@
         <div id="wrap" class="wrap" aria-hidden="true">
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
-                    <button type="button" class="btn_primary_lg" id="popup1Btn">만족도 조사(문항)</button>
+                    <button type="button" class="btn_primary_lg" id="btnSurvayIng">만족도 조사(문항)</button>
                 </div>
             </div>
         </div>
         <!--// wrap(e) -->
 
-        <!-- 팝업 -->
-        <div class="layerFix minPopup fullPopup" id="popup1" role="dialog" aria-modal="true" style="display: " tabindex="0">
+        <!-- Layer : 만족도 조사 설문 -->
+        <div class="layerFix minPopup fullPopup" id="popSurvayIng" role="dialog" aria-modal="true" style="display: " tabindex="0">
             <div class="layer_wrap type_survay">
                 <!-- head -->
                 <div class="head">
@@ -81,10 +81,10 @@
                         <div class="foot">
                             <div class="btn_area">
                                 <div class="lside">
-                                    <button type="button" class="btn_outline_md">뒤로</button>
+                                    <button type="button" class="btn_outline_md layer_close">뒤로</button>
                                 </div>
                                 <div class="rside">
-                                    <button type="button" class="btn_primary_md">다음</button>
+                                    <button type="button" class="btn_primary_md layer_close">다음</button>
                                 </div>
                             </div>
                         </div>
@@ -99,21 +99,21 @@
                 <!-- // btn:close -->
             </div>
         </div>
-        <!--// 팝업 -->
+        <!--// Layer : 만족도 조사 설문 -->
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
         <script type="text/javascript">
             $(function () {
                 // Layer
-                $("#popup1Btn").click(function (e) {
+                $("#btnSurvayIng").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
 
-                    $("#popup1").show().focus();
+                    $("#popSurvayIng").show().focus();
                 });
-                $("#popup1 .layer_close").click(function (e) {
-                    $("#popup1Btn").focus(); // 접근성
+                $("#popSurvayIng .layer_close").click(function (e) {
+                    $("#btnSurvayIng").focus(); // 접근성
                 });
             });
         </script>
