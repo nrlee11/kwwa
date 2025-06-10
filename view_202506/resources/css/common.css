@@ -6577,7 +6577,7 @@ select.sm {
     font-size: 1.6rem;
     font-weight: 500;
     letter-spacing: -0.1rem;
-    line-height: 1.9rem;
+    /* line-height: 1.9rem; */
 }
 @media screen and (max-width: 1200px) {
     .edu_schedule_list .schedule_group .timetable .cell .item {
