@@ -7209,7 +7209,7 @@ select.sm {
   vertical-align: var(--align-m);
   content: "";
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 320px) {
   .txt_survay_result {
     display: block;
     margin-right: var(--gap-7);
