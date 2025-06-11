@@ -538,6 +538,11 @@ button {
   width: 100%;
   margin: 0;
 }
+@media screen and (min-width: 1201px) {
+  #main #container {
+    overflow: hidden;
+  }
+}
 #main .inner {
   width: 120rem;
   margin: 0 auto;
@@ -5455,8 +5460,6 @@ select.sm {
 
 .program_wrap {
   position: relative;
-  margin: 0 -4.2rem;
-  padding: 0 4.2rem;
 }
 @media screen and (max-width: 1200px) {
   .program_wrap {
