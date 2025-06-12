@@ -181,7 +181,25 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- [include] 기본증명서 안내  -->
+        <div data-include-file="/view_202506/html/license/include/500-031-1P.html" class="includeJs"></div>
+        <!--// [include] 기본증명서 안내  -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 기본 증명서 안내
+                $(".btn_pop:contains('기본증명서 안내')").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#basicguidePop").show().focus();
+                });
+                $("#basicguidePop .layer_close").click(function (e) {
+                    $(".btn_pop:contains('기본증명서 안내')").focus(); // 접근성
+                });
+            });
+        </script>
     </body>
 </html>
