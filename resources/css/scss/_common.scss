@@ -2902,6 +2902,11 @@ select {
             }
         }
     }
+    &.widePopup {
+        .layer_wrap {
+            width: 88.8rem;
+        }
+    }
     &.is_front_popup {
         z-index: 1002;
         &:before {
