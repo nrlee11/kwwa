@@ -169,58 +169,6 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
-        <!-- Layer : 작성 완료 -->
-        <div class="layerFix alertPopup" id="popLicenseWrite" role="dialog" aria-modal="true" style="display: none" tabindex="0">
-            <div class="layer_wrap">
-                <div class="head">
-                    <strong class="tit">상하수도 국가전문자격시스템</strong>
-                </div>
-                <div class="cont">
-                    <div class="article">
-                        <!-- progress(s) -->
-                        <div class="progress-bar">
-                            <div class="completion">
-                                <span class="step">
-                                    <span>1단계</span>
-                                </span>
-                                <strong><a href="/view_202506/html/license/FO-WP-500-031.html">신청서 작성</a></strong>
-                            </div>
-                            <div class="on">
-                                <span class="step">
-                                    <span>2단계</span>
-                                </span>
-                                <strong><a href="/view_202506/html/license/FO-WP-500-032.html">신청정보확인</a></strong>
-                                <span class="hidden">총 3단계 중 2단계 신청정보확인</span>
-                            </div>
-                            <div>
-                                <span class="step">
-                                    <span>3단계</span>
-                                </span>
-                                <strong><a href="/view_202506/html/license/FO-WP-500-033.html">수수료 결제</a></strong>
-                            </div>
-                        </div>
-                        <!--// progress(e) -->
-                        <div class="align_center gap_mt30">
-                            신청서 작성을 완료 하시겠습니까?<br />
-                            완료 후 수정이 불가하니 신중하게 검토 하시기 바랍니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="foot">
-                    <div class="btn_area">
-                        <div class="lside">
-                            <button type="button" class="btn_outline_md layer_close">작성완료</button>
-                        </div>
-                        <div class="rside">
-                            <button type="button" class="btn_primary_md layer_close">닫기</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-            </div>
-        </div>
-        <!--// Layer : 작성 완료 -->
-
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -235,17 +183,6 @@
                         $(".lnb a[href*='FO-WP-500-030.html']").attr("aria-current", "page").parents("li").addClass("on");
                     });
                 });
-
-                // Layer 발급 신청
-                // $(".btn_border_md:contains('발급 신청')").click(function (e) {
-                //     $("html").addClass("layerOpen");
-                //     $("#wrap").attr("aria-hidden", "true");
-
-                //     $("#popLicenseWrite").show().focus();
-                // });
-                // $("#popLicenseWrite .layer_close").click(function (e) {
-                //     $(".btn_border_md:contains('발급 신청')").focus(); // 접근성
-                // });
             });
         </script>
     </body>

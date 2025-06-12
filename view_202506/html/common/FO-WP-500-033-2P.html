@@ -18,14 +18,14 @@
         <div id="wrap" class="wrap">
             <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
-                    <button type="button" class="btn_primary_lg" id="alert2">결제 방법 선택</button>
+                    <button type="button" class="btn_primary_lg" id="btnPayMethod">결제 방법 선택</button>
                 </div>
             </div>
         </div>
         <!--// wrap(e) -->
 
         <!-- Layer : 결제 방법 선택 -->
-        <div class="layerFix alertPopup" id="alertPop2" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+        <div class="layerFix alertPopup" id="popPayMethod" role="dialog" aria-modal="true" style="display: none" tabindex="0">
             <div class="layer_wrap">
                 <div class="head">
                     <strong class="tit">상하수도 국가전문자격시스템</strong>
@@ -77,14 +77,14 @@
         <script type="text/javascript">
             $(function () {
                 // Layer : 결제 방법 선택
-                $("#alert2").click(function (e) {
+                $("#btnPayMethod").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
 
-                    $("#alertPop2").show().focus();
+                    $("#popPayMethod").show().focus();
                 });
-                $("#alertPop2 .layer_close").click(function (e) {
-                    $("#alert2").focus(); // 접근성
+                $("#popPayMethod .layer_close").click(function (e) {
+                    $("#btnPayMethod").focus(); // 접근성
                 });
             });
         </script>
