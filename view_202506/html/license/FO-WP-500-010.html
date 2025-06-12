@@ -207,6 +207,30 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- Layer : 자격증 발급용 사진 -->
+        <div class="layerFix" id="popLicenseNote" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">수첩형 자격증(샘플)</strong>
+                    </div>
+                    <div class="license_note_sample_box">
+                        <img src="/resources/images/common/license.png" alt="" />
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 자격증 발급용 사진 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -220,6 +244,17 @@
                         // 현재 페이지 - 메뉴 활성화
                         $(".lnb a[href*='FO-WP-500-010.html']").attr("aria-current", "page").parents("li").addClass("on");
                     });
+                });
+
+                // Layer : 자격증 발급용 사진
+                $(".btn_pop:contains('샘플보기')").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#popLicenseNote").show().focus();
+                });
+                $("#popLicenseNote .layer_close").click(function (e) {
+                    $(".btn_pop:contains('샘플보기')").focus(); // 접근성
                 });
             });
         </script>
