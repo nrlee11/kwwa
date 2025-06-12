@@ -52,19 +52,22 @@
                                 <div class="desc">응시하신 평가시험의 결과는 아래와 같습니다.</div>
                             </div>
 
+                            <!-- 결과 - 없음 -->
                             <div class="result_area base">
                                 조회 가능한 평가시험이 결과가 없습니다.<br />
                                 평가시험 일정 또는 마이페이지를 확인해 주시기 바랍니다.
                             </div>
+                            <!-- // 결과 - 없음 -->
 
+                            <!-- 결과 -->
                             <div class="edu_detail_list">
                                 <div class="edu_group type3">
                                     <div class="box">
                                         <div class="edu_info">
                                             <div class="lside">
                                                 <div class="badge_set">
-                                                    <span class="value_badge1">응시</span>
-                                                    <span class="value_badge2">미응시</span>
+                                                    <span class="value_badge1">신청완료</span>
+                                                    <span class="value_badge2">최초응시</span>
                                                 </div>
                                             </div>
                                             <div class="rside">
@@ -96,43 +99,60 @@
                                                 <span class="item">2025-03-10 (월)</span>
                                             </div>
                                         </div>
-                                        <div class="edu_note">아직 합격자 발표일이 아닙니다.</div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="result_area base gap_mt24">아직 합격자 발표일이 아닙니다.</div>
+                                        <!-- 발표 전 -->
+                                        <div class="edu_result">
+                                            <div class="msg">아직 합격자 발표일이 아닙니다.</div>
+                                        </div>
+                                        <!-- // 발표 전 -->
 
-                            <div class="edu_detail_list">
-                                <div class="edu_group type3">
-                                    <div class="box">
-                                        <div class="edu_info">
-                                            <div class="lside">
-                                                <div class="badge_set">
-                                                    <span class="value_badge1">응시</span>
-                                                    <span class="value_badge2">미응시</span>
-                                                    <span class="value_badge2">합격</span>
-                                                    <span class="value_badge4">불합격</span>
+                                        <!-- 합격 -->
+                                        <div class="edu_result">
+                                            <div class="edu_info">
+                                                <div class="lside">
+                                                    <div class="badge_set">
+                                                        <span class="value_badge1">응시</span>
+                                                        <span class="value_badge2">합격</span>
+                                                    </div>
+                                                </div>
+                                                <div class="rside">
+                                                    <span class="date">응시일: 2025-01-01</span>
                                                 </div>
                                             </div>
-                                            <div class="rside">
-                                                <span class="date">응시일: 2025.01.02</span>
-                                            </div>
-                                        </div>
-                                        <div class="edu_result">
                                             <div class="grade">
                                                 <div class="txt">평균점수 : 00</div>
                                                 <div><button type="button" class="btn_pop" id="btnGradeConfirm">과목별 점수 확인하기</button></div>
                                             </div>
-                                            <div class="msg">축하합니다! 평가시험에 합격하셨어요.</div>
-                                            <div class="msg">아쉽게 평가시험에 불합격하셨어요.</div>
+                                            <div class="msg">축하합니다! 평가시험에 <span class="txt_blue">합격</span>하셨어요.<span class="ico_pass"></span></div>
                                         </div>
+                                        <!-- // 합격 -->
+
+                                        <!-- 불합격 -->
+                                        <div class="edu_result">
+                                            <div class="edu_info">
+                                                <div class="lside">
+                                                    <div class="badge_set">
+                                                        <span class="value_badge1">응시</span>
+                                                        <span class="value_badge4">불합격</span>
+                                                    </div>
+                                                </div>
+                                                <div class="rside">
+                                                    <span class="date">응시일: 2025-01-01</span>
+                                                </div>
+                                            </div>
+                                            <div class="grade">
+                                                <div class="txt">평균점수 : 00</div>
+                                                <div><button type="button" class="btn_pop">과목별 점수 확인하기</button></div>
+                                            </div>
+                                            <div class="msg">아쉽게 평가시험에 <span class="txt_red">불합격</span>하셨어요.</div>
+                                        </div>
+                                        <!-- // 불합격 -->
                                     </div>
                                 </div>
                             </div>
+                            <!-- // 결과 -->
                         </div>
                         <!--// section(e) -->
-
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
