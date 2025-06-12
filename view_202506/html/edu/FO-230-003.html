@@ -412,6 +412,43 @@
         </div>
         <!--// Layer : 주소변경 -->
 
+        <!-- Layer : 이수평가시험 내용보기 -->
+        <div class="layerFix fullPopup widePopup" id="popTestDetail" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">시험시간 및 과목, 유형</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <!-- board -->
+                            <div class="board_area gap_mt10">
+                                <div class="scroll_guide">
+                                    <p class="txt_scroll">밀어서 보기</p>
+                                </div>
+                                <div class="scroll_area">
+                                    <!-- board_view -->
+                                    <div data-include-file="../edutest/include/boardview-310-001.html" class="includeJs"></div>
+                                    <!--// board_view -->
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 이수평가시험 내용보기 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script>
@@ -515,6 +552,16 @@
                 // 주소변경
                 $('.btn_primary_sm:contains("주소 변경")').click(function (e) {
                     $("#changeAddressPop").show().focus();
+                });
+
+                // Layer : 이수평가시험 내용보기
+                $(".btn_pop:contains('이수평가시험 내용보기')").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#popTestDetail").show().focus();
+                });
+                $("#alepopTestDetailrtPop .layer_close").click(function (e) {
+                    $(".btn_pop:contains('이수평가시험 내용보기')").focus(); // 접근성
                 });
             });
         </script>

@@ -3900,6 +3900,9 @@ select.sm {
 .layerFix.minPopup .cont .layer_scroll {
     flex: 1 1 auto;
 }
+.layerFix.widePopup .layer_wrap {
+    width: 88.8rem;
+}
 .layerFix.is_front_popup {
     z-index: 1002;
 }
