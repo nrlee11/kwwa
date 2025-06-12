@@ -239,12 +239,33 @@
                 font-weight: var(--font-semibold);
             }
             + .msg {
-                margin-top: var(--gap-5);
+                margin-top: var(--gap-30);
             }
         }
         .msg {
+            text-align: center;
             color: var(--color-darkblack);
+            font-size: 2rem;
             font-weight: var(--font-semibold);
+            .ico_pass {
+                position: relative;
+                display: inline-block;
+                &:before {
+                    position: absolute;
+                    right: -6.3rem;
+                    bottom: -0.9rem;
+                    width: 13rem;
+                    height: 11.4rem;
+                    background: url($url-img-icon + "ico_pass.svg") no-repeat 0 0;
+                    background-size: contain;
+                    content: "";
+                    @include mobile {
+                        right: -4rem;
+                        width: 10rem;
+                        height: 7rem;
+                    }
+                }
+            }
         }
         .guide {
             .tit {

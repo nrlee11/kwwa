@@ -6321,11 +6321,34 @@ select.sm {
   font-weight: var(--font-semibold);
 }
 .edu_group .edu_result .grade + .msg {
-  margin-top: var(--gap-5);
+  margin-top: var(--gap-30);
 }
 .edu_group .edu_result .msg {
+  text-align: center;
   color: var(--color-darkblack);
+  font-size: 2rem;
   font-weight: var(--font-semibold);
+}
+.edu_group .edu_result .msg .ico_pass {
+  position: relative;
+  display: inline-block;
+}
+.edu_group .edu_result .msg .ico_pass:before {
+  position: absolute;
+  right: -6.3rem;
+  bottom: -0.9rem;
+  width: 13rem;
+  height: 11.4rem;
+  background: url("../../resources/images/icon/ico_pass.svg") no-repeat 0 0;
+  background-size: contain;
+  content: "";
+}
+@media screen and (max-width: 1200px) {
+  .edu_group .edu_result .msg .ico_pass:before {
+    right: -4rem;
+    width: 10rem;
+    height: 7rem;
+  }
 }
 .edu_group .edu_result .guide .tit {
   color: var(--color-darkblack);
