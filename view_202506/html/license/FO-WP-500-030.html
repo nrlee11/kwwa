@@ -94,7 +94,7 @@
                                             <td data-cell-header="신청완료일"><div>-</div></td>
                                             <td data-cell-header="신청">
                                                 <div>
-                                                    <button type="button" class="btn_border_md radius">발급 신청<span class="ico_bluearrow2"></span></button>
+                                                    <a href="/view_202506/html/license/FO-WP-500-031.html" class="btn_border_md radius">발급 신청<span class="ico_bluearrow2"></span></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -237,15 +237,15 @@
                 });
 
                 // Layer 발급 신청
-                $(".btn_border_md:contains('발급 신청')").click(function (e) {
-                    $("html").addClass("layerOpen");
-                    $("#wrap").attr("aria-hidden", "true");
+                // $(".btn_border_md:contains('발급 신청')").click(function (e) {
+                //     $("html").addClass("layerOpen");
+                //     $("#wrap").attr("aria-hidden", "true");
 
-                    $("#popLicenseWrite").show().focus();
-                });
-                $("#popLicenseWrite .layer_close").click(function (e) {
-                    $(".btn_border_md:contains('발급 신청')").focus(); // 접근성
-                });
+                //     $("#popLicenseWrite").show().focus();
+                // });
+                // $("#popLicenseWrite .layer_close").click(function (e) {
+                //     $(".btn_border_md:contains('발급 신청')").focus(); // 접근성
+                // });
             });
         </script>
     </body>
