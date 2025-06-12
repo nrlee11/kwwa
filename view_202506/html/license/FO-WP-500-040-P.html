@@ -18,49 +18,29 @@
         <div id="wrap" class="wrap">
             <div style="height: 100%; display: flex; align-items: center; justify-content: center">
                 <div>
-                    <button type="button" class="btn_primary_lg" id="licensePhoto">자격증 발급용 사진</button>
+                    <button type="button" class="btn_primary_lg" id="btnLicenseSamplePhoto">자격증 발급용 사진</button>
                 </div>
             </div>
         </div>
         <!--// wrap(e) -->
 
-        <!-- Layer : 자격증 발급용 사진 -->
-        <div class="layerFix alertPopup" id="licensePhotoPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
-            <div class="layer_wrap">
-                <div class="head">
-                    <strong class="tit">상하수도 국가전문자격시스템</strong>
-                </div>
-                <div class="cont">
-                    <div class="tit_area">
-                        <strong class="tit">자격증 발급용 사진</strong>
-                    </div>
-                    <div class="license_photo_box">
-                        <img src="/resources/images/temp/img.png" alt="" />
-                    </div>
-                </div>
-                <div class="foot">
-                    <div class="btn_area">
-                        <button type="button" class="btn_primary_md layer_close">삭제</button>
-                    </div>
-                </div>
-                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
-            </div>
-        </div>
-        <!--// Layer : 자격증 발급용 사진 -->
+        <!-- [include] 자격증 발급용 샘플 사진 -->
+        <div data-include-file="/view_202506/html/license/include/500-040-P.html" class="includeJs"></div>
+        <!--// [include] 자격증 발급용 샘플 사진 -->
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script type="text/javascript">
             $(function () {
                 // Layer : 자격증 발급용 사진
-                $("#licensePhoto").click(function (e) {
+                $("#btnLicenseSamplePhoto").click(function (e) {
                     $("html").addClass("layerOpen");
                     $("#wrap").attr("aria-hidden", "true");
 
-                    $("#licensePhotoPop").show().focus();
+                    $("#popLicenseSamplePhoto").show().focus();
                 });
-                $("#licensePhotoPop .layer_close").click(function (e) {
-                    $("#licensePhoto").focus(); // 접근성
+                $("#popLicenseSamplePhoto .layer_close").click(function (e) {
+                    $("#btnLicenseSamplePhoto").focus(); // 접근성
                 });
             });
         </script>
