@@ -4016,6 +4016,9 @@ select.sm {
   max-width: 100%;
   max-height: 100%;
 }
+.layerFix .layer_wrap .cont .license_note_sample_box img {
+  max-width: 100%;
+}
 .layerFix .layer_wrap .tab_area {
   flex: 0 1 auto;
   display: flex;
