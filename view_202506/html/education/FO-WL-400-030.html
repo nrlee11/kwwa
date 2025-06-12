@@ -94,20 +94,7 @@
                                             </td>
                                             <td data-cell-header="자격증 발급">
                                                 <div>
-                                                    <button type="button" class="btn_border_md radius">신청<span class="ico_bluearrow2"></span></button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-cell-header="이수증 번호"><div>CER1-25-0001</div></td>
-                                            <td data-cell-header="급수"><div>1급</div></td>
-                                            <td data-cell-header="확인일"><div>2025-03-01</div></td>
-                                            <td data-cell-header="인쇄">
-                                                <div><button type="button" class="btn_txtlink">이수증</button></div>
-                                            </td>
-                                            <td data-cell-header="자격증 발급">
-                                                <div>
-                                                    <button type="button" class="btn_border_md radius">신청<span class="ico_bluearrow2"></span></button>
+                                                    <a href="/view_202506/html/license/FO-WP-500-030.html" class="btn_border_md radius">신청<span class="ico_bluearrow2"></span></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -115,12 +102,12 @@
                                 </table>
                                 <!--// board_view -->
 
-                                <div class="nodata">조회된 내역이 없습니다.</div>
+                                <!-- <div class="nodata">조회된 내역이 없습니다.</div> -->
 
                                 <div class="board_desc_bottom gap_mt10">
                                     <p class="txt_note">
                                         자격증 발급이 가능하니 자격요건을 확인 하신 후 자격증을 신청 하여 주시기 바랍니다.
-                                        <button type="button" class="btn_pop">자격요건 확인</button>
+                                        <button type="button" class="btn_pop" id="requirements04">자격요건 확인</button>
                                     </p>
                                 </div>
                             </div>
@@ -156,6 +143,10 @@
         <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
+        <!-- [include] 자격요건 -->
+        <div data-include-file="/view_202506/html/common/layer/050-010P.html" class="includeJs"></div>
+        <!--// [include] 자격요건 -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script src="/resources/js/jquery-ui.js"></script>
@@ -169,6 +160,17 @@
                         $this.html(data);
                         // 현재 페이지 - 메뉴 활성화
                         $(".lnb a[href*='FO-WL-400-030.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 상수도관망시설운영관리사 자격요건(1급)
+                        $("#requirements04").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#requirementsPop04").show().focus();
+                        });
+                        $("#requirementsPop04 .layer_close").click(function (e) {
+                            $("#requirements04").focus(); // 접근성
+                        });
                     });
                 });
             });
