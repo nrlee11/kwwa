@@ -121,7 +121,7 @@
                                             </div>
                                             <div class="grade">
                                                 <div class="txt">평균점수 : 00</div>
-                                                <div><button type="button" class="btn_pop" id="btnGradeConfirm">과목별 점수 확인하기</button></div>
+                                                <div><button type="button" class="btn_pop">과목별 점수 확인하기</button></div>
                                             </div>
                                             <div class="msg">축하합니다! 평가시험에 <span class="txt_blue">합격</span>하셨어요.<span class="ico_pass"></span></div>
                                         </div>
@@ -216,13 +216,13 @@
                         $(".lnb a[href*='FO-340-001.html']").attr("aria-current", "page").parents("li").addClass("on");
 
                         // Layer : 과목별 점수표
-                        $("#btnGradeConfirm").click(function (e) {
+                        $(".btn_pop:contains('과목별 점수 확인하기')").click(function (e) {
                             $("html").addClass("layerOpen");
                             $("#wrap").attr("aria-hidden", "true");
                             $("#popGradeConfirm").show().focus();
                         });
                         $("#popGradeConfirm .layer_close").click(function (e) {
-                            $("#btnGradeConfirm").focus(); // 접근성
+                            $(".btn_pop:contains('과목별 점수 확인하기'").focus(); // 접근성
                         });
                     });
                 });
