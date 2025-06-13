@@ -47,6 +47,25 @@
 
                         <!-- section(s) -->
                         <div class="section">
+                            <div class="notice_box center">
+                                <div class="box">
+                                    <p class="tit"><span class="ico_marknavy"></span>의견제출 기간이 아닙니다. 응시하신 평가시험의 의견(이의사항) 제출 기간은 아래와 같습니다.</p>
+                                    <p class="txt">제00회 상수도관망시설운영관리사 이수평가</p>
+                                    <p class="txt">2025.01.02(월) ~ 2025.01.10(화)</p>
+                                </div>
+                            </div>
+                            <div class="notice_box center">
+                                <div class="box">
+                                    <p class="tit"><span class="ico_marknavy"></span>의견제출 기간이 아닙니다.</p>
+                                    <p class="txt">이의신청을 할 수 있는 평가시험이 없습니다.</p>
+                                    <p class="txt">평가시험 일정 또는 응시여부를 확인하여 주시기 바랍니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">의견(이의사항) 제출</h3>
                             </div>
@@ -100,6 +119,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="form_group">
                                             <div class="item">
                                                 <div class="cell">
@@ -108,14 +128,36 @@
                                                             <input type="tel" placeholder="시험 문제번호 입력" autocomplete="off" />
                                                         </div>
                                                     </div>
-                                                    <p class="msg_txt">과목과 문제번호를 모를 경우 입력하지 않습니다.</p>
+                                                    <p class="txt_note gap_mt10">과목과 문제번호를 모를 경우 입력하지 않습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form_group">
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div>100 / 1,000자</div>
+                                                    <div class="form_item gap_mt10">
+                                                        <div class="inp_textarea">
+                                                            <textarea placeholder="내용 입력"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form_item gap_mt24">
+                                                        <div class="file_set">
+                                                            <label for="fileMulti001">파일찾기</label>
+                                                            <input type="file" id="fileMulti001" multiple />
+                                                            <div class="add_file_box">
+                                                                <button type="button" class="btn_file_delete">파일명파일명.png<span class="hidden">삭제</span></button>
+                                                                <button type="button" class="btn_file_delete">파일명파일명.png<span class="hidden">삭제</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--// board_write -->
-
-                                    <div class="gap_mt24">에디터 영역</div>
                                 </div>
                                 <!--// form-->
                             </div>
@@ -123,27 +165,9 @@
                         </div>
                         <!--// section(e) -->
 
-                        <!-- section(s) -->
-                        <div class="section">
-                            <div class="notice_box center">
-                                <div class="box">
-                                    <p class="tit"><span class="ico_marknavy"></span>의견제출 기간이 아닙니다. 응시하신 평가시험의 의견(이의사항) 제출 기간은 아래와 같습니다.</p>
-                                    <p class="txt">제00회 상수도관망시설운영관리사 이수평가</p>
-                                    <p class="txt">2025.01.02(월) ~ 2025.01.10(화)</p>
-                                </div>
-                            </div>
-                            <div class="notice_box center">
-                                <div class="box">
-                                    <p class="tit"><span class="ico_marknavy"></span>의견제출 기간이 아닙니다.</p>
-                                    <p class="txt">이의신청을 할 수 있는 평가시험이 없습니다.</p>
-                                    <p class="txt">평가시험 일정 또는 응시여부를 확인하여 주시기 바랍니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--// section(e) -->
-
                         <div class="bottom_btn_area">
                             <button type="button" class="btn_primary_lg">제출하기</button>
+                            <button type="button" class="btn_outline_lg">목록</button>
                         </div>
                     </div>
                     <!--// contents(e) -->
@@ -174,6 +198,18 @@
                         // 현재 페이지 - 메뉴 활성화
                         $(".lnb a[href*='FO-350-001.html']").attr("aria-current", "page").parents("li").addClass("on");
                     });
+                });
+
+                // 파일첨부 샘플
+                $("#fileMulti001").on("change", function (e) {
+                    const files = this.files;
+
+                    Array.from(files).forEach((file) => {
+                        $(this).next(".add_file_box").append(`<button type="button" class="btn_file_delete">${file.name}<span class="hidden">삭제</span></button>`);
+                    });
+                });
+                $(".add_file_box").on("click", ".btn_file_delete", function () {
+                    $(this).remove();
                 });
             });
         </script>
