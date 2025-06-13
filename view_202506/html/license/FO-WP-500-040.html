@@ -557,6 +557,10 @@
         </div>
         <!--// Layer : 재발급 신청내역 -->
 
+        <!-- [include] 가상계좌  -->
+        <div data-include-file="/view_202506/html/common/layer/540-001-04P.html" class="includeJs"></div>
+        <!-- //[include] 가상계좌  -->
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/view_202506/resources/js/ui.js"></script>
         <script type="text/javascript">
@@ -603,6 +607,17 @@
                         $this.html(data);
                         // 현재 페이지 - 메뉴 활성화
                         $(".lnb a[href*='FO-WP-500-040.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 	가상계좌번호
+                        $(".btn_pop:contains('가상계좌번호')").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#popVirtualAccount").show().focus();
+                        });
+                        $("#popVirtualAccount .layer_close").click(function (e) {
+                            $(".btn_pop:contains('가상계좌번호')").focus(); // 접근성
+                        });
                     });
                 });
             });
