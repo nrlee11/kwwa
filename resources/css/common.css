@@ -2306,6 +2306,9 @@ select.sm {
     gap: 1.5rem 0;
   }
 }
+.form_item .file_set:has(.add_file_box) {
+  align-items: flex-start;
+}
 .form_item .file_set .inp {
   width: 21.9rem;
 }
@@ -2344,6 +2347,9 @@ select.sm {
     margin-left: 0;
   }
 }
+.form_item .file_set label:first-child {
+  margin-left: 0;
+}
 .form_item .file_set input[type=file] {
   position: absolute;
   width: 0;
@@ -2351,6 +2357,29 @@ select.sm {
   padding: 0;
   overflow: hidden;
   border: 0;
+}
+.form_item .add_file_box {
+  margin: 1.2rem 0 0 1.7rem;
+}
+.form_item .add_file_box .btn_file_delete {
+  display: block;
+  color: var(--color-warmblue);
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+.form_item .add_file_box .btn_file_delete:after {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  background: url("../../resources/images/common/bg_reset.svg") no-repeat 0 0;
+  background-size: contain;
+  vertical-align: middle;
+  content: "";
+}
+.form_item .add_file_box .btn_file_delete + .btn_file_delete {
+  margin-top: 1rem;
 }
 
 .inp_round_box {

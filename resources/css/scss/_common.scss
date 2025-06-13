@@ -1286,6 +1286,9 @@ select {
             flex-direction: column;
             gap: 1.5rem 0;
         }
+        &:has(.add_file_box) {
+            align-items: flex-start;
+        }
         .inp {
             width: 21.9rem;
             input {
@@ -1325,6 +1328,9 @@ select {
                 width: 100%;
                 margin-left: 0;
             }
+            &:first-child {
+                margin-left: 0;
+            }
         }
         input[type="file"] {
             position: absolute;
@@ -1333,6 +1339,29 @@ select {
             padding: 0;
             overflow: hidden;
             border: 0;
+        }
+    }
+    .add_file_box {
+        margin: 1.2rem 0 0 1.7rem;
+        .btn_file_delete {
+            display: block;
+            color: var(--color-warmblue);
+            line-height: 1.5;
+            text-decoration: underline;
+            text-underline-offset: 0.3rem;
+            &:after {
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                margin-left: 0.5rem;
+                background: url($url-img-common + "bg_reset.svg") no-repeat 0 0;
+                background-size: contain;
+                vertical-align: middle;
+                content: "";
+            }
+            & + .btn_file_delete {
+                margin-top: 1rem;
+            }
         }
     }
 }
