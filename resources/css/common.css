@@ -4480,12 +4480,12 @@ select.sm {
 [class^=btn_][class*=_secondary][class*=_xxl], [class^=btn_][class*=_outline][class*=_xxl], [class^=btn_][class*=_border][class*=_xxl] {
   line-height: 6.8rem;
 }
-[class^=btn_][class*=_pop], [class^=btn_][class*=_link], [class^=btn_][class*=_txtlink] {
+[class^=btn_][class*=_pop], [class^=btn_][class*=_link], [class^=btn_][class*=_txtlink], [class^=btn_][class*=_attachment] {
   color: var(--color-warmblue);
   text-decoration: underline;
   text-align: left;
 }
-[class^=btn_][class*=_pop].center, [class^=btn_][class*=_link].center, [class^=btn_][class*=_txtlink].center {
+[class^=btn_][class*=_pop].center, [class^=btn_][class*=_link].center, [class^=btn_][class*=_txtlink].center, [class^=btn_][class*=_attachment].center {
   text-align: center;
 }
 [class^=btn_][class*=_pop] {
@@ -4495,6 +4495,11 @@ select.sm {
 [class^=btn_][class*=_link] {
   padding-right: var(--gap-28);
   background: url("../../resources/images/icon/ico_arrow_blue.svg") no-repeat right -0.2rem;
+}
+[class^=btn_][class*=_attachment] {
+  line-height: 2rem;
+  padding-right: var(--gap-28);
+  background: url("../../resources/images/common/bg_reset.svg") no-repeat right;
 }
 [class^=btn_][class*=_download], [class^=btn_][class*=_upload] {
   padding-right: var(--gap-28);
