@@ -89,7 +89,8 @@
     }
     &[class*="_pop"],
     &[class*="_link"],
-    &[class*="_txtlink"] {
+    &[class*="_txtlink"],
+    &[class*="_attachment"] {
         color: var(--color-warmblue);
         text-decoration: underline;
         text-align: left;
@@ -104,6 +105,11 @@
     &[class*="_link"] {
         padding-right: var(--gap-28);
         background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat right -0.2rem;
+    }
+    &[class*="_attachment"] {
+        line-height: 2rem;
+        padding-right: var(--gap-28);
+        background: url($url-img-common + "bg_reset.svg") no-repeat right;
     }
     &[class*="_download"],
     &[class*="_upload"] {
