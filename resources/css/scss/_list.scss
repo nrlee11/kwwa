@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.data_info_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .data_items {
+        display: flex;
+        align-items: center;
+    }
+    .data_type {
+        flex: 0 0 auto;
+        width: 10.8rem;
+        padding-right: 1rem;
+        font-weight: var(--font-semibold);
+        box-sizing: border-box;
+    }
+    .data_txt {
+    }
+    .form_item {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        .inp.size_234 {
+            flex: 0 0 auto;
+        }
+        .btn_primary_lg {
+            margin-left: 0;
+        }
+    }
+}
