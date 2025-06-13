@@ -55,6 +55,10 @@
     -webkit-box-orient: vertical;
     word-break: break-all;
 }
+.txt_ellipsis2 {
+    @include ellipsis(2);
+    word-break: break-all;
+}
 
 // gap
 .gap {

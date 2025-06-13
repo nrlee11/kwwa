@@ -1112,6 +1112,15 @@ button {
   word-break: break-all;
 }
 
+.txt_ellipsis2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
 .gap_mt0 {
   margin-top: 0 !important;
 }
