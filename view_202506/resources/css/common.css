@@ -738,6 +738,7 @@ button {
 }
 .gnb .depth1 > li.on > a {
     border-bottom: 0.3rem solid #6495ed;
+    transition: border-bottom 0.2s ease, color 0.2s ease;
 }
 .gnb .depth1 > li > a {
     position: relative;
