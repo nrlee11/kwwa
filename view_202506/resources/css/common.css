@@ -564,7 +564,7 @@ button {
     }
 }
 #main .section + .section {
-    margin-top: var(--gap-50);
+    margin-top: var(--gap-30);
 }
 
 #footer {
@@ -5092,7 +5092,7 @@ select.sm {
 }
 .main_title .tit {
     color: var(--color-darkblack);
-    font-size: 2.2rem;
+    font-size: 2.8rem;
 }
 @media screen and (max-width: 1200px) {
     .main_title {
@@ -5333,7 +5333,7 @@ select.sm {
 }
 .schedule_list .schedule_group .time .tit {
     color: var(--color-darkblack);
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: var(--font-bold);
 }
 @media screen and (max-width: 1200px) {
