@@ -24,6 +24,7 @@
   --color-lightgray: #e6e8ea;
   --color-darkgray: #6d7882;
   --color-warmgray: #666;
+  --color-navy: #083891;
   --color-blue: #256ef4;
   --color-darkblue: #0b50d0;
   --color-lightblue: #eef2f7;
@@ -1417,6 +1418,7 @@ button {
 }
 .tit_area .tit {
   font-size: var(--font-size-lg);
+  color: var(--color-navy);
 }
 .tit_area .tit.ico {
   position: relative;
