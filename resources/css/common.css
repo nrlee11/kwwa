@@ -1383,7 +1383,7 @@ button {
 }
 .page_title .tit {
   font-size: var(--font-size-xxl);
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-bold);
 }
 .page_title.center {
   margin-top: 6.5rem;
