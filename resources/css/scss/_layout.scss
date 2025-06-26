@@ -191,9 +191,18 @@
         margin-top: 2.3rem;
         .aside_title {
             .tit {
-                margin: var(--gap-24) var(--gap-8) var(--gap-16);
+                background-color: var(--color-navy);
+                text-align: center;
+                color: var(--color-white);
+                padding: var(--gap-24) var(--gap-8) var(--gap-16);
                 font-size: var(--font-size-lg);
             }
+        }
+        .lnb_wrap {
+            // border: 1px solid var(--color-gray);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
         .lnb {
             border-top: $border #8a949e;

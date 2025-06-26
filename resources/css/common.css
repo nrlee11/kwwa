@@ -431,8 +431,16 @@ button {
   margin-top: 2.3rem;
 }
 #container #aside .aside_title .tit {
-  margin: var(--gap-24) var(--gap-8) var(--gap-16);
+  background-color: var(--color-navy);
+  text-align: center;
+  color: var(--color-white);
+  padding: var(--gap-24) var(--gap-8) var(--gap-16);
   font-size: var(--font-size-lg);
+}
+#container #aside .lnb_wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 #container #aside .lnb {
   border-top: 0.1rem solid #8a949e;
