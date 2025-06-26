@@ -353,7 +353,7 @@
 }
 .tit_area {
     position: relative;
-    margin-bottom: var(--gap-24);
+    margin-bottom: var(--gap-10);
     &.flex {
         display: flex;
         justify-content: space-between;
@@ -423,7 +423,7 @@
         }
     }
     .desc {
-        margin-top: var(--gap-24);
+        margin-top: var(--gap-10);
     }
     .right_position {
         position: absolute;

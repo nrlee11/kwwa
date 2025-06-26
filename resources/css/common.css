@@ -503,7 +503,7 @@ button {
   }
 }
 #container #contents .section + .section {
-  margin-top: var(--gap-50);
+  margin-top: var(--gap-30);
 }
 @media screen and (max-width: 1200px) {
   #container {
@@ -1407,7 +1407,7 @@ button {
 
 .tit_area {
   position: relative;
-  margin-bottom: var(--gap-24);
+  margin-bottom: var(--gap-10);
 }
 .tit_area.flex {
   display: flex;
@@ -1474,7 +1474,7 @@ button {
   }
 }
 .tit_area .desc {
-  margin-top: var(--gap-24);
+  margin-top: var(--gap-10);
 }
 .tit_area .right_position {
   position: absolute;

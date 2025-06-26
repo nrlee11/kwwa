@@ -271,7 +271,7 @@
             width: 100%;
         }
         .section + .section {
-            margin-top: var(--gap-50);
+            margin-top: var(--gap-30);
         }
     }
     @include mobile {
