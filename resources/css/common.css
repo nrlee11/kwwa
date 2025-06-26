@@ -441,6 +441,23 @@ button {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+#container #aside .lnb_wrap .banner-bg {
+  position: absolute;
+  top: 29rem;
+  left: 0;
+  width: 100%;
+  height: 12rem;
+  background-image: url("/resources/images/common/bg_subpage_banner.png"); /* 이미지 경로 */
+  background-size: cover; /* 이미지가 박스를 꽉 채우게 */
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+#container #aside .lnb_wrap > *:not(.banner-bg) {
+  position: relative;
+  z-index: 1;
+  /*.lnb_wrap .banner-bg가 맨 밑으로 깔리도록*/
 }
 #container #aside .lnb {
   border-top: 0.1rem solid #8a949e;
@@ -1390,6 +1407,8 @@ button {
   margin-bottom: var(--gap-50);
 }
 .page_title .tit {
+  position: relative;
+  z-index: 1;
   font-size: var(--font-size-xxl);
   font-weight: var(--font-bold);
 }

@@ -328,6 +328,8 @@
 .page_title {
     margin-bottom: var(--gap-50);
     .tit {
+        position: relative;
+        z-index: 1;
         font-size: var(--font-size-xxl);
         font-weight: var(--font-bold);
     }
