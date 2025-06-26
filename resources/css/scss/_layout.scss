@@ -188,7 +188,7 @@
     }
     #aside {
         width: 24.8rem;
-        margin-top: 2.3rem;
+        margin-top: 4.35rem;
         .aside_title {
             .tit {
                 background-color: var(--color-navy);
@@ -236,7 +236,9 @@
                 &.on,
                 &:hover {
                     > a {
+                        color: var(--color-navy);
                         background-color: #eef2f7;
+                        border-bottom: 2px solid var(--color-navy);
                     }
                 }
             }

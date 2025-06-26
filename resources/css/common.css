@@ -428,7 +428,7 @@ button {
 }
 #container #aside {
   width: 24.8rem;
-  margin-top: 2.3rem;
+  margin-top: 4.35rem;
 }
 #container #aside .aside_title .tit {
   background-color: var(--color-navy);
@@ -470,7 +470,9 @@ button {
   transform: rotate(180deg);
 }
 #container #aside .lnb > li.on > a, #container #aside .lnb > li:hover > a {
+  color: var(--color-navy);
   background-color: #eef2f7;
+  border-bottom: 2px solid var(--color-navy);
 }
 #container #aside .lnb .depth2 {
   border-top: 0.3rem solid #063a74;
@@ -1353,13 +1355,10 @@ button {
   border: 0.1rem solid #cdd1d5;
 }
 
-.breadcrumb_wrap {
-  margin-bottom: var(--gap-50);
-}
-
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   font-size: var(--font-size-sm);
 }
 .breadcrumb > li {

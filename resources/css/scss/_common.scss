@@ -290,11 +290,12 @@
 
 // breadcrumb
 .breadcrumb_wrap {
-    margin-bottom: var(--gap-50);
+    // margin-bottom: var(--gap-50);
 }
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     font-size: var(--font-size-sm);
     > li {
         position: relative;
