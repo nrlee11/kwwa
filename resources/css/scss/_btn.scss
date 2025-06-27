@@ -41,8 +41,8 @@
         border: $border var(--color-black);
     }
     &[class*="_border"] {
-        color: var(--color-navy);
-        border: $border var(--color-navy);
+        color: var(--color-warmblue);
+        border: $border var(--color-warmblue);
         border-radius: 0;
         background-color: var(--color-white);
         &.radius {

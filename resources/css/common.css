@@ -4491,8 +4491,8 @@ select.sm {
   border: 0.1rem solid var(--color-black);
 }
 [class^=btn_][class*=_border] {
-  color: var(--color-navy);
-  border: 0.1rem solid var(--color-navy);
+  color: var(--color-warmblue);
+  border: 0.1rem solid var(--color-warmblue);
   border-radius: 0;
   background-color: var(--color-white);
 }
