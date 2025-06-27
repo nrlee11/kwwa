@@ -41,8 +41,8 @@
         border: $border var(--color-black);
     }
     &[class*="_border"] {
-        color: var(--color-warmblue);
-        border: $border var(--color-warmblue);
+        color: var(--color-navy);
+        border: $border var(--color-navy);
         border-radius: 0;
         background-color: var(--color-white);
         &.radius {
@@ -91,7 +91,7 @@
     &[class*="_link"],
     &[class*="_txtlink"],
     &[class*="_attachment"] {
-        color: var(--color-warmblue);
+        color: var(--color-navy);
         text-decoration: underline;
         text-align: left;
         &.center {
@@ -114,7 +114,7 @@
     &[class*="_download"],
     &[class*="_upload"] {
         padding-right: var(--gap-28);
-        color: var(--color-warmblue);
+        color: var(--color-navy);
         text-align: left;
         background: url($url-img-icon + "ico_download.svg") no-repeat right 50%;
     }

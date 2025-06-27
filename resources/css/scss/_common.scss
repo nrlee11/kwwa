@@ -245,7 +245,7 @@
         position: relative;
         margin-top: 0;
         padding-left: 2.2rem;
-        color: var(--color-warmblue);
+        color: var(--color-navy);
         font-size: var(--font-size-md);
         &::before {
             @include pseudo-selector;
@@ -385,7 +385,7 @@
                 width: 0.8rem;
                 height: 2rem;
                 margin-top: -1rem;
-                background-color: var(--color-warmblue);
+                background-color: var(--color-navy);
             }
         }
         &.ico_progress {
@@ -1363,7 +1363,7 @@ select {
         margin: 1.2rem 0 0 1.7rem;
         .btn_file_delete {
             display: block;
-            color: var(--color-warmblue);
+            color: var(--color-navy);
             line-height: 1.5;
             text-decoration: underline;
             text-underline-offset: 0.3rem;
@@ -1396,7 +1396,7 @@ select {
 .list_addfile {
     .addfile {
         margin-right: var(--gap-15);
-        color: var(--color-warmblue);
+        color: var(--color-navy);
         &:last-child {
             margin-right: 0;
         }
@@ -1762,7 +1762,7 @@ select {
             margin-top: var(--gap-24);
             .note {
                 position: relative;
-                color: var(--color-warmblue);
+                color: var(--color-navy);
             }
         }
     }
@@ -2544,11 +2544,11 @@ select {
             background-color: #f6f9fe;
             .article {
                 + .article {
-                    margin-top: var(--gap-28);
+                    margin-top: var(--gap-24);
                 }
                 .tit {
                     display: block;
-                    margin-bottom: var(--gap-24);
+                    margin-bottom: var(--gap-10);
                     font-size: var(--font-size-lg);
                 }
             }
