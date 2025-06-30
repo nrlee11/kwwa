@@ -515,7 +515,7 @@
             text-align: center;
             &.on {
                 > a {
-                    border-bottom: 0.3rem solid #6495ed;
+                    border-bottom: 0.3rem solid var(--color-navy);
                 }
             }
             > a {

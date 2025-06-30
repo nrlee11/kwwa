@@ -759,7 +759,7 @@ button {
   text-align: center;
 }
 .gnb .depth1 > li.on > a {
-  border-bottom: 0.3rem solid #6495ed;
+  border-bottom: 0.3rem solid var(--color-navy);
 }
 .gnb .depth1 > li > a {
   position: relative;
