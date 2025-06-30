@@ -556,7 +556,7 @@
                 font-size: 1.8rem;
                 font-weight: var(--font-medium);
                 &:hover {
-                    color: #4c87f6;
+                    color: var(--color-navy);
                     text-decoration: underline;
                 }
             }
@@ -565,7 +565,7 @@
             }
             &.on {
                 > a {
-                    color: #4c87f6;
+                    color: var(--color-navy);
                     text-decoration: underline;
                 }
             }

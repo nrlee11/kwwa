@@ -796,14 +796,14 @@ button {
   font-weight: var(--font-medium);
 }
 .gnb .depth2 > li a:hover {
-  color: #4c87f6;
+  color: var(--color-navy);
   text-decoration: underline;
 }
 .gnb .depth2 > li + li {
   margin-top: var(--gap-20);
 }
 .gnb .depth2 > li.on > a {
-  color: #4c87f6;
+  color: var(--color-navy);
   text-decoration: underline;
 }
 .gnb .depth3 {
