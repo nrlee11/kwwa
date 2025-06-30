@@ -588,7 +588,7 @@
             a {
                 font-size: 1.5rem;
                 &:hover {
-                    color: var(--color-warmblue);
+                    color: var(--color-navy);
                     text-decoration: underline;
                 }
             }
@@ -597,11 +597,11 @@
             }
             &.on {
                 > a {
-                    color: var(--color-warmblue);
+                    color: var(--color-navy);
                     text-decoration: underline;
                 }
                 &::before {
-                    background-color: var(--color-warmblue);
+                    background-color: var(--color-navy);
                 }
             }
         }
