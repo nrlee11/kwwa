@@ -489,7 +489,7 @@ button {
 #container #aside .lnb > li.on > a, #container #aside .lnb > li:hover > a {
   color: var(--color-navy);
   background-color: #eef2f7;
-  border-bottom: 2px solid var(--color-navy);
+  border-bottom: 0.2rem solid var(--color-navy);
 }
 #container #aside .lnb .depth2 {
   padding: var(--gap-8) 0;
