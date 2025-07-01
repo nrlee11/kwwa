@@ -103,6 +103,17 @@ $(function () {
             $subMenu.hide();
             $bg.stop(true, true).slideUp(200);
         });
+        // GNB depth1 호버시 class "on"추가
+        const $gnbItems = $("#gnb .depth1 > li");
+
+        $gnbItems.on("mouseenter focusin", function () {
+            $gnbItems.removeClass("on"); // 다른 항목에서 .on 제거
+            $(this).addClass("on"); // 현재 항목에 .on 추가
+        });
+
+        $gnbItems.on("mouseleave focusout", function () {
+            $(this).removeClass("on"); // 현재 항목에서 .on 제거
+        });
     };
 
     // Side Gnb
