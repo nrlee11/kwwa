@@ -564,7 +564,7 @@
 // progress-bar
 .progress-bar {
     @include flex-center;
-    margin-left: var(--gap-12);
+    margin-left: var(--gap-50);
     > div {
         position: relative;
         width: 13.8rem;
@@ -673,6 +673,9 @@
             > span {
                 display: var(--hide);
             }
+        }
+        .long {
+            display: var(--hide);
         }
         strong {
             display: var(--hide);

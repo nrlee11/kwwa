@@ -1638,7 +1638,7 @@ button {
 .progress-bar {
   display: flex;
   justify-content: center;
-  margin-left: var(--gap-12);
+  margin-left: var(--gap-50);
 }
 .progress-bar > div {
   position: relative;
@@ -1748,6 +1748,9 @@ button {
     margin: 0;
   }
   .progress-bar .step > span {
+    display: var(--hide);
+  }
+  .progress-bar .long {
     display: var(--hide);
   }
   .progress-bar strong {
