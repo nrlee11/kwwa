@@ -1366,7 +1366,7 @@ button {
 }
 
 .box_border {
-  margin-top: var(--gap-20);
+  margin-top: var(--gap-5);
   padding: var(--gap-16);
   border: 0.1rem solid #cdd1d5;
 }
