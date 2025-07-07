@@ -3034,6 +3034,9 @@ select {
                     }
                     &.ico_progress {
                         display: flex;
+                        &::before {
+                            content: "";
+                        }
                     }
                     .sm_txt {
                         font-size: 2rem;

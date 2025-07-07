@@ -4036,6 +4036,9 @@ select.sm {
 .layerFix .layer_wrap .cont .tit_area .tit.ico_progress {
   display: flex;
 }
+.layerFix .layer_wrap .cont .tit_area .tit.ico_progress::before {
+  content: "";
+}
 .layerFix .layer_wrap .cont .tit_area .tit .sm_txt {
   font-size: 2rem;
   font-weight: var(--font-semibold);
