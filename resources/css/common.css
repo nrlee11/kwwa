@@ -4023,6 +4023,9 @@ select.sm {
   font-size: 2.5rem;
   font-weight: var(--font-semibold);
 }
+.layerFix .layer_wrap .cont .tit_area .tit::before {
+  content: none;
+}
 .layerFix .layer_wrap .cont .tit_area .tit > span {
   display: block;
   margin-top: var(--gap-7);
