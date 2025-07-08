@@ -259,7 +259,21 @@ $(function () {
             }
         });
     };
+    // Main Tab
+    const mainTab = function () {
+        $(".tab_area .main_tab li").on("click", function () {
+            const $clickedTab = $(this);
+            const $tabList = $clickedTab.parent();
+            const $tabContainer = $tabList.closest(".tab_area");
+            const tabIndex = $clickedTab.index();
 
+            $tabContainer.find(".tab_cont").hide().attr("aria-hidden", "true");
+            $tabContainer.find(".tab_cont").eq(tabIndex).show().attr("aria-hidden", "false");
+            $tabList.find("li").removeClass("on").children("button, a").attr("aria-selected", "false");
+            $clickedTab.addClass("on").children("button, a").attr("aria-selected", "true");
+            return false;
+        });
+    };
     // Common Tab
     const commonTab = function () {
         $(".tab_area .tab li").on("click", function () {
@@ -549,6 +563,7 @@ $(function () {
         choiceTextRequired();
         textareaRow();
         commonTab();
+        mainTab();
 
         // 상수 1/2급 <> 정수 3급
         $(".inner_header .rside .btn_primary_sm").on("click", function () {
@@ -610,6 +625,7 @@ $(function () {
     lnbToggle();
     allSearch();
     selectLayer();
+    mainTab();
     commonTab();
     accordion();
     accordionTr();
