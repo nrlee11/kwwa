@@ -5215,7 +5215,7 @@ select.sm {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--gap-15);
+    margin-bottom: var(--gap-20);
 }
 /* .tab_area .main_title {
     margin-bottom: 0rem;
