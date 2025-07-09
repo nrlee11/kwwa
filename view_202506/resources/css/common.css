@@ -5211,6 +5211,83 @@ select.sm {
     margin-left: 0;
 }
 
+/* 메인메뉴(s) */
+.main_menu {
+    background-color: var(--color-navy);
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    justify-items: center;
+}
+/* 메뉴 아이템 */
+.menu_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff !important;
+    font-size: 20px;
+    text-align: center;
+    width: auto;
+}
+
+/* 아이콘 원형 */
+.icon_circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 118px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* 아이콘 */
+.icon_circle img {
+    width: 52px;
+    height: 52px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main_menu {
+        width: auto;
+        margin: 0 var(--gap-24);
+        padding: 20px;
+    }
+
+    .menu_item {
+        width: 100%;
+        font-size: 16px;
+    }
+    .icon_circle {
+        width: 90px;
+        height: 90px;
+    }
+    .icon_circle img {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .main_menu {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 30px 10px;
+        margin: 0 var(--gap-16);
+    }
+
+    .menu_item {
+        width: 100%;
+    }
+}
+
+/************* 메인메뉴(e) *************/
+
 .main_title {
     display: flex;
     justify-content: space-between;
