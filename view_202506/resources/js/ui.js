@@ -566,17 +566,21 @@ $(function () {
         mainTab();
 
         // 상수 1/2급 <> 정수 3급
-        $(".inner_header .rside .btn_primary_sm").on("click", function () {
+        $("#header .rside .btn_primary_sm").on("click", function () {
             const currentText = $(this).text();
 
             if (currentText === "상수도관망시설운영관리사") {
                 // 정수 3급
-                $(this).html(`정수시설운영관리사 3급<span class="ico_arrow"></span>`);
+                $(this).html(`상수도관망시설운영관리사`);
                 $("h1.logo span").text("상수도관망시설운영관리사");
+            } else if (currentText === "정수시설운영관리사 3급") {
+                // 정수 1/2급
+                $(this).html("정수시설운영관리사 3급");
+                $("h1.logo span").text("정수시설운영관리사 3급");
             } else {
                 // 상수 1/2급
-                $(this).html(`상수도관망시설운영관리사<span class="ico_arrow"></span>`);
-                $("h1.logo span").text("정수시설운영관리사 3급");
+                $(this).html(`정수시설운영관리사 1급/2급`);
+                $("h1.logo span").text("정수시설운영관리사 1급/2급");
             }
         });
 

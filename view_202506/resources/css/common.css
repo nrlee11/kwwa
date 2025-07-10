@@ -330,7 +330,38 @@ button {
 #header .lyinner {
     width: 120rem;
     margin: 0 auto;
-    padding: var(--gap-30) 0;
+    padding: 0 0 var(--gap-30) 0;
+}
+#header .rside {
+    width: 100%;
+    background-color: var(--color-navy);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+#header .rside .button_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 120rem;
+}
+#header .rside .btn_primary_sm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* min-width: 24rem; */
+    padding: 0 var(--gap-15);
+    background-color: var(--active-bgcolor);
+    text-align: left;
+    color: var(--color-white);
+    border-left: 1px solid var(--color-white);
+    border-right: 1px solid var(--color-white);
+    border-radius: 0;
+}
+#header .rside .btn_primary_sm:hover,
+#header .rside .btn_primary_sm:focus-visible {
+    --active-bgcolor: var(--color-white);
+    color: var(--color-navy);
 }
 @media screen and (max-width: 1200px) {
     #header .lyinner {
@@ -342,7 +373,7 @@ button {
 #header .utility {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: var(--gap-55);
+    /* margin-bottom: var(--gap-20); */
 }
 #header .utility .box {
     display: flex;
@@ -388,29 +419,13 @@ button {
 #header .inner_header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
-#header .inner_header .rside {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-#header .inner_header .btn_primary_sm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 24rem;
-    padding: 0 var(--gap-15);
-    background-color: var(--active-bgcolor, #8a949e);
-    text-align: left;
-}
-#header .inner_header .btn_primary_sm:hover,
-#header .inner_header .btn_primary_sm:focus-visible {
-    --active-bgcolor: #4c87f6;
-}
+
 @media screen and (max-width: 1200px) {
     #header .utility,
     #header .nav_area,
-    #header .inner_header .rside {
+    #header .rside {
         display: var(--hide);
     }
 }
