@@ -5013,6 +5013,8 @@ select.sm {
 }
 
 .check_set {
+  display: flex;
+  flex-direction: column;
   margin-top: -1rem;
 }
 .check_set .inp_check {

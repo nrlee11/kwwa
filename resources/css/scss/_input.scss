@@ -166,6 +166,8 @@
     }
 }
 .check_set {
+    display: flex;
+    flex-direction: column;
     margin-top: -1rem;
     .inp_check {
         margin-top: var(--gap-10);
