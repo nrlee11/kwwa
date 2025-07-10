@@ -225,5 +225,19 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 팝업
+                $("#agree1").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop1").show().focus();
+                });
+                $("#alertPop1 .layer_close").click(function (e) {
+                    $("#alert1").focus(); // 접근성
+                });
+            });
+        </script>
     </body>
 </html>
