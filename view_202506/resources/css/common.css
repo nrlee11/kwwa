@@ -5520,19 +5520,31 @@ select.sm {
     font-weight: var(--font-bold);
     line-height: 1;
 }
+.schedule_list {
+    border: 1px solid #cdd1d5;
+    border-radius: 1rem;
+    overflow: hidden;
+}
 
 .schedule_list .schedule_group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 0 4rem;
-    padding: var(--gap-40);
+    padding: var(--gap-35) var(--gap-40);
     background-color: var(--color-white);
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+    border-bottom: 1px solid #cdd1d5;
 }
+
 .schedule_list .schedule_group + .schedule_group {
-    margin-top: var(--gap-15);
+    /* margin-top: var(--gap-15); */
+    border-bottom: 1px solid #cdd1d5;
 }
+.schedule_list .schedule_group + .schedule_group:last-child {
+    border-bottom: none;
+}
+
 @media screen and (max-width: 1200px) {
     .schedule_list .schedule_group {
         position: relative;
@@ -5622,9 +5634,10 @@ select.sm {
     }
 }
 .schedule_list .schedule_group .timetable .cell .tit {
-    color: #8a949e;
+    color: var(--color-blue);
     font-size: 1.8rem;
     font-weight: 600;
+    margin-bottom: 0.2rem;
 }
 @media screen and (max-width: 1200px) {
     .schedule_list .schedule_group .timetable .cell .tit {
