@@ -580,7 +580,7 @@ button {
     }
 }
 #main .section + .section {
-    margin-top: var(--gap-30);
+    margin-top: var(--gap-50);
 }
 
 #footer {
@@ -5515,16 +5515,60 @@ select.sm {
 }
 .service_area .mb_info .link .txt {
     display: flex;
+    justify-content: flex-start;
     gap: 0.6rem;
     align-items: center;
     font-weight: var(--font-bold);
     line-height: 1;
 }
+
+/* 교육일정 평가시험일정 */
+.toggle_buttons {
+    display: inline-flex;
+    /* gap: 10px; */
+    padding: 0.5rem;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border-radius: 35px;
+}
+
+.toggle_buttons button {
+    padding: 10px 20px;
+    /* border: 1px solid #ccc; */
+    /* background: #fff; */
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.toggle_buttons button.active {
+    background: var(--color-navy);
+    color: white;
+    border-color: var(--color-navy);
+}
+
 .schedule_list {
+    display: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule_list.active {
+    display: block;
+}
+
+/* ---------------------- */
+
+/* .schedule_list {
     border: 1px solid #cdd1d5;
     border-radius: 1rem;
     overflow: hidden;
-}
+} */
 
 .schedule_list .schedule_group {
     display: flex;

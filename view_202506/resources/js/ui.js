@@ -290,6 +290,22 @@ $(function () {
         });
     };
 
+    // 교육일정 평가시험일정 토글
+    const tabButtons = document.querySelectorAll(".toggle_buttons button");
+    const lists = document.querySelectorAll(".schedule_list");
+
+    tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const tab = button.getAttribute("data-tab");
+            lists.forEach((list) => {
+                list.id === tab ? list.classList.add("active") : list.classList.remove("active");
+            });
+        });
+    });
+
     // Accordion
     const accordion = function () {
         const accFold = $(".accordion_area .fold");
