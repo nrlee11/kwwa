@@ -351,16 +351,20 @@ button {
     align-items: center;
     /* min-width: 24rem; */
     padding: 0 var(--gap-15);
-    background-color: var(--active-bgcolor);
+    background-color: var(--color-navy);
     text-align: left;
     color: var(--color-white);
     border-left: 1px solid var(--color-white);
     border-right: 1px solid var(--color-white);
     border-radius: 0;
 }
-#header .rside .btn_primary_sm:hover,
-#header .rside .btn_primary_sm:focus-visible {
-    --active-bgcolor: var(--color-white);
+#header .rside .btn_primary_sm.active {
+    background-color: var(--color-white);
+    color: var(--color-navy);
+}
+#header .rside .btn_primary_sm:hover:not(.active),
+#header .rside .btn_primary_sm:focus-visible:not(.active) {
+    background-color: var(--color-white);
     color: var(--color-navy);
 }
 @media screen and (max-width: 1200px) {

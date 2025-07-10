@@ -600,6 +600,17 @@ $(function () {
             }
         });
 
+        // header .rside 버튼 클릭했을때 상태 그대로 active효과 유지
+        $("#header .rside .btn_primary_sm").on("click", function () {
+            // 모든 버튼에서 active 제거
+            $(".rside .btn_primary_sm").removeClass("active");
+
+            // 클릭한 버튼에 active 추가
+            $(this).addClass("active");
+
+            // 여기에 로고 변경/페이지 이동 등의 로직 넣기
+        });
+
         // 모바일전용 - 상수 1/2급 <> 정수 3급
         $(".side_nav_wrap .btn_area .btn_warmblue_sm").click(function () {
             const currentText = $(this).text();
