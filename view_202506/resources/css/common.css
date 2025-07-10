@@ -3812,7 +3812,7 @@ select.sm {
     }
 }
 .tab_area .tab_cont .detail_view .article {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--color-lightgray);
 }
 .tab_area .tab_cont .detail_view .article + .article {
@@ -3827,6 +3827,7 @@ select.sm {
     word-break: break-all;
 }
 .tab_area .tab_cont .detail_view .tit_box {
+    margin-bottom: 0.2rem;
     display: flex;
     justify-content: space-between;
 }
