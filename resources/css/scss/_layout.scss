@@ -533,6 +533,7 @@
             }
             .sub {
                 display: var(--hide);
+                width: 100%;
                 position: absolute;
                 top: 7rem;
                 left: 0;
@@ -541,6 +542,9 @@
                 margin: var(--gap-10) 0;
                 padding: var(--gap-28) var(--gap-10);
                 border-left: $border #c8c8c8;
+                &:hover {
+                    background-color: #eef2f7;
+                }
             }
             &:first-child {
                 .sub {
