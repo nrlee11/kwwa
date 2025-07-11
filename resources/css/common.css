@@ -2582,6 +2582,7 @@ select.sm {
 }
 .board_area .tbl tbody td > div {
   word-break: break-all;
+  text-align: left;
 }
 .board_area .tbl tbody td.left {
   text-align: left;
