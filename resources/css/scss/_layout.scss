@@ -516,6 +516,7 @@
             &.on {
                 > a {
                     border-bottom: 0.3rem solid var(--color-navy);
+                    transition: border-bottom 0.2s ease, color 0.2s ease;
                 }
             }
             > a {
