@@ -3826,13 +3826,16 @@ select.sm {
 .tab_area .tab_cont .detail_view .article + .article {
     margin-top: var(--gap-24);
 }
-.tab_area .tab_cont .detail_view .article p {
+.tab_area .tab_cont .detail_view .article .txt {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     word-break: break-all;
+}
+.tab_area .tab_cont .detail_view .article .txt:hover {
+    text-decoration: underline;
 }
 .tab_area .tab_cont .detail_view .tit_box {
     margin-bottom: 0.2rem;
