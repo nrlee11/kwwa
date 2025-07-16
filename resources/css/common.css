@@ -132,7 +132,7 @@ th,
 button {
   color: var(--color-base);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
 
 table {
@@ -2576,7 +2576,7 @@ select.sm {
 .board_area .tbl tbody td {
   height: 5rem;
   color: var(--color-gray);
-  padding: var(--gap-10) var(--gap-16);
+  padding: var(--gap-10) var(--gap-10);
   border-bottom: 0.1rem solid #cdd1d5;
   border-left: 0.1rem solid #d6e0eb;
   background-color: var(--color-white);
