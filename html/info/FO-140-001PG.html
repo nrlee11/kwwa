@@ -78,8 +78,111 @@
         <!-- [include] side(s) : 확인용 -->
         <div data-include-file="/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
-        
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-140-001PG.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 자격증 급수 선택 활성화
+                        $("#btnPop1").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_1").show().focus();
+                        });
+                        // Layer - 다음
+                        $("#btnPop1_1 .btn_area .btn_primary_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_1").hide();
+                            $("#btnPop1_2").show().focus();
+                        });
+                        $("#btnPop1_2 .btn_area .btn_primary_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_2").hide();
+                            $("#btnPop1_3").show().focus();
+                        });
+                        $("#btnPop1_3 .btn_area .btn_primary_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_3").hide();
+                            $("#btnPop1_4").show().focus();
+                        });
+                        $("#btnPop1_4 .btn_area .btn_primary_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_4").hide();
+                            $("#btnPop1_5").show().focus();
+                        });
+                        $("#btnPop1_5 .btn_area .btn_primary_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_5").hide();
+                            $("#btnPop1_6").show().focus();
+                        });
+                        $("#btnPop1_6 .btn_area .btn_primary_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_6").hide();
+                            $("#btnPop1").focus(); // 접근성
+                        });
+                        // Layer - 이전
+                        $("#btnPop1_2 .btn_area .btn_outline_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_2").hide();
+                            $("#btnPop1_1").show().focus();
+                        });
+                        $("#btnPop1_3 .btn_area .btn_outline_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_3").hide();
+                            $("#btnPop1_2").show().focus();
+                        });
+                        $("#btnPop1_4 .btn_area .btn_outline_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_4").hide();
+                            $("#btnPop1_3").show().focus();
+                        });
+                        $("#btnPop1_5 .btn_area .btn_outline_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_5").hide();
+                            $("#btnPop1_4").show().focus();
+                        });
+                        $("#btnPop1_6 .btn_area .btn_outline_md").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#btnPop1_6").hide();
+                            $("#btnPop1_5").show().focus();
+                        });
+
+                        $("#btnPop1_1 .layer_close, #btnPop1_2 .layer_close, #btnPop1_3 .layer_close, #btnPop1_4 .layer_close, #btnPop1_5 .layer_close, #btnPop1_6 .layer_close").click(function (e) {
+                            $("#btnPop1").focus(); // 접근성
+                        });
+
+                        $("#requirements04").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#requirementsPop04").show().focus();
+                        });
+                        $("#requirementsPop04 .layer_close").click(function (e) {
+                            $("#requirements04").focus(); // 접근성
+                        });
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
