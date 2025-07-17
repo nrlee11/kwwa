@@ -252,12 +252,19 @@
                         transform: rotate(180deg);
                     }
                 }
-                &.on,
+                &.on {
+                    > a {
+                        color: var(--color-navy);
+                        background-color: #eef2f7;
+                        border-bottom: 0.2rem solid var(--color-navy);
+                        // lnb 메뉴 클릭된 상태일때는 밑줄, 호버시에는 생략
+                    }
+                }
                 &:hover {
                     > a {
                         color: var(--color-navy);
                         background-color: #eef2f7;
-                        // border-bottom: 0.2rem solid var(--color-navy);
+                        // border-bottom: 0.2rem solid var(--color-navy); 호버시에는 생략
                     }
                 }
             }

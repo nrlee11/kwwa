@@ -486,7 +486,12 @@ button {
 #container #aside .lnb > li:has(ul) a[aria-expanded=true]::after {
   transform: rotate(180deg);
 }
-#container #aside .lnb > li.on > a, #container #aside .lnb > li:hover > a {
+#container #aside .lnb > li.on > a {
+  color: var(--color-navy);
+  background-color: #eef2f7;
+  border-bottom: 0.2rem solid var(--color-navy);
+}
+#container #aside .lnb > li:hover > a {
   color: var(--color-navy);
   background-color: #eef2f7;
 }
