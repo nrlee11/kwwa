@@ -836,6 +836,28 @@
                 $("#applicationformPop1 .layer_close").click(function (e) {
                     $("#applicationform1").focus(); // 접근성
                 });
+
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-WP-500-040.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 	가상계좌번호
+                        $(".btn_pop:contains('가상계좌번호')").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#popVirtualAccount").show().focus();
+                        });
+                        $("#popVirtualAccount .layer_close").click(function (e) {
+                            $(".btn_pop:contains('가상계좌번호')").focus(); // 접근성
+                        });
+                    });
+                });
             });
         </script>
     </body>

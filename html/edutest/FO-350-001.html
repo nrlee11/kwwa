@@ -187,17 +187,30 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
-        <script>
-            // 파일첨부 샘플
-            $("#fileMulti001").on("change", function (e) {
-                const files = this.files;
+        <script type="text/javascript">
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
 
-                Array.from(files).forEach((file) => {
-                    $(this).next(".add_file_box").append(`<button type="button" class="btn_file_delete">${file.name}<span class="hidden">삭제</span></button>`);
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-350-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
                 });
-            });
-            $(".add_file_box").on("click", ".btn_file_delete", function () {
-                $(this).remove();
+
+                // 파일첨부 샘플
+                $("#fileMulti001").on("change", function (e) {
+                    const files = this.files;
+
+                    Array.from(files).forEach((file) => {
+                        $(this).next(".add_file_box").append(`<button type="button" class="btn_file_delete">${file.name}<span class="hidden">삭제</span></button>`);
+                    });
+                });
+                $(".add_file_box").on("click", ".btn_file_delete", function () {
+                    $(this).remove();
+                });
             });
         </script>
     </body>

@@ -697,7 +697,7 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
-        <script type="text/javascript">
+ <script type="text/javascript">
             $(function () {
                 // Layer : 원본서류 우편제출 안내
                 $("#alert1").click(function (e) {
@@ -731,6 +731,34 @@
                 });
                 $("#applicationformPop1 .layer_close").click(function (e) {
                     $("#applicationform1").focus(); // 접근성
+                });
+
+
+                
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='my/FO-620-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                        $("a[href*='my/FO-620-001.html']").closest(".depth2").show();
+                        $("a[aria-controls='site-select-my2'").attr("aria-expanded", "true");
+
+
+                        
+                        // Layer : 	가상계좌번호
+                        $(".btn_pop:contains('가상계좌번호')").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#popVirtualAccount").show().focus();
+                        });
+                        $("#popVirtualAccount .layer_close").click(function (e) {
+                            $(".btn_pop:contains('가상계좌번호')").focus(); // 접근성
+                        });
+                    });
                 });
             });
         </script>

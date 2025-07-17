@@ -164,8 +164,32 @@
         <!-- [include] side(s) : 확인용 -->
         <div data-include-file="/html/include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
-        
+
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-WP-500-020.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        $("#requirements04").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#requirementsPop04").show().focus();
+                        });
+                        $("#requirementsPop04 .layer_close").click(function (e) {
+                            $("#requirements04").focus(); // 접근성
+                        });
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

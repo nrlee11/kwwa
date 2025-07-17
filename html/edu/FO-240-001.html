@@ -190,5 +190,30 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-240-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
+
+                // Layer : 취소 요청 확인
+                $(".btn_primary_lg:contains('취소하기')").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#popCancel001").show().focus();
+                });
+                $("#popCancel001 .layer_close").click(function (e) {
+                    $(".btn_primary_lg:contains('취소하기')").focus(); // 접근성
+                });
+            });
+        </script>
     </body>
 </html>

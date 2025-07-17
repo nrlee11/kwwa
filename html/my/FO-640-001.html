@@ -257,6 +257,17 @@
                     $("#alarm1_1").focus(); // 접근성
                     // $("#alarm2").focus();
                 });
+
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='my/FO-640-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
             });
         </script>
     </body>
