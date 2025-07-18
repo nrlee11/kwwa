@@ -49,7 +49,7 @@
                         <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">나의 양성교육 현황</h3>
-                                <div class="desc">신청하신 내용은 아래와 같습니다.</div>
+                                <!-- <div class="desc">신청하신 내용은 아래와 같습니다.</div> -->
                             </div>
                         </div>
                         <!--// section(e) -->
@@ -57,7 +57,7 @@
                         <!-- section(s) -->
                         <div class="section">
                             <div class="page_msg">
-                                <div class="lside">진행 중인 교육이 없습니다.<br />교육 접수일정을 확인하시고 신청해주세요.</div>
+                                <div class="lside">신청하신 교육이 없습니다.<br />교육 접수일정을 확인하시고 신청해주세요.</div>
                                 <div class="rside">
                                     <a href="javascript:;" class="btn_border_md radius">교육 신청<span class="ico_bluearrow2"></span></a>
                                 </div>
@@ -73,10 +73,18 @@
                                     <div class="box">
                                         <div class="edu_info">
                                             <div class="lside">
+                                                <!-- [D] 해당 뱃지로 교체하여 사용 -->
+                                                <!-- 1. 교육시작 전 : <span class="value_badge8">교육시작 전</span> -->
+                                                <!-- 2. 미수료 : <span class="value_badge4">미수료</span> -->
+                                                <!-- 3. 진도율 : <span class="value_badge1">신청완료</span> -->
+                                                <!-- 4. 수료 : <span class="value_badge2">수료</span> -->
+
                                                 <span class="value_badge1">
                                                     <span>진도율</span>
                                                     <span>55%</span>
                                                 </span>
+                                                <span class="value_badge2">수료: 6과목</span>
+                                                <span class="value_badge4">미수료: 5과목</span>
                                             </div>
                                             <div class="rside">
                                                 <span class="date">신청일 : 2025-03-01</span>
@@ -97,11 +105,14 @@
                                                 </div>
                                             </div>
                                             <div class="side">
-                                                <!-- [D] 교육시작 전 vs 교육시작 후 -->
-                                                <a href="javascript:;" class="btn_border_md radius">강의실 입장<span class="ico_bluearrow2"></span></a>
-                                                <!--  <div class="btn_outline_md"><span class="txt_regular">교육시작 00일 전입니다.</span></div> -->
+                                                <button type="button" class="btn_border_xxl radius"><span class="txt_size_sm">강의실 입장</span><span class="ico_bluearrow2"></span></button>
                                             </div>
                                         </div>
+                                        <!-- [D] 버튼: 과정 취소 -->
+                                        <div class="gap_mt28">
+                                            <a href="javascript:;"><span class="txt_size_sm txt_underline">과정 취소</span></a>
+                                        </div>
+                                        <!-- // [D] 버튼: 과정 취소 -->
                                     </div>
                                 </div>
                                 <div class="edu_group type2">
@@ -128,15 +139,68 @@
                                                     <span class="item">2025-03-10 (월)</span>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="edu_group type2">
+                                    <div class="box">
+                                        <div class="edu_info">
+                                            <div class="lside">
+                                                <span class="value_badge2">수료</span>
+                                            </div>
+                                            <div class="rside">
+                                                <span class="date">신청일 : 2025-03-01</span>
+                                            </div>
+                                        </div>
+                                        <div class="timetable_set">
+                                            <div class="timetable">
+                                                <div class="edu_tit">
+                                                    <strong class="tit">상수도관망시설운영관리사 양성과정 교육1급 상수도관망시설운영관리사 양성과정 교육1급 (개정)</strong>
+                                                </div>
+                                                <div class="cell">
+                                                    <span class="tit">교육기간</span>
+                                                    <span class="item">2025-01-10 (금) ~ 2025-01-16 (목)</span>
+                                                </div>
+                                                <div class="cell">
+                                                    <span class="tit">수료일</span>
+                                                    <span class="item">2025-03-10 (월)</span>
+                                                </div>
+                                            </div>
                                             <div class="side">
-                                                <!-- [D] 교육시작 전 vs 교육시작 후 -->
-                                                <!-- <a href="javascript:;" class="btn_border_md radius">강의실 입장<span class="ico_bluearrow2"></span></a> -->
-                                                <div class="btn_outline_md"><span class="txt_regular">교육시작 00일 전입니다.</span></div>
+                                                <a href="javascript:;" class="btn_border_xxl radius"><span class="txt_size_sm">수료증 발급</span><span class="ico_bluearrow2"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="edu_group type2">
+                                    <div class="box">
+                                        <div class="edu_info">
+                                            <div class="lside">
+                                                <span class="value_badge4">미수료</span>
+                                            </div>
+                                            <div class="rside">
+                                                <span class="date">신청일 : 2025-03-01</span>
+                                            </div>
+                                        </div>
+                                        <div class="timetable_set">
+                                            <div class="timetable">
+                                                <div class="edu_tit">
+                                                    <strong class="tit">상수도관망시설운영관리사 양성과정 교육1급 상수도관망시설운영관리사 양성과정 교육1급 (개정)</strong>
+                                                </div>
+                                                <div class="cell">
+                                                    <span class="tit">교육기간</span>
+                                                    <span class="item">2025-01-10 (금) ~ 2025-01-16 (목)</span>
+                                                </div>
+                                                <div class="cell">
+                                                    <span class="tit">수료일</span>
+                                                    <span class="item">2025-03-10 (월)</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="nodata">조회된 내역이 없습니다.</div>
                         </div>
                         <!--// section(e) -->
                     </div>
