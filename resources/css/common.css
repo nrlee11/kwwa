@@ -2558,7 +2558,7 @@ select.sm {
 .board_area .tbl thead th,
 .board_area .tbl tbody th {
   height: 5rem;
-  padding: 0 var(--gap-16);
+  padding: var(--gap-4) var(--gap-16);
   font-size: var(--font-size-sm);
   color: var(--color-warblack);
   font-weight: var(--font-bold);
@@ -2576,6 +2576,7 @@ select.sm {
 }
 .board_area .tbl thead th {
   height: 3.2rem;
+  line-height: 1.2;
 }
 .board_area .tbl tbody td {
   height: 5rem;
