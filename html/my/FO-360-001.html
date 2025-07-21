@@ -33,15 +33,15 @@
                         <nav class="breadcrumb_wrap">
                             <ol class="breadcrumb">
                                 <li><a href="javascript:;">홈</a></li>
-                                <li><a href="javascript:;">평가시험</a></li>
-                                <li><span>확인서 발급</span></li>
+                                <li><a href="javascript:;">마이페이지</a></li>
+                                <li><span>확인서 발급내역</span></li>
                             </ol>
                         </nav>
                         <!--// breadcrumb(e) -->
 
                         <!-- page_title(s) -->
                         <div class="page_title">
-                            <h2 class="tit">확인서 발급</h2>
+                            <h2 class="tit">확인서 발급내역</h2>
                         </div>
                         <!--// page_title(e) -->
 
@@ -52,15 +52,15 @@
                         <!--// section(e) -->
 
                         <!-- section(s) -->
-                        <div class="section">
+                        <!-- <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">선택</h3>
-                            </div>
+                            </div> -->
 
-                            <!-- board -->
-                            <div class="board_area">
-                                <!-- board_view -->
-                                <table class="tbl react row size110">
+                        <!-- board -->
+                        <!-- <div class="board_area"> -->
+                        <!-- board_view -->
+                        <!-- <table class="tbl react row size110">
                                     <caption>
                                         시험구분, 확인서 종류 정보 제공
                                     </caption>
@@ -78,23 +78,23 @@
                                             <td data-cell-header="확인서 종류"><div>수수료납부확인서/응시확인서/시험합격확인서 (협회원고에 실제 문서가 있는지 확인 필요)</div></td>
                                         </tr>
                                     </tbody>
-                                </table>
-                                <!--// board_view -->
-                            </div>
-                            <!--// board -->
+                                </table> -->
+                        <!--// board_view -->
+                        <!-- </div> -->
+                        <!--// board -->
 
-                            <div class="page_btn_area">
+                        <!-- <div class="page_btn_area">
                                 <div class="rside">
                                     <button type="button" class="btn_primary_lg">발급</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!--// section(e) -->
 
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
-                                <h3 class="tit">발급내역</h3>
+                                <h3 class="tit">확인서 발급내역</h3>
                             </div>
 
                             <!-- board -->
@@ -102,7 +102,7 @@
                                 <!-- board_view -->
                                 <table class="tbl react">
                                     <caption>
-                                        NO, 확인서, 문서번호, 신청일자, 출력 정보 제공
+                                        NO, 확인서, 문서번호, 발급일시, 출력 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 80px" />
@@ -116,16 +116,52 @@
                                             <th scope="col">NO</th>
                                             <th scope="col">확인서</th>
                                             <th scope="col">문서번호</th>
-                                            <th scope="col">신청일자</th>
+                                            <th scope="col">발급일시</th>
                                             <th scope="col">출력</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td data-cell-header="NO"><div>100</div></td>
+                                            <td data-cell-header="NO"><div>5</div></td>
                                             <td data-cell-header="확인서" class="left"><div>교육비 납입 확인서</div></td>
                                             <td data-cell-header="문서번호"><div></div></td>
-                                            <td data-cell-header="신청일자"><div>2025-01-02</div></td>
+                                            <td data-cell-header="발급일시"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력">
+                                                <div><button type="button" class="btn_txtlink">인쇄하기</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="NO"><div>4</div></td>
+                                            <td data-cell-header="확인서" class="left"><div>응시료 납입 확인서</div></td>
+                                            <td data-cell-header="문서번호"><div></div></td>
+                                            <td data-cell-header="발급일시"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력">
+                                                <div><button type="button" class="btn_txtlink">인쇄하기</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="NO"><div>3</div></td>
+                                            <td data-cell-header="확인서" class="left"><div>자격증 발급 수수료 납입 확인서</div></td>
+                                            <td data-cell-header="문서번호"><div></div></td>
+                                            <td data-cell-header="발급일시"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력">
+                                                <div><button type="button" class="btn_txtlink">인쇄하기</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="NO"><div>2</div></td>
+                                            <td data-cell-header="확인서" class="left"><div>평가시험 응시 확인서</div></td>
+                                            <td data-cell-header="문서번호"><div></div></td>
+                                            <td data-cell-header="발급일시"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력">
+                                                <div><button type="button" class="btn_txtlink">인쇄하기</button></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="NO"><div>1</div></td>
+                                            <td data-cell-header="확인서" class="left"><div>자격취득 확인서</div></td>
+                                            <td data-cell-header="문서번호"><div></div></td>
+                                            <td data-cell-header="발급일시"><div>2025-01-02</div></td>
                                             <td data-cell-header="출력">
                                                 <div><button type="button" class="btn_txtlink">인쇄하기</button></div>
                                             </td>
