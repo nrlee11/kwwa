@@ -88,17 +88,56 @@
     .lyinner {
         width: 120rem;
         margin: 0 auto;
-        padding: var(--gap-30) 0;
+        padding: 0 0 var(--gap-30) 0;
         @include mobile {
             width: auto;
             margin: 0;
             padding: 0;
         }
     }
+    .rside {
+        width: 100%;
+        background-color: var(--color-navy);
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        @include mobile {
+            display: var(--hide);
+        }
+
+        .button_box {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 120rem;
+        }
+        .btn_primary_sm {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* min-width: 24rem; */
+            padding: 0 var(--gap-15);
+            background-color: var(--color-navy);
+            text-align: left;
+            color: var(--color-white);
+            border-left: 1px solid var(--color-white);
+            border-right: 1px solid var(--color-white);
+            border-radius: 0;
+            &.active {
+                background-color: var(--color-white);
+                color: var(--color-navy);
+            }
+            &:hover:not(.active),
+            &:focus-visible:not(.active) {
+                background-color: var(--color-white);
+                color: var(--color-navy);
+            }
+        }
+    }
     .utility {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: var(--gap-55);
+        // margin-bottom: var(--gap-20);
         .box {
             display: flex;
             height: 4rem;
@@ -148,11 +187,12 @@
     .inner_header {
         display: flex;
         justify-content: space-between;
-        .rside {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+        // .rside {
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: 0.5rem;
+        // }
+        align-items: flex-end;
         .btn_primary_sm {
             display: flex;
             justify-content: space-between;
@@ -170,7 +210,7 @@
     @include mobile {
         .utility,
         .nav_area,
-        .inner_header .rside {
+        .rside {
             display: var(--hide);
         }
     }
