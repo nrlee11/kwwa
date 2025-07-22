@@ -5420,9 +5420,9 @@ select.sm {
         width: calc(100% - 4.8rem) !important;
         margin: 0 var(--gap-24);
     }
-    .service_area .cs_info {
+    /* .service_area .cs_info {
         order: 1;
-    }
+    } */
 }
 @media screen and (max-width: 767px) {
     .service_area {
@@ -5431,7 +5431,7 @@ select.sm {
         margin: 0 var(--gap-16);
     }
 }
-.service_area .cs_info {
+/* .service_area .cs_info {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -5532,7 +5532,7 @@ select.sm {
     align-items: center;
     font-weight: var(--font-bold);
     line-height: 1;
-}
+} */
 
 /* 교육일정 평가시험일정 */
 .toggle_buttons {
@@ -5766,7 +5766,7 @@ select.sm {
     }
 }
 
-.post_list {
+/* .post_list {
     padding: var(--gap-20) var(--gap-16);
     background-color: var(--color-white);
     border-radius: 1rem;
@@ -5864,7 +5864,7 @@ select.sm {
 }
 .post_list .data_group .post_item .item > a {
     /* display: table-cell; */
-    color: #555;
+/* color: #555;
     font-size: 1.8rem;
     font-weight: var(--font-semibold);
     display: -webkit-box;
@@ -5890,7 +5890,7 @@ select.sm {
     .post_list .data_group .post_item .txt_new {
         right: 0;
     }
-}
+} */
 
 .program_wrap {
     position: relative;
