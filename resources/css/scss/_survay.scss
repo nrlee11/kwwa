@@ -63,3 +63,17 @@
         }
     }
 }
+.txt_survay_result2 {
+    color: var(--color-warmblue);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+
+    @include xs-mobile {
+        display: block;
+        margin-right: var(--gap-7);
+    }
+}
+.radio_box {
+    display: flex;
+    justify-content: space-between;
+}

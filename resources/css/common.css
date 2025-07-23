@@ -7575,3 +7575,20 @@ select.sm {
     display: none;
   }
 }
+
+.txt_survay_result2 {
+  color: var(--color-warmblue);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+@media screen and (max-width: 320px) {
+  .txt_survay_result2 {
+    display: block;
+    margin-right: var(--gap-7);
+  }
+}
+
+.radio_box {
+  display: flex;
+  justify-content: space-between;
+}
