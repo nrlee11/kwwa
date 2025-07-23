@@ -65,8 +65,10 @@
 }
 .txt_survay_result2 {
     color: var(--color-warmblue);
-    word-break: keep-all;
-    overflow-wrap: break-word;
+    // word-break: keep-all;
+    // overflow-wrap: break-word;
+    margin-left: 20px;
+    white-space: nowrap;
 
     @include xs-mobile {
         display: block;
@@ -76,4 +78,5 @@
 .radio_box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
