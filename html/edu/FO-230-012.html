@@ -49,7 +49,7 @@
                         <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">양성과정</h3>
-                                <div class="desc">교육신청이 <strong>신청</strong> 되었습니다.</div>
+                                <div class="desc">발급한 가상계좌로 기간 내 입금이 완료되어야 신청이 확정되며, 교육 수강이 가능합니다.</div>
                             </div>
                         </div>
                         <!--// section(e) -->
@@ -58,20 +58,43 @@
                         <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">교육비 결제 안내</h3>
-                                <div class="desc">
-                                    교육비가 결제되어야 <strong>신청확정</strong>이 되며, 교육을 수강할 수 있습니다.<br />
-                                    교육비는 아래의 방법으로 결제가 가능합니다. 단 지금 바로 결제를 원하시지 않는 경우 접수기간 내에 언제든 결제가 가능합니다.<br />
-                                    단 접수기간 내 결제가 안되는 경우 접수된 교육신청은 자동 취소되므로 유의하여 주시기 바랍니다.<br /><br />
-                                    지금 결제를 원하시는 경우 아래 방법 중 하나로 진행해 주십시오.<br />
-                                    <ul class="list_dash">
-                                        <li>카드결제, 실시간계좌이체, 가상계좌 이체</li>
-                                    </ul>
-                                </div>
                             </div>
-                            <div class="result_area warning gap_mt40">
-                                교육비는 신청자 개별로 각각 결제되어야 합니다.<br />
-                                지자체 등 기관에서 여러명의 교육비를 결제하시는 경우 신청자의 교육비 청구서를 인쇄하여 각 건에 대해 납부하여 주시기 바랍니다.
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row size110">
+                                    <caption>
+                                        은행명, 입금기한, 가상계좌번호, 입금액, 예금주명
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 153px" />
+                                        <col style="width: 291px" />
+                                        <col style="width: 153px" />
+                                        <col style="width: 291px" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">은행명</th>
+                                            <td data-cell-header="은행명"><div>XX은행</div></td>
+                                            <th scope="row">입금기한</th>
+                                            <td data-cell-header="입금기한"><div>YYYY-MM-DD 23:00:00</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">가상계좌번호</th>
+                                            <td data-cell-header="가상계좌번호"><div>XXX-XXX-XXXXXX</div></td>
+                                            <th scope="row">입금액</th>
+                                            <td data-cell-header="입금액"><div>NNN,NNN원</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">예금주명</th>
+                                            <td data-cell-header="예금주명" colspan="3"><div>상하수도협회</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
                             </div>
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
 
@@ -80,7 +103,6 @@
                             <div class="tit_area">
                                 <h3 class="tit">교육 정보</h3>
                             </div>
-
                             <!-- board -->
                             <div class="board_area">
                                 <!-- board_view -->
@@ -209,11 +231,11 @@
                         <!--// section(e) -->
 
                         <div class="bottom_btn_area">
-                            <div class="lside">
-                                <button type="button" class="btn_primary_lg">즉시결제</button>
-                            </div>
                             <div class="rside">
-                                <button type="button" class="btn_outline_lg">취소하기</button>
+                                <a href="javascript:;" class="btn_primary_lg">청구서 출력</a>
+                            </div>
+                            <div class="lside">
+                                <button type="button" class="btn_outline_lg">신청현황 조회</button>
                             </div>
                         </div>
 
@@ -238,5 +260,8 @@
 
         <script src="/resources/js/jquery-2.2.4.min.js"></script>
         <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {});
+        </script>
     </body>
 </html>
