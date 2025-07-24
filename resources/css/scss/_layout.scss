@@ -700,6 +700,9 @@
                         color: #6d7882 !important;
                         font-size: 2.2rem;
                     }
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
         }

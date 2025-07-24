@@ -929,6 +929,9 @@ button {
   color: #6d7882 !important;
   font-size: 2.2rem;
 }
+.allsearch .allsearch_wrap .form_item .inp input:focus {
+  outline: none;
+}
 .allsearch .allsearch_wrap .btn_search {
   position: absolute;
   top: 1.8rem;
