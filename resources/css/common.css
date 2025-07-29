@@ -6319,7 +6319,7 @@ select.sm {
 
 .educlass_percent_box {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
 }
 @media screen and (max-width: 1200px) {
