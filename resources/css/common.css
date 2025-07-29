@@ -3622,6 +3622,11 @@ select.sm {
   width: 100%;
   margin-bottom: var(--gap-20);
 }
+@media screen and (max-width: 1200px) {
+  .tab_area .tab {
+    border: 1px solid lightgray;
+  }
+}
 .tab_area .tab::before {
   content: "";
   position: absolute;
@@ -3634,6 +3639,11 @@ select.sm {
 .tab_area .tab.full_type li {
   width: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .tab_area .tab.full_type li button {
+    padding: 0 var(--gap-5);
+  }
+}
 .tab_area .tab.full_type li.on button {
   min-height: 7.2rem;
   line-height: 7.2rem;
@@ -3642,8 +3652,8 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .tab_area .tab.full_type li.on button {
+    padding: 0 var(--gap-5);
     min-height: 4rem;
-    border-radius: 10rem;
     line-height: 4rem;
   }
 }
@@ -3656,7 +3666,7 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .tab_area .tab.full_type button {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     min-height: 4rem;
     line-height: 4rem;
   }
@@ -3681,24 +3691,12 @@ select.sm {
 .tab_area .tab > li > a,
 .tab_area .tab > li > strong {
   display: block;
-  min-width: 10rem;
   min-height: 4.6rem;
   padding: 0 var(--gap-20);
   color: #8a949e;
   text-align: center;
   font-weight: var(--font-semibold);
   line-height: 4.4rem;
-}
-@media screen and (max-width: 1200px) {
-  .tab_area .tab > li > button,
-  .tab_area .tab > li > a,
-  .tab_area .tab > li > strong {
-    min-height: 4rem;
-    padding: 0 var(--gap-13);
-    border: 0.1rem solid var(--color-lightgray);
-    border-radius: 10rem;
-    line-height: 4rem;
-  }
 }
 .tab_area .tab > li.on {
   position: relative;
@@ -3725,12 +3723,8 @@ select.sm {
   .tab_area .tab > li.on button,
   .tab_area .tab > li.on a,
   .tab_area .tab > li.on strong {
-    min-height: 4.2rem;
-    padding: 0 var(--gap-14);
-    color: var(--color-white);
-    background-color: var(--color-navy);
-    border-radius: 10rem;
-    line-height: 4.2rem;
+    border: none;
+    border-bottom: 0.2rem solid var(--color-navy);
   }
 }
 .tab_area .scroll_area .tab {
@@ -3740,14 +3734,6 @@ select.sm {
 }
 .tab_area .scroll_area .tab::-webkit-scrollbar {
   display: none;
-}
-@media screen and (max-width: 1200px) {
-  .tab_area .scroll_area {
-    margin: 0 -1.6rem;
-  }
-  .tab_area .scroll_area .tab {
-    padding: 0 var(--gap-16);
-  }
 }
 .tab_area .tab_cont .detail_view .article + .article {
   margin-top: var(--gap-24);
