@@ -358,10 +358,14 @@
 
 // 강의실
 .page_educlass_title {
+    display: flex;
+    justify-content: space-between;
     padding: 3.6rem 0 2.2rem;
     color: var(--color-base);
     @include mobile {
         padding: 1.6rem 0 var(--gap-50);
+        display: flex;
+        flex-direction: column;
     }
     .tit {
         font-size: var(--font-size-xl);

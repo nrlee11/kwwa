@@ -2576,7 +2576,7 @@ select {
         width: 100%;
         margin-bottom: var(--gap-20);
         @include mobile {
-            border: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
         }
 
         &::before {
