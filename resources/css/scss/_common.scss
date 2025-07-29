@@ -3485,12 +3485,13 @@ select {
 .gage_box {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 1.5rem;
     font-size: 1.4rem;
     color: #de3412;
     .gage_bar {
         display: inline-block;
-        width: 10.6rem;
+
+        width: 80%;
         height: 1.6rem;
         background-color: #d9d9d9;
         &:after {
@@ -3500,5 +3501,10 @@ select {
             background: #de3412;
             content: "";
         }
+    }
+    span {
+        width: 20%;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 }

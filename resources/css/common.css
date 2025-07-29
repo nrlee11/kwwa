@@ -4484,13 +4484,13 @@ select.sm {
 .gage_box {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 1.5rem;
   font-size: 1.4rem;
   color: #de3412;
 }
 .gage_box .gage_bar {
   display: inline-block;
-  width: 10.6rem;
+  width: 80%;
   height: 1.6rem;
   background-color: #d9d9d9;
 }
@@ -4500,6 +4500,11 @@ select.sm {
   height: 100%;
   background: #de3412;
   content: "";
+}
+.gage_box span {
+  width: 20%;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 [class^=btn_][class*=_sm], [class^=btn_][class*=_md], [class^=btn_][class*=_lg], [class^=btn_][class*=_xxl] {
@@ -6271,7 +6276,7 @@ select.sm {
   .page_educlass_title .txt_info {
     flex-direction: column;
     align-items: flex-end;
-    gap: var(--gap-10);
+    gap: var(--gap-5);
   }
 }
 
@@ -6327,13 +6332,19 @@ select.sm {
 }
 
 .educlass_percent_box {
-  width: 19.2rem;
-  height: 17rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 @media screen and (max-width: 1200px) {
   .educlass_percent_box {
     margin: 0 auto;
   }
+}
+.educlass_percent_box .percent_graphic div {
+  width: 17rem;
+  height: 17rem;
+  background: lightgrey;
 }
 
 .tbl_colgroup_educlass th:first-child,
@@ -6344,26 +6355,32 @@ select.sm {
 .tbl_colgroup_educlass th:nth-child(2),
 .tbl_colgroup_educlass td:nth-child(2) {
   width: 81px;
+  min-width: 81px;
 }
 .tbl_colgroup_educlass th:nth-child(3),
 .tbl_colgroup_educlass td:nth-child(3) {
   width: 417px;
+  min-width: 417px;
 }
 .tbl_colgroup_educlass th:nth-child(4),
 .tbl_colgroup_educlass td:nth-child(4) {
   width: 123px;
+  min-width: 123px;
 }
 .tbl_colgroup_educlass th:nth-child(5),
 .tbl_colgroup_educlass td:nth-child(5) {
   width: 123px;
+  min-width: 123px;
 }
 .tbl_colgroup_educlass th:nth-child(6),
 .tbl_colgroup_educlass td:nth-child(6) {
   width: 123px;
+  min-width: 123px;
 }
 .tbl_colgroup_educlass th:nth-child(7),
 .tbl_colgroup_educlass td:nth-child(7) {
   width: 90px;
+  min-width: 90px;
 }
 .tbl_colgroup_educlass th:nth-child(8),
 .tbl_colgroup_educlass td:nth-child(8) {
@@ -6382,9 +6399,8 @@ select.sm {
 
 .btn_accrodion_tr {
   position: relative;
-  top: -0.1rem;
+  top: 0.2rem;
   display: inline-block;
-  padding: 1rem;
 }
 .btn_accrodion_tr[aria-expanded=false]:after {
   transform: rotate(0);

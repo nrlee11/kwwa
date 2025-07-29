@@ -376,7 +376,7 @@
         @include mobile {
             flex-direction: column;
             align-items: flex-end;
-            gap: var(--gap-10);
+            gap: var(--gap-5);
         }
     }
 }
@@ -429,10 +429,18 @@
     }
 }
 .educlass_percent_box {
-    width: 19.2rem;
-    height: 17rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // width: 19.2rem;
+    // height: 17rem;
     @include mobile {
         margin: 0 auto;
+    }
+    .percent_graphic div {
+        width: 17rem;
+        height: 17rem;
+        background: lightgrey;
     }
 }
 
@@ -446,21 +454,27 @@
         }
         &:nth-child(2) {
             width: 81px;
+            min-width: 81px;
         }
         &:nth-child(3) {
             width: 417px;
+            min-width: 417px;
         }
         &:nth-child(4) {
             width: 123px;
+            min-width: 123px;
         }
         &:nth-child(5) {
             width: 123px;
+            min-width: 123px;
         }
         &:nth-child(6) {
             width: 123px;
+            min-width: 123px;
         }
         &:nth-child(7) {
             width: 90px;
+            min-width: 90px;
         }
         &:nth-child(8) {
             width: 162px;
@@ -484,9 +498,9 @@
 }
 .btn_accrodion_tr {
     position: relative;
-    top: -0.1rem;
+    top: 0.2rem;
     display: inline-block;
-    padding: 1rem;
+    // padding: 1rem;
     &[aria-expanded="false"] {
         &:after {
             transform: rotate(0);
