@@ -360,6 +360,7 @@
 .page_educlass_title {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     padding: 3.6rem 0 2.2rem;
     color: var(--color-base);
     @include mobile {
@@ -381,6 +382,9 @@
             flex-direction: column;
             align-items: flex-end;
             gap: var(--gap-5);
+        }
+        span {
+            white-space: nowrap;
         }
     }
 }

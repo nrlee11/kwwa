@@ -6241,6 +6241,7 @@ select.sm {
 .page_educlass_title {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   padding: 3.6rem 0 2.2rem;
   color: var(--color-base);
 }
@@ -6268,6 +6269,9 @@ select.sm {
     align-items: flex-end;
     gap: var(--gap-5);
   }
+}
+.page_educlass_title .txt_info span {
+  white-space: nowrap;
 }
 
 .educlass_panel {
