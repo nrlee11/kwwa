@@ -73,7 +73,7 @@
                                             <div class="timetable">
                                                 <div class="edu_tit">
                                                     <span class="value_badge1">1회</span>
-                                                    <strong class="tit">상수도관망시설운영관리사 양성과정 이수평가 1급</strong>
+                                                    <strong class="tit">정수시설운영관리사 2급</strong>
                                                 </div>
                                                 <div class="cell">
                                                     <span class="tit">신청기간</span>
@@ -245,7 +245,6 @@
                                 </div>
                             </div>
                             <!--// list -->
-
                             <p class="txt_mark gap_mt10">시험일은 불가피한 사유발생시 변경될 수 있으며 이경우 홈페이지를 통해 사전 공지합니다.</p>
                             <p class="txt_mark">시험장소는 예정 장소로 사전 공지없이 변경될 수 있습니다.</p>
                         </div>
@@ -292,17 +291,6 @@
                 $("#switchAlarmPop1 .layer_close, #switchAlarmPop2 .layer_close").click(function () {
                     $("#alarm1").focus(); // 접근성
                     // $("#alarm2").focus();
-                });
-
-                $("[data-include-file]").each(function () {
-                    const $this = $(this);
-                    const file = $this.data("include-file");
-
-                    $.get(file, function (data) {
-                        $this.html(data);
-                        // 현재 페이지 - 메뉴 활성화
-                        $(".lnb a[href*='FO-320-001.html']").attr("aria-current", "page").parents("li").addClass("on");
-                    });
                 });
             });
         </script>
