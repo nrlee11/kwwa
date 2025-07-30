@@ -2851,7 +2851,7 @@ select.sm {
   flex: none;
 }
 .board_area [class^=board_desc][class*=_bottom] {
-  margin-top: var(--gap-24);
+  margin-top: var(--gap-10);
 }
 .board_area [class^=board_desc][class*=_bottom] .note {
   position: relative;

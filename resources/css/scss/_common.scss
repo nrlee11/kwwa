@@ -1769,7 +1769,7 @@ select {
             }
         }
         &[class*="_bottom"] {
-            margin-top: var(--gap-24);
+            margin-top: var(--gap-10);
             .note {
                 position: relative;
                 color: var(--color-navy);
