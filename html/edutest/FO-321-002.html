@@ -12,6 +12,17 @@
         <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
         <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
         <title>평가시험 신청 | 평가시험 | 한국상하수도협회</title>
+        <style>
+            .btn_group {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+            }
+            .edu_group:first-child > a::before {
+                content: none;
+            }
+        </style>
     </head>
     <body>
         <!-- wrap(s) -->
@@ -50,10 +61,10 @@
                             <div class="tit_area">
                                 <h3 class="tit">신청 안내</h3>
                                 <!-- 접수기간이 아닐경우 -->
-                                <div class="desc">
+                                <!-- <div class="desc">
                                     지금은 이수평가시험 응시원서 접수기간이 아닙니다.<br />
                                     아래 평가일정을 확인하신 후 해당 접수기간에 신청해 주시기 바랍니다.
-                                </div>
+                                </div> -->
                                 <!-- 접수기간 -->
                                 <div class="desc">
                                     지금은 이수평가시험 응시원서 접수 기간입니다.<br />
@@ -91,6 +102,11 @@
                                                     <span class="tit">결과발표</span>
                                                     <span class="item">2025-01-10 (금)</span>
                                                 </div>
+                                            </div>
+
+                                            <div class="btn_group">
+                                                <button type="button" class="btn_border_md radius">1 차</button>
+                                                <button type="button" class="btn_border_md radius">2 차</button>
                                             </div>
                                         </div>
                                     </a>
