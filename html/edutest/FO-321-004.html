@@ -229,6 +229,134 @@
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
+                                <h3 class="tit">자격증 정보 선택(과목면제)</h3>
+                                <div class="desc">
+                                    자격증에 의한 과목면제를 선택하는 경우 자격증의 자격번호와 대조하여 과목면제를 확정 합니다. <br />
+                                    만약 자격증에 대한 자격번호가 확인 불가 등의 사유로 면제 확정이 되지 않는 경우 일반 응시자로 면제없이 시험이 응시됩니다.
+                                </div>
+                            </div>
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row size110">
+                                    <caption>
+                                        전체 경력, 근무지, 근무지 경력증명, 근무지, 근무지 경력증명 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">자격증</th>
+                                            <td data-cell-header="자격증"><div>xxxxxxx</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자격번호</th>
+                                            <td data-cell-header="자격번호">
+                                                <div>xxxxxxx</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자격증 사본</th>
+                                            <td data-cell-header="자격증 사본">
+                                                <div>
+                                                    <button type="button" class="btn_download">자격증 사본</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+
+                                <div class="board_desc_bottom" style="display: flex; align-items: center; gap: 1rem">
+                                    <p class="txt_mark">자격증이 변경 되었을 경우 자격증을 선택하여 변경 해 주세요.</p>
+                                    <div class="box">
+                                        <button type="button" class="btn_pop" id="alert2">자격증 변경</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// board -->
+
+                            <!-- board(s) -->
+                            <div class="board_area gap_mt10">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- board_write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="licenseSelec">자격증</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp_select size_219">
+                                                            <select title="자격증 선택" id="licenseSelec">
+                                                                <option value="">해당없음</option>
+                                                                <option value="">해당없음</option>
+                                                                <option value="">해당없음</option>
+                                                                <option value="">해당없음</option>
+                                                                <option value="">해당없음</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="school">자격번호</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <div class="inp size_219">
+                                                                    <input type="text" id="school" placeholder="xxxxxxx" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <span>자격증 사본</span>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <div class="file_set">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                        <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                    </div>
+                                                                    <label for="file2">파일찾기</label>
+                                                                    <input type="file" id="file2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// board_write -->
+                                </div>
+                                <!--// form-->
+                            </div>
+                            <!--// board(e) -->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
                                 <h3 class="tit">시험 과목 면제 선택</h3>
                             </div>
 
