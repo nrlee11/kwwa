@@ -2623,7 +2623,7 @@ select.sm {
   color: var(--color-gray);
   padding: var(--gap-10) var(--gap-10);
   border-bottom: 0.1rem solid #cdd1d5;
-  border-left: 0.1rem solid #d6e0eb;
+  border-left: 0.1rem solid #cdd1d5;
   background-color: var(--color-white);
   text-align: center;
 }
