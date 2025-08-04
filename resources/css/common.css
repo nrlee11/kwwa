@@ -1547,6 +1547,10 @@ button {
     display: none;
   }
 }
+.tit_area .tit2 {
+  font-size: 2rem;
+  color: var(--color-black);
+}
 .tit_area .desc {
   margin-top: var(--gap-10);
 }
@@ -4507,7 +4511,7 @@ select.sm {
   text-align: center;
   background-color: var(--color-blue);
   border-radius: 0.6rem;
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-regular);
 }
 [class^=btn_][class*=_sm] {
   height: 3rem;

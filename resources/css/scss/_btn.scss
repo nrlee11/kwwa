@@ -8,7 +8,7 @@
     &[class*="_lg"],
     &[class*="_xxl"] {
         @include btn-default; // primary
-        font-weight: var(--font-semibold);
+        font-weight: var(--font-regular);
     }
     &[class*="_sm"] {
         height: 3rem;
