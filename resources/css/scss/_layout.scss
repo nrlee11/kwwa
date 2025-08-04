@@ -14,7 +14,7 @@
     border-bottom: $border #d8d8d8;
     @include mobile {
         height: 7.2rem;
-        padding: var(--gap-13) 9rem var(--gap-13) var(--gap-24);
+        padding: var(--gap-13) 9rem var(--gap-13) var(--gap-16);
         border-bottom: 0;
     }
     @include xs-mobile {

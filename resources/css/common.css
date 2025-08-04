@@ -245,7 +245,7 @@ button {
 @media screen and (max-width: 1200px) {
   #header {
     height: 7.2rem;
-    padding: var(--gap-13) 9rem var(--gap-13) var(--gap-24);
+    padding: var(--gap-13) 9rem var(--gap-13) var(--gap-16);
     border-bottom: 0;
   }
 }
