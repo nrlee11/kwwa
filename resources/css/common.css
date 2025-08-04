@@ -3162,7 +3162,7 @@ select.sm {
   background-color: var(--color-lightblue);
 }
 .form_section .form_tit.bg .tit {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-weight: var(--font-medium);
 }
 @media screen and (max-width: 1200px) {
