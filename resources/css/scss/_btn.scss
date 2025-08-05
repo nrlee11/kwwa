@@ -353,6 +353,8 @@
 .btn_login,
 .btn_logout,
 .btn_join {
+    line-height: 1.5;
+    font-size: var(--font-size-md);
     position: relative;
     padding-left: 2.8rem;
     color: var(--color-lightblack);
