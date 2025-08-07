@@ -104,6 +104,13 @@
             [class^="value_"] {
                 margin-right: var(--gap-20);
             }
+            .badge_box2 {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
             .tit {
                 flex: 1;
                 font-weight: var(--font-medium);
