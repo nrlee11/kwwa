@@ -170,7 +170,9 @@
     flex-direction: column;
     margin-top: -1rem;
     .inp_check {
-        margin-top: var(--gap-10);
+        @include mobile {
+            margin-top: var(--gap-10);
+        }
     }
 }
 
