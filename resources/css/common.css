@@ -1938,7 +1938,7 @@ textarea {
 
 select {
   width: 100%;
-  height: 4.8rem;
+  height: 4rem;
   padding: 0 var(--gap-55) 0 var(--gap-16);
   border: 0.1rem solid #58616a;
   background: var(--color-white) url("../../resources/images/common/bg_select.svg") no-repeat right var(--gap-16) center;
@@ -3193,7 +3193,7 @@ select.sm {
 }
 .form_section .form_list .form_group .tit,
 .form_section .form_list .form_group .item {
-  min-height: 4.8rem;
+  min-height: 4rem;
 }
 @media screen and (max-width: 1200px) {
   .form_section .form_list .form_group .tit,
