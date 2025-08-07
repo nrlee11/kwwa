@@ -6068,7 +6068,7 @@ select.sm {
   border-top: 0.1rem solid #cdd1d5;
 }
 .consent_form .article + .article {
-  margin-top: var(--gap-50);
+  margin-top: var(--gap-30);
 }
 .consent_form .article dl dt .tit {
   display: block;
