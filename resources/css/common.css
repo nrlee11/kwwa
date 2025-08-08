@@ -7627,3 +7627,14 @@ select.sm {
   justify-content: space-between;
   align-items: center;
 }
+
+.check_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inp_check {
+  color: var(--color-darkgray);
+  margin-right: 0;
+}
