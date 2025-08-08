@@ -6222,7 +6222,7 @@ select.sm {
   display: flex;
 }
 .payment_info .item .item_tit {
-  width: 7.5rem;
+  width: 9.5rem;
   font-weight: var(--font-semibold);
 }
 .payment_info .item .item_cont {
