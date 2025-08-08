@@ -2999,6 +2999,9 @@ select.sm {
   border-bottom: 0.1rem solid #cdd1d5;
 }
 .board_view .head {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
   margin-bottom: var(--gap-10);
   padding-bottom: var(--gap-10);
   border-bottom: 0.1rem solid #cdd1d5;
@@ -3007,18 +3010,22 @@ select.sm {
   display: flex;
   align-items: center;
   gap: 0 1.5rem;
-  margin-bottom: var(--gap-10);
+  margin-top: var(--gap-5);
 }
 .board_view .head .tit_sec {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 0 2rem;
 }
 .board_view .head .tit_sec [class^=data_badge] {
   align-self: flex-start;
 }
 .board_view .head .tit_sec .tit {
+  width: 100%;
   font-size: var(--font-size-lg);
   font-weight: var(--font-bold);
 }
