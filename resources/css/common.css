@@ -6214,7 +6214,7 @@ select.sm {
 }
 
 .payment_info {
-  margin-top: var(--gap-24);
+  margin-top: var(--gap-10);
   padding: var(--gap-12) var(--gap-16);
   border: 0.1rem solid #cdd1d5;
 }
