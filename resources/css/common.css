@@ -4097,7 +4097,7 @@ select.sm {
   font-weight: var(--font-bold);
 }
 .layerFix .layer_wrap .cont .article + .article {
-  margin-top: var(--gap-20);
+  margin-top: var(--gap-10);
 }
 .layerFix .layer_wrap .cont .article.center {
   text-align: center;
