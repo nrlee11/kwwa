@@ -52,105 +52,166 @@
 
                         <!-- section(s) -->
                         <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">영수증, 계산서 발급</h3>
+                            </div>
                             <!-- board -->
                             <div class="board_area">
-                                <div class="scroll_guide">
+                                <!-- <div class="scroll_guide">
                                     <p class="txt_scroll">밀어서 보기</p>
-                                </div>
+                                </div> -->
 
-                                <div class="scroll_area">
-                                    <!-- board_list -->
-                                    <table class="tbl">
-                                        <caption>
-                                            선택, No, 상품명, 자격증 유형, 구분, 금액, 결제방법, 결제상태, 승인일, 출력 정보 제공
-                                        </caption>
-                                        <colgroup>
-                                            <col style="width: 80px" />
-                                            <col style="width: 60px" />
-                                            <col style="width: 143px" />
-                                            <col style="width: 107px" />
-                                            <col style="width: 70px" />
-                                            <col style="width: 125px" />
-                                            <col style="width: 105px" />
-                                            <col style="width: 105px" />
-                                            <col style="width: 133px" />
-                                            <col style="width: 116px" />
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">선택</th>
-                                                <th scope="col">No</th>
-                                                <th scope="col">상품명</th>
-                                                <th scope="col">자격 유형</th>
-                                                <th scope="col">구분</th>
-                                                <th scope="col">금액</th>
-                                                <th scope="col">결제방법</th>
-                                                <th scope="col">결제상태</th>
-                                                <th scope="col">승인일</th>
-                                                <th scope="col">출력</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-cell-header="선택">
-                                                    <div>
-                                                        <span class="inp_check alone">
-                                                            <input type="checkbox" id="check1" />
-                                                            <label for="check1"><span>선택</span></label>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td><div>1</div></td>
-                                                <td><div>양성과정 교육비</div></td>
-                                                <td><div>상수 1급</div></td>
-                                                <td><div>1차</div></td>
-                                                <td><div>783,000</div></td>
-                                                <td><div>가상계좌</div></td>
-                                                <td><div>입금확인</div></td>
-                                                <td><div>2021-03-10</div></td>
-                                                <td class="left">
-                                                    <div>
-                                                        <button type="button" class="btn_txtlink">영수증</button><br />
-                                                        <button type="button" class="btn_txtlink">납입확인서</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-cell-header="선택">
-                                                    <div>
-                                                        <span class="inp_check alone">
-                                                            <input type="checkbox" id="check2" />
-                                                            <label for="check2"><span>선택</span></label>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td class="left"><div></div></td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th scope="row" colspan="2"><div>합계</div></th>
-                                                <td><div>7</div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div>1,719,000</div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                                <td><div></div></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                    <!--// board_list -->
-                                </div>
+                                <!-- <div class="scroll_area"> -->
+                                <!-- board_list -->
+                                <table class="tbl react">
+                                    <caption>
+                                        선택, No, 상품명, 자격증 유형, 구분, 금액, 결제방법, 결제상태, 결제일, 출력 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 80px" />
+                                        <col style="width: 60px" />
+                                        <col style="width: 143px" />
+                                        <col style="width: 107px" />
+                                        <col style="width: 70px" />
+                                        <col style="width: 125px" />
+                                        <col style="width: 105px" />
+                                        <col style="width: 105px" />
+                                        <col style="width: 133px" />
+                                        <col style="width: 116px" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">선택</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">상품명</th>
+                                            <th scope="col">자격 유형</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">금액</th>
+                                            <th scope="col">결제방법</th>
+                                            <th scope="col">결제상태</th>
+                                            <th scope="col">결제일</th>
+                                            <th scope="col">출력</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="선택">
+                                                <div>
+                                                    <span class="inp_check alone">
+                                                        <input type="checkbox" id="check1" />
+                                                        <label for="check1"><span>선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="No"><div>4</div></td>
+                                            <td data-cell-header="상품명"><div>양성과정 교육비</div></td>
+                                            <td data-cell-header="자격 유형"><div>상수도관망시설운영관리사 1급</div></td>
+                                            <td data-cell-header="구분"><div>1차</div></td>
+                                            <td data-cell-header="금액"><div>783,000</div></td>
+                                            <td data-cell-header="결제방법"><div>카드</div></td>
+                                            <td data-cell-header="결제상태"><div>결제완료</div></td>
+                                            <td data-cell-header="결제일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력" class="left">
+                                                <div>
+                                                    <button type="button" class="btn_txtlink">영수증</button><br />
+                                                    <button type="button" class="btn_txtlink">납입확인서</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="선택">
+                                                <div>
+                                                    <span class="inp_check alone">
+                                                        <input type="checkbox" id="check2" />
+                                                        <label for="check2"><span>선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="No"><div>3</div></td>
+                                            <td data-cell-header="상품명"><div>평가시험 응시료</div></td>
+                                            <td data-cell-header="자격 유형">
+                                                상수도관망시설운영관리사 2급
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="구분">
+                                                1차
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="금액"><div>3,6000</div></td>
+                                            <td data-cell-header="결제방법"><div>가상계좌</div></td>
+                                            <td data-cell-header="결제상태"><div>결제완료</div></td>
+                                            <td data-cell-header="결제일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력" class="left">
+                                                <div>
+                                                    <button type="button" class="btn_txtlink">영수증</button><br />
+                                                    <button type="button" class="btn_txtlink">납입확인서</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="선택">
+                                                <div>
+                                                    <span class="inp_check alone">
+                                                        <input type="checkbox" id="check2" />
+                                                        <label for="check2"><span>선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="No"><div>2</div></td>
+                                            <td data-cell-header="상품명"><div>평가시험 응시료</div></td>
+                                            <td data-cell-header="자격 유형">
+                                                상수도관망시설운영관리사 2급
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="구분">
+                                                1차
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="금액"><div>3,6000</div></td>
+                                            <td data-cell-header="결제방법"><div>가상계좌</div></td>
+                                            <td data-cell-header="결제상태"><div>결제완료</div></td>
+                                            <td data-cell-header="결제일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력" class="left">
+                                                <div>
+                                                    <button type="button" class="btn_txtlink">영수증</button><br />
+                                                    <button type="button" class="btn_txtlink">납입확인서</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="선택">
+                                                <div>
+                                                    <span class="inp_check alone">
+                                                        <input type="checkbox" id="check2" />
+                                                        <label for="check2"><span>선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="No"><div>1</div></td>
+                                            <td data-cell-header="상품명"><div>자격증 발급 수수료</div></td>
+                                            <td data-cell-header="자격 유형">
+                                                상수도관망시설운영관리사 2급
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="구분">
+                                                1차
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="금액"><div>3,6000</div></td>
+                                            <td data-cell-header="결제방법"><div>가상계좌</div></td>
+                                            <td data-cell-header="결제상태"><div>결제완료</div></td>
+                                            <td data-cell-header="결제일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="출력" class="left">
+                                                <div>
+                                                    <button type="button" class="btn_txtlink">영수증</button><br />
+                                                    <button type="button" class="btn_txtlink">납입확인서</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_list -->
+                                <!-- </div> -->
 
                                 <div class="nodata">조회된 내역이 없습니다.</div>
 
@@ -165,10 +226,134 @@
                             <!--// board -->
                         </div>
                         <!--// section(e) -->
+                        <!-- section(s) -->
+                        <div class="section">
+                            <!-- <div class="tit_area">
+                                <h3 class="tit">계산서 발급 요청 목록</h3>
+                            </div> -->
+                            <div class="tit_area flex">
+                                <h3 class="tit">계산서 발급 요청 목록</h3>
+                                <button type="button" class="btn_primary_md radius">계산서 발급 요청</button>
+                            </div>
 
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- <div class="scroll_guide">
+                                    <p class="txt_scroll">밀어서 보기</p>
+                                </div> -->
+
+                                <!-- <div class="scroll_area"> -->
+                                <!-- board_list -->
+                                <table class="tbl react">
+                                    <caption>
+                                        No, 상품명, 자격 유형, 구분, 금액, 결제방법, 신청구분, 발급상태, 요청일 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 60px" />
+                                        <col style="width: 143px" />
+                                        <col style="width: 107px" />
+                                        <col style="width: 70px" />
+                                        <col style="width: 125px" />
+                                        <col style="width: 105px" />
+                                        <col style="width: 105px" />
+                                        <col style="width: 133px" />
+                                        <col style="width: 116px" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">상품명</th>
+                                            <th scope="col">자격 유형</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">금액</th>
+                                            <th scope="col">결제방법</th>
+                                            <th scope="col">신청구분</th>
+                                            <th scope="col">발급상태</th>
+                                            <th scope="col">요청일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="No"><div>4</div></td>
+                                            <td data-cell-header="상품명"><div class="btn_txtlink">양성과정 교육비</div></td>
+                                            <td data-cell-header="자격 유형"><div>상수도관망시설운영관리사 1급</div></td>
+                                            <td data-cell-header="구분"><div>1차</div></td>
+                                            <td data-cell-header="금액"><div>783,000</div></td>
+                                            <td data-cell-header="결제방법"><div>카드</div></td>
+                                            <td data-cell-header="신청구분"><div>개인</div></td>
+                                            <td data-cell-header="발급상태"><div>접수완료</div></td>
+                                            <td data-cell-header="요청일" class="left">
+                                                <div>2025-01-02</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="No"><div>3</div></td>
+                                            <td data-cell-header="상품명"><div class="btn_txtlink">평가시험 응시료</div></td>
+                                            <td data-cell-header="자격 유형">
+                                                <div>상수도관망시설운영관리사 2급</div>
+                                            </td>
+                                            <td data-cell-header="구분">
+                                                <div>2차</div>
+                                            </td>
+                                            <td data-cell-header="금액"><div>3,6000</div></td>
+                                            <td data-cell-header="결제방법"><div>가상계좌</div></td>
+                                            <td data-cell-header="신청구분"><div>기관/기업</div></td>
+                                            <td data-cell-header="발급상태"><div>접수취소</div></td>
+                                            <td data-cell-header="요청일" class="left">
+                                                <div>2025-01-02</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="No"><div>2</div></td>
+                                            <td data-cell-header="상품명"><div class="btn_txtlink">평가시험 응시료</div></td>
+                                            <td data-cell-header="자격 유형">
+                                                상수도관망시설운영관리사 2급
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="구분">
+                                                <div>-</div>
+                                            </td>
+                                            <td data-cell-header="금액"><div>3,6000</div></td>
+                                            <td data-cell-header="결제방법"><div></div></td>
+                                            <td data-cell-header="신청구분"><div>개인</div></td>
+                                            <td data-cell-header="발급상태"><div>발급완료</div></td>
+                                            <td data-cell-header="요청일" class="left">
+                                                <div>2025-01-02</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="No"><div>1</div></td>
+                                            <td data-cell-header="상품명"><div class="btn_txtlink">자격증 발급 수수료</div></td>
+                                            <td data-cell-header="자격 유형">
+                                                상수도관망시설운영관리사 2급
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="구분">
+                                                1차
+                                                <div></div>
+                                            </td>
+                                            <td data-cell-header="금액"><div>2,5000</div></td>
+                                            <td data-cell-header="결제방법"><div></div></td>
+                                            <td data-cell-header="신청구분"><div>개인</div></td>
+                                            <td data-cell-header="발급상태"><div>신청반려</div></td>
+                                            <td data-cell-header="요청일" class="left">
+                                                <div></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_list -->
+                                <!-- </div> -->
+
+                                <div class="nodata">조회된 내역이 없습니다.</div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <!--// section(e) -->
+                        <!-- 
                         <div class="bottom_btn_area">
                             <button type="button" class="btn_primary_lg">계산서 발급 요청</button>
-                        </div>
+                        </div> -->
                     </div>
                     <!--// contents(e) -->
                 </div>
