@@ -109,7 +109,9 @@
                                 <div class="form_list table">
                                     <div class="form_group">
                                         <div class="tit">
-                                            <span>신청 구분</span>
+                                            <span
+                                                >신청 구분 <span class="txt_require"><span class="hidden">필수입력 사항</span></span></span
+                                            >
                                         </div>
                                         <div class="item">
                                             <div class="cell">
@@ -131,6 +133,16 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="tit">
+                                            <span>발급상태</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div>접수완료</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,287 +154,102 @@
                             <div class="tit_area">
                                 <h3 class="tit">요청 정보</h3>
                             </div>
-
                             <!-- board -->
                             <div class="board_area">
-                                <!-- form-->
-                                <div class="form_section">
-                                    <!-- board_write -->
-                                    <div class="form_list table">
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="userName">이름</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="inp size_200">
-                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                            <input type="text" value="" id="userName" autocomplete="off" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="idNumber">주민등록번호</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="idcard_set">
-                                                            <div class="inp_set">
-                                                                <div class="inp">
-                                                                    <input type="tel" value="" id="idNumber" autocomplete="off" />
-                                                                </div>
-                                                                <span class="txt_dash">-</span>
-                                                            </div>
-                                                            <div class="inp size_200">
-                                                                <input type="password" value="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="cellPhone">휴대폰 번호</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="inp size_200">
-                                                            <input type="tel" value="" id="cellPhone" autocomplete="off" placeholder="휴대폰 번호(숫자만 입력)" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="email">이메일</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="email_set">
-                                                            <div class="inp_set">
-                                                                <!-- 에러 : error class추가 -->
-                                                                <div class="inp size_200">
-                                                                    <input type="text" value="" id="email" placeholder="아이디" autocomplete="off" />
-                                                                </div>
-                                                                <span class="txt_between">@</span>
-                                                            </div>
-                                                            <div class="inp size_190">
-                                                                <input type="text" value="dreamwiz.com" title="도메인 입력" autocomplete="off" />
-                                                            </div>
-                                                            <div class="inp_set full">
-                                                                <div class="inp_select size_190">
-                                                                    <select title="이메일 도메인 선택">
-                                                                        <option value="">직접입력</option>
-                                                                        <option value="naver.com">naver.com</option>
-                                                                        <option value="daum.net">daum.net</option>
-                                                                        <option value="gmail.com">gmail.com</option>
-                                                                        <option value="hanmail.net">hanmail.net</option>
-                                                                        <option value="korea.kr">korea.kr</option>
-                                                                    </select>
-                                                                </div>
-                                                                <!-- <button type="button" class="btn_primary_lg">중복확인</button> -->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="cellPhone">신분증 사본 첨부</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="file_set">
-                                                            <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
-                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                            </div>
-                                                            <label for="file1">파일찾기</label>
-                                                            <input type="file" id="file1" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="cell line">
-                                                    <p class="txt_note">PDF파일 또는 이미지(JPG, PNG) 파일을 올려 주시기 바랍니다. 그 외 포맷은 업로드가 불가능합니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--// board_write -->
-                                </div>
-                                <!--// form-->
-                                <!-- form-->
-                                <div class="form_section">
-                                    <!-- board_write -->
-                                    <div class="form_list table">
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="userName">기업명</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="inp size_200">
-                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                            <input type="text" value="" id="userName" autocomplete="off" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="userName">대표자</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="inp size_200">
-                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
-                                                            <input type="text" value="" id="userName" autocomplete="off" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="idNumber">사업자 등록 번호</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="idcard_set">
-                                                            <div class="inp size_100">
-                                                                <input type="tel" value="" id="idNumber" autocomplete="off" />
-                                                            </div>
-                                                            <span class="txt_dash">-</span>
-                                                            <div class="inp size_100">
-                                                                <input type="tel" value="" id="idNumber" autocomplete="off" />
-                                                            </div>
-                                                            <span class="txt_dash">-</span>
-
-                                                            <div class="inp size_100">
-                                                                <input type="password" value="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="email">이메일</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="email_set">
-                                                            <div class="inp_set">
-                                                                <!-- 에러 : error class추가 -->
-                                                                <div class="inp size_200">
-                                                                    <input type="text" value="" id="email" placeholder="아이디" autocomplete="off" />
-                                                                </div>
-                                                                <span class="txt_between">@</span>
-                                                            </div>
-                                                            <div class="inp size_190">
-                                                                <input type="text" value="dreamwiz.com" title="도메인 입력" autocomplete="off" />
-                                                            </div>
-                                                            <div class="inp_set full">
-                                                                <div class="inp_select size_190">
-                                                                    <select title="이메일 도메인 선택">
-                                                                        <option value="">직접입력</option>
-                                                                        <option value="naver.com">naver.com</option>
-                                                                        <option value="daum.net">daum.net</option>
-                                                                        <option value="gmail.com">gmail.com</option>
-                                                                        <option value="hanmail.net">hanmail.net</option>
-                                                                        <option value="korea.kr">korea.kr</option>
-                                                                    </select>
-                                                                </div>
-                                                                <!-- <button type="button" class="btn_primary_lg">중복확인</button> -->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="email">주소</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="address_set">
-                                                            <div class="group_box">
-                                                                <div class="box">
-                                                                    <div class="inp size_130">
-                                                                        <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="box">
-                                                                    <button type="button" class="btn_primary_md full">우편번호 검색</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="inp">
-                                                                <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
-                                                            </div>
-                                                            <div class="inp">
-                                                                <input type="text" placeholder="상세주소 입력" autocomplete="off" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_group">
-                                            <div class="tit">
-                                                <label for="cellPhone">사업자등록증 <br />사본 첨부</label>
-                                            </div>
-                                            <div class="item">
-                                                <div class="cell">
-                                                    <div class="form_item">
-                                                        <div class="file_set">
-                                                            <div class="inp">
-                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
-                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
-                                                            </div>
-                                                            <label for="file1">파일찾기</label>
-                                                            <input type="file" id="file1" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="cell line">
-                                                    <p class="txt_note">PDF파일 또는 이미지(JPG, PNG) 파일을 올려 주시기 바랍니다. 그 외 포맷은 업로드가 불가능합니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--// board_write -->
-                                </div>
-                                <!--// form-->
+                                <!-- board_view -->
+                                <table class="tbl react row size110">
+                                    <caption>
+                                        이름, 주민번호, 연락처, 이메일, 신분증 사본 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col style="width: 29.1rem" />
+                                        <col style="width: 15.3rem" />
+                                        <col style="width: 29.1rem" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">이름</th>
+                                            <td data-cell-header="이름"><div>홍길동</div></td>
+                                            <th scope="row">주민번호</th>
+                                            <td data-cell-header="주민번호"><div>250101-xxxxxxx</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">연락처</th>
+                                            <td data-cell-header="연락처"><div>010-1234-1234</div></td>
+                                            <th scope="row">이메일</th>
+                                            <td data-cell-header="이메일"><div>xxx@naver.com</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">신분증 사본 첨부</th>
+                                            <td data-cell-header="신분증 사본 첨부" colspan="3">
+                                                <div><button type="button" class="btn_download">신분증 사본</button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
                             </div>
                             <!--// board -->
+                        </div>
+                        <!--// section(e) -->
+                        <!-- section(s) -->
+                        <div class="section">
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row size110">
+                                    <caption>
+                                        기업명, 대표자, 사업자등록번호, 이메일, 주소, 사업자등록증 사본 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col style="width: 29.1rem" />
+                                        <col style="width: 15.3rem" />
+                                        <col style="width: 29.1rem" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">기업명</th>
+                                            <td data-cell-header="기업명"><div>xxxx</div></td>
+                                            <th scope="row">대표자</th>
+                                            <td data-cell-header="대표자"><div>xxx</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">사업자등록번호</th>
+                                            <td data-cell-header="사업자등록번호"><div>1234-1234-1234</div></td>
+                                            <th scope="row">이메일</th>
+                                            <td data-cell-header="이메일"><div>xxx@naver.com</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">주소</th>
+                                            <td data-cell-header="주소" colspan="3">
+                                                <div>nnnnnnnnnnnnnnn</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                사업자등록증 <br />
+                                                사본 첨부
+                                            </th>
+                                            <td data-cell-header="사업자등록증 사본 첨부" colspan="3">
+                                                <div><button type="button" class="btn_download">사업자등록증 사본</button></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
                             <!--// board -->
                         </div>
                         <!--// section(e) -->
 
-                        <div class="bottom_btn_area">
-                            <div class="lside">
-                                <button type="button" class="btn_primary_lg">계산서 발급 요청</button>
+                        <div class="bottom_btn_area cell4">
+                            <div>
+                                <button type="button" class="btn_primary_lg">수정</button>
+                                <button type="button" class="btn_primary_lg">요청 취소</button>
                             </div>
-                            <div class="rside">
+                            <div>
                                 <button type="button" class="btn_outline_lg">목록</button>
                             </div>
                         </div>
