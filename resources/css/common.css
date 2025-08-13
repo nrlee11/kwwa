@@ -1418,6 +1418,12 @@ button {
   border: 0.1rem solid #cdd1d5;
 }
 
+@media screen and (max-width: 1200px) {
+  .breadcrumb_wrap {
+    margin-bottom: var(--gap-30);
+  }
+}
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -1451,6 +1457,11 @@ button {
 
 .page_title {
   margin-bottom: var(--gap-50);
+}
+@media screen and (max-width: 1200px) {
+  .page_title {
+    margin-bottom: var(--gap-30);
+  }
 }
 .page_title .tit {
   position: relative;

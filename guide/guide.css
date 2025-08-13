@@ -95,3 +95,6 @@ pre code.hljs {
         padding: 3rem 1.5rem;
     }
 }
+.btn_code_toggle {
+    background-color: blueviolet !important;
+}

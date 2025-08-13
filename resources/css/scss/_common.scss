@@ -294,6 +294,9 @@
 // breadcrumb
 .breadcrumb_wrap {
     // margin-bottom: var(--gap-50);
+    @include mobile {
+        margin-bottom: var(--gap-30);
+    }
 }
 .breadcrumb {
     display: flex;
@@ -330,6 +333,9 @@
 // page tit
 .page_title {
     margin-bottom: var(--gap-50);
+    @include mobile {
+        margin-bottom: var(--gap-30);
+    }
     .tit {
         position: relative;
         z-index: 1;
