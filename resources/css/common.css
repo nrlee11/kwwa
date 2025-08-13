@@ -2603,16 +2603,11 @@ select.sm {
   color: var(--color-warblack);
   font-weight: var(--font-bold);
   border-bottom: 0.1rem solid #d6e0eb;
-  border-left: 0.1rem solid #d6e0eb;
   background-color: var(--color-lightblue);
 }
 .board_area .tbl thead th:first-child,
 .board_area .tbl tbody th:first-child {
   border-left: 0;
-}
-.board_area .tbl thead th.line,
-.board_area .tbl tbody th.line {
-  border-left: 0.1rem solid #d6e0eb;
 }
 .board_area .tbl thead th {
   height: 3.2rem;
@@ -2623,7 +2618,6 @@ select.sm {
   color: var(--color-gray);
   padding: var(--gap-10) var(--gap-10);
   border-bottom: 0.1rem solid #cdd1d5;
-  border-left: 0.1rem solid #cdd1d5;
   background-color: var(--color-white);
   text-align: center;
 }
