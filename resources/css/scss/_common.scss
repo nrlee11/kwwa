@@ -1531,12 +1531,15 @@ select {
                 border-left: 0;
             }
             &.line {
-                // border-left: $border #d6e0eb;
+                border-left: $border #d6e0eb;
             }
         }
         thead th {
             height: 4rem;
             line-height: 1.2;
+            &.line {
+                border-left: $border #99b0cb;
+            }
         }
         tbody td {
             @include tbl-body;

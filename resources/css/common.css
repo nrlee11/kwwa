@@ -2620,9 +2620,16 @@ select.sm {
 .board_area .tbl tbody th:first-child {
   border-left: 0;
 }
+.board_area .tbl thead th.line,
+.board_area .tbl tbody th.line {
+  border-left: 0.1rem solid #d6e0eb;
+}
 .board_area .tbl thead th {
   height: 4rem;
   line-height: 1.2;
+}
+.board_area .tbl thead th.line {
+  border-left: 0.1rem solid #99b0cb;
 }
 .board_area .tbl tbody td {
   height: 5rem;
@@ -2665,8 +2672,8 @@ select.sm {
   font-size: var(--font-size-sm);
   color: var(--color-warblack);
   font-weight: var(--font-bold);
-  border-bottom: 0.1rem solid #d6e0eb;
-  border-left: 0.1rem solid #d6e0eb;
+  border-bottom: 0.1rem solid #99b0cb;
+  border-left: 0.1rem solid #99b0cb;
   background-color: var(--color-lightblue);
   text-align: center;
 }
