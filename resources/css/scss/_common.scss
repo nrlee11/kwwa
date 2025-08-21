@@ -334,13 +334,16 @@
 .page_title {
     margin-bottom: var(--gap-50);
     @include mobile {
-        margin-bottom: var(--gap-30);
+        margin-bottom: var(--gap-20);
     }
     .tit {
         position: relative;
         z-index: 1;
         font-size: var(--font-size-xxl);
         font-weight: var(--font-bold);
+        @include mobile {
+            font-size: 2.8rem;
+        }
     }
     &.center {
         margin-top: 6.5rem;

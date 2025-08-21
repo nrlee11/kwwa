@@ -1460,7 +1460,7 @@ button {
 }
 @media screen and (max-width: 1200px) {
   .page_title {
-    margin-bottom: var(--gap-30);
+    margin-bottom: var(--gap-20);
   }
 }
 .page_title .tit {
@@ -1468,6 +1468,11 @@ button {
   z-index: 1;
   font-size: var(--font-size-xxl);
   font-weight: var(--font-bold);
+}
+@media screen and (max-width: 1200px) {
+  .page_title .tit {
+    font-size: 2.8rem;
+  }
 }
 .page_title.center {
   margin-top: 6.5rem;
