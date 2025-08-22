@@ -661,7 +661,7 @@
     }
 }
 
-// search
+// search 검색창 화면 전체 덮기로
 .allsearch {
     position: fixed;
     top: 0rem;
@@ -862,7 +862,7 @@
                 > a {
                     position: relative;
                     display: block;
-                    padding: var(--gap-12);
+                    padding: var(--gap-16);
                     color: var(--color-darkblack);
                     font-size: 1.9rem;
                     font-weight: var(--font-bold);
