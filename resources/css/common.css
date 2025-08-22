@@ -997,13 +997,13 @@ button {
   }
 }
 .side_gnb .side_nav_wrap .global_link {
-  padding: var(--gap-10) var(--gap-13) var(--gap-28);
+  padding: var(--gap-10) 0 0;
   text-align: right;
 }
 .side_gnb .side_nav_wrap .global_link .utility {
   position: relative;
   top: -0.3rem;
-  margin-right: 3.4rem;
+  margin-right: 6rem;
 }
 .side_gnb .side_nav_wrap .global_link .utility > a {
   font-size: 1.4rem;
@@ -1011,24 +1011,44 @@ button {
 .side_gnb .side_nav_wrap .global_link .utility > a + a {
   margin-left: 2.4rem;
 }
-.side_gnb .side_nav_wrap .global_link .btn_area {
+.side_gnb .side_nav_wrap .global_link .rside {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--gap-5);
-  margin-top: var(--gap-14);
-}
-.side_gnb .side_nav_wrap .global_link .btn_area .btn_warmblue_sm {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  background-color: var(--color-navy);
+  padding: 0.3rem;
+  margin-top: var(--gap-10);
+}
+.side_gnb .side_nav_wrap .global_link .rside .btn_primary_mo {
+  font-size: 1.8rem;
+  font-weight: var(--font-semibold);
+  background-color: var(--color-navy);
+  color: #fff;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  min-width: 24rem;
-  padding: 0 1.5rem;
-  text-align: left;
-  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.side_gnb .side_nav_wrap .global_link .rside .btn_primary_mo:hover {
+  color: var(--color-navy);
+  background-color: var(--color-white);
+}
+.side_gnb .side_nav_wrap .global_link .rside .btn_primary_mo.active {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+}
+.side_gnb .side_nav_wrap .global_link .rside .btn_primary_mo:hover:not(.active), .side_gnb .side_nav_wrap .global_link .rside .btn_primary_mo:focus-visible:not(.active) {
+  background-color: var(--color-white);
+  color: var(--color-navy);
 }
 .side_gnb .side_nav_wrap .btn_side_close {
   position: absolute;
+  padding: 0 1.3rem;
   top: 1rem;
   right: 1.3rem;
   display: block;
@@ -1040,22 +1060,23 @@ button {
   overflow-y: auto;
   width: 100%;
   height: calc(100% - 14.3rem);
-  padding: 0 var(--gap-12) 4.8rem var(--gap-16);
+  padding: 0 0 4.8rem 0;
 }
 .side_gnb .side_nav .depth1 > li > a {
   position: relative;
   display: block;
-  padding: var(--gap-12) 0;
+  padding: var(--gap-12);
   color: var(--color-darkblack);
   font-size: 1.9rem;
   font-weight: var(--font-bold);
   line-height: 1.9rem;
+  border-bottom: 1px solid #c8c8c8;
 }
 .side_gnb .side_nav .depth1 > li > a::after {
   content: "";
   position: absolute;
   top: 1.2rem;
-  right: 0;
+  right: 1.2rem;
   width: 1.6rem;
   height: 1.6rem;
   background: url("../../resources/images/common/bg_side_arrow.svg") no-repeat 0 0;
@@ -1067,7 +1088,8 @@ button {
   display: var(--show);
 }
 .side_gnb .side_nav .depth2 {
-  margin: var(--gap-6) 0 var(--gap-12) var(--gap-16);
+  padding: var(--gap-6) 0 var(--gap-12) var(--gap-20);
+  background-color: #eef2f7;
 }
 .side_gnb .side_nav .depth2 > li > a {
   display: inline-block;
@@ -1076,8 +1098,12 @@ button {
   font-size: var(--font-size-sm);
   font-weight: var(--font-medium);
 }
+.side_gnb .side_nav .depth2 > li > a:hover {
+  color: #083891;
+  text-decoration: underline;
+}
 .side_gnb .side_nav .depth2 > li.on > a {
-  color: var(--color-warmblue);
+  color: var(--color-navy);
   text-decoration: underline;
 }
 .side_gnb .side_nav .depth3 {
@@ -1104,11 +1130,15 @@ button {
   font-size: var(--font-size-xsm);
   font-weight: var(--font-medium);
 }
+.side_gnb .side_nav .depth3 > li > a:hover {
+  color: #083891;
+  text-decoration: underline;
+}
 .side_gnb .side_nav .depth3 > li.on::before {
-  background-color: var(--color-warmblue);
+  background-color: var(--color-navy);
 }
 .side_gnb .side_nav .depth3 > li.on > a {
-  color: var(--color-warmblue);
+  color: var(--color-navy);
   text-decoration: underline;
 }
 
@@ -5075,7 +5105,7 @@ select.sm {
   border-radius: 5rem;
   background-color: #b1b8be;
   font-size: 1.5rem;
-  font-weight: var(--font-regular);
+  font-weight: var(--font-semibold);
   color: var(--color-white);
 }
 

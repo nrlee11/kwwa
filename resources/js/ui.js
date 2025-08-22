@@ -612,20 +612,28 @@ $(function () {
         });
 
         // 모바일전용 - 상수 1/2급 <> 정수 3급
-        $(".side_nav_wrap .btn_area .btn_warmblue_sm").click(function () {
-            const currentText = $(this).text();
+        $("#sideGnb .rside .btn_primary_mo").on("click", function () {
+            // 모든 버튼에서 active 제거
+            $(".rside .btn_primary_mo").removeClass("active");
 
-            if (currentText === "상수도관망시설운영관리사") {
-                // 정수 3급
-                $(this).html(`정수시설운영관리사 3급<span class="ico_arrow"></span>`);
-                $("h1.logo span").text("상수도관망시설운영관리사");
-            } else {
-                // 상수 1/2급
-                $(this).html(`상수도관망시설운영관리사<span class="ico_arrow"></span>`);
-                $("h1.logo span").text("정수시설운영관리사 3급");
-            }
-            $(".btn_side_close").trigger("click");
+            // 클릭한 버튼에 active 추가
+            $(this).addClass("active");
         });
+
+        // $(".side_nav_wrap .btn_area .btn_warmblue_sm").click(function () {
+        //     const currentText = $(this).text();
+
+        //     if (currentText === "상수도관망시설운영관리사") {
+        //         // 정수 3급
+        //         $(this).html(`정수시설운영관리사 3급<span class="ico_arrow"></span>`);
+        //         $("h1.logo span").text("상수도관망시설운영관리사");
+        //     } else {
+        //         // 상수 1/2급
+        //         $(this).html(`상수도관망시설운영관리사<span class="ico_arrow"></span>`);
+        //         $("h1.logo span").text("정수시설운영관리사 3급");
+        //     }
+        //     $(".btn_side_close").trigger("click");
+        // });
 
         // 로그인 - pc
         $(".header .btn_login").click(function () {
