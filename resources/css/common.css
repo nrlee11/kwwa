@@ -1079,7 +1079,7 @@ button {
 .side_gnb .side_nav .depth1 > li > a::after {
   content: "";
   position: absolute;
-  top: 1.2rem;
+  top: 1.6rem;
   right: 1.2rem;
   width: 1.6rem;
   height: 1.6rem;
