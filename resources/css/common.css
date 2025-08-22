@@ -1006,8 +1006,8 @@ button {
 }
 .side_gnb .side_nav_wrap .global_link .utility {
   position: relative;
-  top: -0.3rem;
-  margin-right: 6rem;
+  top: -0.1rem;
+  margin-right: 8rem;
 }
 .side_gnb .side_nav_wrap .global_link .utility > a {
   font-size: 1.4rem;
@@ -1053,7 +1053,7 @@ button {
 .side_gnb .side_nav_wrap .btn_side_close {
   position: absolute;
   padding: 0 1.3rem;
-  top: 1rem;
+  top: 1.3rem;
   right: 1.3rem;
   display: block;
   width: 1.9rem;
