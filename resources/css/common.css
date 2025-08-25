@@ -4442,6 +4442,11 @@ select.sm {
   justify-content: center;
   z-index: 1;
 }
+@media screen and (max-width: 1200px) {
+  .swiper-controls {
+    bottom: 12rem;
+  }
+}
 .swiper-controls .swiper-pagination {
   position: relative;
   width: auto !important;
@@ -5936,11 +5941,6 @@ select.sm {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-@media screen and (max-width: 767px) {
-  .program_wrap .program_slide .swiper .swiper-controls {
-    display: var(--hide) !important;
-  }
 }
 .program_wrap .program_slide .arrow {
   position: absolute;

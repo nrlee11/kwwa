@@ -947,7 +947,7 @@
             }
             .swiper-controls {
                 @include sm-mobile {
-                    display: var(--hide) !important;
+                    // display: var(--hide) !important;
                 }
             }
         }
