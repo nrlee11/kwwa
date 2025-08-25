@@ -3434,7 +3434,7 @@ select {
         bottom: 12rem;
     }
     @include flex-center;
-    z-index: 1;
+    z-index: 10;
     .swiper-pagination {
         position: relative;
         width: auto !important;
