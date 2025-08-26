@@ -5235,7 +5235,7 @@ select.sm {
 }
 .visual_area .primary_service .banner_area {
   width: 100%;
-  max-width: 54.1rem;
+  max-width: 57.1rem;
 }
 @media screen and (max-width: 1200px) {
   .visual_area .primary_service {
