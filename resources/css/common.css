@@ -7518,10 +7518,10 @@ select.sm {
   position: relative;
   width: 100%;
   min-height: 7rem;
-  padding: 0.5rem 1.5rem 0.5rem 4.9rem;
+  padding: 0.5rem 1.5rem 0.5rem 6rem;
   text-align: left;
   font-size: 2rem;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-regular);
   line-height: 1.5;
   box-sizing: border-box;
 }
@@ -7588,31 +7588,48 @@ select.sm {
 .container_avi .btn_avi {
   display: block;
   width: 100%;
-  background: #f4f5f6;
-  color: var(--font-color-base);
-}
-.container_avi .btn_avi:hover .txt_avi, .container_avi .btn_avi:focus .txt_avi, .container_avi .btn_avi[aria-current=true] .txt_avi {
   background: #6d7882;
   color: var(--color-white);
+}
+.container_avi .btn_avi:hover, .container_avi .btn_avi:focus, .container_avi .btn_avi[aria-current=true] {
+  filter: brightness(130%);
+}
+.container_avi .btn_avi:hover .txt_avi, .container_avi .btn_avi:focus .txt_avi, .container_avi .btn_avi[aria-current=true] .txt_avi {
+  color: var(--color-white);
+  text-decoration: underline;
 }
 .container_avi .btn_avi:hover .txt_avi:before, .container_avi .btn_avi:focus .txt_avi:before, .container_avi .btn_avi[aria-current=true] .txt_avi:before {
   background-image: url("../../resources/images/icon/ico_avi_on.svg");
 }
+.container_avi .btn_avi.is_done_avi {
+  background: var(--color-gray);
+}
+.container_avi .btn_avi.is_done_avi .txt_avi {
+  color: var(--color-warmblue);
+}
 .container_avi .btn_avi.is_done_avi .txt_avi:before {
   background-image: url("../../resources/images/icon/ico_completion_before.svg");
 }
-.container_avi .txt_avi {
+.container_avi .btn_avi > .txt_avi {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  font-size: 1.6rem;
+  min-height: 6rem;
 }
-.container_avi .txt_avi:before {
+.container_avi .btn_avi > .txt_avi .time {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.container_avi .btn_avi > .txt_avi:before {
   flex: 0 0 auto;
   position: absolute;
   top: calc(50% - 1rem);
-  left: 1.5rem;
+  left: 3rem;
   width: 2rem;
   height: 2rem;
-  background: url("../../resources/images/icon/ico_avi.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_avi_on.svg") no-repeat 0 0;
   content: "";
 }
 

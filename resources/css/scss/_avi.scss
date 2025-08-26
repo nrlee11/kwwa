@@ -138,10 +138,10 @@
             position: relative;
             width: 100%;
             min-height: 7rem;
-            padding: 0.5rem 1.5rem 0.5rem 4.9rem;
+            padding: 0.5rem 1.5rem 0.5rem 6rem;
             text-align: left;
             font-size: 2rem;
-            font-weight: var(--font-medium);
+            font-weight: var(--font-regular);
             line-height: 1.5;
             box-sizing: border-box;
             @include mobile {
@@ -210,39 +210,53 @@
     .btn_avi {
         display: block;
         width: 100%;
-        background: #f4f5f6;
-        color: var(--font-color-base);
+        background: #6d7882;
+        color: var(--color-white);
+
         &:hover,
         &:focus,
         &[aria-current="true"] {
+            filter: brightness(130%); //호버색 지정안하고 본래색에서 30%더 밝게
+
             .txt_avi {
-                background: #6d7882;
+                // background: #8a949e
                 color: var(--color-white);
+                text-decoration: underline;
                 &:before {
                     background-image: url($url-img-icon + "ico_avi_on.svg");
                 }
             }
         }
         &.is_done_avi {
+            background: var(--color-gray);
             .txt_avi {
+                color: var(--color-warmblue);
                 &:before {
                     background-image: url($url-img-icon + "ico_completion_before.svg");
                 }
             }
         }
-    }
-    .txt_avi {
-        align-items: center;
-        gap: 1rem;
-        &:before {
-            flex: 0 0 auto;
-            position: absolute;
-            top: calc(50% - 1rem);
-            left: 1.5rem;
-            width: 2rem;
-            height: 2rem;
-            background: url($url-img-icon + "ico_avi.svg") no-repeat 0 0;
-            content: "";
+        > .txt_avi {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            min-height: 6rem;
+            .time {
+                font-size: 1.5rem;
+                white-space: nowrap;
+            }
+            &:before {
+                flex: 0 0 auto;
+                position: absolute;
+                top: calc(50% - 1rem);
+                left: 3rem;
+                width: 2rem;
+                height: 2rem;
+                background: url($url-img-icon + "ico_avi_on.svg") no-repeat 0 0;
+                content: "";
+            }
         }
     }
 }
