@@ -9,7 +9,7 @@
         font-size: 2.2rem;
     }
     @include mobile {
-        margin-bottom: var(--gap-20);
+        margin-bottom: var(--gap-10);
     }
     // @include xs-mobile {
     //     flex-direction: column;
@@ -117,12 +117,14 @@
             display: flex;
             align-items: flex-end;
             width: 100%;
+        }
+        .main_tab {
+            margin: var(--gap-10) 0;
 
             @media screen and (max-width: 1200px) {
-                margin: var(--gap-10);
+                margin: var(--gap-15) 0;
             }
         }
-
         .tab {
             margin-bottom: var(--gap-20);
 
@@ -245,13 +247,21 @@
                 > a,
                 > strong {
                     font-size: larger;
-                    display: block;
-                    min-height: 4.6rem;
+                    min-height: 4.2rem;
                     padding: 0 var(--gap-5);
                     color: #8a949e;
+                    border-bottom: 0.2rem solid var(--color-white);
                     text-align: center;
                     font-weight: var(--font-semibold);
-                    line-height: 4.4rem;
+                    line-height: 4.2rem;
+                    @media screen and (max-width: 1200px) {
+                        padding: 0 var(--gap-10);
+                        color: #8a949e;
+                        background-color: var(--color-white);
+                        border-radius: 10rem;
+                        line-height: 4.2rem;
+                        border-bottom: none;
+                    }
                 }
 
                 &.on {
@@ -265,16 +275,17 @@
                         padding: 0 var(--gap-5);
                         color: var(--color-navy);
                         border-bottom: 0.2rem solid var(--color-navy);
-                        border-top-left-radius: 5px;
-                        border-top-right-radius: 5px;
-                        line-height: 4.6rem;
+                        text-align: center;
+                        font-weight: var(--font-semibold);
+                        line-height: 4.2rem;
 
                         @media screen and (max-width: 1200px) {
-                            padding: 0 var(--gap-14);
+                            padding: 0 var(--gap-10);
                             color: var(--color-white);
                             background-color: var(--color-navy);
                             border-radius: 10rem;
                             line-height: 4.2rem;
+                            border-bottom: none;
                         }
                     }
                 }

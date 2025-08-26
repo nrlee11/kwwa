@@ -4878,7 +4878,7 @@ select.sm {
 }
 .btn_more_plus::before, .btn_more_plus::after {
   position: absolute;
-  top: 0.8rem;
+  top: 1rem;
   right: 0;
   width: 1rem;
   height: 1rem;
@@ -4886,7 +4886,7 @@ select.sm {
   content: "";
 }
 .btn_more_plus::after {
-  top: 0.4rem;
+  top: 0.6rem;
   right: -0.4rem;
   transform: rotate(-90deg);
 }
@@ -5207,7 +5207,7 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .main_title {
-    margin-bottom: var(--gap-20);
+    margin-bottom: var(--gap-10);
   }
 }
 
@@ -5322,10 +5322,12 @@ select.sm {
   align-items: flex-end;
   width: 100%;
 }
+.service_area .tab_area .main_tab {
+  margin: var(--gap-10) 0;
+}
 @media screen and (max-width: 1200px) {
-  .service_area .tab_area .main_tab,
-  .service_area .tab_area .tab {
-    margin: var(--gap-10);
+  .service_area .tab_area .main_tab {
+    margin: var(--gap-15) 0;
   }
 }
 .service_area .tab_area .tab {
@@ -5443,13 +5445,25 @@ select.sm {
 .service_area .tab_area .main_tab > li > a,
 .service_area .tab_area .main_tab > li > strong {
   font-size: larger;
-  display: block;
-  min-height: 4.6rem;
+  min-height: 4.2rem;
   padding: 0 var(--gap-5);
   color: #8a949e;
+  border-bottom: 0.2rem solid var(--color-white);
   text-align: center;
   font-weight: var(--font-semibold);
-  line-height: 4.4rem;
+  line-height: 4.2rem;
+}
+@media screen and (max-width: 1200px) {
+  .service_area .tab_area .main_tab > li > button,
+  .service_area .tab_area .main_tab > li > a,
+  .service_area .tab_area .main_tab > li > strong {
+    padding: 0 var(--gap-10);
+    color: #8a949e;
+    background-color: var(--color-white);
+    border-radius: 10rem;
+    line-height: 4.2rem;
+    border-bottom: none;
+  }
 }
 .service_area .tab_area .main_tab > li.on {
   position: relative;
@@ -5462,19 +5476,20 @@ select.sm {
   padding: 0 var(--gap-5);
   color: var(--color-navy);
   border-bottom: 0.2rem solid var(--color-navy);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  line-height: 4.6rem;
+  text-align: center;
+  font-weight: var(--font-semibold);
+  line-height: 4.2rem;
 }
 @media screen and (max-width: 1200px) {
   .service_area .tab_area .main_tab > li.on > button,
   .service_area .tab_area .main_tab > li.on > a,
   .service_area .tab_area .main_tab > li.on > strong {
-    padding: 0 var(--gap-14);
+    padding: 0 var(--gap-10);
     color: var(--color-white);
     background-color: var(--color-navy);
     border-radius: 10rem;
     line-height: 4.2rem;
+    border-bottom: none;
   }
 }
 .service_area .tab_area .main_tab.full_type li {
