@@ -899,6 +899,12 @@ select {
                 + li {
                     margin-top: var(--gap-5);
                 }
+
+                > a {
+                    &:hover {
+                        color: var(--color-blue);
+                    }
+                }
             }
         }
     }

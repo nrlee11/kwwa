@@ -2058,6 +2058,9 @@ select.sm {
 .select_layer .select_box ul > li + li {
   margin-top: var(--gap-5);
 }
+.select_layer .select_box ul > li > a:hover {
+  color: var(--color-blue);
+}
 
 .switch {
   position: relative;
