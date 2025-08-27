@@ -702,11 +702,11 @@
             .cell {
                 @include mobile {
                     @include flex-aligncenter;
-                    align-items: flex-start;
                     gap: 0 1rem;
                 }
                 @include xs-mobile {
                     flex-direction: column;
+                    align-items: flex-start;
                 }
                 .tit {
                     color: var(--color-blue);
