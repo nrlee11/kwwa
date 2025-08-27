@@ -5644,6 +5644,7 @@ select.sm {
 @media screen and (max-width: 767px) {
   .menu_item {
     width: 100%;
+    font-size: 15px;
   }
 }
 
