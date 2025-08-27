@@ -905,6 +905,7 @@ select {
         border-radius: 0.6rem;
         border: $border #58616a;
         background-color: var(--color-white);
+        z-index: 1;
         ul {
             > li {
                 font-size: var(--font-size-sm);
