@@ -1565,7 +1565,7 @@ button {
 @media screen and (max-width: 1200px) {
   .tit_area .tit:before {
     width: 4px;
-    height: 20px;
+    height: 18px;
   }
 }
 .tit_area .tit.ico {
