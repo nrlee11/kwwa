@@ -33,14 +33,16 @@
                 padding: 1.6rem 0 1.6rem 1.6rem;
             }
         }
-        .tit {
+        .tit2 {
             display: flex;
             padding-left: 0.7rem;
-            border-left: 0.6rem solid var(--color-warmblue);
-            font-size: 3.2rem;
-            line-height: 4.2rem;
+            font-size: 2rem;
+            line-height: 2rem;
+            color: var(--color-white);
+            font-weight: var(--font-semibold);
+            word-break: break-word;
             @include mobile {
-                font-size: 2rem;
+                font-size: 1.6rem;
                 line-height: 2.4rem;
                 @include ellipsis(2);
             }
@@ -49,9 +51,9 @@
             display: none;
             flex: 0 0 auto;
             padding: 0 1.6rem 0 1rem;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--color-white);
-            line-height: 1.5;
+            line-height: 1.6;
             @include mobile {
                 display: block;
             }
@@ -83,7 +85,7 @@
             height: 100%;
             max-height: 100vh;
             padding: 0 2.3rem 2rem;
-            background: #525254;
+            background: var(--color-white);
             box-sizing: border-box;
             @include mobile {
                 width: 100%;
@@ -99,12 +101,17 @@
             @include mobile {
                 margin: 1.4rem;
             }
-            .tit {
-                font-size: 3.2rem;
-                line-height: 3.8rem;
+            .tit2 {
+                display: flex;
+                font-size: 2rem;
+                line-height: 2rem;
+                color: var(--color-black);
+                font-weight: var(--font-bold);
+                word-break: break-word;
                 @include mobile {
-                    font-size: 2.7rem;
-                    line-height: 1;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    @include ellipsis(2);
                 }
             }
         }
@@ -130,7 +137,7 @@
         overflow: auto;
     }
     .avi_list {
-        background: #2e2e2e;
+        background: var(--color-white);
         .txt_avi {
             display: flex;
             align-items: center;
@@ -140,9 +147,9 @@
             min-height: 7rem;
             padding: 0.5rem 1.5rem 0.5rem 6rem;
             text-align: left;
-            font-size: 2rem;
-            font-weight: var(--font-regular);
-            line-height: 1.5;
+            font-size: 1.6rem;
+            font-weight: var(--font-medium);
+            line-height: 1.6;
             box-sizing: border-box;
             @include mobile {
                 min-height: 5rem;
@@ -156,8 +163,9 @@
             align-items: center;
             gap: 1rem;
             width: 100%;
-            background-color: #33363d;
+            background-color: var(--color-white);
             &[aria-expanded="true"] {
+                background-color: rgb(241, 243, 245);
                 .txt_avi {
                     &:before {
                         transform: rotate(180deg);
@@ -168,17 +176,18 @@
                 position: relative;
                 gap: 2.6rem;
                 justify-content: space-between;
-                font-weight: var(--font-semibold);
-                color: var(--color-white);
+                font-weight: var(--font-medium);
+                color: var(--color-gray);
                 &:before {
                     flex: 0 0 auto;
                     position: absolute;
                     top: 50%;
                     left: 1.5rem;
-                    width: 2.4rem;
-                    height: 2.4rem;
-                    margin-top: -1.2rem;
-                    background: url($url-img-icon + "ico_arrow_white_down.svg") no-repeat 0 0;
+                    width: 2rem;
+                    height: 2rem;
+                    margin-top: -1.1rem;
+                    background: url($url-img-icon + "ico_arrow_lightgray_down.svg") no-repeat center center;
+                    background-size: 2rem 2rem; // 실제 아이콘 크기 줄이기
                     transition: transform 100ms;
                     content: "";
                 }
@@ -198,37 +207,41 @@
         }
         .sub_list {
             li {
-                border-top: 0.3rem solid #525254;
+                border-top: 0.1rem solid rgb(233, 236, 239);
             }
         }
     }
     .avi_item {
         &:not(:first-child) {
-            border-top: 0.3rem solid #525254;
+            border-top: 0.1rem solid rgb(233, 236, 239);
         }
     }
     .btn_avi {
         display: block;
         width: 100%;
-        background: #6d7882;
-        color: var(--color-white);
+        background: var(--color-white);
+        color: var(--color-gray);
 
-        &:hover,
-        &:focus,
+        &:hover {
+            filter: brightness(95%); //호버색 지정안하고 본래색에서 5%더 어둡게
+        }
+        &:focus {
+            background-color: #ecf2fe;
+            border-left: 3px solid var(--color-warmblue);
+            filter: none; //focus가 잡힌 순간 hover색 겹치지 않게
+        }
         &[aria-current="true"] {
-            filter: brightness(130%); //호버색 지정안하고 본래색에서 30%더 밝게
+            background-color: #ecf2fe;
 
             .txt_avi {
                 // background: #8a949e
-                color: var(--color-white);
                 text-decoration: underline;
                 &:before {
-                    background-image: url($url-img-icon + "ico_avi_on.svg");
+                    background-image: url($url-img-icon + "ico_avi.svg");
                 }
             }
         }
         &.is_done_avi {
-            background: var(--color-gray);
             .txt_avi {
                 color: var(--color-warmblue);
                 &:before {
@@ -254,7 +267,7 @@
                 left: 3rem;
                 width: 2rem;
                 height: 2rem;
-                background: url($url-img-icon + "ico_avi_on.svg") no-repeat 0 0;
+                background: url($url-img-icon + "ico_avi.svg") no-repeat 0 0;
                 content: "";
             }
         }
