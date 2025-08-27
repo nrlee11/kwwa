@@ -1510,7 +1510,7 @@ button {
 }
 @media screen and (max-width: 767px) {
   .page_title .tit {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 .page_title.center {
@@ -1547,7 +1547,12 @@ button {
   font-size: var(--font-size-lg);
   color: var(--color-navy);
 }
-.tit_area .tit::before {
+@media screen and (max-width: 1200px) {
+  .tit_area .tit {
+    font-size: 2rem;
+  }
+}
+.tit_area .tit:before {
   content: "";
   display: inline-block;
   width: 5px;
@@ -1556,6 +1561,12 @@ button {
   margin-top: -4px;
   vertical-align: middle;
   background-color: var(--color-navy);
+}
+@media screen and (max-width: 1200px) {
+  .tit_area .tit:before {
+    width: 4px;
+    height: 20px;
+  }
 }
 .tit_area .tit.ico {
   position: relative;

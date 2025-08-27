@@ -345,7 +345,7 @@
             font-size: 2.8rem;
         }
         @include sm-mobile {
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
     }
     &.center {
@@ -382,7 +382,11 @@
     .tit {
         font-size: var(--font-size-lg);
         color: var(--color-navy);
-        &::before {
+
+        @include mobile {
+            font-size: 2rem;
+        }
+        &:before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -391,6 +395,10 @@
             margin-top: -4px; // 필요시 조정
             vertical-align: middle;
             background-color: var(--color-navy); // 색상 조정 가능
+            @include mobile {
+                width: 4px;
+                height: 20px;
+            }
         }
         &.ico {
             position: relative;
