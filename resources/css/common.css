@@ -1508,6 +1508,11 @@ button {
     font-size: 2.8rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .page_title .tit {
+    font-size: 2rem;
+  }
+}
 .page_title.center {
   margin-top: 6.5rem;
   text-align: center;
@@ -5603,7 +5608,7 @@ select.sm {
 }
 @media screen and (max-width: 767px) {
   .main_menu {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 30px 10px;
     margin: 0 var(--gap-16);
@@ -5647,6 +5652,12 @@ select.sm {
     height: 90px;
   }
 }
+@media screen and (max-width: 767px) {
+  .icon_circle {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .icon_circle img {
   width: 52px;
@@ -5656,6 +5667,12 @@ select.sm {
   .icon_circle img {
     width: 40px;
     height: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .icon_circle img {
+    width: 30px;
+    height: 30px;
   }
 }
 

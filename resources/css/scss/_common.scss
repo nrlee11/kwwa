@@ -344,6 +344,9 @@
         @include mobile {
             font-size: 2.8rem;
         }
+        @include sm-mobile {
+            font-size: 2rem;
+        }
     }
     &.center {
         margin-top: 6.5rem;
