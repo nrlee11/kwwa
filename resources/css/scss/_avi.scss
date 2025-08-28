@@ -158,7 +158,7 @@
             line-height: 1.6;
             box-sizing: border-box;
             @include mobile {
-                min-height: 5rem;
+                min-height: 6rem;
                 font-size: 1.6rem;
                 line-height: 2.5rem;
             }
@@ -204,11 +204,8 @@
             }
             .txt_avi_detail {
                 flex: 0 0 auto;
-                font-size: 1.6rem;
+                font-size: 1.2rem;
                 text-align: right;
-                @include mobile {
-                    display: none;
-                }
             }
         }
         .sub_list {

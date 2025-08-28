@@ -7575,7 +7575,7 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .container_avi .avi_list .txt_avi {
-    min-height: 5rem;
+    min-height: 6rem;
     font-size: 1.6rem;
     line-height: 2.5rem;
   }
@@ -7623,13 +7623,8 @@ select.sm {
 }
 .container_avi .avi_list .fold .txt_avi_detail {
   flex: 0 0 auto;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: right;
-}
-@media screen and (max-width: 1200px) {
-  .container_avi .avi_list .fold .txt_avi_detail {
-    display: none;
-  }
 }
 .container_avi .avi_list .sub_list li {
   border-top: 0.1rem solid rgb(233, 236, 239);
