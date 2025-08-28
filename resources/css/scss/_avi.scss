@@ -35,7 +35,8 @@
         }
         .tit2 {
             display: flex;
-            padding-left: 0.7rem;
+            position: relative;
+            padding-left: var(--gap-20);
             font-size: 2rem;
             line-height: 2rem;
             color: var(--color-white);
@@ -45,6 +46,11 @@
                 font-size: 1.6rem;
                 line-height: 2.4rem;
                 @include ellipsis(2);
+            }
+            .num {
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
         .btn_mo {

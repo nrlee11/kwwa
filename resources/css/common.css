@@ -7430,7 +7430,8 @@ select.sm {
 }
 .container_avi .lside .tit2 {
   display: flex;
-  padding-left: 0.7rem;
+  position: relative;
+  padding-left: var(--gap-20);
   font-size: 2rem;
   line-height: 2rem;
   color: var(--color-white);
@@ -7447,6 +7448,11 @@ select.sm {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+.container_avi .lside .tit2 .num {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .container_avi .lside .btn_mo {
   display: none;
