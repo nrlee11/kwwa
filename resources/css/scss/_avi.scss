@@ -151,7 +151,7 @@
             position: relative;
             width: 100%;
             min-height: 7rem;
-            padding: 0.5rem 1.5rem 0.5rem 6rem;
+            padding: 0.5rem 1.5rem 0.5rem 5rem;
             text-align: left;
             font-size: 1.6rem;
             font-weight: var(--font-medium);
@@ -182,8 +182,8 @@
                 position: relative;
                 gap: 2.6rem;
                 justify-content: space-between;
-                font-weight: var(--font-medium);
-                color: var(--color-gray);
+                font-weight: var(--font-semibold);
+                color: #868e96;
                 &:before {
                     flex: 0 0 auto;
                     position: absolute;
@@ -264,14 +264,15 @@
             font-size: 1.6rem;
             min-height: 6rem;
             .time {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+                color: #868e96;
                 white-space: nowrap;
             }
             &:before {
                 flex: 0 0 auto;
                 position: absolute;
                 top: calc(50% - 1rem);
-                left: 3rem;
+                left: 1.5rem;
                 width: 2rem;
                 height: 2rem;
                 background: url($url-img-icon + "ico_avi.svg") no-repeat 0 0;
