@@ -236,6 +236,7 @@
         &[aria-current="true"] {
             background-color: #ecf2fe;
             border-left: 5px solid var(--color-warmblue);
+            filter: none; //hover색과 겹치지 않게
 
             .txt_avi {
                 // background: #8a949e
