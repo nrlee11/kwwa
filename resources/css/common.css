@@ -624,6 +624,11 @@ button {
 #main .section + .section {
   margin-top: var(--gap-50);
 }
+@media screen and (max-width: 1200px) {
+  #main .section + .section {
+    margin-top: var(--gap-20);
+  }
+}
 
 #footer {
   width: 100%;
@@ -5461,10 +5466,15 @@ select.sm {
     margin-left: var(--gap-5);
   }
 }
+@media screen and (max-width: 767px) {
+  .service_area .tab_area .main_tab > li {
+    margin-right: 0;
+  }
+}
 .service_area .tab_area .main_tab > li > button,
 .service_area .tab_area .main_tab > li > a,
 .service_area .tab_area .main_tab > li > strong {
-  font-size: larger;
+  font-size: 2rem;
   min-height: 4.2rem;
   padding: 0 var(--gap-5);
   color: #8a949e;
@@ -5472,17 +5482,33 @@ select.sm {
   text-align: center;
   font-weight: var(--font-semibold);
   line-height: 4.2rem;
+  white-space: nowrap;
 }
 @media screen and (max-width: 1200px) {
   .service_area .tab_area .main_tab > li > button,
   .service_area .tab_area .main_tab > li > a,
   .service_area .tab_area .main_tab > li > strong {
+    font-size: 1.8rem;
     padding: 0 var(--gap-10);
     color: #8a949e;
     background-color: var(--color-white);
-    border-radius: 10rem;
+    border-radius: 5rem;
     line-height: 4.2rem;
     border-bottom: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service_area .tab_area .main_tab > li > button,
+  .service_area .tab_area .main_tab > li > a,
+  .service_area .tab_area .main_tab > li > strong {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .service_area .tab_area .main_tab > li > button,
+  .service_area .tab_area .main_tab > li > a,
+  .service_area .tab_area .main_tab > li > strong {
+    font-size: 1.5rem;
   }
 }
 .service_area .tab_area .main_tab > li.on {
@@ -5491,7 +5517,7 @@ select.sm {
 .service_area .tab_area .main_tab > li.on > button,
 .service_area .tab_area .main_tab > li.on > a,
 .service_area .tab_area .main_tab > li.on > strong {
-  font-size: larger;
+  font-size: 2rem;
   min-height: 4.2rem;
   padding: 0 var(--gap-5);
   color: var(--color-navy);
@@ -5504,12 +5530,27 @@ select.sm {
   .service_area .tab_area .main_tab > li.on > button,
   .service_area .tab_area .main_tab > li.on > a,
   .service_area .tab_area .main_tab > li.on > strong {
+    font-size: 1.8rem;
     padding: 0 var(--gap-10);
     color: var(--color-white);
     background-color: var(--color-navy);
-    border-radius: 10rem;
+    border-radius: 5rem;
     line-height: 4.2rem;
     border-bottom: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service_area .tab_area .main_tab > li.on > button,
+  .service_area .tab_area .main_tab > li.on > a,
+  .service_area .tab_area .main_tab > li.on > strong {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .service_area .tab_area .main_tab > li.on > button,
+  .service_area .tab_area .main_tab > li.on > a,
+  .service_area .tab_area .main_tab > li.on > strong {
+    font-size: 1.5rem;
   }
 }
 .service_area .tab_area .main_tab.full_type li {
@@ -5560,6 +5601,16 @@ select.sm {
 .service_area .tab_area .tab_cont .detail_view .article {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--color-lightgray);
+}
+@media screen and (max-width: 767px) {
+  .service_area .tab_area .tab_cont .detail_view .article {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .service_area .tab_area .tab_cont .detail_view .article {
+    font-size: 1.5rem;
+  }
 }
 .service_area .tab_area .tab_cont .detail_view .article + .article {
   margin-top: var(--gap-24);
@@ -5706,6 +5757,23 @@ select.sm {
   color: #555;
   transition: all 0.2s;
 }
+@media screen and (max-width: 1200px) {
+  .toggle_buttons button {
+    font-size: 18px;
+    font-weight: var(--font-semibold);
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .toggle_buttons button {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .toggle_buttons button {
+    font-size: 15px;
+  }
+}
 .toggle_buttons button.active {
   background: var(--color-navy);
   color: white;
@@ -5766,9 +5834,13 @@ select.sm {
   font-weight: var(--font-bold);
 }
 @media screen and (max-width: 1200px) {
+  .schedule_list .schedule_group .time .tit {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1200px) {
   .schedule_list .schedule_group .time {
     width: 10.64rem;
-    font-size: 2.5rem;
     text-align: center;
   }
   .schedule_list .schedule_group .time .tit {
@@ -5817,6 +5889,7 @@ select.sm {
     display: flex;
     align-items: center;
     gap: 0 1rem;
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 320px) {

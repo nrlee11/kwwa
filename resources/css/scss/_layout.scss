@@ -396,6 +396,10 @@
     .section {
         + .section {
             margin-top: var(--gap-50);
+
+            @include mobile {
+                margin-top: var(--gap-20);
+            }
         }
     }
 }

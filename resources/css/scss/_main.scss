@@ -243,10 +243,14 @@
                     }
                 }
 
+                @media screen and (max-width: 767px) {
+                    margin-right: 0;
+                }
+
                 > button,
                 > a,
                 > strong {
-                    font-size: larger;
+                    font-size: 2rem;
                     min-height: 4.2rem;
                     padding: 0 var(--gap-5);
                     color: #8a949e;
@@ -254,13 +258,22 @@
                     text-align: center;
                     font-weight: var(--font-semibold);
                     line-height: 4.2rem;
+                    white-space: nowrap;
+
                     @media screen and (max-width: 1200px) {
+                        font-size: 1.8rem;
                         padding: 0 var(--gap-10);
                         color: #8a949e;
                         background-color: var(--color-white);
-                        border-radius: 10rem;
+                        border-radius: 5rem;
                         line-height: 4.2rem;
                         border-bottom: none;
+                    }
+                    @media screen and (max-width: 767px) {
+                        font-size: 1.6rem;
+                    }
+                    @media screen and (max-width: 320px) {
+                        font-size: 1.5rem;
                     }
                 }
 
@@ -270,7 +283,7 @@
                     > button,
                     > a,
                     > strong {
-                        font-size: larger;
+                        font-size: 2rem;
                         min-height: 4.2rem;
                         padding: 0 var(--gap-5);
                         color: var(--color-navy);
@@ -280,12 +293,19 @@
                         line-height: 4.2rem;
 
                         @media screen and (max-width: 1200px) {
+                            font-size: 1.8rem;
                             padding: 0 var(--gap-10);
                             color: var(--color-white);
                             background-color: var(--color-navy);
-                            border-radius: 10rem;
+                            border-radius: 5rem;
                             line-height: 4.2rem;
                             border-bottom: none;
+                        }
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.6rem;
+                        }
+                        @media screen and (max-width: 320px) {
+                            font-size: 1.5rem;
                         }
                     }
                 }
@@ -353,6 +373,12 @@
                 .article {
                     padding-bottom: 1.5rem;
                     border-bottom: 1px solid var(--color-lightgray);
+                    @media screen and (max-width: 767px) {
+                        font-size: 1.6rem;
+                    }
+                    @media screen and (max-width: 320px) {
+                        font-size: 1.5rem;
+                    }
 
                     + .article {
                         margin-top: var(--gap-24);
@@ -603,6 +629,18 @@
         color: #555;
         transition: all 0.2s;
 
+        @media screen and (max-width: 1200px) {
+            font-size: 18px;
+            font-weight: var(--font-semibold);
+            padding: 10px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+        @media screen and (max-width: 320px) {
+            font-size: 15px;
+        }
+
         &.active {
             background: var(--color-navy);
             color: white;
@@ -660,10 +698,12 @@
                 color: var(--color-darkblack);
                 font-size: 2.2rem;
                 font-weight: var(--font-bold);
+                @include mobile {
+                    font-size: 1.8rem;
+                }
             }
             @include mobile {
                 width: 10.64rem;
-                font-size: 2.5rem;
                 text-align: center;
                 .tit {
                     line-height: 3.8rem;
@@ -703,6 +743,7 @@
                 @include mobile {
                     @include flex-aligncenter;
                     gap: 0 1rem;
+                    font-size: 1.6rem;
                 }
                 @include xs-mobile {
                     flex-direction: column;
