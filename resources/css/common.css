@@ -5230,6 +5230,11 @@ select.sm {
   color: var(--color-darkblack);
   font-size: 2.2rem;
 }
+@media screen and (max-width: 767px) {
+  .main_title .tit {
+    font-size: 1.8rem;
+  }
+}
 @media screen and (max-width: 1200px) {
   .main_title {
     margin-bottom: var(--gap-10);
@@ -5833,7 +5838,7 @@ select.sm {
   font-size: 2.2rem;
   font-weight: var(--font-bold);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
   .schedule_list .schedule_group .time .tit {
     font-size: 1.8rem;
   }
@@ -5876,7 +5881,8 @@ select.sm {
 }
 @media screen and (max-width: 1200px) and (max-width: 767px) {
   .schedule_list .schedule_group .timetable {
-    margin-top: var(--gap-20);
+    margin-top: var(--gap-10);
+    gap: 0;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 320px) {
@@ -6055,6 +6061,13 @@ select.sm {
     margin-top: var(--gap-6);
   }
 }
+@media screen and (max-width: 767px) {
+  .program_wrap .program_slide .swiper .swiper-slide .item .tit {
+    min-height: 3.6rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
 .program_wrap .program_slide .swiper .swiper-slide .item .txt {
   color: #555;
   font-size: 1.8rem;
@@ -6063,6 +6076,12 @@ select.sm {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (max-width: 767px) {
+  .program_wrap .program_slide .swiper .swiper-slide .item .txt {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
 }
 .program_wrap .program_slide .arrow {
   position: absolute;

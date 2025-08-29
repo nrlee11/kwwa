@@ -7,6 +7,10 @@
     .tit {
         color: var(--color-darkblack);
         font-size: 2.2rem;
+
+        @include sm-mobile {
+            font-size: 1.8rem;
+        }
     }
     @include mobile {
         margin-bottom: var(--gap-10);
@@ -698,7 +702,7 @@
                 color: var(--color-darkblack);
                 font-size: 2.2rem;
                 font-weight: var(--font-bold);
-                @include mobile {
+                @include sm-mobile {
                     font-size: 1.8rem;
                 }
             }
@@ -733,7 +737,8 @@
                     width: auto !important;
                 }
                 @include sm-mobile {
-                    margin-top: var(--gap-20);
+                    margin-top: var(--gap-10);
+                    gap: 0;
                 }
                 @include xs-mobile {
                     gap: 1.5rem 0;
@@ -999,6 +1004,11 @@
                                 margin-top: var(--gap-6);
                             }
                         }
+                        @include sm-mobile {
+                            min-height: 3.6rem;
+                            font-size: 1.8rem;
+                            line-height: 2rem;
+                        }
                     }
                     .txt {
                         color: #555;
@@ -1006,6 +1016,11 @@
                         font-weight: var(--font-medium);
                         line-height: 2.1rem;
                         @include ellipsis;
+
+                        @include sm-mobile {
+                            font-size: 1.5rem;
+                            line-height: 1.8rem;
+                        }
                     }
                 }
             }
