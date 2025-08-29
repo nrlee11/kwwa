@@ -732,50 +732,61 @@
         position: relative;
         top: -0.1rem;
         display: inline-block;
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
         margin-right: var(--gap-7);
         vertical-align: var(--align-m);
     }
     &[class*="_outlink"] {
-        top: -0.2rem;
-        background: url($url-img-icon + "ico_outlink.svg") no-repeat 0 0;
+        // top: -0.2rem;
+        background: url($url-img-icon + "ico_outlink.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_download"] {
-        top: -0.2rem;
-        background: url($url-img-icon + "ico_download2.svg") no-repeat 0 0 !important;
+        // top: -0.2rem;
+        background: url($url-img-icon + "ico_download2.svg") no-repeat center center !important;
+        background-size: 2rem 2rem;
     }
     &[class*="_arrow"] {
         width: 1.6rem;
         height: 0.9rem;
-        background: url($url-img-icon + "ico_arrow.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_arrow.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_bluearrow"] {
-        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_bluearrow2"] {
-        background: url($url-img-icon + "ico_arrow_blue2.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_arrow_blue2.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_mark"] {
-        background: url($url-img-icon + "ico_mark.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_mark.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_marknavy"] {
         width: 2rem;
         height: 2rem;
         margin: -0.1rem var(--gap-8) 0 0;
-        background: url($url-img-icon + "ico_mark_navy.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_mark_navy.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_warning"] {
-        background: url($url-img-icon + "ico_warning.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_warning.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_print"] {
-        background: url($url-img-icon + "ico_print.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_print.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_copy"] {
-        background: url($url-img-icon + "ico_copy.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_copy.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_file"] {
-        background: url($url-img-icon + "ico_file.svg") no-repeat 0 0;
+        background: url($url-img-icon + "ico_file.svg") no-repeat center center;
+        background-size: 2rem 2rem;
     }
     &[class*="_txt"] {
         position: relative;

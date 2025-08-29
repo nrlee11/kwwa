@@ -44,6 +44,7 @@
   --gap-17: 1.7rem;
   --gap-18: 1.8rem;
   --gap-20: 2rem;
+  --gap-22: 2.2rem;
   --gap-24: 2.4rem;
   --gap-25: 2.5rem;
   --gap-26: 2.6rem;
@@ -1892,50 +1893,59 @@ button {
   position: relative;
   top: -0.1rem;
   display: inline-block;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   margin-right: var(--gap-7);
   vertical-align: var(--align-m);
 }
 [class^=ico_][class*=_outlink] {
-  top: -0.2rem;
-  background: url("../../resources/images/icon/ico_outlink.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_outlink.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_download] {
-  top: -0.2rem;
-  background: url("../../resources/images/icon/ico_download2.svg") no-repeat 0 0 !important;
+  background: url("../../resources/images/icon/ico_download2.svg") no-repeat center center !important;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_arrow] {
   width: 1.6rem;
   height: 0.9rem;
-  background: url("../../resources/images/icon/ico_arrow.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_arrow.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_bluearrow] {
-  background: url("../../resources/images/icon/ico_arrow_blue.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_arrow_blue.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_bluearrow2] {
-  background: url("../../resources/images/icon/ico_arrow_blue2.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_arrow_blue2.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_mark] {
-  background: url("../../resources/images/icon/ico_mark.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_mark.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_marknavy] {
   width: 2rem;
   height: 2rem;
   margin: -0.1rem var(--gap-8) 0 0;
-  background: url("../../resources/images/icon/ico_mark_navy.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_mark_navy.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_warning] {
-  background: url("../../resources/images/icon/ico_warning.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_warning.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_print] {
-  background: url("../../resources/images/icon/ico_print.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_print.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_copy] {
-  background: url("../../resources/images/icon/ico_copy.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_copy.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_file] {
-  background: url("../../resources/images/icon/ico_file.svg") no-repeat 0 0;
+  background: url("../../resources/images/icon/ico_file.svg") no-repeat center center;
+  background-size: 2rem 2rem;
 }
 [class^=ico_][class*=_txt] {
   position: relative;
@@ -4679,25 +4689,29 @@ select.sm {
 }
 [class^=btn_][class*=_pop] {
   padding-right: var(--gap-14);
-  background: url("../../resources/images/icon/ico_pop.svg") no-repeat right 0.5rem;
+  background: url("../../resources/images/icon/ico_pop.svg") no-repeat right 0.4rem;
 }
 [class^=btn_][class*=_link] {
-  padding-right: var(--gap-28);
-  background: url("../../resources/images/icon/ico_arrow_blue.svg") no-repeat right -0.2rem;
+  padding-right: var(--gap-22);
+  background: url("../../resources/images/icon/ico_arrow_blue.svg") no-repeat right center;
+  background-size: 2rem 2rem;
 }
 [class^=btn_][class*=_attachment] {
   line-height: 2rem;
-  padding-right: var(--gap-28);
+  padding-right: var(--gap-22);
   background: url("../../resources/images/common/bg_reset.svg") no-repeat right;
+  background-size: 2rem 2rem;
 }
 [class^=btn_][class*=_download], [class^=btn_][class*=_upload] {
-  padding-right: var(--gap-28);
+  padding-right: var(--gap-22);
   color: var(--color-navy);
   text-align: left;
   background: url("../../resources/images/icon/ico_download.svg") no-repeat right 50%;
+  background-size: 2rem 2rem;
 }
 [class^=btn_][class*=_upload] {
   background: url("../../resources/images/icon/ico_upload.svg") no-repeat right -0.2rem;
+  background-size: 2rem 2rem;
 }
 [class^=btn_]:disabled {
   opacity: 0.3;
@@ -5958,7 +5972,7 @@ select.sm {
   }
   .schedule_list .schedule_group .side [class^=btn_] [class^=ico_] {
     position: absolute;
-    top: 0.8rem;
+    top: 1.1rem;
     right: 1.2rem;
   }
 }

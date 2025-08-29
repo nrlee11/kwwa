@@ -100,26 +100,30 @@
     }
     &[class*="_pop"] {
         padding-right: var(--gap-14);
-        background: url($url-img-icon + "ico_pop.svg") no-repeat right 0.5rem;
+        background: url($url-img-icon + "ico_pop.svg") no-repeat right 0.4rem;
     }
     &[class*="_link"] {
-        padding-right: var(--gap-28);
-        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat right -0.2rem;
+        padding-right: var(--gap-22);
+        background: url($url-img-icon + "ico_arrow_blue.svg") no-repeat right center;
+        background-size: 2rem 2rem;
     }
     &[class*="_attachment"] {
         line-height: 2rem;
-        padding-right: var(--gap-28);
+        padding-right: var(--gap-22);
         background: url($url-img-common + "bg_reset.svg") no-repeat right;
+        background-size: 2rem 2rem;
     }
     &[class*="_download"],
     &[class*="_upload"] {
-        padding-right: var(--gap-28);
+        padding-right: var(--gap-22);
         color: var(--color-navy);
         text-align: left;
         background: url($url-img-icon + "ico_download.svg") no-repeat right 50%;
+        background-size: 2rem 2rem;
     }
     &[class*="_upload"] {
         background: url($url-img-icon + "ico_upload.svg") no-repeat right -0.2rem;
+        background-size: 2rem 2rem;
     }
     &:disabled {
         opacity: 0.3;
