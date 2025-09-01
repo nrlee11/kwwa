@@ -447,7 +447,7 @@ button {
 
 #container {
   width: 120rem;
-  margin: 0 auto 10rem;
+  margin: 0 auto;
 }
 #container > .lyinner {
   display: flex;
@@ -579,7 +579,7 @@ button {
     display: none;
   }
   #container #contents {
-    padding: var(--gap-50) var(--gap-16);
+    padding: var(--gap-30) var(--gap-16);
   }
 }
 
@@ -1220,6 +1220,7 @@ button {
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  line-clamp: 1;
   word-break: break-all;
 }
 
@@ -5640,6 +5641,7 @@ select.sm {
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  line-clamp: 1;
   word-break: break-all;
 }
 .service_area .tab_area .tab_cont .detail_view .article .txt:hover {
