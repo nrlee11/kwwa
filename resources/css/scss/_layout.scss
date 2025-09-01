@@ -448,8 +448,12 @@
     }
     .kwwa_logo {
         width: 21rem;
-        height: 3.3rem;
-        background: url($url-img-common + "kwwa_logo.svg") no-repeat 0 0;
+        aspect-ratio: 21 / 3.3;
+        background: url($url-img-common + "kwwa_logo.svg") no-repeat center / contain;
+
+        @include sm-mobile {
+            width: 15rem;
+        }
     }
     .contact_area {
         margin-top: var(--gap-15);

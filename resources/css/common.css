@@ -679,8 +679,13 @@ button {
 }
 #footer .kwwa_logo {
   width: 21rem;
-  height: 3.3rem;
-  background: url("../../resources/images/common/kwwa_logo.svg") no-repeat 0 0;
+  aspect-ratio: 21/3.3;
+  background: url("../../resources/images/common/kwwa_logo.svg") no-repeat center/contain;
+}
+@media screen and (max-width: 767px) {
+  #footer .kwwa_logo {
+    width: 15rem;
+  }
 }
 #footer .contact_area {
   margin-top: var(--gap-15);
