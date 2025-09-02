@@ -1082,8 +1082,8 @@ button {
   display: block;
   padding: var(--gap-16);
   color: var(--color-darkblack);
-  font-size: 1.9rem;
-  font-weight: var(--font-bold);
+  font-size: 1.6rem;
+  font-weight: var(--font-semibold);
   line-height: 1.9rem;
   border-bottom: 1px solid #c8c8c8;
 }
