@@ -1108,7 +1108,7 @@ button {
 }
 .side_gnb .side_nav .depth2 > li > a {
   display: inline-block;
-  padding: var(--gap-6) 0;
+  padding: var(--gap-10) 0;
   color: #555;
   font-size: var(--font-size-sm);
   font-weight: var(--font-medium);
