@@ -105,10 +105,10 @@
 }
 
 @mixin tbl-body {
-    height: 5rem;
+    // height: 5rem;
     color: var(--color-gray);
     padding: var(--gap-10) var(--gap-10);
-    border-bottom: $border #cdd1d5;
+    border-bottom: $border #d6e0eb;
     // border-left: $border #cdd1d5;
     background-color: var(--color-white);
     text-align: center;

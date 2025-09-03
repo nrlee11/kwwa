@@ -2712,10 +2712,9 @@ select.sm {
   border-left: 0.1rem solid #99b0cb;
 }
 .board_area .tbl tbody td {
-  height: 5rem;
   color: var(--color-gray);
   padding: var(--gap-10) var(--gap-10);
-  border-bottom: 0.1rem solid #cdd1d5;
+  border-bottom: 0.1rem solid #d6e0eb;
   background-color: var(--color-white);
   text-align: center;
 }
