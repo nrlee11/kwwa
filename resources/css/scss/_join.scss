@@ -25,10 +25,29 @@
             background-image: url($url-img-icon + "ico_identity2.svg");
         }
     }
+    &:active {
+        background: var(--color-warmblue);
+        color: var(--color-white);
+        &.self {
+            .identity_tit:before {
+                background-image: url($url-img-icon + "ico_identity1_on.svg");
+            }
+        }
+        &.simple {
+            .identity_tit:before {
+                background-image: url($url-img-icon + "ico_identity2_on.svg");
+            }
+        }
+        .identity_tit {
+            color: inherit;
+            &:after {
+                background-image: url($url-img-icon + "ico_arrow_white.svg");
+            }
+        }
+    }
     @media (hover: hover) {
         &:hover,
-        &:focus,
-        &:active {
+        &:focus {
             background: var(--color-warmblue);
             color: var(--color-white);
             &.self {
