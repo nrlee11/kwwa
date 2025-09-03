@@ -640,7 +640,7 @@ button {
 #footer .lyinner {
   width: 120rem;
   margin: 0 auto;
-  padding-bottom: 9rem;
+  padding-bottom: 5rem;
 }
 @media screen and (max-width: 1200px) {
   #footer .lyinner {
