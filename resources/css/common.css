@@ -568,6 +568,9 @@ button {
 #container #contents .section + .section {
   margin-top: var(--gap-30);
 }
+#container #contents .section:last-child {
+  margin-bottom: var(--gap-50);
+}
 @media screen and (max-width: 1200px) {
   #container {
     width: 100%;

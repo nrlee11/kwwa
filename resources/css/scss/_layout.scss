@@ -351,6 +351,9 @@
         .section + .section {
             margin-top: var(--gap-30);
         }
+        .section:last-child {
+            margin-bottom: var(--gap-50);
+        }
     }
     @include mobile {
         width: 100%;
