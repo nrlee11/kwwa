@@ -27,7 +27,8 @@
     }
     @media (hover: hover) {
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
             background: var(--color-warmblue);
             color: var(--color-white);
             &.self {

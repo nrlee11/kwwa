@@ -7230,20 +7230,20 @@ select.sm {
   background-image: url("../../resources/images/icon/ico_identity2.svg");
 }
 @media (hover: hover) {
-  .btn_identity:hover, .btn_identity:focus {
+  .btn_identity:hover, .btn_identity:focus, .btn_identity:active {
     background: var(--color-warmblue);
     color: var(--color-white);
   }
-  .btn_identity:hover.self .identity_tit:before, .btn_identity:focus.self .identity_tit:before {
+  .btn_identity:hover.self .identity_tit:before, .btn_identity:focus.self .identity_tit:before, .btn_identity:active.self .identity_tit:before {
     background-image: url("../../resources/images/icon/ico_identity1_on.svg");
   }
-  .btn_identity:hover.simple .identity_tit:before, .btn_identity:focus.simple .identity_tit:before {
+  .btn_identity:hover.simple .identity_tit:before, .btn_identity:focus.simple .identity_tit:before, .btn_identity:active.simple .identity_tit:before {
     background-image: url("../../resources/images/icon/ico_identity2_on.svg");
   }
-  .btn_identity:hover .identity_tit, .btn_identity:focus .identity_tit {
+  .btn_identity:hover .identity_tit, .btn_identity:focus .identity_tit, .btn_identity:active .identity_tit {
     color: inherit;
   }
-  .btn_identity:hover .identity_tit:after, .btn_identity:focus .identity_tit:after {
+  .btn_identity:hover .identity_tit:after, .btn_identity:focus .identity_tit:after, .btn_identity:active .identity_tit:after {
     background-image: url("../../resources/images/icon/ico_arrow_white.svg");
   }
 }
