@@ -2152,7 +2152,7 @@ select {
             }
             .tit,
             .item {
-                min-height: 5rem; //0807 수정 (4.8에서 4로)
+                // min-height: 5rem;
                 @include mobile {
                     min-height: auto;
                 }
@@ -2168,7 +2168,7 @@ select {
                 > label,
                 > span {
                     display: inline-block;
-                    padding-top: var(--gap-13);
+                    padding-top: var(--gap-8);
                     @include mobile {
                         padding-top: 0;
                     }

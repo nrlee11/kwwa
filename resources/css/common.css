@@ -3289,10 +3289,6 @@ select.sm {
 .form_section .form_list .form_group + .form_group {
   margin-top: var(--gap-20);
 }
-.form_section .form_list .form_group .tit,
-.form_section .form_list .form_group .item {
-  min-height: 5rem;
-}
 @media screen and (max-width: 1200px) {
   .form_section .form_list .form_group .tit,
   .form_section .form_list .form_group .item {
@@ -3313,7 +3309,7 @@ select.sm {
 .form_section .form_list .form_group .tit > label,
 .form_section .form_list .form_group .tit > span {
   display: inline-block;
-  padding-top: var(--gap-13);
+  padding-top: var(--gap-8);
 }
 @media screen and (max-width: 1200px) {
   .form_section .form_list .form_group .tit > label,
