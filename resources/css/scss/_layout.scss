@@ -929,6 +929,7 @@
             > li {
                 position: relative;
                 padding-left: var(--gap-12);
+                margin: var(--gap-5) 0;
                 &::before {
                     @include pseudo-selector;
                     width: 0.3rem;

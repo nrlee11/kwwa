@@ -1130,6 +1130,7 @@ button {
 .side_gnb .side_nav .depth3 > li {
   position: relative;
   padding-left: var(--gap-12);
+  margin: var(--gap-5) 0;
 }
 .side_gnb .side_nav .depth3 > li::before {
   content: "";
