@@ -146,6 +146,10 @@ $(function () {
             $dim.hide();
             $(".sideOpen").attr("aria-expanded", "false");
         });
+        // 배경 클릭 시 닫기 추가
+        $dim.on("click", function () {
+            $(".sideClose").trigger("click");
+        });
 
         $(document).on("keydown", function (e) {
             if (e.key === "Escape" && $mgnb.is(":visible")) {

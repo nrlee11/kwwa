@@ -998,14 +998,15 @@ button {
   z-index: 99999;
   overflow: auto;
   height: auto;
-  width: 100%;
+  width: 80%;
+  max-width: 400px;
 }
 .side_gnb .side_nav_wrap {
   position: relative;
   z-index: 10;
-  width: calc(100% - 8.7rem);
+  width: 100%;
   height: 100%;
-  margin-left: 8.7rem;
+  margin-left: 0;
   background-color: var(--color-white);
 }
 @media screen and (max-width: 320px) {
