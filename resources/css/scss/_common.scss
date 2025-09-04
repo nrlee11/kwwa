@@ -306,6 +306,15 @@
     font-size: var(--font-size-sm);
     > li {
         position: relative;
+
+        > a {
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: underline;
+            }
+        }
+
         &:first-child::before,
         &::after {
             display: inline-block;

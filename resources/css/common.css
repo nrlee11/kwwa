@@ -1484,6 +1484,9 @@ button {
 .breadcrumb > li {
   position: relative;
 }
+.breadcrumb > li > a:hover, .breadcrumb > li > a:focus, .breadcrumb > li > a:active {
+  text-decoration: underline;
+}
 .breadcrumb > li:first-child::before, .breadcrumb > li::after {
   display: inline-block;
   width: 1.6rem;
