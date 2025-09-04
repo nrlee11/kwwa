@@ -5868,9 +5868,6 @@ select.sm {
     width: 10.64rem;
     text-align: center;
   }
-  .schedule_list .schedule_group .time .tit {
-    line-height: 3.8rem;
-  }
 }
 .schedule_list .schedule_group .timetable {
   display: flex;
@@ -7042,17 +7039,14 @@ select.sm {
 }
 .edu_schedule_list .schedule_group .time .tit {
   color: var(--color-darkblack);
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: var(--font-bold);
 }
 @media screen and (max-width: 1200px) {
   .edu_schedule_list .schedule_group .time {
     width: 10.64rem;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
-  }
-  .edu_schedule_list .schedule_group .time .tit {
-    line-height: 3.8rem;
   }
 }
 .edu_schedule_list .schedule_group .timetable {

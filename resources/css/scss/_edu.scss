@@ -389,16 +389,16 @@
             width: 8rem;
             .tit {
                 color: var(--color-darkblack);
-                font-size: 3rem;
+                font-size: 2.2rem;
                 font-weight: var(--font-bold);
             }
             @include mobile {
                 width: 10.64rem;
-                font-size: 2.5rem;
+                font-size: 1.8rem;
                 text-align: center;
-                .tit {
-                    line-height: 3.8rem;
-                }
+                // .tit {
+                //     line-height: 3.8rem;
+                // }
             }
         }
         .timetable {
