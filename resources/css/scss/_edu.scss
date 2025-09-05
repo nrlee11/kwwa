@@ -120,12 +120,13 @@
         > .cell {
             display: flex;
             align-items: flex-start;
-            line-height: 2rem;
+            line-height: 2.28rem;
             text-align: left;
             + .cell {
                 margin-top: var(--gap-4);
             }
             @include mobile {
+                line-height: 2rem;
                 flex-direction: column;
                 gap: 0.2rem 0;
                 + .cell {

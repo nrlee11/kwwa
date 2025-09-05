@@ -6757,7 +6757,7 @@ select.sm {
 .edu_group .timetable > .cell {
   display: flex;
   align-items: flex-start;
-  line-height: 2rem;
+  line-height: 2.28rem;
   text-align: left;
 }
 .edu_group .timetable > .cell + .cell {
@@ -6765,6 +6765,7 @@ select.sm {
 }
 @media screen and (max-width: 1200px) {
   .edu_group .timetable > .cell {
+    line-height: 2rem;
     flex-direction: column;
     gap: 0.2rem 0;
   }
