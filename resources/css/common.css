@@ -2101,7 +2101,7 @@ select.sm {
   font-size: var(--font-size-sm);
 }
 .select_layer .select_box ul > li + li {
-  margin-top: var(--gap-5);
+  margin-top: var(--gap-10);
 }
 .select_layer .select_box ul > li > a:hover {
   color: var(--color-blue);
