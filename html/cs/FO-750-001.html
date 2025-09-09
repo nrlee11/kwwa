@@ -106,7 +106,7 @@
                                         <div class="board_count">전체 <span>10</span>/1,000</div>
                                     </div>
                                     <div class="rside">
-                                        <div class="form_item inblock">
+                                        <!-- <div class="form_item inblock">
                                             <div class="inp_select size_130">
                                                 <select class="sm" title="노출 개수 선택">
                                                     <option value="">지역전체</option>
@@ -129,7 +129,7 @@
                                                     <option value="">제주도</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="form_item inblock gap_mt10">
                                             <div class="inp_select size_80">
                                                 <select class="sm" title="노출 개수 선택">
@@ -146,24 +146,24 @@
                                 <!-- board_list -->
                                 <table class="tbl react">
                                     <caption>
-                                        No, 구분, 제목, 근무지, 첨부파일, 등록일, 조회 정보 제공
+                                        No, 등급, 제목, 회사명, 상태, 등록일, 조회 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 80px" />
-                                        <col style="width: 88px" />
-                                        <col />
                                         <col style="width: 80px" />
-                                        <col style="width: 88px" />
+                                        <col />
+                                        <col style="width: 120px" />
+                                        <col style="width: 80px" />
                                         <col style="width: 131px" />
                                         <col style="width: 83px" />
                                     </colgroup>
                                     <thead>
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">구분</th>
+                                            <th scope="col">등급</th>
                                             <th scope="col">제목</th>
-                                            <th scope="col">근무지</th>
-                                            <th scope="col">첨부파일</th>
+                                            <th scope="col">회사명</th>
+                                            <th scope="col">상태</th>
                                             <th scope="col">등록일</th>
                                             <th scope="col">조회</th>
                                         </tr>
@@ -173,7 +173,7 @@
                                             <td data-cell-header="No">
                                                 <div>5</div>
                                             </td>
-                                            <td data-cell-header="구분">
+                                            <td data-cell-header="등급">
                                                 <div>1급/2급</div>
                                             </td>
                                             <td data-cell-header="제목" class="left">
@@ -186,13 +186,11 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td data-cell-header="근무지">
-                                                <div>서울</div>
+                                            <td data-cell-header="회사명">
+                                                <div>00 수질관리 주식회사</div>
                                             </td>
-                                            <td data-cell-header="첨부파일">
-                                                <div>
-                                                    <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                </div>
+                                            <td data-cell-header="상태">
+                                                <div>모집중</div>
                                             </td>
                                             <td data-cell-header="등록일"><div>2021-03-10</div></td>
                                             <td data-cell-header="조회"><div>000</div></td>
@@ -201,7 +199,7 @@
                                             <td data-cell-header="No">
                                                 <div>4</div>
                                             </td>
-                                            <td data-cell-header="구분">
+                                            <td data-cell-header="등급">
                                                 <div>3급</div>
                                             </td>
                                             <td data-cell-header="제목" class="left">
@@ -211,13 +209,11 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td data-cell-header="근무지">
-                                                <div>경기</div>
+                                            <td data-cell-header="회사명">
+                                                <div>00 수질관리 주식회사</div>
                                             </td>
-                                            <td data-cell-header="첨부파일">
-                                                <div>
-                                                    <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                </div>
+                                            <td data-cell-header="상태">
+                                                <div>모집중</div>
                                             </td>
                                             <td data-cell-header="등록일"><div>2021-03-10</div></td>
                                             <td data-cell-header="조회"><div>000</div></td>
@@ -226,7 +222,7 @@
                                             <td data-cell-header="No">
                                                 <div>3</div>
                                             </td>
-                                            <td data-cell-header="구분">
+                                            <td data-cell-header="등급">
                                                 <div>3급</div>
                                             </td>
                                             <td data-cell-header="제목" class="left">
@@ -236,13 +232,11 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td data-cell-header="근무지">
-                                                <div>인천</div>
+                                            <td data-cell-header="회사명">
+                                                <div>00 수질관리 주식회사</div>
                                             </td>
-                                            <td data-cell-header="첨부파일">
-                                                <div>
-                                                    <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                </div>
+                                            <td data-cell-header="상태">
+                                                <div>모집중</div>
                                             </td>
                                             <td data-cell-header="등록일"><div>2021-03-10</div></td>
                                             <td data-cell-header="조회"><div>000</div></td>
@@ -251,7 +245,7 @@
                                             <td data-cell-header="No">
                                                 <div>2</div>
                                             </td>
-                                            <td data-cell-header="구분">
+                                            <td data-cell-header="등급">
                                                 <div>3급</div>
                                             </td>
                                             <td data-cell-header="제목" class="left">
@@ -261,13 +255,11 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td data-cell-header="근무지">
-                                                <div>경기</div>
+                                            <td data-cell-header="회사명">
+                                                <div>00수질관리 주식회사</div>
                                             </td>
-                                            <td data-cell-header="첨부파일">
-                                                <div>
-                                                    <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                </div>
+                                            <td data-cell-header="상태">
+                                                <div>종료</div>
                                             </td>
                                             <td data-cell-header="등록일"><div>2021-03-10</div></td>
                                             <td data-cell-header="조회"><div>000</div></td>
@@ -276,7 +268,7 @@
                                             <td data-cell-header="No">
                                                 <div>1</div>
                                             </td>
-                                            <td data-cell-header="구분">
+                                            <td data-cell-header="등급">
                                                 <div>3급</div>
                                             </td>
                                             <td data-cell-header="제목" class="left">
@@ -286,13 +278,11 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td data-cell-header="근무지">
-                                                <div>경기</div>
+                                            <td data-cell-header="회사명">
+                                                <div>00</div>
                                             </td>
-                                            <td data-cell-header="첨부파일">
-                                                <div>
-                                                    <span class="ico_file"><span class="hidden">첨부파일</span></span>
-                                                </div>
+                                            <td data-cell-header="상태">
+                                                <div>종료</div>
                                             </td>
                                             <td data-cell-header="등록일"><div>2021-03-10</div></td>
                                             <td data-cell-header="조회"><div>000</div></td>
