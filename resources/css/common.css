@@ -7468,8 +7468,8 @@ select.sm {
 
 .status_level_list {
   display: flex;
+  justify-content: space-between;
   align-items: stretch;
-  gap: 3.1rem;
 }
 .status_level_list:not(:has(.status_level_items[aria-current=step])) .status_level_items {
   --current-color: #8a949e;
@@ -7484,7 +7484,7 @@ select.sm {
 .status_level_items + .status_level_items:before {
   position: absolute;
   top: 50%;
-  left: -2.3rem;
+  left: -3rem;
   width: 1.5rem;
   height: 1.5rem;
   background: url("../../resources/images/common/bg_double_arrow_active.svg") no-repeat 0 0;
@@ -7505,7 +7505,7 @@ select.sm {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 8rem;
+  min-width: 7rem;
   height: 100%;
   min-height: 4.6rem;
   padding: 0.5rem;
