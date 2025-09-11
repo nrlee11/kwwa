@@ -1993,14 +1993,14 @@ select {
             gap: 1rem;
             width: 100%;
             @include flex-between;
-            align-items: flex-end;
+            align-items: center;
             // gap: 0 2rem;
             [class^="data_badge"] {
                 align-self: flex-start;
             }
             .tit {
                 width: 100%;
-                font-size: var(--font-size-lg);
+                font-size: var(--font-size-md);
                 font-weight: var(--font-bold);
             }
             .medium_point {
