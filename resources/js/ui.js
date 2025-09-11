@@ -515,6 +515,7 @@ $(function () {
             "/my/": ".menuitem-06",
             "/cs/": ".menuitem-07",
             "/search/": ".menuitem-08",
+            "/service/": ".menuitem-09",
         };
 
         //$(".lnb_wrap").hide();
