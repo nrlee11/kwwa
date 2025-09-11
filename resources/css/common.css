@@ -3098,7 +3098,7 @@ select.sm {
 }
 .board_view .head {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 2rem;
   margin-bottom: var(--gap-10);
   padding-bottom: var(--gap-10);
@@ -3195,7 +3195,13 @@ select.sm {
   flex: 1;
 }
 .board_view.type1 .head .desc_sec {
-  margin-top: var(--gap-24);
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+}
+@media screen and (max-width: 767px) {
+  .board_view.type1 .head .desc_sec {
+    white-space: normal;
+  }
 }
 .board_view.type1 .cont {
   padding: var(--gap-24) 0;

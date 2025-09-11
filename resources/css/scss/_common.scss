@@ -1977,7 +1977,7 @@ select {
     border-bottom: $border #cdd1d5;
     .head {
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 2rem;
         margin-bottom: var(--gap-10);
         padding-bottom: var(--gap-10);
@@ -2069,7 +2069,13 @@ select {
                 }
             }
             .desc_sec {
-                margin-top: var(--gap-24);
+                // margin-top: var(--gap-24);
+                white-space: nowrap;
+                font-size: var(--font-size-sm);
+
+                @include sm-mobile {
+                    white-space: normal;
+                }
             }
         }
         .cont {
