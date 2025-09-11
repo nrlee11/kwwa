@@ -362,6 +362,7 @@
 
 .edu_schedule_list {
     .schedule_group {
+        width: 100%;
         @include flex-between;
         align-items: center;
         gap: 0 4rem;

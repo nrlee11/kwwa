@@ -1172,6 +1172,22 @@ button {
   z-index: 9;
 }
 
+#aside {
+  display: block;
+}
+
+#sideGnb {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #aside {
+    display: none;
+  }
+  #sideGnb {
+    display: block;
+  }
+}
 .skipTo {
   overflow: hidden;
   display: block;
@@ -7013,6 +7029,7 @@ select.sm {
 }
 
 .edu_schedule_list .schedule_group {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
