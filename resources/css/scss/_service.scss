@@ -19,10 +19,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    // white-space: nowrap;
+    white-space: nowrap;
+    font-size: var(--font-size-sm);
 
-    @include sm-mobile {
+    @include mobile {
         width: 100%;
+        white-space: normal;
     }
 }
 .service_list2 {
@@ -30,185 +32,187 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    // white-space: nowrap;
-    @include sm-mobile {
+    white-space: nowrap;
+    font-size: var(--font-size-sm);
+    @include mobile {
         width: 100%;
+        white-space: normal;
     }
 }
 
 .li1 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon01.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon01.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li2 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon02.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon02.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li3 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon03.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon03.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li4 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon04.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon04.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li5 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon05.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon05.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li6 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon06.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon06.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li7 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon07.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon07.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li8 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon08.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon08.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li9 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon09.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon09.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li10 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon10.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon10.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li11 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon11.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon11.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li12 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon12.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon12.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li13 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon13.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon13.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li14 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon14.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon14.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li15 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon15.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon15.svg) no-repeat center center;
         background-size: contain;
     }
 }
 .li16 {
     &::before {
         content: ""; // 반드시 필요
-        display: inline-block; // or block
+        display: block; // or block
         width: 30px;
         height: 30px;
         margin-right: 8px;
-        background: url(/resources/images/service/pvc_icon16.png) no-repeat center center;
+        background: url(/resources/images/service/pvc_icon16.svg) no-repeat center center;
         background-size: contain;
     }
 }
