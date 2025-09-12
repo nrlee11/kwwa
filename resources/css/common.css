@@ -3139,6 +3139,7 @@ select.sm {
   width: 100%;
   font-size: var(--font-size-md);
   font-weight: var(--font-bold);
+  line-height: 2.5rem;
 }
 .board_view .head .tit_sec .medium_point {
   font-weight: var(--font-medium);
