@@ -1996,7 +1996,7 @@ select {
     border-bottom: $border #cdd1d5;
     .head {
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 2rem;
         margin-bottom: var(--gap-10);
         padding-bottom: var(--gap-10);
@@ -2012,7 +2012,7 @@ select {
             gap: 1rem;
             width: 100%;
             @include flex-between;
-            align-items: center;
+            align-items: flex-end;
             // gap: 0 2rem;
             [class^="data_badge"] {
                 align-self: flex-start;
