@@ -595,13 +595,13 @@
     &[class*="_badge"] {
         display: inline-block;
         min-width: 4.6rem;
-        height: 3.2rem;
+        height: 2.5rem;
         padding: 0 var(--gap-8);
         border-radius: 0.4rem;
         color: var(--color-white);
-        font-size: var(--font-size-md);
+        font-size: var(--font-size-sm);
         font-weight: var(--font-regular);
-        line-height: 3.2rem;
+        line-height: 2.5rem;
         text-align: center;
     }
     &[class*="_badge1"] {
@@ -1997,19 +1997,19 @@ select {
     .head {
         display: flex;
         align-items: flex-start;
-        gap: 2rem;
+        gap: 1rem;
         margin-bottom: var(--gap-10);
         padding-bottom: var(--gap-10);
         border-bottom: $border #cdd1d5;
         .badge_sec {
             @include flex-aligncenter;
             gap: 0 1.5rem;
-            margin-top: var(--gap-5);
+            // margin-top: 0.5rem;
         }
         .tit_sec {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            // display: flex;
+            // flex-direction: column;
+            gap: 0.5rem;
             width: 100%;
             @include flex-between;
             align-items: flex-end;
@@ -2026,6 +2026,7 @@ select {
                 font-weight: var(--font-medium);
             }
             .info {
+                font-size: var(--font-size-sm);
                 color: var(--color-gray);
                 > span {
                     + span {
@@ -2035,7 +2036,7 @@ select {
             }
             @include mobile {
                 flex-direction: column;
-                gap: 2.4rem 0;
+                gap: 0.5rem 0;
                 .tit {
                     width: 100%;
                 }
