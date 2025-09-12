@@ -7924,3 +7924,202 @@ select.sm {
   color: var(--color-darkgray);
   margin-right: 1rem;
 }
+
+.service_listbox {
+  margin-top: var(--gap-10);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  border-radius: 3rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .service_listbox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.service_list {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .service_list {
+    width: 100%;
+  }
+}
+
+.service_list2 {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .service_list2 {
+    width: 100%;
+  }
+}
+
+.li1::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon01.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li2::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon02.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li3::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon03.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li4::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon04.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li5::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon05.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li6::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon06.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li7::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon07.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li8::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon08.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li9::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon09.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li10::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon10.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li11::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon11.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li12::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon12.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li13::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon13.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li14::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon14.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li15::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon15.png) no-repeat center center;
+  background-size: contain;
+}
+
+.li16::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  background: url(/resources/images/service/pvc_icon16.png) no-repeat center center;
+  background-size: contain;
+}
