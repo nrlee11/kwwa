@@ -5,6 +5,22 @@ html {
     scroll-behavior: smooth; /* 💡 부드러운 스크롤 */
 }
 
+.board_area .tbl.react tbody td {
+    @include mobile {
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+.board_area .tbl.react tbody td > div {
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+        height: auto;
+    }
+}
 .service_listbox {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
