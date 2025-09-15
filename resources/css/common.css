@@ -7925,207 +7925,60 @@ select.sm {
   margin-right: 1rem;
 }
 
+html {
+  scroll-behavior: smooth; /* 💡 부드러운 스크롤 */
+}
+
 .service_listbox {
-  margin-top: var(--gap-10);
-  display: flex;
-  flex-wrap: wrap;
-  background-color: aliceblue;
-  border-radius: 3rem;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .service_listbox {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
-.service_list {
-  width: 55%;
+a.item {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  white-space: nowrap;
-  font-size: var(--font-size-sm);
-}
-@media screen and (max-width: 1200px) {
-  .service_list {
-    width: 100%;
-    white-space: normal;
-  }
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
 }
 
-.service_list2 {
-  width: 45%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  white-space: nowrap;
-  font-size: var(--font-size-sm);
-}
-@media screen and (max-width: 1200px) {
-  .service_list2 {
-    width: 100%;
-    white-space: normal;
-  }
+a.item:hover {
+  background-color: #eaf4ff;
 }
 
-.li1::before {
-  content: "";
+a.item img {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+a.item span {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 407px;
+  height: auto;
   display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon01.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li2::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon02.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li3::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon03.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li4::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon04.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li5::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon05.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li6::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon06.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li7::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon07.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li8::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon08.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li9::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon09.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li10::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon10.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li11::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon11.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li12::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon12.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li13::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon13.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li14::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon14.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li15::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon15.svg) no-repeat center center;
-  background-size: contain;
-}
-
-.li16::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  background: url(/resources/images/service/pvc_icon16.svg) no-repeat center center;
-  background-size: contain;
+  margin: 0 auto;
 }
