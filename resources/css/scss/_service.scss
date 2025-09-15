@@ -16,9 +16,11 @@ html {
     height: 9rem;
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
 
     @include mobile {
         height: auto;
+        margin-top: 0;
     }
 }
 .service_listbox {

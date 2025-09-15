@@ -7941,10 +7941,12 @@ html {
   height: 9rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 1200px) {
   .board_area.service .tbl.react tbody td > div {
     height: auto;
+    margin-top: 0;
   }
 }
 
