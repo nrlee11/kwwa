@@ -7930,20 +7930,20 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
-  .board_area .tbl.react tbody td {
+  .board_area.service .tbl.react tbody td {
     align-items: center;
     gap: 2rem;
     padding: 1rem;
   }
 }
 
-.board_area .tbl.react tbody td > div {
+.board_area.service .tbl.react tbody td > div {
   height: 9rem;
   display: flex;
   flex-direction: column;
 }
 @media screen and (max-width: 1200px) {
-  .board_area .tbl.react tbody td > div {
+  .board_area.service .tbl.react tbody td > div {
     height: auto;
   }
 }

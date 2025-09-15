@@ -5,14 +5,14 @@ html {
     scroll-behavior: smooth; /* 💡 부드러운 스크롤 */
 }
 
-.board_area .tbl.react tbody td {
+.board_area.service .tbl.react tbody td {
     @include mobile {
         align-items: center;
         gap: 2rem;
         padding: 1rem;
     }
 }
-.board_area .tbl.react tbody td > div {
+.board_area.service .tbl.react tbody td > div {
     height: 9rem;
     display: flex;
     flex-direction: column;
