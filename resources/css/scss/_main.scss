@@ -559,6 +559,31 @@
         margin: 0 var(--gap-16);
     }
 }
+.main_menu2 {
+    background-color: var(--color-navy);
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+
+    @include mobile {
+        width: auto;
+        margin: 0 var(--gap-24);
+        padding: 20px;
+    }
+
+    @include sm-mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 30px 10px;
+        margin: 0 var(--gap-16);
+    }
+}
 
 .menu_item {
     display: flex;
