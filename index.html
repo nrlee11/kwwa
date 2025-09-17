@@ -983,7 +983,48 @@
                 });
             });
 
-            // 팝업 - 알림받기
+            // 메인 첫화면 최초입장시 뜨는 브라우저 팝업
+            (function () {
+                function openPopup(name, url, w, h, top, left) {
+                    const features = `width=${w},height=${h},top=${top},left=${left},resizable=yes,scrollbars=yes`;
+                    const popup = window.open(url, name, features);
+                    if (popup) popup.focus();
+                    else console.warn(`${name} 팝업이 차단되었습니다.`);
+                }
+
+                // 팝업 이름별 오늘 하루 안 보기 체크
+                function isBlockedToday(popupName) {
+                    const until = localStorage.getItem(`noPopupUntil_${popupName}`);
+                    if (!until) return false;
+
+                    const now = new Date();
+                    const expire = new Date(until);
+                    return now <= expire;
+                }
+
+                window.addEventListener("DOMContentLoaded", () => {
+                    const sw = window.screen.availWidth;
+                    const sh = window.screen.availHeight;
+                    const w = 400,
+                        h = 450;
+
+                    // 상단 3개
+                    if (!isBlockedToday("popup_top_left")) openPopup("popup_top_left", "html/popup/popup1.html", w, h, 0, 0);
+
+                    if (!isBlockedToday("popup_top_center")) openPopup("popup_top_center", "html/popup/popup2.html", w, h, 0, (sw - w) / 2);
+
+                    if (!isBlockedToday("popup_top_right")) openPopup("popup_top_right", "html/popup/popup3.html", w, h, 0, sw - w);
+
+                    // 하단 3개
+                    if (!isBlockedToday("popup_bottom_left")) openPopup("popup_bottom_left", "html/popup/popup4.html", w, h, sh - h, 0);
+
+                    if (!isBlockedToday("popup_bottom_center")) openPopup("popup_bottom_center", "html/popup/popup5.html", w, h, sh - h, (sw - w) / 2);
+
+                    if (!isBlockedToday("popup_bottom_right")) openPopup("popup_bottom_right", "html/popup/popup6.html", w, h, sh - h, sw - w);
+                });
+            })();
+
+            // 교육일정 - 알림받기버튼 누르면 뜨는 팝업
             $(".btn_border_md.radius:contains('알림받기')").on("click", function () {
                 $("html").addClass("layerOpen");
                 $("#wrap").attr("aria-hidden", "true");

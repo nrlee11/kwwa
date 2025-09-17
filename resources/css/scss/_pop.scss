@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// 메인 팝업만
+
+.popup-wrap {
+    width: auto;
+    height: 50rem;
+    margin: 0;
+    background: rgb(100, 175, 255);
+    padding: 0 10px;
+
+    .pop_btnbox {
+        display: flex;
+        justify-content: space-between;
+    }
+    button {
+        min-width: 9rem;
+        background-color: var(--color-white);
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+    img {
+        width: 100%; /* 팝업 너비에 맞춤 */
+        height: auto; /* 비율 유지 */
+        // max-height: 200px; /* 필요 시 최대 높이 지정 */
+        object-fit: cover; /* 이미지 잘림 없이 비율 유지 */
+        margin-bottom: 15px;
+    }
+}
