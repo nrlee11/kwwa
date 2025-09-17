@@ -8034,14 +8034,18 @@ a.item span {
 
 .popup-wrap {
   width: auto;
-  height: 50rem;
+  height: auto;
   margin: 0;
-  background: rgb(100, 175, 255);
-  padding: 0 10px;
+  background: rgb(209, 225, 241);
+  padding: 10px;
+}
+.popup-wrap .popcont {
+  min-height: 250px;
 }
 .popup-wrap .pop_btnbox {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .popup-wrap button {
   min-width: 9rem;
