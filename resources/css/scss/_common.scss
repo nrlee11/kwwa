@@ -1777,12 +1777,6 @@ select {
             }
         }
     }
-    // input 주민번호, 사업자등록번호 뒷자리 등 에서
-    // 크롬, 사파리에서 ● 표시
-    .ssn-hidden {
-        -webkit-text-security: disc;
-    }
-
     .scroll_guide {
         display: var(--hide);
         margin-bottom: var(--gap-10);
@@ -1898,6 +1892,11 @@ select {
             // }
         }
     }
+}
+// input 주민번호, 사업자등록번호 뒷자리 등 에서
+// 크롬, 사파리에서 ● 표시
+.ssn-hidden {
+    -webkit-text-security: disc;
 }
 .board_search {
     @include flex-aligncenter;

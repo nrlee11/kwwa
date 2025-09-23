@@ -2897,9 +2897,6 @@ select.sm {
     padding: 0.3rem var(--gap-8) 0;
   }
 }
-.board_area .ssn-hidden {
-  -webkit-text-security: disc;
-}
 .board_area .scroll_guide {
   display: var(--hide);
   margin-bottom: var(--gap-10);
@@ -3008,6 +3005,10 @@ select.sm {
   width: 2rem;
   height: 2.1rem;
   background: url("../../resources/images/icon/ico_new.svg") no-repeat 0 0;
+}
+
+.ssn-hidden {
+  -webkit-text-security: disc;
 }
 
 .board_search {
