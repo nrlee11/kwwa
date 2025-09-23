@@ -2897,6 +2897,9 @@ select.sm {
     padding: 0.3rem var(--gap-8) 0;
   }
 }
+.board_area .ssn-hidden {
+  -webkit-text-security: disc;
+}
 .board_area .scroll_guide {
   display: var(--hide);
   margin-bottom: var(--gap-10);
