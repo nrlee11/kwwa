@@ -8035,6 +8035,20 @@ a.item span {
   margin: 0 auto;
 }
 
+.pop_section + .pop_section {
+  margin-top: var(--gap-30);
+}
+
+.tbox2 {
+  height: 13rem !important;
+}
+@media screen and (max-width: 1200px) {
+  .tbox2 {
+    height: 8rem !important;
+    justify-content: center;
+  }
+}
+
 .popup-wrap {
   width: auto;
   height: auto;

@@ -74,3 +74,13 @@ a.item span {
     display: block;
     margin: 0 auto;
 }
+.pop_section + .pop_section {
+    margin-top: var(--gap-30);
+}
+.tbox2 {
+    height: 13rem !important;
+    @include mobile {
+        height: 8rem !important;
+        justify-content: center;
+    }
+}
