@@ -8095,10 +8095,10 @@ a.item span {
 }
 .popup-wrap button {
   min-width: 6rem;
-  background-color: var(--color-white);
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 3px 10px;
   font-weight: 600;
+  color: var(--color-white);
 }
 .popup-wrap img {
   width: 100%; /* 팝업 너비에 맞춤 */
