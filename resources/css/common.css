@@ -8097,7 +8097,7 @@ a.item span {
   min-width: 6rem;
   border-radius: 5px;
   padding: 3px 10px;
-  font-weight: 600;
+  font-weight: var(--fong-regular);
   color: var(--color-white);
 }
 .popup-wrap img {
