@@ -7,7 +7,8 @@
     height: auto;
     margin: 0;
     background: rgb(209, 225, 241);
-    padding: 10px;
+    padding: 10px 10px 0 10px;
+    padding-bottom: 30px; /* 버튼 높이만큼 여백 확보 */
 
     .popcont {
         min-height: 250px;
@@ -15,14 +16,23 @@
     .pop_btnbox {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--color-navy);
+        /* 필요 시 배경 지정 */
+        padding: 5px 10px;
+        text-align: center;
+        border-top: 1px solid #ddd;
     }
     button {
-        min-width: 9rem;
+        min-width: 6rem;
         background-color: var(--color-white);
-        border: 1px solid #000;
+        // border: 1px solid #000;
         border-radius: 5px;
         padding: 5px 10px;
+        font-weight: 600;
     }
     img {
         width: 100%; /* 팝업 너비에 맞춤 */
