@@ -83,4 +83,7 @@ a.item span {
         height: 8rem !important;
         justify-content: center;
     }
+    @include sm-mobile {
+        height: auto !important;
+    }
 }

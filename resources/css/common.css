@@ -8063,6 +8063,11 @@ a.item span {
     justify-content: center;
   }
 }
+@media screen and (max-width: 767px) {
+  .tbox2 {
+    height: auto !important;
+  }
+}
 
 .popup-wrap {
   width: auto;
