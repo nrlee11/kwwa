@@ -8051,7 +8051,7 @@ a.item span {
 }
 
 .pop_section + .pop_section {
-  margin-top: var(--gap-30);
+  margin-top: var(--gap-20);
 }
 
 .tbox2 {
