@@ -3548,7 +3548,9 @@ select {
         background: url($url-img-common + "bg_play.png") no-repeat 50% 50%;
     }
 }
-
+// .swiper-backface-hidden .swiper-slide {
+//     width: 500px !important;
+// }
 // loading
 .loading {
     overflow: hidden;
