@@ -226,6 +226,7 @@ button {
   border: none;
   cursor: pointer;
   background: 0 none;
+  line-height: 1.5;
 }
 
 #wrap {
@@ -3165,7 +3166,6 @@ select.sm {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
 .board_view .head .tit_sec [class^=data_badge] {
   align-self: flex-start;
@@ -3208,7 +3208,7 @@ select.sm {
   height: 100%;
 }
 .board_view .add_file {
-  margin: var(--gap-24) 0;
+  margin: var(--gap-10) 0;
 }
 .board_view .add_file [class^=btn_] {
   display: block;
@@ -3259,19 +3259,9 @@ select.sm {
     white-space: normal;
   }
 }
-.board_view.type1 .cont {
-  padding: var(--gap-24) 0;
-}
 .board_view.type1 .add_file {
   margin: 0;
-  padding: var(--gap-16) 0;
-  background: url("../../resources/images/common/bg_dotted.png") repeat-x 0 0;
-}
-.board_view.type1 .add_file > [class^=btn_] {
-  display: block;
-}
-.board_view.type1 .add_file > [class^=btn_] + [class^=btn_] {
-  margin-top: var(--gap-10);
+  padding: var(--gap-10) 0;
 }
 .board_view.type1 .add_file:has(.msg) {
   border-bottom: 0.1rem solid #cdd1d5;
@@ -3285,9 +3275,6 @@ select.sm {
 }
 .board_view.type1.answer .head {
   border: 0;
-}
-.board_view.type1.answer .add_file {
-  padding-bottom: 0;
 }
 @media screen and (max-width: 1200px) {
   .board_view.type1.answer {

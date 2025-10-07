@@ -2046,7 +2046,7 @@ select {
             gap: 0.5rem;
             width: 100%;
             @include flex-between;
-            align-items: flex-end;
+            // align-items: flex-end;
             // gap: 0 2rem;
             [class^="data_badge"] {
                 align-self: flex-start;
@@ -2095,7 +2095,7 @@ select {
     //     height: 100%;
     // }
     .add_file {
-        margin: var(--gap-24) 0;
+        margin: var(--gap-10) 0;
         [class^="btn_"] {
             display: block;
             + [class^="btn_"] {
@@ -2144,18 +2144,18 @@ select {
             }
         }
         .cont {
-            padding: var(--gap-24) 0;
+            // padding: var(--gap-24) 0;
         }
         .add_file {
             margin: 0;
-            padding: var(--gap-16) 0;
-            background: url($url-img-common + "bg_dotted.png") repeat-x 0 0;
-            > [class^="btn_"] {
-                display: block;
-                + [class^="btn_"] {
-                    margin-top: var(--gap-10);
-                }
-            }
+            padding: var(--gap-10) 0;
+            // background: url($url-img-common + "bg_dotted.png") repeat-x 0 0;
+            // > [class^="btn_"] {
+            //     display: block;
+            //     + [class^="btn_"] {
+            //         margin-top: var(--gap-10);
+            //     }
+            // }
             &:has(.msg) {
                 border-bottom: $border #cdd1d5;
             }
@@ -2170,7 +2170,7 @@ select {
                 border: 0;
             }
             .add_file {
-                padding-bottom: 0;
+                // padding-bottom: 0;
             }
             @include mobile {
                 margin-top: 3.4rem;
