@@ -3031,10 +3031,10 @@ select.sm {
 }
 .board_area .new_set > a .ico_new {
   position: absolute;
-  top: 0.1rem;
+  top: 0.25rem;
   right: 0;
-  width: 2rem;
-  height: 2.1rem;
+  width: 1.7rem;
+  height: 1.7rem;
   background: url("../../resources/images/icon/ico_new.svg") no-repeat 0 0;
 }
 
