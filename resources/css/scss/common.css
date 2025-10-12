@@ -10462,5 +10462,5 @@ a.item span {
   -o-object-fit: cover;
      object-fit: cover;
   /* 이미지 잘림 없이 비율 유지 */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
