@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko" class="layerOpen">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>최종 학력 선택 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap" aria-hidden="true">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">최종 학력 선택</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 최종 학력 선택 -->
+        <div class="layerFix minPopup" id="alertPop" role="dialog" aria-modal="true" style="display: " tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="./layer/name_badge_license2.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">최종 학력 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <storng class="tit">Q. 귀하의 최종 학력은 어떻게 되십니까?</storng>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" checked />
+                                            <label for="label1">이공계 대학 학과 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">인문, 사회계열 대학 학과 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label3" name="label" />
+                                            <label for="label3">이공계 전문대학 학과 졸업(학점은행제 포함)</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label4" name="label" />
+                                            <label for="label4">고등학교 졸업</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label5" name="label" />
+                                            <label for="label5">중학교 이하 졸업</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article gap_mt24">
+                            <!-- board(s) -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl sm size70">
+                                    <caption>
+                                        구분, 학력, 경력, 비고 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 20%" />
+                                        <col />
+                                        <col />
+                                        <col style="width: 20%" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col" class="line">학력</th>
+                                            <th scope="col" class="line">경력</th>
+                                            <th scope="col" class="line">비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="구분">
+                                                <div>
+                                                    1 <br />
+                                                    (학력 요건)
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="학력" class="line"><div>이공계 전문대학 졸업 이상의 학력을 가진 자</div></td>
+                                            <td data-cell-header="경력" class="line"><div>-</div></td>
+                                            <td data-cell-header="비고" rowspan="2" class="line"><div>실무교육 필수 (400시간)</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="구분">
+                                                <div>2 <br />(학력 요건)</div>
+                                            </td>
+                                            <td data-cell-header="학력" class="line"><div>「학점인정 등에 관한 법률」 제8조에 따라 이공계 전문대학 졸업자와 같은 수준 이상의 학력을 인정받은 자</div></td>
+                                            <td data-cell-header="경력" class="line"><div>-</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="구분">
+                                                <div>3 <br />(학력+경력 요건)</div>
+                                            </td>
+                                            <td data-cell-header="학력" class="line"><div>고등학교 졸업 이상의 학력을 가진 자</div></td>
+                                            <td data-cell-header="경력" class="line"><div>수도시설의 설치나 유지관리 분야에서 1년 이상 종사자</div></td>
+                                            <td data-cell-header="비고" rowspan="2" class="line"><div>실무교육 면제</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="구분">
+                                                <div>
+                                                    4 <br />
+                                                    (경력 요건)
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="학력" class="line"><div>-</div></td>
+                                            <td data-cell-header="경력" class="line"><div>수도시설의 설치나 유지관리 분야에서 3년 이상 종사자</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board(e) -->
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">자격증 취득시 학력증명서를 제출합니다.</span></p>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 최종 학력 선택 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 최종 학력 선택
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>
