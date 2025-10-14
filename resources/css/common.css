@@ -4140,7 +4140,7 @@ select.sm {
   outline: var(--color-white) dotted 0.1rem;
 }
 .layerFix.minPopup .layer_wrap {
-  height: 77.4rem;
+  height: auto;
 }
 .layerFix.minPopup .cont .layer_scroll {
   flex: 1 1 auto;
