@@ -7898,13 +7898,13 @@ select.sm {
   background: currentColor;
 }
 
-.article_servay {
+.article_survay {
   display: flex;
   align-items: stretch;
   flex-direction: column;
   height: 100%;
 }
-.article_servay .box_round {
+.article_survay .box_round {
   flex: 1 1 auto;
   box-sizing: border-box;
 }
