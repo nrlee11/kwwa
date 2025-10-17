@@ -42,37 +42,50 @@
                                     <div class="lside">자격증 : 상수도관망시설운영관리사<br />급수 : 2급</div>
                                     <div class="rside">응시일 2025.01.02</div>
                                 </div>
-
-                                <!-- board_view -->
-                                <table class="tbl react">
-                                    <caption>
-                                        응시번호, 응시 결과, 전체평균 정보 제공
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 33.33%" span="2" />
-                                        <col />
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">응시번호</th>
-                                            <th scope="col">응시 결과</th>
-                                            <th scope="col">전체평균</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-cell-header="응시번호"><div>WL-001-1-1-1-001</div></td>
-                                            <td data-cell-header="응시 결과">
-                                                <div>
-                                                    <span class="txt_blue">합격</span>
-                                                    <span class="txt_red">불합격</span>
-                                                </div>
-                                            </td>
-                                            <td data-cell-header="전체평균"><div>60</div></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_view -->
+                                <div class="board_area gap_mt24">
+                                    <!-- board_view -->
+                                    <table class="tbl react row sm size120">
+                                        <caption>
+                                            자격증, 자격번호
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 20%" />
+                                            <col style="width: 30%" />
+                                            <col style="width: 20%" />
+                                            <col style="width: 30%" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">응시번호</th>
+                                                <td data-cell-header="응시번호"><div>2458754566</div></td>
+                                                <th scope="row">이름</th>
+                                                <td data-cell-header="이름"><div>홍*동</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">생년월일</th>
+                                                <td data-cell-header="생년월일"><div>2025-05-05</div></td>
+                                                <th scope="row">연락처</th>
+                                                <td data-cell-header="연락처"><div>010-0000-0000</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">면제여부</th>
+                                                <td data-cell-header="면제여부"><div>면제확정</div></td>
+                                                <th scope="row">면제과목(2)</th>
+                                                <td data-cell-header="면제과목(2)"><div>NNN-NNNN-N</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">응시결과</th>
+                                                <td data-cell-header="응시결과">
+                                                    <div><span class="txt_blue">합격</span><span class="txt_red">/불합격/부정행위</span></div>
+                                                </td>
+                                                <th scope="row">평균</th>
+                                                <td data-cell-header="평균"><div>60</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// board_view -->
+                                </div>
+                                <!--// board -->
                             </div>
                             <!--// board -->
                         </div>
@@ -89,36 +102,104 @@
                                     <!-- board_view -->
                                     <table class="tbl">
                                         <caption>
-                                            NO, 과목, 문항수, 점수, 비고 정보 제공
+                                            교시, 번호, 과목, 문항수, 점수, 비고 정보 제공
                                         </caption>
                                         <colgroup>
-                                            <col style="width: 80px" />
-                                            <col style="width: 192px" />
-                                            <col style="width: 80px" span="3" />
+                                            <col style="width: 10%" />
+                                            <col style="width: 10%" />
+                                            <col style="width: 50%" />
+                                            <col style="width: 10%" span="3" />
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th scope="col">NO</th>
-                                                <th scope="col">구분</th>
-                                                <th scope="col">문항수</th>
-                                                <th scope="col">점수</th>
-                                                <th scope="col">비고</th>
+                                                <th scope="col">교시</th>
+                                                <th scope="col" class="line">번호</th>
+                                                <th scope="col" class="line">과목</th>
+                                                <th scope="col" class="line">문항수</th>
+                                                <th scope="col" class="line">점수</th>
+                                                <th scope="col" class="line">비고</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><div>1</div></td>
-                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
-                                                <td><div>40</div></td>
-                                                <td><div>100</div></td>
-                                                <td><div></div></td>
+                                                <td rowspan="4"><div>1</div></td>
+                                                <td class="line"><div>1</div></td>
+                                                <td class="line"><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
                                             </tr>
-                                            <tr class="txt_red">
-                                                <td><div>1</div></td>
-                                                <td><div>상수도관로 송배급수시설 운영관리</div></td>
-                                                <td><div>40</div></td>
-                                                <td><div>39</div></td>
-                                                <td><div>과락</div></td>
+                                            <tr>
+                                                <td class="line"><div>2</div></td>
+                                                <td class="line"><div>상수도관로 운영관리 계획수립</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>3</div></td>
+                                                <td class="line"><div>상수도관로 관망관리 수리학</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>4</div></td>
+                                                <td class="line"><div>상수도관로 관로 시설 진단 및 조사</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4"><div>2</div></td>
+                                                <td class="line"><div>1</div></td>
+                                                <td class="line"><div>상수도관로 블록시스템 구축</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>2</div></td>
+                                                <td class="line"><div>상수도관로 시설운영정보 구축</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>3</div></td>
+                                                <td class="line"><div>상수도관로 개량</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>4</div></td>
+                                                <td class="line"><div class="txt_red">상수도관로 누수관리</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>30</div></td>
+                                                <td class="line"><div class="txt_red">과락</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4"><div>3</div></td>
+                                                <td class="line"><div>1</div></td>
+                                                <td class="line"><div>상수도관로 세척 및 수질관리</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>2</div></td>
+                                                <td class="line"><div>상수도관로 기계·전기 및 계측제어 설비 유지관리</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="line"><div>3</div></td>
+                                                <td class="line"><div>상수도관로시설 비상시 대응</div></td>
+                                                <td class="line"><div>10</div></td>
+                                                <td class="line"><div>100</div></td>
+                                                <td class="line"><div></div></td>
                                             </tr>
                                         </tbody>
                                     </table>
