@@ -274,7 +274,213 @@
                             <!--// board(e) -->
                         </div>
                         <!--// section(e) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">시험장 선택</h3>
+                                <div class="desc">
+                                    평가시험은 아래 {0}곳에서 동시에 실시됩니다.<br />
+                                    응시하실 지역을 선택하여 시험을 신청해 주시기 바랍니다.<br />
+                                    * 선택된 지역은 변경이 불가능하므로 정확히 선택해 주시기 바랍니다.
+                                </div>
+                            </div>
 
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react size90">
+                                    <caption>
+                                        지역, 강의장명, 주소, 지도, 신청가능인원, 선택 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 80px" />
+                                        <col style="width: 163px" />
+                                        <col />
+                                        <col style="width: 80px" />
+                                        <col style="width: 120px" />
+                                        <col style="width: 100px" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">지역</th>
+                                            <th scope="col" class="line">강의장명</th>
+                                            <th scope="col" class="line">주소</th>
+                                            <th scope="col" class="line">지도</th>
+                                            <th scope="col" class="line">신청 가능인원</th>
+                                            <th scope="col" class="line">선택</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="지역"><div>서울</div></td>
+                                            <td data-cell-header="강의장명" class="line"><div>한국상하수도협회</div></td>
+                                            <td data-cell-header="주소" class="line"><div>서울특별시 영등포구 대림로 244 한국상하수도협회</div></td>
+                                            <td data-cell-header="지도" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_txtlink">지도</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="신청가능 인원" class="line"><div>20</div></td>
+                                            <td data-cell-header="선택" class="line">
+                                                <div>
+                                                    <span class="inp_check alone">
+                                                        <input type="checkbox" id="check1" />
+                                                        <label for="check1"><span>시험장 선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="지역"><div>대전</div></td>
+                                            <td data-cell-header="강의장명" class="line"><div>00중학교</div></td>
+                                            <td data-cell-header="주소" class="line"><div>대전광역시 000구 000로 00중학교</div></td>
+                                            <td data-cell-header="지도" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_txtlink">지도</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="신청가능 인원" class="line"><div>마감</div></td>
+                                            <td data-cell-header="선택" class="line">
+                                                <div>
+                                                    <span class="inp_check alone">
+                                                        <input type="checkbox" id="check2" />
+                                                        <label for="check2"><span>시험장 선택</span></label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+
+                                <div class="board_desc_bottom gap_mt10">
+                                    <p class="txt_note">평가일, 장소 등은 불가피한 사유발생시 변경되거나 취소될 수 있습니다. 이 경우 홈페이지를 통해 사전공지 합니다.</p>
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">신청 동의 확인</h3>
+                                <div class="desc">
+                                    평가시험은 OMR카드를 사용한 지필시험(PBT)으로 진행됩니다.<br />
+                                    시험장 입실시간, 본인확인, 부정행위에 대한 처리 등 아래 주의사항에 대해 숙지하시고 평가시험 당일 꼭 준수하여 주시기 바랍니다.
+                                </div>
+                            </div>
+
+                            <div class="consent_form">
+                                <div class="article">
+                                    <dl>
+                                        <dt>2차시험의 합격조건은 1차시험을 먼저 합격하셔야 합니다. 1차, 2차를 동시 응시 하실 경우 1차시험에 합격하지 않으시면 2차시험은 자동 불합격됩니다. 이에 대해 이해하셨나요?</dt>
+                                        <dd>
+                                            <div class="form_item">
+                                                <div class="radio_set reset">
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer0-1" name="answer0" />
+                                                        <label for="answer0-1">예</label>
+                                                    </span>
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer0-2" name="answer0" checked />
+                                                        <label for="answer0-2">아니오</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="article">
+                                    <dl>
+                                        <dt>
+                                            평가시험 당일 {}시 {}분까지 시험장에 입실하여야 합니다. {}시 {}분 경과 시 입실이 제한되어 평가에 응시할 수 없습니다.<br />
+                                            이에 대해 이해하셨나요?
+                                        </dt>
+                                        <dd>
+                                            <div class="form_item">
+                                                <div class="radio_set reset">
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer1-1" name="answer1" />
+                                                        <label for="answer1-1">예</label>
+                                                    </span>
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer1-2" name="answer1" checked />
+                                                        <label for="answer1-2">아니오</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="article">
+                                    <dl>
+                                        <dt>
+                                            부정행위 적발 시 해당 시험은 무효로 처리되며, 응시일을 기준으로 3년간 평가에 재응시 할 수 없습니다.
+                                            <button type="button" class="btn_pop">부정행위 사례 상세보기</button><br />
+                                            이에 대해 이해하셨나요?
+                                        </dt>
+                                        <dd>
+                                            <div class="form_item">
+                                                <div class="radio_set reset">
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer2-1" name="answer2" />
+                                                        <label for="answer2-1">예</label>
+                                                    </span>
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer2-2" name="answer2" checked />
+                                                        <label for="answer2-2">아니오</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="article">
+                                    <dl>
+                                        <dt>
+                                            시험에는 계산기 사용이 불가능 하며, 전자기기 소지 여부도 부정행위로 간주됩니다. (시험전 감독관 안내에 따라 제출 필요)<br />
+                                            이에 대해 이해하셨나요?
+                                        </dt>
+                                        <dd>
+                                            <div class="form_item">
+                                                <div class="radio_set reset">
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer3-1" name="answer3" />
+                                                        <label for="answer3-1">예</label>
+                                                    </span>
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer3-2" name="answer3" checked />
+                                                        <label for="answer3-2">아니오</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="article">
+                                    <dl>
+                                        <dt>
+                                            시험 당일 실물 신분증을 필히 지참하여야 합니다. 실물 신분증이 없는 경우 시험 응시가 불가능합니다.<br />
+                                            이에 대해 이해하셨나요?
+                                        </dt>
+                                        <dd>
+                                            <div class="form_item">
+                                                <div class="radio_set reset">
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer4-1" name="answer4" />
+                                                        <label for="answer4-1">예</label>
+                                                    </span>
+                                                    <span class="inp_radio">
+                                                        <input type="radio" id="answer4-2" name="answer4" checked />
+                                                        <label for="answer4-2">아니오</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
@@ -333,17 +539,17 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">지역</th>
-                                            <th scope="col">강의장명</th>
-                                            <th scope="col">주소</th>
-                                            <th scope="col">지도</th>
+                                            <th scope="col" class="line">강의장명</th>
+                                            <th scope="col" class="line">주소</th>
+                                            <th scope="col" class="line">지도</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td data-cell-header="지역"><div>대전</div></td>
-                                            <td data-cell-header="강의장명"><div>00중학교</div></td>
-                                            <td data-cell-header="주소"><div>대전광역시 000구 000로 00중학교</div></td>
-                                            <td data-cell-header="지도">
+                                            <td data-cell-header="강의장명" class="line"><div>00중학교</div></td>
+                                            <td data-cell-header="주소" class="line"><div>대전광역시 000구 000로 00중학교</div></td>
+                                            <td data-cell-header="지도" class="line">
                                                 <div>
                                                     <button type="button" class="btn_txtlink">지도</button>
                                                 </div>
