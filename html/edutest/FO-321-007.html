@@ -41,12 +41,12 @@
 
                         <!-- page_title(s) -->
                         <div class="page_title">
-                            <h2 class="tit">신청 완료</h2>
+                            <h2 class="tit">평가시험 접수완료</h2>
                         </div>
                         <!--// page_title(e) -->
 
                         <!-- section(s) -->
-                        <div class="section">
+                        <!-- <div class="section">
                             <div class="tit_area">
                                 <h3 class="tit">응시료 결제 안내</h3>
                                 <div class="desc">
@@ -57,6 +57,56 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div> -->
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">결제 정보</h3>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row">
+                                    <caption>
+                                        결제수단, 계좌/카드번호, 결제금액, 카드/은행, 입금기한, 예금주 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 153px" />
+                                        <col style="width: 291px" />
+                                        <col style="width: 153px" />
+                                        <col style="width: 291px" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">결제수단</th>
+                                            <td data-cell-header="결제수단"><div>결제수단명</div></td>
+                                            <th scope="row">계좌/카드번호</th>
+                                            <td data-cell-header="계좌/카드번호"><div>NNN-NNNN-NNN</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">결제금액</th>
+                                            <td data-cell-header="결제금액"><div>000,000원</div></td>
+                                            <th scope="row">카드/은행</th>
+                                            <td data-cell-header="카드/은행"><div>신한</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">입금기한</th>
+                                            <td data-cell-header="입금기한"><div>YYYY-MM-DD HH:MM</div></td>
+                                            <th scope="row">예금주</th>
+                                            <td data-cell-header="예금주"><div>상하수도협회, 이중재</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                                <div class="board_desc_bottom" style="display: flex; align-items: center; gap: 1rem">
+                                    <p class="txt_mark">입금기한 내 미입금 시 자동으로 취소되오니 기간 내 꼭 입금을 해주시기 바랍니다.</p>
+                                </div>
+                            </div>
+
+                            <!--// board -->
                         </div>
                         <!--// section(e) -->
 
@@ -71,7 +121,7 @@
                                 <!-- board_view -->
                                 <table class="tbl react row">
                                     <caption>
-                                        평가시험명, 자격, 등급, 회차, 시험일, 결과발표 정보 제공
+                                        접수기간, 평가시험명, 자격증, 등급, 회차, 차수, 시험일, 발표일시 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 153px" />
@@ -81,29 +131,36 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
+                                            <th scope="row">접수기간</th>
+                                            <td data-cell-header="접수기간" colspan="3"><div>YYYY-MM-DD ~ YYYY-MM-DD</div></td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">평가시험명</th>
-                                            <td data-cell-header="평가시험명" colspan="3"><div>제23회 정수시설운영관리사 양성과정 이수평가 2급</div></td>
+                                            <td data-cell-header="평가시험명" colspan="3"><div>제 23회 정수시설운영관리사 2급</div></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">자격</th>
-                                            <td data-cell-header="자격" colspan="3"><div>정수시설운영관리사</div></td>
-                                        </tr>
-                                        <tr>
+                                            <th scope="row">자격증</th>
+                                            <td data-cell-header="자격증"><div>정수시설운영관리사</div></td>
                                             <th scope="row">등급</th>
-                                            <td data-cell-header="등급"><div>등급</div></td>
+                                            <td data-cell-header="등급"><div>2급</div></td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">회차</th>
-                                            <td data-cell-header="회차"><div>23회</div></td>
+                                            <td data-cell-header="회차"><div>34</div></td>
+                                            <th scope="row">차수</th>
+                                            <td data-cell-header="차수"><div>1차</div></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">시험일</th>
-                                            <td data-cell-header="시험일"><div>2025-01-27 (월)</div></td>
-                                            <th scope="row">결과발표</th>
-                                            <td data-cell-header="결과발표"><div>2025-01-27 (월)</div></td>
+                                            <td data-cell-header="시험일"><div>2025-01-27(월)</div></td>
+                                            <th scope="row">발표일시</th>
+                                            <td data-cell-header="발표일시"><div>2025-03-10(월)</div></td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <!--// board_view -->
                             </div>
+
                             <!--// board -->
                         </div>
                         <!--// section(e) -->
@@ -111,7 +168,7 @@
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
-                                <h3 class="tit">신청정보</h3>
+                                <h3 class="tit">신청자 정보</h3>
                             </div>
 
                             <!-- board -->
@@ -119,28 +176,33 @@
                                 <!-- board_view -->
                                 <table class="tbl react row">
                                     <caption>
-                                        시험 회차 선택, 성명(ID), 생년월일, 휴대폰 번호 정보 제공
+                                        성명(ID), 휴대폰 번호, 응시 이력, 자격증여부(과목면제), 1차 합격여부, 2차 응시가능기간 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 153px" />
                                         <col />
                                     </colgroup>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">시험 회차 선택</th>
-                                            <td data-cell-header="시험 회차 선택"><div>제 2차 시험</div></td>
-                                        </tr>
                                         <tr>
                                             <th scope="row">성명(ID)</th>
-                                            <td data-cell-header="성명(ID)"><div>홍길동(advd@naver.com)</div></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">생년월일</th>
-                                            <td data-cell-header="생년월일"><div>1974-01-01</div></td>
-                                        </tr>
-                                        <tr>
+                                            <td data-cell-header="성명(ID)"><div>홍길동(aaaa@naver.com)</div></td>
                                             <th scope="row">휴대폰 번호</th>
-                                            <td data-cell-header="휴대폰 번호"><div>010-1234-5678</div></td>
+                                            <td data-cell-header="휴대폰 번호"><div>NNN-NNNN-NNN</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">응시이력</th>
+                                            <td data-cell-header="응시이력"><div>1회</div></td>
+                                            <th scope="row">
+                                                자격증여부<br />
+                                                (과목면제)
+                                            </th>
+                                            <td data-cell-header="자격증여부(과목면제)"><div>정수시설기술사</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1차 합격여부</th>
+                                            <td data-cell-header="1차 합격여부"><div>미응시 or 합격</div></td>
+                                            <th scope="row">2차 응시가능기간</th>
+                                            <td data-cell-header="2차 응시가능기간"><div>YYYY-MM-DD</div></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -153,7 +215,7 @@
                         <!-- section(s) -->
                         <div class="section">
                             <div class="tit_area">
-                                <h3 class="tit">시험면제 선택</h3>
+                                <h3 class="tit">자격증 정보(과목 면제)</h3>
                             </div>
 
                             <!-- board -->
@@ -161,7 +223,7 @@
                                 <!-- board_view -->
                                 <table class="tbl react row">
                                     <caption>
-                                        시험면제, 서류첨부 정보 제공
+                                        자격증, 자격번호, 자격증 사본 정보 제공
                                     </caption>
                                     <colgroup>
                                         <col style="width: 153px" />
@@ -169,12 +231,16 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row">시험면제</th>
-                                            <td data-cell-header="시험면제"><div>상하수도기술사</div></td>
+                                            <th scope="row">자격증</th>
+                                            <td data-cell-header="자격증"><div>상하수도기술사</div></td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">서류첨부</th>
-                                            <td data-cell-header="서류첨부">
+                                            <th scope="row">자격번호</th>
+                                            <td data-cell-header="자격번호">K232212322</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자격증 사본</th>
+                                            <td data-cell-header="자격증 사본">
                                                 <div><button type="button" class="btn_download">첨부서류</button></div>
                                             </td>
                                         </tr>
@@ -186,86 +252,9 @@
                         </div>
                         <!--// section(e) -->
 
-                        <!-- section(s) -->
-                        <div class="section">
-                            <div class="tit_area">
-                                <h3 class="tit">선택 시험장</h3>
-                            </div>
-
-                            <!-- board -->
-                            <div class="board_area">
-                                <!-- board_view -->
-                                <table class="tbl react">
-                                    <caption>
-                                        지역, 강의장명, 주소, 지도 정보 제공
-                                    </caption>
-                                    <colgroup>
-                                        <col style="width: 80px" />
-                                        <col style="width: 163px" />
-                                        <col />
-                                        <col style="width: 80px" />
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">지역</th>
-                                            <th scope="col" class="line">강의장명</th>
-                                            <th scope="col" class="line">주소</th>
-                                            <th scope="col" class="line">지도</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-cell-header="지역"><div>대전</div></td>
-                                            <td data-cell-header="강의장명" class="line"><div>00중학교</div></td>
-                                            <td data-cell-header="주소" class="line"><div>대전광역시 000구 000로 00중학교</div></td>
-                                            <td data-cell-header="지도" class="line">
-                                                <div>
-                                                    <button type="button" class="btn_txtlink">지도</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!--// board_view -->
-
-                                <div class="board_desc_bottom gap_mt10">
-                                    <p class="txt_note">응시 확정 후에는 변경이 불가합니다.</p>
-                                </div>
-                            </div>
-                            <!--// board -->
-                        </div>
-                        <!--// section(e) -->
-
-                        <!-- section(s) -->
-                        <div class="section">
-                            <div class="form_item line">
-                                <div class="check_set">
-                                    <span class="inp_check">
-                                        <input type="checkbox" id="agree" />
-                                        <label for="agree"><span class="txt_red">[필수]</span> 평가시험 및 결제 정보를 확인하였으며, 이에 동의합니다.</label>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="pay_amount_area">
-                                <div class="lside">
-                                    <button type="button" class="btn_pop">청구서 인쇄하기</button>
-                                </div>
-                                <div class="rside">
-                                    <div class="total">
-                                        <span>총 결제금액</span>
-                                        <strong>27,000원 (2차 시험)</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--// section(e) -->
-
                         <div class="bottom_btn_area">
-                            <div class="lside">
-                                <button type="button" class="btn_outline_lg">취소하기</button>
-                            </div>
-                            <div class="rside">
-                                <button type="button" class="btn_primary_lg">즉시결제</button>
+                            <div class="bottom_btn_area">
+                                <button type="button" class="btn_primary_lg">응시표 출력</button>
                             </div>
                         </div>
 
