@@ -2608,7 +2608,7 @@ select.sm {
   border: 0;
 }
 .form_item .add_file_box {
-  margin: 1.2rem 0 0 1.7rem;
+  margin: 0 0 0 1.7rem;
 }
 .form_item .add_file_box .btn_file_delete {
   display: block;
