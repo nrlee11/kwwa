@@ -569,6 +569,12 @@
     &[class*="_badge3"] {
         background: linear-gradient(90deg, #7ec88e 0%, #228738 100%);
     }
+    &[class*="_badge03"] {
+        color: #228738;
+        border: $border #228738;
+        background-color: var(--color-white);
+        line-height: 2.4rem;
+    }
     &[class*="_badge4"] {
         color: #de3412;
         border: $border #de3412;

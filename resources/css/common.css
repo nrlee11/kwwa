@@ -1742,6 +1742,12 @@ button {
 [class^=value_][class*=_badge3] {
   background: linear-gradient(90deg, #7ec88e 0%, #228738 100%);
 }
+[class^=value_][class*=_badge03] {
+  color: #228738;
+  border: 0.1rem solid #228738;
+  background-color: var(--color-white);
+  line-height: 2.4rem;
+}
 [class^=value_][class*=_badge4] {
   color: #de3412;
   border: 0.1rem solid #de3412;
