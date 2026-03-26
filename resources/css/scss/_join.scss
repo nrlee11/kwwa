@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+// 인증 (본인/간편)
+.identity_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-15);
+}
+.btn_identity {
+    width: 100%;
+    max-width: 51.8rem;
+    padding: 3.2rem 3.2rem 3.2rem 2.9rem;
+    border-radius: 1.2rem;
+    background: #f4f5f6;
+    text-align: left;
+    color: var(--color-gray);
+    &.self {
+        .identity_tit:before {
+            background-image: url($url-img-icon + "ico_identity1.svg");
+        }
+    }
+    &.simple {
+        .identity_tit:before {
+            background-image: url($url-img-icon + "ico_identity2.svg");
+        }
+    }
+    &:active {
+        background: var(--color-warmblue);
+        color: var(--color-white);
+        &.self {
+            .identity_tit:before {
+                background-image: url($url-img-icon + "ico_identity1_on.svg");
+            }
+        }
+        &.simple {
+            .identity_tit:before {
+                background-image: url($url-img-icon + "ico_identity2_on.svg");
+            }
+        }
+        .identity_tit {
+            color: inherit;
+            &:after {
+                background-image: url($url-img-icon + "ico_arrow_white.svg");
+            }
+        }
+    }
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            background: var(--color-warmblue);
+            color: var(--color-white);
+            &.self {
+                .identity_tit:before {
+                    background-image: url($url-img-icon + "ico_identity1_on.svg");
+                }
+            }
+            &.simple {
+                .identity_tit:before {
+                    background-image: url($url-img-icon + "ico_identity2_on.svg");
+                }
+            }
+            .identity_tit {
+                color: inherit;
+                &:after {
+                    background-image: url($url-img-icon + "ico_arrow_white.svg");
+                }
+            }
+        }
+    }
+}
+.identity_tit {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 1.9rem;
+    font-weight: var(--font-bold);
+    color: var(--font-color-base);
+    &:before,
+    &:after {
+        flex: 0 0 auto;
+        background: no-repeat 0 0;
+        content: "";
+    }
+    &:before {
+        width: 4.6rem;
+        height: 4.6rem;
+        background-size: contain;
+    }
+    &:after {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: auto;
+        background-image: url($url-img-icon + "ico_arrow_black.svg");
+    }
+}
+.identity_txt {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0 4rem 0 6.4rem;
+    line-height: 1.5;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+@include sm-mobile {
+    .btn_identity {
+        padding: 2.4rem;
+    }
+    .identity_tit {
+        gap: 1.4rem;
+        &:before {
+            @include mobile {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+    }
+    .identity_txt {
+        margin-top: 0.8rem;
+        padding: 0;
+    }
+}
+
+// 회원가입
+.join_wrap {
+    // margin-top: 7.5rem;
+    // @include mobile {
+    //     margin-top: var(--gap-50) !important;
+    // }
+    // .identity_area {
+    //     padding: 3.5rem 0 11rem;
+    //     @include mobile {
+    //         padding: 0 0 var(--gap-50);
+    //     }
+    // }
+    .join_form {
+        .form_list {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+    &.wide {
+        margin-top: var(--gap-24);
+        @include mobile {
+            margin-top: var(--gap-50);
+        }
+        .bottom_btn_area {
+            margin-top: var(--gap-50);
+        }
+    }
+    .bottom_btn_area {
+        margin-top: var(--gap-24);
+        @include mobile {
+            margin-top: var(--gap-50);
+        }
+    }
+}

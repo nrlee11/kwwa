@@ -1,0 +1,535 @@
+@charset "UTF-8";
+
+// 교육일정 list
+.edu_detail_list {
+    .edu_group {
+        + .edu_group {
+            margin-top: var(--gap-24);
+        }
+    }
+}
+.edu_group {
+    > a {
+        position: relative;
+        display: block;
+        flex: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 1.6rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-top: -1.2rem;
+            background: url($url-img-icon + "ico_arrow_gray2.svg") no-repeat 0 0;
+            @include mobile {
+                top: auto;
+                left: 50%;
+                bottom: 1.6rem;
+                right: 1.6rem;
+                margin-left: -1.2rem;
+                margin-top: 0;
+            }
+        }
+        .timetable {
+            width: 51rem;
+        }
+        &:hover {
+            .box {
+                border-color: var(--color-darkblue);
+                background-color: #eef3ff;
+            }
+        }
+        @include mobile {
+            .box {
+                .timetable {
+                    padding-bottom: 2.4rem;
+                }
+            }
+        }
+    }
+    &:not(.type1) {
+        .box {
+            @include sm-mobile {
+                padding: var(--gap-16) !important;
+            }
+        }
+    }
+    .box {
+        display: flex;
+        gap: 0 3.3rem;
+        padding: 2.2rem 3rem;
+        border: $border #cdd1d5;
+        border-radius: 1rem;
+        background-color: var(--color-white);
+    }
+    .thumbnail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 21.8rem;
+        height: 18rem;
+        border: $border #808080;
+        background-color: var(--color-white);
+        @include mobile {
+            display: var(--hide);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .timetable_set {
+        @include flex-between;
+        align-items: flex-end;
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    .timetable {
+        display: block;
+        @include mobile {
+            width: 100% !important;
+        }
+        .edu_tit {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--gap-10);
+            padding-bottom: var(--gap-10);
+            border-bottom: $border #cdd1d5;
+            @include mobile {
+                margin-bottom: var(--gap-15);
+                padding-bottom: var(--gap-15);
+            }
+            [class^="value_"] {
+                margin-right: var(--gap-20);
+            }
+            .badge_box2 {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+            .tit {
+                flex: 1;
+                font-weight: var(--font-medium);
+                text-align: left;
+            }
+        }
+        > .cell {
+            display: flex;
+            align-items: flex-start;
+            line-height: 2.28rem;
+            text-align: left;
+            + .cell {
+                margin-top: var(--gap-4);
+            }
+            @include mobile {
+                line-height: 2rem;
+                flex-direction: column;
+                gap: 0.2rem 0;
+                + .cell {
+                    margin-top: var(--gap-15) !important;
+                }
+            }
+            &.btn_position {
+                flex-direction: column;
+                position: absolute;
+                top: 7.2rem;
+                right: 3rem;
+                [class^="btn_"] {
+                    min-width: 12.4rem;
+                    + [class^="btn_"] {
+                        margin-top: var(--gap-10);
+                    }
+                }
+                &.middle {
+                    top: 50%;
+                    margin-top: -2.4rem;
+                    @include mobile {
+                        position: static;
+                        margin-top: var(--gap-15);
+                        [class^="btn_"] {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            > .tit {
+                width: 12rem;
+                padding-right: var(--gap-10);
+                color: #8a949e;
+                font-weight: var(--font-semibold);
+            }
+            > .item {
+                color: var(--color-darkblack);
+                font-weight: var(--font-medium);
+            }
+        }
+    }
+    .side {
+        [class^="btn_"] {
+            display: block;
+            min-width: 12.3rem;
+            + [class^="btn_"] {
+                margin-top: var(--gap-10);
+            }
+        }
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 0 1.5rem;
+            width: 100%;
+            margin-top: var(--gap-15);
+            [class^="btn_"] {
+                display: inline-block;
+            }
+        }
+    }
+    .edu_info {
+        @include flex-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: var(--gap-20);
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1rem;
+            @include mobile {
+                gap: 1rem;
+            }
+        }
+        .date {
+            font-size: var(--font-size-sm);
+            color: #b1b8be;
+        }
+        .badge_set {
+            display: inline-block;
+            margin-top: -0.5rem;
+            [class^="value_"] {
+                margin: var(--gap-5) var(--gap-5) 0 0;
+            }
+        }
+        .wl_number {
+            display: inline-block;
+            line-height: 2.7rem;
+            @include mobile {
+                line-height: 2.8rem;
+            }
+        }
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem 0;
+            margin-bottom: var(--gap-10);
+        }
+    }
+    .edu_result {
+        margin: var(--gap-20) -2rem 0;
+        padding: var(--gap-20) var(--gap-20) 0;
+        color: var(--color-darkblack);
+        background: url($url-img-common + "bg_dotted.png") repeat-x 0 0;
+        @include mobile {
+            padding: var(--gap-20) var(--gap-16) 0 !important;
+            margin: var(--gap-15) -1.6rem 0 !important;
+        }
+        .edu_info {
+            margin-bottom: var(--gap-15);
+        }
+        .grade {
+            @include flex-aligncenter;
+            gap: 0 2.7rem;
+            .txt {
+                margin-top: 0.2rem;
+                color: #8a949e;
+                font-weight: var(--font-semibold);
+            }
+            + .msg {
+                margin-top: var(--gap-30);
+            }
+        }
+        .msg {
+            text-align: center;
+            color: var(--color-darkblack);
+            font-size: 2rem;
+            font-weight: var(--font-semibold);
+            .ico_pass {
+                position: relative;
+                display: inline-block;
+                &:before {
+                    position: absolute;
+                    right: -6.3rem;
+                    bottom: -0.9rem;
+                    width: 13rem;
+                    height: 11.4rem;
+                    background: url($url-img-icon + "ico_pass.svg") no-repeat 0 0;
+                    background-size: contain;
+                    content: "";
+                    @include mobile {
+                        right: -4rem;
+                        width: 10rem;
+                        height: 7rem;
+                    }
+                }
+            }
+        }
+        .guide {
+            .tit {
+                color: var(--color-darkblack);
+                font-weight: var(--font-semibold);
+            }
+            .tit_set {
+                @include flex-between;
+                align-items: flex-end;
+                margin-bottom: var(--gap-24);
+            }
+            @include mobile {
+                margin-top: var(--gap-24);
+                .tit_set {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .rside {
+                        width: 100%;
+                        margin-top: var(--gap-24);
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    .wl_number {
+        color: var(--color-darkgray);
+    }
+    &.type1 {
+        // type 1 - 아코디언
+        .box {
+            gap: 0 3rem;
+            padding: 0;
+            border: 0;
+            font-size: 1.6rem;
+            @include mobile {
+                gap: 0;
+            }
+        }
+        .timetable {
+            width: 51rem;
+        }
+        .thumbnail {
+            width: 10.2rem;
+            height: 6.4rem;
+        }
+    }
+    &.type2 {
+        .box {
+            flex-direction: column;
+        }
+        .timetable {
+            width: 51rem;
+        }
+        .edu_result {
+            margin: var(--gap-20) -3rem 0;
+            padding: var(--gap-20) var(--gap-30) 0;
+        }
+    }
+    &.type3 {
+        .box {
+            position: relative;
+            flex-direction: column;
+        }
+        .timetable_set {
+            gap: 0 3rem;
+        }
+        .timetable {
+            width: 100%;
+        }
+        .bottom_btn_area {
+            margin-top: var(--gap-24);
+            @include mobile {
+                margin-top: var(--gap-15);
+            }
+        }
+        &.wide {
+            .timetable {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.edu_schedule_list {
+    .schedule_group {
+        width: 100%;
+        @include flex-between;
+        align-items: center;
+        gap: 0 4rem;
+        padding: var(--gap-25) 3.8rem;
+        background-color: var(--color-white);
+        border-radius: 1rem;
+        border: $border #cdd1d5;
+        + .schedule_group {
+            margin-top: var(--gap-24);
+        }
+        @include mobile {
+            position: relative;
+            align-items: flex-start;
+            padding: var(--gap-24) 3.7rem;
+            gap: 0 4rem;
+            + .data_group {
+                margin-top: var(--gap-20);
+            }
+        }
+        @include sm-mobile {
+            flex-direction: column;
+            padding: var(--gap-16);
+            > div {
+                width: 100% !important;
+            }
+        }
+        .time {
+            width: 8rem;
+            .tit {
+                color: var(--color-darkblack);
+                font-size: 2.2rem;
+                font-weight: var(--font-bold);
+            }
+            @include mobile {
+                width: 10.64rem;
+                font-size: 1.8rem;
+                text-align: center;
+                // .tit {
+                //     line-height: 3.8rem;
+                // }
+            }
+        }
+        .timetable {
+            @include flex-between;
+            flex: 1;
+            gap: 0 3.6rem;
+            > div {
+                width: 13rem;
+                &:first-child {
+                    width: 10rem;
+                }
+                &:nth-child(4) {
+                    width: 11.6rem;
+                }
+                &:last-child {
+                    width: 6rem;
+                }
+            }
+            @include mobile {
+                flex-direction: column;
+                gap: 0.4rem 0;
+                > div {
+                    width: auto !important;
+                }
+                @include sm-mobile {
+                    margin-top: var(--gap-20);
+                }
+                @include xs-mobile {
+                    gap: 1.5rem 0;
+                }
+            }
+            .cell {
+                @include mobile {
+                    @include flex-aligncenter;
+                    align-items: flex-start;
+                    gap: 0 1rem;
+                }
+                @include xs-mobile {
+                    flex-direction: column;
+                }
+                .tit {
+                    margin-bottom: var(--gap-5);
+                    color: #8a949e;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    @include mobile {
+                        width: 8rem;
+                        font-size: 1.6rem;
+                    }
+                    @include sm-mobile {
+                        width: 5.7rem;
+                    }
+                }
+                .item {
+                    color: #111;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    letter-spacing: -0.1rem;
+                    // line-height: 1.9rem;
+                    @include mobile {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        .side {
+            flex-basis: 10.6rem;
+            text-align: right;
+            [class^="btn_"] {
+                min-width: 10.6rem;
+            }
+            @include mobile {
+                position: absolute;
+                bottom: 2.4rem;
+            }
+            @include sm-mobile {
+                position: static;
+                width: 100%;
+                flex-basis: auto;
+                margin-top: var(--gap-20);
+                [class^="btn_"] {
+                    width: 100%;
+                    position: relative;
+                    [class^="ico_"] {
+                        position: absolute;
+                        top: 0.8rem;
+                        right: 1.2rem;
+                    }
+                }
+            }
+        }
+        .badge {
+            display: inline-block;
+            min-width: 10.6rem;
+            height: 4rem;
+            padding: 0 var(--gap-12);
+            color: var(--color-warmblue);
+            font-size: var(--font-size-sm);
+            border: 0.1rem solid var(--color-warmblue);
+            border-radius: 0.6rem;
+            background-color: var(--color-white);
+            line-height: 3.8rem;
+            text-align: center;
+            @include sm-mobile {
+                width: 100%;
+            }
+        }
+        &.sm {
+            gap: 0 3rem;
+            .timetable {
+                gap: 0 1.5rem;
+                > div {
+                    width: 11.6rem;
+                    &:first-child {
+                        width: 10rem;
+                    }
+                    &:nth-child(2) {
+                        width: 13rem;
+                    }
+                    &:nth-child(4) {
+                        width: 9.7rem;
+                    }
+                    &:last-child {
+                        width: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}

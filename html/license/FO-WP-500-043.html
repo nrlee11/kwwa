@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>발급현황 조회 | 자격증발급 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="../include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- [include] aside(s) : 확인용 -->
+                    <div data-include-file="../include/aside.html" class="includeJs"></div>
+                    <!--// [include] aside(e) : 확인용 -->
+
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- breadcrumb(s) -->
+                        <nav class="breadcrumb_wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="/index.html">홈</a></li>
+                                <li><a href="./FO-WP-500-010.html">자격증발급</a></li>
+                                <li><span>발급현황 조회</span></li>
+                            </ol>
+                        </nav>
+                        <!--// breadcrumb(e) -->
+
+                        <!-- page_title(s) -->
+                        <div class="page_title">
+                            <h2 class="tit">재발급 신청</h2>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">재발급 신청</h3>
+                                <div class="desc">
+                                    재발급 신청 시 사유와 변동내역을 입력해주세요
+                                    <ul class="list_mark">
+                                        <li>개명의 이유로 재발급시 협회로 문의 주시기 바랍니다.</li>
+                                        <li>주소변경의 이유로 재발급시 담당자가 확인 후 회신 드립니다.</li>
+                                        <li>기타 사유는 신청 사유 확인 후 회신 드립니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">상수도관망운영관리사 2급</h3>
+                            </div>
+
+                            <div class="ly_half_form">
+                                <div class="lside">
+                                    <strong class="tit">자격증 발급용 사진</strong>
+                                    <div class="align_center"><button type="button" id="licensePhoto" class="btn_pop">샘플사진보기</button></div>
+                                    <div class="article gap_mt10">
+                                        <div class="preview_file_set">
+                                            <input type="file" id="imgfile" class="imgfile" onchange="setThumbnail();" />
+                                            <label for="imgfile">증명사진을<br />등록해<br />주세요</label>
+                                            <div class="img_preview">
+                                                <button type="button" class="btn_reset"><span class="hidden">자격증 발급용 사진 삭제</span></button>
+                                                <img src="/resources/images/temp/img.png" alt="증명사진" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article">
+                                        <ul class="list_dash">
+                                            <li>6개월 이내에 촬영한 사진</li>
+                                            <li>
+                                                사진은 3X4(반명함),<br />
+                                                3.5X4.5(증명사진),<br />
+                                                5X7(명함판) 중 택1
+                                            </li>
+                                            <li>150DPI이상의 고화질 파일</li>
+                                            <li>파일포멧 : JPG, PNG</li>
+                                            <li>파일용량 : 10MB 미만</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="rside">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_view -->
+                                        <table class="tbl react row size110">
+                                            <caption>
+                                                자격번호, 자격 취득일, 교부 연월일, 재발급 신청사유 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15.3rem" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">자격번호</th>
+                                                    <td data-cell-header="자격번호"><div>WL000000</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">자격 취득일</th>
+                                                    <td data-cell-header="자격 취득일"><div>2025-02-20</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">교부 연월일</th>
+                                                    <td data-cell-header="교부 연월일"><div>2025-02-20</div></td>
+                                                </tr>
+                                                <tr class="write_cell">
+                                                    <th scope="row">
+                                                        <label for="answer">재발급 신청사유</label>
+                                                    </th>
+                                                    <td data-cell-header="재발급 신청사유">
+                                                        <div>
+                                                            <div class="form_item">
+                                                                <div class="inp_select">
+                                                                    <select title="신청사유 선택" id="answer">
+                                                                        <option value="">신청사유 선택</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_item">
+                                                                <div class="inp_textarea">
+                                                                    <textarea placeholder="재발급 신청사유을 입력해 주세요"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_view -->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">배송지 정보</h3>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="address1">배송지주소</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <span class="inp_check">
+                                                        <input type="checkbox" id="deliveryinfo1_1" />
+                                                        <label for="deliveryinfo1_1">신청자 정보의 주소와 배송지가 같을 경우 체크해 주세요.</label>
+                                                    </span>
+                                                </div>
+                                                <div class="cell line">
+                                                    <div class="form_item">
+                                                        <div class="address_set">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <div class="inp size_130">
+                                                                        <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" readonly />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inp">
+                                                                <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
+                                                            </div>
+                                                            <div class="inp">
+                                                                <input type="text" placeholder="상세주소 입력" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// write -->
+                                </div>
+                                <!--// form-->
+
+                                <div class="board_desc_bottom gap_mt10">
+                                    <p class="txt_note">배송시 등록된 본인명의의 휴대전화로 연락드립니다.</p>
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">발급수수료 납부</h3>
+                                <div class="desc">
+                                    자격증 재발급을 위한 수수료(1만원)를 아래 방법을 통해 납부해 주시기 바랍니다.
+                                    <ul class="list_dash">
+                                        <li>카드결제, 실시간계좌이체, 가상계좌 이체</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react size120">
+                                    <caption>
+                                        자격번호, 자격 취득 종목, 수수료 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 25%" span="3" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">자격번호</th>
+                                            <th scope="col">자격 취득 종목</th>
+                                            <th scope="col">수수료</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="자격번호"><div>예시 A-24210000</div></td>
+                                            <td data-cell-header="자격 취득 종목"><div>상수도관망시설운영관리사 2급</div></td>
+                                            <td data-cell-header="수수료"><div>10,000</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+
+                            <div class="page_btn_area">
+                                <div class="rside">
+                                    <div class="box">
+                                        <button type="button" class="btn_outline_lg" id="alert1">취소</button>
+                                    </div>
+                                    <div class="box">
+                                        <button type="button" class="btn_primary_lg">결제</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <div class="bottom_btn_area">
+                            <button type="button" class="btn_primary_lg">재발급 신청</button>
+                        </div>
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="../include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <!-- Layer : 첨부불가 안내 -->
+        <div class="layerFix alertPopup" id="filetypealertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg">첨부가 불가한 파일입니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 첨부불가 안내 -->
+
+        <!-- Layer : 파일용량 초과 안내 -->
+        <div class="layerFix alertPopup" id="filesizealertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg">첨부파일은 최대 10MB까지 등록 가능합니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 파일용량 초과 안내 -->
+
+        <!--Layer : 자격증 발급용 사진으로 연결 -->
+        <div class="layerFix fullPopup" id="licensePhotoPop" role="dialog" tabindex="0" style="display: none">
+            <div class="layer_wrap">
+                <a href="../license/FO-WP-500-040-P.html" style="display: block; text-align: center">이전 자격증 발급용 사진으로 연결</a>
+            </div>
+        </div>
+        <!--// Layer : 자격증 발급용 사진으로 연결 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script src="/resources/js/jquery-ui.js"></script>
+        <script>
+            // 자격증 발급용 사진 첨부파일 샘플
+            function setThumbnail() {
+                var reader = new FileReader();
+                var imgWrap = $(".img_preview")[0];
+                var fileinp = $("#imgfile")[0];
+                var fileaccept = $("#imgfile").val().split(".").pop().toLowerCase(); // 파일 확장자
+                var maxSize = 10 * 1024 * 1024; // 10MB 사이즈 제한
+                var fileSize = fileinp.files[0].size; // 파일 용량
+
+                reader.onload = function (event) {
+                    var img = document.createElement("img");
+                    img.setAttribute("src", event.target.result);
+                    imgWrap.appendChild(img).setAttribute("alt", "자격증 발급용 사진");
+                };
+                reader.readAsDataURL(event.target.files[0]);
+
+                if ($.inArray(fileaccept, ["png", "jpg"]) == -1) {
+                    // 첨부불가 안내
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#filetypealertPop").show();
+                    setTimeout(() => {
+                        $("#filetypealertPop").focus();
+                    }, 100);
+                    return false;
+                }
+
+                if (fileSize > maxSize) {
+                    // 파일용량 초과 안내
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#filesizealertPop").show();
+                    setTimeout(() => {
+                        $("#filesizealertPop").focus();
+                    }, 100);
+                    return false;
+                }
+            }
+            $(".img_preview .btn_reset").click(function () {
+                // 파일 삭제
+                $(this).parent().children(".img_preview img").remove();
+                $(".imgfile").val("").focus();
+            });
+            $("#filetypealertPop .layer_close, #filesizealertPop .layer_close").click(function (e) {
+                // 첨부불가 안내 파일 삭제
+                $(".img_preview img").remove();
+                $(".imgfile").val("").focus();
+            });
+
+            // Layer :  자격증 발급용 사진 연결
+            $("#licensePhoto").click(function (e) {
+                $("html").addClass("layerOpen");
+                $("#wrap").attr("aria-hidden", "true");
+
+                $("#licensePhotoPop").show().focus();
+            });
+            $("#licensePhotoPop .layer_close").click(function (e) {
+                $("#licensePhoto").focus(); // 접근성
+            });
+        </script>
+    </body>
+</html>

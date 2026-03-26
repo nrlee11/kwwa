@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="quitbtn">탈퇴</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- 20250428 수정 : 위치이동 및 속성 추가 -->
+        <!-- Layer : 계정확인 -->
+        <div class="layerFix alertPopup" id="quitbtnPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="msg">진행중인 교육 정보or시험접수 정보or발급 신청 정보가 있어 탈퇴가 불가능합니다.</div>
+                        <div class="txt">해당 절차를 완료하신 후 탈퇴가 가능합니다.</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 계정확인 -->
+        <!--// 20250428 수정 : 위치이동 및 속성추가 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 계정확인
+                $("#quitbtn").click(function (e) {
+                    $("html").addClass("layerOpen"); // 20250428 추가
+                    $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
+
+                    $("#quitbtnPop").show().focus();
+                });
+                $("#quitbtnPop .layer_close").click(function (e) {
+                    $("#quitbtn").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

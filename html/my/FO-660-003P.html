@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>계산서 발급 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">계산서 발급</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 계산서 발급 -->
+        <div class="layerFix alertPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">계산서 발급</strong>
+                    </div>
+                    <div class="article">
+                        <div class="tit">사업자정보</div>
+                        <p class="txt_note gap_mt10">사업자등록증 정보를 정확히 입력해 주세요.</p>
+                    </div>
+                    <div class="article">
+                        <!-- board -->
+                        <div class="board_area">
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- board_write -->
+                                <div class="form_list base">
+                                    <div class="form_group">
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="form_item">
+                                                                <div class="inp">
+                                                                    <input type="text" placeholder="회사명 입력" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box">
+                                                            <div class="form_item">
+                                                                <div class="inp">
+                                                                    <input type="tel" placeholder="사업자등록번호 입력" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="file_set">
+                                                        <div class="inp size_407">
+                                                            <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                            <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                        </div>
+                                                        <label for="file1">파일찾기</label>
+                                                        <input type="file" id="file1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// board_write -->
+                            </div>
+                            <!--// form-->
+                            <div class="board_desc_bottom">
+                                <p class="txt_mark">사업자인 경우 가상계좌 입금완료 및 현금영수증 미 발행 건에 대해 계산서 발행이 가능합니다. 그 외 발행이 불가 합니다.</p>
+                            </div>
+                        </div>
+                        <!--// board -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md">발급 요청</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 계산서 발급 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 계산서 발급
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+
+                // 첨부파일 샘플
+                $(".file_set input[type='file']").on("change", function () {
+                    var fileName = $(this).val().split("/").pop().split("\\").pop();
+                    $(this).siblings(".inp").find("input[type='text']").val(fileName);
+                });
+                $(".file_set .btn_reset").click(function () {
+                    $(this).siblings("input[type='text']").val("");
+                    var fileInput = $(this).closest(".file_set").find("input[type='file']");
+                    fileInput.val("");
+                });
+            });
+        </script>
+    </body>
+</html>

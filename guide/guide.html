@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <title>Guide : GUIDE</title>
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="guide.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    </head>
+    <body>
+        <div id="guide_wrap" class="wrap">
+            <h1 class="h1">Publishing Guide</h1>
+            <div class="guide_container">
+                <div class="guide_gnb">
+                    <ul>
+                        <li><a href="guide.html">Home</a></li>
+                        <li><a href="board.html">Board</a></li>
+                    </ul>
+                </div>
+                <div class="guide_cont">
+                    <div class="section">
+                        <h2 class="h2">목차</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <ul class="list_guide_demical txt_blue">
+                                    <li><a href="#titleHead">타이틀</a></li>
+                                    <li><a href="#subtitle">서브 타이틀</a></li>
+                                    <li><a href="#icon">아이콘</a></li>
+                                    <li><a href="#images">이미지</a></li>
+                                    <li><a href="#btn">버튼</a></li>
+                                    <li><a href="#input">input</a></li>
+                                    <li><a href="#list">리스트</a></li>
+                                    <li><a href="#text">텍스트</a></li>
+                                    <li><a href="#alertbox">알림박스</a></li>
+                                    <li><a href="#badge">뱃지</a></li>
+                                    <li><a href="#tab">탭</a></li>
+                                    <li><a href="#accordion">아코디언</a></li>
+                                    <li><a href="#progress">스텝</a></li>
+                                    <li><a href="#pagination">페이지네이션</a></li>
+                                    <li><a href="#etc">그 외</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 폴더구조 -->
+                    <div class="section">
+                        <h2 class="h2">- 폴더구조</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="HTML">
+                                <ul>
+                                    <li><strong>include : </strong>공통 HTML</li>
+                                    <ul class="list_dot">
+                                        <li>/html/include/... : 전체 공통</li>
+                                        <li>/html/.../include : 해당 폴더 공통</li>
+                                    </ul>
+                                </ul>
+                            </div>
+
+                            <div class="box" data-content-title="HTML외">
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">상세 <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <dl class="box_border">
+                                            <div>
+                                                <dt><strong>SCSS</strong></dt>
+                                                <dd>/resources/css/scss/common.scss 주석 참고</dd>
+                                            </div>
+
+                                            <div class="gap_mt24">
+                                                <dt><strong>CSS</strong></dt>
+                                                <dd>
+                                                    /resources/css/common.css (scss 컴파일)<br />
+                                                    /resources/css/jquery-ui.css (datepicker)<br />
+                                                    /resources/css/swiper-bundle.min.css (swiper)<br />
+                                                </dd>
+                                            </div>
+
+                                            <div class="gap_mt24">
+                                                <dt><strong>JS</strong></dt>
+                                                <dd>
+                                                    /resources/js/ui.js<br />
+                                                    /resources/js/jquery-2.2.4.min.js<br />
+                                                    /resources/js/jquery-ui.js (datepicker)<br />
+                                                    /resources/js/swiper-bundle.min.js (swiper)<br />
+                                                </dd>
+                                            </div>
+
+                                            <div class="gap_mt24">
+                                                <dt><strong>IMAGES</strong></dt>
+                                                <dd>
+                                                    /resources/images/common/...<br />
+                                                    /resources/images/icon/...<br />
+                                                    /resources/images/temp/...<br />
+                                                    /resources/images/calendar/...<br />
+                                                    /resources/images/favicon/...<br />
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 폴더구조 -->
+
+                    <!-- ========== 타이틀 ========== -->
+                    <div class="section" id="titleHead">
+                        <h2 class="h2">- Title</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="기본">
+                                <div class="article html_code on">
+                                    <!-- page_title -->
+                                    <div class="page_title">
+                                        <h2 class="tit">페이지 타이틀</h2>
+                                    </div>
+                                    <!--// page_title -->
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">&#x3C;!-- page_title --&#x3E;
+&#x3C;div class=&#x22;page_title&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD398;&#xC774;&#xC9C0; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h2&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_title --&#x3E;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="중앙정렬">
+                                <div class="article html_code on">
+                                    <!-- page_title -->
+                                    <div class="page_title center">
+                                        <h2 class="tit">페이지 타이틀 (중앙정렬)</h2>
+                                    </div>
+                                    <!--// page_title -->
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// 사이드 메뉴(LNB)가 없는 경우 사용 (예: 회원가입,로그인 등...)
+&#x3C;!-- page_title --&#x3E;
+&#x3C;div class=&#x22;page_title center&#x22;&#x3E;&#x3C;!-- class : center --&#x3E;
+    &#x3C;h2 class=&#x22;tit&#x22;&#x3E;&#xD398;&#xC774;&#xC9C0; &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h2&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_title --&#x3E;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="분할(좌우)">
+                                <div class="article html_code on">
+                                    <!-- page title -->
+                                    <div class="page_title flex">
+                                        <div class="lside">
+                                            <h2 class="tit">페이지 타이틀 (분할)</h2>
+                                        </div>
+                                        <div class="rside">
+                                            <button type="button" title="복사" class="btn_copy">
+                                                <span class="hidden">복사</span></button
+                                            ><button type="button" title="인쇄" class="btn_print">
+                                                <span class="hidden">인쇄</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- // page title -->
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// .flex클래스 추가 + .lside, .rside사용
+&lt;div class="page_title flex"&gt;
+    &lt;div class="lside"&gt;
+        &lt;h2 class="tit"&gt;페이지 타이틀 (분할)&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class="rside"&gt;
+        &lt;button type="button" title="복사" class="btn_copy"&gt;
+            &lt;span class="hidden"&gt;복사&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button type="button" title="인쇄" class="btn_print"&gt;
+            &lt;span class="hidden"&gt;인쇄&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// ========== 타이틀 ========== -->
+
+                    <!-- ========== 서브타이틀 ========== -->
+                    <div class="section" id="subTitle">
+                        <div class="inner">
+                            <div class="box" data-content-title="기본">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- tit_area -->
+                                        <div class="tit_area">
+                                            <h3 class="tit">서브 타이틀(기본)</h3>
+                                            <div class="desc">설명글(기본)</div>
+                                        </div>
+                                        <!--// tit_area -->
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// 기본
+&lt;div class="tit_area"&gt;
+    &lt;h3 class="tit"&gt;서브 타이틀(기본)&lt;/h3&gt;
+    &lt;div class="desc"&gt;설명글(기본)&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="중앙정렬">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- tit_area -->
+                                        <div class="tit_area center">
+                                            <h3 class="tit">서브 타이틀(중앙정렬)</h3>
+                                            <div class="desc">설명글</div>
+                                        </div>
+                                        <!--// tit_area -->
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html"> // 중앙정렬
+&lt;div class="tit_area center"&gt;
+&lt;h3 class="tit"&gt;서브 타이틀(중앙정렬)&lt;/h3&gt;
+&lt;div class="desc"&gt;설명글&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="장식(왼쪽보더)">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- tit_area -->
+                                        <div class="tit_area">
+                                            <h3 class="tit ico">서브 타이틀 (왼쪽 보더)</h3>
+                                            <div class="desc">설명글</div>
+                                        </div>
+                                        <!--// tit_area -->
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html"> // 왼쪽 바
+&lt;div class="tit_area"&gt;
+&lt;h3 class="tit ico"&gt;서브 타이틀 (왼쪽 보더)&lt;/h3&gt;
+&lt;div class="desc"&gt;설명글&lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="장식(화살표)">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- tit_area -->
+                                        <div class="tit_area">
+                                            <h3 class="tit ico_progress">서브 타이틀(화살표)</h3>
+                                            <h3 class="tit ico_progress is_progress_last">서브 타이틀(화살표&마지막)</h3>
+                                            <div class="desc">설명글</div>
+                                        </div>
+                                        <!--// tit_area -->
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html"> // 화살표
+&lt;div class="tit_area"&gt;
+&lt;h3 class="tit ico_progress"&gt;서브 타이틀(화살표)&lt;/h3&gt;
+&lt;/div&gt;
+                            </code></pre>
+                                        <pre><code class="html"> // 화살표 마지막
+&lt;h3 class="tit ico_progress is_progress_last"&gt;서브 타이틀(화살표&amp;마지막)&lt;/h3&gt;
+                            </code></pre>
+                                        <pre><code class="html"> // 설명글
+&lt;div class="desc"&gt;설명글&lt;/div&gt;
+                            </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="오른쪽 버튼">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- tit_area -->
+                                        <div class="tit_area flex">
+                                            <h3 class="tit">서브 타이틀 서브 타이틀 서브 타이틀</h3>
+                                            <button type="buttbon" class="btn_primary_sm radius">주소 변경</button>
+                                        </div>
+                                        <!--// tit_area -->
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">&lt;!--&gt; .tit_area에 .flex클래스 추가 &lt;--&gt;
+&lt;div class="tit_area flex"&gt;
+    &lt;h3 class="tit"&gt;서브 타이틀&lt;/h3&gt;
+    &lt;button type="button" class="btn_primary_sm radius"&gt;주소 변경&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // ========== 서브타이틀 ========== -->
+
+                    <!-- 아이콘 -->
+                    <div class="section" id="icon">
+                        <h2 class="h2">- 아이콘</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <p>기본 margin-right: 7px; (첨부파일과 같이 (단독 사용 시) hidden요소가 들어갈 경우 margin-right: 0;)</p>
+                                <div class="article html_code on">
+                                    <span class="ico_mark"></span>
+                                    <span class="ico_marknavy"></span>
+                                    <span class="ico_outlink"></span>
+                                    <span class="ico_arrow" style="background-color: black"></span>
+                                    <span class="ico_bluearrow"></span>
+                                    <span class="ico_bluearrow2"></span>
+                                    <span class="ico_download2"></span>
+                                    <span class="ico_print"></span>
+                                    <span class="ico_copy"></span>
+                                    <span class="ico_file"></span>
+                                    <span class="ico_cal"></span>
+                                    <span class="ico_time"></span>
+
+                                    <div class="gap_mt24">
+                                        <div>&lt;span class="hidden"&gt;대체텍스트&lt;/span&gt;</div>
+                                        <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                        <span class="ico_cal"><span class="hidden">달력</span></span>
+                                        <span class="ico_time"><span class="hidden">시간</span></span>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <pre><code class="html">// 기본 margin-right: 7px; (첨부파일과 같이 (단독 사용 시) hidden요소가 들어갈 경우 margin-right: 0;)
+&#x3C;span class=&#x22;ico_mark&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_marknavy&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_arrow&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_bluearrow&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_bluearrow2&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_download2&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_print&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_copy&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_file&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_cal&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_time&#x22;&#x3E;&#x3C;/span&#x3E;
+
+
+&#x3C;span class=&#x22;ico_file&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;첨부파일&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_cal&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;달력&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;ico_time&#x22;&#x3E;&#x3C;span class=&#x22;hidden&#x22;&#x3E;시간&#x3C;/span&#x3E;&#x3C;/span&#x3E;
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 아이콘 -->
+
+                    <!-- 이미지 -->
+                    <div class="section" id="images">
+                        <h2 class="h2">- 이미지</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <div class="article" style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start">
+                                    <img src="/resources/images/icon/ico_home.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_user.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_join.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_login.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_logout.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_allsearch.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_search.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_new.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_file.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_copy_light.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_print_light.svg" alt="" />
+
+                                    <img src="/resources/images/common/bg_calendar.svg" alt="" />
+                                    <img src="/resources/images/common/bg_reset.svg" alt="" />
+                                    <img src="/resources/images/common/bg_addfile.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_avi.svg" alt="" />
+                                    <img src="/resources/images/icon/ico_avi_on.svg" alt="" />
+
+                                    <div class="size_full">
+                                        <img src="/resources/images/icon/ico_identity1.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_identity2.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_identity1_on.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_identity2_on.svg" alt="" />
+                                    </div>
+
+                                    <div class="size_full">
+                                        <img src="/resources/images/common/bg_checkbox_off.svg" alt="" />
+                                        <span style="padding: 1px 3px; background: black">
+                                            <img src="/resources/images/common/bg_checkbox.svg" alt="" />
+                                        </span>
+                                        <img src="/resources/images/icon/ico_completion_before.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_completion_after1.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_completion_after2.svg" alt="" />
+                                    </div>
+
+                                    <div class="size_full">
+                                        <img src="/resources/images/icon/ico_download2.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_download.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_upload.svg" alt="" />
+                                        <span style="padding: 1px 3px; background: black">
+                                            <img src="/resources/images/icon/ico_arrow.svg" alt="" />
+                                        </span>
+                                        <img src="/resources/images/icon/ico_outlink.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_link.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_pop.svg" alt="" />
+                                    </div>
+
+                                    <div class="size_full">
+                                        <img src="/resources/images/icon/ico_arrow_black.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_arrow_gray.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_arrow_blue.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_arrow_blue4.svg" alt="" />
+                                        <span style="background: black">
+                                            <img src="/resources/images/icon/ico_arrow_white.svg" alt="" />
+                                        </span>
+
+                                        <img src="/resources/images/icon/ico_arrow_gray2.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_arrow_blue2.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_arrow_blue3.svg" alt="" />
+                                        <img src="/resources/images/common/bg_arrow.svg" alt="" />
+                                        <span style="background: black">
+                                            <img src="/resources/images/icon/ico_arrow_white_down.svg" alt="" />
+                                        </span>
+
+                                        <img src="/resources/images/common/bg_double_arrow.svg" alt="" />
+                                        <img src="/resources/images/common/bg_double_arrow_active.svg" alt="" />
+                                    </div>
+
+                                    <img src="/resources/images/common/bg_close.svg" alt="" />
+                                    <img src="/resources/images/common/bg_layer_close.svg" alt="" />
+                                    <img src="/resources/images/common/bg_allsearch_close.svg" alt="" />
+
+                                    <div class="size_full">
+                                        <img src="/resources/images/icon/ico_positive.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_negative.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_mark.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_warning.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_mark_navy.svg" alt="" />
+                                        <img src="/resources/images/icon/ico_mark_blue.svg" alt="" />
+
+                                        <img src="/resources/images/common/bg_system_error.svg" alt="" />
+                                        <img src="/resources/images/common/bg_completion.svg" alt="" />
+                                        <img src="/resources/images/common/bg_notice.svg" alt="" />
+                                    </div>
+
+                                    <img src="/resources/images/icon/ico_default.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 이미지 -->
+
+                    <!-- 버튼 -->
+                    <div class="section" id="btn">
+                        <h2 class="h2">- 버튼</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <span>30px :</span>
+                                <button type="button" class="btn_primary_sm">primary</button>
+                                <button type="button" class="btn_secondary_sm">secondary</button>
+                                <button type="button" class="btn_secondary_sm">secondary<span class="ico_outlink"></span></button>
+                                <button type="button" class="btn_outline_sm">outline</button>
+                                <button type="button" class="btn_border_sm">border</button>
+                                <button type="button" class="btn_border_sm radius">border + radius</button>
+                                <button type="button" class="btn_border_sm radius">border + radius<span class="ico_bluearrow"></span></button>
+                                <br />
+                                <br />
+                                <span>30px (radius) :</span>
+                                <button type="button" class="btn_primary_sm radius">primary</button>
+                                <button type="button" class="btn_secondary_sm radius">secondary</button>
+                                <button type="button" class="btn_secondary_sm radius">secondary<span class="ico_outlink"></span></button>
+                                <button type="button" class="btn_outline_sm radius">outline</button>
+                                <br />
+                                <br />
+                                <span>40px :</span>
+                                <button type="button" class="btn_primary_md">primary</button>
+                                <button type="button" class="btn_secondary_md">secondary</button>
+                                <button type="button" class="btn_secondary_md">secondary<span class="ico_outlink"></span></button>
+                                <button type="button" class="btn_outline_md">outline</button>
+                                <button type="button" class="btn_border_md">border</button>
+                                <button type="button" class="btn_border_md radius">border + radius</button>
+                                <button type="button" class="btn_border_md radius">border + radius<span class="ico_bluearrow"></span></button>
+                                <br />
+                                <br />
+                                <span>48px :</span>
+                                <button type="button" class="btn_primary_lg">primary</button>
+                                <button type="button" class="btn_secondary_lg">secondary</button>
+                                <button type="button" class="btn_secondary_lg">secondary<span class="ico_outlink"></span></button>
+                                <button type="button" class="btn_outline_lg">outline</button>
+                                <button type="button" class="btn_border_lg">border</button>
+                                <button type="button" class="btn_border_lg radius">border + radius</button>
+                                <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow"></span></button>
+                                <button type="button" class="btn_border_lg radius">border + radius<span class="ico_bluearrow2"></span></button>
+                                <br />
+                                <br />
+                                <span>70px :</span>
+                                <button type="button" class="btn_primary_xxl">primary</button>
+                                <button type="button" class="btn_secondary_xxl">secondary</button>
+                                <button type="button" class="btn_secondary_xxl">secondary<span class="ico_outlink"></span></button>
+                                <button type="button" class="btn_outline_xxl">outline</button>
+                                <button type="button" class="btn_border_xxl">border</button>
+                                <button type="button" class="btn_border_xxl radius">border + radius</button>
+                                <button type="button" class="btn_border_xxl radius">border + radius<span class="ico_bluearrow"></span></button>
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">// 기본 min-width 90px
+
+// height 30px
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_sm&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_sm&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_sm&#x22;&#x3E;secondary&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_sm&#x22;&#x3E;outline&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_sm&#x22;&#x3E;border&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_sm radius&#x22;&#x3E;border + radius&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_sm radius&#x22;&#x3E;border + radius&#x3C;span class=&#x22;ico_bluearrow&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+
+// height 30px - radius
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_sm radius&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_sm radius&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_sm radius&#x22;&#x3E;secondary&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_sm radius&#x22;&#x3E;outline&#x3C;/button&#x3E;
+
+// height 40px
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_md&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_md&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_md&#x22;&#x3E;secondary&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_md&#x22;&#x3E;outline&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_md&#x22;&#x3E;border&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_md radius&#x22;&#x3E;border + radius&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_md radius&#x22;&#x3E;border + radius&#x3C;span class=&#x22;ico_bluearrow&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+
+// height 48px
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;secondary&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;outline&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg&#x22;&#x3E;border&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg radius&#x22;&#x3E;border + radius&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg radius&#x22;&#x3E;border + radius&#x3C;span class=&#x22;ico_bluearrow&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_lg radius&#x22;&#x3E;border + radius&#x3C;span class=&#x22;ico_bluearrow2&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+
+// height 70px
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_xxl&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_xxl&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_xxl&#x22;&#x3E;secondary&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_xxl&#x22;&#x3E;outline&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_xxl&#x22;&#x3E;border&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_xxl radius&#x22;&#x3E;border + radius&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_border_xxl radius&#x22;&#x3E;border + radius&#x3C;span class=&#x22;ico_bluearrow&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <a href="javascript:;" class="btn_more_plus">더보기</a>
+
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_more_plus&#x22;&#x3E;&#xB354;&#xBCF4;&#xAE30;&#x3C;/a&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <button type="button" class="btn_download">다운로드</button>
+                                <br />
+                                <button type="button" class="btn_upload">업로드</button>
+
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_download&#x22;&#x3E;&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn_download&#x22;&#x3E;&#xC5C5;&#xB85C;&#xB4DC;&#x3C;/button&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="복사">
+                                <strong>복사 버튼 대상</strong>
+                                <ul class="list_guide_demical">
+                                    <li>
+                                        기본(URL):
+
+                                        <!-- URL 복사 -->
+                                        <button type="button" title="복사" class="btn_copy">
+                                            <span class="hidden">복사</span>
+                                        </button>
+                                        <!-- // URL 복사 -->
+                                    </li>
+                                    <li>
+                                        aria-controls="" &amp; id="" (id의 텍스트) :
+
+                                        <!-- id의 텍스트 복사 -->
+                                        <!-- [D] aria-controls와 id는 동일값 -->
+                                        <button type="button" title="주소 복사" aria-controls="adresText" class="btn_copy">
+                                            <span id="adresText">서울시 00구 00로 000</span>
+                                            <span class="hidden">주소 복사</span>
+                                        </button>
+                                        <!-- // id의 텍스트 복사 -->
+                                    </li>
+                                </ul>
+
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&#x3C;!-- 기본 : URL 복사 --&#x3E;
+&lt;button type="button" title="복사" class="btn_copy"&gt;
+    &lt;span class="hidden"&gt;복사&lt;/span&gt;
+&lt;/button&gt;
+&#x3C;!-- // 기본 : URL 복사 --&#x3E;
+
+&#x3C;!-- id의 텍스트복사 --&#x3E;
+&#x3C;!-- [D] aria-controls와 id는 동일값 --&#x3E;
+&lt;button type="button" title="복사" aria-controls="adresText" class="btn_copy"&gt;
+    &lt;span id="adresText"&gt;서울시 00구 00로 000&lt;/span&gt;
+    &lt;span class="hidden"&gt;복사&lt;/span&gt;
+&lt;/button&gt;
+&#x3C;!-- // id의 텍스트복사 --&#x3E;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="인쇄">
+                                <button type="button" title="인쇄" class="btn_print">
+                                    <span class="hidden">인쇄</span>
+                                </button>
+
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+
+&lt;button type="button" title="인쇄" class="btn_print"&gt;
+    &lt;span class="hidden"&gt;인쇄&lt;/span&gt;
+&lt;/button&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <button type="button" class="btn_pop">팝업</button> <br />
+                                <a href="javascript:;" class="btn_link">아이콘링크</a> <br />
+                                <a href="javascript:;" class="btn_txtlink">텍스트링크</a> <br />
+                                <div class="form_item">
+                                    <div class="add_file_box">
+                                        <button type="button" class="btn_file_delete">파일명파일명.png<span class="hidden">삭제</span></button>
+                                        <button type="button" class="btn_file_delete">파일명파일명.png<span class="hidden">삭제</span></button>
+                                    </div>
+                                </div>
+                                <!-- <a href="javascript:;" class="btn_file_delete">파일명파일명.png</a> <br /> -->
+
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+                                                &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_pop&#x22;&#x3E;&#xD31D;&#xC5C5;&#x3C;/button&#x3E;
+                                                &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_link&#x22;&#x3E;&#xC544;&#xC774;&#xCF58;&#xB9C1;&#xD06C;&#x3C;/a&#x3E;
+                                                &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_txtlink&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#xB9C1;&#xD06C;&#x3C;/a&#x3E;
+                                                &lt;div class=&quot;form_item&quot;&gt;
+                                                    &lt;div class=&quot;add_file_box&quot;&gt;
+                                                        &lt;button type=&quot;button&quot; class=&quot;btn_file_delete&quot;&gt;파일명파일명.png&lt;span class=&quot;hidden&quot;&gt;삭제&lt;/span&gt;&lt;/button&gt;
+                                                        &lt;button type=&quot;button&quot; class=&quot;btn_file_delete&quot;&gt;파일명파일명.png&lt;span class=&quot;hidden&quot;&gt;삭제&lt;/span&gt;&lt;/button&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                             </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 gap_mt28">- 페이지 중간 (page_btn_area)</h3>
+                            <div class="box" data-content-title="primary / secondary">
+                                <div class="article html_code on">
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="lside">
+                                            <button type="button" class="btn_primary_lg">확인</button>
+                                        </div>
+                                        <div class="rside">
+                                            <button type="button" class="btn_secondary_lg">확인</button>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="lside">
+                                            <button type="button" class="btn_primary_lg">확인</button>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="rside">
+                                            <button type="button" class="btn_primary_lg">확인</button>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <div class="btn gap_mt20">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;rside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;
+
+&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;
+
+&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;rside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="outline / secondary">
+                                <div class="article html_code on">
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="lside">
+                                            <div class="box">
+                                                <button type="button" class="btn_outline_lg">취소</button>
+                                            </div>
+                                            <div class="box">
+                                                <button type="button" class="btn_secondary_lg">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="lside full">
+                                            <div class="box">
+                                                <a href="javascript:;" class="btn_secondary_lg">자격요건 확인<span class="ico_outlink"></span></a>
+                                            </div>
+                                            <div class="box">
+                                                <a href="javascript:;" class="btn_secondary_lg">자격취득 가능여부 자가진단<span class="ico_outlink"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="rside">
+                                            <div class="box">
+                                                <button type="button" class="btn_outline_lg">취소</button>
+                                            </div>
+                                            <div class="box">
+                                                <button type="button" class="btn_secondary_lg">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area">
+                                        <div class="rside full">
+                                            <div class="box">
+                                                <a href="javascript:;" class="btn_secondary_lg">자격요건 확인<span class="ico_outlink"></span></a>
+                                            </div>
+                                            <div class="box">
+                                                <a href="javascript:;" class="btn_secondary_lg">자격취득 가능여부 자가진단<span class="ico_outlink"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+                                    <div class="btn gap_mt20">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside&#x22;&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;
+
+&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside full&#x22;&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC790;&#xACA9;&#xC694;&#xAC74; &#xD655;&#xC778;&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC790;&#xACA9;&#xCDE8;&#xB4DD; &#xAC00;&#xB2A5;&#xC5EC;&#xBD80; &#xC790;&#xAC00;&#xC9C4;&#xB2E8;&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;
+
+&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;rside&#x22;&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;
+
+&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;rside full&#x22;&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC790;&#xACA9;&#xC694;&#xAC74; &#xD655;&#xC778;&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;box&#x22;&#x3E;
+            &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_secondary_lg&#x22;&#x3E;&#xC790;&#xACA9;&#xCDE8;&#xB4DD; &#xAC00;&#xB2A5;&#xC5EC;&#xBD80; &#xC790;&#xAC00;&#xC9C4;&#xB2E8;&#x3C;span class=&#x22;ico_outlink&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="중앙정렬">
+                                <div class="article html_code on">
+                                    <!-- page_btn_area -->
+                                    <div class="page_btn_area center">
+                                        <div class="lside">
+                                            <button type="button" class="btn_outline_lg">취소</button>
+                                        </div>
+                                        <div class="rside">
+                                            <button type="button" class="btn_primary_lg">확인</button>
+                                        </div>
+                                    </div>
+                                    <!--// page_btn_area -->
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;!-- page_btn_area --&#x3E;
+&#x3C;div class=&#x22;page_btn_area center&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;rside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// page_btn_area --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 gap_mt28">- 페이지 하단 (bottom_btn_area)</h3>
+                            <div>
+                                옵션 (bottom_btn_area에 클래스추가)<br />
+                                <ul class="list_guide_demical">
+                                    <li>.full</li>
+                                    <li>.cell4 : (모바일 320스타일 별도)</li>
+                                    <li>.cell4.wide : (모바일 세로 정렬)</li>
+                                </ul>
+                            </div>
+                            <div class="box" data-content-title="251">
+                                <div class="article html_code on">
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area">
+                                        <div class="lside">
+                                            <button type="button" class="btn_outline_lg">이전으로</button>
+                                        </div>
+                                        <div class="rside">
+                                            <button type="button" class="btn_primary_lg">가입신청</button>
+                                        </div>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area">
+                                        <button type="button" class="btn_primary_lg">가입신청</button>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;!-- bottom_btn_area --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;lside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC774;&#xC804;&#xC73C;&#xB85C;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;rside&#x22;&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xAC00;&#xC785;&#xC2E0;&#xCCAD;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;
+
+&#x3C;!-- bottom_btn_area --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xAC00;&#xC785;&#xC2E0;&#xCCAD;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;
+
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="118">
+                                <div class="article html_code on">
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area cell4">
+                                        <div>
+                                            <a href="javascript:;" class="btn_outline_lg">수정하기</a>
+                                            <a href="javascript:;" class="btn_outline_lg">취소하기</a>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn_primary_lg">즉시 결제</button>
+                                            <button type="button" class="btn_outline_lg">다음에 결제</button>
+                                        </div>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area cell4">
+                                        <div>
+                                            <button type="button" class="btn_outline_lg">응시표 출력</button>
+                                            <button type="button" class="btn_outline_lg">영수증 출력</button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn_primary_lg">취소하기</button>
+                                        </div>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;!-- bottom_btn_area에 cell4클래스 추가 --&#x3E;
+&#x3C;!-- bottom_btn_area --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area cell4&#x22;&#x3E;
+    &#x3C;div&#x3E;
+        &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC218;&#xC815;&#xD558;&#xAE30;&#x3C;/a&#x3E;
+        &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#xD558;&#xAE30;&#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xC989;&#xC2DC; &#xACB0;&#xC81C;&#x3C;/button&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xB2E4;&#xC74C;&#xC5D0; &#xACB0;&#xC81C;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;
+
+&#x3C;!-- bottom_btn_area --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area cell4&#x22;&#x3E;
+    &#x3C;div&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC751;&#xC2DC;&#xD45C; &#xCD9C;&#xB825;&#x3C;/button&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC601;&#xC218;&#xC99D; &#xCD9C;&#xB825;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#xD558;&#xAE30;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="118 & 251">
+                                <div class="article html_code on">
+                                    <div><strong>cell4 ▼</strong></div>
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area cell4">
+                                        <div class="lside">
+                                            <a href="javascript:;" class="btn_outline_lg">수정하기</a>
+                                            <a href="javascript:;" class="btn_outline_lg">취소하기</a>
+                                        </div>
+                                        <div class="rside">
+                                            <button type="button" class="btn_primary_lg">즉시 결제</button>
+                                        </div>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="gap_mt50"><strong>cell4 & &amp; wide ▼</strong></div>
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area cell4 wide">
+                                        <div class="lside">
+                                            <a href="javascript:;" class="btn_outline_lg">수정하기</a>
+                                            <a href="javascript:;" class="btn_outline_lg">취소하기</a>
+                                            <button type="button" class="btn_outline_lg">다음에 결제</button>
+                                        </div>
+                                        <div class="rside">
+                                            <button type="button" class="btn_primary_lg">즉시 결제</button>
+                                        </div>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="btn gap_mt10">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre>
+                                                <code class="html">&#x3C;!-- bottom_btn_area --&#x3E;
+&#x3C;!-- bottom_btn_area에 .cell4.wide 클래스 추가 --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area cell4 wide&#x22;&#x3E;
+    &#x3C;div class="lside"&#x3E;
+        &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC218;&#xC815;&#xD558;&#xAE30;&#x3C;/a&#x3E;
+        &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#xD558;&#xAE30;&#x3C;/a&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;다음에 결제&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class="rside"&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;즉시 결제&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;&#x3C;
+
+!-- bottom_btn_area --&#x3E;
+&#x3C;!-- bottom_btn_area에 .cell4 클래스 추가 --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area cell4&#x22;&#x3E;
+    &#x3C;div class="lside"&#x3E;
+        &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xC218;&#xC815;&#xD558;&#xAE30;&#x3C;/a&#x3E;
+        &#x3C;a href=&#x22;javascript:;&#x22; class=&#x22;btn_outline_lg&#x22;&#x3E;&#xCDE8;&#xC18C;&#xD558;&#xAE30;&#x3C;/a&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;다음에 결제&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class="rside"&#x3E;
+        &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;즉시 결제&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="full">
+                                <div class="article html_code on">
+                                    <!-- bottom_btn_area -->
+                                    <div class="bottom_btn_area full">
+                                        <button type="button" class="btn_primary_lg">메인</button>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="btn gap_mt10">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;!-- bottom_btn_area에 full클래스 추가 --&#x3E;
+&#x3C;!-- bottom_btn_area --&#x3E;
+&#x3C;div class=&#x22;bottom_btn_area full&#x22;&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_lg&#x22;&#x3E;&#xBA54;&#xC778;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// bottom_btn_area --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 gap_mt28">- 서브타이틀 옆에 버튼(tit_area flex)</h3>
+                            <div class="box" data-content-title="버튼크기 sm">
+                                <div class="article html_code on">
+                                    <!-- bottom_btn_area -->
+                                    <div class="tit_area flex">
+                                        <h3 class="tit">영수증, 계산서 발급</h3>
+                                        <button type="button" class="btn_primary_sm radius">계산서 발급 요청</button>
+                                    </div>
+                                    <div class="tit_area flex">
+                                        <h3 class="tit">교재 배송주소</h3>
+                                        <button type="button" class="btn_primary_sm radius">주소 변경</button>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="btn gap_mt10">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;div class=&#x22;tit_area flex&#x22;&#x3E;
+    &#x3C;h3 class=&#x22;tit&#x22;&#x3E;영수증, 계산서 발급&#x3C;/h3&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_sm radius&#x22;&#x3E;계산서 발급 요청&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;tit_area flex&#x22;&#x3E;
+    &#x3C;h3 class=&#x22;tit&#x22;&#x3E;교재 배송주소&#x3C;/h3&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_sm radius&#x22;&#x3E;주소 변경&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box" data-content-title="버튼크기 md">
+                                <div class="article html_code on">
+                                    <!-- bottom_btn_area -->
+                                    <div class="tit_area flex">
+                                        <h3 class="tit">신청서 수정하기</h3>
+                                        <button type="button" class="btn_primary_md">근무경력 추가</button>
+                                    </div>
+                                    <!--// bottom_btn_area -->
+
+                                    <div class="btn gap_mt10">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;div class=&#x22;tit_area flex&#x22;&#x3E;
+    &#x3C;h3 class=&#x22;tit&#x22;&#x3E;신청서 수정하기&#x3C;/h3&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_primary_md&#x22;&#x3E;근무경력 추가&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--// 버튼 -->
+
+                    <!-- input -->
+                    <div class="section" id="input">
+                        <h2 class="h2">- input</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="checkbox (기본)">
+                                <div class="article html_code on">
+                                    <p>
+                                        단독: .inp_check에 alone 클래스 추가<br />
+                                        - label &gt; span은 display: none
+                                    </p>
+                                    <span class="inp_check alone">
+                                        <input type="checkbox" id="check1" />
+                                        <label for="check1"><span>선택</span></label>
+                                    </span>
+
+                                    <br /><br />
+
+                                    <div class="check_set">
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type1" checked />
+                                            <label for="chk_type1">체크박스 1</label>
+                                        </span>
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type2" />
+                                            <label for="chk_type2">체크박스 2</label>
+                                        </span>
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type3" disabled />
+                                            <label for="chk_type3">비활성화 (미선택)</label>
+                                        </span>
+                                        <span class="inp_check">
+                                            <input type="checkbox" id="chk_type4" checked disabled />
+                                            <label for="chk_type4">비활성화 (선택)</label>
+                                        </span>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&lt;!-- [D] 단독사용시 : inp_check에 alone 클래스 추가 --&gt;
+&lt;span class="inp_check alone"&gt;
+    &lt;input type="checkbox" id="check1" /&gt;
+    &lt;label for="check1"&gt;&lt;span&gt;선택&lt;/span&gt;&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;div class="check_set"&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type1" checked /&gt;
+        &lt;label for="chk_type1"&gt;체크박스 1&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type2" /&gt;
+        &lt;label for="chk_type2"&gt;체크박스 2&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type3" disabled /&gt;
+        &lt;label for="chk_type3"&gt;비활성화 (미선택)&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_check"&gt;
+        &lt;input type="checkbox" id="chk_type4" checked disabled /&gt;
+        &lt;label for="chk_type4"&gt;비활성화 (선택)&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="checkbox (태그)">
+                                <div class="article html_code on">
+                                    <div class="inp_round_box">
+                                        <!-- [D] 전체선택 사용시:
+                                            1. 전체선택에 all 클래스 추가
+                                            2. 동일 name 추가
+                                        -->
+                                        <div>
+                                            <input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked />
+                                            <label for="roundchk1">전체목록</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" />
+                                            <label for="roundchk2">1급</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" />
+                                            <label for="roundchk3">2급</label>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&lt;div class="inp_round_box"&gt;
+
+    &lt;!-- [D] 전체선택 사용시:
+        1. 전체선택에 all 클래스 추가
+        2. 동일 name 추가
+    --&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked /&gt;
+        &lt;label for="roundchk1"&gt;전체목록&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" /&gt;
+        &lt;label for="roundchk2"&gt;1급&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" /&gt;
+        &lt;label for="roundchk3"&gt;2급&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="radio (기본)">
+                                <div class="article html_code on">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="type1_1" name="type1" />
+                                            <label for="type1_1">동의함</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="type1_2" name="type1" checked />
+                                            <label for="type1_2">동의안함</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="type1_3" name="type1" disabled />
+                                            <label for="type1_3">비활성화</label>
+                                        </span>
+                                    </div>
+
+                                    <p class="gap_mt24">.radio_set에 .flex_row 클래스 추가</p>
+                                    <div class="radio_set flex_row">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" required="" />
+                                            <label for="label1">O</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">X</label>
+                                        </span>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+ &lt;div class="radio_set"&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="type1_1" name="type1" /&gt;
+        &lt;label for="type1_1"&gt;동의함&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="type1_2" name="type1" checked /&gt;
+        &lt;label for="type1_2"&gt;동의안함&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="type1_3" name="type1" disabled /&gt;
+        &lt;label for="type1_3"&gt;비활성화&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--.radio_set에 .flex_row 클래스 추가 --&gt;
+&lt;div class="radio_set flex_row"&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="label1" name="label" required="" /&gt;
+        &lt;label for="label1"&gt;O&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="inp_radio"&gt;
+        &lt;input type="radio" id="label2" name="label" /&gt;
+        &lt;label for="label2"&gt;X&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="text/textarea">
+                                <div class="article html_code on">
+                                    <strong>input type="text" : </strong>
+                                    <div class="choice_text_box">
+                                        <input type="text" class="inp_choice_txt" placeholder="답변을 입력해주세요(1줄)" required="" />
+                                    </div>
+
+                                    <br /><br />
+                                    <strong>textarea : </strong>
+                                    <div class="choice_text_box">
+                                        <textarea rows="1" class="inp_choice_txt" placeholder="답변을 입력해주세요(2줄이상)" required=""></textarea>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">
+&lt;!-- 한줄 --&gt;
+&lt;div class="choice_text_box"&gt;
+    &lt;input type="text" class="inp_choice_txt" placeholder="답변을 입력해주세요(1줄)" /&gt;
+&lt;/div&gt;
+&lt;!-- // 한줄 --&gt;
+
+&lt;!-- 2줄 이상 --&gt;
+&lt;div class="choice_text_box"&gt;
+    &lt;textarea rows="1" class="inp_choice_txt" placeholder="답변을 입력해주세요(2줄이상)"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;!-- // 2줄 이상 --&gt;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // input -->
+
+                    <!-- List -->
+                    <div class="section" id="list">
+                        <h2 class="h2">- 리스트</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="•">
+                                <div class="article html_code on">
+                                    <ul class="list_dot">
+                                        <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
+                                        <li>이수증 1부 (홈페이지 출력본)</li>
+                                        <li>경력증명서 1부</li>
+                                        <li>학력증명서 1부</li>
+                                    </ul>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;ul class=&#x22;list_dot&#x22;&#x3E;
+    &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="-">
+                                <div class="article html_code on">
+                                    <ul class="list_dash">
+                                        <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
+                                        <li>이수증 1부 (홈페이지 출력본)</li>
+                                        <li>경력증명서 1부</li>
+                                        <li>학력증명서 1부</li>
+                                    </ul>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;ul class=&#x22;list_dash&#x22;&#x3E;
+    &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="※">
+                                <div class="article html_code on">
+                                    <ul class="list_mark">
+                                        <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
+                                        <li>이수증 1부 (홈페이지 출력본)</li>
+                                        <li>경력증명서 1부</li>
+                                        <li>학력증명서 1부</li>
+                                    </ul>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;ul class=&#x22;list_mark&#x22;&#x3E;
+    &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="■">
+                                <div class="article html_code on">
+                                    <ul class="list_square">
+                                        <li>자격증 발급신청서 1부 (홈페이지 출력본)</li>
+                                        <li>이수증 1부 (홈페이지 출력본)</li>
+                                        <li>경력증명서 1부</li>
+                                        <li>학력증명서 1부</li>
+                                    </ul>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;ul class=&#x22;list_square&#x22;&#x3E;
+    &#x3C;li&#x3E;&#xC790;&#xACA9;&#xC99D; &#xBC1C;&#xAE09;&#xC2E0;&#xCCAD;&#xC11C; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xC774;&#xC218;&#xC99D; 1&#xBD80; (&#xD648;&#xD398;&#xC774;&#xC9C0; &#xCD9C;&#xB825;&#xBCF8;)&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xACBD;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#xD559;&#xB825;&#xC99D;&#xBA85;&#xC11C; 1&#xBD80;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="1 / 가">
+                                <div class="article html_code on">
+                                    <ul class="list_item">
+                                        <li><span>1.</span>상수도관로 송배급수시설 운영관리 상수도관로 송배급수시설 운영관리 상수도관로 송배급수시설 운영관리</li>
+                                        <li><span>2.</span>상수도관로 운영·관리 계획수립</li>
+                                    </ul>
+                                    <br />
+                                    <ul class="list_item kor">
+                                        <li><span>가.</span>상수도관로 시설 진단 및 조사 상수도관로 시설 진단 및 조사 상수도관로 시설 진단 및 조사</li>
+                                        <li><span>나.</span>상수도관로 블록시스템 구축</li>
+                                    </ul>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;ul class=&#x22;list_item&#x22;&#x3E;
+    &#x3C;li&#x3E;&#x3C;span&#x3E;1.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC1A1;&#xBC30;&#xAE09;&#xC218;&#xC2DC;&#xC124; &#xC6B4;&#xC601;&#xAD00;&#xB9AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC1A1;&#xBC30;&#xAE09;&#xC218;&#xC2DC;&#xC124; &#xC6B4;&#xC601;&#xAD00;&#xB9AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC1A1;&#xBC30;&#xAE09;&#xC218;&#xC2DC;&#xC124; &#xC6B4;&#xC601;&#xAD00;&#xB9AC;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;span&#x3E;2.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC6B4;&#xC601;&#xB7;&#xAD00;&#xB9AC; &#xACC4;&#xD68D;&#xC218;&#xB9BD;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;list_item kor&#x22;&#x3E;
+    &#x3C;li&#x3E;&#x3C;span&#x3E;&#xAC00;.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC2DC;&#xC124; &#xC9C4;&#xB2E8; &#xBC0F; &#xC870;&#xC0AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC2DC;&#xC124; &#xC9C4;&#xB2E8; &#xBC0F; &#xC870;&#xC0AC; &#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xC2DC;&#xC124; &#xC9C4;&#xB2E8; &#xBC0F; &#xC870;&#xC0AC;&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;span&#x3E;&#xB098;.&#x3C;/span&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB85C; &#xBE14;&#xB85D;&#xC2DC;&#xC2A4;&#xD15C; &#xAD6C;&#xCD95;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// List -->
+
+                    <!-- text -->
+                    <div class="section" id="text">
+                        <h2 class="h2">- 텍스트</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="txt_color">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <span class="txt_blue">텍스트</span><br />
+                                        <span class="txt_red">텍스트</span><br />
+                                        <span class="txt_green">텍스트</span><br />
+                                        <span class="txt_navy">텍스트</span><br />
+                                        <span class="txt_navy1">텍스트</span><br />
+                                        <span class="txt_gray">텍스트</span><br />
+                                        <span class="txt_gray2">텍스트</span><br />
+                                        <span class="txt_underline">텍스트</span>
+
+                                        <div class="btn gap_mt24">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <div class="code_wrap">
+                                                <pre><code class="html">&#x3C;span class=&#x22;txt_blue&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;txt_red&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;txt_green&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;txt_navy&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;txt_navy1&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;txt_underline&#x22;&#x3E;&#xD14D;&#xC2A4;&#xD2B8;&#x3C;/span&#x3E;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="txt_style">
+                                <div class="article html_code on">
+                                    <p class="txt_note">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
+                                    <p class="txt_note txt_red">응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다 응시 확정 후에는 변경이 불가합니다.</p>
+                                    <p class="txt_dot">근거법령: 수도법 제24조 수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조수도법 제24조</p>
+                                    <p class="txt_mark">실무교육: 수도시설의 설치나 유지, 관리 분야의 실제 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 교육</p>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre><code class="html">&#x3C;p class=&#x22;txt_note&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt_note txt_red&#x22;&#x3E;&#xC751;&#xC2DC; &#xD655;&#xC815; &#xD6C4;&#xC5D0;&#xB294; &#xBCC0;&#xACBD;&#xC774; &#xBD88;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt_dot&#x22;&#x3E;&#xADFC;&#xAC70;&#xBC95;&#xB839;: &#xC218;&#xB3C4;&#xBC95;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt_mark&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721;: &#xC218;&#xB3C4;&#xC2DC;&#xC124;&#xC758; &#xC124;&#xCE58;&#xB098; &#xC720;&#xC9C0;, &#xAD00;&#xB9AC; &#xBD84;&#xC57C;&#xC758; &#xC2E4;&#xC81C; &#xC2DC;&#xC124; &#xB610;&#xB294; &#xAD00;&#xB828; &#xC5C5;&#xBB34;&#xC5D0; &#xC885;&#xC0AC;&#xD558;&#xB294; &#xAE30;&#xAD00;, &#xAE30;&#xC5C5;&#xCCB4;&#xC758; &#xADFC;&#xBB34;&#xC7A5;&#xC18C;&#xC5D0;&#xC11C; &#xC2E4;&#xC2DC;&#xD558;&#xB294; &#xAD50;&#xC721;&#x3C;/p&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// List -->
+
+                    <!-- box -->
+                    <div class="section" id="alertbox">
+                        <h2 class="h2">- 알림 박스</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="result_area">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <div class="result_area negative">실무교육 확인신청 내역이 없습니다. 이수증 발급을 위해서는 서류제출이 필요합니다.</div>
+                                        <br />
+                                        <div class="result_area ongoing">심사 중입니다. 서류 확인 결과는 알림을 통해 안내해드립니다.</div>
+                                        <br />
+                                        <div class="result_area positive">실무교육 확인이 완료되었습니다.</div>
+                                        <br />
+                                        <div class="result_area warning">보완요청 안내입니다. 내용 확인 후 7일 이내 미보완시 자동 반려로 처리 됩니다.</div>
+                                        <br />
+                                        <div class="result_area base">
+                                            조회 가능한 평가시험이 결과가 없습니다.<br />
+                                            평가시험 일정 또는 마이페이지를 확인해 주시기 바랍니다.
+                                        </div>
+
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <div class="code_wrap">
+                                                <pre><code class="html">&#x3C;div class=&#x22;result_area negative&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721; &#xD655;&#xC778;&#xC2E0;&#xCCAD; &#xB0B4;&#xC5ED;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xC218;&#xC99D; &#xBC1C;&#xAE09;&#xC744; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC11C;&#xB958;&#xC81C;&#xCD9C;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;result_area ongoing&#x22;&#x3E;&#xC2EC;&#xC0AC; &#xC911;&#xC785;&#xB2C8;&#xB2E4;. &#xC11C;&#xB958; &#xD655;&#xC778; &#xACB0;&#xACFC;&#xB294; &#xC54C;&#xB9BC;&#xC744; &#xD1B5;&#xD574; &#xC548;&#xB0B4;&#xD574;&#xB4DC;&#xB9BD;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;result_area positive&#x22;&#x3E;&#xC2E4;&#xBB34;&#xAD50;&#xC721; &#xD655;&#xC778;&#xC774; &#xC644;&#xB8CC;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;result_area warning&#x22;&#x3E;&#xBCF4;&#xC644;&#xC694;&#xCCAD; &#xC548;&#xB0B4;&#xC785;&#xB2C8;&#xB2E4;. &#xB0B4;&#xC6A9; &#xD655;&#xC778; &#xD6C4; 7&#xC77C; &#xC774;&#xB0B4; &#xBBF8;&#xBCF4;&#xC644;&#xC2DC; &#xC790;&#xB3D9; &#xBC18;&#xB824;&#xB85C; &#xCC98;&#xB9AC; &#xB429;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;result_area base&#x22;&#x3E;&#xC870;&#xD68C; &#xAC00;&#xB2A5;&#xD55C; &#xD3C9;&#xAC00;&#xC2DC;&#xD5D8;&#xC774; &#xACB0;&#xACFC;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;br /&#x3E;&#xD3C9;&#xAC00;&#xC2DC;&#xD5D8; &#xC77C;&#xC815; &#xB610;&#xB294; &#xB9C8;&#xC774;&#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574; &#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="notice_box">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <div class="notice_box center">
+                                            <div class="box">
+                                                <p class="tit"><span class="ico_marknavy"></span>의견제출 기간이 아닙니다.</p>
+                                                <p class="txt">이의신청을 할 수 있는 평가시험이 없습니다.</p>
+                                                <p class="txt">평가시험 일정 또는 응시여부를 확인하여 주시기 바랍니다.</p>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="notice_box lightblue center">
+                                            <p class="tit"><span class="ico_marknavy"></span>이전 시스템 가입자 회원 전환 가입 안내</p>
+                                            <p class="txt left">2025.08. 이전 시스템 가입자는 시스템 변경에 따라 신규시스템 회원으로 전환 가입하셔야 서비스 이용이 가능합니다</p>
+                                        </div>
+                                        <br />
+                                        <div class="notice_box lightblue">
+                                            <strong>상수도관망시설운영관리사</strong>는 등급별로 요건을 충족하여야 자격을 취득할 수 있습니다. (단 자격요건이 충족되지 않더라도 양성과정 참여는 가능하며, 추후 자격요건을 충족시 자격발급이 가능) 또한 자격요건을 충족하더라도 결격사유에 해당하는 경우
+                                            자격취득이 불가능하므로 자격요건과 결격사유를 확인하시기 바랍니다.
+                                        </div>
+
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <div class="code_wrap">
+                                                <pre><code class="html">&#x3C;div class=&#x22;notice_box center&#x22;&#x3E;
+    &#x3C;div class=&#x22;box&#x22;&#x3E;
+        &#x3C;p class=&#x22;tit&#x22;&#x3E;&#x3C;span class=&#x22;ico_marknavy&#x22;&#x3E;&#x3C;/span&#x3E;&#xC758;&#xACAC;&#xC81C;&#xCD9C; &#xAE30;&#xAC04;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+        &#x3C;p class=&#x22;txt&#x22;&#x3E;&#xC774;&#xC758;&#xC2E0;&#xCCAD;&#xC744; &#xD560; &#xC218; &#xC788;&#xB294; &#xD3C9;&#xAC00;&#xC2DC;&#xD5D8;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+        &#x3C;p class=&#x22;txt&#x22;&#x3E;&#xD3C9;&#xAC00;&#xC2DC;&#xD5D8; &#xC77C;&#xC815; &#xB610;&#xB294; &#xC751;&#xC2DC;&#xC5EC;&#xBD80;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC5EC; &#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;notice_box lightblue center&#x22;&#x3E;
+    &#x3C;p class=&#x22;tit&#x22;&#x3E;&#x3C;span class=&#x22;ico_marknavy&#x22;&#x3E;&#x3C;/span&#x3E;&#xC774;&#xC804; &#xC2DC;&#xC2A4;&#xD15C; &#xAC00;&#xC785;&#xC790; &#xD68C;&#xC6D0; &#xC804;&#xD658; &#xAC00;&#xC785; &#xC548;&#xB0B4;&#x3C;/p&#x3E;
+    &#x3C;p class=&#x22;txt left&#x22;&#x3E;2025.08. &#xC774;&#xC804; &#xC2DC;&#xC2A4;&#xD15C; &#xAC00;&#xC785;&#xC790;&#xB294; &#xC2DC;&#xC2A4;&#xD15C; &#xBCC0;&#xACBD;&#xC5D0; &#xB530;&#xB77C; &#xC2E0;&#xADDC;&#xC2DC;&#xC2A4;&#xD15C; &#xD68C;&#xC6D0;&#xC73C;&#xB85C; &#xC804;&#xD658; &#xAC00;&#xC785;&#xD558;&#xC154;&#xC57C; &#xC11C;&#xBE44;&#xC2A4; &#xC774;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;notice_box lightblue&#x22;&#x3E;
+    &#x3C;strong&#x3E;&#xC0C1;&#xC218;&#xB3C4;&#xAD00;&#xB9DD;&#xC2DC;&#xC124;&#xC6B4;&#xC601;&#xAD00;&#xB9AC;&#xC0AC;&#x3C;/strong&#x3E;&#xB294; &#xB4F1;&#xAE09;&#xBCC4;&#xB85C; &#xC694;&#xAC74;&#xC744; &#xCDA9;&#xC871;&#xD558;&#xC5EC;&#xC57C; &#xC790;&#xACA9;&#xC744; &#xCDE8;&#xB4DD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. (&#xB2E8; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xC774; &#xCDA9;&#xC871;&#xB418;&#xC9C0; &#xC54A;&#xB354;&#xB77C;&#xB3C4; &#xC591;&#xC131;&#xACFC;&#xC815; &#xCC38;&#xC5EC;&#xB294; &#xAC00;&#xB2A5;&#xD558;&#xBA70;, &#xCD94;&#xD6C4; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xC744; &#xCDA9;&#xC871;&#xC2DC; &#xC790;&#xACA9;&#xBC1C;&#xAE09;&#xC774; &#xAC00;&#xB2A5;) &#xB610;&#xD55C; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xC744; &#xCDA9;&#xC871;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xACB0;&#xACA9;&#xC0AC;&#xC720;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#xC790;&#xACA9;&#xCDE8;&#xB4DD;&#xC774;
+    &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xBBC0;&#xB85C; &#xC790;&#xACA9;&#xC694;&#xAC74;&#xACFC; &#xACB0;&#xACA9;&#xC0AC;&#xC720;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.
+&#x3C;/div&#x3E;
+                                    </code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="badge">
+                        <h2 class="h2">- 뱃지</h2>
+                        <div class="inner">
+                            <div class="box" data-content-title="value_badge">
+                                <div class="article html_code on">
+                                    <div>
+                                        진행상태
+                                        <span class="value_badge1">신청완료</span>
+                                        <span class="value_badge1">응시확정</span>
+                                        <span class="value_badge2">최초응시</span>
+                                        <span class="value_badge4">재응시</span>
+                                        <span class="value_badge6">취소</span>
+                                    </div>
+                                    <div>
+                                        결제상태
+                                        <span class="value_badge3">승인</span>
+                                        <span class="value_badge3">결제완료</span>
+                                        <span class="value_badge03">결제대기</span>
+                                        <span class="value_badge03">미입금</span>
+                                    </div>
+                                    <div>
+                                        면제상태
+                                        <span class="value_badge5">면제취소</span>
+                                        <span class="value_badge5">면제대기</span>
+                                        <span class="value_badge5">보완요청</span>
+                                        <span class="value_badge5">면제없음</span>
+                                    </div>
+                                    <div>
+                                        기타
+                                        <span class="value_badge7">만족도 조사</span>
+                                        <span class="value_badge8">1급</span>
+                                        <span class="value_badge9">2급</span>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre>
+                                                <code class="html">
+&#x3C;div&#x3E;
+    진행상태
+    &#x3C;span class=&#x22;value_badge1&#x22;&#x3E;신청완료&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge1&#x22;&#x3E;응시확정&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge2&#x22;&#x3E;최초응시&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge4&#x22;&#x3E;재응시&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge6&#x22;&#x3E;취소&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div&#x3E;
+    결제상태
+    &#x3C;span class=&#x22;value_badge3&#x22;&#x3E;승인&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge3&#x22;&#x3E;결제완료&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge03&#x22;&#x3E;결제대기&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge03&#x22;&#x3E;미입금&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div&#x3E;
+    면제상태
+    &#x3C;span class=&#x22;value_badge5&#x22;&#x3E;면제취소&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge5&#x22;&#x3E;면제대기&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge5&#x22;&#x3E;보완요청&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge5&#x22;&#x3E;면제없음&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div&#x3E;
+    기타
+    &#x3C;span class=&#x22;value_badge7&#x22;&#x3E;만족도 조사&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge8&#x22;&#x3E;1급&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;value_badge9&#x22;&#x3E;2급&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+                                            </code>
+                                        </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="data_badge">
+                                <div class="article html_code on">
+                                    <span class="data_badge1">문의</span>
+                                    <span class="data_badge2">답변</span>
+                                    <span class="data_badge3">구분</span>
+                                    <span class="data_badge4">안내</span>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre>
+                                                <code class="html">
+&#x3C;span class=&#x22;data_badge1&#x22;&#x3E;문의&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;data_badge2&#x22;&#x3E;답변&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;data_badge3&#x22;&#x3E;구분&#x3C;/span&#x3E;
+&#x3C;span class=&#x22;data_badge4&#x22;&#x3E;안내&#x3C;/span&#x3E;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="tab">
+                        <h2 class="h2">- 탭 메뉴</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- tab -->
+                                        <div class="tab_area">
+                                            <div class="scroll_area">
+                                                <ul class="tab" role="tablist">
+                                                    <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">tab1</button></li>
+                                                    <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">tab2</button></li>
+                                                    <li role="presentation" aria-controls="tab3"><button type="button" role="tab" aria-selected="false">tab3</button></li>
+                                                    <li role="presentation" aria-controls="tab4"><button type="button" role="tab" aria-selected="false">tab4</button></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="tabpanel" role="tabpanel">
+                                                <!-- aria-controls과 tab_cont id값 동일하게 적용 -->
+                                                <!-- tab1 -->
+                                                <div id="tab1" class="tab_cont" aria-hidden="false">
+                                                    <h3 class="hidden">tab1 타이틀</h3>
+                                                    <div class="detail_view">tab1 내용</div>
+                                                </div>
+                                                <!--// tab1 -->
+
+                                                <!-- tab2 -->
+                                                <div id="tab2" class="tab_cont" aria-hidden="true" style="display: none">
+                                                    <h3 class="hidden">tab2 타이틀</h3>
+                                                    <div class="detail_view">tab2 내용</div>
+                                                </div>
+                                                <!--// tab2 -->
+
+                                                <!-- tab3 -->
+                                                <div id="tab3" class="tab_cont" aria-hidden="true" style="display: none">
+                                                    <h3 class="hidden">tab3 타이틀</h3>
+                                                    <div class="detail_view">tab3 내용</div>
+                                                </div>
+                                                <!--// tab3 -->
+
+                                                <!-- tab4 -->
+                                                <div id="tab4" class="tab_cont" aria-hidden="true" style="display: none">
+                                                    <h3 class="hidden">tab4 타이틀</h3>
+                                                    <div class="detail_view">tab4 내용</div>
+                                                </div>
+                                                <!--// tab4 -->
+                                            </div>
+                                        </div>
+                                        <!--// tab -->
+
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <div class="code_wrap">
+                                                <pre><code class="html">&#x3C;!-- tab --&#x3E;
+&#x3C;div class=&#x22;tab_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;scroll_area&#x22;&#x3E;
+        &#x3C;ul class=&#x22;tab&#x22; role=&#x22;tablist&#x22;&#x3E;
+            &#x3C;li class=&#x22;on&#x22; role=&#x22;presentation&#x22; aria-controls=&#x22;tab1&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;true&#x22;&#x3E;tab1&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab2&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab2&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab3&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab3&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab4&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab4&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;tabpanel&#x22; role=&#x22;tabpanel&#x22;&#x3E;
+        &#x3C;!-- aria-controls&#xACFC; tab_cont id&#xAC12; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC801;&#xC6A9; --&#x3E;
+        &#x3C;!-- tab1 --&#x3E;
+        &#x3C;div id=&#x22;tab1&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;false&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab1 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab1 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab1 --&#x3E;
+
+        &#x3C;!-- tab2 --&#x3E;
+        &#x3C;div id=&#x22;tab2&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab2 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab2 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab1 --&#x3E;
+
+        &#x3C;!-- tab3 --&#x3E;
+        &#x3C;div id=&#x22;tab3&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab3 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab3 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab3 --&#x3E;
+
+        &#x3C;!-- tab4 --&#x3E;
+        &#x3C;div id=&#x22;tab4&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab4 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab4 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab4 --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// tab --&#x3E;</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" data-content-title="풀 타입">
+                                <div class="article html_code on">
+                                    <div class="tab_area">
+                                        <div class="scroll_area">
+                                            <ul class="tab full_type" role="tablist">
+                                                <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">tab1</button></li>
+                                                <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">tab2</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre><code class="html">&#x3C;!-- tab --&#x3E;
+&#x3C;!-- ul.tab에 .full_type클래스 추가 --&#x3E;
+&#x3C;div class=&#x22;tab_area&#x22;&#x3E;
+    &#x3C;div class=&#x22;scroll_area&#x22;&#x3E;
+        &#x3C;ul class=&#x22;tab full_type&#x22; role=&#x22;tablist&#x22;&#x3E;
+            &#x3C;li class=&#x22;on&#x22; role=&#x22;presentation&#x22; aria-controls=&#x22;tab1&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;true&#x22;&#x3E;tab1&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab2&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab2&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab3&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab3&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li role=&#x22;presentation&#x22; aria-controls=&#x22;tab4&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; role=&#x22;tab&#x22; aria-selected=&#x22;false&#x22;&#x3E;tab4&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;tabpanel&#x22; role=&#x22;tabpanel&#x22;&#x3E;
+        &#x3C;!-- aria-controls&#xACFC; tab_cont id&#xAC12; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC801;&#xC6A9; --&#x3E;
+        &#x3C;!-- tab1 --&#x3E;
+        &#x3C;div id=&#x22;tab1&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;false&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab1 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab1 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab1 --&#x3E;
+
+        &#x3C;!-- tab2 --&#x3E;
+        &#x3C;div id=&#x22;tab2&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab2 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab2 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab1 --&#x3E;
+
+        &#x3C;!-- tab3 --&#x3E;
+        &#x3C;div id=&#x22;tab3&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab3 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab3 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab3 --&#x3E;
+
+        &#x3C;!-- tab4 --&#x3E;
+        &#x3C;div id=&#x22;tab4&#x22; class=&#x22;tab_cont&#x22; aria-hidden=&#x22;true&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;h3 class=&#x22;hidden&#x22;&#x3E;tab4 &#xD0C0;&#xC774;&#xD2C0;&#x3C;/h3&#x3E;
+            &#x3C;div class=&#x22;detail_view&#x22;&#x3E;tab4 &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--// tab4 --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// tab --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="accordion">
+                        <h2 class="h2">- 아코디언</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- accordion -->
+                                        <div class="accordion_area qna">
+                                            <!-- 활성화 : is_open -->
+                                            <dl class="accordion_box is_open">
+                                                <dt class="accordion_head">
+                                                    <button type="button" class="fold" aria-expanded="true" aria-controls="qna1">Q. 동영상 강의와 교재 중 시험은 어디서 나오나요?</button>
+                                                </dt>
+                                                <!-- aria-controls값과 id값 동일하게 적용 -->
+                                                <dd id="qna1" class="accordion_body" style="display: block">
+                                                    <div class="article html_code on">
+                                                        <span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.
+                                                    </div>
+                                                    <div class="article html_code on">
+                                                        <button type="button" class="btn_download">상사도관망시설운영관리사 3급 양성과정 모집요강.hwp</button>
+                                                        <button type="button" class="btn_download">양성과정 모집요강.hwp</button>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl class="accordion_box">
+                                                <dt class="accordion_head">
+                                                    <button type="button" class="fold" aria-expanded="false" aria-controls="qna2">Q. 교육수료기준이 어떻게 되나요?</button>
+                                                </dt>
+                                                <dd id="qna2" class="accordion_body" style="display: none">
+                                                    <div class="article html_code on">
+                                                        <span class="txt_a">A.</span>집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.
+                                                    </div>
+                                                    <div class="article html_code on">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                                    <div class="article html_code on">집체교육은 현재 동영상 강의를 수강하는 것으로 각 과목별 80% 이상의 진도율 충족 시 수료처리됩니다. 한 과목이라도 80% 미만인 경우, 미수료 처리되오니 교육기간 내에 진도율을 꼭 확인해주시기 바랍니다.</div>
+                                                    <div class="article html_code on">
+                                                        <button type="button" class="btn_download">상사도관망시설운영관리사 3급 양성과정 모집요강.hwp</button>
+                                                        <button type="button" class="btn_download">양성과정 모집요강.hwp</button>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl class="accordion_box">
+                                                <dt class="accordion_head">
+                                                    <button type="button" class="fold" aria-expanded="false" aria-controls="qna3">Q. 교육수료기준이 어떻게 되나요?</button>
+                                                </dt>
+                                                <dd id="qna3" class="accordion_body" style="display: none">
+                                                    <div class="article html_code on"><span class="txt_a">A.</span> 내용</div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!--// accordion -->
+
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <div class="code_wrap">
+                                                <pre><code class="html">&#x3C;!-- accordion --&#x3E;
+&#x3C;div class=&#x22;accordion_area qna&#x22;&#x3E;
+    &#x3C;!-- &#xD65C;&#xC131;&#xD654; : is_open --&#x3E;
+    &#x3C;dl class=&#x22;accordion_box is_open&#x22;&#x3E;
+        &#x3C;dt class=&#x22;accordion_head&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;fold&#x22; aria-expanded=&#x22;true&#x22; aria-controls=&#x22;qna1&#x22;&#x3E;Q. &#xB3D9;&#xC601;&#xC0C1; &#xAC15;&#xC758;&#xC640; &#xAD50;&#xC7AC; &#xC911; &#xC2DC;&#xD5D8;&#xC740; &#xC5B4;&#xB514;&#xC11C; &#xB098;&#xC624;&#xB098;&#xC694;?&#x3C;/button&#x3E;
+        &#x3C;/dt&#x3E;
+        &#x3C;!-- aria-controls&#xAC12;&#xACFC; id&#xAC12; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC801;&#xC6A9; --&#x3E;
+        &#x3C;dd id=&#x22;qna1&#x22; class=&#x22;accordion_body&#x22; style=&#x22;display: block&#x22;&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;&#x3C;span class=&#x22;txt_a&#x22;&#x3E;A.&#x3C;/span&#x3E;&#xC9D1;&#xCCB4;&#xAD50;&#xC721;&#xC740; &#xD604;&#xC7AC; &#xB3D9;&#xC601;&#xC0C1; &#xAC15;&#xC758;&#xB97C; &#xC218;&#xAC15;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAC01; &#xACFC;&#xBAA9;&#xBCC4; 80% &#xC774;&#xC0C1;&#xC758; &#xC9C4;&#xB3C4;&#xC728; &#xCDA9;&#xC871; &#xC2DC; &#xC218;&#xB8CC;&#xCC98;&#xB9AC;&#xB429;&#xB2C8;&#xB2E4;. &#xD55C; &#xACFC;&#xBAA9;&#xC774;&#xB77C;&#xB3C4; 80% &#xBBF8;&#xB9CC;&#xC778; &#xACBD;&#xC6B0;, &#xBBF8;&#xC218;&#xB8CC; &#xCC98;&#xB9AC;&#xB418;&#xC624;&#xB2C8; &#xAD50;&#xC721;&#xAE30;&#xAC04; &#xB0B4;&#xC5D0; &#xC9C4;&#xB3C4;&#xC728;&#xC744; &#xAF2D; &#xD655;&#xC778;&#xD574;&#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;
+                &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_download&#x22;&#x3E;&#xC0C1;&#xC0AC;&#xB3C4;&#xAD00;&#xB9DD;&#xC2DC;&#xC124;&#xC6B4;&#xC601;&#xAD00;&#xB9AC;&#xC0AC; 3&#xAE09; &#xC591;&#xC131;&#xACFC;&#xC815; &#xBAA8;&#xC9D1;&#xC694;&#xAC15;.hwp&#x3C;/button&#x3E;
+                &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_download&#x22;&#x3E;&#xC591;&#xC131;&#xACFC;&#xC815; &#xBAA8;&#xC9D1;&#xC694;&#xAC15;.hwp&#x3C;/button&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+    &#x3C;dl class=&#x22;accordion_box&#x22;&#x3E;
+        &#x3C;dt class=&#x22;accordion_head&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;fold&#x22; aria-expanded=&#x22;false&#x22; aria-controls=&#x22;qna2&#x22;&#x3E;Q. &#xAD50;&#xC721;&#xC218;&#xB8CC;&#xAE30;&#xC900;&#xC774; &#xC5B4;&#xB5BB;&#xAC8C; &#xB418;&#xB098;&#xC694;?&#x3C;/button&#x3E;
+        &#x3C;/dt&#x3E;
+        &#x3C;dd id=&#x22;qna2&#x22; class=&#x22;accordion_body&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;&#x3C;span class=&#x22;txt_a&#x22;&#x3E;A.&#x3C;/span&#x3E;&#xC9D1;&#xCCB4;&#xAD50;&#xC721;&#xC740; &#xD604;&#xC7AC; &#xB3D9;&#xC601;&#xC0C1; &#xAC15;&#xC758;&#xB97C; &#xC218;&#xAC15;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAC01; &#xACFC;&#xBAA9;&#xBCC4; 80% &#xC774;&#xC0C1;&#xC758; &#xC9C4;&#xB3C4;&#xC728; &#xCDA9;&#xC871; &#xC2DC; &#xC218;&#xB8CC;&#xCC98;&#xB9AC;&#xB429;&#xB2C8;&#xB2E4;. &#xD55C; &#xACFC;&#xBAA9;&#xC774;&#xB77C;&#xB3C4; 80% &#xBBF8;&#xB9CC;&#xC778; &#xACBD;&#xC6B0;, &#xBBF8;&#xC218;&#xB8CC; &#xCC98;&#xB9AC;&#xB418;&#xC624;&#xB2C8; &#xAD50;&#xC721;&#xAE30;&#xAC04; &#xB0B4;&#xC5D0; &#xC9C4;&#xB3C4;&#xC728;&#xC744; &#xAF2D; &#xD655;&#xC778;&#xD574;&#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;&#xC9D1;&#xCCB4;&#xAD50;&#xC721;&#xC740; &#xD604;&#xC7AC; &#xB3D9;&#xC601;&#xC0C1; &#xAC15;&#xC758;&#xB97C; &#xC218;&#xAC15;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAC01; &#xACFC;&#xBAA9;&#xBCC4; 80% &#xC774;&#xC0C1;&#xC758; &#xC9C4;&#xB3C4;&#xC728; &#xCDA9;&#xC871; &#xC2DC; &#xC218;&#xB8CC;&#xCC98;&#xB9AC;&#xB429;&#xB2C8;&#xB2E4;. &#xD55C; &#xACFC;&#xBAA9;&#xC774;&#xB77C;&#xB3C4; 80% &#xBBF8;&#xB9CC;&#xC778; &#xACBD;&#xC6B0;, &#xBBF8;&#xC218;&#xB8CC; &#xCC98;&#xB9AC;&#xB418;&#xC624;&#xB2C8; &#xAD50;&#xC721;&#xAE30;&#xAC04; &#xB0B4;&#xC5D0; &#xC9C4;&#xB3C4;&#xC728;&#xC744; &#xAF2D; &#xD655;&#xC778;&#xD574;&#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;&#xC9D1;&#xCCB4;&#xAD50;&#xC721;&#xC740; &#xD604;&#xC7AC; &#xB3D9;&#xC601;&#xC0C1; &#xAC15;&#xC758;&#xB97C; &#xC218;&#xAC15;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAC01; &#xACFC;&#xBAA9;&#xBCC4; 80% &#xC774;&#xC0C1;&#xC758; &#xC9C4;&#xB3C4;&#xC728; &#xCDA9;&#xC871; &#xC2DC; &#xC218;&#xB8CC;&#xCC98;&#xB9AC;&#xB429;&#xB2C8;&#xB2E4;. &#xD55C; &#xACFC;&#xBAA9;&#xC774;&#xB77C;&#xB3C4; 80% &#xBBF8;&#xB9CC;&#xC778; &#xACBD;&#xC6B0;, &#xBBF8;&#xC218;&#xB8CC; &#xCC98;&#xB9AC;&#xB418;&#xC624;&#xB2C8; &#xAD50;&#xC721;&#xAE30;&#xAC04; &#xB0B4;&#xC5D0; &#xC9C4;&#xB3C4;&#xC728;&#xC744; &#xAF2D; &#xD655;&#xC778;&#xD574;&#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;
+                &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_download&#x22;&#x3E;&#xC0C1;&#xC0AC;&#xB3C4;&#xAD00;&#xB9DD;&#xC2DC;&#xC124;&#xC6B4;&#xC601;&#xAD00;&#xB9AC;&#xC0AC; 3&#xAE09; &#xC591;&#xC131;&#xACFC;&#xC815; &#xBAA8;&#xC9D1;&#xC694;&#xAC15;.hwp&#x3C;/button&#x3E;
+                &#x3C;button type=&#x22;button&#x22; class=&#x22;btn_download&#x22;&#x3E;&#xC591;&#xC131;&#xACFC;&#xC815; &#xBAA8;&#xC9D1;&#xC694;&#xAC15;.hwp&#x3C;/button&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+    &#x3C;dl class=&#x22;accordion_box&#x22;&#x3E;
+        &#x3C;dt class=&#x22;accordion_head&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;fold&#x22; aria-expanded=&#x22;false&#x22; aria-controls=&#x22;qna3&#x22;&#x3E;Q. &#xAD50;&#xC721;&#xC218;&#xB8CC;&#xAE30;&#xC900;&#xC774; &#xC5B4;&#xB5BB;&#xAC8C; &#xB418;&#xB098;&#xC694;?&#x3C;/button&#x3E;
+        &#x3C;/dt&#x3E;
+        &#x3C;dd id=&#x22;qna3&#x22; class=&#x22;accordion_body&#x22; style=&#x22;display: none&#x22;&#x3E;
+            &#x3C;div class=&#x22;article&#x22;&#x3E;&#x3C;span class=&#x22;txt_a&#x22;&#x3E;A.&#x3C;/span&#x3E; &#xB0B4;&#xC6A9;&#x3C;/div&#x3E;
+        &#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// accordion --&#x3E;
+                                    </code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="progress">
+                        <h2 class="h2">- 프로그레스</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <!-- progress -->
+                                <div class="progress-bar">
+                                    <div class="completion">
+                                        <span class="step">
+                                            <span>1단계</span>
+                                        </span>
+                                        <strong>신청서 작성</strong>
+                                    </div>
+                                    <div class="on">
+                                        <span class="step">
+                                            <span>2단계</span>
+                                        </span>
+                                        <strong>신청정보확인</strong>
+                                        <span class="hidden">총 3단계 중 2단계 신청정보확인</span>
+                                    </div>
+                                    <div>
+                                        <span class="step">
+                                            <span>3단계</span>
+                                        </span>
+                                        <strong>수수료 결제</strong>
+                                    </div>
+                                </div>
+                                <!--// progress -->
+
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre><code class="html">&#x3C;!-- progress --&#x3E;
+&#x3C;div class=&#x22;progress-bar&#x22;&#x3E;
+    &#x3C;div class=&#x22;completion&#x22;&#x3E;
+        &#x3C;span class=&#x22;step&#x22;&#x3E;
+            &#x3C;span&#x3E;1&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;strong&#x3E;&#xC2E0;&#xCCAD;&#xC11C; &#xC791;&#xC131;&#x3C;/strong&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;on&#x22;&#x3E;
+        &#x3C;span class=&#x22;step&#x22;&#x3E;
+            &#x3C;span&#x3E;2&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;strong&#x3E;&#xC2E0;&#xCCAD;&#xC815;&#xBCF4;&#xD655;&#xC778;&#x3C;/strong&#x3E;
+        &#x3C;span class=&#x22;hidden&#x22;&#x3E;&#xCD1D; 3&#xB2E8;&#xACC4; &#xC911; 2&#xB2E8;&#xACC4; &#xC2E0;&#xCCAD;&#xC815;&#xBCF4;&#xD655;&#xC778;&#x3C;/span&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div&#x3E;
+        &#x3C;span class=&#x22;step&#x22;&#x3E;
+            &#x3C;span&#x3E;3&#xB2E8;&#xACC4;&#x3C;/span&#x3E;
+        &#x3C;/span&#x3E;
+        &#x3C;strong&#x3E;&#xC218;&#xC218;&#xB8CC; &#xACB0;&#xC81C;&#x3C;/strong&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// progress --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// box -->
+
+                    <!-- box -->
+                    <div class="section" id="pagination">
+                        <h2 class="h2">- 페이지네이션</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <div class="article html_code on">
+                                    <div class="code_html">
+                                        <!-- pagination -->
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="arrow prev">
+                                                    <button type="button" title="이전"><span class="pc_only">이전</span></button>
+                                                </li>
+                                                <!-- 활성화 on, 접근성 title -->
+                                                <li class="on"><button type="button" title="선택 됨">1</button></li>
+                                                <li><button type="button">2</button></li>
+                                                <li><button type="button">3</button></li>
+                                                <li class="ellipsis">...</li>
+                                                <li><button type="button">10</button></li>
+                                                <li class="arrow next">
+                                                    <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--// pagination -->
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap gap_mt24">
+                                            <pre><code class="html">&#x3C;!-- pagination --&#x3E;
+&#x3C;div class=&#x22;pagination&#x22;&#x3E;
+    &#x3C;ul&#x3E;
+        &#x3C;li class=&#x22;arrow prev&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; title=&#x22;&#xC774;&#xC804;&#x22;&#x3E;&#x3C;span class=&#x22;pc_only&#x22;&#x3E;&#xC774;&#xC804;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;!-- &#xD65C;&#xC131;&#xD654; on, &#xC811;&#xADFC;&#xC131; title --&#x3E;
+        &#x3C;li class=&#x22;on&#x22;&#x3E;&#x3C;button type=&#x22;button&#x22; title=&#x22;&#xC120;&#xD0DD; &#xB428;&#x22;&#x3E;1&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;button type=&#x22;button&#x22;&#x3E;2&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;button type=&#x22;button&#x22;&#x3E;3&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;ellipsis&#x22;&#x3E;...&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;button type=&#x22;button&#x22;&#x3E;10&#x3C;/button&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;arrow next&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; title=&#x22;&#xB2E4;&#xC74C;&#x22; disabled&#x3E;&#x3C;span class=&#x22;pc_only&#x22;&#x3E;&#xB2E4;&#xC74C;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+        &#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--// pagination --&#x3E;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// box -->
+
+                    <!-- 기타 -->
+                    <div class="section" id="etc">
+                        <h2 class="h2">- 기타</h2>
+                        <div class="inner">
+                            <div class="box">
+                                <div class="article html_code on">
+                                    <!-- [D] 해당 퍼센트 값 입력(--bar-percent: 0%)   -->
+                                    <div class="gage_box" style="--bar-percent: 80%">
+                                        <div class="gage_bar"></div>
+                                        80%
+                                    </div>
+                                    <div class="gage_box" style="--bar-percent: 10%">
+                                        <div class="gage_bar"></div>
+                                        10%
+                                    </div>
+                                    <div class="gage_box" style="--bar-percent: 0%">
+                                        <div class="gage_bar"></div>
+                                        0%
+                                    </div>
+
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+
+                                    <div class="boxing" style="display: none">
+                                        <div class="code_wrap">
+                                            <pre>
+                                                <code class="html">
+&#x3C;!-- [D] 해당 퍼센트 값 입력(--bar-percent: 0%) --&#x3E;
+&#x3C;div class=&#x22;gage_box&#x22; style=&#x22;--bar-percent: 80%&#x22;&#x3E;
+    &#x3C;div class=&#x22;gage_bar&#x22;&#x3E;&#x3C;/div&#x3E;
+    80%
+&#x3C;/div&#x3E;
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 기타 -->
+                </div>
+            </div>
+        </div>
+        <script src="/resources/js/ui.js"></script>
+        <script src="/resources/js/jquery-ui.js"></script>
+        <script>
+            $(".html_code .btn_code_toggle").click(function () {
+                if ($(this).parent().parent().hasClass("on")) {
+                    $(this).find("span").text("닫기");
+                    $(this).parent().parent().removeClass("on").children(".boxing").slideDown();
+                } else {
+                    $(this).find("span").text("열기");
+                    $(this).parent().parent().addClass("on").children(".boxing").slideUp();
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<div class="code_wrap">
+    <pre>
+        <code class="html">&lt;!-- board --&gt;
+&lt;div class="board_area"&gt;
+    &lt;!-- board_search + checkbox --&gt;
+    &lt;div class="board_search flex_wrap"&gt;
+        &lt;div class="form_item"&gt;
+            &lt;div class="inp_select size_190"&gt;
+                &lt;select title="검색 조건 선택"&gt;
+                    &lt;option value=""&gt;전체&lt;/option&gt;
+                    &lt;option value=""&gt;제목&lt;/option&gt;
+                    &lt;option value=""&gt;내용&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form_item wide"&gt;
+            &lt;div class="inp"&gt;
+                &lt;input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" /&gt;
+                &lt;button type="button" class="btn_reset"&gt;&lt;span class="hidden"&gt;입력 내용 지우기&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;button type="button" class="btn_search"&gt;&lt;span class="hidden"&gt;검색&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="inp_round_box"&gt;
+            &lt;!-- [D] 전체선택 사용시:
+                1. 전체선택에 all 클래스 추가
+                2. 동일 name 추가
+            --&gt;
+            &lt;div&gt;
+                &lt;input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked /&gt;
+                &lt;label for="roundchk1"&gt;전체목록&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" /&gt;
+                &lt;label for="roundchk2"&gt;1급&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" /&gt;
+                &lt;label for="roundchk3"&gt;2급&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- // board_search + checkbox --&gt;
+&lt;/div&gt;
+&lt;!-- // board --&gt;
+        </code>
+    </pre>
+</div>

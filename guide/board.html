@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <title>Board : GUIDE</title>
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="guide.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
+        <script>
+            hljs.highlightAll();
+        </script>
+        <style>
+            /* .section > .inner > .box {
+                width: 950px;
+            }
+            @media only screen and (max-width: 768px) {
+                .section > .inner > .box {
+                    width: 100%;
+                }
+            } */
+        </style>
+    </head>
+    <body>
+        <div id="guide_wrap">
+            <h1 class="h1">Publishing Guide</h1>
+            <div class="guide_container">
+                <div class="guide_gnb">
+                    <ul>
+                        <li><a href="guide.html">Home</a></li>
+                        <li><a href="board.html">Board</a></li>
+                    </ul>
+                </div>
+                <div class="guide_cont">
+                    <h2 class="h2">Board</h2>
+
+                    <div class="section">
+                        <h3 class="h3">상단/본문/하단</h3>
+                        <div class="inner">
+                            <h4 class="h4">- 상단</h4>
+                            <div class="box">
+                                <ul class="txt_blue">
+                                    <li><a href="#topFormTitle">폼 타이틀</a></li>
+                                    <li><a href="#topBoardSearch">검색 / 검색 + 체크박스 옵션</a></li>
+                                    <li><a href="#topBoardInfo">상단 정보</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4">- 본문</h4>
+                            <div class="box">
+                                <ul>
+                                    <li>
+                                        <strong>테이블</strong>
+                                        <ul class="txt_blue" style="padding-left: 1rem">
+                                            <li><a href="#boardTableHori">반응형-가로</a></li>
+                                            <li><a href="#boardTableVer">반응형-세로</a></li>
+                                            <li><a href="#boardTableScroll">밀어서 보기</a></li>
+                                            <li><a href="#boardTableTd">상세 케이스</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="gap_mt20">
+                                        <strong>리스트</strong>
+                                        <ul class="txt_blue" style="padding-left: 1rem">
+                                            <li><a href="#boardList">케이스</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4">- 하단영역</h4>
+                            <div class="box">
+                                <ul class="txt_blue">
+                                    <li><a href="#boardBottom">문구</a></li>
+                                    <li><a href="#boardPage">페이지네이션</a></li>
+                                    <li><a href="#boardEmpty">내용 없음</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3 class="h3">상단</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="topFormTitle">- 폼 타이틀</h4>
+                            <div class="box">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- tit -->
+                                    <div class="form_tit">
+                                        <h3 class="tit">타이틀</h3>
+                                    </div>
+                                    <!--// tit -->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/topFormTitle.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="topBoardSearch">- 검색 / 검색+체크박스</h4>
+                            <div class="box" data-content-title="검색">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board_search -->
+                                    <div class="board_search">
+                                        <div class="form_item">
+                                            <div class="inp_select size_190">
+                                                <select title="검색 조건 선택">
+                                                    <option value="">전체</option>
+                                                    <option value="">제목</option>
+                                                    <option value="">내용</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item wide">
+                                            <div class="inp">
+                                                <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
+                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                            </div>
+                                            <button type="button" class="btn_search"><span class="hidden">검색</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- // board_search -->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/topBoardSearch.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box" data-content-title="검색 + 체크박스(검색옵션)">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board_search + checkbox -->
+                                    <div class="board_search flex_wrap">
+                                        <div class="form_item">
+                                            <div class="inp_select size_190">
+                                                <select title="검색 조건 선택">
+                                                    <option value="">전체</option>
+                                                    <option value="">제목</option>
+                                                    <option value="">내용</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form_item wide">
+                                            <div class="inp">
+                                                <input type="text" title="검색어 입력" placeholder="검색어 입력" autocomplete="off" />
+                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                            </div>
+                                            <button type="button" class="btn_search"><span class="hidden">검색</span></button>
+                                        </div>
+                                        <div class="inp_round_box">
+                                            <!-- [D] 전체선택 사용시:
+                                                1. 전체선택에 all 클래스 추가
+                                                2. 동일 name 추가
+                                                -->
+                                            <div>
+                                                <input type="checkbox" id="roundchk1" name="roundcheck" class="inp_round_txt all" checked />
+                                                <label for="roundchk1">전체목록</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="roundchk2" name="roundcheck" class="inp_round_txt" />
+                                                <label for="roundchk2">1급</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="roundchk3" name="roundcheck" class="inp_round_txt" />
+                                                <label for="roundchk3">2급</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // board_search + checkbox -->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/topBoardSearchCheckbox.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="topBoardInfo">- 상단 정보</h4>
+                            <div class="box" data-content-title="텍스트 + 텍스트">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board top -->
+                                    <div class="board_desc_top">
+                                        <div class="lside">신청번호를 클릭하면 신청서를 보실 수 있습니다.</div>
+                                        <div class="rsdie">조회된 내역(100건)</div>
+                                    </div>
+                                    <!-- // board top -->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/topBoardInfo.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box" data-content-title="카운트 + select">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board top -->
+                                    <div class="board_desc_top">
+                                        <div class="lside">
+                                            <div class="board_count">전체 <span>10</span>/1,000</div>
+                                        </div>
+                                        <div class="rside">
+                                            <div class="form_item inblock">
+                                                <div class="inp_select size_80">
+                                                    <select class="sm" title="노출 개수 선택">
+                                                        <option value="">15</option>
+                                                        <option value="">30</option>
+                                                        <option value="">50</option>
+                                                        <option value="">100</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // board top -->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/topBoardInfoCount.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box" data-content-title="select + select">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board top -->
+                                    <div class="board_desc_top">
+                                        <div class="lside">
+                                            <div class="form_item inblock">
+                                                <div class="inp_select size_160">
+                                                    <select class="sm" title="카테고리 선택">
+                                                        <option value="">카테고리 전체</option>
+                                                        <option value="">자격증</option>
+                                                        <option value="">교육</option>
+                                                        <option value="">평가시험</option>
+                                                        <option value="">의견제출</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rside">
+                                            <div class="form_item inblock">
+                                                <div class="inp_select size_80">
+                                                    <select class="sm" title="노출 개수 선택">
+                                                        <option value="">15</option>
+                                                        <option value="">30</option>
+                                                        <option value="">50</option>
+                                                        <option value="">100</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // board top -->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/topBoardInfoSelect.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== 본문 - 테이블 ========== -->
+                    <div class="section">
+                        <h3 class="h3">본문 - 테이블</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableHori">- 테이블(가로)</h4>
+                            <p>
+                                mo [data-cell-header] 사이즈: size(숫자) 클래스 추가<br />
+                                (70, 90, 100, 110, 120, 130, 150) <br />
+                                (디폴트 80px)
+                            </p>
+                            <div class="box" data-content-title="가로">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react">
+                                        <caption>
+                                            타이틀1 , 타이틀타이틀타이틀타이틀2, 타이틀3, 타이틀4 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 25%" span="4" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">타이틀1</th>
+                                                <th scope="col">타이틀타이틀타이틀타이틀2</th>
+                                                <th scope="col">타이틀3</th>
+                                                <th scope="col">타이틀4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div>
+                                                        <span class="inp_check alone">
+                                                            <input type="checkbox" id="check1" />
+                                                            <label for="check1"><span>선택</span></label>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀타이틀타이틀타이틀2" class="left"><div>내용이 길어요 내용이 길어요 내용이 길어요 내용이 길어요</div></td>
+                                                <td data-cell-header="타이틀3"><div>내용</div></td>
+                                                <td data-cell-header="타이틀4" class="right"><div>내용</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardTableHori.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box" data-content-title="가로 - 분할">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react row size90">
+                                        <caption>
+                                            타이틀1, 타이틀2 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col style="width: 29.1rem" />
+                                            <col style="width: 15.3rem" />
+                                            <col style="width: 29.1rem" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">타이틀1</th>
+                                                <td data-cell-header="타이틀1"><div>내용</div></td>
+                                                <th scope="row">타이틀2</th>
+                                                <td data-cell-header="타이틀2"><div>내용</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardTableHoriNarrow.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableVer">- 테이블(세로)</h4>
+                            <p>
+                                mo [data-cell-header] 사이즈: size(숫자) 클래스 추가<br />
+                                (70, 90, 100, 110, 120, 130, 150) <br />
+                                (디폴트 80px)
+                            </p>
+
+                            <div class="box" data-content-title="세로">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react row size110">
+                                        <caption>
+                                            자격번호, 재발급 신청사유 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">자격번호</th>
+                                                <td data-cell-header="자격번호"><div>WL000000</div></td>
+                                            </tr>
+                                            <tr class="write_cell">
+                                                <th scope="row">
+                                                    <label for="answer">재발급 신청사유</label>
+                                                </th>
+                                                <td data-cell-header="재발급 신청사유">
+                                                    <div>
+                                                        <div class="form_item">
+                                                            <div class="inp_select">
+                                                                <select title="신청사유 선택" id="answer">
+                                                                    <option value="">신청사유 선택</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_item">
+                                                            <div class="inp_textarea">
+                                                                <textarea placeholder="재발급 신청사유을 입력해 주세요"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardTableVer.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box" data-content-title="세로 - 좁은">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react row sm size120">
+                                        <!-- class : sm -->
+                                        <caption>
+                                            타이틀1, 신청번호, 배송지 주소 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">타이틀1</th>
+                                                <td data-cell-header="타이틀1"><div>텍스트1</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">신청번호</th>
+                                                <td data-cell-header="신청번호"><div>REQ2-25-0001</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">배송지 주소</th>
+                                                <td data-cell-header="배송지 주소">
+                                                    <div>
+                                                        07379<br />
+                                                        서울특별시 영등포구 대림로-244(대림동)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardTableVerNarrow.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableScroll">- 테이블(밀어서보기)</h4>
+                            <p>모바일) 가로스크롤</p>
+
+                            <div class="box" data-content-title="밀어서보기">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <div class="scroll_guide">
+                                        <p class="txt_scroll">밀어서 보기</p>
+                                    </div>
+                                    <div class="scroll_area">
+                                        <table class="tbl">
+                                            <caption>
+                                                NO, 과목, 문항수, 점수, 비고 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 80px" />
+                                                <col style="width: 192px" />
+                                                <col style="width: 80px" span="3" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">NO</th>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">문항수</th>
+                                                    <th scope="col">점수</th>
+                                                    <th scope="col">비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><div>1</div></td>
+                                                    <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                    <td><div>40</div></td>
+                                                    <td><div>100</div></td>
+                                                    <td><div></div></td>
+                                                </tr>
+                                                <tr class="txt_red">
+                                                    <td><div>1</div></td>
+                                                    <td><div>상수도관로 송배급수시설 운영관리</div></td>
+                                                    <td><div>40</div></td>
+                                                    <td><div>39</div></td>
+                                                    <td><div>과락</div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardTableScroll.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardTableTd">- 테이블(상세 케이스)</h4>
+
+                            <div class="box" data-content-title="케이스">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <table class="tbl react">
+                                        <caption>
+                                            타이틀1, 타이틀2, 타이틀3, 타이틀4 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 80px" />
+                                            <col style="width: 120px" />
+                                            <col />
+                                            <col style="width: 160px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">타이틀1</th>
+                                                <th scope="col">타이틀2</th>
+                                                <th scope="col">타이틀3</th>
+                                                <th scope="col">타이틀4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div><span class="data_badge1">문의</span></div>
+                                                </td>
+                                                <td data-cell-header="타이틀2"><div>시험</div></td>
+                                                <td data-cell-header="타이틀3" class="left">
+                                                    <div>
+                                                        <div class="new_set">
+                                                            <a href="javascript:;" class="txt_ellipsis">
+                                                                [정수] 2025년 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사 일정공지 정수시설운영관리사
+                                                                <span class="ico_new"><span class="hidden">new</span></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀4">
+                                                    <div>
+                                                        <span class="ico_file"><span class="hidden">첨부파일</span></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div><strong>B000000000</strong></div>
+                                                </td>
+                                                <td data-cell-header="타이틀2"><div>-</div></td>
+                                                <td data-cell-header="타이틀3" class="left">
+                                                    <div>
+                                                        <ul class="list_dash">
+                                                            <li><strong>공무원:</strong> 공무원 경력증명서</li>
+                                                            <li><strong>일반사업장 근로자:</strong> 한국건설기술인협회나 한국엔지니어링협회 경력증명서 또는 회사 경력증명서(재직기간, 소속, 직위, 담당업무(구체적)가 모두 기재)</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀4">
+                                                    <div>
+                                                        <button type="button" class="btn_border_md radius">교육 수료증<span class="ico_bluearrow2"></span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-cell-header="타이틀1">
+                                                    <div><span class="txt_green">확인완료</span></div>
+                                                </td>
+                                                <td data-cell-header="타이틀2"><div>시험</div></td>
+                                                <td data-cell-header="타이틀3" class="left">
+                                                    <div>
+                                                        <span class="txt_red">보완요청</span><br />
+                                                        요청일 : <span class="txt_blue">2025-01-10</span><br />
+                                                        만료일 : <span class="txt_red">2025-01-17</span>
+                                                    </div>
+                                                </td>
+                                                <td data-cell-header="타이틀4">
+                                                    <div>456</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardTableTd.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // ========== 본문 - 테이블 ========== -->
+
+                    <!-- ========== 본문 - 리스트 ========== -->
+                    <div class="section">
+                        <h3 class="h3">본문 (리스트)</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardList">- 리스트</h4>
+                            <div class="box">
+                                <!-- board  -->
+                                <div class="board_area">
+                                    <!-- tit -->
+                                    <div class="form_tit">
+                                        <h3 class="tit">폼 타이틀타이틀타이틀타이틀타이틀</h3>
+                                    </div>
+                                    <!--// tit -->
+
+                                    <!-- form-->
+                                    <div class="form_section">
+                                        <!-- board_write -->
+                                        <div class="form_list">
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userName">
+                                                        이름
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <input type="text" value="홍길동" id="userName" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="text" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="work1">근무지</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="근무지 입력" id="work1" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="근무지 입력2" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="box">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="근무지 입력3" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="cellPhone">
+                                                        휴대폰 번호
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group gap0">
+                                                <div class="tit">
+                                                    <span>
+                                                        성별
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </span>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="radio_set reset">
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="male" name="gender" checked="" />
+                                                                    <label for="male">남성</label>
+                                                                </span>
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="female" name="gender" />
+                                                                    <label for="female">여성</label>
+                                                                </span>
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="none" name="gender" disabled />
+                                                                    <label for="none">선택안함</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group line">
+                                                <div class="tit">
+                                                    <label for="userPassword">
+                                                        비밀번호
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="password" value="" id="userPassword" maxlength="16" placeholder="8자 이상(영문자, 숫자, 특수문자)" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="msg_txt">비밀번호는 8자 이상, 16자 이하의 영문자, 숫자 및 특수문자를 조합하여 사용해야 합니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userPasswordCheck">
+                                                        비밀번호 확인
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289 error">
+                                                                <input type="password" value="" id="userPasswordCheck" maxlength="16" placeholder="비밀번호 확인" />
+                                                            </div>
+                                                        </div>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">비밀번호 조건에 맞지 않습니다. 다시 입력해 주세요.</p>
+                                                        <p class="msg_error">비밀번호가 다릅니다.</p>
+                                                        <!--// 에러 : error -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// board_write -->
+                                    </div>
+                                    <!--// form-->
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardList.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box">
+                                <div class="article">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="userName2">이름</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="text" value="홍길동" id="userName2" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="birthDate2">생년월일</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="inp size_289">
+                                                                    <input type="tel" value="1980.01.01" id="birthDate2" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="idNumber">주민등록번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="idcard_set">
+                                                                    <div class="inp_set">
+                                                                        <div class="inp size_289">
+                                                                            <input type="tel" value="900105" id="idNumber" autocomplete="off" readonly />
+                                                                        </div>
+                                                                        <span class="txt_dash">-</span>
+                                                                    </div>
+                                                                    <div class="inp size_289">
+                                                                        <input type="password" value="0000000" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_1.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="phoneNum">전화번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="phone_set">
+                                                                    <div class="inp_select">
+                                                                        <select title="전화번호 국번 선택" id="phoneNum">
+                                                                            <option value="">선택</option>
+                                                                            <option value="02">서울 (02)</option>
+                                                                            <option value="031">경기 (031)</option>
+                                                                            <option value="032">인천 (032)</option>
+                                                                            <option value="033">강원 (033)</option>
+                                                                            <option value="041">충남 (041)</option>
+                                                                            <option value="042">대전 (042)</option>
+                                                                            <option value="043">충북 (043)</option>
+                                                                            <option value="044">세종 (044)</option>
+                                                                            <option value="051">부산 (051)</option>
+                                                                            <option value="052">울산 (052)</option>
+                                                                            <option value="053">대구 (053)</option>
+                                                                            <option value="054">경북 (054)</option>
+                                                                            <option value="055">경남 (055)</option>
+                                                                            <option value="061">전남 (061)</option>
+                                                                            <option value="062">광주 (062)</option>
+                                                                            <option value="063">전북 (063)</option>
+                                                                            <option value="064">제주 (064)</option>
+                                                                            <option value="070">인터넷전화 (070)</option>
+                                                                            <option value="050">평생전화 (050)</option>
+                                                                        </select>
+                                                                        <span class="txt_dash">-</span>
+                                                                    </div>
+                                                                    <div class="inp_set">
+                                                                        <div class="inp">
+                                                                            <input type="tel" value="1234" title="전화번호 앞자리 입력" autocomplete="off" />
+                                                                        </div>
+                                                                        <span class="txt_dash">-</span>
+                                                                    </div>
+                                                                    <div class="inp_set">
+                                                                        <div class="inp">
+                                                                            <input type="tel" value="1234" title="전화번호 뒷자리 입력" autocomplete="off" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="label1">인증번호</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="request_set">
+                                                                    <div class="inp size_289">
+                                                                        <input type="tel" id="label1" maxlength="6" placeholder="인증번호 6자리" autocomplete="off" />
+                                                                        <div class="request">
+                                                                            <time class="time" datetime="03:00">03:00</time>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button type="button" class="btn_primary_md">확인</button>
+                                                                </div>
+                                                            </div>
+                                                            <p class="msg_txt">이메일을 확인 후 전송된 인증번호를 입력해 주세요.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_2.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>정보수신동의(선택)</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="check_set">
+                                                                    <span class="inp_check">
+                                                                        <input type="checkbox" id="marketing1" checked />
+                                                                        <label for="marketing1">E-mail 수신</label>
+                                                                    </span>
+                                                                    <span class="inp_check">
+                                                                        <input type="checkbox" id="marketing2" />
+                                                                        <label for="marketing2">SMS 수신</label>
+                                                                    </span>
+                                                                    <span class="inp_check">
+                                                                        <input type="checkbox" id="marketing3" />
+                                                                        <label for="marketing3">광고, 홍보, 프로모션 수신</label>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell">교육/평가시험/자격증 관련 신청정보/교육/합격 여부는 선택여부와 상관없이 기본 발송 됩니다.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_3.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>이공계 여부</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="radio_set">
+                                                                            <span class="inp_radio">
+                                                                                <input type="radio" id="type1_1" name="type1" />
+                                                                                <label for="type1_1">이공계</label>
+                                                                            </span>
+                                                                            <span class="inp_radio">
+                                                                                <input type="radio" id="type1_2" name="type1" checked="" />
+                                                                                <label for="type1_2">그 외</label>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <p class="txt_note">이공계 여부를 정확히 확인하세요.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_3_radio.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="work1_2">근무지</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                        <div class="inp size_219">
+                                                                            <input type="text" value="" placeholder="근무지 입력" id="work1_2" autocomplete="off" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <div class="calendar_set">
+                                                                            <div class="inp_set">
+                                                                                <input type="text" value="" placeholder="시작일" id="startDate" autocomplete="off" />
+                                                                                <span class="txt_dash">~</span>
+                                                                            </div>
+                                                                            <div class="inp">
+                                                                                <input type="text" value="" placeholder="종료일" id="endDate" autocomplete="off" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <span class="inp_check">
+                                                                            <input type="checkbox" id="work1_3" />
+                                                                            <label for="work1_3">재직중</label>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="work1_1">전체 경력</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="career_set">
+                                                                            <div class="inp_set">
+                                                                                <div class="inp size_100">
+                                                                                    <input type="tel" value="50" id="work1_1" autocomplete="off" readonly />
+                                                                                </div>
+                                                                                <span class="txt">년</span>
+                                                                            </div>
+                                                                            <div class="inp_set">
+                                                                                <div class="inp size_100">
+                                                                                    <input type="tel" value="50" autocomplete="off" readonly />
+                                                                                </div>
+                                                                                <span class="txt">개월</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <p class="txt_note">아래 기간 선택 시 자동계산</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="time">교육시간</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="inp_set">
+                                                                            <div class="inp size_219">
+                                                                                <input type="tel" value="" placeholder="총 교육시간 입력" id="time" autocomplete="off" />
+                                                                            </div>
+                                                                            <span class="txt">시간</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <div class="calendar_set">
+                                                                            <div class="inp_set">
+                                                                                <input type="text" value="" placeholder="시작일" id="startDate2" autocomplete="off" />
+                                                                                <span class="txt_dash">~</span>
+                                                                            </div>
+                                                                            <div class="inp">
+                                                                                <input type="text" value="" placeholder="종료일" id="endDate2" autocomplete="off" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_4.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>근무지 경력증명</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="file_set">
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                        <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                    </div>
+                                                                    <label for="file1">파일찾기</label>
+                                                                    <input type="file" id="file1" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>실무교육확인서</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="file_set">
+                                                                            <div class="inp">
+                                                                                <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                            </div>
+                                                                            <label for="file3">파일찾기</label>
+                                                                            <input type="file" id="file3" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <button type="button" class="btn_secondary_md full">지정서식 다운로드<span class="ico_download"></span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell line">
+                                                            <p class="txt_note">
+                                                                서류가 여러 장인 경우 PDF파일 또는 이미지(JPG, PNG) 파일을 올려 주시기 바랍니다.<br />
+                                                                그 외 포맷은 업로드가 불가능합니다.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <span>학력증명서류</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="group_box">
+                                                                    <div class="box">
+                                                                        <div class="file_set">
+                                                                            <div class="inp">
+                                                                                <input type="text" placeholder="파일을 선택하세요" readonly="" />
+                                                                                <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                            </div>
+                                                                            <label for="file1+1">파일찾기</label>
+                                                                            <input type="file" id="file1+1" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box">
+                                                                        <button type="button" class="btn_pop" id="alert2">학력증명서류 안내</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_5.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- form-->
+                                        <div class="form_section">
+                                            <!-- write -->
+                                            <div class="form_list table">
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="address">주소</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <div class="form_item">
+                                                                <div class="address_set">
+                                                                    <div class="group_box">
+                                                                        <div class="box">
+                                                                            <div class="inp size_130">
+                                                                                <input type="tel" value="07379" id="address" autocomplete="off" readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="box">
+                                                                            <button type="button" class="btn_primary_md full">우편번호 검색</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" value="서울특별시 영등포구 대림로 244" autocomplete="off" readonly />
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" value="2F 201호" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_group">
+                                                    <div class="tit">
+                                                        <label for="address1">배송지주소</label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="cell">
+                                                            <span class="inp_check">
+                                                                <input type="checkbox" id="deliveryinfo1_1" />
+                                                                <label for="deliveryinfo1_1">신청자 정보의 주소와 배송지가 같을 경우 체크해 주세요.</label>
+                                                            </span>
+                                                        </div>
+                                                        <div class="cell line">
+                                                            <div class="form_item">
+                                                                <div class="address_set">
+                                                                    <div class="group_box">
+                                                                        <div class="box">
+                                                                            <div class="inp size_130">
+                                                                                <input type="tel" placeholder="우편번호" id="address1" autocomplete="off" readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="box">
+                                                                            <button type="button" class="btn_primary_md full">우편번호 검색</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="배송지 주소" autocomplete="off" readonly />
+                                                                    </div>
+                                                                    <div class="inp">
+                                                                        <input type="text" placeholder="상세주소 입력" autocomplete="off" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--// write -->
+                                        </div>
+                                        <!--// form-->
+                                    </div>
+                                    <!-- board -->
+                                    <!-- code -->
+                                    <div class="article html_code on">
+                                        <div class="btn">
+                                            <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                        </div>
+                                        <div class="boxing" style="display: none">
+                                            <!-- [include] -->
+                                            <div data-include-file="./code/boardList2_6.html" class="includeJs"></div>
+                                            <!-- // [include] -->
+                                        </div>
+                                    </div>
+                                    <!-- // code -->
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- form-->
+                                    <div class="form_section">
+                                        <!-- write -->
+                                        <div class="form_list col">
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userName1">이름</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <input type="text" value="" id="userName1" placeholder="이름을 입력하세요" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="cellPhone1">휴대폰번호</label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp">
+                                                                <input type="tel" value="" id="cellPhone1" placeholder="휴대폰번호 (숫자만 입력)" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="msg_txt">'-'생략, 11자리 숫자만 입력해 주세요.</p>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">등록된 회원정보가 아닙니다.</p>
+                                                        <p class="msg_error">잘못된 형식의 전화번호입니다.</p>
+                                                        <!--// 에러 : error -->
+                                                    </div>
+                                                    <div class="cell full">
+                                                        <button type="button" class="btn_secondary_md">인증번호 받기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// write -->
+                                    </div>
+                                    <!--// form-->
+                                </div>
+                                <!--// board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardList3.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- form-->
+                                    <div class="form_section">
+                                        <!-- board_write -->
+                                        <div class="form_list base">
+                                            <!-- base -->
+                                            <div class="form_group">
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="group_box">
+                                                                <div class="box">
+                                                                    <div class="inp_select">
+                                                                        <select title="경력 선택">
+                                                                            <option value="">경력 선택</option>
+                                                                            <option value="">1년이상</option>
+                                                                            <option value="">1년이하</option>
+                                                                            <option value="">없음</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <div class="inp_select">
+                                                                        <select title="교육 선택">
+                                                                            <option value="">교육 선택</option>
+                                                                            <option value="">실무교육확인서</option>
+                                                                            <option value="">고용노동부 직업능력개발훈련 수료증</option>
+                                                                            <option value="">해당없음</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <button type="button" class="btn_primary_md full">선택적용</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// board_write -->
+                                    </div>
+                                    <!--// form-->
+                                </div>
+                                <!--// board -->
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardList4.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== 본문 - 리스트 ========== -->
+
+                    <!-- ========== 본문 - 하단 ========== -->
+                    <div class="section">
+                        <h3 class="h3" id="boardBottom">하단</h3>
+
+                        <div class="inner">
+                            <div class="box" data-content-title="문구">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <div class="board_desc_bottom">
+                                        <p class="txt_mark">(기본간격 24px) 증명서류 : 졸업증명서, 수료증명서(대학교2년이상 수료), 학위증 등</p>
+                                    </div>
+                                    <div class="board_desc_bottom gap_mt10">
+                                        <p class="txt_note">(txt_note만 노출될 경우 10px) 배송시 등록된 본인명의의 휴대전화로 연락드립니다.</p>
+                                    </div>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardBottom.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+
+                            <div class="box" id="boardPage" data-content-title="페이지네이션">
+                                <!-- pagination -->
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="arrow prev">
+                                            <button type="button" title="이전"><span class="pc_only">이전</span></button>
+                                        </li>
+                                        <!-- 활성화 on, 접근성 title -->
+                                        <li class="on"><button type="button" title="선택 됨">1</button></li>
+                                        <li><button type="button">2</button></li>
+                                        <li><button type="button">3</button></li>
+                                        <li class="ellipsis">...</li>
+                                        <li><button type="button">10</button></li>
+                                        <li class="arrow next">
+                                            <button type="button" title="다음" disabled><span class="pc_only">다음</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--// pagination -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardPage.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== 하단 ========== -->
+
+                    <!-- ========== 본문 - 내용 없음 ========== -->
+                    <div class="section">
+                        <h3 class="h3">본문 (내용없음)</h3>
+
+                        <div class="inner">
+                            <h4 class="h4" id="boardEmpty">- 내용없음</h4>
+
+                            <div class="box">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <div class="nodata">조회된 내역이 없습니다.</div>
+                                </div>
+                                <!-- // board -->
+
+                                <!-- code -->
+                                <div class="article html_code on">
+                                    <div class="btn">
+                                        <button type="button" class="btn_primary_sm btn_code_toggle">code <span>열기</span></button>
+                                    </div>
+                                    <div class="boxing" style="display: none">
+                                        <!-- [include] -->
+                                        <div data-include-file="./code/boardEmpty.html" class="includeJs"></div>
+                                        <!-- // [include] -->
+                                    </div>
+                                </div>
+                                <!-- // code -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== 본문 - 내용 없음 ========== -->
+                </div>
+            </div>
+        </div>
+        <script src="/resources/js/ui.js"></script>
+        <script src="/resources/js/jquery-ui.js"></script>
+        <script>
+            $(".html_code .btn_code_toggle").click(function () {
+                if ($(this).parent().parent().hasClass("on")) {
+                    $(this).text("code 닫기").parent().parent().removeClass("on").children(".boxing").slideDown();
+                } else {
+                    $(this).text("code 열기").parent().parent().addClass("on").children(".boxing").slideUp();
+                }
+            });
+
+            // 달력 샘플
+            $.datepicker.setDefaults($.datepicker.regional["ko"]);
+            $("#startDate, #endDate, #startDate1, #endDate1, #startDate2, #endDate2, #startDate3, #endDate3").datepicker({
+                dateFormat: "yy-mm-dd",
+                showOtherMonths: true,
+                showMonthAfterYear: true,
+                nextText: "다음 달",
+                prevText: "이전 달",
+                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                ignoreReadonly: true,
+                buttonImageOnly: false,
+            });
+
+            // 검색 value 삭제 샘플
+            $(".inp .btn_reset").click(function () {
+                const $input = $(this).parent().children("input");
+                $input.val("").focus();
+            });
+
+            // 첨부파일 샘플
+            $(".file_set input[type='file']").on("change", function () {
+                var fileName = $(this).val().split("/").pop().split("\\").pop();
+                $(this).siblings(".inp").find("input[type='text']").val(fileName);
+            });
+            $(".file_set .btn_reset").click(function () {
+                $(this).siblings("input[type='text']").val("");
+                var fileInput = $(this).closest(".file_set").find("input[type='file']");
+                fileInput.val("");
+            });
+
+            // data-include-file
+            $(document).ready(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        hljs.highlightAll();
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

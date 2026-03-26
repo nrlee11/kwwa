@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+// 자격·과정안내
+// 취득방법 및 절차
+.license_process2 {
+    width: 74rem;
+    > ol {
+        > li {
+            position: relative;
+            padding-bottom: var(--gap-24);
+            color: var(--color-gray);
+            > strong {
+                display: inline-block;
+                width: 23rem;
+                padding: var(--gap-12) var(--gap-16);
+                margin-right: var(--gap-16);
+                color: var(--color-warblack);
+                background-color: #eef2f7;
+                text-align: center;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 10.8rem;
+                bottom: 0;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url($url-img-common + "bg_arrow_right.png") no-repeat 0 0;
+                background-size: contain;
+                transform: rotate(90deg);
+            }
+            &:last-child {
+                padding-bottom: 0;
+                &:after {
+                    display: var(--hide);
+                }
+            }
+        }
+    }
+    @include mobile {
+        width: 100%;
+        > ol {
+            > li {
+                display: flex;
+                align-content: stretch;
+                > strong {
+                    display: flex;
+                    align-items: center;
+                    width: 16.6rem;
+                    margin-right: 0;
+                    > span {
+                        flex: 1;
+                    }
+                }
+                > .txt {
+                    display: flex;
+                    align-items: center;
+                    width: calc(100% - 16.6rem);
+                    padding: var(--gap-12) var(--gap-16);
+                }
+                &:after {
+                    left: 7.1rem;
+                }
+            }
+        }
+    }
+}
+
+// 자격증 발급
+// 자격증 발급절차
+.license_process {
+    > ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-24);
+        > li {
+            @include flex-center;
+            align-items: center;
+            position: relative;
+            width: calc(25% - var(--gap-24));
+            min-height: 5rem;
+            padding: var(--gap-12) var(--gap-16);
+            color: #131416;
+            font-weight: var(--font-bold);
+            text-align: center;
+            background-color: var(--color-lightblue);
+            align-items: center;
+            &:after {
+                @include pseudo-selector;
+                left: auto;
+                right: -2.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                margin-top: -1.2rem;
+                background: url($url-img-icon + "ico_arrow_gray2.svg") no-repeat 0 0;
+                background-size: contain;
+            }
+            &:last-child:after {
+                display: var(--hide);
+            }
+            &.fs14 {
+                font-size: 1.4rem;
+                @include mobile {
+                    font-size: var(--font-size-md);
+                }
+            }
+        }
+    }
+    @include mobile {
+        padding-top: var(--gap-25);
+        > ol {
+            gap: 5.4rem;
+            > li {
+                width: 100%;
+                &:after {
+                    top: auto;
+                    right: auto;
+                    bottom: -3.9rem;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+// 현황단계
+.status_level_box {
+    @include mobile {
+        display: none;
+    }
+}
+.status_level_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    // gap: 3.1rem;
+    &:not(:has(.status_level_items[aria-current="step"])) {
+        .status_level_items {
+            --current-color: #8a949e;
+            &:before {
+                background-image: url($url-img-common + "bg_double_arrow.svg");
+            }
+        }
+    }
+}
+.status_level_items {
+    position: relative;
+    & + .status_level_items {
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: -4rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url($url-img-common + "bg_double_arrow_active.svg") no-repeat 0 0;
+            transform: translateY(-50%);
+            content: "";
+        }
+    }
+    &[aria-current="step"] {
+        & ~ .status_level_items {
+            --current-color: #8a949e;
+            &:before {
+                background-image: url($url-img-common + "bg_double_arrow.svg");
+            }
+        }
+        & + .status_level_items {
+            &:before {
+                background-image: url($url-img-common + "bg_double_arrow_active.svg");
+            }
+        }
+    }
+
+    .txt_level {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 7rem;
+        height: 100%;
+        min-height: 4.6rem;
+        padding: 0.5rem 2.5rem;
+        border-radius: 0.5rem;
+        background: var(--current-color, #228738);
+        color: var(--color-white);
+        line-height: 1.2;
+        box-sizing: border-box;
+    }
+}

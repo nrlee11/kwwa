@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+// breakpoints
+$breakpoint-xs-mobile: 320px;
+$breakpoint-sm-mobile: 767px;
+$breakpoint-mobile: 1200px;
+$breakpoint-desktop: 1201px;
+
+// url
+$url-img: "../../resources/images/";
+$url-img-common: "../../resources/images/common/";
+$url-img-icon: "../../resources/images/icon/";
+
+$border: 0.1rem solid;
+
+:root {
+    --font-family-base: Pretendard GOV;
+    --font-size-base: 62.5%;
+    --font-size-xsm: 1.3rem;
+    --font-size-sm: 1.5rem;
+    --font-size-md: 1.7rem;
+    --font-size-lg: 2.4rem;
+    --font-size-xl: 3rem;
+    --font-size-xxl: 4rem;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-color-base: #1e2124;
+    --color-white: #fff;
+    --color-base: #1e2124;
+    --color-black: #000;
+    --color-lightblack: #1d1d1d;
+    --color-darkblack: #111;
+    --color-warblack: #131416;
+    --color-gray: #464c53;
+    --color-lightgray: #e6e8ea;
+    --color-darkgray: #6d7882;
+    --color-warmgray: #666;
+    --color-navy: #083891;
+    --color-blue: #256ef4;
+    --color-darkblue: #0b50d0;
+    --color-lightblue: #eef2f7;
+    --color-skyblue: #ecf2fe;
+    --color-warmblue: #4c87f6;
+    --gap-4: 0.4rem;
+    --gap-5: 0.5rem;
+    --gap-6: 0.6rem;
+    --gap-7: 0.7rem;
+    --gap-8: 0.8rem;
+    --gap-10: 1rem;
+    --gap-12: 1.2rem;
+    --gap-13: 1.3rem;
+    --gap-14: 1.4rem;
+    --gap-15: 1.5rem;
+    --gap-16: 1.6rem;
+    --gap-17: 1.7rem;
+    --gap-18: 1.8rem;
+    --gap-20: 2rem;
+    --gap-22: 2.2rem;
+    --gap-24: 2.4rem;
+    --gap-25: 2.5rem;
+    --gap-26: 2.6rem;
+    --gap-28: 2.8rem;
+    --gap-30: 3rem;
+    --gap-35: 3.5rem;
+    --gap-40: 4rem;
+    --gap-45: 4.5rem;
+    --gap-48: 4.8rem;
+    --gap-50: 5rem;
+    --gap-55: 5.5rem;
+    --gap-60: 6rem;
+    --gap-70: 7rem;
+    --align-t: top;
+    --align-m: middle;
+    --align-b: bottom;
+    --show: block;
+    --hide: none;
+}

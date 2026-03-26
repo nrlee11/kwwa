@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>본인인증 | 회원가입 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="memberInfo">기존 정보 안내</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- 20250428 수정 : 위치이동 및 속성 추가 -->
+        <!-- Layer : 기존 정보 안내 -->
+        <div class="layerFix fullPopup" id="memberInfoPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">홈페이지 계정 이전</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <div class="notice_box">
+                                <p class="txt">회원님은 이전 홈페이지의 회원으로 아래 정보를 국가전문자격시스템으로 이전합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <!-- board(s) -->
+                            <div class="board_area">
+                                <div class="board_desc_top">
+                                    <div class="rside">조회일시: 2025-10-10 11:11:00</div>
+                                </div>
+
+                                <!-- board_view -->
+                                <!-- 2025-04-14 : class 추가 -->
+                                <!-- 2025-04-08 : react class 삭제 -->
+                                <table class="tbl react sm size70">
+                                    <!-- 2025-04-08 : class 삭제 -->
+                                    <caption>
+                                        항목, 회원정보, 상태 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 33.33%" span="3" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">항목</th>
+                                            <th scope="col">회원정보</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="항목"><div>아이디</div></td>
+                                            <td data-cell-header="회원정보"><div>abcd12</div></td>
+                                            <td data-cell-header="상태"><div>변경대상</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="항목"><div>E-mail</div></td>
+                                            <td data-cell-header="회원정보"><div>abcd12@abc.com</div></td>
+                                            <td data-cell-header="상태"><div>미인증</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="항목"><div>성명</div></td>
+                                            <td data-cell-header="회원정보"><div>홍길동</div></td>
+                                            <td data-cell-header="상태"><div>본인확인</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board(e) -->
+                        </div>
+
+                        <div class="article">
+                            <!-- 2025-04-22 수정 -->
+                            <div class="result_area warning">아이디를 이메일주소로 사용해야 합니다.</div>
+                        </div>
+
+                        <div class="article">
+                            <!-- board(s) -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <!-- 2025-04-14 : react sm class 추가 -->
+                                <!-- 2025-04-08 : react class 삭제 -->
+                                <table class="tbl react sm size70">
+                                    <!-- 2025-04-08 : class 삭제 -->
+                                    <caption>
+                                        교육정보, 상태 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 50%" span="2" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">교육정보(총 00건)</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="교육정보"><div>2024 정수 3급 교육</div></td>
+                                            <td data-cell-header="상태"><div>수료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="교육정보"><div>2024 상수 3급 교육</div></td>
+                                            <td data-cell-header="상태"><div>미수료</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="교육정보"><div>2024 정수 3급</div></td>
+                                            <td data-cell-header="상태"><div>합격</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+
+                                <!-- 2025-04-28 수정 -->
+                                <!-- 2025-04-14 수정 -->
+                                <div class="board_desc_bottom gap_mt20">
+                                    <p class="txt_mark">위 정보의 상세 내역은 계정 이전 후 ‘마이페이지’ 에서 확인 가능합니다</p>
+                                </div>
+                                <!--// 2025-04-14 수정 -->
+                                <!--// 2025-04-28 수정 -->
+                            </div>
+                            <!--// board(e) -->
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 기존 정보 안내 -->
+        <!--// 20250428 수정 : 위치이동 및 속성 추가 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 기존 정보 안내
+                $("#memberInfo").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
+
+                    $("#memberInfoPop").show().focus();
+                });
+                $("#memberInfoPop .layer_close").click(function (e) {
+                    $("#memberInfo").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

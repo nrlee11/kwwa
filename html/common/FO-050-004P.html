@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko" class="layerOpen">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>교육 선택 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap" aria-hidden="true">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">교육 선택</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 교육 선택 -->
+        <div class="layerFix minPopup" id="alertPop" role="dialog" aria-modal="true" style="display: " tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="./layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+
+                    <!-- 타이틀 -->
+                    <div class="layer_scroll">
+                        <div class="tit_area">
+                            <strong class="tit ico_progress">교육 선택</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+                        <div class="article">
+                            <div class="question_area">
+                                <div class="question_box">
+                                    <strong class="tit">Q. 수도시설의 설치나 유지관리 분야의 시설 또는 관련 업무에 종사하는 기관, 기업체의 근무장소에서 실시하는 실무교육을 400시간 이상 받으셨습니까?</strong>
+                                </div>
+                                <div class="answer_box">
+                                    <div class="radio_set">
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label1" name="label" checked />
+                                            <label for="label1">받음</label>
+                                        </span>
+                                        <span class="inp_radio">
+                                            <input type="radio" id="label2" name="label" />
+                                            <label for="label2">안받음</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article gap_mt24">
+                            <!-- board(s) -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl sm size70">
+                                    <caption>
+                                        등급, 학력, 경력, 비고 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 20%" />
+                                        <col />
+                                        <col />
+                                        <col style="width: 20%" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">등급</th>
+                                            <th scope="col" class="line">학력</th>
+                                            <th scope="col" class="line">경력</th>
+                                            <th scope="col" class="line">비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="등급" rowspan="3">
+                                                <div>
+                                                    1급 <br />
+                                                    (학력과 경력 요건 <strong>모두 충족 필수</strong>)
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="학력" colspan="2" class="line"><div>4년제 이공계 학과대학 졸업(이와같은 수준 이상의 학력을 포함) 후 수도시설의 설치・유지・관리 등 분야 1년 이상</div></td>
+                                            <td data-cell-header="비고" rowspan="3" class="line"><div>실무교육 면제</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="학력" colspan="2" class="line"><div>고등학교 졸업(이와 같은 수준 이상의 학력을 포함) 후 수도시설의 설치・유지・관리 등 분야 5년 이상 실무 경력</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="학력" colspan="2" class="line"><div>상수도관망시설운영관리사 2급 자격 취득 후 수도시설의 설치・유지・관리 등 분야 3년 이상 실무 경력</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="등급" rowspan="2">
+                                                <div>
+                                                    2급 <br />
+                                                    (학력 혹은 경력 요건 중 <strong>하나 충족 필요</strong>)
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="학력" class="line"><div>-</div></td>
+                                            <td data-cell-header="경력" class="line"><div>수도시설의 설치・유지・관리 등 분야 1년 이상 실무 경력</div></td>
+                                            <td data-cell-header="비고" class="line"><div>실무교육 면제</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="학력" class="line"><div>2년제 이공계 학과대학 졸업 (이와같은 수준 이상의 학력을 포함)</div></td>
+                                            <td data-cell-header="경력" class="line"><div>-</div></td>
+                                            <td data-cell-header="비고" class="line"><div>실무교육 필수 (400시간)</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board(e) -->
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+
+                    <p class="align_center gap_mt24"><span class="txt_note">실무교육 확인서를 제출합니다.</span></p>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">이전</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 교육 선택 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 교육 선택
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

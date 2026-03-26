@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>로그인 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="../include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- page_title -->
+                        <div class="page_title center">
+                            <h2 class="tit">로그인</h2>
+                        </div>
+                        <!--// page_title -->
+
+                        <!-- login_wrap(s) -->
+                        <div class="login_wrap fix_cont">
+                            <!-- section(s) -->
+                            <div class="section">
+                                <!-- 2025-04-28 수정 : calss 추가 -->
+                                <div class="notice_box lightblue" style="display: flex; flex-direction: column; align-items: center">
+                                    <!-- 2025-04-22 수정 : aria-hidden="true" 삭제 -->
+                                    <p class="tit"><span class="ico_marknavy"></span>이전 홈페이지 가입자 회원 전환 가입 안내</p>
+                                    <p class="txt left">
+                                        이전 홈페이지(kwwa.step.or.kr) 가입자는 <br />
+                                        계정을 이전하여야 합니다.
+                                    </p>
+                                    <button type="button" class="btn_lg" id="memberSystemChange">계정 이전하기</button>
+                                </div>
+                                <!--// 2025-04-28 수정 : calss 추가 -->
+                            </div>
+                            <!--// section(e) -->
+
+                            <!-- section(s) -->
+                            <div class="section">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- write -->
+                                    <div class="form_list col">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="userId">아이디</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp">
+                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                            <input type="text" value="" id="userId" placeholder="아이디를 입력하세요" autocomplete="off" />
+                                                        </div>
+                                                    </div>
+                                                    <!-- 에러 : error -->
+                                                    <p class="msg_error">가입하지 않은 아이디이거나, 잘못된 아이디입니다.</p>
+                                                    <p class="msg_error">사용이 중지된 계정입니다. 비밀번호 찾기 후 이용해 주세요.</p>
+                                                    <!--// 에러 : error -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="userPw">비밀번호</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <!-- 에러 : error class추가 -->
+                                                        <div class="inp error">
+                                                            <input type="password" value="" id="userPw" placeholder="비밀번호를 입력하세요" />
+                                                            <span class="toggle-password" onclick="togglePassword()">
+                                                                <img src="/resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eye-icon" />
+                                                            </span>
+                                                        </div>
+                                                        <!--// 에러 : error class추가 -->
+                                                    </div>
+                                                    <p class="msg_error">잘못된 비밀번호입니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_choice">
+                                        <div class="check_set">
+                                            <span class="inp_check">
+                                                <input type="checkbox" id="idSave" />
+                                                <label for="idSave">아이디 저장</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!--// write -->
+                                </div>
+                                <!--// form -->
+
+                                <!-- btn -->
+                                <div class="bottom_btn_area gap_mt24">
+                                    <button type="button" class="btn_primary_lg">로그인</button>
+                                </div>
+                                <!--// btn -->
+
+                                <!-- login_btn -->
+                                <div class="login_btn">
+                                    <a href="#javascript:;">아이디 찾기</a>
+                                    <a href="#javascript:;">비밀번호 찾기</a>
+                                    <a href="#javascript:;">회원가입</a>
+                                </div>
+                                <!--// login_btn -->
+                            </div>
+                            <!--// section(e) -->
+
+                            <!-- btn -->
+                            <div class="bottom_btn_area">
+                                <a href="#javascript:;" class="btn_border_lg radius" target="_blank">이전 시스템 바로가기</a>
+                            </div>
+                            <!--// btn -->
+                        </div>
+                        <!--// login_wrap(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="../include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <!-- [include] layer -->
+        <div data-include-file="./layer/020-001P.html" class="includeJs"></div>
+        <!-- // [include] layer -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 신규시스템 회원 가입 안내
+                $("#memberSystemChange").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
+
+                    $("#memberSystemChangePop").show().focus();
+                });
+                $("#memberSystemChangePop .layesdfar_close").click(function (e) {
+                    $("#memberSystemChange").focus(); // 접근성
+                });
+            });
+            function togglePassword() {
+                const passwordInput = document.getElementById("userPw");
+                const eyeIcon = document.getElementById("eye-icon");
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    eyeIcon.src = "/resources/images/icon/ico_eye.svg"; // 뜬 눈 아이콘 이미지로 변경
+                } else {
+                    passwordInput.type = "password";
+                    eyeIcon.src = "/resources/images/icon/ico_eye_closed.svg"; // 원래 눈 아이콘 이미지로 복원
+                }
+            }
+        </script>
+    </body>
+</html>

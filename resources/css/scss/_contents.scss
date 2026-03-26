@@ -1,0 +1,526 @@
+@charset "UTF-8";
+// width 518 (로그인,회원가입)
+.fix_cont {
+    width: 51.8rem !important;
+    // margin: 7.5rem auto 0;
+    margin: var(--gap-50) auto 0 !important;
+    .bottom_btn_area {
+        // margin-top: var(--gap-20);
+        > [class^="btn_"] {
+            width: 100%;
+        }
+    }
+    @include mobile {
+        width: auto !important;
+        // .blue_box,
+        // .bottom_btn_area {
+        //     margin-top: var(--gap-50);
+        // }
+        .blue_box {
+            margin-top: var(--gap-50);
+        }
+    }
+}
+
+// 완료
+.completion_area {
+    position: relative;
+    margin-bottom: var(--gap-50);
+    padding-top: 11.4rem;
+    text-align: center;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-left: -3.2rem;
+        background: url($url-img-common + "bg_completion.svg") no-repeat 0 0;
+        background-size: contain;
+    }
+    .msg {
+        font-size: var(--font-size-xxl);
+        font-weight: var(--font-semibold);
+        + .txt {
+            margin-top: var(--gap-50);
+        }
+    }
+    .txt {
+        font-size: 2rem;
+    }
+}
+
+// 로그인
+.login_wrap {
+    .notice_box {
+        [class^="btn_"] {
+            margin-top: var(--gap-20);
+            color: var(--color-base);
+            border: $border #58616a;
+            background: 0;
+            line-height: 4.6rem;
+        }
+    }
+    .login_btn {
+        @include flex-center;
+        gap: 0 2.4rem;
+        margin-top: var(--gap-24);
+        > a {
+            + a {
+                position: relative;
+                &::after {
+                    @include pseudo-selector;
+                    left: -1.2rem;
+                    width: 0.1rem;
+                    height: 1.6rem;
+                    margin-top: -0.8rem;
+                    background-color: #cdd1d5;
+                }
+            }
+        }
+    }
+    .txt_notify {
+        font-weight: var(--font-semibold);
+        text-align: center;
+    }
+}
+
+// 아이디 찾기
+.find_account_wrap {
+    width: 75.2rem;
+    margin: 0 auto;
+    @include mobile {
+        width: 100%;
+    }
+    .find_msg {
+        margin-bottom: var(--gap-50);
+        font-size: 2rem;
+        text-align: center;
+    }
+    @include desktop {
+        .bottom_btn_area {
+            margin-top: var(--gap-24);
+        }
+    }
+}
+
+.license_term {
+    > ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-24);
+        > li {
+            position: relative;
+            width: calc(25% - var(--gap-24));
+            padding-bottom: var(--gap-6);
+            text-align: center;
+            border-bottom: $border #cdd1d5;
+            > strong {
+                display: var(--show);
+                padding: var(--gap-5) var(--gap-16);
+                margin-bottom: 0.6rem;
+                font-size: var(--font-size-sm);
+                background-color: #eef2f7;
+            }
+            &:after {
+                @include pseudo-selector;
+                left: auto;
+                right: -2.4rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                margin-top: -1.2rem;
+                background: url($url-img-common + "bg_arrow_right.png") no-repeat 0 0;
+                background-size: contain;
+            }
+            &:last-child:after {
+                display: var(--hide);
+            }
+        }
+    }
+    @include mobile {
+        > ol {
+            gap: 5.4rem;
+            > li {
+                width: 100%;
+                &:after {
+                    top: auto;
+                    right: auto;
+                    left: 50%;
+                    bottom: -3.9rem;
+                    margin-left: -1.2rem;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+// 양성교육
+// 교육신청
+.consent_form {
+    margin-top: var(--gap-50);
+    padding-top: var(--gap-50);
+    border-top: $border #cdd1d5;
+    .article {
+        + .article {
+            margin-top: var(--gap-30);
+        }
+        dl {
+            dt {
+                .tit {
+                    display: block;
+                }
+            }
+            dd {
+                margin-top: var(--gap-10);
+                @include mobile {
+                    margin-top: var(--gap-20);
+                    .radio_set {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.pay_amount_area {
+    @include flex-between;
+    align-items: center;
+    margin-top: var(--gap-17);
+    padding-bottom: var(--gap-24);
+    border-bottom: $border var(--color-black);
+    .total {
+        > strong {
+            margin-left: var(--gap-15);
+            font-size: var(--font-size-lg);
+        }
+        @include mobile {
+            text-align: right;
+            span,
+            strong {
+                display: block;
+            }
+        }
+    }
+}
+.page_msg {
+    @include flex-between;
+    align-items: center;
+    @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        > div {
+            width: 100%;
+        }
+        .rside {
+            margin-top: var(--gap-50);
+            text-align: right;
+        }
+    }
+}
+
+// 평가시험
+// 합격조회
+
+// 에러페이지
+.error_wrap {
+    padding: 0 var(--gap-16);
+    @include flex-aligncenter;
+    .error_area {
+        // width: 51.8rem;
+        margin: 0 auto;
+        text-align: center;
+        .msg {
+            position: relative;
+            padding-top: 12.4rem;
+            font-size: var(--font-size-xxl);
+            font-weight: var(--font-semibold);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 6.4rem;
+                height: 6.4rem;
+                margin-left: -3.2rem;
+                background: url($url-img-common + "bg_system_error.svg") no-repeat 0 0;
+            }
+            + .txt {
+                margin-top: 3.8rem;
+            }
+        }
+        .txt {
+            font-size: 2rem;
+        }
+        @include mobile {
+            width: 100%;
+            margin: 0;
+            .msg {
+                padding-top: 11.4rem;
+                font-size: 2.8rem;
+                + .txt {
+                    margin-top: var(--gap-50);
+                }
+            }
+            .bottom_btn_area {
+                margin-top: var(--gap-50);
+            }
+        }
+    }
+}
+
+// 마이페이지
+// 문의하기
+.board_addfile_set {
+    .form_list {
+        + .form_list {
+            margin-top: var(--gap-24);
+            @include mobile {
+                margin-top: var(--gap-50);
+            }
+        }
+    }
+    .list_addfile {
+        margin-top: var(--gap-10);
+        @include mobile {
+            margin-top: var(--gap-50);
+        }
+    }
+}
+
+// layer
+// 이용약관
+.terms_wrap {
+    .tit {
+        display: block;
+        margin: 3.2rem 0 1.3rem;
+        color: var(--color-black);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-medium);
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    ul {
+        margin-top: var(--gap-5);
+        + ul {
+            margin-top: 0;
+        }
+        > li > ul {
+            margin: 0.8rem 0 0.8rem 0.4rem;
+        }
+    }
+    .terms_info {
+        margin-top: var(--gap-20);
+    }
+}
+// 환불 정보
+.payment_info {
+    margin-top: var(--gap-10);
+    padding: var(--gap-12) var(--gap-16);
+    border: $border #cdd1d5;
+    .item {
+        display: flex;
+        .item_tit {
+            width: 9.5rem;
+            font-weight: var(--font-semibold);
+        }
+        .item_cont {
+            flex: 1;
+        }
+    }
+}
+// 자격취득 가능여부 자가진단
+.question_area {
+    .question_box {
+        .tit {
+            display: block;
+            padding-left: 2.3rem;
+            text-indent: -2.3rem;
+            font-weight: normal;
+        }
+        + .answer_box {
+            margin-top: var(--gap-20);
+        }
+    }
+    .radio_set {
+        .inp_radio {
+            display: block;
+            margin: 0;
+            + .inp_radio {
+                margin-top: var(--gap-24);
+            }
+        }
+    }
+}
+
+// 강의실
+.page_educlass_title {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 3.6rem 0 2.2rem;
+    color: var(--color-base);
+    @include mobile {
+        padding: 1.6rem 0 var(--gap-50);
+        display: flex;
+        flex-direction: column;
+    }
+    .tit {
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-semibold);
+    }
+    .txt_info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--gap-25);
+        font-size: var(--font-size-sm);
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: var(--gap-5);
+        }
+        span {
+            white-space: nowrap;
+        }
+    }
+}
+.educlass_panel {
+    margin-top: var(--gap-50);
+    padding-bottom: 10rem;
+}
+
+.educlass_info_area {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+        flex-direction: column;
+        gap: var(--gap-50);
+    }
+    .educlass_info_list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-5);
+        color: var(--color-base);
+        .type {
+            display: inline-block;
+            width: 10rem;
+        }
+        .txt {
+            display: inline-block;
+        }
+    }
+}
+
+.educlass_info_box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--gap-24);
+    &:not(:first-child) {
+        margin-top: var(--gap-50);
+    }
+    .tit {
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-bold);
+    }
+    .txt {
+        font-size: 1.7rem;
+    }
+    .btn_border_md {
+        @include mobile {
+            align-self: flex-end;
+        }
+    }
+}
+.educlass_percent_box {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    // width: 19.2rem;
+    // height: 17rem;
+    @include mobile {
+        margin: 0 auto;
+    }
+    .percent_graphic div {
+        width: 17rem;
+        height: 17rem;
+        background: lightgrey;
+    }
+}
+
+// 강의실 > 학습목차 테이블
+.tbl_colgroup_educlass {
+    th,
+    td {
+        &:first-child {
+            width: 81px;
+            min-width: 81px;
+        }
+        &:nth-child(2) {
+            width: 81px;
+            min-width: 81px;
+        }
+        &:nth-child(3) {
+            width: 417px;
+            min-width: 417px;
+        }
+        &:nth-child(4) {
+            width: 123px;
+            min-width: 123px;
+        }
+        &:nth-child(5) {
+            width: 123px;
+            min-width: 123px;
+        }
+        &:nth-child(6) {
+            width: 123px;
+            min-width: 123px;
+        }
+        &:nth-child(7) {
+            width: 90px;
+            min-width: 90px;
+        }
+        &:nth-child(8) {
+            width: 162px;
+            min-width: 162px;
+        }
+    }
+}
+.tbl_sub_panel {
+    > td {
+        height: auto !important;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+    .tbl_sub {
+        tbody {
+            td {
+                background-color: #f4f5f6;
+            }
+        }
+    }
+}
+.btn_accrodion_tr {
+    position: relative;
+    top: 0.2rem;
+    display: inline-block;
+    // padding: 1rem;
+    &[aria-expanded="false"] {
+        &:after {
+            transform: rotate(0);
+        }
+    }
+    &:after {
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: url($url-img-icon + "ico_arrowdown.svg") no-repeat 0 0;
+        transition: 400ms;
+        transform: rotate(-180deg);
+        content: "";
+    }
+}

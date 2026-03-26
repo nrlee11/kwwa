@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>재응시자 직전회차 자격증 정보 불러오기 팝업 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">평가시험 신청</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 재응시자 직전회차 자격증 정보 불러오기 팝업-->
+        <div class="layerFix alertPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <!-- <div class="tit_area">
+                        <strong class="tit">의견(이의사항) 제출 완료 </strong>
+                    </div> -->
+                    <div class="article">
+                        <p class="txt">재응시를 응시하는 응시자로써 직전 회차에서 과목 면제를 위한 자격증을 선택하였습니다. 직전 회차의 자격증 면제 정보를 불러오시겠습니까?</p>
+                        <!-- <p class="txt">직전 회차의 자격증 면제 정보를 불러오시겠습니까?</p> -->
+                        <!-- board -->
+                        <div class="board_area gap_mt24">
+                            <!-- board_view -->
+                            <table class="tbl react row sm size120">
+                                <caption>
+                                    자격증, 자격번호
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 15.3rem" />
+                                    <col />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">자격증</th>
+                                        <td data-cell-header="자격증"><div>xxxxxxxxxx</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">자격번호</th>
+                                        <td data-cell-header="자격번호"><div>xxxxx-xxxxxxx</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--// board_view -->
+                        </div>
+                        <!--// board -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md layer_close">불러오기</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 의견(이의사항) 제출 완료 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 의견(이의사항) 제출 완료
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

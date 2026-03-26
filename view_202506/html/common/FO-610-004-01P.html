@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko" class="layerOpen">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap" aria-hidden="true">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="btnSurvayStart">만족도 조사(시작)</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 만족도 조사 시작 -->
+        <div class="layerFix minPopup fullPopup" id="popSurvayStart" role="dialog" aria-modal="true" style="display: " tabindex="0">
+            <div class="layer_wrap type_survay">
+                <!-- head -->
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <!-- // head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="./survay/name_badge.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <div class="article_servay">
+                            <!-- [include] 설문기간 -->
+                            <div data-include-file="./survay/date.html" class="includeJs"></div>
+                            <!-- //[include] 설문기간 -->
+
+                            <!-- [include] 설문지안내문구 영역 -->
+                            <div data-include-file="./survay/step1.html" class="includeJs"></div>
+                            <!--// [include] 설문지안내문구 영역 -->
+
+                            <!-- foot -->
+                            <div class="foot">
+                                <div class="btn_area">
+                                    <div class="rside">
+                                        <button type="button" class="btn_primary_md">다음</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // foot -->
+                        </div>
+                    </div>
+                    <!-- // 스크롤 -->
+                </div>
+                <!-- // cont -->
+
+                <!-- btn:close -->
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                <!-- // btn:close -->
+            </div>
+        </div>
+        <!--// Layer : 만족도 조사 시작 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer
+                $("#btnSurvayStart").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#popSurvayStart").show().focus();
+                });
+                $("#popSurvayStart .layer_close").click(function (e) {
+                    $("#btnSurvayStart").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>보완요청 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">보완요청</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 보완요청 팝업-->
+        <div class="layerFix alertPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">보완요청 </strong>
+                    </div>
+                    <div class="article">
+                        <p class="txt">보완 요청일: 2025-02-20</p>
+                        <p class="txt">보완 만료일: 2025-02-27</p>
+                        <p class="txt">보완 사유: 블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라</p>
+                        <!-- board(s) -->
+                        <div class="board_area gap_mt10">
+                            <!-- form-->
+                            <div class="form_section">
+                                <!-- board_write -->
+                                <div class="form_list table">
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="licenseSelec">자격증</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="inp_select size_219">
+                                                        <select title="자격증 선택" id="licenseSelec">
+                                                            <option value="">상하수도기술사</option>
+                                                            <option value="">해당없음</option>
+                                                            <option value="">해당없음</option>
+                                                            <option value="">해당없음</option>
+                                                            <option value="">해당없음</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="licenseNum">자격번호</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="inp size_219">
+                                                                <input type="text" id="licenseNum" placeholder="xxxxxxx" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <span>자격증 사본</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box">
+                                                        <div class="box">
+                                                            <div class="file_set">
+                                                                <div class="inp">
+                                                                    <input type="text" placeholder="파일을 선택하세요" readonly />
+                                                                    <button type="button" class="btn_reset"><span class="hidden">입력 내용 지우기</span></button>
+                                                                </div>
+                                                                <label for="file2">파일찾기</label>
+                                                                <input type="file" id="file2" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="tit">
+                                            <label for="plus">보완내용</label>
+                                        </div>
+                                        <div class="item">
+                                            <div class="cell">
+                                                <div class="form_item">
+                                                    <div class="group_box"style="width: 100%;">
+                                                        <div class="box"style="width: 100%;">
+                                                            <div class="inp_textarea" style="width: 100%;">
+                                                               
+                                                            <textarea placeholder="내용 입력"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                </div>
+                                <!--// board_write -->
+                            </div>
+                            <!--// form-->
+                        </div>
+                        <!--// board(e) -->
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md layer_close">보완완료</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 의견(이의사항) 제출 완료 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 의견(이의사항) 제출 완료
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

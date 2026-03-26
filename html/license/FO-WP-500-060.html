@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>진위여부 조회 | 자격증발급 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="../include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- [include] aside(s) : 확인용 -->
+                    <div data-include-file="../include/aside.html" class="includeJs"></div>
+                    <!--// [include] aside(e) : 확인용 -->
+
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- breadcrumb(s) -->
+                        <nav class="breadcrumb_wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="/index.html">홈</a></li>
+                                <li><a href="./FO-WP-500-010.html">자격증발급</a></li>
+                                <li><span>진위여부 조회</span></li>
+                            </ol>
+                        </nav>
+                        <!--// breadcrumb(e) -->
+
+                        <!-- page_title(s) -->
+                        <div class="page_title">
+                            <h2 class="tit">진위여부 조회</h2>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">자격정보 입력</h3>
+                                <div class="desc">진위여부 확인을 위해 아래 정보를 입력 후 조회 하시기 바랍니다.</div>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- form-->
+                                <div class="form_section">
+                                    <!-- board_write -->
+                                    <div class="form_list table">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <span>자격종목</span>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_txt">상수도관망시설운영관리사</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="userName">이름</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp size_219">
+                                                            <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                            <input type="text" id="userName" placeholder="성명 입력" autocomplete="off" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="licenseNumber">자격증번호</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="group_box">
+                                                            <div class="box">
+                                                                <div class="inp size_219">
+                                                                    <input type="text" id="licenseNumber" placeholder="자격증 번호 입력" autocomplete="off" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="box">(영문 대소문자, 숫자 구분합니다)</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="licenseDate">자격취득일</label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="calendar_set">
+                                                            <div class="inp size_219">
+                                                                <input type="text" value="" placeholder="취득일" id="date1" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// board_write -->
+                                </div>
+                                <!--// form-->
+
+                                <div class="board_desc_bottom gap_mt10">
+                                    <p class="txt_note">자격증에 표기된 자격 취득일과 교부 년월일은 다른 항목입니다. 정확히 입력해 주세요.</p>
+                                </div>
+                            </div>
+                            <!--// board -->
+
+                            <div class="page_btn_area">
+                                <div class="rside">
+                                    <button type="button" class="btn_primary_lg">조회</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">조회 결과</h3>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row size100">
+                                    <caption>
+                                        자격 종목, 자격증번호, 진위확인 결과, 진위확인 결과 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">자격 종목</th>
+                                            <td data-cell-header="자격 종목"><div>상수도관망시설운영관리사 3급</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">자격증번호</th>
+                                            <td data-cell-header="자격증번호"><div>WL00000000</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">진위확인 결과</th>
+                                            <td data-cell-header="진위확인 결과">
+                                                <div><span class="txt_red">입력하신 정보와 일치하는 자격 취득자가 없습니다.</span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">진위확인 결과</th>
+                                            <td data-cell-header="진위확인 결과">
+                                                <div><span class="txt_green">입력하신 정보와 일치 합니다.</span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+                        </div>
+                        <!--// section(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="../include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script src="/resources/js/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-WP-500-060.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

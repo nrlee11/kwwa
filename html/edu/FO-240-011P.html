@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>환불 정보 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">환불 정보</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 환불 정보 -->
+        <div class="layerFix fullPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="article">
+                        <div class="tit">*환불 신청 정보</div>
+                        <div class="payment_info">
+                            <div class="item">
+                                <div class="item_tit">은행명:</div>
+                                <div class="item_cont">NNNNNNNN</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">계좌번호:</div>
+                                <div class="item_cont">블라블라</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">예금주</div>
+                                <div class="item_cont">NNNN</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">휴대폰 번호</div>
+                                <div class="item_cont">010-NNNN-NNNN</div>
+                            </div>
+                        </div>
+                        <p class="txt_note gap_mt10">
+                            환불신청이 정상 완료되었습니다. <br />
+                            입력한 정보에 이상이 있는 경우 연락을 드릴 수 있습니다.
+                            <br />
+                            환불 정보에 변경이 필요한 경우 문의 주세요. (02-3156-7781)
+                        </p>
+                    </div>
+
+                    <div class="article">
+                        <div class="tit">*결제 정보</div>
+                        <div class="payment_info">
+                            <div class="item">
+                                <div class="item_tit">주문번호:</div>
+                                <div class="item_cont">a4CWyWY5m89PNh7xJwhk1</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">결제번호:</div>
+                                <div class="item_cont">a4CWyWY5m89PNh7xJwhk1</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">상품명:</div>
+                                <div class="item_cont">교육비</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">결제수단:</div>
+                                <div class="item_cont">신용카드</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">결제금액:</div>
+                                <div class="item_cont">789,000원</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">결제일시:</div>
+                                <div class="item_cont">2025-02-11 00:00:00</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">취소사유:</div>
+                                <div class="item_cont">사용자 취소</div>
+                            </div>
+                            <div class="item">
+                                <div class="item_tit">취소일시:</div>
+                                <div class="item_cont">2025-02-21 00:00:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 환불 정보 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 환불 정보
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

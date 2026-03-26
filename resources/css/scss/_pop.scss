@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+// 메인 팝업만
+
+.popup-wrap {
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: rgb(209, 225, 241);
+    padding: 10px 10px 0 10px;
+    padding-bottom: 34px; /* 버튼 높이만큼 여백 확보 */
+
+    .popcont {
+        min-height: 250px;
+    }
+    .pop_btnbox {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--color-navy);
+        /* 필요 시 배경 지정 */
+        padding: 5px 10px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+    }
+    button {
+        min-width: 6rem;
+        // background-color: var(--color-white);
+        // border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 3px 10px;
+        font-weight: var(--fong-regular);
+        color: var(--color-white);
+    }
+    img {
+        width: 100%; /* 팝업 너비에 맞춤 */
+        height: auto; /* 비율 유지 */
+        // max-height: 200px; /* 필요 시 최대 높이 지정 */
+        object-fit: cover; /* 이미지 잘림 없이 비율 유지 */
+        margin-bottom: 10px;
+    }
+}

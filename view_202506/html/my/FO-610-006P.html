@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>만족도 조사 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">만족도 조사</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 만족도 조사 -->
+        <div class="layerFix fullPopup" role="dialog" aria-modal="true" id="alertPop" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">만족도 조사</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <div class="edu_group type3 wide">
+                                <div class="box">
+                                    <div class="edu_info">
+                                        <div class="lside">
+                                            <div class="badge_set">
+                                                <span class="value_badge7">만족도 조사</span>
+                                            </div>
+                                            <span class="wl_number">2025-01-02</span>
+                                        </div>
+                                    </div>
+                                    <div class="timetable_set">
+                                        <div class="timetable">
+                                            <div class="edu_tit">
+                                                <strong class="tit">상수도관망시설운영관리사 양성과정 교육1급 (개정)</strong>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">교육기간</span>
+                                                <span class="item">2025-01-10 (금) ~ 2025-01-16 (목)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article">관리자화면에서 생성한 내용 출력</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md">제출하기</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 만족도 조사 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 만족도 조사
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

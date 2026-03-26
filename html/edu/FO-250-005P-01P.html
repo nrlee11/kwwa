@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>강의실 | 양성교육 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents gap_pt0">
+
+                        <!-- page_title(s) -->
+                        <div class="page_educlass_title">
+                            <h2 class="tit">2024년 영상.avi 테스트-01</h2>
+                            <p class="txt_info">
+                                <span>
+                                    <span class="ico_cal"></span>2025-01-21 ~ 2025-04-30
+                                </span>
+                                <span>
+                                    <span class="ico_time"></span>남은 기간: 12일
+                                </span>
+                            </p>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tab_area">
+                                
+                                <!-- [include] tab(s) : 확인용 -->
+                                <div data-include-file="./include/educlass/tab.html" class="includeJs"></div>
+                                <!--// [include] tab(e) : 확인용 -->
+
+                                <div class="tabpanel" role="tabpanel">
+                                    <!-- [D] 접근성 aria-controls과 id값 동일하게 적용 -->
+                                <div id="tabclass1" class="tab_cont" aria-hidden="true" style="display: none"></div>
+                                <div id="tabclass2" class="tab_cont" aria-hidden="true" style="display: none"></div>
+                                <div id="tabclass3" class="tab_cont" aria-hidden="true" style="display: none"></div>
+                                <div data-include-file="./include/educlass/panel4_detail.html" class="includeJs"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+                    </div>
+                    <!--// contents(e) --></div>
+                </div>
+            </div>
+            <!--// container(e) -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <!-- [D] ui확인용 (s) -->
+        <script>
+        $(function() {
+            setTimeout(function () {
+                const $tabBtn = $('.tab li:last-child button');
+                if ($tabBtn.length > 0) {
+                    $tabBtn.trigger('click');
+                }
+            }, 1000);
+        });
+        </script>
+        <!-- // [D] ui확인용 (e) -->
+    </body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>환불 정보 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <div id="wrap" class="wrap">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">환불 정보</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layerFix fullPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">환불 정보</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <div class="tit">*결제 정보</div>
+                            <div class="payment_info">
+                                <div class="item">
+                                    <div class="item_tit">주문번호:</div>
+                                    <div class="item_cont">a4CWyWY5m89PNh7xJwhk1</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">결제번호:</div>
+                                    <div class="item_cont">a4CWyWY5m89PNh7xJwhk1</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">상품명:</div>
+                                    <div class="item_cont">응시료</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">결제수단:</div>
+                                    <div class="item_cont">가상계좌</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">결제금액:</div>
+                                    <div class="item_cont">789,000원</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">입금일시:</div>
+                                    <div class="item_cont">2025-02-11 00:00:00</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">취소사유:</div>
+                                    <div class="item_cont">사용자 취소</div>
+                                </div>
+                                <div class="item">
+                                    <div class="item_tit">취소신청일시:</div>
+                                    <div class="item_cont">2025-02-21 00:00:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="tit">*환불 신청 정보</div>
+                            <div class="board_area gap_mt10">
+                                <div class="form_section boxing">
+                                    <div class="form_list size100">
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="labelName1"
+                                                    >은행 명
+                                                    <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                </label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp_select size_289">
+                                                            <select title="은행 선택" id="labelName1">
+                                                                <option value="">은행 선택</option>
+                                                                <option value="">신한은행</option>
+                                                                <option value="">우리은행</option>
+                                                                <option value="">하나은행</option>
+                                                                <option value="">경남은행</option>
+                                                                <option value="">광주은행</option>
+                                                                <option value="">KB국민은행</option>
+                                                                <option value="">IBK기업은행</option>
+                                                                <option value="">NH농협은행</option>
+                                                                <option value="">Sh수협은행</option>
+                                                                <option value="">새마을금고</option>
+                                                                <option value="">우체국예금보험</option>
+                                                                <option value="">iM뱅크(대구)</option>
+                                                                <option value="">부산은행</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="labelName2"
+                                                    >계좌번호
+                                                    <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                </label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp size_289">
+                                                            <input type="text" value="12345678912345678912" id="labelName2" autocomplete="off" />
+                                                        </div>
+                                                    </div>
+                                                    <p class="msg_txt">- 없이 숫자만 입력 해 주세요(20자)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="labelName3"
+                                                    >예금주
+                                                    <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                </label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp size_289">
+                                                            <input type="text" id="labelName3" autocomplete="off" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_group">
+                                            <div class="tit">
+                                                <label for="labelName4"
+                                                    >휴대폰 번호
+                                                    <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                </label>
+                                            </div>
+                                            <div class="item">
+                                                <div class="cell">
+                                                    <div class="form_item">
+                                                        <div class="inp size_289">
+                                                            <input type="text" id="labelName4" autocomplete="off" />
+                                                        </div>
+                                                    </div>
+                                                    <p class="msg_txt">- 없이 숫자만 입력 해 주세요(11자)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <p class="txt_note">
+                                입력시 "-"없이 입력해주세요.<br />입력한 정보가 일치하지 않은 경우 연락을 드릴 수 있습니다. <br />
+                                환불은 이용자 본인 명의로만 가능합니다.
+                            </p>
+                        </div>
+
+                        <div class="article">
+                            <p class="txt_blue">
+                                보내실 곳 :<br />
+                                (07379) 서울특별시 영등포구 대림로 244(대림동) 한국상하수도협회<br />
+                                상수도관망시설운영관리사 담당자 앞<br />
+                                문의: <a href="tel:02-3156-7781">02-3156-7781</a>
+                            </p>
+                        </div>
+
+                        <div class="accordion_area qna" style="border-bottom: 0.1rem solid var(--color-darkgray); margin-top: var(--gap-20)">
+                            <dl class="accordion_box">
+                                <dt class="accordion_head">
+                                    <button type="button" class="fold" aria-expanded="false" aria-controls="qna2">개인정보 수집 및 이용 동의</button>
+                                </dt>
+                                <dd id="qna2" class="accordion_body" style="display: none; padding: var(--gap-20)">
+                                    <div class="article">
+                                        <div class="board_area gap_mt10">
+                                            <p>수집항목 : 계좌정보(은행명 및 계좌번호), 예금주명, 연락처</p>
+                                            <p>수집목적 : 계좌인증 및 환불계좌 등록 및 환불금액 입금 및 고객안내</p>
+                                            <p>이용기간 : 동의철회 시 까지</p>
+                                            <p>단, 상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계 법령의 규정에 의하여 아래의 정보를 보관합니다.</p>
+                                            <br />
+                                            <div class="scroll_guide">
+                                                <p class="txt_scroll">밀어서 보기</p>
+                                            </div>
+                                            <div class="scroll_area">
+                                                <table class="tbl">
+                                                    <caption>
+                                                        법령, 보관정보, 보관기간
+                                                    </caption>
+                                                    <colgroup>
+                                                        <col style="width: 40%" />
+                                                        <col style="width: 40%" />
+                                                        <col />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">법령</th>
+                                                            <th scope="col" class="line">보관정보</th>
+                                                            <th scope="col" class="line">보관기간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td rowspan="2">전자상거래 등에서의 소비자 보호에 관한 법률</td>
+                                                            <td style="border-left: 0.1rem solid #d6e0eb">계약 또는 청약철회 등에 관한 기록</td>
+                                                            <td rowspan="4" style="border-left: 0.1rem solid #d6e0eb">5년</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="border-left: 0.1rem solid #d6e0eb">대금결제 및 재화 등의 공급에 관한 기록</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>특정 금융거래정보의 보고 및 이용 등에 관한 법률</td>
+                                                            <td style="border-left: 0.1rem solid #d6e0eb">금융거래정보</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>전자금융거래법</td>
+                                                            <td style="border-left: 0.1rem solid #d6e0eb">전자금융거래에 관한 기록</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>통신비밀보호법</td>
+                                                            <td style="border-left: 0.1rem solid #d6e0eb">웹사이트 방문에 관한 기록</td>
+                                                            <td style="border-left: 0.1rem solid #d6e0eb">3개월</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <span class="inp_check" style="margin: 2rem 0">
+                            <input type="checkbox" id="agree1" />
+                            <label for="agree1">본인은 개인정보 수집 및 이용동의에 동의합니다.</label>
+                        </span>
+                    </div>
+
+                    <div class="foot">
+                        <div class="btn_area">
+                            <div class="lside">
+                                <button type="button" class="btn_primary_md layer_close">환불신청</button>
+                            </div>
+                            <button type="button" class="btn_outline_md layer_close">닫기</button>
+                        </div>
+                    </div>
+                    <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+                </div>
+            </div>
+        </div>
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#alert").click(function () {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function () {
+                    $("#alert").focus();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="btnPayMethod">결제 방법 선택</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 결제 방법 선택 -->
+        <div class="layerFix alertPopup" id="popPayMethod" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">결제 방법 선택</strong>
+                    </div>
+                    <div class="article">
+                        <div class="payment_option">
+                            <span class="inp">
+                                <input type="radio" id="pay_option01" name="pay_option" checked />
+                                <label for="pay_option01" class="creditcard">신용카드</label>
+                            </span>
+                            <span class="inp">
+                                <input type="radio" id="pay_option02" name="pay_option" />
+                                <label for="pay_option02" class="wiretransfer">실시간 계좌이체</label>
+                            </span>
+                            <span class="inp">
+                                <input type="radio" id="pay_option03" name="pay_option" />
+                                <label for="pay_option03" class="bankaccount">가상계좌</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <ul class="list_dash">
+                            <li>실시간계좌 이체 : 수강신청 본인의 계좌에서 교육비 이체를 진행하는 방법</li>
+                            <li>가상계좌 : 임시의 가상계좌번호가 발급됩니다. 발급된 가상계좌로 입금기간 내에 입금하는 방법</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md">결제하기</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 결제 방법 선택 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 결제 방법 선택
+                $("#btnPayMethod").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#popPayMethod").show().focus();
+                });
+                $("#popPayMethod .layer_close").click(function (e) {
+                    $("#btnPayMethod").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

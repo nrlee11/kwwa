@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>취소 요청 확인 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">취소 요청 확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 취소 요청 확인 -->
+        <div class="layerFix fullPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">취소 요청 확인</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <div class="tit">교육의 취소 및 환불</div>
+                            <p class="txt">교육신청의 취소 및 교육 중 중도취소 시 환불이 가능하며 이 경우 아래 기준에 따라 환불됩니다.</p>
+                        </div>
+                        <div class="article">
+                            <!-- board -->
+                            <div class="board_area">
+                                <div class="scroll_guide">
+                                    <p class="txt_scroll">밀어서 보기</p>
+                                </div>
+
+                                <div class="scroll_area">
+                                    <!-- board_view -->
+                                    <table class="tbl row sm">
+                                        <caption>
+                                            요청시점, 환불액 기준, 환불시점, 비고 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 114px" />
+                                            <col style="width: 220px" />
+                                            <col style="width: 104px" />
+                                            <col style="width: 74px" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">요청시점</th>
+                                                <th scope="col">환불액 기준</th>
+                                                <th scope="col">환불시점</th>
+                                                <th scope="col">비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div>접수시작일부터 교재(책자) 발송 전까지</div></td>
+                                                <td><div>교육비 전액</div></td>
+                                                <td><div>환불신청 접수 후 10일 이내</div></td>
+                                                <td class="center"><div>-</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>교재(책자) 발송일로부터 교육시작 전날까지</div></td>
+                                                <td>
+                                                    <div>
+                                                        교육비에서 아래 사항을 차감한 금액
+                                                        <ul class="list_dash">
+                                                            <li>교재 배송비 4,000원</li>
+                                                            <li>교재 훼손*으로 미 반납시 교재비 60,000원<br />* 낙서(밑줄, 색칠), 찢어짐, 오염, 접힘 등</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="2"><div>교재 회수시점으로 부터 10일 이내</div></td>
+                                                <td class="center" rowspan="2"><div>교재반납 필요</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>교육시작일로부터 교육기간 1/2경과 전까지</div></td>
+                                                <td>
+                                                    <div>
+                                                        교육비에서 아래 사항을 차감한 금액
+                                                        <ul class="list_dash">
+                                                            <li>교재 배송비 4,000원</li>
+                                                            <li>교재 훼손으로 미 반납시 교재비 60,000원</li>
+                                                            <li>일할 계산에 따른 교육비<br />산식: 교육비×(경과일/전체 교육일)</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>교육기간 1/2경과 이후</div></td>
+                                                <td><div>환불 없음</div></td>
+                                                <td><div>-</div></td>
+                                                <td class="center"><div>-</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// board_view -->
+                                </div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md">취소요청</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md layer_close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 취소 요청 확인 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 취소 요청 확인
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

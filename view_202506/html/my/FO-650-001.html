@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>회원정보수정 | 마이페이지 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="/view_202506/html/include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- [include] aside(s) : 확인용 -->
+                    <div data-include-file="/view_202506/html/include/aside.html" class="includeJs"></div>
+                    <!--// [include] aside(e) : 확인용 -->
+
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- breadcrumb(s) -->
+                        <nav class="breadcrumb_wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="javascript:;">홈</a></li>
+                                <li><a href="javascript:;">마이페이지</a></li>
+                                <li><span>회원정보수정</span></li>
+                            </ol>
+                        </nav>
+                        <!--// breadcrumb(e) -->
+
+                        <!-- page_title(s) -->
+                        <div class="page_title">
+                            <h2 class="tit">회원정보수정</h2>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tab_area">
+                                <div class="scroll_area">
+                                    <ul class="tab" role="tablist">
+                                        <!-- 접근성 aria-controls -->
+                                        <li class="on" role="presentation" aria-controls="tab1"><button type="button" role="tab" aria-selected="true">비밀번호 변경</button></li>
+                                        <li role="presentation" aria-controls="tab2"><button type="button" role="tab" aria-selected="false">회원정보 수정</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tabpanel" role="tabpanel">
+                                    <!-- tab1 : 비밀번호 변경 -->
+                                    <div id="tab1" class="tab_cont" aria-hidden="false">
+                                        <strong class="hidden">비밀번호 변경</strong>
+                                        <div class="detail_view">
+                                            <div class="article">
+                                                <p class="txt_size_xmd align_center gap_mt50">인증방식을 선택해 주세요.</p>
+
+                                                <div class="gap_mt50">
+                                                    <!-- [include] 본인인증 -->
+                                                    <div data-include-file="/view_202506/html/include/components/identity.html" class="includeJs"></div>
+                                                    <!--// [include] 본인인증 -->
+                                                </div>
+                                            </div>
+
+                                            <div class="article">
+                                                <div class="fix_cont">
+                                                    <p class="txt_size_xmd align_center gap_mt50">사용하실 비밀번호를 입력해 주세요.</p>
+                                                    <!-- form -->
+                                                    <div class="form_section gap_mt50">
+                                                        <!-- write -->
+                                                        <div class="form_list col">
+                                                            <div class="form_group">
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="inp">
+                                                                                <input type="password" placeholder="새 비밀번호" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="msg_txt">비밀번호는 8자 이상, 16자 이하의 영문자, 숫자 및 특수문자를 조합하여 사용해야 합니다.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_group">
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <!-- 에러 : error class추가 -->
+                                                                            <div class="inp error">
+                                                                                <input type="password" placeholder="새 비밀번호 확인" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- 에러 : error -->
+                                                                        <p class="msg_error">비밀번호 조건에 맞지 않습니다. 다시 입력해 주세요.</p>
+                                                                        <p class="msg_error">비밀번호가 다릅니다.</p>
+                                                                        <!--// 에러 : error -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--// write -->
+                                                    </div>
+                                                    <!--// form -->
+
+                                                    <!-- btn -->
+                                                    <div class="bottom_btn_area">
+                                                        <button type="button" class="btn_primary_lg">설정하기</button>
+                                                    </div>
+                                                    <!--// btn -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// tab1 : 비밀번호 변경 -->
+
+                                    <!-- tab2 : 회원정보 수정 -->
+                                    <div id="tab2" class="tab_cont" aria-hidden="true" style="display: none">
+                                        <strong class="hidden">회원정보 수정</strong>
+                                        <div class="detail_view">
+                                            <div class="article">
+                                                <div class="fix_cont">
+                                                    <p class="txt_size_xmd align_center gap_mt50">
+                                                        보안 확인을 위하여 비밀번호를<br class="mo_only" />
+                                                        입력해 주세요.
+                                                    </p>
+                                                    <!-- form -->
+                                                    <div class="form_section gap_mt50">
+                                                        <!-- write -->
+                                                        <div class="form_list col">
+                                                            <div class="form_group">
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="inp">
+                                                                                <input type="password" placeholder="비밀번호" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 에러 -->
+                                                            <div class="form_group">
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <!-- 에러 : error class추가 -->
+                                                                            <div class="inp error">
+                                                                                <input type="password" placeholder="비밀번호" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- 에러 : error -->
+                                                                        <p class="msg_error">비밀번호가 다릅니다.</p>
+                                                                        <!--// 에러 : error -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--// 에러 -->
+                                                        </div>
+                                                        <!--// write -->
+                                                    </div>
+                                                    <!--// form -->
+
+                                                    <!-- btn -->
+                                                    <div class="bottom_btn_area">
+                                                        <button type="button" class="btn_primary_lg">비밀번호 확인</button>
+                                                    </div>
+                                                    <!--// btn -->
+                                                </div>
+                                            </div>
+
+                                            <div class="article">
+                                                <!-- form-->
+                                                <div class="join_form">
+                                                    <div class="form_section">
+                                                        <!-- tit -->
+                                                        <div class="form_tit">
+                                                            <h3 class="tit">사용자 정보</h3>
+                                                        </div>
+                                                        <!--// tit -->
+                                                        <!-- write -->
+                                                        <div class="form_list">
+                                                            <div class="form_group">
+                                                                <div class="tit"><label for="userName">이름</label></div>
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="inp size_289">
+                                                                                <input type="text" value="홍길동" id="userName" autocomplete="off" readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_group">
+                                                                <div class="tit"><label for="birthDate">생년월일</label></div>
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="inp size_289">
+                                                                                <input type="tel" value="1980.01.01" id="birthDate" autocomplete="off" readonly />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_group">
+                                                                <div class="tit"><label for="cellPhone">휴대폰 번호</label></div>
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="group_box">
+                                                                                <div class="box">
+                                                                                    <div class="inp size_289">
+                                                                                        <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly />
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="box">
+                                                                                    <button type="button" class="btn_primary_lg">변경하기</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_group line">
+                                                                <div class="tit"><label for="email">아이디(E-mail)</label></div>
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="email_set">
+                                                                                <div class="inp_set">
+                                                                                    <div class="inp size_289">
+                                                                                        <input type="text" value="id" id="email" placeholder="아이디" autocomplete="off" readonly />
+                                                                                    </div>
+                                                                                    <span class="txt_between">@</span>
+                                                                                </div>
+                                                                                <div class="inp size_190">
+                                                                                    <input type="text" value="dreamwiz.com" title="도메인 입력" autocomplete="off" readonly />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form_group">
+                                                                <div class="tit">
+                                                                    <label for="address">주소</label>
+                                                                </div>
+                                                                <div class="item">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="address_set">
+                                                                                <div class="group_box">
+                                                                                    <div class="box">
+                                                                                        <div class="inp size_130">
+                                                                                            <input type="tel" placeholder="우편번호" id="address" autocomplete="off" readonly />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="box">
+                                                                                        <button type="button" class="btn_primary_lg full">우편번호 검색</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="inp">
+                                                                                    <input type="text" placeholder="주소" autocomplete="off" readonly />
+                                                                                </div>
+                                                                                <div class="inp">
+                                                                                    <input type="text" placeholder="상세주소 입력" autocomplete="off" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--// write -->
+                                                    </div>
+
+                                                    <!-- 자격관련 정보 수신 동의 -->
+                                                    <div class="form_section">
+                                                        <!-- titt -->
+                                                        <div class="form_tit">
+                                                            <h3 class="tit">자격관련 정보 수신 동의(선택)</h3>
+                                                        </div>
+                                                        <!--// tit -->
+                                                        <!-- write -->
+                                                        <div class="form_list">
+                                                            <div class="form_group">
+                                                                <div class="tit"></div>
+                                                                <div class="item gap_mt0">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="check_set">
+                                                                                <span class="inp_check">
+                                                                                    <input type="checkbox" id="marketing1" checked />
+                                                                                    <label for="marketing1">E-mail 수신</label>
+                                                                                </span>
+                                                                                <span class="inp_check">
+                                                                                    <input type="checkbox" id="marketing2" />
+                                                                                    <label for="marketing2">SMS 수신</label>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">양성과정, 검정시험, 자격증 발행에 관한 내용은 선택여부와 상관없이 기본 발송됩니다.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--// write -->
+                                                    </div>
+                                                    <!-- // 자격관련 정보 수신 동의 -->
+
+                                                    <!-- 협회 뉴스레터 수신 동의 -->
+                                                    <div class="form_section">
+                                                        <!-- titt -->
+                                                        <div class="form_tit">
+                                                            <h3 class="tit">협회 뉴스레터 수신 동의(선택)</h3>
+                                                        </div>
+                                                        <!--// tit -->
+                                                        <!-- write -->
+                                                        <div class="form_list">
+                                                            <div class="form_group">
+                                                                <div class="tit"></div>
+                                                                <div class="item gap_mt0">
+                                                                    <div class="cell">
+                                                                        <div class="form_item">
+                                                                            <div class="check_set">
+                                                                                <span class="inp_check">
+                                                                                    <input type="checkbox" id="agr_001" />
+                                                                                    <label for="agr_001">E-mail 수신</label>
+                                                                                </span>
+                                                                                <span class="inp_check">
+                                                                                    <input type="checkbox" id="agr_002" />
+                                                                                    <label for="agr_002">카카오톡</label>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell">교육/평가시험/자격증 관련 신청정보/교육/합격 여부는 선택여부와 상관없이 기본 발송 됩니다.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--// write -->
+                                                    </div>
+                                                    <!-- // 협회 뉴스레터 수신 동의 -->
+                                                </div>
+                                                <!--// form -->
+
+                                                <!-- btn -->
+                                                <div class="bottom_btn_area">
+                                                    <button type="button" class="btn_primary_lg">저장</button>
+                                                </div>
+                                                <!--// btn -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// tab2 : 회원정보 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="/view_202506/html/include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script>
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='my/FO-650-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

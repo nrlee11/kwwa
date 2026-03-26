@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+// 이용약관, 개인정보처리방침
+html {
+    scroll-behavior: smooth; /* 💡 부드러운 스크롤 */
+}
+
+.board_area.service .tbl.react tbody td {
+    @include mobile {
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+.board_area.service .tbl.react tbody td > div {
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    @include mobile {
+        height: auto;
+        margin-top: 0;
+    }
+}
+.service_listbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+a.item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+a.item:hover {
+    background-color: #eaf4ff;
+}
+
+a.item img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+a.item span {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+}
+.responsive-image {
+    width: 100%;
+    max-width: 407px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.pop_section + .pop_section {
+    margin-top: var(--gap-20);
+}
+.tbox2 {
+    height: 13rem !important;
+    @include mobile {
+        height: 8rem !important;
+        justify-content: center;
+    }
+    @include sm-mobile {
+        height: auto !important;
+    }
+}

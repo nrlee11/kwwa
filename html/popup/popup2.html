@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>팝업</title>
+    </head>
+    <body>
+        <div class="popup-wrap">
+            <img src="/resources/images/temp/temp01.png" alt="팝업이미지" />
+            <div class="pop_btnbox">
+                <button id="noTodayBtn">오늘 하루 보지 않기</button>
+                <button onclick="window.close()">닫기</button>
+            </div>
+        </div>
+
+        <script>
+            const popupName = "popup_top_center";
+            document.getElementById("noTodayBtn").addEventListener("click", () => {
+                const expire = new Date();
+                expire.setHours(23, 59, 59, 999);
+                localStorage.setItem(`noPopupUntil_${popupName}`, expire.toISOString());
+                window.close();
+            });
+        </script>
+    </body>
+</html>

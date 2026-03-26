@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" class="layerOpen">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>자가진단 결과 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap" aria-hidden="true">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">자가진단 결과</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 자가진단 결과 -->
+        <div class="layerFix minPopup" id="alertPop" role="dialog" aria-modal="true" style="display: " tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">자격취득 가능여부 자가진단</strong>
+                </div>
+                <div class="cont">
+                    <!-- [include] 자격명 -->
+                    <div data-include-file="./layer/name_badge_license.html" class="includeJs"></div>
+                    <!-- //[include] 자격명 -->
+
+                    <!-- 스크롤 -->
+                    <div class="layer_scroll">
+                        <!-- 타이틀 -->
+                        <div class="tit_area">
+                            <strong class="tit">자가진단 결과</strong>
+                        </div>
+                        <!-- // 타이틀 -->
+
+                        <div class="article">
+                            <div class="box_border">
+                                <p>귀하는 상수도관망시설운영관리사 2급 자격 취득이 <span class="txt_red">불가능</span>합니다.</p>
+                            </div>
+                        </div>
+
+                        <p class="txt_mark txt_red gap_mt20">위 결과는 본인의 취득가능여부를 스스로 진단해보는 것으로 실제 제출서류의 사실관계 등에 따라 결과가 달라질 수 있음에 유의하시기 바랍니다.</p>
+                        <p class="txt_mark txt_red gap_mt20">양성과정을 이수한 경우라도 자격요건이 충족되지 않을 경우 자격을 취득 할 수 없기 때문에 양성과정에 참가하시기 전에 필히 사전확인을 하시기 바랍니다.</p>
+                    </div>
+                    <!-- // 스크롤 -->
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 자가진단 결과 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 자가진단 결과
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

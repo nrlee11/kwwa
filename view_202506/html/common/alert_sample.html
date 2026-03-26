@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center">
+                <div class="box_border">
+                    <div class="guide-notice-box">
+                        <strong><span class="txt_size_xmd txt_blue">팝업 사용시</span></strong>
+                        <ul>
+                            <li>- 이중 팝업 사용시 : 2번째 팝업은 layerFix에 is_front_popup 클래스 추가</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert1">Layer (완료+버튼2개)</button>
+                    <br /><br />
+                    <button type="button" class="btn_primary_lg" id="alert2">Layer (에러+버튼1개)</button>
+                    <br /><br />
+                    <button type="button" class="btn_primary_lg" id="alert3">Layer (기본)</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : Layer (완료) -->
+        <div class="layerFix alertPopup" role="dialog" aria-modal="true" id="alertPop1" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <!-- 완료(성공) class "completion" -->
+                        <div class="msg completion">완료메세지 $코드값$</div>
+                        <div class="txt">$완료문구$</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_outline_md layer_close">취소</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : Layer (완료) -->
+
+        <!-- Layer : Layer (에러) -->
+        <div class="layerFix alertPopup" role="dialog" aria-modal="true" id="alertPop2" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <!-- 완료(성공) class "completion" 추가 -->
+                        <div class="msg">에러메세지 $코드값$</div>
+                        <div class="txt">$에러문구$</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : Layer (에러) -->
+
+        <!-- Layer : Layer (기본) -->
+        <div class="layerFix alertPopup" role="dialog" aria-modal="true" id="alertPop3" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="alert_msg">
+                        <div class="txt">$문구$</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : Layer (기본) -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : Layer (완료)
+                $("#alert1").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#alertPop1").show().focus();
+                });
+                $("#alertPop1 .layer_close").click(function (e) {
+                    $("#alert1").focus(); // 접근성
+                });
+
+                // Layer : Layer (에러)
+                $("#alert2").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#alertPop2").show().focus();
+                });
+                $("#alertPop2 .layer_close").click(function (e) {
+                    $("#alert2").focus(); // 접근성
+                });
+
+                // Layer : Layer (기본)
+                $("#alert3").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+                    $("#alertPop3").show().focus();
+                });
+                $("#alertPop3 .layer_close").click(function (e) {
+                    $("#alert3").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

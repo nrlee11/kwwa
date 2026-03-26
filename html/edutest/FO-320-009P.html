@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>부정행위 사례 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+                <div>
+                    <button type="button" class="btn_primary_lg" id="alert">부정행위 사례</button>
+                </div>
+            </div>
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- Layer : 부정행위 사례 -->
+        <div class="layerFix fullPopup" id="alertPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">부정행위 사례</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="box_border" style="margin-top: none">
+                            <div class="article">
+                                <ul class="list_item">
+                                    <li><span>1.</span>시험 중 다른 수험자와 시험과 관련된 대화 하는 행위</li>
+                                    <li><span>2.</span>시험 중 다른 수험자와 답안지, 문제지 등 시험과 관련된 자료를 교환하는 행위</li>
+                                    <li><span>3.</span>시험 중 다른 수험자의 답안지 또는 문제지를 엿보고 답안을 작성하는 행위</li>
+                                    <li><span>4.</span>다른 수험자를 위하여 답안을 알려주거나 엿보게 하는 행위</li>
+                                    <li><span>5.</span>시험문제, 작성답안을 종이 및 기타 기록이 가능한 곳에 옮겨 적는 행위</li>
+                                    <li><span>6.</span>시험 중 시험과 관련한 물건을 휴대하여 사용하거나 자료 열람 또는 이를 주고받는 행위</li>
+                                    <li><span>7.</span>시험장 내외의 자로부터 도움을 받고 답안지를 작성하는 행위</li>
+                                    <li><span>8.</span>다른 수험자와 성명 또는 수험번호를 바꾸어 제출하거나 대리시험을 치르게 하는 행위</li>
+                                    <li><span>9.</span>시험시간 중 통신기기 및 전자기기를 휴대하는 행위</li>
+                                    <li><span>10.</span> &nbsp;그 밖에 부정 또는 불공정한 방법으로 시험을 치르는 행위</li>
+                                    <li class="gap_mt10"><span>※</span>시험시간 중 전자·통신기기를 비롯한 불허물품 소지가 적발되는 경우 퇴실조치 및 당해시험은 무효처리 됩니다.</li>
+                                </ul>
+                                <div class="gap_mt20" style="text-align: center">
+                                    <strong>휴대금지 전자・통신기기 목록</strong>
+                                </div>
+                                <div class="box_border">
+                                    휴대전화, 노트북 컴퓨터, 태블릿 컴퓨터, 전자책, 휴대용 영상재생장치(PMP 등), 음향재생기기(MP3 플레이어 등), 디지털 카메라, 음성파일 녹음기 및 변환기, 전자계산기, 휴대용 게임기, 전자사전, 카메라 기능이 부착된 소형기기(액션캠 등), 시각 표시 외의 기능이 부착된 시계,
+                                    무선 헤드폰 및 이어폰, 기타 기록・저장・통신 기능이 있는 전자기기
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md">닫기</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 부정행위 사례 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 부정행위 사례
+                $("#alert").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop").show().focus();
+                });
+                $("#alertPop .layer_close").click(function (e) {
+                    $("#alert").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

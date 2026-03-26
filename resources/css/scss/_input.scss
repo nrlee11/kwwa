@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+// 라디오
+.radio_set {
+    &.flex_row {
+        display: flex;
+        .inp_radio {
+            width: 100%;
+        }
+    }
+}
+.inp_radio {
+    position: relative;
+    display: inline-block;
+    margin-right: var(--gap-24);
+    &:last-child {
+        margin-right: 0;
+    }
+    input[type="radio"] {
+        @include pseudo-selector;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin: -0.9rem 0 0 0.1rem;
+        + label {
+            // position: relative;
+            display: inline-block;
+            padding-left: var(--gap-25);
+            color: var(--color-darkgray);
+            vertical-align: var(--align-t);
+            word-break: break-all;
+            cursor: pointer;
+            &::before,
+            &::after {
+                @include pseudo-selector;
+                border-radius: 50%;
+            }
+            &::before {
+                width: 2rem;
+                height: 2rem;
+                margin-top: -1rem;
+                border: $border var(--color-darkgray);
+                background-color: var(--color-white);
+            }
+        }
+        &:checked {
+            + label {
+                &::before {
+                    border: 0.2rem solid var(--color-blue);
+                    background-color: var(--color-white);
+                }
+                &::after {
+                    width: 1rem;
+                    height: 1rem;
+                    margin: -0.5rem 0 0 0.5rem;
+                    border: 0;
+                    background-color: var(--color-blue);
+                }
+            }
+        }
+        &:disabled {
+            + label {
+                &:before {
+                    background-color: #cdd1d5;
+                }
+            }
+        }
+    }
+}
+
+// 체크박스
+.inp_check {
+    position: relative;
+    display: inline-block;
+    margin-right: var(--gap-55);
+    &:last-child {
+        margin-right: 0;
+    }
+    input[type="checkbox"] {
+        @include pseudo-selector;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin: -0.9rem 0 0 0.1rem;
+        + label {
+            position: relative;
+            display: inline-block;
+            padding-left: var(--gap-28);
+            vertical-align: var(--align-t);
+            word-break: break-all;
+            cursor: pointer;
+            &::before,
+            &::after {
+                @include pseudo-selector;
+                border-radius: 0.4rem;
+            }
+            &::before {
+                width: 2rem;
+                height: 2rem;
+                margin-top: -1rem;
+                border: $border #b1b8be;
+                background-color: var(--color-white);
+            }
+        }
+        &:checked {
+            + label {
+                &::before {
+                    border: 0;
+                    background-color: var(--color-blue);
+                }
+                &::after {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    margin: -0.6rem 0 0 0.4rem;
+                    border: 0;
+                    background: url($url-img-common + "bg_checkbox.svg") no-repeat 0 0;
+                }
+            }
+        }
+        &:disabled {
+            + label {
+                &::after {
+                    background: url($url-img-common + "bg_checkbox_off.svg") no-repeat 0 0;
+                }
+                &::before {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-top: -1rem;
+                    border: $border #b1b8be;
+                    background-color: #cdd1d5;
+                }
+            }
+        }
+    }
+    &.alone {
+        width: 2rem;
+        height: 2rem;
+        input[type="checkbox"] {
+            + label {
+                width: 2rem;
+                height: 2rem;
+                > span {
+                    display: var(--hide);
+                }
+            }
+        }
+    }
+}
+.inp_round_txt {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    margin: -0.1rem;
+    opacity: 0;
+    appearance: none;
+    &:checked {
+        & + label {
+            background-color: var(--color-warmblue);
+        }
+    }
+    & + label {
+        padding: 0.6rem 1.5rem;
+        border-radius: 5rem;
+        background-color: #b1b8be;
+        font-size: 1.5rem;
+        font-weight: var(--font-semibold);
+        color: var(--color-white);
+    }
+}
+.check_set {
+    // display: flex;
+    flex-direction: column;
+    margin-top: -1rem;
+    .inp_check {
+        @include mobile {
+            margin-top: var(--gap-10);
+        }
+    }
+}
+
+// 자격취득 가능여부 자가진단
+.choice_text_box {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--gap-20) var(--gap-10);
+    &:has(.list_dot) {
+        gap: var(--gap-10);
+    }
+    .inp_choice {
+        flex: 0 0 auto;
+        position: relative;
+    }
+    .inp_choice_txt {
+        flex: 1 0 0;
+        height: auto;
+        padding: 0;
+        border-radius: 0;
+        border: 0.1rem solid var(--color-darkgray);
+        border-width: 0 0 0.1rem 0;
+        font-size: var(--font-size-md);
+        line-height: 2rem;
+        resize: none;
+        &::placeholder {
+            color: #8a949e;
+        }
+        &:focus {
+            border-color: #083891;
+            outline: none;
+        }
+        &:disabled {
+            border-color: #b1b8be;
+            background-color: #cdd1d5;
+        }
+    }
+    .txt_note {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}

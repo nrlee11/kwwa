@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>합격조회 | 평가시험 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="../include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- [include] aside(s) : 확인용 -->
+                    <div data-include-file="../include/aside2.html" class="includeJs"></div>
+                    <!--// [include] aside(e) : 확인용 -->
+
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- breadcrumb(s) -->
+                        <nav class="breadcrumb_wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="javascript:;">홈</a></li>
+                                <li><a href="javascript:;">평가시험</a></li>
+                                <li><span>합격조회</span></li>
+                            </ol>
+                        </nav>
+                        <!--// breadcrumb(e) -->
+
+                        <!-- page_title(s) -->
+                        <div class="page_title">
+                            <h2 class="tit">합격조회</h2>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">합격조회</h3>
+                                <div class="desc">응시하신 평가시험의 결과는 아래와 같습니다.</div>
+                            </div>
+
+                            <!-- 결과 -->
+                            <div class="edu_detail_list">
+                                <div class="edu_group type3">
+                                    <div class="box">
+                                        <div class="edu_info">
+                                            <div class="lside">
+                                                <div class="badge_set">
+                                                    <span class="value_badge1">응시</span>
+                                                    <!-- <span class="value_badge2">최초응시</span> -->
+                                                    <span class="wl_number">응시번호 WL-001-1-1-1-001</span>
+                                                </div>
+                                            </div>
+                                            <div class="rside">
+                                                <span class="date">신청일시: 2025-01-01 15:00:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="timetable">
+                                            <div class="edu_tit">
+                                                <strong class="tit">제00회 정수시설운영관리사 2급 (시험명)</strong>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">자격증</span>
+                                                <span class="item">정수시설운영관리사</span>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">등급</span>
+                                                <span class="item">2급</span>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">회차</span>
+                                                <span class="item">21</span>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">차수</span>
+                                                <span class="item">1차</span>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">평가(시험)일</span>
+                                                <span class="item">2025-03-10 (월)</span>
+                                            </div>
+                                            <div class="cell">
+                                                <span class="tit">합격자발표일</span>
+                                                <span class="item">2025-03-10 (월)</span>
+                                            </div>
+                                        </div>
+                                        <div class="bottom_btn_area cell4">
+                                            <div>
+                                                <button type="button" class="btn_primary_lg">평가시험 응시확인서</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- 발표 전 -->
+                                        <div class="edu_result">
+                                            <div class="msg">아직 합격자 발표일이 아닙니다.</div>
+                                        </div>
+                                        <!-- // 발표 전 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 결과 -->
+                        </div>
+                        <!--// section(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="../include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side2.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-341-001.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 과목별 점수표
+                        $(".btn_pop:contains('과목별 점수 확인하기')").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+                            $("#popGradeConfirm").show().focus();
+                        });
+                        $("#popGradeConfirm .layer_close").click(function (e) {
+                            $(".btn_pop:contains('과목별 점수 확인하기'").focus(); // 접근성
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

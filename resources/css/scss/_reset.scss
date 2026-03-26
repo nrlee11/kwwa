@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css");
+
+/* reset */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-base);
+    color: var(--font-color-base);
+    font-weight: var(--font-regular);
+    line-height: 1.5;
+    background-color: #fff;
+}
+html {
+    font-size: var(--font-size-base);
+}
+body {
+    -webkit-text-size-adjust: none;
+    font-size: var(--font-size-md);
+}
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+}
+input,
+textarea,
+select,
+td,
+th,
+button {
+    color: var(--color-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+}
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: var(--font-regular);
+}
+ol,
+ul,
+li {
+    list-style: none;
+}
+abbr,
+acronym {
+    border: 0;
+}
+abbr[title] {
+    cursor: help;
+    text-decoration: none;
+}
+hr,
+legend {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    visibility: hidden;
+    overflow: hidden;
+}
+caption {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin-top: -1px;
+    line-height: 0;
+    text-indent: -9999px;
+}
+img,
+fieldset {
+    border: 0 none;
+}
+img {
+    vertical-align: top;
+}
+label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+strong {
+    font-weight: var(--font-bold);
+}
+a {
+    &:link,
+    &:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+header,
+footer,
+section,
+article {
+    display: block;
+}
+button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background: 0 none;
+    line-height: 1.5;
+}

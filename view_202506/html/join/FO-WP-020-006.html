@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/view_202506/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>정보입력 | 회원가입 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="/view_202506/html/include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- page_title -->
+                        <div class="page_title center">
+                            <h2 class="tit">회원가입</h2>
+                        </div>
+                        <!--// page_title -->
+
+                        <!-- progress -->
+                        <div class="progress-bar">
+                            <!-- 2025-04-04 수정 -->
+                            <div class="completion">
+                                <span class="step">
+                                    <span>1단계</span>
+                                </span>
+                                <strong>이용약관 동의</strong>
+                            </div>
+                            <div class="completion">
+                                <span class="step">
+                                    <span>2단계</span>
+                                </span>
+                                <strong>본인인증</strong>
+                            </div>
+                            <div class="on">
+                                <span class="step">
+                                    <span>3단계</span>
+                                </span>
+                                <strong>정보 입력</strong>
+                                <span class="hidden">총 4단계 중 3단계 정보 입력</span>
+                            </div>
+                            <div>
+                                <span class="step">
+                                    <span>4단계</span>
+                                </span>
+                                <strong>가입완료</strong>
+                            </div>
+                            <!--// 2025-04-04 수정 -->
+                        </div>
+                        <!--// progress -->
+
+                        <!-- section(s) -->
+
+                        <!-- join_wrap(s) -->
+                        <div class="join_wrap wide">
+                            <!-- section(s) -->
+                            <div class="section">
+                                <!-- form-->
+                                <div class="join_form">
+                                    <div class="form_section">
+                                        <!-- tit -->
+                                        <div class="form_tit">
+                                            <h3 class="tit">사용자 정보</h3>
+                                        </div>
+                                        <!--// tit -->
+                                        <!-- write -->
+                                        <div class="form_list">
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userName">
+                                                        이름
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <!-- (공통)접근성 : id값 변경 시 label for값도 동일하게 변경 -->
+                                                                <input type="text" value="홍길동" id="userName" autocomplete="off" readonly />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="birthDate">
+                                                        생년월일
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="tel" value="1980.01.01" id="birthDate" autocomplete="off" readonly />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="cellPhone">
+                                                        휴대폰 번호
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="tel" value="010-1234-5678" id="cellPhone" autocomplete="off" readonly />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group gap0 line">
+                                                <div class="tit">
+                                                    <span>
+                                                        본인정보확인
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </span>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">(이름/생년월일/휴대폰번호)은 본인의 정보가 맞습니까?</div>
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <!-- 2025-04-08 : reset class추가 -->
+                                                            <div class="radio_set reset">
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="userValidation1" name="userValidation" checked />
+                                                                    <label for="userValidation1">예</label>
+                                                                </span>
+                                                                <span class="inp_radio">
+                                                                    <input type="radio" id="userValidation2" name="userValidation" />
+                                                                    <label for="userValidation2">아니오</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- 에러 : error (아니오 선택 시 노출) -->
+                                                        <p class="msg_error">본인 명의의 휴대폰이 아닌 경우 회원가입이 불가 합니다.</p>
+                                                        <!-- 에러 : error (아니오 선택 시 노출) -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group line">
+                                                <div class="tit">
+                                                    <label for="email">
+                                                        아이디(E-mail)
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="email_set">
+                                                                <div class="inp_set">
+                                                                    <!-- 에러 : error class추가 -->
+                                                                    <div class="inp size_289">
+                                                                        <input type="text" value="" id="email" placeholder="아이디" autocomplete="off" />
+                                                                    </div>
+                                                                    <span class="txt_between">@</span>
+                                                                </div>
+                                                                <div class="inp size_190">
+                                                                    <input type="text" value="dreamwiz.com" title="도메인 입력" autocomplete="off" />
+                                                                </div>
+                                                                <div class="inp_set full">
+                                                                    <div class="inp_select size_190">
+                                                                        <select title="이메일 도메인 선택">
+                                                                            <option value="">직접입력</option>
+                                                                            <option value="naver.com">naver.com</option>
+                                                                            <option value="daum.net">daum.net</option>
+                                                                            <option value="gmail.com">gmail.com</option>
+                                                                            <option value="hanmail.net">hanmail.net</option>
+                                                                            <option value="korea.kr">korea.kr</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <button type="button" class="btn_primary_lg">중복확인</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="msg_txt">이메일 주소를 아이디로 사용합니다.</p>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">이메일 형식이 다릅니다. 다시 확인해 주세요.</p>
+                                                        <p class="msg_error">이미 사용중인 아이디입니다.</p>
+                                                        <!-- 에러 : error -->
+                                                    </div>
+                                                    <div class="cell">
+                                                        <button type="button" class="btn_secondary_lg full" id="emailValidation">이메일 인증하기</button>
+                                                        <p class="msg_txt">입력하신 이메일 주소로 인증메일을 발송합니다.</p>
+                                                    </div>
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="request_set">
+                                                                <div class="inp size_289">
+                                                                    <input type="tel" value="" maxlength="6" placeholder="인증번호 6자리" autocomplete="off" />
+                                                                    <div class="request">
+                                                                        <time class="time" datetime="03:00">03:00</time>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn_primary_lg">확인</button>
+                                                            </div>
+                                                        </div>
+                                                        <p class="msg_txt">이메일을 확인 후 전송된 인증번호를 입력해 주세요.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userPassword">
+                                                        비밀번호
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="inp size_289">
+                                                                <input type="password" value="" id="userPassword" maxlength="16" placeholder="8자 이상(영문자, 숫자, 특수문자)" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="msg_txt">비밀번호는 8자 이상, 16자 이하의 영문자, 숫자 및 특수문자를 조합하여 사용해야 합니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="tit">
+                                                    <label for="userPasswordCheck">
+                                                        비밀번호 확인
+                                                        <span class="txt_require"><span class="hidden">필수입력 사항</span></span>
+                                                    </label>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <!-- 에러 : error class추가 -->
+                                                            <div class="inp size_289 error">
+                                                                <input type="password" value="" id="userPasswordCheck" maxlength="16" placeholder="비밀번호 확인" />
+                                                            </div>
+                                                        </div>
+                                                        <!-- 에러 : error -->
+                                                        <p class="msg_error">비밀번호 조건에 맞지 않습니다. 다시 입력해 주세요.</p>
+                                                        <p class="msg_error">비밀번호가 다릅니다.</p>
+                                                        <!--// 에러 : error -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// write -->
+                                    </div>
+
+                                    <!-- 자격관련 정보 수신 동의 -->
+                                    <div class="form_section">
+                                        <!-- titt -->
+                                        <div class="form_tit">
+                                            <h3 class="tit">자격관련 정보 수신 동의(선택)</h3>
+                                        </div>
+                                        <!--// tit -->
+                                        <!-- write -->
+                                        <div class="form_list">
+                                            <div class="form_group">
+                                                <div class="tit"></div>
+                                                <div class="item gap_mt0">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="check_set">
+                                                                <span class="inp_check">
+                                                                    <input type="checkbox" id="marketing1" checked />
+                                                                    <label for="marketing1">E-mail 수신</label>
+                                                                </span>
+                                                                <span class="inp_check">
+                                                                    <input type="checkbox" id="marketing2" />
+                                                                    <label for="marketing2">SMS 수신</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell">양성과정, 검정시험, 자격증 발행에 관한 내용은 선택여부와 상관없이 기본 발송됩니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// write -->
+                                    </div>
+                                    <!-- //자격관련 정보 수신 동의 -->
+
+                                    <!-- 협회 뉴스레터 수신 동의(s) -->
+                                    <div class="form_section">
+                                        <!-- titt -->
+                                        <div class="form_tit">
+                                            <h3 class="tit">협회 뉴스레터 수신 동의(선택)</h3>
+                                        </div>
+                                        <!--// tit -->
+                                        <!-- write -->
+                                        <div class="form_list">
+                                            <div class="form_group">
+                                                <div class="tit"></div>
+                                                <div class="item gap_mt0">
+                                                    <div class="cell">
+                                                        <div class="form_item">
+                                                            <div class="check_set">
+                                                                <span class="inp_check">
+                                                                    <input type="checkbox" id="agr_news1" checked />
+                                                                    <label for="agr_news1">E-mail 수신</label>
+                                                                </span>
+                                                                <span class="inp_check">
+                                                                    <input type="checkbox" id="agr_news2" />
+                                                                    <label for="agr_news2">카카오톡</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell">매월 월요일 한국상하수도협회의 소식을 전달드립니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// write -->
+                                    </div>
+                                    <!-- //협회 뉴스레터 수신 동의(e) -->
+                                </div>
+                                <!--// form -->
+
+                                <!-- btn -->
+                                <div class="bottom_btn_area">
+                                    <div class="lside">
+                                        <button type="button" class="btn_outline_lg">이전으로</button>
+                                    </div>
+                                    <div class="rside">
+                                        <button type="button" class="btn_primary_lg">가입신청</button>
+                                    </div>
+                                </div>
+                                <!--// btn -->
+                            </div>
+                            <!--// section(e) -->
+                        </div>
+                        <!--// join_wrap(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="/view_202506/html/include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/view_202506/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <!-- [include] layer -->
+        <div data-include-file="./layer/020-010P.html" class="includeJs"></div>
+        <!--// [include] layer -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/view_202506/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 이메일 인증하기
+                $("#emailValidation").click(function (e) {
+                    $("html").addClass("layerOpen"); // 20250428 추가
+                    $("#wrap").attr("aria-hidden", "true"); // 20250428 추가
+
+                    $("#emailValidationPop").show().focus();
+                });
+                $("#emailValidationPop .layer_close").click(function (e) {
+                    $("#emailValidation").focus(); // 접근성
+                });
+            });
+        </script>
+    </body>
+</html>

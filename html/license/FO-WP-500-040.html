@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="한국상하수도협회" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <title>발급현황 조회 | 자격증발급 | 한국상하수도협회</title>
+    </head>
+    <body>
+        <!-- wrap(s) -->
+        <div id="wrap" class="wrap">
+            <!-- [include] header(s) : 확인용 -->
+            <div data-include-file="../include/header.html" class="includeJs"></div>
+            <!--// [include] header(e) : 확인용 -->
+
+            <!-- container(s) -->
+            <div id="container" class="container">
+                <div class="lyinner">
+                    <!-- [include] aside(s) : 확인용 -->
+                    <div data-include-file="../include/aside.html" class="includeJs"></div>
+                    <!--// [include] aside(e) : 확인용 -->
+
+                    <!-- contents(s) -->
+                    <div id="contents" class="contents">
+                        <!-- breadcrumb(s) -->
+                        <nav class="breadcrumb_wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="/index.html">홈</a></li>
+                                <li><a href="./FO-WP-500-010.html">자격증발급</a></li>
+                                <li><span>발급현황 조회</span></li>
+                            </ol>
+                        </nav>
+                        <!--// breadcrumb(e) -->
+
+                        <!-- page_title(s) -->
+                        <div class="page_title">
+                            <h2 class="tit">발급현황 조회</h2>
+                        </div>
+                        <!--// page_title(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">신청내역</h3>
+                                <div class="desc">귀하의 자격증 발급신청내역은 아래와 같습니다.</div>
+                            </div>
+
+                            <!-- board -->
+                            <div class="board_area">
+                                <div class="board_desc_top">
+                                    <div class="lside">신청번호를 클릭하면 신청서를 보실 수 있습니다.</div>
+                                    <div class="rsdie">조회된 내역(100건)</div>
+                                </div>
+
+                                <!-- board_view -->
+                                <table class="tbl react">
+                                    <caption>
+                                        급수, 신청 번호, 자격증 번호, 상태, 신청접수일, 처리일시, 상세 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 7%" />
+                                        <col style="width: 18%" />
+                                        <col style="width: 12%" span="2" />
+                                        <col style="width: 15%" span="2" />
+                                        <col />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">급수</th>
+                                            <th scope="col" class="line">신청 번호</th>
+                                            <th scope="col" class="line">자격증 번호</th>
+                                            <th scope="col" class="line">상태</th>
+                                            <th scope="col" class="line">신청접수일</th>
+                                            <th scope="col" class="line">처리일시</th>
+                                            <th scope="col" class="line">상세</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center" id="applicationform">자격증 발급 신청서</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div></div></td>
+                                            <td data-cell-header="상태" id="statuslevel1" class="line"><div>결제 전</div></td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line">
+                                                <div>
+                                                    입금대기 중
+                                                    <button type="button" class="btn_pop">가상계좌번호</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 현황단계 -->
+                                        <!-- <tr class="status_level_box">
+                                            <td colspan="7" headers="statuslevel1">
+                                                <ul class="status_level_list">
+                                                    <li class="status_level_items" aria-current="step">
+                                                        <span class="txt_level">발급신청</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">수수료<br />결제</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">원본서류<br />접수</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격요건<br />확인</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">결격사항<br />조회</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증<br />제작</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증<br />발송</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증<br />수령</span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr> -->
+                                        <!-- // 현황단계 -->
+
+                                        <tr>
+                                            <td data-cell-header="급수"><div>1급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center" id="applicationform1">재발급 신청내역</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div></div></td>
+                                            <td data-cell-header="상태" id="statuslevel2" class="line"><div>등기(수령전)</div></td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line">
+                                                <div>
+                                                    우편등기 수신 전
+                                                    <button type="button" class="btn_pop" id="alert1">원본서류안내</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 현황단계 -->
+                                        <tr class="status_level_box">
+                                            <!-- [D] header="" 값은 상태의 id와 동일  -->
+                                            <td colspan="7" headers="statuslevel2">
+                                                <ul class="status_level_list">
+                                                    <!-- [D] 현재 단계의 li[aria-current="false"]를 aria-current="step"로 수정 -->
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">발급신청</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">원본서류 접수</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="step">
+                                                        <span class="txt_level">결격사항 조회</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증 발송</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증 수령</span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <!-- // 현황단계 -->
+                                        <tr>
+                                            <td data-cell-header="급수"><div>3급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div></div></td>
+                                            <td data-cell-header="상태" class="line">
+                                                <div>
+                                                    <span class="txt_navy">자격요건<br />(심사중)</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line"><div>자격요건확인 중</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div></div></td>
+                                            <td data-cell-header="상태" class="line">
+                                                <div>
+                                                    <span class="txt_navy1">결격사유<br />(심사중)</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line"><div>결격사유조회 중</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div></div></td>
+                                            <td data-cell-header="상태" class="line">
+                                                <div><span class="txt_red">보완요청</span></div>
+                                            </td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">보완 확인<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div></div></td>
+                                            <td data-cell-header="상태" id="statuslevel3" class="line">
+                                                <div><span class="txt_red">반려</span></div>
+                                            </td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">반려 확인<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 현황단계 -->
+                                        <!-- <tr class="status_level_box">
+                                            <td colspan="7" headers="statuslevel3">
+                                                <ul class="status_level_list">
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">발급신청</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">수수료<br />결제</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">원본서류<br />접수</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격요건<br />확인</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">결격사항<br />조회</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증<br />제작</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증<br />발송</span>
+                                                    </li>
+                                                    <li class="status_level_items" aria-current="false">
+                                                        <span class="txt_level">자격증<br />수령</span>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr> -->
+                                        <!-- // 현황단계 -->
+
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div>24210001</div></td>
+                                            <td data-cell-header="상태" class="line">
+                                                <div>
+                                                    <span class="txt_green">취득<br />(제작중)</span>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line"><div>자격증 제작 중</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div>24210001</div></td>
+                                            <td data-cell-header="상태" class="line">
+                                                <div><span class="txt_green">완료</span></div>
+                                            </td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line">
+                                                <div>&nbsp;</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div>24210001</div></td>
+                                            <td data-cell-header="상태" class="line"><div>결제 전</div></td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_border_md radius">수수료 결제<span class="ico_bluearrow2"></span></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                            <td data-cell-header="신청 번호" class="line">
+                                                <div>
+                                                    <button type="button" class="btn_pop center">REQ1-25-0001</button>
+                                                </div>
+                                            </td>
+                                            <td data-cell-header="자격증 번호" class="line"><div>24210001</div></td>
+                                            <td data-cell-header="상태" class="line"><div>취득(배송전)</div></td>
+                                            <td data-cell-header="신청접수일" class="line"><div>2025-02-10</div></td>
+                                            <td data-cell-header="처리일시" class="line">
+                                                <div>2025-02-10</div>
+                                            </td>
+                                            <td data-cell-header="상세" class="line"><div>자격증 등기발송</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+
+                                <div class="nodata">조회된 내역이 없습니다.</div>
+                            </div>
+                            <!--// board -->
+
+                            <div class="notice_box gap_mt24">
+                                <div class="ico_txt">
+                                    <span class="ico_mark"></span>신청하신 발급건은 자격요건확인 중 입니다.<br />
+                                    발급 담당자 및 유관기관을 통해 처리되어 상황에 따라 빠르거나 늦을 수 있습니다. 또한 발급수량이 많은 경우 서류확인 등에 시간이 늘어날 수 있음을 안내 드립니다. (각 단계는 자동으로 처리되지 않습니다)<br />
+                                    자격증이 우편발송 된 경우 영업일 기준으로 약 2~3일 이내에 수령할 수 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+
+                        <!-- section(s) -->
+                        <div class="section">
+                            <div class="tit_area">
+                                <h3 class="tit">자격증 발급일정 안내</h3>
+                                <div class="desc">
+                                    자격증은 매월 한달 간격으로 접수하여 발행합니다.<br />
+                                    월간 일정은 아래 일정을 참고해 주시기 바랍니다.<br />
+                                    특히 15일까지 접수기간임에 따라 여유있게 기다려 주시기 바랍니다
+                                </div>
+                            </div>
+
+                            <ul class="list_square">
+                                <li>발급신청 접수 : 매월 1일~15일</li>
+                                <li>요건확인, 제작 등 : 매월 16~30일</li>
+                                <li>자격증 발송 : 다음달 1째주</li>
+                            </ul>
+
+                            <div class="license_term gap_mt24">
+                                <ol>
+                                    <li>
+                                        <strong>발급신청 접수</strong>
+                                        매월 1일 ~ 15일
+                                    </li>
+                                    <li>
+                                        <strong>요건 확인/제작</strong>
+                                        매월 16일 ~ 30일
+                                    </li>
+                                    <li>
+                                        <strong>자격증 발송</strong>
+                                        매월 첫번째 주
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!--// section(e) -->
+                    </div>
+                    <!--// contents(e) -->
+                </div>
+            </div>
+            <!--// container(e) -->
+
+            <!-- [include] footer(s) : 확인용 -->
+            <div data-include-file="../include/footer.html" class="includeJs"></div>
+            <!--// [include] footer(e) : 확인용 -->
+        </div>
+        <!--// wrap(e) -->
+
+        <!-- [include] side(s) : 확인용 -->
+        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <!--// [include] side(e) : 확인용 -->
+
+        <!-- Layer : 원본서류 우편제출 안내 -->
+        <div class="layerFix fullPopup" id="alertPop1" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">원본서류 우편제출 안내</strong>
+                    </div>
+                    <div class="article">
+                        <p>파일로 제출한 서류는 원본을 등기 우편을 통해 제출하여야 합니다.</p>
+                        <p>원본서류 미제출시 자격요건 확인이 불가합니다. 원본 서류를 아래 주소로 제출해 주시기 바랍니다.</p>
+                        <ul class="list_square">
+                            <li>제출방법: 등기우편</li>
+                            <li>제출처: (07379) 서울시 영등포구 대림로 244 한국상하수도협회 자격운영팀 발급담당자</li>
+                            <li>원본 제출서류</li>
+                        </ul>
+                        <ul class="list_dash">
+                            <li>자격증 발급신청서 <button type="button" class="btn_pop">출력하기</button></li>
+                            <li>
+                                기본증명서 ( 법원 <span class="txt_underline">전자가족관계등록 시스템</span>에서 온라인 발급가능)
+                                <button type="button" class="btn_pop" id="basicguide">기본증명서 안내</button>
+                            </li>
+                            <li>실무교육 확인 시 제출한 원본서류 일체(해당자 : 실무확인서 또는 교육수료증)</li>
+                            <li>자격증 발급 신청 시 제출한 원본서류 일체(경력,학력증명서)</li>
+                            <li>이수증 <button type="button" class="btn_pop">출력하기</button></li>
+                        </ul>
+                        <p class="txt_mark gap_mt24">증명사진 원본은 제출하지 않습니다.</p>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 원본서류 우편제출 안내 -->
+
+        <!-- Layer : 자격증 발급 신청서 -->
+        <div class="layerFix fullPopup" id="applicationformPop" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap" style="width: 89rem">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">상수도관망시설운영관리자 자격증 발급 신청서</strong>
+                    </div>
+                    <div class="layer_scroll">
+                        <div class="article">
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react size100">
+                                    <caption>
+                                        접수번호, 신청일, 처리일자, 처리기간 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 25%" span="4" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">접수번호</th>
+                                            <th scope="col">신청일</th>
+                                            <th scope="col">처리일자</th>
+                                            <th scope="col">처리기간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-cell-header="접수번호"><div>AA-24210000</div></td>
+                                            <td data-cell-header="신청일"><div>2025-01-02</div></td>
+                                            <td data-cell-header="처리일자"><div>2025-01-02</div></td>
+                                            <td data-cell-header="처리기간"><div>30일</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+                        </div>
+
+                        <div class="article">
+                            <div class="subtit_area">
+                                <strong class="tit">신청자 정보</strong>
+                            </div>
+                            <div class="ly_half_form size148">
+                                <div class="lside">
+                                    <!-- 등록된 사진 있는 경우 -->
+                                    <div class="article">
+                                        <div class="preview_file_set">
+                                            <div class="img_preview">
+                                                <img src="/resources/images/temp/img.png" alt="증명사진" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--// 등록된 사진 있는 경우 -->
+                                    <!-- 등록된 사진 없는 경우 -->
+                                    <!-- <div class="article">
+                                        <div class="preview_file_set">
+                                            <div class="img_preview">
+                                                <div class="msg">등록한<br />사진<br />미리보기</div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!--// 등록된 사진 없는 경우 -->
+                                </div>
+                                <div class="rside">
+                                    <!-- board -->
+                                    <div class="board_area">
+                                        <!-- board_view -->
+                                        <table class="tbl react row size100">
+                                            <caption>
+                                                이름, 주민등록번호, 휴대폰 번호, 전화번호, 배송지 주소 정보 제공
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width: 15.3rem" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">이름</th>
+                                                    <td data-cell-header="이름"><div>홍길동</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">주민등록번호</th>
+                                                    <td data-cell-header="주민등록번호"><div>900105-*******</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">휴대폰 번호</th>
+                                                    <td data-cell-header="휴대폰 번호"><div>010-1234-1234</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">전화번호</th>
+                                                    <td data-cell-header="전화번호"><div>02-1234-5678</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">배송지 주소</th>
+                                                    <td data-cell-header="배송지 주소">
+                                                        <div>07379 서울특별시 영등포구 대림로-244(대림동) 2F 201호</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--// board_view -->
+                                    </div>
+                                    <!--// board -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article">
+                            <div class="subtit_area">
+                                <strong class="tit">자격 정보</strong>
+                            </div>
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row size100">
+                                    <caption>
+                                        자격 종목, 급수 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">자격 종목</th>
+                                            <td data-cell-header="자격 종목"><div>상수도관망시설운영관리사</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">급수</th>
+                                            <td data-cell-header="급수"><div>2급</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+                            </div>
+                            <!--// board -->
+                        </div>
+
+                        <div class="article">
+                            <!-- board -->
+                            <div class="board_area">
+                                <!-- board_view -->
+                                <table class="tbl react row size100">
+                                    <caption>
+                                        구분, 내용, 학력(전공), 경력 정보 제공
+                                    </caption>
+                                    <colgroup>
+                                        <col style="width: 15.3rem" />
+                                        <col />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">내용</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">학력(전공)</th>
+                                            <td data-cell-header="학력(전공)" class="center">
+                                                <div>
+                                                    4년제 대학 졸업(컴퓨터공학과)<br />
+                                                    <button type="button" class="btn_download">졸업증명서</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">경력</th>
+                                            <td data-cell-header="경력" class="center">
+                                                <div>
+                                                    총 4년 6개월<br />
+                                                    한국상하수도협회<br />
+                                                    근무기간(3년 6개월): 2022.01.01~2025.08.31 (재직중)<br />
+                                                    <button type="button" class="btn_download">경력증명서</button><br />
+                                                    한국상하수도협회 1년 근무기간(1년 0개월): 2022.01.01~2025.08.31<br />
+                                                    <button type="button" class="btn_download">경력증명서</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--// board_view -->
+
+                                <div class="board_desc_bottom">『수도법』 제25조의2제1항, 같은 법 시행령 제44조제2항 및 같은 법 시행규칙 제17조의2제1항에 따라 위와 같이 상수도관망시설운영관리사 자격증 발급을 신청 합니다.</div>
+
+                                <div class="align_right gap_mt20">2025년 3월 17일</div>
+                                <div class="align_center gap_mt20">신청인: 홍길동</div>
+                            </div>
+                            <!--// board -->
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <div class="lside">
+                            <button type="button" class="btn_outline_md" onclick="return window.print();">인쇄하기</button>
+                        </div>
+                        <div class="rside">
+                            <button type="button" class="btn_primary_md layer_close">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 자격증 발급 신청서 -->
+
+        <!-- Layer : 재발급 신청내역 -->
+        <div class="layerFix fullPopup" id="applicationformPop1" role="dialog" aria-modal="true" style="display: none" tabindex="0">
+            <div class="layer_wrap">
+                <div class="head">
+                    <strong class="tit">상하수도 국가전문자격시스템</strong>
+                </div>
+                <div class="cont">
+                    <div class="tit_area">
+                        <strong class="tit">재발급 신청내역</strong>
+                    </div>
+                    <div class="article">
+                        <div class="ly_half_form size113">
+                            <div class="lside">
+                                <!-- 등록된 사진 있는 경우 -->
+                                <div class="article">
+                                    <div class="preview_file_set">
+                                        <div class="img_preview">
+                                            <img src="/resources/images/temp/img.png" alt="증명사진" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// 등록된 사진 있는 경우 -->
+                                <!-- 등록된 사진 없는 경우 -->
+                                <!-- <div class="article">
+                                        <div class="preview_file_set">
+                                            <div class="img_preview">
+                                                <div class="msg">등록한<br />사진<br />미리보기</div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                <!--// 등록된 사진 없는 경우 -->
+                            </div>
+                            <div class="rside">
+                                <!-- board -->
+                                <div class="board_area">
+                                    <!-- board_view -->
+                                    <table class="tbl react row sm size120">
+                                        <caption>
+                                            신청번호, 자격번호, 자격 취득일, 교부 연월일, 재발급 신청일, 재발급 신청사유, 재발급 신청사유 정보 제공
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width: 15.3rem" />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">신청번호</th>
+                                                <td data-cell-header="신청번호"><div>REQ2-25-0001</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">자격번호</th>
+                                                <td data-cell-header="자격번호"><div>WL000000</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">자격 취득일</th>
+                                                <td data-cell-header="자격 취득일"><div>2025-02-10</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">교부 연월일</th>
+                                                <td data-cell-header="교부 연월일"><div>2025-02-10</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">재발급 신청일</th>
+                                                <td data-cell-header="재발급 신청일"><div>2025-02-10</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">재발급 신청사유</th>
+                                                <td data-cell-header="재발급 신청사유"><div>분실</div></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">배송지 주소</th>
+                                                <td data-cell-header="배송지 주소">
+                                                    <div>
+                                                        07379<br />
+                                                        서울특별시 영등포구 대림로-244(대림동)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// board_view -->
+                                </div>
+                                <!--// board -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="btn_area">
+                        <button type="button" class="btn_primary_md layer_close">확인</button>
+                    </div>
+                </div>
+                <button class="btn_close layer_close"><span class="hidden">닫기</span></button>
+            </div>
+        </div>
+        <!--// Layer : 재발급 신청내역 -->
+
+        <script src="/resources/js/jquery-2.2.4.min.js"></script>
+        <script src="/resources/js/ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                // Layer : 원본서류 우편제출 안내
+                $("#alert1").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#alertPop1").show().focus();
+                });
+                $("#alertPop1 .layer_close").click(function (e) {
+                    $("#alert1").focus(); // 접근성
+                });
+
+                // Layer : 자격증 발급 신청서
+                $("#applicationform").click(function (e) {
+                    $("html").addClass("layerOpen printpop");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#applicationformPop").show().focus();
+                });
+                $("#applicationformPop .layer_close").click(function (e) {
+                    $("html").removeClass("printpop");
+                    $("#applicationform").focus(); // 접근성
+                });
+
+                // Layer : 재발급 신청내역
+                $("#applicationform1").click(function (e) {
+                    $("html").addClass("layerOpen");
+                    $("#wrap").attr("aria-hidden", "true");
+
+                    $("#applicationformPop1").show().focus();
+                });
+                $("#applicationformPop1 .layer_close").click(function (e) {
+                    $("#applicationform1").focus(); // 접근성
+                });
+
+                $("[data-include-file]").each(function () {
+                    const $this = $(this);
+                    const file = $this.data("include-file");
+
+                    $.get(file, function (data) {
+                        $this.html(data);
+                        // 현재 페이지 - 메뉴 활성화
+                        $(".lnb a[href*='FO-WP-500-040.html']").attr("aria-current", "page").parents("li").addClass("on");
+
+                        // Layer : 	가상계좌번호
+                        $(".btn_pop:contains('가상계좌번호')").click(function (e) {
+                            $("html").addClass("layerOpen");
+                            $("#wrap").attr("aria-hidden", "true");
+
+                            $("#popVirtualAccount").show().focus();
+                        });
+                        $("#popVirtualAccount .layer_close").click(function (e) {
+                            $(".btn_pop:contains('가상계좌번호')").focus(); // 접근성
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
