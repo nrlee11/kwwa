@@ -732,7 +732,6 @@ $(function () {
         });
     });
 
-    includeHtml();
     device();
     allNaveToggle();
     sideNave();
