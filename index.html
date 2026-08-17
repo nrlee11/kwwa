@@ -947,41 +947,64 @@
         const $this = $(this);
         const file = $this.data("include-file");
 
-        // 실제 include 파일의 URL
         const includeUrl = new URL(file, window.location.href);
 
         $.get(includeUrl.href, function (data) {
             const $temp = $("<div>").html(data);
 
-            // include 파일 안의 링크를 include 파일 위치 기준으로 계산
             $temp.find("[href]").each(function () {
-                const href = $(this).attr("href");
+                let href = $(this).attr("href");
+
+                if (!href) return;
 
                 if (
-                    href &&
-                    !href.startsWith("#") &&
-                    !href.startsWith("http://") &&
-                    !href.startsWith("https://") &&
-                    !href.startsWith("mailto:") &&
-                    !href.startsWith("tel:") &&
-                    !href.startsWith("javascript:")
+                    href.startsWith("#") ||
+                    href.startsWith("http://") ||
+                    href.startsWith("https://") ||
+                    href.startsWith("mailto:") ||
+                    href.startsWith("tel:") ||
+                    href.startsWith("javascript:")
                 ) {
-                    $(this).attr("href", new URL(href, includeUrl).href);
+                    return;
                 }
+
+                // /html/... 같은 절대경로
+                if (href.startsWith("/")) {
+                    if (location.hostname === "nrlee11.github.io") {
+                        href = "/kwwa" + href;
+                    }
+
+                    $(this).attr("href", href);
+                    return;
+                }
+
+                // ../info/... 같은 상대경로
+                $(this).attr("href", new URL(href, includeUrl).href);
             });
 
-            // include 파일 안의 이미지 src도 같은 방식으로 처리
             $temp.find("[src]").each(function () {
-                const src = $(this).attr("src");
+                let src = $(this).attr("src");
+
+                if (!src) return;
 
                 if (
-                    src &&
-                    !src.startsWith("http://") &&
-                    !src.startsWith("https://") &&
-                    !src.startsWith("data:")
+                    src.startsWith("http://") ||
+                    src.startsWith("https://") ||
+                    src.startsWith("data:")
                 ) {
-                    $(this).attr("src", new URL(src, includeUrl).href);
+                    return;
                 }
+
+                if (src.startsWith("/")) {
+                    if (location.hostname === "nrlee11.github.io") {
+                        src = "/kwwa" + src;
+                    }
+
+                    $(this).attr("src", src);
+                    return;
+                }
+
+                $(this).attr("src", new URL(src, includeUrl).href);
             });
 
             $this.html($temp.contents());
