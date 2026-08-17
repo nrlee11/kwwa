@@ -943,15 +943,51 @@
             }
 
             $(function () {
-                $("[data-include-file]").each(function () {
-                    const $this = $(this);
-                    const file = $this.data("include-file");
+    $("[data-include-file]").each(function () {
+        const $this = $(this);
+        const file = $this.data("include-file");
 
-                    $.get(file, function (data) {
-                        $this.html(data);
-                    });
-                });
+        // 실제 include 파일의 URL
+        const includeUrl = new URL(file, window.location.href);
+
+        $.get(includeUrl.href, function (data) {
+            const $temp = $("<div>").html(data);
+
+            // include 파일 안의 링크를 include 파일 위치 기준으로 계산
+            $temp.find("[href]").each(function () {
+                const href = $(this).attr("href");
+
+                if (
+                    href &&
+                    !href.startsWith("#") &&
+                    !href.startsWith("http://") &&
+                    !href.startsWith("https://") &&
+                    !href.startsWith("mailto:") &&
+                    !href.startsWith("tel:") &&
+                    !href.startsWith("javascript:")
+                ) {
+                    $(this).attr("href", new URL(href, includeUrl).href);
+                }
             });
+
+            // include 파일 안의 이미지 src도 같은 방식으로 처리
+            $temp.find("[src]").each(function () {
+                const src = $(this).attr("src");
+
+                if (
+                    src &&
+                    !src.startsWith("http://") &&
+                    !src.startsWith("https://") &&
+                    !src.startsWith("data:")
+                ) {
+                    $(this).attr("src", new URL(src, includeUrl).href);
+                }
+            });
+
+            $this.html($temp.contents());
+        });
+    });
+});
 
             // 메인 첫화면 최초입장시 뜨는 브라우저 팝업
             (function () {
