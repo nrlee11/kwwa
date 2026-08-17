@@ -9,8 +9,8 @@
         <meta property="og:description" content="" />
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
-        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="../../resources/images/favicon/favicon.ico" />
         <title>비밀번호 입력 | 한국상하수도협회</title>
     </head>
     <body>
@@ -52,7 +52,7 @@
                                                     <div class="inp">
                                                         <input type="password" value="" id="userPw" placeholder="비밀번호를 입력하세요" />
                                                         <span class="toggle-password" onclick="togglePassword()">
-                                                            <img src="/resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eye-icon" />
+                                                            <img src="../../resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eye-icon" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -77,8 +77,8 @@
         </div>
         <!--// Layer : 비밀번호 입력 -->
 
-        <script src="/resources/js/jquery-2.2.4.min.js"></script>
-        <script src="/resources/js/ui.js"></script>
+        <script src="../../resources/js/jquery-2.2.4.min.js"></script>
+        <script src="../../resources/js/ui.js"></script>
         <script type="text/javascript">
             $(function () {
                 // Layer : 비밀번호 입력
@@ -98,10 +98,10 @@
 
                 if (passwordInput.type === "password") {
                     passwordInput.type = "text";
-                    eyeIcon.src = "/resources/images/icon/ico_eye.svg"; // 뜬 눈 아이콘 이미지로 변경
+                    eyeIcon.src = "../../resources/images/icon/ico_eye.svg"; // 뜬 눈 아이콘 이미지로 변경
                 } else {
                     passwordInput.type = "password";
-                    eyeIcon.src = "/resources/images/icon/ico_eye_closed.svg"; // 원래 눈 아이콘 이미지로 복원
+                    eyeIcon.src = "../../resources/images/icon/ico_eye_closed.svg"; // 원래 눈 아이콘 이미지로 복원
                 }
             }
         </script>

@@ -9,8 +9,8 @@
         <meta property="og:description" content="" />
         <meta property="og:image" content="" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
-        <link rel="icon" type="image/x-icon" href="/resources/images/favicon/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+        <link rel="icon" type="image/x-icon" href="../../resources/images/favicon/favicon.ico" />
         <title>회원정보수정 | 마이페이지 | 한국상하수도협회</title>
     </head>
     <body>
@@ -85,7 +85,7 @@
                                                                             <div class="inp">
                                                                                 <input type="password" value="" id="userPw1" placeholder="새 비밀번호" />
                                                                                 <span class="toggle-password" onclick="togglePassword('userPw1','eyeIcon1')">
-                                                                                    <img src="/resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon1" />
+                                                                                    <img src="../../resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon1" />
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -101,7 +101,7 @@
                                                                             <div class="inp error">
                                                                                 <input type="password" value="" id="userPw2" placeholder="새 비밀번호 확인" />
                                                                                 <span class="toggle-password" onclick="togglePassword('userPw2','eyeIcon2')">
-                                                                                    <img src="/resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon2" />
+                                                                                    <img src="../../resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon2" />
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -149,7 +149,7 @@
                                                                             <div class="inp">
                                                                                 <input type="password" value="" id="userPw3" placeholder="새 비밀번호 확인" />
                                                                                 <span class="toggle-password" onclick="togglePassword('userPw3','eyeIcon3')">
-                                                                                    <img src="/resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon3" />
+                                                                                    <img src="../../resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon3" />
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -165,7 +165,7 @@
                                                                             <div class="inp error">
                                                                                 <input type="password" value="" id="userPw4" placeholder="새 비밀번호 확인" />
                                                                                 <span class="toggle-password" onclick="togglePassword('userPw4','eyeIcon4')">
-                                                                                    <img src="/resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon4" />
+                                                                                    <img src="../../resources/images/icon/ico_eye_closed.svg" alt="비밀번호 보기" id="eyeIcon4" />
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -392,11 +392,11 @@
         <!--// wrap(e) -->
 
         <!-- [include] side(s) : 확인용 -->
-        <div data-include-file="/html/include/side.html" class="includeJs"></div>
+        <div data-include-file="../include/side.html" class="includeJs"></div>
         <!--// [include] side(e) : 확인용 -->
 
-        <script src="/resources/js/jquery-2.2.4.min.js"></script>
-        <script src="/resources/js/ui.js"></script>
+        <script src="../../resources/js/jquery-2.2.4.min.js"></script>
+        <script src="../../resources/js/ui.js"></script>
         <script>
             $(function () {
                 $("[data-include-file]").each(function () {
@@ -416,10 +416,10 @@
 
                 if (passwordInput.type === "password") {
                     passwordInput.type = "text";
-                    eyeIcon.src = "/resources/images/icon/ico_eye.svg"; // 열린 눈 아이콘
+                    eyeIcon.src = "../../resources/images/icon/ico_eye.svg"; // 열린 눈 아이콘
                 } else {
                     passwordInput.type = "password";
-                    eyeIcon.src = "/resources/images/icon/ico_eye_closed.svg"; // 닫힌 눈 아이콘
+                    eyeIcon.src = "../../resources/images/icon/ico_eye_closed.svg"; // 닫힌 눈 아이콘
                 }
             }
         </script>
