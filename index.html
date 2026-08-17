@@ -942,75 +942,7 @@
                 $(".program_slide").find(".swiper-controls").hide();
             }
 
-            $(function () {
-    $("[data-include-file]").each(function () {
-        const $this = $(this);
-        const file = $this.data("include-file");
 
-        const includeUrl = new URL(file, window.location.href);
-
-        $.get(includeUrl.href, function (data) {
-            const $temp = $("<div>").html(data);
-
-            $temp.find("[href]").each(function () {
-                let href = $(this).attr("href");
-
-                if (!href) return;
-
-                if (
-                    href.startsWith("#") ||
-                    href.startsWith("http://") ||
-                    href.startsWith("https://") ||
-                    href.startsWith("mailto:") ||
-                    href.startsWith("tel:") ||
-                    href.startsWith("javascript:")
-                ) {
-                    return;
-                }
-
-                // /html/... 같은 절대경로
-                if (href.startsWith("/")) {
-                    if (location.hostname === "nrlee11.github.io") {
-                        href = "/kwwa" + href;
-                    }
-
-                    $(this).attr("href", href);
-                    return;
-                }
-
-                // ../info/... 같은 상대경로
-                $(this).attr("href", new URL(href, includeUrl).href);
-            });
-
-            $temp.find("[src]").each(function () {
-                let src = $(this).attr("src");
-
-                if (!src) return;
-
-                if (
-                    src.startsWith("http://") ||
-                    src.startsWith("https://") ||
-                    src.startsWith("data:")
-                ) {
-                    return;
-                }
-
-                if (src.startsWith("/")) {
-                    if (location.hostname === "nrlee11.github.io") {
-                        src = "/kwwa" + src;
-                    }
-
-                    $(this).attr("src", src);
-                    return;
-                }
-
-                $(this).attr("src", new URL(src, includeUrl).href);
-            });
-
-            $this.html($temp.contents());
-        });
-    });
-});
 
             // 메인 첫화면 최초입장시 뜨는 브라우저 팝업
             (function () {

@@ -537,38 +537,110 @@ $(function () {
     const includeHtml = function (callback) {
         const includeTargets = document.querySelectorAll(".includeJs");
         let pending = includeTargets.length;
-
+    
         if (pending === 0) {
             if (typeof callback === "function") callback();
             return;
         }
-
+    
         includeTargets.forEach(function (el) {
             const targetFile = el.dataset.includeFile;
+    
             if (!targetFile) {
                 pending--;
                 if (pending === 0 && typeof callback === "function") callback();
                 return;
             }
-
+    
+            // include 파일의 실제 URL
+            const includeUrl = new URL(targetFile, window.location.href);
+    
             const xhttp = new XMLHttpRequest();
+    
             xhttp.onreadystatechange = function () {
                 if (this.readyState === XMLHttpRequest.DONE) {
                     if (this.status === 200) {
                         const tempDiv = document.createElement("div");
                         tempDiv.innerHTML = this.responseText;
-
+    
+                        // header/footer 내부의 상대경로를
+                        // include 파일 위치 기준으로 다시 계산
+                        tempDiv.querySelectorAll("[href]").forEach(function (item) {
+                            const href = item.getAttribute("href");
+    
+                            if (
+                                !href ||
+                                href.startsWith("#") ||
+                                href.startsWith("http://") ||
+                                href.startsWith("https://") ||
+                                href.startsWith("mailto:") ||
+                                href.startsWith("tel:") ||
+                                href.startsWith("javascript:")
+                            ) {
+                                return;
+                            }
+    
+                            if (href.startsWith("/")) {
+                                // GitHub Pages에서만 /kwwa 추가
+                                if (
+                                    location.hostname === "nrlee11.github.io" &&
+                                    !href.startsWith("/kwwa/")
+                                ) {
+                                    item.setAttribute("href", "/kwwa" + href);
+                                }
+                            } else {
+                                item.setAttribute(
+                                    "href",
+                                    new URL(href, includeUrl).href
+                                );
+                            }
+                        });
+    
+                        tempDiv.querySelectorAll("[src]").forEach(function (item) {
+                            const src = item.getAttribute("src");
+    
+                            if (
+                                !src ||
+                                src.startsWith("http://") ||
+                                src.startsWith("https://") ||
+                                src.startsWith("data:")
+                            ) {
+                                return;
+                            }
+    
+                            if (src.startsWith("/")) {
+                                if (
+                                    location.hostname === "nrlee11.github.io" &&
+                                    !src.startsWith("/kwwa/")
+                                ) {
+                                    item.setAttribute("src", "/kwwa" + src);
+                                }
+                            } else {
+                                item.setAttribute(
+                                    "src",
+                                    new URL(src, includeUrl).href
+                                );
+                            }
+                        });
+    
                         const children = Array.from(tempDiv.childNodes);
                         el.replaceWith(...children);
                     } else if (this.status === 404) {
                         el.innerHTML = "include not found.";
                     }
-
+    
                     pending--;
-                    if (pending === 0 && typeof callback === "function") callback();
+    
+                    if (
+                        pending === 0 &&
+                        typeof callback === "function"
+                    ) {
+                        callback();
+                    }
                 }
             };
-            xhttp.open("GET", targetFile, true);
+    
+            xhttp.open("GET", includeUrl.href, true);
             xhttp.send();
         });
     };
@@ -683,71 +755,3 @@ $(function () {
     choiceTextRequired();
     textareaRow();
 });
-// GitHub Pages 경로 자동 보정
-(function () {
-    if (location.hostname !== "nrlee11.github.io") return;
-
-    const repoRoot = "/kwwa";
-
-    function fixGithubPaths(root) {
-        if (!root || !root.querySelectorAll) return;
-
-        const elements = root.querySelectorAll("*");
-
-        elements.forEach(function (el) {
-            [
-                "href",
-                "src",
-                "action",
-                "poster",
-                "data-include-file"
-            ].forEach(function (attr) {
-                const value = el.getAttribute(attr);
-
-                if (!value) return;
-
-                // /html/... 또는 /resources/...만 처리
-                if (
-                    value.startsWith("/html/") ||
-                    value.startsWith("/resources/")
-                ) {
-                    el.setAttribute(attr, repoRoot + value);
-                }
-            });
-        });
-    }
-
-    // ui.js 로드 시 이미 존재하는 요소 처리
-    fixGithubPaths(document);
-
-    // header/footer처럼 나중에 include되는 요소 처리
-    const observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-            mutation.addedNodes.forEach(function (node) {
-                if (node.nodeType !== 1) return;
-
-                // 추가된 요소 자체도 검사
-                ["href", "src", "action", "poster", "data-include-file"].forEach(
-                    function (attr) {
-                        const value = node.getAttribute?.(attr);
-
-                        if (
-                            value &&
-                            (value.startsWith("/html/") ||
-                                value.startsWith("/resources/"))
-                        ) {
-                            node.setAttribute(attr, repoRoot + value);
-                        }
-                    }
-                );
-
-                fixGithubPaths(node);
-            });
-        });
-    });
-
-    observer.observe(document.documentElement, {
-        childList: true,
-        subtree: true
-    });
-})();
